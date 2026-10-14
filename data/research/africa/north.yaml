@@ -1,0 +1,3433 @@
+# North Africa and Egypt (registry owner: north). Africa module, 1200-1450.
+# Researcher file. Perspective note: North Africans, Egyptians, Amazigh (Berber) peoples, Copts and
+# Maghrebi Jews are African; their own writers are tagged insider. Ibn Khaldun is an insider for the
+# Maghreb and a regional outsider for Mali. Page numbers for UNESCO GHA IV refer to the FRENCH edition
+# (Histoire generale de l'Afrique IV), read chapter by chapter at bokundoli.org during this research.
+
+places:
+  - id: pl-almohads
+    name: Almohad Caliphate
+    alt_names: [al-Muwahhidun, "Almohads"]
+    kind: polity
+    region: maghreb
+    location: {lat: 31.8, lon: -6.5}
+    span: {start: 1121, end: 1269, approx: true}
+    parent: null
+    geometry_note: >
+      Movement begins with Ibn Tumart's preaching among the Masmuda of the High Atlas (Tinmal) c. 1121;
+      Marrakesh taken 1147; at its height c. 1160-1212 it ruled from the Atlantic to Tripolitania and
+      al-Andalus. After Las Navas de Tolosa (1212) it breaks apart: Hafsids independent 1229, Zayyanids
+      1235/36, Marinids take Fez 1248. By the 1240s-1260s reduced to the Marrakesh region; ends 1269.
+      Label point placed between Marrakesh and the Middle Atlas.
+    basemap_match: []
+    polity_profile:
+      - year: 1200
+        base: AGR
+        flow: EXT
+        membership: [FAITH, KIN]
+        ruled_not_counted: >
+          Muslims who were not Almohad initiates (Saidi notes non-Almohad populations paid kharaj under
+          Abd al-Mu'min); Jews and Christians, who lost dhimma status and were pressed to convert; enslaved people
+        standing: SOV
+        shape: IMPERIAL
+        rulers: ONE
+        right: [DIVINE, DESCENT]
+        flag: >
+          Claimed rule as heirs of an infallible mahdi (Ibn Tumart) and as caliphs; in practice power rested
+          on Masmuda kin councils and, increasingly, on hired troops including Christian mercenaries.
+      - year: 1235
+        base: AGR
+        flow: EXT
+        membership: [KIN, FAITH]
+        ruled_not_counted: enslaved people; non-Muslims; Arab and Zanata groups held by bargains, not membership
+        standing: SOV
+        shape: CENTRAL
+        rulers: ONE
+        right: [DESCENT, VICTORY]
+        flag: >
+          In 1229 caliph al-Ma'mun publicly repudiated Ibn Tumart's status as mahdi, removing the founding
+          claim; the dynasty kept the caliphal title while relying on Castilian troops.
+    evidence: [src-saidi-almohads-gha4, src-hrbek-maghrib-disintegration-gha4, src-bennison-almoravid-almohad]
+    confidence: high
+
+  - id: pl-marinids
+    name: Marinid Sultanate
+    alt_names: [Banu Marin, "Marinids"]
+    kind: polity
+    region: maghreb
+    location: {lat: 33.4, lon: -5.6}
+    span: {start: 1244, end: 1465, approx: true}
+    parent: null
+    geometry_note: >
+      Banu Marin were Zanata pastoralists (Hrbek: from the Zab). Take Fez 1248 (capital), Marrakesh 1269;
+      Fes el-Jdid founded 1276. Core: Morocco north of the High Atlas plus Sijilmasa. Brief maximum under
+      Abu al-Hasan and Abu Inan: Tlemcen 1337 and 1352, Tunis 1347 and 1357. Wattasid viziers dominate
+      from 1420; last Marinid sultan killed 1465; Wattasid sultans from 1472.
+    basemap_match: []
+    polity_profile:
+      - year: 1350
+        base: AGR
+        flow: EXT
+        membership: [KIN, FAITH]
+        ruled_not_counted: >
+          Jews (dhimmi, with their own communal administration in Fez); enslaved people, including
+          West Africans brought via Sijilmasa; Christian mercenaries and merchants as foreigners
+        standing: SOV
+        shape: IMPERIAL
+        rulers: ONE
+        right: [VICTORY, DESCENT]
+        flag: >
+          Lacking a religious founding claim, the Marinids built legitimacy through Maliki madrasas,
+          jihad in Iberia, the mawlid and patronage of saints and sharifs; Abu Inan's brief claim to the
+          caliphal title did not outlast him.
+      - year: 1440
+        base: AGR
+        flow: EXT
+        membership: [KIN, FAITH]
+        ruled_not_counted: Jews (moved to the Fez mellah by c. 1438); enslaved people
+        standing: SOV
+        shape: CENTRAL
+        rulers: ONE
+        right: [DESCENT, DIVINE]
+        flag: >
+          Sultans reigned but Wattasid viziers ruled; the 1437 discovery of Idris II's tomb shows the court
+          turning to sharifian (Prophet's descendant) sanctity for legitimacy.
+    evidence: [src-hrbek-maghrib-disintegration-gha4, src-idris-maghrib-society-gha4, src-kably-societe-pouvoir-religion, src-shatzmiller-berbers-islamic-state]
+    confidence: high
+
+  - id: pl-zayyanids
+    name: Zayyanid (Abd al-Wadid) Sultanate of Tlemcen
+    alt_names: [Banu Abd al-Wad, Banu Zayyan, Kingdom of Tlemcen]
+    kind: polity
+    region: maghreb
+    location: {lat: 34.9, lon: 0.0}
+    span: {start: 1235, end: 1556, approx: true}
+    parent: null
+    geometry_note: >
+      Founded by Yaghmurasan ibn Zayyan (Hrbek dates the break with the Almohads to 1235). Central Maghreb
+      (western and central Algeria) from Tlemcen; held Sijilmasa from 1264 for a time. Occupied by the
+      Marinids 1337-1348 and 1352-1359; later under Hafsid and Aragonese pressure. Ends 1554-1556.
+    basemap_match: []
+    polity_profile:
+      - year: 1300
+        base: AGR
+        flow: MKT
+        membership: [KIN, FAITH]
+        ruled_not_counted: Jews (dhimmi, prominent in trade); enslaved people from the Sahara route
+        standing: SOV
+        shape: CENTRAL
+        rulers: ONE
+        right: [DESCENT, VICTORY]
+        flag: >
+          Sovereign in name, but repeatedly besieged and twice occupied by the Marinids; much of its income
+          came from taxing the Sijilmasa-Tlemcen gold and slave trade rather than farming.
+    evidence: [src-hrbek-maghrib-disintegration-gha4, src-idris-maghrib-society-gha4]
+    confidence: medium
+
+  - id: pl-hafsids
+    name: Hafsid Sultanate (Ifriqiya)
+    alt_names: [Banu Hafs, "Hafsids"]
+    kind: polity
+    region: maghreb
+    location: {lat: 35.3, lon: 9.4}
+    span: {start: 1229, end: 1574, approx: false}
+    parent: null
+    geometry_note: >
+      Ifriqiya (Tunisia, eastern Algeria, Tripolitania). Abu Zakariyya took the title of independent amir
+      in 1229 and had his own name in the khutba c. 1236; took Constantine, Bougie, Algiers. al-Mustansir
+      claimed the caliphate in 1253. Marinid occupations 1347 and 1357; revival under Abu al-Abbas and Abu
+      Faris (late 14th-15th c.).
+    basemap_match: []
+    polity_profile:
+      - year: 1260
+        base: AGR
+        flow: EXT
+        membership: [KIN, FAITH]
+        ruled_not_counted: >
+          Jews (dhimmi); resident European Christian merchants (by treaty, in funduqs); Arab nomad groups
+          held by subsidy; enslaved people
+        standing: SOV
+        shape: CENTRAL
+        rulers: ONE
+        right: [DIVINE, DESCENT]
+        flag: >
+          al-Mustansir called himself caliph (1253), and the Sharif of Mecca recognized it in 1259, but real
+          control in the interior depended on bargains with Arab nomad confederations.
+      - year: 1420
+        base: AGR
+        flow: EXT
+        membership: [FAITH, KIN]
+        ruled_not_counted: Jews; European merchants; enslaved people (some freed slaves held military and civil posts)
+        standing: SOV
+        shape: CENTRAL
+        rulers: ONE
+        right: [DESCENT, DIVINE]
+        flag: null
+    evidence: [src-hrbek-maghrib-disintegration-gha4, src-idris-maghrib-society-gha4, src-ibn-khaldun-ibar]
+    confidence: high
+
+  - id: pl-ayyubids
+    name: Ayyubid Sultanate (Egypt)
+    alt_names: ["Ayyubids"]
+    kind: polity
+    region: egypt
+    location: {lat: 29.0, lon: 31.0}
+    span: {start: 1171, end: 1250, approx: false}
+    parent: null
+    geometry_note: >
+      Egypt from Salah al-Din's end of the Fatimid caliphate (1171) to the Mamluk seizure (1250). The
+      Ayyubid family also ruled Syria, Yemen and parts of the Jazira as linked appanages; draw Egypt only
+      for this Africa module. Recognized the Abbasid caliph in Baghdad.
+    basemap_match: []
+    polity_profile:
+      - year: 1200
+        base: AGR
+        flow: EXT
+        membership: [OATH, FAITH]
+        ruled_not_counted: >
+          Copts and Jews (dhimmi; Copts still staffed much of the fiscal administration); peasants; enslaved
+          soldiers (mamluks) who later took power
+        standing: SOV
+        shape: LAYERED
+        rulers: ONE
+        right: [VICTORY, DIVINE]
+        flag: >
+          The sultan in Cairo was senior, but Ayyubid princes ruled their own cities and often fought each
+          other; legitimacy came from recognition by the Abbasid caliph in Baghdad.
+    evidence: [src-garcin-egypt-gha4, src-mit-ayyubid-cairo]
+    confidence: high
+
+  - id: pl-mamluks
+    name: Mamluk Sultanate
+    alt_names: [Dawlat al-Atrak, Bahri Mamluks, Circassian (Burji) Mamluks]
+    kind: polity
+    region: egypt
+    location: {lat: 27.6, lon: 31.4}
+    span: {start: 1250, end: 1517, approx: false}
+    parent: null
+    geometry_note: >
+      Egypt and (from 1260) Syria-Palestine, with protection of the Hijaz holy cities. Africa module: draw
+      Egypt from the Mediterranean to Aswan; northern Nubia annexed 1275 and Dongola's Christian kingdom
+      ends after 1317 (Garcin; nile-horn owns Nubia). Bahri period to 1382, Circassian period 1382-1517.
+    basemap_match: []
+    polity_profile:
+      - year: 1330
+        base: AGR
+        flow: EXT
+        membership: [OATH, FAITH]
+        ruled_not_counted: >
+          Egyptian-born Muslims (excluded from the Mamluk military caste); Copts and Jews (dhimmi);
+          peasants; Bedouin; enslaved people
+        standing: SOV
+        shape: IMPERIAL
+        rulers: ONE
+        right: [VICTORY, DIVINE]
+        flag: >
+          Sultans were invested by an Abbasid caliph kept in Cairo after 1261, but in practice a sultan held
+          power only while enough fellow mamluk emirs backed him.
+      - year: 1420
+        base: AGR
+        flow: EXT
+        membership: [OATH, FAITH]
+        ruled_not_counted: Copts and Jews; peasants; Bedouin; enslaved people
+        standing: SOV
+        shape: IMPERIAL
+        rulers: ONE
+        right: [VICTORY, DIVINE]
+        flag: >
+          Plague (1348-49, 1375, and repeatedly after 1405) cut population, iqta revenue and mamluk numbers;
+          Garcin describes an early-15th-century crisis in which minorities were blamed.
+    evidence: [src-garcin-egypt-gha4, src-banister-abbasid-authority]
+    confidence: high
+
+  # ---- cities ----
+  - id: pl-fez
+    name: Fez
+    alt_names: [Fas, Fes el-Bali, Fes el-Jdid]
+    kind: city
+    region: maghreb
+    location: {lat: 34.064, lon: -4.973}
+    span: {start: 789, end: null, approx: true}
+    parent: pl-marinids
+    geometry_note: >
+      Almohad until 1248, then Marinid capital. Fes el-Bali is the old city (al-Qarawiyyin); Fes el-Jdid
+      (royal city) founded 1276, where the mellah (Jewish quarter) later formed.
+    basemap_match: []
+    evidence: [src-hrbek-maghrib-disintegration-gha4, src-idris-maghrib-society-gha4]
+    confidence: high
+
+  - id: pl-marrakesh
+    name: Marrakesh
+    alt_names: [Marrakech, Marrakush]
+    kind: city
+    region: maghreb
+    location: {lat: 31.629, lon: -7.989}
+    span: {start: 1070, end: null, approx: true}
+    parent: pl-marinids
+    geometry_note: >
+      Almohad capital to 1269 (parent pl-almohads for 1147-1269); Marinid provincial seat 1269-1465,
+      with Hintata governors increasingly autonomous in the 15th century.
+    basemap_match: []
+    evidence: [src-saidi-almohads-gha4, src-hrbek-maghrib-disintegration-gha4]
+    confidence: high
+
+  - id: pl-tlemcen
+    name: Tlemcen
+    alt_names: [Tilimsan, Agadir and Tagrart, al-Mansura (Marinid siege city)]
+    kind: city
+    region: maghreb
+    location: {lat: 34.882, lon: -1.316}
+    span: {start: 790, end: null, approx: true}
+    parent: pl-zayyanids
+    geometry_note: >
+      Zayyanid capital; Marinid siege-town al-Mansura built alongside (mosque 1303); Marinid-held 1337-48
+      and 1352-59. Shrine-village of al-Ubbad (Abu Madyan) on the hill to the southeast.
+    basemap_match: []
+    evidence: [src-hrbek-maghrib-disintegration-gha4]
+    confidence: high
+
+  - id: pl-tunis
+    name: Tunis
+    alt_names: [Tunus]
+    kind: city
+    region: maghreb
+    location: {lat: 36.799, lon: 10.171}
+    span: {start: 700, end: null, approx: true}
+    parent: pl-hafsids
+    geometry_note: Hafsid capital from 1229. European funduqs near the sea gate; Andalusi quarter after 1230s.
+    basemap_match: []
+    evidence: [src-hrbek-maghrib-disintegration-gha4, src-idris-maghrib-society-gha4]
+    confidence: high
+
+  - id: pl-kairouan
+    name: Kairouan
+    alt_names: [al-Qayrawan]
+    kind: city
+    region: maghreb
+    location: {lat: 35.677, lon: 10.101}
+    span: {start: 670, end: null, approx: true}
+    parent: pl-hafsids
+    geometry_note: >
+      Founding Islamic city of Ifriqiya and old Maliki center; badly damaged after the Banu Hilal arrival
+      (1057) and only slowly recovering under the Hafsids.
+    basemap_match: []
+    evidence: [src-wp-kairouan]
+    confidence: medium
+
+  - id: pl-cairo
+    name: Cairo (with Fustat)
+    alt_names: [al-Qahira, Misr, Fustat, Old Cairo]
+    kind: city
+    region: egypt
+    location: {lat: 30.046, lon: 31.262}
+    span: {start: 969, end: null, approx: false}
+    parent: pl-mamluks
+    geometry_note: >
+      Ayyubid capital 1171-1250 (parent pl-ayyubids), Mamluk capital 1250-1517. Fustat (Old Cairo, south)
+      held the Ben Ezra synagogue and Geniza and the Coptic churches of Babylon; the Abbasid shadow
+      caliphs lived in Cairo from 1261.
+    basemap_match: []
+    evidence: [src-garcin-egypt-gha4]
+    confidence: high
+
+  - id: pl-alexandria
+    name: Alexandria
+    alt_names: [al-Iskandariyya]
+    kind: city
+    region: egypt
+    location: {lat: 31.200, lon: 29.918}
+    span: {start: -331, end: null, approx: true}
+    parent: pl-mamluks
+    geometry_note: Main Mediterranean port of Egypt; European merchant funduqs and consuls; sacked by the crusade of Peter I of Cyprus, October 1365.
+    basemap_match: []
+    evidence: [src-garcin-egypt-gha4, src-wp-alexandrian-crusade]
+    confidence: high
+
+  - id: pl-sijilmasa
+    name: Sijilmasa
+    alt_names: [Sijilmassa, Tafilalt]
+    kind: city
+    region: maghreb
+    location: {lat: 31.28, lon: -4.28}
+    span: {start: 757, end: 1400, approx: true}
+    parent: pl-marinids
+    geometry_note: >
+      Northern terminus of the western trans-Saharan route, in the Tafilalt oasis near modern Rissani.
+      Almohad, then contested (Zayyanid from 1264 per Hrbek), then Marinid. Ibn Battuta left from here for
+      Mali in 1352. Decline and abandonment in the late 14th century (often dated c. 1393; date uncertain).
+    basemap_match: []
+    evidence: [src-hrbek-maghrib-disintegration-gha4, src-ibn-battuta-rihla, src-wp-sijilmasa]
+    confidence: medium
+
+  # ---- new places, not in the registry ----
+  - id: pl-ceuta
+    name: Ceuta
+    alt_names: [Sabta]
+    kind: city
+    region: maghreb
+    location: {lat: 35.889, lon: -5.316}
+    span: {start: 700, end: null, approx: true}
+    parent: pl-marinids
+    geometry_note: >
+      Strait of Gibraltar port. Almohad, then ruled by the local Azafid family (13th c.), then Marinid
+      (with Nasrid interludes). Captured by Portugal in 1415, the first European foothold in Africa of
+      this era. NEW PLACE (not in registry).
+    basemap_match: []
+    evidence: [src-hrbek-maghrib-disintegration-gha4, src-ferhat-soufisme-zaouias]
+    confidence: medium
+
+  - id: pl-tozeur
+    name: Tozeur and the Djerid-Nafzawa oases
+    alt_names: [Tuzar, Bilad al-Jarid, Nafzawa]
+    kind: city
+    region: maghreb
+    location: {lat: 33.92, lon: 8.13}
+    span: {start: 200, end: null, approx: true}
+    parent: pl-hafsids
+    geometry_note: >
+      Oasis towns of southern Tunisia (Djerid and Nafzawa), with nearby Gafsa. Prevost argues these
+      Ibadi-dominated oases were the last refuge of indigenous North African Christians. NEW PLACE.
+    basemap_match: []
+    evidence: [src-prevost-dernieres-communautes]
+    confidence: medium
+
+  - id: pl-atlas-amazigh
+    name: Tamazight-speaking highlands (Atlas, Rif, Sous)
+    alt_names: [Masmuda of the High Atlas, Sanhaja of the Middle Atlas, Ghumara of the Rif, Imazighen]
+    kind: people
+    region: maghreb
+    location: {lat: 31.1, lon: -7.9}
+    span: {start: 1200, end: 1450, approx: true}
+    parent: null
+    geometry_note: >
+      Soft area for Amazigh (Berber)-speaking mountain and pre-Saharan communities that every dynasty
+      claimed but none ruled closely: High Atlas (Masmuda), Middle Atlas, Anti-Atlas and Sous, Rif (Ghumara).
+      Draw as a soft overlay on the Marinid and Almohad areas. NEW PLACE.
+    basemap_match: []
+    evidence: [src-niane-introduction-gha4, src-idris-maghrib-society-gha4]
+    confidence: medium
+
+  - id: pl-ext-kipchak-steppe
+    name: Kipchak steppe and the Caucasus (mamluk recruiting grounds)
+    kind: external
+    location: {lat: 46.5, lon: 41.0}
+    evidence: [src-garcin-egypt-gha4]
+    confidence: high
+
+religion_profiles:
+  # ================= ALMOHADS =================
+  - id: rp-almohads-court-1200-1229
+    place: pl-almohads
+    span: {start: 1200, end: 1229, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: other, share: dominant,
+         local_form: "Almohad doctrine (tawhid): Ibn Tumart as infallible mahdi, creed taught in Tamazight and Arabic, Maliki manuals officially sidelined"}
+    relation: exclusive
+    basis: attested
+    summary: >
+      The Almohad court followed a strict reform of Islam taught by the Amazigh (Berber) preacher Ibn
+      Tumart, whom it honored as the mahdi, a leader sent by God. Unlike most Muslim rulers, it refused
+      Jews and Christians protected status.
+    detail: >
+      Saidi (GHA IV, French ed. pp. 42-44) summarizes the doctrine: strict affirmation of God's unity against
+      anthropomorphism, condemnation of the Almoravid Maliki jurists, a claim to the mahdi, rejection of the
+      exclusive authority of Maliki furu' manuals; Ibn Tumart preached in Tamazight and reportedly wrote in it.
+      Bennison calls it a hybrid drawing on hadith study, Zahiri and Shafi'i law and Shi'i-style imamate ideas.
+      Dhimma was rejected: Jews and Christians faced conversion or exile (Maimonides' family left Fez for Egypt).
+      Maliki jurists remained in the cities and in practice kept teaching; Idris (pp. 129-130) stresses that the
+      doctrine never displaced Maliki law among Maghrebis. Recorded as exclusive at the court level only.
+    evidence: [src-saidi-almohads-gha4, src-bennison-almoravid-almohad, src-wp-almohad-doctrine, src-idris-maghrib-society-gha4]
+    confidence: high
+    flag: >
+      Claim vs practice: the court proclaimed one doctrine for all subjects, but Maliki scholarship continued
+      in the towns throughout the Almohad century.
+
+  - id: rp-almohads-court-1229-1269
+    place: pl-almohads
+    span: {start: 1229, end: 1269, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: other, share: dominant,
+         local_form: "Residual Almohad dynastic tradition after al-Ma'mun's public repudiation of Ibn Tumart as mahdi (1229)"}
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: significant, local_form: null}
+      - {family: abrahamic, tradition: christianity, branch: latin-catholic, share: minority,
+         local_form: "Castilian and other Iberian Christian mercenary cavalry serving the caliph, with their own clergy"}
+    relation: coexisting
+    summary: >
+      In 1229 the caliph al-Ma'mun rejected the founder's claim to be the mahdi and brought Castilian Christian
+      soldiers into Morocco to fight for him. A shrinking Almohad court now leaned on Maliki jurists and foreign
+      Christian troops who kept their own worship.
+    detail: >
+      Repudiation date 1229 per the Almohad-doctrine reference; Saidi (pp. 52-53) explains it as a response to
+      the political isolation the sectarian creed had produced; Hrbek (p. 102) notes al-Ma'mun's 1230 campaign
+      used Castilian Christian soldiers. The often-repeated report that he allowed them a church in Marrakesh
+      comes from Maghrebi chronicles (Rawd al-Qirtas tradition) and was not checked here. Whether later Almohad
+      caliphs partly restored the mahdi cult is reported in some surveys but was not verified in this research.
+    evidence: [src-saidi-almohads-gha4, src-hrbek-maghrib-disintegration-gha4, src-wp-almohad-doctrine]
+    confidence: medium
+    flag: null
+
+  - id: rp-almohads-urban-1200-1229
+    place: pl-almohads
+    span: {start: 1200, end: 1229, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: other, share: significant,
+         local_form: "Official Almohad creed taught by state-appointed preachers and talaba"}
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant,
+         local_form: "Maliki law and teaching kept alive by town jurists; Sufi saints such as Abu al-Abbas al-Sabti (d. 1204) in Marrakesh"}
+      - {family: abrahamic, tradition: judaism, branch: rabbanite, share: trace,
+         local_form: "Outwardly converted Jewish families keeping Jewish practice in private; distinctive dress imposed by Ya'qub al-Mansur"}
+    relation: contested
+    summary: >
+      In the cities, most Muslims kept following Maliki teachers even as the state pushed the Almohad creed.
+      Jews who had been pressured into converting were made to wear special clothing, and some kept Jewish
+      practice in secret.
+    detail: >
+      Contested because of forced conversion and the abolition of dhimma (Test 3). Ya'qub al-Mansur (r. 1184-1199)
+      required converted Jews to wear dark blue or black; the pressure eased after 1229 but the Almohad period
+      left few open Jewish communities in Morocco. Evidence for crypto-Jewish practice comes largely from Jewish
+      sources (responsa, Maimonides' Epistle on Forced Conversion) rather than from Almohad texts. The Sabti cult in
+      Marrakesh, venerated by Jews too (later evidence), shows urban saint devotion already in the Almohad capital.
+    evidence: [src-wp-almohad-doctrine, src-idris-maghrib-society-gha4, src-wp-seven-saints, src-wp-jewish-fes]
+    confidence: medium
+    flag: null
+
+  - id: rp-almohads-rural-1200-1269
+    place: pl-almohads
+    span: {start: 1200, end: 1269, approx: true}
+    stratum: rural
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: dominant,
+         local_form: "Tamazight-speaking Islam of village saints (e.g. Abu Ya'za, d. 1177, Middle Atlas), baraka, pilgrimage to living holy men"}
+      - {family: abrahamic, tradition: islam, branch: other, share: minority,
+         local_form: "Almohad creed among Masmuda kin groups of the High Atlas tied to the dynasty (Tinmal)"}
+    relation: coexisting
+    summary: >
+      In the countryside most people were Amazigh (Berber) farmers and herders who practiced Islam in their
+      own language, often through local holy men believed to carry blessing (baraka). The Almohad creed had
+      followers mainly among the High Atlas groups that founded the movement.
+    detail: >
+      Direct evidence is unusual for a rural stratum here: Ibn al-Zayyat al-Tadili's al-Tashawwuf ila rijal
+      al-tasawwuf (c. 1220) collects biographies of Moroccan holy people, many rural and Tamazight-speaking;
+      al-Azafi of Ceuta wrote a life of Abu Ya'za. These texts are urban-written hagiography, so they show
+      saints as scholars saw them, not peasants' own words. Recorded as coexisting: Almohad-creed kin groups of the
+      High Atlas core beside the wider Sunni countryside;
+      do not frame Amazigh religious life as a pre-Islamic remnant: by 1200 Islam was itself an Amazigh religion
+      here, expressed in Tamazight. Customary law (azref) is a legal, not a religious, layer; see the Atlas profiles.
+    evidence: [src-ibn-al-zayyat-tashawwuf, src-wp-abu-yaaza, src-ferhat-soufisme-zaouias, src-cornell-realm-of-saint, src-saidi-almohads-gha4]
+    confidence: medium
+    flag: null
+
+  # ================= ATLAS / AMAZIGH HIGHLANDS =================
+  - id: rp-atlas-amazigh-rural-1200-1269
+    place: pl-atlas-amazigh
+    span: {start: 1200, end: 1269, approx: true}
+    stratum: rural
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: dominant,
+         local_form: "Village Islam in Tamazight: holy men and women (e.g. Abu Ya'za), shrine visits, fasting and prayer taught orally; village councils applying custom (azref) beside sharia"}
+    relation: exclusive
+    basis: inferred
+    summary: >
+      Mountain Amazigh communities were Muslim, and they lived their Islam in Tamazight, around local saints
+      and village councils. Village custom (azref) settled many disputes alongside Islamic law, without being a
+      separate religion.
+    detail: >
+      Evidence: the hagiographies (al-Tadili; al-Azafi) for saints; Saidi for Ibn Tumart's Tamazight preaching
+      (the Almohad movement was itself born among High Atlas Masmuda). Evidence for azref (customary law) in
+      1200-1450 is indirect: it is documented in later fatwa collections and best in 19th-20th c. sources;
+      Hoffman (2020) shows that French protectorate officials invented a sharp "Berber custom vs. Islamic law"
+      split for political reasons, while Amazigh custom had long absorbed Maliki fiqh. Teach this as legal
+      pluralism inside a Muslim society, not as survival of a pre-Islamic religion. Niane (p. 26) notes Tamazight
+      persisted especially in the mountains while Arabic spread in the plains.
+    evidence: [src-ibn-al-zayyat-tashawwuf, src-saidi-almohads-gha4, src-hoffman-customary-courts, src-niane-introduction-gha4]
+    confidence: medium
+    flag: null
+
+  - id: rp-atlas-amazigh-rural-1269-1450
+    place: pl-atlas-amazigh
+    span: {start: 1269, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant,
+         local_form: "Tamazight-speaking Islam with zawiyas and saint lineages (e.g. Banu Amghar); Qur'an schools in the Sous; azref custom handled by village councils"}
+    relation: exclusive
+    basis: projected
+    summary: >
+      After the Almohads, the mountains followed Maliki Islam like the cities, but through local lodges (zawiyas)
+      and families of saints rather than state schools. We know little about how ordinary villagers themselves
+      described their faith in this period.
+    detail: >
+      Idris (pp. 126-127) says Berber-speaking regions kept their social structures largely intact; Ferhat and
+      Cornell trace the growth of rural zawiyas and saint lineages in the 13th-15th c. Hoffman (2020) notes the
+      Anti-Atlas and Sous had a long tradition of religious schooling that shaped custom, but her evidence is from
+      customary courts under the French Protectorate: 20th-century evidence read backward, and the term azref is
+      not in it. Peasant voices are missing: the evidence is hagiography, fatwas and travelers. Confidence low for
+      anything beyond the broad picture.
+    evidence: [src-idris-maghrib-society-gha4, src-ferhat-soufisme-zaouias, src-cornell-realm-of-saint, src-hoffman-customary-courts]
+    confidence: low
+    flag: null
+
+  # ================= MARINIDS =================
+  - id: rp-marinids-court-1248-1350
+    place: pl-marinids
+    span: {start: 1248, end: 1350, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant,
+         local_form: "State-endowed Maliki madrasas; royal mawlid celebrations; patronage of saints' tombs (Abu Madyan at Tlemcen)"}
+      - {family: abrahamic, tradition: judaism, branch: rabbanite, share: minority,
+         local_form: "Jewish financiers, physicians and officials serving the sultans"}
+      - {family: abrahamic, tradition: christianity, branch: latin-catholic, share: minority,
+         local_form: "Christian mercenary guard from Iberia with chaplains"}
+    relation: coexisting
+    summary: >
+      The Marinids, Amazigh (Berber) rulers from Morocco's eastern steppe, based their right to rule on Maliki
+      Sunni Islam, founding colleges (madrasas) in Fez and celebrating the Prophet's birthday. Jewish officials
+      and Christian mercenary guards served at court and kept their own religions.
+    detail: >
+      Idris (pp. 129-130, 132-134): Marinids and Abd al-Wadids adopted Maliki orthodoxy; Jews held high positions
+      in the Marinid state; Hrbek (pp. 102, 118) on Christian mercenaries. Shatzmiller and Kably (Moroccan
+      historian) read the madrasa program as a bid for legitimacy by a dynasty with no religious founding claim,
+      winning over the Fez ulama and training officials. Kably's book (1986; reissued Rabat, Le Fennec, 2022)
+      was not read here; tagged needs-library.
+    evidence: [src-idris-maghrib-society-gha4, src-hrbek-maghrib-disintegration-gha4, src-shatzmiller-berbers-islamic-state, src-kably-societe-pouvoir-religion]
+    confidence: high
+    flag: null
+
+  - id: rp-marinids-court-1350-1465
+    place: pl-marinids
+    span: {start: 1350, end: 1465, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant,
+         local_form: "Maliki madrasas plus a growing cult of sharifs (descendants of the Prophet), above all Idris II's tomb in Fez after 1437"}
+      - {family: abrahamic, tradition: judaism, branch: rabbanite, share: minority,
+         local_form: "Jewish officials, culminating in the vizier Harun ibn Battash (killed 1465)"}
+    relation: coexisting
+    summary: >
+      Weak Marinid sultans, controlled by chief ministers from the Wattasid family, turned to the prestige of
+      the Prophet's descendants, especially Fez's founder Idris II. When Sultan Abd al-Haqq made a Jewish man
+      his chief minister, a revolt in 1465 killed both men and many of Fez's Jews.
+    detail: >
+      Hrbek (p. 115) on Wattasid viziers from 1420 and the end of the Marinid line in 1465. The 1437/1438
+      rediscovery of Idris II's body created a sanctuary closed to non-Muslims (sources cited in the Jewish
+      community of Fes reference: Rguig 2014; Gilson Miller 2001). Kably treats the period as the rise of the
+      sharifian idea that later carried the Saadians to power. The relation is coexisting for most of the span;
+      1465 belongs in the events layer as the moment it became contested.
+    evidence: [src-hrbek-maghrib-disintegration-gha4, src-wp-jewish-fes, src-kably-societe-pouvoir-religion, src-chtatou-mellah-fez]
+    confidence: medium
+    flag: null
+
+  - id: rp-marinids-rural-1248-1350
+    place: pl-marinids
+    span: {start: 1248, end: 1350, approx: true}
+    stratum: rural
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant,
+         local_form: "Arabic-speaking nomad groups on the plains and Tamazight-speaking farmers; local saints, rural zawiyas, seasonal pilgrimages (moussem)"}
+    relation: exclusive
+    basis: inferred
+    summary: >
+      Morocco's countryside was Muslim, but split between Amazigh-speaking farmers and Arabic-speaking herders
+      who were spreading onto the plains. Local saints and their lodges seem to have been the center of rural
+      religious life, though the evidence is indirect.
+    detail: >
+      Hrbek (pp. 111-112): Arab nomads expanded into Morocco under the Marinids, turning farmland to pasture,
+      and Arabic became the official language. Idris (pp. 126-131) on peasant majority and spread of Sufism and
+      saint veneration. Evidence for what farmers believed is indirect; this is a low-information profile.
+    evidence: [src-hrbek-maghrib-disintegration-gha4, src-idris-maghrib-society-gha4]
+    confidence: low
+    flag: null
+
+  - id: rp-marinids-rural-1350-1465
+    place: pl-marinids
+    span: {start: 1350, end: 1465, approx: true}
+    stratum: rural
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant,
+         local_form: "Saint lineages and zawiyas gaining political weight; al-Jazuli's (d. 1465) Shadhili-derived movement and prayer book Dala'il al-khayrat"}
+    relation: exclusive
+    basis: inferred
+    summary: >
+      After the Black Death and as the Marinid state weakened, rural lodges (zawiyas) led by holy families
+      became centers of protection and leadership. By the 1450s the preacher al-Jazuli was building a mass
+      Sufi movement in the countryside.
+    detail: >
+      Idris (pp. 129-131) names al-Jazuli and the multiplication of zawiyas; Cornell (Realm of the Saint) is the
+      main study of the Jazuliyya and argues it reshaped Moroccan sainthood from the mid-15th century. Plague and
+      Portuguese coastal attacks (Ceuta 1415) are standard explanations for the zawiyas' rise; the causal weight
+      is debated. Peasant voices remain indirect.
+    evidence: [src-idris-maghrib-society-gha4, src-cornell-realm-of-saint, src-wp-seven-saints]
+    confidence: medium
+    flag: null
+
+  # ================= ZAYYANIDS =================
+  - id: rp-zayyanids-court-1236-1450
+    place: pl-zayyanids
+    span: {start: 1236, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant,
+         local_form: "Maliki madrasas of Tlemcen; veneration of Abu Madyan (d. 1198) at al-Ubbad"}
+      - {family: abrahamic, tradition: judaism, branch: rabbanite, share: minority,
+         local_form: "Jewish merchants and financiers tied to the Sahara and Mediterranean trades"}
+      - {family: abrahamic, tradition: christianity, branch: latin-catholic, share: minority,
+         local_form: "Iberian Christian mercenaries"}
+    relation: coexisting
+    summary: >
+      The rulers of Tlemcen were Maliki Muslims who honored the Sufi saint Abu Madyan as the city's patron.
+      Jewish merchants and Christian mercenaries were part of the court's world but kept their own faiths.
+    detail: >
+      Idris (pp. 129-130, 132-134) for Abd al-Wadid Maliki orthodoxy and the major Jewish economic role in Tlemcen;
+      Hrbek (p. 118) for Christian mercenaries. One profile across the whole span because evidence for change at
+      court level is thin; the Marinid occupations (1337-48, 1352-59) brought Marinid patronage of the Abu Madyan
+      complex.
+    evidence: [src-idris-maghrib-society-gha4, src-hrbek-maghrib-disintegration-gha4]
+    confidence: medium
+    flag: null
+
+  - id: rp-zayyanids-rural-1236-1450
+    place: pl-zayyanids
+    span: {start: 1236, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >
+      We have almost no direct evidence about the religious life of farmers and herders in the Tlemcen
+      kingdom's countryside. Historians assume they were Muslim, but the details of their practice were not
+      recorded.
+    detail: >
+      Sources for the central Maghreb hinterland are dynastic chronicles (Ibn Khaldun, Yahya ibn Khaldun) and
+      urban hagiography; none describe village practice in detail. Ibn Khaldun did live among a nomad group at
+      Qal'at Ibn Salama (1375-78) but wrote theory, not ethnography. Ibadi communities in the Mzab and Wargla
+      oases to the south (outside firm Zayyanid control) are a known minority not mapped here. What is missing:
+      village-level fatwas, rural hagiographies, archaeology of rural mosques and shrines.
+    evidence: [src-ibn-khaldun-ibar, src-idris-maghrib-society-gha4]
+    confidence: medium
+    flag: null
+
+  # ================= HAFSIDS =================
+  - id: rp-hafsids-court-1229-1350
+    place: pl-hafsids
+    span: {start: 1229, end: 1350, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant,
+         local_form: "Maliki scholars in mosques and the first Maghrebi madrasa (al-Shamma'iya, Tunis)"}
+      - {family: abrahamic, tradition: islam, branch: other, share: significant,
+         local_form: "Almohad legitimacy kept as dynastic ideology (the Hafsids presented themselves as true heirs of the Almohads)"}
+      - {family: abrahamic, tradition: christianity, branch: latin-catholic, share: minority,
+         local_form: "Christian cavalry in the sultan's guard"}
+    relation: coexisting
+    summary: >
+      The Hafsids broke away from the Almohads in 1229 but kept Almohad titles while sponsoring Maliki
+      scholars and Tunis's first madrasa. Christian cavalry served in the sultan's guard under their own customs.
+    detail: >
+      Hrbek (pp. 105-106): Abu Zakariyya independent 1229, own khutba c. 1236, al-Mustansir caliph 1253; recognized
+      by the Sharif of Mecca 1259. Idris (pp. 128-130, 137): Malikism triumphed fully only in the second half of the
+      14th c. with Ibn Arafa; Christian cavalry in the guard. Diplomatic contact with Kanem: Ibn Khaldun records a
+      giraffe sent by the ruler of Kanem to al-Mustansir in 1257, showing Hafsid ties across the Sahara.
+    evidence: [src-hrbek-maghrib-disintegration-gha4, src-idris-maghrib-society-gha4, src-wp-mustansir, src-ibn-khaldun-ibar]
+    confidence: medium
+    flag: >
+      The dynasty claimed Almohad continuity while its scholars and judges were Maliki; the claim was a title,
+      the practice was Maliki.
+
+  - id: rp-hafsids-court-1350-1450
+    place: pl-hafsids
+    span: {start: 1350, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant,
+         local_form: "Ibn Arafa's Maliki school; royal patronage of Tunis zawiyas and saints (Ibn Arus, d. 1463)"}
+      - {family: abrahamic, tradition: christianity, branch: latin-catholic, share: minority,
+         local_form: "Christian guard and renegades; freed slaves rising in military and civil posts"}
+    relation: coexisting
+    summary: >
+      By the late 1300s the Hafsid court was firmly Maliki, guided by the jurist Ibn Arafa, and it patronized
+      Sufi saints in Tunis. Christian soldiers and former slaves of many origins held posts in the army and
+      government.
+    detail: >
+      Idris (pp. 129-130, 137) on Ibn Arafa and Maliki triumph; growing military and civil roles of freed or renegade
+      former slaves. Ibn Khaldun and Ibn Arafa were rivals in Tunis, one reason Ibn Khaldun left for Cairo in 1382.
+    evidence: [src-idris-maghrib-society-gha4, src-wp-ibn-khaldun]
+    confidence: medium
+    flag: null
+
+  - id: rp-hafsids-rural-1229-1260
+    place: pl-hafsids
+    span: {start: 1229, end: 1260, approx: true}
+    stratum: rural
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant, local_form: null}
+      - {family: abrahamic, tradition: islam, branch: ibadi, share: minority,
+         local_form: "Ibadi communities of Djerba and the Djerid/Nafzawa oases"}
+      - {family: abrahamic, tradition: christianity, branch: latin-african, share: trace,
+         local_form: "Last indigenous (Latin African) Christian communities, possibly in the southern oases"}
+    relation: coexisting
+    summary: >
+      Most rural people in Ifriqiya (today's Tunisia) were Maliki Muslims, but Ibadi Muslims, a small branch
+      separate from Sunni and Shi'i Islam, kept their own communities on Djerba and in the southern oases.
+      Historians disagree about whether small groups of local Christians still survived there.
+    detail: >
+      Prevost (2007) argues the last indigenous Christians of the Djerid and Nafzawa disappeared around the
+      mid-13th c., together with the oases' Ibadis, and that claims of survival into the 14th-18th c. rest on
+      misread Arabic sources. Cristini (2025) ends African Latin Christianity in the Almohad era. Branch
+      latin-african (taxonomy v0.2). Djerba's Ibadis survive to the present.
+    evidence: [src-prevost-dernieres-communautes, src-cristini-years-of-infidels, src-wp-african-romance]
+    confidence: low
+    flag: null
+
+  - id: rp-hafsids-rural-1260-1450
+    place: pl-hafsids
+    span: {start: 1260, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant,
+         local_form: "Rural saints and zawiyas; Arabic-speaking nomad confederations on the steppe"}
+      - {family: abrahamic, tradition: islam, branch: ibadi, share: minority, local_form: "Djerba"}
+    relation: coexisting
+    summary: >
+      After about 1260 the Ifriqiyan countryside was Muslim, mostly Maliki with an Ibadi minority on Djerba.
+      Arabic-speaking herders dominated much of the steppe, and rural Sufi lodges multiplied.
+    detail: >
+      Idris (pp. 126-131): peasants the majority; zawiyas multiplied especially around Tunis. The Banu Hilal and
+      Sulaym legacy made the interior largely Arabic-speaking. Direct rural evidence is thin.
+    evidence: [src-idris-maghrib-society-gha4, src-prevost-dernieres-communautes]
+    confidence: low
+    flag: null
+
+  # ================= TUNIS / KAIROUAN / TOZEUR =================
+  - id: rp-tunis-urban-1229-1350
+    place: pl-tunis
+    span: {start: 1229, end: 1350, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant,
+         local_form: "Mosque teaching, the Shamma'iya madrasa (1236-49), al-Shadhili's first zawiya (1227), the female saint Lalla Mannubiyya (d. 1267)"}
+      - {family: abrahamic, tradition: judaism, branch: rabbanite, share: minority, local_form: null}
+      - {family: abrahamic, tradition: christianity, branch: latin-catholic, share: minority,
+         local_form: "Genoese, Pisan, Venetian, Catalan and other merchants in funduqs with chapels and consuls"}
+    relation: coexisting
+    summary: >
+      Tunis was a Maliki Muslim city where a Moroccan teacher, al-Shadhili, started one of Islam's most
+      important Sufi paths, and where a woman saint, Lalla Mannubiyya, drew followers. Jewish residents and
+      European Christian merchants lived in their own quarters and lodgings.
+    detail: >
+      Idris (pp. 128-133) for funduqs by nation with consuls, Lalla Mannubiyya and zawiyas; Talbi (p. 91) for
+      Iberian merchants' funduqs with chapels. The 1270 treaty ending Louis IX's crusade guaranteed Christian
+      trade and residence of monks and priests. Andalusi refugees arrived in large numbers from the 1230s.
+    evidence: [src-idris-maghrib-society-gha4, src-talbi-maghrib-civilization-gha4, src-wp-shadhili, src-wp-mustansir]
+    confidence: high
+    flag: null
+
+  - id: rp-tunis-urban-1350-1450
+    place: pl-tunis
+    span: {start: 1350, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant,
+         local_form: "Ibn Arafa's teaching circle; many new zawiyas; Ibn Arus (d. 1463)"}
+      - {family: abrahamic, tradition: judaism, branch: rabbanite, share: minority,
+         local_form: "Local Jews joined after 1391 by refugees from Iberia"}
+      - {family: abrahamic, tradition: christianity, branch: latin-catholic, share: minority,
+         local_form: "European merchants and captives awaiting ransom"}
+    relation: coexisting
+    summary: >
+      After the Black Death, Tunis rebuilt as a Maliki center where Sufi lodges multiplied. Jewish refugees from
+      Spain and European merchants and captives added to the city's minority communities.
+    detail: >
+      Idris (pp. 128, 132-137): Jewish numbers grew at the end of the 14th c. with arrivals fleeing Christian
+      persecution; corsair captives ransomed by Christian clergy; zawiyas multiplied in Tunis. Ibn Khaldun's
+      parents died here in the 1348-49 plague.
+    evidence: [src-idris-maghrib-society-gha4, src-dols-black-death]
+    confidence: medium
+    flag: null
+
+  - id: rp-tunis-european-christians-1229-1450
+    place: pl-tunis
+    span: {start: 1229, end: 1450, approx: true}
+    stratum: community
+    community_name: European Christian merchants and soldiers of Tunis
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: latin-catholic, share: dominant,
+         local_form: "Funduq chapels, consuls by nation, chaplains for the Christian guard; Franciscan and Dominican friars"}
+    relation: exclusive
+    basis: attested
+    summary: >
+      Italian, Catalan and other European Christians lived in Tunis as foreign merchants, soldiers and captives,
+      with their own chapels and consuls. They were visitors protected by treaties, not a local Christian
+      population.
+    detail: >
+      Keep separate from the question of indigenous North African Christianity, which had ended or nearly ended by
+      the mid-13th c. (Prevost). Idris (pp. 128, 132-133, 136-137); Talbi (p. 91); 1270 treaty.
+    evidence: [src-idris-maghrib-society-gha4, src-talbi-maghrib-civilization-gha4, src-prevost-dernieres-communautes]
+    confidence: high
+    flag: null
+
+  - id: rp-kairouan-urban-1200-1450
+    place: pl-kairouan
+    span: {start: 1200, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant,
+         local_form: "Great Mosque; shrine of the Prophet's companion Abu Zama' al-Balawi (Sidi Sahib), built up under the Hafsids in the 14th c."}
+    relation: exclusive
+    basis: inferred
+    summary: >
+      Kairouan, once the great Maliki center of North Africa, was a smaller town after the 11th-century
+      invasions, but it stayed a holy city. Its shrine to a companion of the Prophet grew under the Hafsids.
+    detail: >
+      Kairouan's famous Jewish community had declined after 1057 and is not documented in this period. One profile
+      only: evidence for change inside 1200-1450 is limited to Hafsid building at Sidi Sahib (14th c.).
+    evidence: [src-wp-kairouan]
+    confidence: medium
+    flag: null
+
+  - id: rp-tozeur-urban-1200-1260
+    place: pl-tozeur
+    span: {start: 1200, end: 1260, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: ibadi, share: significant, local_form: null}
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: significant, local_form: null}
+      - {family: abrahamic, tradition: christianity, branch: latin-african, share: minority,
+         local_form: "Indigenous Christians, heirs of Latin African Christianity (existence in this span debated)"}
+    relation: coexisting
+    summary: >
+      The southern Tunisian oases were home to Ibadi Muslims (a small branch of Islam) and Maliki Muslims,
+      and possibly to the last North African Christians, whose families had been Christian since Roman
+      times. Historians debate when those Christians disappeared.
+    detail: >
+      Prevost (2007): these Ibadi-dominated oases were probably the last refuge of indigenous Christians; she dates
+      their disappearance to around the mid-13th c. and rejects readings that stretch it to the 14th-18th c.
+      al-Idrisi (1154) wrote that most people of nearby Gafsa spoke "the Latin-African tongue" (language, not
+      religion). Cristini (2025) also places the end in the Almohad age.
+    evidence: [src-prevost-dernieres-communautes, src-al-idrisi-nuzha, src-wp-african-romance, src-cristini-years-of-infidels]
+    confidence: low
+    flag: null
+
+  - id: rp-tozeur-urban-1260-1450
+    place: pl-tozeur
+    span: {start: 1260, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant, local_form: null}
+    relation: exclusive
+    basis: inferred
+    summary: >
+      By the later 1200s the oases had become Maliki Sunni, with no clearly documented Christian or Ibadi (a
+      small branch of Islam) community afterward. Many historians see this as the end of local Christianity over
+      a thousand years old, though some think it lasted longer.
+    detail: >
+      Following Prevost's argument. Teach as contested: older surveys, and some recent writing (e.g. a 2022 Macksey Journal article
+      citing Jack Tannous), put Christian survival into the 14th c. or later.
+    evidence: [src-prevost-dernieres-communautes]
+    confidence: low
+    flag: null
+
+  - id: rp-tozeur-indigenous-christians-1200-1260
+    place: pl-tozeur
+    span: {start: 1200, end: 1260, approx: true}
+    stratum: community
+    community_name: Indigenous (Latin African) Christians of the Djerid and Nafzawa
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: latin-african, share: dominant,
+         local_form: "Descendants of Roman-era African Latin Christianity; no bishops attested after the 11th c."}
+    relation: exclusive
+    basis: inferred
+    summary: >
+      A small community of local North African Christians may have survived in the southern oases into the
+      1200s. They were Africans whose families had been Christian for centuries, unlike the European merchants
+      in the ports.
+    detail: >
+      The last firm documentary evidence of an organized African church is Gregory VII's letters (1073-1085) about
+      the bishops of Carthage and Bougie. After that, evidence is scattered (Arabic geographers, a few later
+      references). Prevost: gone by the mid-13th c.; others: survival into the 14th c. or later. The Almohad
+      abolition of dhimma (1150s-60s) is usually treated as the decisive blow (general scholarship; not in the
+      cited sources, nor is Bougie). Wikipedia (African Romance) also mentions a Latin psalter dated 1230,
+      possible evidence for this span (not checked against its source). Shown as a community with low confidence
+      so students can see an ending, not a gap.
+    evidence: [src-prevost-dernieres-communautes, src-cristini-years-of-infidels, src-wp-african-romance]
+    confidence: low
+    flag: Existence of the community in this span is itself debated.
+
+  # ================= FEZ =================
+  - id: rp-fez-urban-1200-1248
+    place: pl-fez
+    span: {start: 1200, end: 1248, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant,
+         local_form: "Qarawiyyin mosque-university; Maliki jurists under Almohad oversight"}
+      - {family: abrahamic, tradition: islam, branch: other, share: minority, local_form: "Official Almohad creed"}
+      - {family: abrahamic, tradition: judaism, branch: rabbanite, share: minority,
+         local_form: "Jewish families who had converted under pressure, some practicing in secret"}
+    relation: contested
+    summary: >
+      Under the Almohads, Fez's scholars kept teaching Maliki law at the Qarawiyyin while the state promoted its
+      own creed. Jews had been pushed to convert, and a generation earlier the young Maimonides' family had
+      lived here before escaping to Egypt.
+    detail: >
+      Maimonides' family lived in Fez in the 1160s before leaving for Egypt (c. 1165); he settled in Fustat
+      (Ben Ezra reference). The Qarawiyyin's bronze chandelier was commissioned under the Almohads (1202-1219).
+      Contested because of the conversion pressure on Jews (Test 3).
+    evidence: [src-wp-almohad-doctrine, src-wp-qarawiyyin, src-wp-jewish-fes]
+    confidence: medium
+    flag: null
+
+  - id: rp-fez-urban-1248-1438
+    place: pl-fez
+    span: {start: 1248, end: 1438, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant,
+         local_form: "Qarawiyyin plus Marinid madrasas (Saffarin 1271, Attarine 1323-25, Misbahiyya 1346, Bou Inania 1350-55); Sufi teachers such as Ibn Abbad of Ronda (d. 1390)"}
+      - {family: abrahamic, tradition: judaism, branch: rabbanite, share: minority,
+         local_form: "Jewish community with its own administration, living in Fes el-Bali and later Fes el-Jdid"}
+      - {family: abrahamic, tradition: christianity, branch: latin-catholic, share: minority,
+         local_form: "European merchants under a consul-like official; Christian guard in Fes el-Jdid"}
+    relation: coexisting
+    summary: >
+      Marinid Fez became the leading Maliki teaching city of the far west, with the Qarawiyyin and a ring of new
+      madrasas that housed students from across Morocco. Jews ran their own community affairs, and European
+      merchants had a recognized leader.
+    detail: >
+      Idris (pp. 129-133): first Marinid madrasa under Abu Yusuf, four more 1320-23, a sixth 1346-47, plus Abu Inan's;
+      Jewish community administration; Christian merchant community under a consul-like official. Al-Qarawiyyin
+      library founded 1349 by Abu Inan. Violence against Jews occurred (Idris notes pogroms under the Marinids;
+      Rguig ties one to 1276), so "coexisting" describes the norm, not the whole story.
+    evidence: [src-idris-maghrib-society-gha4, src-wp-qarawiyyin, src-wp-jewish-fes]
+    confidence: high
+    flag: null
+
+  - id: rp-fez-urban-1438-1465
+    place: pl-fez
+    span: {start: 1438, end: 1465, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant,
+         local_form: "Cult of Idris II centered on his rediscovered tomb, a sanctuary (hurm) closed to non-Muslims"}
+      - {family: abrahamic, tradition: judaism, branch: rabbanite, share: minority,
+         local_form: "Jews moved to the mellah in Fes el-Jdid; some merchant families converted to stay in the old city"}
+    relation: contested
+    summary: >
+      After Idris II's tomb was rediscovered in 1437, the area around it became a Muslim sanctuary, and Fez's
+      Jews lived in a separate quarter, the mellah, whose start some historians date much earlier. In 1465 a
+      revolt in Fez killed many Jews.
+    detail: >
+      Date of the mellah: the classic date is 1438 (some give 1437), tied to the tomb; Rguig (2014) and Gilson
+      Miller (2001) argue for a gradual move beginning after Fes el-Jdid's founding in 1276, with Jews still in
+      Fes el-Bali in the mid-14th c. Converts (the Bildiyyin) are studied by Garcia-Arenal (1987).
+    evidence: [src-wp-jewish-fes, src-chtatou-mellah-fez, src-garcia-arenal-bildiyyin]
+    confidence: medium
+    flag: null
+
+  - id: rp-fez-jews-1248-1438
+    place: pl-fez
+    span: {start: 1248, end: 1438, approx: true}
+    stratum: community
+    community_name: Jews of Fez
+    traditions:
+      - {family: abrahamic, tradition: judaism, branch: rabbanite, share: dominant,
+         local_form: "Maghrebi Rabbanite Judaism; Judeo-Arabic and Judeo-Berber speech; Hebrew for liturgy and law"}
+    relation: exclusive
+    basis: attested
+    summary: >
+      Fez's Jewish community rebuilt after the Almohad era and governed its own internal affairs under the
+      Marinids. Some Jews became important officials and financiers to the sultans.
+    detail: >
+      Idris (pp. 132-134); Gottreich (Jewish Morocco, 2020) for the long view. Speech: Judeo-Arabic is well
+      attested in the Maghreb; Judeo-Berber among rural Jews is attested later and not checked for this span.
+    evidence: [src-idris-maghrib-society-gha4, src-gottreich-jewish-morocco]
+    confidence: medium
+    flag: null
+
+  - id: rp-fez-jews-1438-1465
+    place: pl-fez
+    span: {start: 1438, end: 1465, approx: true}
+    stratum: community
+    community_name: Jews of Fez (mellah)
+    traditions:
+      - {family: abrahamic, tradition: judaism, branch: rabbanite, share: dominant, local_form: "Mellah community in Fes el-Jdid"}
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: minority,
+         local_form: "Converted merchant families (Bildiyyin) who kept homes and shops in the old city"}
+    relation: contested
+    summary: >
+      Moved into the mellah next to the royal city, Fez's Jews were both protected and separated. Some
+      leading families converted to Islam, and in 1465 rioters killed many in the mellah.
+    detail: >
+      Garcia-Arenal (1987) on the Bildiyyin; conversions spiked in the mid-15th c. The 1465 attack followed the
+      appointment of Harun ibn Battash as vizier; the community took at least a decade to recover (Jewish
+      community of Fes reference).
+    evidence: [src-wp-jewish-fes, src-garcia-arenal-bildiyyin, src-chtatou-mellah-fez]
+    confidence: medium
+    flag: null
+
+  # ================= MARRAKESH =================
+  - id: rp-marrakesh-urban-1200-1269
+    place: pl-marrakesh
+    span: {start: 1200, end: 1269, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: other, share: significant, local_form: "Almohad creed of the capital"}
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant,
+         local_form: "Maliki scholars; the charity saint Abu al-Abbas al-Sabti (d. 1204), whose tomb became a major zawiya"}
+      - {family: abrahamic, tradition: christianity, branch: latin-catholic, share: minority,
+         local_form: "Castilian mercenary cavalry after 1229; Franciscan friars"}
+    relation: contested
+    summary: >
+      As the Almohad capital, Marrakesh mixed the official creed, Maliki scholars and popular saints like al-Sabti.
+      Christian mercenaries arrived after 1229, and Franciscan accounts say friars who preached against Islam were
+      executed there, a story some historians doubt.
+    detail: >
+      Contested because of the executions of Franciscan preachers (1220, per Franciscan accounts whose historicity
+      MacEvitt questions), and the 1229-30 purge of Almohad shaykhs. The seven-saints pilgrimage circuit including
+      al-Sabti was organized only in the late 17th c.; do not project it back.
+    evidence: [src-wp-seven-saints, src-macevitt-martyrdom-franciscans, src-hrbek-maghrib-disintegration-gha4]
+    confidence: medium
+    flag: null
+
+  - id: rp-marrakesh-urban-1269-1450
+    place: pl-marrakesh
+    span: {start: 1269, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant,
+         local_form: "Maliki teaching; shrines of al-Sabti and other saints; Marinid madrasa (Ibn Salih)"}
+    relation: exclusive
+    basis: inferred
+    summary: >
+      Under the Marinids, Marrakesh was a provincial Maliki city whose saints' tombs drew visitors. Evidence for
+      other communities in the city in this period is thin.
+    detail: >
+      A Jewish community in Marrakesh is well documented only from the 16th c. (the Marrakesh mellah dates to
+      1558); its 14th-15th c. presence was not checked. Exclusive is recorded with low confidence for that reason.
+    evidence: [src-wp-seven-saints, src-hrbek-maghrib-disintegration-gha4]
+    confidence: low
+    flag: null
+
+  # ================= TLEMCEN =================
+  - id: rp-tlemcen-urban-1236-1337
+    place: pl-tlemcen
+    span: {start: 1236, end: 1337}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant,
+         local_form: "Great Mosque; shrine of Abu Madyan at al-Ubbad; Zayyanid madrasas"}
+      - {family: abrahamic, tradition: judaism, branch: rabbanite, share: minority,
+         local_form: "Jewish traders in the Saharan gold and Mediterranean trades"}
+    relation: coexisting
+    summary: >
+      Tlemcen was a Maliki trading capital where gold and enslaved people from the Sahara met Mediterranean
+      merchants. Its Jewish community played a major part in that trade.
+    detail: >
+      Idris (pp. 128, 132-134): Jews played a major economic role especially in Tlemcen and Bougie; gold and slaves
+      moved from Sijilmasa to Tlemcen. Hrbek (p. 116) on Tlemcen as trade hub. The Maqqari merchant family of
+      Tlemcen traded with Walata in the 13th c. (later account by their descendant; not checked here).
+    evidence: [src-idris-maghrib-society-gha4, src-hrbek-maghrib-disintegration-gha4]
+    confidence: medium
+    flag: null
+
+  - id: rp-tlemcen-urban-1337-1450
+    place: pl-tlemcen
+    span: {start: 1337, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant,
+         local_form: "Marinid-built Sidi Boumediene mosque (1339) and madrasa (about 1347); Ibn Marzuq preaching at al-Ubbad"}
+      - {family: abrahamic, tradition: judaism, branch: rabbanite, share: minority,
+         local_form: "Community enlarged by Iberian refugees after the 1391 massacres"}
+    relation: coexisting
+    summary: >
+      When the Marinids occupied Tlemcen, they built a great mosque and college beside the tomb of the saint
+      Abu Madyan. After 1391, Jews fleeing Spain strengthened the city's Jewish community.
+    detail: >
+      Sidi Boumediene complex: mosque founded 1339 by Abu al-Hasan, madrasa about 1347 (Ibn Khaldun reportedly
+      taught there). Idris: Jewish numbers grew at the end of the 14th c. from refugees. Ibn Marzuq (c. 1310-1379)
+      was appointed preacher at al-Ubbad by Abu al-Hasan.
+    evidence: [src-wp-sidi-boumediene, src-idris-maghrib-society-gha4, src-wp-ibn-marzuq]
+    confidence: medium
+    flag: null
+
+  # ================= SIJILMASA =================
+  - id: rp-sijilmasa-urban-1200-1400
+    place: pl-sijilmasa
+    span: {start: 1200, end: 1400, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant, local_form: null}
+      - {family: abrahamic, tradition: judaism, branch: rabbanite, share: unknown,
+         local_form: "Historic Jewish trading community, badly hit by the Almohad massacre of 1146; later presence not checked"}
+    relation: coexisting
+    summary: >
+      Sijilmasa was the Moroccan gateway to the Sahara, a Muslim oasis town where caravans for Mali gathered.
+      It had a famous Jewish trading community earlier, but little is known about it after 1200.
+    detail: >
+      Ibn Battuta stayed here in 1352 before crossing to Mali. Archaeology: Moroccan-American Project of Sijilmassa
+      (from 1988; Messier and Miller 2015). The city declined in the later 14th c. (abandonment often dated about
+      1393; Ibn Khaldun blamed lack of resources). Low confidence on the Jewish share after 1200.
+    evidence: [src-wp-sijilmasa, src-ibn-battuta-rihla, src-messier-miller-last-civilized-place]
+    confidence: low
+    flag: null
+
+  # ================= AYYUBIDS =================
+  - id: rp-ayyubids-court-1200-1250
+    place: pl-ayyubids
+    span: {start: 1200, end: 1250, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-shafii, share: dominant,
+         local_form: "Sunni madrasas founded to replace the Fatimid Ismaili establishment; al-Salihiyya (1243) for all four Sunni law schools"}
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-coptic, share: minority,
+         local_form: "Coptic secretaries and tax officials in the diwans"}
+      - {family: abrahamic, tradition: judaism, branch: rabbanite, share: minority,
+         local_form: "Court physicians, including Maimonides (d. 1204) and his son Abraham"}
+    relation: coexisting
+    summary: >
+      The Ayyubid sultans made Egypt a Sunni land again after two centuries of rule by the Fatimids, a Shi'i
+      dynasty, and built colleges (madrasas) to train Sunni scholars. Coptic Christians ran much of the tax
+      system, and Jewish doctors such as Maimonides served the court.
+    detail: >
+      Garcin (pp. 405-408): madrasa system imported from the Seljuk East to train loyal Sunni scholars; Copts
+      continued to staff the administration inherited from the Fatimids. MIT handout: al-Salih Najm al-Din's
+      madrasas (1243) were the first in Cairo for the four schools. Maimonides was court physician and nagid.
+    evidence: [src-garcin-egypt-gha4, src-mit-ayyubid-cairo, src-wp-abraham-maimonides]
+    confidence: high
+    flag: null
+
+  - id: rp-ayyubids-rural-1200-1250
+    place: pl-ayyubids
+    span: {start: 1200, end: 1250, approx: true}
+    stratum: rural
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: dominant, local_form: null}
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-coptic, share: significant,
+         local_form: "Coptic villages and monasteries, especially in Upper Egypt and Wadi al-Natrun"}
+    relation: coexisting
+    summary: >
+      In the Egyptian countryside, Muslim and Coptic Christian villagers lived side by side, often in separate
+      villages with their own churches and mosques. How large the Christian share was by 1200 is debated.
+    detail: >
+      The Muslim-majority date is disputed: O'Sullivan (2006) argues for a Muslim majority by about the 9th c.,
+      el-Leithy (2005) for a decisive shift only in the 14th c. Share "significant" is a compromise; say so in class.
+    evidence: [src-osullivan-coptic-conversion, src-el-leithy-coptic-conversion]
+    confidence: low
+    flag: null
+
+  # ================= MAMLUKS =================
+  - id: rp-mamluks-court-1250-1300
+    place: pl-mamluks
+    span: {start: 1250, end: 1300, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-hanafi, share: dominant,
+         local_form: "Turkish mamluk soldiers, converted and trained as boys; Hanafi law common among them"}
+      - {family: abrahamic, tradition: islam, branch: sunni-shafii, share: significant,
+         local_form: "Shafi'i chief judge senior among four Sunni chief judges (from 1265); Abbasid shadow caliph in Cairo after 1261"}
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-coptic, share: minority,
+         local_form: "Coptic financial officials"}
+    relation: coexisting
+    summary: >
+      Egypt's new rulers, the mamluks, had been enslaved as boys on the Black Sea steppe, raised as Muslims
+      and trained as soldiers before seizing power in 1250. To look legitimate they brought a caliph from the
+      old Abbasid family to Cairo, while still relying on Coptic officials.
+    detail: >
+      Garcin (pp. 408-411, 415, 418-419): mamluk recruitment, iqta; Baybars installed an Abbasid in Cairo and was
+      invested by him; Christians still prominent in administration. Banister (2014-15) on the caliph's mostly
+      ceremonial but real legitimizing role. The four chief judgeships date from Baybars (1265); not checked here
+      beyond standard surveys.
+    evidence: [src-garcin-egypt-gha4, src-banister-abbasid-authority]
+    confidence: high
+    flag: null
+
+  - id: rp-mamluks-court-1300-1354
+    place: pl-mamluks
+    span: {start: 1300, end: 1354, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: dominant, local_form: null}
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-coptic, share: minority,
+         local_form: "Coptic and convert officials repeatedly dismissed and reinstated"}
+    relation: contested
+    summary: >
+      Between 1301 and 1354 the sultans several times ordered Christians and Jews out of government jobs, forced
+      distinctive dress on them, and closed churches and synagogues. Many Coptic officials converted to Islam to
+      keep their posts.
+    detail: >
+      1301: dress colors (blue turbans for Christians, yellow for Jews, red for Samaritans), closure of churches and
+      synagogues in Cairo (reopened from 1309 under Byzantine pressure) per Encyclopaedia Judaica. 1321: sultan
+      al-Nasir Muhammad first resisted, then yielded to crowds after fires. 1354: dismissal even of converts and
+      confiscation of church endowments (O'Sullivan, about 25,000 feddans). Garcin barely discusses these
+      episodes, a historiographical choice worth showing students.
+    evidence: [src-osullivan-coptic-conversion, src-jvl-mamluk-jews, src-al-maqrizi-suluk, src-little-coptic-conversion]
+    confidence: high
+    flag: null
+
+  - id: rp-mamluks-court-1354-1450
+    place: pl-mamluks
+    span: {start: 1354, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: dominant,
+         local_form: "Circassian mamluks after 1382; converts of Coptic origin in the bureaucracy"}
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-coptic, share: minority, local_form: null}
+      - {family: abrahamic, tradition: judaism, branch: rabbanite, share: minority,
+         local_form: "Jewish court physicians, who held the nagid office in the 15th c."}
+    relation: coexisting
+    summary: >
+      After 1354 the bureaucracy was staffed largely by Muslims of Coptic family origin, with fewer Christians in
+      office. Jewish court physicians served as heads of Egypt's Jewish community.
+    detail: >
+      O'Sullivan accepts Wiet's estimate of about 10 percent Christians after 1354. Encyclopaedia Judaica: nagid
+      office held by Maimonides' descendants to the end of the Bahri period, then by court physicians.
+    evidence: [src-osullivan-coptic-conversion, src-jvl-mamluk-jews, src-garcin-egypt-gha4]
+    confidence: medium
+    flag: null
+
+  - id: rp-mamluks-rural-1250-1354
+    place: pl-mamluks
+    span: {start: 1250, end: 1354, approx: true}
+    stratum: rural
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-shafii, share: dominant,
+         local_form: "Village mosques; rural saint cults such as Ahmad al-Badawi (from Fez, settled in Tanta 1236, d. 1276)"}
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-coptic, share: significant,
+         local_form: "Coptic villages, churches and monasteries, especially in Upper Egypt"}
+    relation: contested
+    summary: >
+      In the countryside, violence spread from Cairo in 1321, and dozens of churches across Egypt were
+      destroyed. At the same time, saints from the Maghreb like Ahmad al-Badawi of Tanta became beloved
+      figures for Egyptian villagers.
+    detail: >
+      al-Maqrizi counts 11 churches damaged in Cairo and 49 elsewhere in 1321 (about 60 in O'Sullivan's reading).
+      The share of Copts in the countryside is the key unknown (O'Sullivan vs. el-Leithy). Shafi'i dominance in
+      the Delta is the standard view, not checked against a specific source here.
+    evidence: [src-osullivan-coptic-conversion, src-al-maqrizi-suluk, src-wp-badawi]
+    confidence: medium
+    flag: null
+
+  - id: rp-mamluks-rural-1354-1450
+    place: pl-mamluks
+    span: {start: 1354, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-shafii, share: dominant,
+         local_form: "Sufi saint festivals (mawlids) such as al-Badawi's at Tanta"}
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-coptic, share: minority, local_form: null}
+    relation: coexisting
+    summary: >
+      After the conversions of 1354 and the Black Death, Christians were a minority in most of rural Egypt,
+      though Coptic villages remained, especially in the south. Plague emptied many villages and cut farm output.
+    detail: >
+      al-Maqrizi's report of 450 converts at Qalyub in one day (1354) is the main evidence for mass rural conversion;
+      O'Sullivan calls it too thin to generalize. Plague: Asyut taxpayers fell from 6,000 to 116 (Black Death in the
+      Middle East reference); Dols on rural depopulation. Garcin (p. 424): many conversions in the crisis of the
+      early 15th c.
+    evidence: [src-osullivan-coptic-conversion, src-dols-black-death, src-wp-black-death-middle-east, src-garcin-egypt-gha4]
+    confidence: medium
+    flag: null
+
+  # ================= CAIRO =================
+  - id: rp-cairo-urban-1200-1300
+    place: pl-cairo
+    span: {start: 1200, end: 1300, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-shafii, share: dominant,
+         local_form: "New Ayyubid and Mamluk madrasas; khanqahs (Sufi lodges); al-Azhar's Friday sermon restored 1266"}
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-coptic, share: significant, local_form: null}
+      - {family: abrahamic, tradition: judaism, branch: rabbanite, share: minority, local_form: null}
+      - {family: abrahamic, tradition: judaism, branch: karaite, share: minority, local_form: null}
+    relation: coexisting
+    summary: >
+      Cairo was a fast-growing Sunni Muslim capital with large Coptic Christian and Jewish communities, each with
+      its own leaders, courts and places of worship. New madrasas and Sufi lodges were changing the city's skyline.
+    detail: >
+      Garcin (pp. 405-406, 414-415): madrasas and khanqahs; Archnet: al-Azhar's khutba restored 1266 under Baybars.
+      The Jewish community included Rabbanites and Karaites (and Samaritans) under one nagid (Encyclopaedia Judaica).
+    evidence: [src-garcin-egypt-gha4, src-archnet-al-azhar, src-jvl-mamluk-jews]
+    confidence: high
+    flag: null
+
+  - id: rp-cairo-urban-1300-1354
+    place: pl-cairo
+    span: {start: 1300, end: 1354, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-shafii, share: dominant, local_form: null}
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-coptic, share: significant, local_form: null}
+      - {family: abrahamic, tradition: judaism, branch: rabbanite, share: minority, local_form: null}
+    relation: contested
+    summary: >
+      In 1301, 1321 and 1354, crowds in Cairo attacked Christians and churches, and the government imposed
+      dress rules and job bans on Christians and Jews. Historians disagree about how much these crises changed
+      Egypt's religious makeup.
+    detail: >
+      See the events layer. Interpretations: Little (1976) and Wiet see 1354 as a turning point; O'Sullivan (2006)
+      sees a long-delayed conclusion of earlier Islamization; el-Leithy (2005) locates the decisive change in the
+      14th c. and studies the Coptic elite of Cairo. Economic resentment of Coptic officials is a common
+      explanation; the medievalists.net summary presents it as one motive among several.
+    evidence: [src-al-maqrizi-suluk, src-osullivan-coptic-conversion, src-little-coptic-conversion, src-el-leithy-coptic-conversion, src-konieczny-cairo-1321]
+    confidence: high
+    flag: null
+
+  - id: rp-cairo-urban-1354-1450
+    place: pl-cairo
+    span: {start: 1354, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-shafii, share: dominant,
+         local_form: "al-Azhar housing hundreds of poor provincial and foreign students by 1415; Maghrebi scholars such as Ibn Khaldun"}
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-coptic, share: minority, local_form: null}
+      - {family: abrahamic, tradition: judaism, branch: rabbanite, share: minority, local_form: null}
+    relation: coexisting
+    summary: >
+      In the later Mamluk period, Cairo was one of the greatest centers of Sunni learning, drawing students from
+      many lands, including Africa beyond Egypt. Its Coptic and Jewish communities were smaller and more cautious
+      after the crises of the 1300s.
+    detail: >
+      al-Maqrizi (1415-16, via encyclopedia entry): 750 indigent students in al-Azhar's riwaqs grouped by province
+      and nationality. Ibn Khaldun taught here after 1382 and was Maliki chief judge. Geniza documents become
+      scarcer for this period, reflecting the Jewish community's reduced Mediterranean trade role (EJ).
+    evidence: [src-encyclopedia-al-azhar, src-garcin-egypt-gha4, src-jvl-mamluk-jews]
+    confidence: medium
+    flag: null
+
+  - id: rp-cairo-copts-1200-1300
+    place: pl-cairo
+    span: {start: 1200, end: 1300, approx: true}
+    stratum: community
+    community_name: Coptic Christians of Cairo and Fustat
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-coptic, share: dominant,
+         local_form: "Coptic Orthodox church under the patriarch of Alexandria (resident in Cairo); Coptic in liturgy, Arabic in writing and daily life; the Awlad al-Assal scholars"}
+    relation: exclusive
+    basis: attested
+    summary: >
+      Cairo's Copts were Egyptian Christians who now spoke and wrote mainly in Arabic, while keeping Coptic for
+      prayer. In the 1200s their scholars wrote grammars and dictionaries to keep the old language alive.
+    detail: >
+      Copto-Arabic "golden age" in the early-mid 13th c. (Awlad al-Assal: Arabic New Testament, Coptic-Arabic
+      dictionary and grammar); the first Coptic grammars in Arabic (muqaddimat) date 1240s-1260s (Teepe). Swanson
+      (2010) for the patriarchs. Not an "African vs. Arab" story: Copts were Egyptians choosing Arabic as their
+      written language.
+    evidence: [src-wp-copto-arabic, src-teepe-coptic-muqaddimat, src-swanson-coptic-papacy]
+    confidence: high
+    flag: null
+
+  - id: rp-cairo-copts-1300-1450
+    place: pl-cairo
+    span: {start: 1300, end: 1450, approx: true}
+    stratum: community
+    community_name: Coptic Christians of Cairo and Fustat
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-coptic, share: dominant,
+         local_form: "Arabic translations of liturgy; new martyr and saint traditions (e.g. under Patriarch Matthew I, 1378-1408)"}
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: significant,
+         local_form: "Converts and their families, some still socially tied to Coptic kin"}
+    relation: contested
+    summary: >
+      Under repeated pressure, many Coptic families, especially officials, converted to Islam in the 1300s, while
+      others held on and honored new martyrs and saints. Arabic began to replace Coptic even in parts of the
+      church service.
+    detail: >
+      el-Leithy's work on the Coptic upper class of Cairo shows conversion as a family and career strategy with
+      ambiguous outcomes; O'Sullivan stresses the limits of the evidence. Arabic hymn and liturgy translations
+      appear in the 13th-14th c.; Coptic remained the norm in monasteries (Copto-Arabic literature reference).
+      Swanson's appendix covers the 49 martyrs under Matthew I.
+    evidence: [src-el-leithy-coptic-conversion, src-osullivan-coptic-conversion, src-wp-copto-arabic, src-swanson-coptic-papacy]
+    confidence: medium
+    flag: null
+
+  - id: rp-cairo-jews-1200-1300
+    place: pl-cairo
+    span: {start: 1200, end: 1300, approx: true}
+    stratum: community
+    community_name: Jews of Fustat and Cairo
+    traditions:
+      - {family: abrahamic, tradition: judaism, branch: rabbanite, share: dominant,
+         local_form: "Maimonidean leadership: Abraham Maimonides as nagid (1204-1237) and his Sufi-influenced pietist circle"}
+      - {family: abrahamic, tradition: judaism, branch: karaite, share: minority, local_form: null}
+    relation: coexisting
+    summary: >
+      Egypt's Jews were led by Maimonides' son Abraham, who admired Sufi devotion and brought some of its
+      practices into Jewish prayer. Rabbanite and Karaite Jews had separate synagogues but one official head.
+    detail: >
+      Abraham Maimonides (1186-1237) succeeded as nagid in 1204; his Kifayat al-Abidin praises Sufi practice and his
+      followers kept a Jewish-Sufi pietism for at least a century (Russ-Fishbane 2015). The Cairo Geniza documents
+      this community richly into the 13th c.
+    evidence: [src-wp-abraham-maimonides, src-russ-fishbane-pietists, src-cairo-geniza, src-goitein-mediterranean-society]
+    confidence: high
+    flag: null
+
+  - id: rp-cairo-jews-1300-1450
+    place: pl-cairo
+    span: {start: 1300, end: 1450, approx: true}
+    stratum: community
+    community_name: Jews of Fustat and Cairo
+    traditions:
+      - {family: abrahamic, tradition: judaism, branch: rabbanite, share: dominant, local_form: null}
+      - {family: abrahamic, tradition: judaism, branch: karaite, share: minority, local_form: null}
+      - {family: abrahamic, tradition: judaism, branch: samaritan, share: minority, local_form: null}
+    relation: coexisting
+    summary: >
+      Cairo's Jewish community shrank in the 1300s, after synagogues were closed in 1301 and as Egypt's
+      Mediterranean trade changed. Rabbanites, Karaites and Samaritans were all represented to the sultan by one nagid.
+    detail: >
+      EJ: 1301 closures and forced conversions (all the Jews of Bilbeis); several churches and a synagogue reopened
+      1309; 1354 sumptuary measures; nagid office passed from Maimonides' descendants to court physicians in the
+      15th c. Coexisting describes relations among the Jewish branches; the external pressure is in the Cairo
+      urban profile.
+    evidence: [src-jvl-mamluk-jews]
+    confidence: medium
+    flag: null
+
+  - id: rp-cairo-takrur-1240-1450
+    place: pl-cairo
+    span: {start: 1240, end: 1450, approx: true}
+    stratum: community
+    community_name: West African (Takrur and Kanem) pilgrims, students and residents of Cairo
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant,
+         local_form: "Maliki madrasa founded by Kanem's ruler in Fustat (Ibn Rashiq, about 1242); a community interpreter for the Takrur"}
+    relation: exclusive
+    basis: attested
+    summary: >
+      West Africans lived in Cairo as pilgrims, students and residents, and a ruler of Kanem paid for a Maliki
+      school there for his people around 1242. Africans from south of the Sahara were part of Cairo's
+      religious life, not only visitors passing through.
+    detail: >
+      Garcin (GHA IV p. 414): Kanem's ruler founded a Maliki madrasa in Fustat; the madrasa of Ibn Rashiq, dated
+      about 1242 and linked to Mai Dunama Dibalami, via Dewiere and al-Maqrizi (secondhand). Ibn Khaldun names
+      al-Hajj Yunus, interpreter of the Takrur in Egypt, as an informant (via al-Naqar, secondhand). A Bornu riwaq
+      at al-Azhar is sometimes dated to the 13th c., but Kane documents West African riwaqs only for the 18th c.;
+      treat the early date as unverified.
+    evidence: [src-garcin-egypt-gha4, src-dewiere-city-before-mecca, src-al-naqar-takrur, src-kane-beyond-timbuktu]
+    confidence: medium
+    flag: null
+
+  # ================= ALEXANDRIA =================
+  - id: rp-alexandria-urban-1200-1365
+    place: pl-alexandria
+    span: {start: 1200, end: 1365, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant,
+         local_form: "Strong Maliki scholarly tradition shared with the Maghreb; al-Shadhili's zawiya (from 1244) and his successor al-Mursi"}
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-coptic, share: minority, local_form: null}
+      - {family: abrahamic, tradition: christianity, branch: latin-catholic, share: minority,
+         local_form: "Venetian, Genoese and Catalan merchants in funduqs with consuls"}
+      - {family: abrahamic, tradition: judaism, branch: rabbanite, share: minority, local_form: null}
+    relation: coexisting
+    summary: >
+      Alexandria was Egypt's port to the Mediterranean, home to Maliki scholars with close ties to the Maghreb
+      and to the Sufi teacher al-Shadhili, who settled there in 1244. Copts, Jews and European merchants each kept
+      their own communities.
+    detail: >
+      Garcin (p. 406): al-Shadhili settled in Alexandria about 1244 and Shadhili groups formed there. The Maliki
+      character of Alexandria's ulama is a standard point in Mamluk scholarship (not checked against a page here).
+      1301: houses of non-Muslims taller than Muslim neighbors' were destroyed in Alexandria (EJ).
+    evidence: [src-garcin-egypt-gha4, src-wp-shadhili, src-jvl-mamluk-jews]
+    confidence: medium
+    flag: null
+
+  - id: rp-alexandria-urban-1365-1450
+    place: pl-alexandria
+    span: {start: 1365, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant, local_form: null}
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-coptic, share: minority, local_form: null}
+      - {family: abrahamic, tradition: christianity, branch: latin-catholic, share: minority,
+         local_form: "European merchants returning under tighter control after 1365"}
+    relation: coexisting
+    summary: >
+      In October 1365 a crusading fleet from Cyprus sacked Alexandria for three days, killing and enslaving
+      thousands of its people. Trade with Europe resumed afterward, and historians often say suspicion of
+      Christians in the city grew.
+    detail: >
+      Sack 9-12 October 1365 (Alexandrian Crusade reference; contemporary Alexandrian account by al-Nuwayri
+      al-Iskandarani, Kitab al-Ilmam, studied by van Steenbergen). The claim that suspicion of local and foreign
+      Christians rose afterward is a common reading; not verified against a specific page here.
+    evidence: [src-wp-alexandrian-crusade, src-al-nuwayri-ilmam]
+    confidence: medium
+    flag: null
+
+  - id: rp-alexandria-europeans-1200-1450
+    place: pl-alexandria
+    span: {start: 1200, end: 1450, approx: true}
+    stratum: community
+    community_name: European (Latin Christian) merchants of Alexandria
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: latin-catholic, share: dominant,
+         local_form: "Funduqs of Venice, Genoa, Catalonia and others, with chaplains and consuls"}
+    relation: exclusive
+    basis: inferred
+    summary: >
+      European merchants lived in Alexandria in walled lodging-warehouses (funduqs) run by their home cities,
+      probably with their own chapels as in North African ports. They were foreign guests protected by
+      treaties, not Egyptians.
+    detail: >
+      Standard picture from Mamluk commercial history; funduq chapels are attested for the Maghreb by Talbi (p. 91)
+      and are assumed parallel here. Needs a specific Mamluk-Alexandria source in a later pass.
+    evidence: [src-garcin-egypt-gha4, src-talbi-maghrib-civilization-gha4]
+    confidence: medium
+    flag: null
+
+  - id: rp-marrakesh-christian-militia-1229-1269
+    place: pl-marrakesh
+    span: {start: 1229, end: 1269, approx: true}
+    stratum: community
+    community_name: Castilian Christian mercenaries in Marrakesh
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: latin-catholic, share: dominant,
+         local_form: "Soldiers with their own clergy; a church in Marrakesh reported by Maghrebi chronicles"}
+    relation: exclusive
+    basis: attested
+    summary: >
+      Christian soldiers from Castile came to Marrakesh in 1229-1230 to fight for the Almohad caliph al-Ma'mun.
+      They were foreign soldiers serving a Muslim ruler, and they practiced their faith separately.
+    detail: >
+      Hrbek (p. 102). Later Marinid and Hafsid rulers continued to hire Iberian Christian cavalry. The church report
+      is citation-only (Rawd al-Qirtas tradition).
+    evidence: [src-hrbek-maghrib-disintegration-gha4, src-rawd-al-qirtas]
+    confidence: medium
+    flag: null
+
+diffusions:
+  # ---------- RELIGION (15 of 25) ----------
+  - id: df-almohad-creed-rollback
+    lens: religion
+    what: Almohad creed (tawhid doctrine, Ibn Tumart as infallible mahdi) imposed as state religion
+    from: [pl-atlas-amazigh]
+    to: pl-fez
+    span: {start: 1147, end: 1269, approx: true}
+    mechanism: imposed
+    carriers: [ruler, military, religious-specialist]
+    outcome: resistance
+    summary: >
+      The Almohad creed began among Amazigh (Berber) villagers of the High Atlas and became the official faith
+      of a huge empire, though city scholars kept teaching Maliki law. In 1229 the caliph rejected the
+      founder's claim to be the mahdi, and the creed faded with the dynasty.
+    detail: >
+      Saidi (GHA IV pp. 42-44, 52-53); Idris (pp. 129-130): the doctrine never displaced Maliki law. Outcome
+      "resistance" means rolled back, not that Maghrebis rejected Islamic reform: the Almohads left lasting marks
+      (architecture, the idea of a Maghrebi caliphate claimed by the Hafsids). Point for students: a creed spread
+      from rural Amazigh communities to imperial cities, the reverse of the usual "city to countryside" model.
+      Mechanism imposed (Test 1): the creed was made state doctrine by conquest, and the Almohads abolished
+      dhimma status, forcing Jews and Christians to convert or leave.
+    evidence: [src-saidi-almohads-gha4, src-idris-maghrib-society-gha4, src-wp-almohad-doctrine, src-bennison-almoravid-almohad]
+    confidence: high
+    ap_topics: ["1.2", "1.5"]
+
+  - id: df-madrasa-model-to-tunis
+    lens: religion
+    what: The Sunni madrasa (endowed college for training jurists) as a tool of Maliki religious authority
+    from: [pl-ext-iraq, pl-cairo]
+    to: pl-tunis
+    span: {start: 1236, end: 1249, approx: true}
+    mechanism: hierarchical
+    carriers: [ruler, scholar]
+    outcome: adoption
+    summary: >
+      The madrasa, a college that housed and trained Islamic legal scholars, spread from Iraq to Egypt. In the 1240s
+      the Hafsid ruler of Tunis built the first one in North Africa, giving him a way to train loyal judges and win
+      scholars' support.
+    detail: >
+      Garcin (pp. 405-406): madrasa system imported from the Seljuk East into Ayyubid Egypt to train loyal Sunni
+      scholars. Shamma'iya madrasa built 1236-1249 under Abu Zakariyya; Idris (p. 132) dates it about 1240 and calls
+      it the oldest in North Africa. Direct transmission Cairo-to-Tunis is inferred from the shared model, not
+      documented by a named carrier.
+    evidence: [src-garcin-egypt-gha4, src-idris-maghrib-society-gha4, src-wp-shammaiya]
+    confidence: medium
+    ap_topics: ["1.2"]
+
+  - id: df-marinid-maliki-madrasas
+    lens: religion
+    what: State-endowed Maliki madrasas replacing Almohad doctrine as the backbone of official religion in Morocco
+    from: [pl-tunis, pl-fez]
+    to: pl-marinids
+    span: {start: 1271, end: 1357}
+    mechanism: hierarchical
+    carriers: [ruler, scholar]
+    outcome: adoption
+    summary: >
+      The Marinid sultans built a ring of madrasas around Fez's Qarawiyyin mosque between 1271 and the 1350s, and
+      others in Meknes, Salé and Tlemcen. Students from across Morocco lived in them and became the judges and
+      officials of a Maliki Sunni state.
+    detail: >
+      Qarawiyyin reference: Saffarin 1271, Attarine 1323, Misbahiyya 1346; Bou Inania 1350-55; Idris (pp. 129-133).
+      Attarine endowment housed 50-60 students mostly from northwestern Morocco. Shatzmiller and Kably read the
+      program as legitimacy-building by a dynasty without a religious founding claim. "From Tunis" reflects that the
+      Hafsids built first; Marinid borrowing from Tunis specifically is not documented.
+    evidence: [src-wp-qarawiyyin, src-wp-attarine, src-idris-maghrib-society-gha4, src-shatzmiller-berbers-islamic-state, src-kably-societe-pouvoir-religion]
+    confidence: high
+    ap_topics: ["1.2", "1.5"]
+
+  - id: df-shadhiliyya-tunis-to-egypt
+    lens: religion
+    what: Shadhiliyya Sufi path (founded by the Maghrebi teacher Abu al-Hasan al-Shadhili)
+    from: [pl-tunis]
+    to: pl-alexandria
+    span: {start: 1227, end: 1309, approx: true}
+    mechanism: relocation
+    carriers: [religious-specialist, migrant, scholar]
+    outcome: adoption
+    summary: >
+      Abu al-Hasan al-Shadhili, born in northern Morocco, gathered his first disciples in Tunis in 1227 and moved to
+      Alexandria in 1244, where his path took root. His Egyptian successors, al-Mursi and Ibn Ata Allah, made the
+      Shadhiliyya one of the most widespread Sufi orders in the Muslim world.
+    detail: >
+      Shadhili reference: born 1196 near Tetouan (sources differ: Ghumara/Rif region), student of Ibn Mashish; zawiya in
+      Tunis 1227; Alexandria 1244 (an Ayyubid sultan granted him a tower); died 1258 at Humaithara on the way to
+      Mecca. Garcin (p. 406) confirms Alexandria and the formation of Shadhili groups. Ibn Ata Allah (d. 1309) wrote
+      the order's foundational texts in Cairo. A Maghrebi-to-Egypt diffusion, against the usual east-to-west arrow.
+    evidence: [src-wp-shadhili, src-garcin-egypt-gha4, src-idris-maghrib-society-gha4]
+    confidence: high
+    ap_topics: ["1.2", "2.5"]
+
+  - id: df-shadhiliyya-egypt-to-maghreb
+    lens: religion
+    what: Shadhili teachings (Ibn Ata Allah's Hikam and later Shadhili masters) returning west; al-Jazuli's mass movement
+    from: [pl-cairo, pl-alexandria]
+    to: pl-fez
+    span: {start: 1309, end: 1465, approx: true}
+    mechanism: contagious
+    carriers: [scholar, religious-specialist, pilgrim]
+    outcome: adoption
+    summary: >
+      Shadhili books and teachers traveled back from Egypt to the Maghreb with pilgrims and students. In
+      15th-century Morocco, the preacher al-Jazuli built on this tradition to start a Sufi movement that reached
+      ordinary villagers.
+    detail: >
+      Idris (pp. 129-131) names al-Shadhili and al-Jazuli among the key figures of Maghrebi Sufism. Ibn Abbad of
+      Ronda (d. 1390), preacher at the Qarawiyyin, wrote commentary on Ibn Ata Allah's Hikam (Ibn Abbad letters
+      translation cited in the Shadhili reference). Cornell traces al-Jazuli's Shadhili lineage. Specific
+      transmission chains were not checked here.
+    evidence: [src-idris-maghrib-society-gha4, src-cornell-realm-of-saint, src-wp-shadhili]
+    confidence: medium
+    ap_topics: ["1.2", "2.5"]
+
+  - id: df-badawi-fez-to-tanta
+    lens: religion
+    what: Saint veneration around Ahmad al-Badawi, a Fez-born Sufi who settled in the Nile Delta
+    from: [pl-fez]
+    to: pl-mamluks
+    span: {start: 1236, end: 1450, approx: true}
+    mechanism: relocation
+    carriers: [religious-specialist, migrant]
+    outcome: adoption
+    summary: >
+      Ahmad al-Badawi, born in Fez around 1200, settled in the Egyptian town of Tanta in 1236 and became the most
+      popular saint in Egypt. His yearly festival later grew into one of the largest gatherings in Egypt.
+    detail: >
+      Badawi reference (citing Mayeur-Jaouen): born Fez 1200, Tanta 1236, died 1276; Badawiyya order; mawlid each
+      October. Shows Maghrebi Sufis shaping rural Egyptian Islam. Size of the medieval festival is not documented
+      here; the modern festival is huge.
+    evidence: [src-wp-badawi]
+    confidence: medium
+    ap_topics: ["1.2"]
+
+  - id: df-mawlid-ceuta-to-maghreb
+    lens: religion
+    what: Public celebration of the Prophet's birthday (mawlid) as a civic and royal festival
+    from: [pl-ceuta]
+    to: pl-marinids
+    span: {start: 1236, end: 1350, approx: true}
+    mechanism: hierarchical
+    carriers: [scholar, ruler]
+    outcome: adoption
+    summary: >
+      The Ceuta scholar al-Azafi promoted celebrating the Prophet Muhammad's birthday as a local Muslim festival,
+      and his son spread the custom across the Maghreb. Marinid sultans later made it a grand court celebration.
+    detail: >
+      Azafi reference: Abu al-Abbas al-Azafi (1162-1236), Kitab al-durr al-munazzam; his son Abu al-Qasim spread
+      the practice; the Azafid family ruled Ceuta in the 13th c. Idris (p. 131): the mawlid spread through the region.
+      Marinid court mawlids are well attested in the 14th c. (Ferhat, Le culte du Prophete au Maroc au XIIIe siecle);
+      the exact date of official Marinid adoption was not checked.
+    evidence: [src-wp-azafi, src-idris-maghrib-society-gha4, src-ferhat-soufisme-zaouias]
+    confidence: medium
+    ap_topics: ["1.2"]
+
+  - id: df-west-african-pilgrims-cairo
+    lens: religion
+    what: West African and Central Sudanic Muslim communities (pilgrims, students, residents) in Cairo
+    from: [pl-kanem, pl-mali]
+    to: pl-cairo
+    span: {start: 1240, end: 1450, approx: true}
+    mechanism: relocation
+    carriers: [pilgrim, scholar, ruler]
+    outcome: coexistence
+    summary: >
+      Pilgrims and students from Kanem and Mali stopped in Cairo on the way to Mecca, and some stayed. A ruler of
+      Kanem paid for a Maliki school in Cairo for his people around 1242, and the Takrur (West African) community
+      had its own interpreter.
+    detail: >
+      Garcin (p. 414): Kanem's ruler founded a Maliki madrasa in Fustat. Ibn Rashiq madrasa dated about 1242 and tied
+      to Mai Dunama Dibalami (via Dewiere and al-Maqrizi, read secondhand). al-Hajj Yunus, interpreter of the Takrur,
+      was Ibn Khaldun's informant (via al-Naqar, secondhand). Diffusion here runs north: African Muslims shaping
+      Cairo's religious landscape.
+    evidence: [src-garcin-egypt-gha4, src-dewiere-city-before-mecca, src-al-naqar-takrur, src-africanhistoryextra-diaspora]
+    confidence: medium
+    ap_topics: ["1.2", "1.5", "2.4"]
+
+  - id: df-cairo-to-mali-musa-hajj
+    lens: religion
+    what: Maliki books, scholars and ties to Cairo's learned elite carried home by Mansa Musa's pilgrimage
+    from: [pl-cairo]
+    to: pl-mali
+    span: {start: 1324, end: 1340, approx: true}
+    mechanism: hierarchical
+    carriers: [ruler, pilgrim, scholar]
+    outcome: elite-only
+    summary: >
+      When Mansa Musa passed through Cairo in 1324, Cairo writers reported his piety and his gold, and he brought
+      Maliki scholars back to Mali. Islamic learning grew at Mali's court and in its trading towns, while most
+      rural Mande people probably kept their own religion.
+    detail: >
+      al-Umari (c. 1337-1340), relying on Ibn Amir Hajib, governor of Cairo's Qarafa district, reports the meeting
+      with sultan al-Nasir Muhammad (Musa bowed "to God" rather than the sultan) and the fall of gold from 25 to
+      under 22 dirhams; Warren Schultz argues the drop was within normal fluctuation. Mansa Musa reference: he
+      brought Maliki jurists back. al-Umari is a regional outsider judging Mali by Cairo norms. Coordinate with the
+      wsahel file (event ev-musa-hajj).
+    evidence: [src-al-umari-masalik, src-wp-mansa-musa, src-garcin-egypt-gha4]
+    confidence: high
+    ap_topics: ["1.5", "2.4", "2.5"]
+
+  - id: df-coptic-conversion-islam
+    lens: religion
+    what: Conversion of Coptic Christians to Islam under Mamluk pressure (1301, 1321, 1354, early 1400s)
+    from: [pl-cairo]
+    to: pl-mamluks
+    span: {start: 1293, end: 1450, approx: true}
+    mechanism: imposed
+    carriers: [ruler, family]
+    outcome: adoption
+    summary: >
+      Waves of riots and government decrees in the 1300s pushed many Copts, especially officials, to become
+      Muslims to keep their jobs and safety. Historians disagree about whether this was the moment Egypt became
+      mostly Muslim or the late end of a much older process.
+    detail: >
+      O'Sullivan (2006): al-Maqrizi records eight anti-Coptic assaults 1250-1354; 1354 the culmination; the Qalyub
+      report of 450 converts in a day is the main evidence for mass conversion and is too thin to generalize;
+      Muslim majority probably by the 9th c. Little (1976) and Wiet: 14th c. turning point; el-Leithy (2005):
+      decisive change only in the 14th c. Garcin (p. 424): many conversions in the early-15th-c. crisis. Outcome
+      is contested: O'Sullivan's reading supports elite-only. Mechanism imposed (Test 1): riots, decrees,
+      dismissals from office and church destruction pushed Copts toward Islam; conversion was still a choice made
+      under constraint, often by families together.
+    evidence: [src-osullivan-coptic-conversion, src-little-coptic-conversion, src-el-leithy-coptic-conversion, src-al-maqrizi-suluk, src-garcin-egypt-gha4]
+    confidence: high
+    ap_topics: ["1.2", "1.7"]
+
+  - id: df-sufi-pietism-jewish-fustat
+    lens: religion
+    what: Sufi devotional practice adapted into Jewish pietism by Abraham Maimonides and his circle
+    from: [pl-cairo]
+    to: pl-cairo
+    span: {start: 1204, end: 1350, approx: true}
+    mechanism: stimulus
+    carriers: [religious-specialist, scholar]
+    outcome: syncretism
+    summary: >
+      Maimonides' son Abraham, head of Egypt's Jews, admired the Sufis around him and brought practices like
+      extra prostrations and night vigils into Jewish worship. His followers kept this Jewish-Sufi path alive for
+      about a century.
+    detail: >
+      Abraham Maimonides (1186-1237), nagid from 1204; Kifayat al-Abidin. Russ-Fishbane (2015). Same city, different
+      community: the "from" and "to" are both Cairo-Fustat. The specific practices (prostrations, vigils) are from
+      general knowledge of the scholarship and were not checked against Russ-Fishbane's text here.
+    evidence: [src-wp-abraham-maimonides, src-russ-fishbane-pietists]
+    confidence: medium
+    ap_topics: ["1.2", "2.5"]
+
+  - id: df-maimonides-legacy-maghreb
+    lens: religion
+    what: Maimonides' legal code (Mishneh Torah) and philosophy, written in Fustat, adopted as authority by Maghrebi and Egyptian Jews
+    from: [pl-cairo]
+    to: pl-fez
+    span: {start: 1204, end: 1450, approx: true}
+    mechanism: contagious
+    carriers: [scholar, merchant]
+    outcome: adoption
+    summary: >
+      Maimonides, a refugee from Almohad Spain and Morocco who died in Cairo in 1204, wrote the law code and
+      philosophy that many North African and Egyptian Jews followed for centuries. His descendants led Egypt's
+      Jews until the late 1300s.
+    detail: >
+      Ben Ezra reference: settled Fustat 1168, nagid from 1171, died 1204; Geniza documents in his hand. EJ: nagid
+      office in his family to the end of the Bahri period. Adoption of the Mishneh Torah in the Maghreb is standard
+      in the scholarship (Gottreich; Goitein) but was not checked against a specific passage here.
+    evidence: [src-cairo-geniza, src-jvl-mamluk-jews, src-gottreich-jewish-morocco, src-goitein-mediterranean-society]
+    confidence: medium
+    ap_topics: ["1.2"]
+
+  - id: df-iberian-jews-to-maghreb
+    lens: religion
+    what: Jewish refugees from Christian Iberia after the 1391 massacres (forward pointer to 1492)
+    from: [pl-ext-iberia-christian]
+    to: pl-tlemcen
+    span: {start: 1391, end: 1450, approx: true}
+    mechanism: relocation
+    carriers: [migrant, scholar, merchant]
+    outcome: coexistence
+    summary: >
+      After mobs attacked Jewish communities across Spain in 1391, many Jews fled to Maghrebi cities like Tlemcen,
+      Algiers and Tunis, where Muslim rulers let them settle. A much larger wave followed the 1492 expulsion,
+      after this map's period.
+    detail: >
+      Idris (pp. 128, 132-134): Jewish numbers grew at the end of the 14th c. with arrivals fleeing Christian
+      persecution, with major roles in Tlemcen and Bougie. Algiers rabbis of Iberian origin (e.g. Isaac bar Sheshet)
+      are standard examples, not checked here. The newcomers (megorashim) and local Jews (toshavim) kept distinct
+      customs for generations (Gottreich).
+    evidence: [src-idris-maghrib-society-gha4, src-gottreich-jewish-morocco]
+    confidence: medium
+    ap_topics: ["1.2", "2.5"]
+
+  - id: df-franciscan-preachers-morocco
+    lens: religion
+    what: Franciscan friars preaching Christianity to Muslims in Almohad Morocco
+    from: [pl-ext-italy, pl-ext-iberia-christian]
+    to: pl-marrakesh
+    span: {start: 1220, end: 1227}
+    mechanism: relocation
+    carriers: [religious-specialist]
+    outcome: no-uptake
+    summary: >
+      Franciscan friars from Italy came to Morocco around 1220 to preach against Islam, and Franciscan accounts say
+      they were executed in Marrakesh and Ceuta. They won no converts, and historians now question how much of
+      the story is true.
+    detail: >
+      Berard and companions (1219/1220; Marrakesh in the Franciscan tradition), Daniel and companions (Ceuta, 1227).
+      MacEvitt (2020) argues many Franciscan martyr narratives were largely invented for debates inside the Church;
+      the Daniel story may be modeled on the Berard account. Keep this separate from the end of indigenous African
+      Christianity: these were foreign preachers, not local Christians.
+    evidence: [src-macevitt-martyrdom-franciscans, src-wp-daniel-companions]
+    confidence: low
+    ap_topics: ["1.2", "2.5"]
+
+  - id: df-latin-merchant-colonies
+    lens: religion
+    what: Latin Christian worship in European merchant colonies (funduqs) and mercenary units in Maghrebi and Egyptian cities
+    from: [pl-ext-italy, pl-ext-iberia-christian]
+    to: pl-tunis
+    span: {start: 1200, end: 1450, approx: true}
+    mechanism: relocation
+    carriers: [merchant, military]
+    outcome: coexistence
+    summary: >
+      Italian, Catalan and other European merchants lived in walled lodgings in Tunis, Alexandria and other ports,
+      with chapels and their own consuls, while Christian soldiers served Maghrebi sultans. Their Christianity
+      stayed inside these foreign communities and did not spread to local people.
+    detail: >
+      Talbi (p. 91): Iberian merchants' funduqs with chapels; Idris (pp. 128, 132-133, 136-137): funduqs by nation,
+      consuls, Christian cavalry in the Hafsid guard; Hrbek (pp. 102, 118): Christian mercenaries from al-Ma'mun on.
+      1270 treaty guaranteed trade and the residence of monks and priests in Tunis.
+    evidence: [src-talbi-maghrib-civilization-gha4, src-idris-maghrib-society-gha4, src-hrbek-maghrib-disintegration-gha4, src-wp-mustansir]
+    confidence: high
+    ap_topics: ["1.2", "2.5", "2.7"]
+
+  # ---------- OTHER LENSES (10 of 25) ----------
+  - id: df-caliphal-investiture-sahel
+    lens: governance
+    what: Legitimacy from the Abbasid caliph kept in Mamluk Cairo (investiture of Muslim rulers)
+    from: [pl-cairo]
+    to: pl-songhay-gao
+    span: {start: 1261, end: 1497, approx: true}
+    mechanism: hierarchical
+    carriers: [ruler, pilgrim]
+    outcome: elite-only
+    summary: >
+      After the Mongols destroyed Baghdad, the Mamluks made a member of the Abbasid family caliph in Cairo in
+      1261, and rulers elsewhere sought his approval to strengthen their claims. The clearest African case is
+      Songhay's Askia Muhammad, who received this approval on his pilgrimage in 1496-97.
+    detail: >
+      Garcin (pp. 418-419, 425): caliph installed 1261/62, invested Baybars; prized by African Muslims; askiya
+      Muhammad invested 1496. The Timbuktu chronicles disagree: Tarikh al-Sudan says the Abbasid caliph made him his
+      deputy; Tarikh al-Fattash credits the Sharif of Mecca, acting as the caliph's deputy. No investiture of a Mali
+      or Kanem ruler by the Cairo caliph before 1450 was found in this research: Mansa Musa's 1324 visit was to the
+      sultan, and Bornu's 1391 letter to sultan Barquq is diplomacy, not investiture. Banister (2014-15) documents
+      requests from Delhi, the Muzaffarids and the Ottomans, not African rulers. Span extends past 1450 as a
+      forward pointer.
+    evidence: [src-garcin-egypt-gha4, src-al-sadi-tarikh-al-sudan, src-tarikh-al-fattash, src-banister-abbasid-authority, src-wp-biri-uthman]
+    confidence: medium
+    ap_topics: ["1.2", "1.5"]
+
+  - id: df-maghribi-script-south
+    lens: language
+    what: Maghribi Arabic script, ancestor of the script styles of West African manuscripts
+    from: [pl-fez, pl-tlemcen, pl-sijilmasa]
+    to: pl-timbuktu
+    span: {start: 1250, end: 1450, approx: true}
+    mechanism: stimulus
+    carriers: [scholar, merchant]
+    outcome: adoption
+    summary: >
+      West African scholars learned to write Arabic from teachers and books that came across the Sahara from the
+      Maghreb, so their handwriting grew out of the Maghribi script. Over time they developed their own regional
+      styles, such as the Saharan and Suqi hands.
+    detail: >
+      Nobili (BU talk; Islamic Africa 2011 classification) notes most scholars call West African hands "maghribi"
+      or "sudani" and challenges "sudani as degenerated maghribi," proposing distinct styles (Saharawi, Suqi,
+      Barnawi). Derivation from Maghribi is broadly accepted; the dating of surviving manuscripts is mostly after
+      1450, so the 1250-1450 span is inferred from epigraphy and the trade routes. Mechanism "stimulus": borrowed
+      and reshaped. Coordinate with wsahel.
+    evidence: [src-nobili-west-african-scripts]
+    confidence: medium
+    ap_topics: ["2.4", "2.5"]
+
+  - id: df-arabic-spread-maghreb
+    lens: language
+    what: Arabic spreading as spoken language across the Maghreb plains (Arab nomad confederations) and as Marinid official language
+    from: [pl-hafsids]
+    to: pl-marinids
+    span: {start: 1200, end: 1450, approx: true}
+    mechanism: relocation
+    carriers: [migrant, ruler]
+    outcome: adoption
+    summary: >
+      Arabic-speaking herding groups moved west across North Africa, and Arabic became the language of the
+      Marinid government and of law and learning. In the mountains, most Amazigh communities kept speaking Tamazight.
+    detail: >
+      Hrbek (pp. 111-112): Arab nomads expanded into Morocco under the Marinids, Arabic became the official language;
+      Niane (p. 26): Arabization of Berbers was slow, Tamazight survived in mountains. The Ma'qil are the usual name
+      for the Morocco-bound groups (not named in Hrbek; from general knowledge). Outcome "adoption" applies to the
+      plains and towns; mountain communities did not adopt it as a home language.
+    evidence: [src-hrbek-maghrib-disintegration-gha4, src-niane-introduction-gha4]
+    confidence: medium
+    ap_topics: ["1.2", "2.5"]
+
+  - id: df-coptic-to-arabic
+    lens: language
+    what: Arabic replacing Coptic as the written and spoken language of Egypt's Christians (Copto-Arabic literature)
+    from: [pl-cairo]
+    to: pl-mamluks
+    span: {start: 1200, end: 1450, approx: true}
+    mechanism: contagious
+    carriers: [family, scholar, religious-specialist]
+    outcome: adoption
+    summary: >
+      By 1200 most Copts spoke and wrote Arabic, and in the 1200s their scholars wrote Coptic grammars in Arabic
+      to preserve the old church language. Over the next two centuries even prayers and hymns were translated into
+      Arabic, while Coptic survived mainly in church services and monasteries.
+    detail: >
+      Copto-Arabic literature reference (Sidarus, Swanson, Atiya): Awlad al-Assal early 13th c.; Ibn Kabar (d. 1324);
+      Arabic hymn and liturgy translations 13th-14th c. Teepe: Arabic-language grammars of Coptic 1240s-1260s, the
+      end of Coptic's literary use. Copts chose Arabic; this was not forced as such, though conversion pressure and
+      Muslim neighbors made it the language of opportunity.
+    evidence: [src-wp-copto-arabic, src-teepe-coptic-muqaddimat, src-swanson-coptic-papacy]
+    confidence: high
+    ap_topics: ["1.2", "2.5"]
+
+  - id: df-andalusi-refugees-maghreb
+    lens: population
+    what: Andalusi Muslim refugees after the Christian conquests of Cordoba (1236), Valencia (1238) and Seville (1248)
+    from: [pl-ext-al-andalus]
+    to: pl-tunis
+    span: {start: 1230, end: 1300, approx: true}
+    mechanism: relocation
+    carriers: [migrant, scholar, artisan]
+    outcome: adoption
+    summary: >
+      As Castile and Aragon conquered most of al-Andalus in the 1230s and 1240s, thousands of Muslims fled to
+      Tunis, Fez, Tlemcen and other Maghrebi cities. They brought skills, scholarship and styles of building, and
+      many became officials at Maghrebi courts.
+    detail: >
+      Idris (pp. 128, 132, 137): Andalusi migration peaked in the first half of the 13th c. and again at the end of
+      the 15th; they settled mainly in ports, supplied courtiers, formed an Andalusi militia in Ifriqiya. Ibn Khaldun's
+      own family came from Seville via Ceuta to Tunis. Forward pointer: 1492 fall of Granada and later expulsions.
+    evidence: [src-idris-maghrib-society-gha4, src-wp-ibn-khaldun]
+    confidence: high
+    ap_topics: ["1.2", "2.5"]
+
+  - id: df-andalusi-architecture-marinid
+    lens: architecture
+    what: Shared Andalusi-Maghrebi decorative style (carved stucco, zellij tile, carved cedar) in Marinid madrasas
+    from: [pl-ext-al-andalus]
+    to: pl-fez
+    span: {start: 1270, end: 1360, approx: true}
+    mechanism: relocation
+    carriers: [artisan, ruler]
+    outcome: adoption
+    summary: >
+      Marinid madrasas in Fez are covered in tile mosaic, carved plaster and cedar in a style shared with
+      Granada's Alhambra. Craftsmen likely moved between the Marinid, Zayyanid and Nasrid courts.
+    detail: >
+      Marinid architecture reference: Marinid, Zayyanid and Nasrid architecture were very similar, craftsmen probably
+      moved between courts, mutual influence; Talbi (pp. 80-81, 86-88) on Andalusi influence and the Alhambra.
+      Direction was two-way, not simply Andalusi-to-Maghreb; Marinid work also developed out of Almohad forms.
+    evidence: [src-wp-marinid-architecture, src-talbi-maghrib-civilization-gha4]
+    confidence: medium
+    ap_topics: ["2.5"]
+
+  - id: df-mamluk-slave-soldiers
+    lens: social
+    what: "The mamluk system: enslaved boys from the Black Sea steppe and Caucasus, converted to Islam and trained as an elite army"
+    from: [pl-ext-kipchak-steppe]
+    to: pl-cairo
+    span: {start: 1240, end: 1450, approx: true}
+    mechanism: relocation
+    carriers: [enslaved-people, military, merchant]
+    outcome: adoption
+    summary: >
+      Egypt's rulers bought enslaved Turkish and later Circassian boys, raised them as Muslims, trained them as
+      cavalry, and freed them, and in 1250 these soldiers took power themselves. Native-born Egyptians, even
+      the mamluks' own sons, were mostly kept out of this ruling class.
+    detail: >
+      Garcin (pp. 408-411, 419-421): purchase and training, Kipchak Turks then Caucasus recruits; Bahri regiment under
+      al-Salih; Circassian period from 1382. Outcome "adoption": the enslaved recruits took up Islam and Arabic-Islamic
+      court culture, while keeping Turkish (Garcin, p. 415: some emirs handled Turkish better than Arabic).
+    evidence: [src-garcin-egypt-gha4]
+    confidence: high
+    ap_topics: ["1.2", "1.7"]
+
+  - id: df-enslaved-west-africans-maghreb
+    lens: social
+    what: Enslaved West Africans carried north across the Sahara to Maghrebi and Egyptian households and armies
+    from: [pl-mali, pl-kanem]
+    to: pl-tlemcen
+    span: {start: 1200, end: 1450, approx: true}
+    mechanism: relocation
+    carriers: [enslaved-people, merchant]
+    outcome: undocumented
+    summary: >
+      Merchants brought enslaved West Africans north through Sijilmasa to Tlemcen, Fez and Tunis, where most worked
+      as household servants and some as soldiers. We know little about the religious practices they brought with
+      them in this period.
+    detail: >
+      Idris (pp. 128, 134, 137): gold and slaves from Sijilmasa to Tlemcen on a route controlled by the Banu Ma'qil;
+      mixing through concubinage; freed slaves in Hafsid military and civil posts. Ibn Khaldun reports 12,000 enslaved
+      women in Mansa Musa's 1324 caravan. Possession and healing traditions later associated with enslaved Africans
+      in the Maghreb (Gnawa, stambeli) are documented only much later; do not project them back. Outcome
+      "coexistence" is a placeholder: the true answer for 1200-1450 is undocumented (see taxonomy pressure).
+    evidence: [src-idris-maghrib-society-gha4, src-wp-history-mali-empire]
+    confidence: low
+    ap_topics: ["2.4", "2.5"]
+
+  - id: df-black-death-egypt-maghreb
+    lens: population
+    what: The Black Death (plague) arriving by sea at Alexandria and spreading along trade and army routes to Tunis and Fez
+    from: [pl-ext-kipchak-steppe]
+    to: pl-alexandria
+    span: {start: 1347, end: 1349}
+    mechanism: contagious
+    carriers: [merchant, military]
+    outcome: impact
+    summary: >
+      In autumn 1347 a ship brought plague to Alexandria, and by 1349 it had killed perhaps a third of Cairo's
+      people and swept through Tunis and Fez. Ibn Khaldun, who lost both parents in Tunis, later wrote that it
+      changed North African civilization.
+    detail: >
+      Black Death in the Middle East reference: Alexandria autumn 1347; Cairo from September 1348, about 200,000
+      deaths (a third; an estimate, not a count); Asyut taxpayers 6,000 to 116; Tunis June 1348, then Fez via the
+      returning Marinid army. Dols: communal prayers and processions; rural depopulation over 150 years. Garcin dates
+      Egypt's peak to 1349 and notes later epidemics (1375, 1405 and after). Outcome impact (Test 2): plague is
+      undergone, not taken up.
+    evidence: [src-wp-black-death-middle-east, src-dols-black-death, src-garcin-egypt-gha4, src-idris-maghrib-society-gha4]
+    confidence: high
+    ap_topics: ["2.6"]
+
+  - id: df-paper-andalus-fez
+    lens: technology
+    what: Papermaking workshops in Fez, linked to Andalusi papermaking (Xativa)
+    from: [pl-ext-al-andalus]
+    to: pl-fez
+    span: {start: 1200, end: 1350, approx: true}
+    mechanism: relocation
+    carriers: [artisan]
+    outcome: adoption
+    summary: >
+      Paper made in Fez and al-Andalus supplied the Maghreb's scholars, scribes and governments with cheap writing
+      material. Medieval writers claimed Fez had hundreds of paper workshops, a number historians treat with caution.
+    detail: >
+      The "400 millstones for paper" figure for Fez is attributed in the paper-mill reference to Ibn Battuta; other
+      writers attribute a similar count to the Fez chronicle Zahrat al-As (al-Jazna'i) for the Almohad period. The
+      attribution was not resolved here. Burns and others argue production was by hand or animal power, not water
+      mills. Talbi (p. 91) notes Iberian paper exported to the Maghreb. Bloom, Paper Before Print, is the standard
+      study (not read here). Low confidence; useful mainly to connect paper to the Maghribi manuscript culture that
+      went south.
+    evidence: [src-wp-paper-mill, src-bloom-paper-before-print, src-talbi-maghrib-civilization-gha4]
+    confidence: low
+    ap_topics: ["2.5"]
+
+exemplars:
+  - id: ex-bou-inania-madrasa
+    name: Bou Inania Madrasa, Fez
+    place: pl-fez
+    location: {lat: 34.0619, lon: -4.9832}
+    span: {start: 1350, end: null, approx: false}
+    lenses: [architecture, religion, knowledge]
+    summary: >
+      Sultan Abu Inan built this madrasa between 1350 and 1355, and it was the only Moroccan madrasa that also served
+      as a Friday mosque. Across the street a water clock built in 1357 rang the hours for prayer.
+    detail: >
+      Foundation inscription dates the start to 28 December 1350; finished 1355; originally al-Mutawakkiliyya. Water
+      clock (Dar al-Magana) completed 6 May 1357 per al-Jazna'i. Built by a sultan who had seized power from his
+      father in 1348, during the Black Death: a legitimacy project in stone.
+    image_hint: "Wikimedia Commons search: Bou Inania Madrasa Fez courtyard"
+    evidence: [src-wp-bou-inania]
+    confidence: high
+
+  - id: ex-al-attarine-madrasa
+    name: al-Attarine Madrasa, Fez
+    place: pl-fez
+    location: {lat: 34.0654, lon: -4.9743}
+    span: {start: 1323, end: null, approx: false}
+    lenses: [architecture, religion, knowledge]
+    summary: >
+      Built 1323-1325 by Sultan Abu Sa'id next to the Qarawiyyin, this madrasa housed students from outside Fez and
+      fed them bread from an endowment. Its tile and carved plaster show the Marinid style at its finest.
+    detail: >
+      Construction supervised by Abu Muhammad Abdallah ibn Qasim al-Mizwar; Rawd al-Qirtas says the sultan attended
+      the foundation with the ulama. Endowment (habous) funded an imam, muezzins, teachers and housing for 50-60
+      students mostly from northwestern Morocco.
+    image_hint: "Wikimedia Commons search: Al-Attarine Madrasa"
+    evidence: [src-wp-attarine, src-rawd-al-qirtas]
+    confidence: high
+
+  - id: ex-qarawiyyin
+    name: al-Qarawiyyin mosque-university and library, Fez
+    place: pl-fez
+    location: {lat: 34.0646, lon: -4.9735}
+    span: {start: 857, end: null, approx: true}
+    lenses: [knowledge, religion, architecture]
+    summary: >
+      Founded in the 9th century, the Qarawiyyin was the main teaching mosque of the far Islamic west, and in 1349
+      Sultan Abu Inan gave it a library. Scholars such as Ibn Khaldun and Ibn al-Khatib studied or taught in its orbit.
+    detail: >
+      Library 1349 (doorway inscription); Abu Salim added a Qur'an reading room 1361. Marinids restored the minaret
+      1286 and built the Dar al-Muwaqqit timekeeping room. Almohad-era chandelier commissioned 1202-1219. The
+      reference's list of associated scholars mixes students and lecturers and was not checked person by person.
+    image_hint: "Wikimedia Commons search: Al-Qarawiyyin Mosque courtyard"
+    evidence: [src-wp-qarawiyyin]
+    confidence: high
+
+  - id: ex-shammaiya-madrasa
+    name: Shamma'iya Madrasa, Tunis
+    place: pl-tunis
+    location: {lat: 36.7985, lon: 10.1700}
+    span: {start: 1236, end: null, approx: true}
+    lenses: [knowledge, religion, architecture]
+    summary: >
+      Built in the 1240s by the first Hafsid ruler, Abu Zakariyya, this was the first madrasa in the Maghreb. It
+      brought the eastern model of an endowed law college to North Africa.
+    detail: >
+      Built 1236-1249 (reference); Idris dates it about 1240. Location in the Tunis medina near the old Souk
+      Echammaine; coordinates are approximate (medina center).
+    image_hint: "Wikimedia Commons search: Madrasa Echammaia Tunis"
+    evidence: [src-wp-shammaiya, src-idris-maghrib-society-gha4]
+    confidence: medium
+
+  - id: ex-sidi-boumediene
+    name: Sidi Boumediene complex (tomb of Abu Madyan), Tlemcen
+    place: pl-tlemcen
+    location: {lat: 34.8667, lon: -1.2961}
+    span: {start: 1339, end: null, approx: false}
+    lenses: [religion, architecture, knowledge]
+    summary: >
+      The Marinid sultan Abu al-Hasan built a mosque in 1339 and a madrasa about 1347 beside the tomb of Abu Madyan,
+      the Andalusi Sufi master who became Tlemcen's patron saint. It shows rulers honoring the saints that ordinary
+      people already venerated.
+    detail: >
+      Complex: mosque, madrasa, mausoleum, hammam, Dar al-Sultan. Abu Madyan died 1197/98 (date from general
+      knowledge; not on the checked page). Ibn Khaldun is said to have taught at the madrasa. Coordinates
+      approximate (al-Ubbad).
+    image_hint: "Wikimedia Commons search: Sidi Boumediene Mosque Tlemcen"
+    evidence: [src-wp-sidi-boumediene]
+    confidence: high
+
+  - id: ex-shadhili-shrine
+    name: Shrine of Abu al-Hasan al-Shadhili, Humaithara
+    place: pl-mamluks
+    location: {lat: 24.2007, lon: 34.6356}
+    span: {start: 1258, end: null, approx: false}
+    lenses: [religion]
+    summary: >
+      The Maghrebi Sufi master al-Shadhili died in 1258 in the Eastern Desert of Egypt on his way to Mecca, and his
+      tomb became a pilgrimage site. Its location shows how the hajj route tied the Maghreb, Egypt and Arabia together.
+    detail: >
+      Humaithara (Sheikh Shazly), Red Sea Governorate, inland from the old Red Sea port route via Aydhab. The present
+      buildings are modern reconstructions; the medieval structure is not documented here.
+    image_hint: "Wikimedia Commons search: Humaithara Shadhili mosque"
+    evidence: [src-wp-shadhili, src-wp-humaithara]
+    confidence: medium
+
+  - id: ex-cairo-geniza
+    name: The Cairo Geniza, Ben Ezra Synagogue, Fustat
+    place: pl-cairo
+    location: {lat: 30.0053, lon: 31.2302}
+    span: {start: 1025, end: null, approx: true}
+    lenses: [knowledge, religion, social]
+    summary: >
+      Because Jewish tradition forbade destroying writing that might contain God's name, Fustat's Jews stored old
+      papers in a synagogue room for centuries. Hundreds of thousands of letters, contracts and books survive,
+      including papers in Maimonides' own hand.
+    detail: >
+      Documents span the 6th to 19th c., richest for the 11th-12th c. and thinning in the Mamluk period (EJ), which
+      itself is evidence of the community's changing role. Rabbanite and Karaite material; Judeo-Arabic dominant.
+      Goitein's A Mediterranean Society is the classic synthesis.
+    image_hint: "Wikimedia Commons search: Ben Ezra Synagogue Cairo; Cairo Genizah fragment"
+    evidence: [src-cairo-geniza, src-goitein-mediterranean-society, src-jvl-mamluk-jews]
+    confidence: high
+
+  - id: ex-al-azhar
+    name: al-Azhar Mosque, Cairo
+    place: pl-cairo
+    location: {lat: 30.0458, lon: 31.2627}
+    span: {start: 972, end: null, approx: false}
+    lenses: [knowledge, religion, architecture]
+    summary: >
+      Al-Azhar was built by the Fatimids, a Shi'i dynasty, and lost its role when the Sunni Ayyubids took over
+      Egypt. It revived as a Sunni teaching mosque under the Mamluks from 1266, and by 1415 it housed hundreds of
+      poor students grouped by home region.
+    detail: >
+      Archnet: khutba restored 1266 under Baybars by Aydamur al-Hilli; Taybarsiyya madrasa (1309, Shafi'i and Maliki
+      iwans), Aqbughawiyya (1340). Encyclopedia entry: 750 indigent students in riwaqs by province and nationality
+      in 1415-16 (al-Maqrizi). West African riwaqs by name are documented later (Kane, 18th c.).
+    image_hint: "Wikimedia Commons search: Al-Azhar Mosque courtyard"
+    evidence: [src-archnet-al-azhar, src-encyclopedia-al-azhar, src-kane-beyond-timbuktu]
+    confidence: high
+
+  - id: ex-muqaddimah
+    name: Ibn Khaldun's Muqaddimah, written at Qal'at Ibn Salama
+    place: pl-zayyanids
+    location: {lat: 35.06, lon: 1.03}
+    span: {start: 1377, end: null, approx: true}
+    lenses: [knowledge]
+    summary: >
+      Tunis-born Ibn Khaldun wrote the Muqaddimah, an introduction to history explaining how group solidarity
+      ('asabiyya) builds and destroys dynasties, while living with a nomad community in western Algeria. He drew on
+      his own experience of Maghrebi politics, the Black Death and Amazigh and Arab societies.
+    detail: >
+      Written c. 1375-1378 at Qal'at Ibn Salama (near Frenda; coordinates approximate). Moroccan scholar Abdesselam
+      Cheddadi (Pleiade translation of Le Livre des exemples, 2002) stresses that mulk means power in general and
+      that Ibn Khaldun theorizes politics apart from religion. Insider voice for the Maghreb; regional outsider for
+      Mali, where he relied on informants.
+    image_hint: "Wikimedia Commons search: Muqaddimah manuscript"
+    evidence: [src-ibn-khaldun-ibar, src-cheddadi-livre-des-exemples, src-wp-ibn-khaldun]
+    confidence: high
+
+  - id: ex-cairo-chancery-texts-on-africa
+    name: Cairo's books about Africa (al-Umari's Masalik al-absar; al-Maqrizi's al-Ilmam)
+    place: pl-cairo
+    location: {lat: 30.0444, lon: 31.2357}
+    span: {start: 1337, end: 1442, approx: true}
+    lenses: [knowledge]
+    summary: >
+      Cairo officials and historians wrote some of the main surviving descriptions of Mali and of the Muslim states
+      of Ethiopia, based on interviews with pilgrims, envoys and merchants. They are outsiders' views, shaped by
+      Cairo's assumptions about proper Islam.
+    detail: >
+      al-Umari (1301-1349), head of the Mamluk chancery, wrote Masalik al-absar c. 1337-1340, using informants
+      including Ibn Amir Hajib (Mali) and Jamal al-Din Abd Allah of Zayla (Ethiopia). al-Maqrizi (d. 1442) wrote
+      al-Ilmam on the Muslim kings of Ethiopia. Both: regional outsiders for Mali and Ethiopia; insiders for Egypt.
+    image_hint: "No reliable public-domain image identified; use a Mamluk-era manuscript page from Wikimedia Commons"
+    evidence: [src-al-umari-masalik, src-al-maqrizi-ilmam, src-ebsco-al-umari]
+    confidence: high
+
+  - id: ex-salihiyya-madrasa
+    name: Madrasa of al-Salih Najm al-Din Ayyub, Cairo
+    place: pl-cairo
+    location: {lat: 30.0497, lon: 31.2617}
+    span: {start: 1243, end: null, approx: false}
+    lenses: [architecture, knowledge, religion]
+    summary: >
+      Built in 1243 in the heart of the old Fatimid city, this was the first madrasa in Cairo to teach all four
+      Sunni schools of law. It marked how fully the Ayyubids had turned Egypt toward Sunni Islam.
+    detail: >
+      Two parallel courtyard units, each iwan assigned to one school; Shajar al-Durr added the founder's mausoleum
+      (1250), the year power passed to the Mamluks.
+    image_hint: "Wikimedia Commons search: Madrasa al-Salih Najm al-Din Ayyub Cairo"
+    evidence: [src-mit-ayyubid-cairo]
+    confidence: high
+
+events:
+  - id: ev-almohad-mahdi-repudiated
+    year: 1229
+    approx: true
+    place: pl-almohads
+    title: Almohad caliph al-Ma'mun rejects the founder's claim to be the mahdi
+    keyframe: true
+    lenses: [religion, governance]
+    summary: >
+      The Almohad caliph al-Ma'mun denied that the movement's founder, Ibn Tumart, had been the mahdi, a leader
+      sent by God, and hired Castilian Christian soldiers. The same year Tunis broke away, and the empire began to
+      split into three North African kingdoms.
+    detail: >
+      Saidi (pp. 52-53): doctrine dropped because it had become a source of political isolation. Hrbek (pp. 102, 105):
+      Castilian troops in the 1230 campaign; Abu Zakariyya independent 1229. Card prompt: what happens to a state
+      religion when the state abandons it? The repudiation is variously put in 1229 or 1230 (626-627 AH), hence
+      approx.
+    evidence: [src-saidi-almohads-gha4, src-hrbek-maghrib-disintegration-gha4, src-wp-almohad-doctrine]
+    confidence: high
+    ap_topics: ["1.2", "1.5"]
+
+  - id: ev-marinids-take-fez
+    year: 1248
+    approx: false
+    place: pl-fez
+    title: The Marinids take Fez
+    keyframe: false
+    lenses: [governance, religion]
+    summary: >
+      The Banu Marin, Amazigh (Berber) herders from Morocco's eastern steppe, captured Fez and made it their capital.
+      Over the next century they organized Moroccan Islam around Maliki law and new colleges called madrasas.
+    detail: Hrbek (p. 110). Marrakesh fell to them in 1269, ending the Almohads.
+    evidence: [src-hrbek-maghrib-disintegration-gha4]
+    confidence: high
+    ap_topics: ["1.2", "1.5"]
+
+  - id: ev-abbasid-caliphate-cairo
+    year: 1261
+    approx: true
+    place: pl-cairo
+    title: An Abbasid caliph installed in Mamluk Cairo
+    keyframe: true
+    lenses: [governance, religion]
+    summary: >
+      Three years after the Mongols destroyed Baghdad, the Mamluk sultan Baybars recognized a member of the Abbasid
+      family in Cairo as caliph and received authority from him. Muslim rulers looked to this caliph for legitimacy,
+      but the clearest African case, Songhay's Askia Muhammad, came only in 1496-97.
+    detail: >
+      Garcin (pp. 418-419) gives the caliph's presence from 1262 (first claimant 1261, killed on campaign; a second
+      installed 1262). Banister: the caliphs lost political weight by the mid-14th c. but kept ceremonial authority.
+      African investiture documented here only for Askia Muhammad (1496-97). Year 1261 is the first claimant;
+      Garcin's 1262 is the lasting installation, hence approx.
+    evidence: [src-garcin-egypt-gha4, src-banister-abbasid-authority]
+    confidence: high
+    ap_topics: ["1.2", "1.5"]
+
+  - id: ev-cairo-1321-churches
+    year: 1321
+    approx: false
+    place: pl-cairo
+    title: Churches destroyed across Egypt; fires in Cairo
+    keyframe: true
+    lenses: [religion, social]
+    summary: >
+      In 1321 crowds destroyed dozens of churches and monasteries across Egypt, and then a series of fires broke out
+      in Cairo that officials blamed on Christian monks. Sultan al-Nasir Muhammad at first resisted but then gave in
+      to protesters and issued harsh decrees against Christians.
+    detail: >
+      al-Maqrizi: 11 churches in Cairo and 49 elsewhere in about two weeks; confessions under torture of a monks' plot;
+      decrees later rescinded and officials restored; only one convert known by name (Konieczny summary). O'Sullivan:
+      about 60 churches and monasteries. Debate card: was 1321 popular anger at Coptic officials, a state-tolerated
+      purge, or both? Whose account do we have? (A Muslim chronicler writing a century later.)
+    evidence: [src-al-maqrizi-suluk, src-konieczny-cairo-1321, src-osullivan-coptic-conversion, src-little-coptic-conversion]
+    confidence: high
+    ap_topics: ["1.2"]
+
+  - id: ev-musa-in-cairo
+    year: 1324
+    approx: false
+    place: pl-cairo
+    title: Mansa Musa in Cairo
+    keyframe: true
+    lenses: [religion, knowledge]
+    summary: >
+      On his way to Mecca, Mansa Musa of Mali stayed in Cairo, met Sultan al-Nasir Muhammad, and spent so much gold
+      that al-Umari reports its value in Egypt fell for years. Cairo's writers made Mali famous across the Muslim world.
+    detail: >
+      al-Umari via Ibn Amir Hajib; Levtzion and Hopkins, CEAS pp. 269-273 (World History Commons excerpt). Garcin
+      (p. 414): Musa's gold supported Egyptian coinage. Schultz: the gold drop was within normal range. No caliphal
+      investiture of Musa is documented. Coordinate with wsahel ev-musa-hajj (place pl-mali); this record is the
+      Cairo end of the same journey.
+    evidence: [src-al-umari-masalik, src-garcin-egypt-gha4, src-wp-mansa-musa]
+    confidence: high
+    ap_topics: ["1.5", "2.4", "2.5"]
+
+  - id: ev-black-death-maghreb-egypt
+    year: 1348
+    approx: false
+    place: pl-cairo
+    title: The Black Death in Egypt and the Maghreb
+    keyframe: true
+    lenses: [population, religion]
+    summary: >
+      Plague reached Alexandria in late 1347 and killed perhaps a third of Cairo's people by early 1349, while also
+      ravaging Tunis and Fez. People gathered for mass prayers and processions, and villages emptied for generations.
+    detail: >
+      See df-black-death-egypt-maghreb. Ibn Khaldun lost his parents in Tunis (Idris, GHA IV p. 137, names his father
+      in 1349; Ibn Khaldun's own Ta'rif says both parents died). Dols: no breakdown of government or religious
+      institutions; Muslim responses framed plague as martyrdom for believers, while Ibn al-Khatib argued for
+      contagion.
+    evidence: [src-wp-black-death-middle-east, src-dols-black-death, src-garcin-egypt-gha4]
+    confidence: high
+    ap_topics: ["2.6"]
+
+  - id: ev-1354-coptic-crisis
+    year: 1354
+    approx: false
+    place: pl-mamluks
+    title: Coptic officials dismissed, church lands seized
+    keyframe: false
+    lenses: [religion, governance]
+    summary: >
+      Riots and new decrees in 1354 removed Christians, and even recent converts, from government jobs and took away
+      thousands of acres of church land. The chronicler al-Maqrizi wrote that Islam then spread among Egypt's Christians.
+    detail: >
+      O'Sullivan: confiscation of about 25,000 feddans of waqf; the Qalyub report of 450 converts in a day; O'Sullivan
+      calls the claim of country-wide conversion an exaggeration; Little sees a turning point.
+    evidence: [src-osullivan-coptic-conversion, src-al-maqrizi-suluk, src-little-coptic-conversion]
+    confidence: high
+    ap_topics: ["1.2"]
+
+  - id: ev-ibn-khaldun-to-cairo
+    year: 1382
+    approx: false
+    place: pl-cairo
+    title: Ibn Khaldun moves to Cairo
+    keyframe: false
+    lenses: [knowledge]
+    summary: >
+      After a career at courts in Tunis, Fez, Granada, Bejaia and Tlemcen, Ibn Khaldun moved to Cairo, where he
+      taught and served several times as the chief Maliki judge. There he interviewed West African visitors for his
+      history of Mali.
+    detail: >
+      Garcin (p. 419): arrived 1382, Maliki grand qadi. Austen and Jansen (1996) on his Mali king list: precise and
+      plausible but shaped by his theory of dynastic rise and decline. Informants include Muhammad b. Wasul of
+      Sijilmasa (interviewed 1374/75, before Cairo) and al-Hajj Yunus, interpreter of the Takrur in Egypt.
+    evidence: [src-garcin-egypt-gha4, src-austen-jansen-ibn-khaldun-mali, src-wp-history-mali-empire, src-wp-ibn-khaldun]
+    confidence: high
+    ap_topics: ["1.2", "1.5"]
+
+  - id: ev-portugal-takes-ceuta
+    year: 1415
+    approx: false
+    place: pl-ceuta
+    title: Portugal captures Ceuta
+    keyframe: false
+    lenses: [governance, religion]
+    summary: >
+      A Portuguese fleet seized the Moroccan port of Ceuta, the first lasting European conquest in Africa in this era.
+      It began a century of Portuguese attacks on the Moroccan coast.
+    detail: >
+      Hrbek (pp. 122-123): start of European overseas expansion; Tangier 1471; Spanish port seizures 1496-1510. Often
+      linked to the growth of rural zawiyas and holy-war leadership by saints in 15th-c. Morocco (Cornell); the causal
+      link is debated.
+    evidence: [src-hrbek-maghrib-disintegration-gha4, src-cornell-realm-of-saint]
+    confidence: high
+    ap_topics: ["1.7"]
+
+  - id: ev-fez-mellah
+    year: 1438
+    approx: true
+    place: pl-fez
+    title: Fez's Jews moved to the mellah
+    keyframe: true
+    lenses: [religion, social]
+    summary: >
+      Tradition says that after the tomb of Fez's founder Idris II was rediscovered, the area was closed to
+      non-Muslims and the city's Jews were moved to a new quarter by the royal palace, the mellah, the first in
+      Morocco. Some historians argue the move was gradual and began long before 1438.
+    detail: >
+      Date debated: traditional 1438 (some 1437); Rguig (2014) and Gilson Miller (2001) argue for a gradual move that
+      began after Fes el-Jdid's founding (1276), with Jews still in Fes el-Bali in the mid-14th c. Purpose read both as
+      protection near the sultan and as control. 1465: revolt kills Sultan Abd al-Haqq and his Jewish vizier; many
+      mellah Jews killed or forced to convert.
+    evidence: [src-wp-jewish-fes, src-chtatou-mellah-fez, src-garcia-arenal-bildiyyin]
+    confidence: medium
+    ap_topics: ["1.2"]
+
+sources:
+  # ---------- UNESCO General History of Africa vol. IV (French edition, chapters read online) ----------
+  - id: src-niane-introduction-gha4
+    title: "Introduction (Histoire generale de l'Afrique IV: L'Afrique du XIIe au XVIe siecle)"
+    author: Djibril Tamsir Niane
+    author_from: Guinea
+    date: "1985 (French ed.); English ed. 1984"
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "D. T. Niane, 'Introduction', in D. T. Niane, ed., UNESCO General History of Africa IV (Paris: UNESCO, 1984), ch. 1."
+    url: https://bokundoli.org/wp-content/uploads/2021/12/T4-5.pdf
+    access: open-url
+    verification: web-checked
+    notes: >
+      Page refs in the data use the French edition's running heads (pp. 21-34). Niane is Guinean; "from region"
+      is read as African for this continental volume.
+
+  - id: src-saidi-almohads-gha4
+    title: "Le Maghreb: l'unification sous les Almohades"
+    author: Omar Saidi
+    author_from: Tunisia
+    date: "1985 (French ed.)"
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "O. Saidi, 'The unification of the Maghrib under the Almohads', in Niane, ed., UNESCO General History of Africa IV, ch. 2."
+    url: https://bokundoli.org/wp-content/uploads/2021/12/T4-6.pdf
+    access: open-url
+    verification: web-checked
+    notes: Read in French; the readable portion ends in the reign of Ya'qub al-Mansur, so later Almohad points come from Hrbek.
+
+  - id: src-talbi-maghrib-civilization-gha4
+    title: "Le rayonnement de la civilisation maghrebine: son impact sur la civilisation occidentale"
+    author: Mohamed Talbi
+    author_from: Tunisia
+    date: "1985 (French ed.)"
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "M. Talbi, 'The spread of civilization in the Maghrib and its impact on Western civilization', in Niane, ed., UNESCO General History of Africa IV, ch. 3 (French ed. pp. 79-99)."
+    url: https://bokundoli.org/wp-content/uploads/2021/12/T4-7.pdf
+    access: open-url
+    verification: web-checked
+    notes: Does not discuss the end of indigenous Maghrebi Christianity or the Maghribi script.
+
+  - id: src-hrbek-maghrib-disintegration-gha4
+    title: "La desintegration de l'unite politique du Maghreb"
+    author: Ivan Hrbek
+    author_from: Czechoslovakia
+    date: "1985 (French ed.)"
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "I. Hrbek, 'The disintegration of political unity in the Maghrib', in Niane, ed., UNESCO General History of Africa IV, ch. 4 (French ed. pp. 101-124)."
+    url: https://bokundoli.org/wp-content/uploads/2021/12/T4-8.pdf
+    access: open-url
+    verification: web-checked
+    notes: null
+
+  - id: src-idris-maghrib-society-gha4
+    title: "La societe au Maghreb apres la disparition des Almohades"
+    author: Hady Roger Idris
+    author_from: France
+    date: "1985 (French ed.; posthumous, Idris d. 1978)"
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "R. Idris, 'Society in the Maghrib after the disappearance of the Almohads', in Niane, ed., UNESCO General History of Africa IV, ch. 5 (French ed. pp. 125-138)."
+    url: https://bokundoli.org/wp-content/uploads/2021/12/T4-9.pdf
+    access: open-url
+    verification: web-checked
+    notes: Key source for madrasas, Sufism, Jews, Christians, Andalusis, slavery and plague in the post-Almohad Maghreb. Does not discuss customary law.
+
+  - id: src-garcin-egypt-gha4
+    title: "L'Egypte dans le monde musulman (du XIIe siecle au debut du XVIe siecle)"
+    author: Jean-Claude Garcin
+    author_from: France
+    date: "1985 (French ed.)"
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "J.-C. Garcin, 'Egypt and the Muslim world', in Niane, ed., UNESCO General History of Africa IV, ch. 15 (French ed. pp. 403-428)."
+    url: https://bokundoli.org/wp-content/uploads/2021/12/T4-19.pdf
+    access: open-url
+    verification: web-checked
+    notes: >
+      Barely treats the 1301/1321/1354 anti-Coptic crises; mentions Kanem's Maliki madrasa in Fustat (p. 414) and
+      Askia Muhammad's 1496 investiture (p. 425). Egyptian historians (e.g. Qasim Abduh Qasim on ahl al-dhimma)
+      could not be checked in this pass.
+
+  # ---------- Primary sources ----------
+  - id: src-ibn-khaldun-ibar
+    title: Kitab al-Ibar (with the Muqaddimah) and the autobiography al-Ta'rif
+    author: Abd al-Rahman ibn Khaldun
+    author_from: Tunis (Ifriqiya); served in Fez, Granada, Bejaia, Tlemcen; died Cairo
+    date: c. 1375-1406
+    kind: primary
+    type: chronicle-local
+    voice: insider
+    happ:
+      historical_situation: Written after decades of service at rival Maghrebi courts, the Black Death, and (for later revisions) his move to Mamluk Cairo in 1382.
+      audience: Learned Muslim readers and patrons, first the Hafsid sultan of Tunis, later Cairo's scholars and rulers.
+      purpose: Explain the rise and fall of dynasties through group solidarity ('asabiyya) and record the history of the Arabs, Berbers and neighbors.
+      point_of_view: Maliki jurist and courtier of Andalusi-Arab family; an insider for the Maghreb, a regional outsider relying on informants for Mali.
+    citation: "Ibn Khaldun, Kitab al-Ibar. Mali and Kanem passages in N. Levtzion and J. F. P. Hopkins, eds., Corpus of Early Arabic Sources for West African History (Cambridge, 1981); French trans. A. Cheddadi, Le Livre des exemples (Gallimard, 2002-2012)."
+    url: null
+    access: book
+    verification: citation-only
+    notes: >
+      Voice is insider for the Maghreb places in this file; for Mali he is a regional outsider (see Austen and Jansen).
+      The 1257 Kanem giraffe embassy to al-Mustansir is attributed to him via the al-Mustansir reference.
+
+  - id: src-ibn-battuta-rihla
+    title: Tuhfat al-nuzzar (the Rihla)
+    author: Ibn Battuta (dictated to Ibn Juzayy)
+    author_from: Tangier, Morocco
+    date: 1355-1356
+    kind: primary
+    type: travel-geography
+    voice: regional-outsider
+    happ:
+      historical_situation: Written for the Marinid court after his return from Mali.
+      audience: Marinid sultan Abu Inan and his court in Fez.
+      purpose: Record and entertain; display the reach of Islam and the author's piety and learning.
+      point_of_view: Maliki jurist from Morocco; an insider for Sijilmasa and Fez, a regional outsider for Mali.
+    citation: "Ibn Battuta. In Hamdun and King, eds., Ibn Battuta in Black Africa (Markus Wiener, 1994)."
+    url: null
+    access: book
+    verification: citation-only
+    notes: Same id as the record-format example; voice kept as regional-outsider for merge consistency, but in this file it is cited for Sijilmasa, where he is an insider.
+
+  - id: src-al-umari-masalik
+    title: Masalik al-absar fi mamalik al-amsar
+    author: Ibn Fadl Allah al-Umari
+    author_from: Damascus and Cairo (Mamluk chancery)
+    date: c. 1337-1340
+    kind: primary
+    type: travel-geography
+    voice: regional-outsider
+    happ:
+      historical_situation: Written by a senior Mamluk chancery official in Cairo about a decade after Mansa Musa's 1324 visit.
+      audience: Mamluk officials and educated readers needing knowledge of foreign rulers and protocol.
+      purpose: An administrative encyclopedia of the world's kingdoms, with information useful for diplomacy.
+      point_of_view: Cairo bureaucrat relying on informants such as Ibn Amir Hajib (Mali) and Jamal al-Din of Zayla (Ethiopia); judges by Mamluk court norms.
+    citation: "al-Umari, in Levtzion and Hopkins, eds., Corpus of Early Arabic Sources for West African History (Cambridge, 1981), pp. 269-273 (Musa in Cairo)."
+    url: https://worldhistorycommons.org/al-umaris-account-mansa-musas-visit-cairo
+    access: open-url
+    verification: web-checked
+    notes: Insider for Egypt, regional outsider for Mali and Ethiopia.
+
+  - id: src-al-maqrizi-suluk
+    title: Kitab al-Suluk li-ma'rifat duwal al-muluk
+    author: Taqi al-Din al-Maqrizi
+    author_from: Cairo, Egypt
+    date: c. 1430s-1442
+    kind: primary
+    type: chronicle-local
+    voice: insider
+    happ:
+      historical_situation: Written in the crisis-ridden 15th c. by a Cairo scholar and former market inspector, looking back on Ayyubid and Mamluk history.
+      audience: Cairo's learned elite.
+      purpose: A year-by-year history of Egypt; al-Maqrizi often contrasts a better past with present decline.
+      point_of_view: Shafi'i scholar, critical of Mamluk misrule; describes Copts from a Muslim urban viewpoint and sometimes exaggerates (O'Sullivan).
+    citation: "al-Maqrizi, Kitab al-Suluk; passages on 1321 and 1354 as discussed in Little (1976) and O'Sullivan (2006)."
+    url: null
+    access: book
+    verification: citation-only
+    notes: Read here only through O'Sullivan and the Konieczny summary.
+
+  - id: src-al-maqrizi-ilmam
+    title: al-Ilmam bi-akhbar man bi-ard al-Habasha min muluk al-Islam
+    author: Taqi al-Din al-Maqrizi
+    author_from: Cairo, Egypt
+    date: c. 1430s
+    kind: primary
+    type: travel-geography
+    voice: regional-outsider
+    happ:
+      historical_situation: Written in Mamluk Cairo during wars between the Solomonic kingdom and Muslim sultanates of the Horn.
+      audience: Cairo's learned and political elite.
+      purpose: Record the history of the Muslim rulers of Ethiopia (Ifat, Adal) and their struggle with the Christian kings.
+      point_of_view: Cairo Sunni scholar sympathetic to the Muslim states, relying on informants from the Horn.
+    citation: "al-Maqrizi, al-Ilmam bi-akhbar man bi-ard al-Habasha min muluk al-Islam (Arabic text in the OpenITI corpus)."
+    url: null
+    access: book
+    verification: citation-only
+    notes: Listed for nile-horn coordination; this file only uses it to show Cairo as a center of writing about Africa.
+
+  - id: src-al-nuwayri-ilmam
+    title: Kitab al-Ilmam (on the 1365 sack of Alexandria)
+    author: Muhammad ibn Qasim al-Nuwayri al-Iskandarani
+    author_from: Alexandria, Egypt
+    date: c. 1365-1374
+    kind: primary
+    type: chronicle-local
+    voice: insider
+    happ:
+      historical_situation: Written by an Alexandrian after the crusader sack of his city in October 1365.
+      audience: Muslim readers in Egypt.
+      purpose: Record the disaster, explain it, and call for vigilance and holy war.
+      point_of_view: Eyewitness-era Alexandrian Muslim, hostile to the crusaders.
+    citation: "al-Nuwayri al-Iskandarani, Kitab al-Ilmam; see J. van Steenbergen, 'The Alexandrian Crusade (1365) and the Mamluk Sources: Reassessment of the Kitab al-Ilmam'."
+    url: null
+    access: book
+    verification: citation-only
+    notes: null
+
+  - id: src-rawd-al-qirtas
+    title: Rawd al-Qirtas
+    author: Ibn Abi Zar'
+    author_from: Fez, Morocco
+    date: c. 1326
+    kind: primary
+    type: chronicle-local
+    voice: insider
+    happ:
+      historical_situation: Written in Marinid Fez in the reign of Abu Sa'id Uthman II.
+      audience: The Marinid court and Fez's learned elite.
+      purpose: A history of Fez and Morocco's dynasties that glorifies the Marinids.
+      point_of_view: Fez court writer; favorable to the Marinids, hostile to the Almohads.
+    citation: "Ibn Abi Zar', al-Anis al-mutrib bi-rawd al-qirtas."
+    url: null
+    access: book
+    verification: citation-only
+    notes: Cited via the Attarine reference (sultan at foundation ceremony) and for the reported Christian church in Almohad Marrakesh (unchecked).
+
+  - id: src-ibn-al-zayyat-tashawwuf
+    title: al-Tashawwuf ila rijal al-tasawwuf
+    author: Ibn al-Zayyat al-Tadili (Abu Ya'qub Yusuf ibn Yahya)
+    author_from: Beni Mellal area, Morocco
+    date: c. 1220
+    kind: primary
+    type: religious-text-local
+    voice: insider
+    happ:
+      historical_situation: Compiled in late-Almohad Morocco by a jurist and Sufi.
+      audience: Moroccan scholars and devotees of the saints.
+      purpose: Record the lives and miracles of Moroccan holy people, many rural and Tamazight-speaking, to prove their sanctity.
+      point_of_view: Urban-trained jurist sympathetic to the saints; peasants appear through his eyes.
+    citation: "Ibn al-Zayyat al-Tadili, al-Tashawwuf ila rijal al-tasawwuf, ed. Ahmed Toufiq (Rabat, 1984)."
+    url: null
+    access: book
+    verification: needs-library
+    notes: Edited by the Moroccan historian Ahmed Toufiq; key insider source for rural Amazigh sainthood.
+
+  - id: src-al-idrisi-nuzha
+    title: Nuzhat al-mushtaq fi ikhtiraq al-afaq
+    author: al-Sharif al-Idrisi
+    author_from: Ceuta, writing at the Norman court of Palermo
+    date: 1154
+    kind: primary
+    type: travel-geography
+    voice: regional-outsider
+    happ:
+      historical_situation: Geography compiled for Roger II of Sicily from travelers' reports.
+      audience: The Norman king and court.
+      purpose: Describe the known world for a Christian ruler with ambitions in North Africa.
+      point_of_view: Maghrebi-born Muslim scholar writing for a Christian patron; second-hand for many places.
+    citation: "al-Idrisi, Nuzhat al-mushtaq (1154); Gafsa passage as quoted in secondary literature on African Romance."
+    url: null
+    access: book
+    verification: citation-only
+    notes: Gafsa remark checked only via the African Romance reference.
+
+  - id: src-al-sadi-tarikh-al-sudan
+    title: Tarikh al-Sudan
+    author: Abd al-Rahman al-Sa'di
+    author_from: Timbuktu
+    date: c. 1655
+    kind: primary
+    type: chronicle-local
+    voice: insider
+    happ:
+      historical_situation: Written in Timbuktu under Moroccan (Arma) rule, sixty years after Songhay's fall.
+      audience: Timbuktu's scholarly families.
+      purpose: Preserve the history of Songhay, Timbuktu and Djenne and their scholars.
+      point_of_view: Timbuktu scholar honoring the askias' Muslim piety.
+    citation: "al-Sa'di, Tarikh al-Sudan, trans. J. O. Hunwick, Timbuktu and the Songhay Empire (Brill, 1999)."
+    url: https://dhspriory.org/kenny/NWAfr/a12.htm
+    access: open-url
+    verification: web-checked
+    notes: Says the Abbasid caliph made Askia Muhammad his deputy (cap and turban) during the 1496-97 hajj; does not name Cairo.
+
+  - id: src-tarikh-al-fattash
+    title: Tarikh al-Fattash
+    author: Attributed to Mahmud Kati and Ibn al-Mukhtar (composite; authorship debated)
+    author_from: Timbuktu region
+    date: 17th c. (with later 19th-c. interpolations in some versions)
+    kind: primary
+    type: chronicle-local
+    voice: insider
+    happ:
+      historical_situation: Compiled in the 17th c. about the Songhay empire.
+      audience: West African Muslim scholarly elites.
+      purpose: Record Songhay history and the legitimacy of its rulers.
+      point_of_view: Timbuktu-area scholars; some passages reworked later for political ends.
+    citation: "Tarikh al-Fattash, passage pp. 86-87 as given in the Kenny translation excerpts."
+    url: https://dhspriory.org/kenny/NWAfr/a12.htm
+    access: open-url
+    verification: web-checked
+    notes: Credits the Sharif of Mecca, as the Abbasid caliph's deputy, with Askia Muhammad's investiture.
+
+  - id: src-cairo-geniza
+    title: The Cairo Geniza (Ben Ezra Synagogue, Fustat)
+    author: Jewish communities of Fustat and their correspondents (Rabbanite and Karaite)
+    author_from: Fustat/Cairo and the Mediterranean
+    date: c. 6th-19th c. (densest 11th-13th c.)
+    kind: primary
+    type: documentary
+    voice: insider
+    happ:
+      historical_situation: Writings stored rather than destroyed because they might contain God's name; preserved in Egypt's dry climate.
+      audience: Varied (letters, contracts, court records, books); not written for historians.
+      purpose: Everyday business, law, worship and learning.
+      point_of_view: Mostly urban Jewish merchants, scholars and families; few peasants or women's own voices, though women appear often.
+    citation: "Cairo Geniza collections (Cambridge University Library Taylor-Schechter and others); see S. D. Goitein, A Mediterranean Society."
+    url: https://en.wikipedia.org/wiki/Ben_Ezra_Synagogue
+    access: open-url
+    verification: web-checked
+    notes: URL is the reference page checked for Maimonides' dates and the Geniza's span; the documents themselves are in library collections.
+
+  # ---------- Scholarship from the region ----------
+  - id: src-kably-societe-pouvoir-religion
+    title: Societe, pouvoir et religion au Maroc a la fin du Moyen Age (XIVe-XVe siecle)
+    author: Mohamed Kably
+    author_from: Morocco (Mohammed V University, Rabat)
+    date: "1986; reissued Rabat: Le Fennec, 2022"
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "Mohamed Kably, Societe, pouvoir et religion au Maroc a la fin du Moyen Age (Paris: Maisonneuve et Larose, 1986)."
+    url: null
+    access: library
+    verification: needs-library
+    notes: Only a publisher blurb was read. Kably is the main Moroccan synthesis of Marinid society, power and religion; teacher should check his reading of madrasas, saints and sharifism.
+
+  - id: src-ferhat-soufisme-zaouias
+    title: Le soufisme et les zaouias au Maghreb
+    author: Halima Ferhat
+    author_from: Morocco (Mohammed V University, Rabat)
+    date: 2003
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "Halima Ferhat, Le soufisme et les zaouias au Maghreb: merite individuel et patrimoine sacre (2003); see also her Sabta des origines au XIVe siecle (1993)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Known via the Ferhat and Abu Ya'za references; not read.
+
+  - id: src-cheddadi-livre-des-exemples
+    title: "Ibn Khaldun, Le Livre des exemples (translation and commentary); interview on Ibn Khaldun's thought"
+    author: Abdesselam Cheddadi
+    author_from: Morocco
+    date: 2002 (Pleiade vol. 1)
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "Ibn Khaldun, Le Livre des exemples, trans. and ed. Abdesselam Cheddadi (Paris: Gallimard, Bibliotheque de la Pleiade, 2002)."
+    url: https://www.diplomatie.gouv.fr/IMG/pdf/Cheddadieng.pdf
+    access: open-url
+    verification: web-checked
+    notes: Web-checked for Cheddadi's interpretation (interview with Olivier Mongin), not for the translation itself.
+
+  - id: src-chtatou-mellah-fez
+    title: The Mellah of Fez
+    author: Mohamed Chtatou
+    author_from: Morocco (International University of Rabat)
+    date: null
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "Mohamed Chtatou, 'The Mellah of Fez', Sephardic Horizons 13, no. 1."
+    url: https://sephardichorizons.org/Volume13/Issue1/Chtatou.html
+    access: open-url
+    verification: web-checked
+    notes: Gives 1438 and reports the date debate; places the 1465 attack on 14 May 1465.
+
+  - id: src-el-leithy-coptic-conversion
+    title: "Coptic Culture and Conversion in Medieval Cairo, 1293-1524 A.D."
+    author: Tamer el-Leithy
+    author_from: Egypt
+    date: 2005
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "Tamer el-Leithy, 'Coptic Culture and Conversion in Medieval Cairo, 1293-1524 A.D.' (PhD diss., Princeton University, 2005)."
+    url: null
+    access: library
+    verification: needs-library
+    notes: Known via O'Sullivan (2006); unpublished dissertation. Argues the decisive Islamization of Egypt came in the 14th c.
+
+  - id: src-al-naqar-takrur
+    title: The Pilgrimage Tradition in West Africa
+    author: Umar al-Naqar
+    author_from: Sudan
+    date: 1972
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "Umar al-Naqar, The Pilgrimage Tradition in West Africa (Khartoum University Press, 1972)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Cited secondhand (pp. 365-370 per the African History Extra blog) for al-Hajj Yunus and the Takrur community of Cairo.
+
+  - id: src-kane-beyond-timbuktu
+    title: "Beyond Timbuktu: An Intellectual History of Muslim West Africa"
+    author: Ousmane Oumar Kane
+    author_from: Senegal
+    date: 2016
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "Ousmane Oumar Kane, Beyond Timbuktu (Harvard University Press, 2016)."
+    url: null
+    access: library
+    verification: needs-library
+    notes: The 18th-c. dating of West African riwaqs at al-Azhar came secondhand ("Kane, p. 8"); the specific Kane work behind that citation should be confirmed.
+
+  # ---------- International scholarship ----------
+  - id: src-bennison-almoravid-almohad
+    title: The Almoravid and Almohad Empires
+    author: Amira K. Bennison
+    author_from: United Kingdom
+    date: 2016
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "Amira K. Bennison, The Almoravid and Almohad Empires (Edinburgh University Press, 2016)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Known via the Almohad doctrine reference.
+
+  - id: src-shatzmiller-berbers-islamic-state
+    title: "The Berbers and the Islamic State: The Marinid Experience in Pre-Protectorate Morocco"
+    author: Maya Shatzmiller
+    author_from: Canada
+    date: "2000; updated ed. 2017 as From Berber State to Moroccan Empire"
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "Maya Shatzmiller, The Berbers and the Islamic State (Markus Wiener, 2000)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Review confirms a section on madrasas as Islamic institutions of the Marinid state.
+
+  - id: src-cornell-realm-of-saint
+    title: "Realm of the Saint: Power and Authority in Moroccan Sufism"
+    author: Vincent J. Cornell
+    author_from: United States
+    date: 1998
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "Vincent J. Cornell, Realm of the Saint (University of Texas Press, 1998)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Standard study of Moroccan sainthood 12th-16th c. and the Jazuliyya.
+
+  - id: src-hoffman-customary-courts
+    title: "Archival Ethnography in the Customary Courts: Legal and Linguistic Pluralism under French Protectorate"
+    author: Katherine E. Hoffman
+    author_from: United States
+    date: 2020
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "Katherine E. Hoffman, Hesperis-Tamuda 55, no. 2 (2020): 77-93."
+    url: https://www.hesperis-tamuda.com/Downloads/2020/fascicule-2/5.pdf
+    access: open-url
+    verification: web-checked
+    notes: Modern period only; used to warn against the colonial "custom vs. sharia" binary. Published in a Rabat journal.
+
+  - id: src-prevost-dernieres-communautes
+    title: Les dernieres communautes chretiennes autochtones d'Afrique du Nord
+    author: Virginie Prevost
+    author_from: Belgium
+    date: 2007
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "Virginie Prevost, Revue de l'histoire des religions 224, no. 4 (2007): 461-483."
+    url: https://revues.armand-colin.com/histoire/revue-lhistoire-religions/revue-lhistoire-religions-tome-224-42007/dernieres-communautes-chretiennes-autochtones-dafrique-du-nord
+    access: open-url
+    verification: web-checked
+    notes: Abstract read. Mid-13th-c. end in the Djerid/Nafzawa oases; rejects 14th-18th c. survival claims.
+
+  - id: src-cristini-years-of-infidels
+    title: "The Years of the Infidels: African Latin Christianity from the Vandals to the Almohads"
+    author: Marco Cristini
+    author_from: Italy
+    date: 2025
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "Marco Cristini, The Years of the Infidels (London: Routledge, 2025)."
+    url: https://rmblf.be/2025/08/21/publication-marco-cristini-the-years-of-the-infidels-african-latin-christianity-from-the-vandals-to-the-almohads/
+    access: library
+    verification: citation-only
+    notes: Only the publication notice was read; final chapter title places the end in the Almohad era.
+
+  - id: src-macevitt-martyrdom-franciscans
+    title: "The Martyrdom of the Franciscans: Islam, the Papacy, and an Order in Conflict"
+    author: Christopher MacEvitt
+    author_from: United States
+    date: 2020
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "Christopher MacEvitt, The Martyrdom of the Franciscans (University of Pennsylvania Press, 2020)."
+    url: https://www.pennpress.org/9780812251937/the-martyrdom-of-the-franciscans/
+    access: library
+    verification: citation-only
+    notes: Publisher description confirms the argument that many martyr narratives were largely invented; the Morocco chapters were not read.
+
+  - id: src-garcia-arenal-bildiyyin
+    title: "Les Bildiyyin de Fes, un groupe de neo-musulmans d'origine juive"
+    author: Mercedes Garcia-Arenal
+    author_from: Spain
+    date: 1987
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "Mercedes Garcia-Arenal, Studia Islamica 66 (1987)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Known via the Jewish community of Fes reference.
+
+  - id: src-gottreich-jewish-morocco
+    title: "Jewish Morocco: A History from Pre-Islamic to Postcolonial Times"
+    author: Emily Gottreich
+    author_from: United States
+    date: 2020
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "Emily Gottreich, Jewish Morocco (London: I.B. Tauris, 2020)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: null
+
+  - id: src-messier-miller-last-civilized-place
+    title: "The Last Civilized Place: Sijilmasa and Its Saharan Destiny"
+    author: Ronald A. Messier and James A. Miller
+    author_from: United States
+    date: 2015
+    kind: secondary
+    type: archaeology
+    voice: scholar-international
+    citation: "Ronald A. Messier and James A. Miller, The Last Civilized Place (University of Texas Press, 2015)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Product of the Moroccan-American Project of Sijilmassa (from 1988), with Moroccan co-directors.
+
+  - id: src-osullivan-coptic-conversion
+    title: Coptic Conversion and the Islamization of Egypt
+    author: Shaun O'Sullivan
+    author_from: United States
+    date: 2006
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "Shaun O'Sullivan, Mamluk Studies Review 10, no. 2 (2006)."
+    url: https://knowledge.uchicago.edu/nanna/record/958/files/MSR_X-2_2006-OSullivan.pdf
+    access: open-url
+    verification: web-checked
+    notes: Summarizes and argues with Wiet, Little and el-Leithy; key source for the classroom debate.
+
+  - id: src-little-coptic-conversion
+    title: Coptic Conversion to Islam under the Bahri Mamluks, 692-755/1293-1354
+    author: Donald P. Little
+    author_from: United States / Canada
+    date: 1976
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "Donald P. Little, Bulletin of the School of Oriental and African Studies 39 (1976)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Known via O'Sullivan and the Konieczny reading list.
+
+  - id: src-konieczny-cairo-1321
+    title: How a City Burned from Inter-Religious Violence (Cairo in 1321)
+    author: Peter Konieczny
+    author_from: Canada
+    date: 2022
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Peter Konieczny, Medievalists.net, 9 August 2022."
+    url: https://www.medievalists.net/2022/08/how-a-city-burned-from-inter-religious-violence-cairo-in-1321/
+    access: open-url
+    verification: web-checked
+    notes: Popular summary built on al-Maqrizi in translation.
+
+  - id: src-swanson-coptic-papacy
+    title: The Coptic Papacy in Islamic Egypt (641-1517)
+    author: Mark N. Swanson
+    author_from: United States
+    date: 2010
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "Mark N. Swanson, The Coptic Papacy in Islamic Egypt (Cairo: American University in Cairo Press, 2010)."
+    url: https://library.arce.org/portal/Record/20640/TOC
+    access: library
+    verification: citation-only
+    notes: Only the table of contents was read.
+
+  - id: src-teepe-coptic-muqaddimat
+    title: "Learning Coptic in Arabic: The 13th-Century Muqaddimat for the Coptic Language (lecture)"
+    author: Ramona Teepe
+    author_from: Yale University
+    date: 2024
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "Ramona Teepe, lecture at Princeton Near Eastern Studies, 28 October 2024 (event abstract)."
+    url: https://nes.princeton.edu/node/3416
+    access: open-url
+    verification: web-checked
+    notes: Abstract dates the Arabic grammars of Coptic to the 1240s-1260s; Adel Sidarus is the classic scholar of these texts.
+
+  - id: src-russ-fishbane-pietists
+    title: Judaism, Sufism, and the Pietists of Medieval Egypt
+    author: Elisha Russ-Fishbane
+    author_from: United States
+    date: 2015
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "Elisha Russ-Fishbane, Judaism, Sufism, and the Pietists of Medieval Egypt (Oxford University Press, 2015)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: null
+
+  - id: src-goitein-mediterranean-society
+    title: A Mediterranean Society
+    author: S. D. Goitein
+    author_from: Germany / Israel / United States
+    date: 1967-1993
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "S. D. Goitein, A Mediterranean Society, 6 vols. (University of California Press, 1967-1993)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: null
+
+  - id: src-banister-abbasid-authority
+    title: "'Naught Remains to the Caliph but his Title': Revisiting Abbasid Authority in Mamluk Cairo"
+    author: Mustafa Banister
+    author_from: Belgium (Ghent) / United States
+    date: 2014-2015
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "Mustafa Banister, Mamluk Studies Review 18 (2014-15)."
+    url: https://knowledge.uchicago.edu/record/1223/files/MSR_XVIII_2014-15_Banister.pdf
+    access: open-url
+    verification: web-checked
+    notes: Documents investiture requests from Delhi, the Muzaffarids and the Ottomans; none from African rulers.
+
+  - id: src-dewiere-city-before-mecca
+    title: "A city before Mecca: Cairo and the hajj of Kanem and Borno pilgrims (12th-17th c.)"
+    author: Remi Dewiere (attribution inferred from repository and secondary citation)
+    author_from: France / United Kingdom (Northumbria University)
+    date: null
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "Remi Dewiere, 'A city before Mecca: Cairo and the hajj of Kanem and Borno pilgrims (12th-17th c.)', Northumbria Research Link eprint 50623."
+    url: https://core.ac.uk/works/130048558
+    access: open-url
+    verification: citation-only
+    notes: Only the abstract was read, which does not mention the Ibn Rashiq madrasa; the 1242 madrasa claim reached us via a blog citing Dewiere pp. 223, 249 (probably a different Dewiere work). Check in library.
+
+  - id: src-austen-jansen-ibn-khaldun-mali
+    title: History, Oral Transmission and Structure in Ibn Khaldun's Chronology of Mali Rulers
+    author: Ralph A. Austen and Jan Jansen
+    author_from: United States / Netherlands
+    date: 1996
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "Ralph A. Austen and Jan Jansen, History in Africa 23 (1996): 17-28."
+    url: https://www.cambridge.org/core/journals/history-in-africa/article/history-oral-transmission-and-structure-in-ibn-khalduns-chronology-of-mali-rulers/239E661192B1E45538B3019A35AA03BF
+    access: open-url
+    verification: web-checked
+    notes: Compares Ibn Khaldun's king list with Mande oral tradition; good classroom text on outsider vs. oral sources.
+
+  - id: src-dols-black-death
+    title: The Comparative Communal Responses to the Black Death in Muslim and Christian Societies
+    author: Michael W. Dols
+    author_from: United States
+    date: 1974
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "Michael W. Dols, The Comparative Communal Responses to the Black Death in Muslim and Christian Societies (journal article, pp. 271-276)."
+    url: https://web.stanford.edu/class/history13/Readings/MichaelDol.htm
+    access: open-url
+    verification: web-checked
+    notes: The checked page did not name the journal; Viator 5 (1974) is from memory and should be confirmed. Dols's book The Black Death in the Middle East (Princeton, 1977) is the fuller study.
+
+  - id: src-nobili-west-african-scripts
+    title: "Back to West African Script Styles: A Taxonomy and Provisional Implications for Historical Analysis (lecture)"
+    author: Mauro Nobili (response by Fallou Ngom)
+    author_from: Italy / United States (University of Illinois); Ngom from Senegal
+    date: null
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "Mauro Nobili, lecture at Boston University (event page); see also his 'Arabic Scripts in West African Manuscripts: A Tentative Classification from the de Gironcourt Collection', Islamic Africa (2011)."
+    url: https://www.bu.edu/scriparts/?p=870
+    access: open-url
+    verification: web-checked
+    notes: Event abstract read; the 2011 article is citation-only.
+
+  - id: src-bloom-paper-before-print
+    title: "Paper Before Print: The History and Impact of Paper in the Islamic World"
+    author: Jonathan M. Bloom
+    author_from: United States
+    date: 2001
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "Jonathan M. Bloom, Paper Before Print (Yale University Press, 2001)."
+    url: null
+    access: library
+    verification: needs-library
+    notes: Check the Fez paper-workshop figures and their source (Ibn Battuta vs. Zahrat al-As).
+
+  - id: src-mit-ayyubid-cairo
+    title: Transforming the Religious Landscape of Cairo in the Ayyubid Period (course handout)
+    author: MIT course 4.615, Islamic architecture
+    author_from: United States
+    date: null
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "MIT 4.615 handout 8, 'Transforming the Religious Landscape of Cairo in the Ayyubid Period'."
+    url: https://web.mit.edu/4.615/www/printouts/handout8.html
+    access: open-url
+    verification: web-checked
+    notes: null
+
+  - id: src-archnet-al-azhar
+    title: Jami' al-Azhar (site record)
+    author: Archnet
+    author_from: United States (MIT/Aga Khan)
+    date: null
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Archnet, site 2311, Jami' al-Azhar."
+    url: https://archnet.org/sites/2311
+    access: open-url
+    verification: web-checked
+    notes: null
+
+  - id: src-encyclopedia-al-azhar
+    title: "Azhar, al- (Encyclopedia of Religion entry)"
+    author: Ismail K. Poonawala
+    author_from: United States
+    date: 2005
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Ismail K. Poonawala, 'Azhar, al-', Encyclopedia of Religion, 2nd ed. (Gale, 2005), via encyclopedia.com."
+    url: https://www.encyclopedia.com/religion/dictionaries-thesauruses-pictures-and-press-releases/al-azhar
+    access: open-url
+    verification: web-checked
+    notes: Reports al-Maqrizi's 1415-16 count of 750 students in riwaqs by province and nationality.
+
+  - id: src-jvl-mamluk-jews
+    title: Mamluk rule 1291-1516 (Encyclopaedia Judaica entry)
+    author: Encyclopaedia Judaica via Jewish Virtual Library
+    author_from: Israel / United States
+    date: 2007
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Encyclopaedia Judaica, 2nd ed. (2007), 'Mamluks', via Jewish Virtual Library."
+    url: https://www.jewishvirtuallibrary.org/mamluk-rule-1291-1516
+    access: open-url
+    verification: web-checked
+    notes: Source for the 1301 turban colors and closures, 1309 reopenings, 1354 measures, and the nagid office.
+
+  - id: src-ebsco-al-umari
+    title: Al-Umari Writes a History of Africa (research starter)
+    author: EBSCO Research Starters
+    author_from: United States
+    date: null
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "EBSCO Research Starters, 'al-'Umari Writes History of Africa'."
+    url: https://www.ebsco.com/research-starters/history/al-umari-writes-history-africa
+    access: open-url
+    verification: web-checked
+    notes: null
+
+  - id: src-africanhistoryextra-diaspora
+    title: A history of the West African diaspora in Arabia and Jerusalem before 1900
+    author: Isaac Samuel (African History Extra)
+    author_from: Kenya
+    date: null
+    kind: secondary
+    type: reference
+    voice: scholar-from-region
+    citation: "Isaac Samuel, 'A history of the west African diaspora in Arabia and Jerusalem before 1900', African History Extra (Substack)."
+    url: https://www.africanhistoryextra.com/p/a-history-of-the-west-african-diaspora
+    access: open-url
+    verification: web-checked
+    notes: Popular synthesis with footnotes to Dewiere, al-Naqar and Kane; used only to find those works.
+
+  # ---------- Wikipedia reference pages read during research (use sparingly; prefer the works they cite) ----------
+  - {id: src-wp-almohad-doctrine, title: Almohad doctrine, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'Almohad doctrine' (citing Bennison, Fierro, Buresi).", url: "https://en.wikipedia.org/wiki/Almohad_doctrine", access: open-url, verification: web-checked, notes: "Originally read at the en.wikipedia.com/wiki/Almohadism redirect; canonical url substituted."}
+  - {id: src-wp-jewish-fes, title: Jewish community of Fes, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'Jewish community of Fes' (citing Le Tourneau, Rguig, Gilson Miller, Garcia-Arenal, Gottreich).", url: "https://en.wikipedia.org/wiki/Jewish_community_of_Fes", access: open-url, verification: web-checked, notes: null}
+  - {id: src-wp-bou-inania, title: Bou Inania Madrasa, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'Bou Inania Madrasa' (citing foundation inscription, Ettahiri, Touri, Marcais, Bloom).", url: "https://en.wikipedia.org/wiki/Bou_Inania_Madrasa", access: open-url, verification: web-checked, notes: null}
+  - {id: src-wp-attarine, title: Al-Attarine Madrasa, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'Al-Attarine Madrasa'.", url: "https://en.wikipedia.org/wiki/Al-Attarine_Madrasa", access: open-url, verification: web-checked, notes: null}
+  - {id: src-wp-qarawiyyin, title: Al-Qarawiyyin, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'Al-Qarawiyyin' (citing Terrasse and others).", url: "https://en.wikipedia.org/wiki/Al-Qarawiyyin", access: open-url, verification: web-checked, notes: null}
+  - {id: src-wp-shadhili, title: Al-Shadhili, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'Al-Shadhili' (citing Douglas and Abu-Rabi 1993; Mackeen 1971).", url: "https://en.wikipedia.org/wiki/Al-Shadhili", access: open-url, verification: web-checked, notes: "Birthplace given inconsistently (near Tetouan vs. near Tangier)."}
+  - {id: src-wp-humaithara, title: Humaithara, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'Humaithara'.", url: "https://en.wikipedia.org/wiki/Humaithara", access: open-url, verification: web-checked, notes: null}
+  - {id: src-wp-shammaiya, title: Shamma'iya Madrasa, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'Shamma'iya Madrasa'.", url: "https://en.wikipedia.org/wiki/Shamma%27iya_Madrasa", access: open-url, verification: web-checked, notes: null}
+  - {id: src-wp-sidi-boumediene, title: Sidi Boumediene Mosque, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'Sidi Boumediene Mosque' (citing Marcais, Archnet).", url: "https://en.wikipedia.org/wiki/Sidi_Boumediene_Mosque", access: open-url, verification: web-checked, notes: null}
+  - {id: src-wp-marinid-architecture, title: Marinid architecture, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'Marinid architecture'.", url: "https://en.wikipedia.org/wiki/Marinid_architecture", access: open-url, verification: web-checked, notes: null}
+  - {id: src-wp-seven-saints, title: Seven Saints of Marrakesh, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'Seven Saints of Marrakesh'.", url: "https://en.wikipedia.org/wiki/Seven_Saints_of_Marrakesh", access: open-url, verification: web-checked, notes: null}
+  - {id: src-wp-abu-yaaza, title: Abu Yaaza, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'Abu Yaaza' (citing al-Azafi, Ferhat 2003).", url: "https://en.wikipedia.org/wiki/Abu_Yaaza", access: open-url, verification: web-checked, notes: null}
+  - {id: src-wp-azafi, title: Abu al-Abbas al-Azafi, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'Abu al-Abbas al-Azafi'.", url: "https://en.wikipedia.org/wiki/Abu_al-Abbas_al-Azafi", access: open-url, verification: web-checked, notes: null}
+  - {id: src-wp-badawi, title: Ahmad al-Badawi, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'Ahmad al-Badawi' (citing Mayeur-Jaouen).", url: "https://en.wikipedia.org/wiki/Ahmad_al-Badawi", access: open-url, verification: web-checked, notes: null}
+  - {id: src-wp-abraham-maimonides, title: Abraham Maimonides, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'Abraham Maimonides' (citing Russ-Fishbane 2015; Goitein).", url: "https://en.wikipedia.org/wiki/Abraham_Maimonides", access: open-url, verification: web-checked, notes: null}
+  - {id: src-wp-copto-arabic, title: Copto-Arabic literature, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'Copto-Arabic literature' (citing Sidarus, Swanson, Atiya, Moawad).", url: "https://en.wikipedia.org/wiki/Copto-Arabic_literature", access: open-url, verification: web-checked, notes: "Cites Egyptian scholars Aziz Atiya and Samuel Moawad, and Adel Sidarus."}
+  - {id: src-wp-african-romance, title: African Romance, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'African Romance' (citing Prevost, Lewicki, Conant, Brugnatelli).", url: "https://en.wikipedia.org/wiki/African_Romance", access: open-url, verification: web-checked, notes: null}
+  - {id: src-wp-kairouan, title: Kairouan, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'Kairouan'.", url: "https://en.wikipedia.org/wiki/Kairouan", access: open-url, verification: web-checked, notes: null}
+  - {id: src-wp-sijilmasa, title: Sijilmasa, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'Sijilmasa'.", url: "https://en.wikipedia.org/wiki/Sijilmasa", access: open-url, verification: web-checked, notes: null}
+  - {id: src-wp-alexandrian-crusade, title: Alexandrian Crusade, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'Alexandrian Crusade' (citing van Steenbergen on al-Nuwayri).", url: "https://en.wikipedia.org/wiki/Alexandrian_Crusade", access: open-url, verification: web-checked, notes: null}
+  - {id: src-wp-mustansir, title: Muhammad I al-Mustansir, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'Muhammad I al-Mustansir' (citing Ibn Khaldun).", url: "https://en.wikipedia.org/wiki/Muhammad_I_al-Mustansir", access: open-url, verification: web-checked, notes: null}
+  - {id: src-wp-ibn-khaldun, title: Ibn Khaldun, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'Ibn Khaldun'.", url: "https://en.wikipedia.org/wiki/Ibn_Khaldun", access: open-url, verification: web-checked, notes: null}
+  - {id: src-wp-ibn-marzuq, title: Ibn Marzuq al-Khatib, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'Ibn Marzuq al-Khatib'.", url: "https://en.wikipedia.org/wiki/Ibn_Marzuq_al-Khatib", access: open-url, verification: web-checked, notes: null}
+  - {id: src-wp-black-death-middle-east, title: Black Death in the Middle East, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'Black Death in the Middle East' (citing Harrison).", url: "https://en.wikipedia.org/wiki/Black_Death_in_the_Middle_East", access: open-url, verification: web-checked, notes: "Cairo 200,000 deaths is an estimate; check Dols 1977 and Borsch."}
+  - {id: src-wp-mansa-musa, title: Mansa Musa, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'Mansa Musa' (citing al-Umari, Schultz).", url: "https://en.wikipedia.org/wiki/Mansa_Musa", access: open-url, verification: web-checked, notes: null}
+  - {id: src-wp-history-mali-empire, title: History of the Mali Empire, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'History of the Mali Empire'.", url: "https://en.wikipedia.org/wiki/History_of_the_Mali_Empire", access: open-url, verification: web-checked, notes: "Ibn Khaldun's informant Muhammad b. Wasul of Sijilmasa, interviewed 1374/75."}
+  - {id: src-wp-biri-uthman, title: Biri III Uthman, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'Biri III Uthman' (citing Muhammad al-Hajj 1983 on Bornu's correspondence with Egypt).", url: "https://en.wikipedia.org/wiki/Biri_III_Uthman", access: open-url, verification: web-checked, notes: "Bornu's 1391-92 letter to sultan Barquq about Judham slave raids."}
+  - {id: src-wp-daniel-companions, title: Daniel and companions, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'Daniel and companions' (citing MacEvitt).", url: "https://en.wikipedia.org/wiki/Daniel_and_companions", access: open-url, verification: web-checked, notes: null}
+  - {id: src-wp-paper-mill, title: Paper mill, author: Wikipedia contributors, author_from: null, date: 2026, kind: secondary, type: reference, voice: scholar-international, citation: "Wikipedia, 'Paper mill' (citing Burns, Glick, Hill).", url: "https://en.wikipedia.org/wiki/Paper_mill", access: open-url, verification: web-checked, notes: null}

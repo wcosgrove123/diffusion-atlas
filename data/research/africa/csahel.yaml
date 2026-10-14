@@ -1,0 +1,2755 @@
+# Central Sahel (Lake Chad, Hausaland, Air) and West African forest (Ife, Benin), 1200-1450
+# Owner: csahel. Researcher notes on verification:
+#  - UNESCO GHA vol. IV chapters were read online in the French edition ("Histoire generale de l'Afrique IV"):
+#    Lange ch.10 (Chad), Adamu ch.11 (Hausa), Izard ch.9 (Niger bend), Ryder ch.14 (Volta to Cameroon).
+#    Page numbers below are from the French edition's running heads and are approximate.
+#  - Palmer's 1908 Kano Chronicle PDF could not be read by the tools; Chronicle claims are cited through
+#    Adamu (read) and marked citation-only on the Chronicle itself.
+
+places:
+  - id: pl-kanem
+    name: Kanem
+    alt_names: [Kanem (Sayfawa sultanate), "Kanem-Bornu (later name)"]
+    kind: polity
+    region: central-sahel
+    location: {lat: 14.0, lon: 15.6}
+    span: {start: 1075, end: 1387, approx: true}
+    parent: null
+    geometry_note: >
+      Core: Kanem, the plains north-east of Lake Chad (modern Chad), capital Njimi (site not securely located).
+      At its height under Dunama Dibbalemi (c.1210-1248) Kanem claimed authority over the Kawar oases and
+      the Fezzan to the north (Ibn Sa'id via Lange) and raided around the lake. From c.1380 the Bulala took
+      Kanem and the Sayfawa moved west to Bornu; Kanem stays under Bulala rule past 1450 (the Sayfawa
+      retake Njimi only in the early 16th c.). End the polity's Kanem phase c.1387 and continue as pl-bornu.
+    basemap_match: ["Kanem", "Kanem-Bornu", "Kanem Empire"]
+    polity_profile:
+      - year: 1240
+        base: AGR
+        flow: EXT
+        membership: [KIN, FAITH]
+        ruled_not_counted: captives taken in raids on lake and southern peoples and sold north; tributary Tubu, Kawar and Fezzan communities
+        standing: SOV
+        shape: IMPERIAL
+        rulers: ONE
+        right: [DESCENT, DIVINE]
+        flag: >
+          The mai claimed rule as a Muslim sovereign waging holy war, but his authority also rested on
+          sacred kingship: the mune cult object Dunama is said to have opened belonged to that older royal
+          religion, and later Kanem writers blamed its destruction for the dynasty's troubles.
+      - year: 1350
+        base: AGR
+        flow: EXT
+        membership: [KIN, FAITH]
+        ruled_not_counted: enslaved captives; Sao and other lake peoples under attack or tribute
+        standing: SOV
+        shape: IMPERIAL
+        rulers: ONE
+        right: [DESCENT, DIVINE]
+        flag: >
+          Al-Umari (Cairo, 1330s-40s) calls Kanem pious and Maliki but weak in resources and troops; the
+          Magumi princes' feuds (sons of Dunama, the yerima of the north) show the mai's ONE was contested
+          in practice.
+    detail: >
+      The Sayfawa (Sefuwa) dynasty took power in Kanem in the late 11th c. from the earlier Duguwa line,
+      with Hummay (Hume, c.1075-1086 in Lange's chronology) as founder. Lange argues Hummay came from a
+      deeply Islamized Berber milieu, possibly the Kawar oases; the girgam/diwan marks the new line as the
+      one "who professed Islam," but it also records Muslim rulers before Hummay (Hu and Selema), so the
+      dynastic change is not the first Islam at court. Base is a judgment call: Kanem mixed farming
+      Kanembu settlements with large herding populations (Tubu, later Arabs, the Bulala); AGR is chosen
+      for the sedentary core around Njimi and should be argued in class.
+    evidence: [src-lange-gha4-chad, src-kanem-diwan, src-ibn-said-jughrafiya, src-al-umari-masalik]
+    confidence: medium
+
+  - id: pl-bornu
+    name: Bornu (Sayfawa sultanate west of Lake Chad)
+    alt_names: [Borno, Barnu, Kanem-Bornu]
+    kind: polity
+    region: central-sahel
+    location: {lat: 12.6, lon: 12.8}
+    span: {start: 1380, end: 1893, approx: true}
+    parent: null
+    geometry_note: >
+      West and south-west of Lake Chad (north-east Nigeria, south-east Niger). Bornu had been a tributary
+      province of Kanem since at least the 13th c.; the Sayfawa court relocated there under Umar b. Idris
+      (c.1382-1387). No fixed capital for about a century (Kaka is named as a residence) until Ali Gaji
+      built Gazargamu (Birni Ngazargamu) c.1470s, outside this window.
+    basemap_match: ["Bornu", "Kanem-Bornu", "Bornu Empire"]
+    polity_profile:
+      - year: 1420
+        base: AGR
+        flow: EXT
+        membership: [KIN, FAITH]
+        ruled_not_counted: Sao towns and other non-Muslim communities raided or made tributary; enslaved people
+        standing: SOV
+        shape: IMPERIAL
+        rulers: ONE
+        right: [DESCENT, DIVINE]
+        flag: >
+          A court without a fixed capital, at war with the Bulala in the east and the Sao in the south, and
+          split by rival Sayfawa branches: the claim of one Muslim sovereign outran practice until the
+          later 15th c.
+    detail: >
+      Lange (UNESCO GHA IV) dates the abandonment of Njimi to Umar b. Idris (c.1382-1387) under Bulala
+      pressure; Bir (Uthman) b. Idris (c.1389-1421) pushed the Bulala back and wrote to the Mamluk sultan
+      (see ex-bornu-letter-1391). Kanuri identity is usually explained as forming here from the Kanembu
+      settlers (the Magumi royal lineage and its allies) and local peoples, including Sao.
+    evidence: [src-lange-gha4-chad, src-bornu-letter-1391, src-al-hajj-1983-diplomatic]
+    confidence: medium
+
+  - id: pl-njimi
+    name: Njimi (Djimi)
+    alt_names: [Djimi, Jimi]
+    kind: city
+    region: central-sahel
+    location: {lat: 13.9, lon: 15.9}
+    span: {start: 1075, end: 1387, approx: true}
+    parent: pl-kanem
+    geometry_note: >
+      Capital of Kanem for about three centuries (Lange). The site has never been securely located.
+      Magnavita, Dangbet and Bouimon (2019) tentatively proposed the site of Tie; Dewiere (2024) supports
+      this. The point here is a placeholder in Kanem, east of the lake; draw it with a "location
+      uncertain" style. The Bulala held it from the 1380s; Bornu retook it early in the 16th c.
+    basemap_match: []
+    detail: >
+      Arabic geographers name Njimi from the 12th c. (al-Idrisi). Later writers called it a city of tents,
+      which may explain why archaeologists have not found it: much of it may have been built of
+      impermanent materials.
+    evidence: [src-lange-gha4-chad, src-magnavita-2019-lake-chad, src-dewiere-2024-kanem-borno]
+    confidence: low
+
+  - id: pl-kano
+    name: Kano
+    alt_names: [Dala (early name), Kano birni]
+    kind: polity
+    region: central-sahel
+    location: {lat: 12.0, lon: 8.52}
+    span: {start: 999, end: 1807, approx: true}
+    parent: null
+    geometry_note: >
+      Walled city (birni) around Dala and Goron Dutse hills plus surrounding farmland and subordinate
+      towns. The traditional founding date of 999 (Bagauda) is Palmer's reckoning and Adamu calls the
+      early chronology arbitrary. Draw as a city-state point with a small surrounding area.
+    basemap_match: ["Kano", "Hausa states", "Hausa Kingdoms"]
+    polity_profile:
+      - year: 1380
+        base: AGR
+        flow: EXT
+        membership: [PLACE, KIN]
+        ruled_not_counted: captives and tribute slaves (the Kwararafa sent Yaji slaves); conquered towns such as Santolo
+        standing: SOV
+        shape: CENTRAL
+        rulers: ONE
+        right: [DESCENT, DIVINE]
+        flag: >
+          The Kano Chronicle presents Yaji as a Muslim king, yet his son Kanajeji (1390-1410) returned to the
+          Tchibiri rites: the court's religious claim swung within one generation.
+      - year: 1445
+        base: AGR
+        flow: EXT
+        membership: [PLACE, KIN]
+        ruled_not_counted: enslaved captives from southern raids, many sent on to Bornu
+        standing: BOUND
+        shape: CENTRAL
+        rulers: ONE
+        right: [DESCENT, DIVINE]
+        flag: >
+          Under Abdullahi Burja (1438-1452) Kano began paying tribute to Bornu (Kano Chronicle via Adamu),
+          while describing itself as sovereign.
+    detail: >
+      Main sources: the Kano Chronicle (an Arabic text compiled in the 1880s from earlier records and
+      tradition) and the Asl al-Wangariyin (1650-51). Kano is AP-named under "Hausa kingdoms." Its walls
+      were begun under Gijimasu and completed under Tsaraki (both 12th c. in the Chronicle's chronology).
+    evidence: [src-kano-chronicle, src-adamu-gha4-hausa]
+    confidence: medium
+
+  - id: pl-katsina
+    name: Katsina
+    alt_names: [Katsina birni]
+    kind: polity
+    region: central-sahel
+    location: {lat: 12.99, lon: 7.60}
+    span: {start: 1300, end: 1807, approx: true}
+    parent: null
+    geometry_note: >
+      City-state in northern Hausaland, a market town on routes north to Air and the Sahara. Its early
+      rulers (Durbawa) are associated with Durbi ta Kusheyi, about 30 km south-east of the city. Muhammad
+      Korau is said to have moved the seat to a new walled town; date debated (see detail).
+    basemap_match: ["Katsina", "Hausa states"]
+    polity_profile:
+      - year: 1440
+        base: AGR
+        flow: EXT
+        membership: [PLACE, KIN]
+        ruled_not_counted: not documented for this date
+        standing: SOV
+        shape: CENTRAL
+        rulers: ONE
+        right: [DESCENT, DIVINE]
+        flag: >
+          Chronology is uncertain: Palmer's king list puts Korau at 1445-1495, but Adamu notes that Abdullahi
+          Smith used an eclipse record to show Palmer's Katsina dates run more than a century off, and Korau
+          may have been a contemporary of Kano's Rumfa (1463-1499).
+    detail: >
+      Katsina tradition (Palmer 1927; summarized by Adamu) says Korau, remembered as a mallam, killed the
+      last Durbawa ruler Sanau at the Bawada tamarind tree and founded a new dynasty. Treat as tradition with
+      an unresolved date; this file keeps Katsina's Muslim court as a 1445+ possibility, flagged.
+    evidence: [src-adamu-gha4-hausa]
+    confidence: low
+
+  - id: pl-hausa-states
+    name: Hausa city-states (Hausaland)
+    alt_names: [Kasar Hausa, Hausa Bakwai, Hausa kingdoms]
+    kind: people
+    region: central-sahel
+    location: {lat: 12.3, lon: 7.8}
+    span: {start: 1000, end: 1807, approx: true}
+    parent: null
+    geometry_note: >
+      Soft area between the Niger (west) and the Bornu borderlands (east), the Air foothills (north) and the
+      Benue/Zazzau frontier (south): Daura, Kano, Katsina, Gobir, Rano, Zazzau (Zaria), Biram. The
+      "Hausa Bakwai" list comes from the Bayajidda/Daura legend, which Adamu reads as reflecting later
+      conditions. Adamu notes the name "Hausa" appears in documents only in the 16th-17th c.
+    basemap_match: ["Hausa states", "Hausa Kingdoms"]
+    detail: >
+      Adamu favors an origin of Hausa-speaking communities in Hausaland itself, with Air as a possible
+      earlier homeland; he discards the Baghdad-origin version of the Bayajidda story. Non-Muslim Hausa
+      speakers (later called Maguzawa, Azna/Arna in Niger) show that Hausa identity and Islam were never
+      the same thing.
+    evidence: [src-adamu-gha4-hausa]
+    confidence: medium
+
+  - id: pl-ife
+    name: Ile-Ife
+    alt_names: [Ife, Ife-Ooye]
+    kind: polity
+    region: west-african-forest
+    location: {lat: 7.49, lon: 4.55}
+    span: {start: 1000, end: 1900, approx: true}
+    parent: null
+    geometry_note: >
+      City and kingdom in the Yoruba forest (south-west Nigeria). Urban core with potsherd pavements and
+      shrine groves; Igbo Olokun glass-working site on the northern edge. Wider claimed influence over
+      Yoruba and Edo kingdoms is ritual and genealogical (Ife-origin claims), not drawn as territory.
+    basemap_match: ["Ife", "Yoruba states", "Oyo"]
+    polity_profile:
+      - year: 1300
+        base: AGR
+        flow: EXT
+        membership: [KIN, PLACE]
+        ruled_not_counted: not documented
+        standing: SOV
+        shape: IMPERIAL
+        rulers: ONE
+        right: [DIVINE, DESCENT]
+        flag: >
+          Ogundiran describes an "Ife Empire" with client states and colonies in this era; Ryder (UNESCO)
+          saw Yoruba states as small and treats Ife-descent claims as prestige claims. IMPERIAL is Ogundiran's
+          reading; the Ooni's wider reach may have been mainly ritual. Debate it.
+    detail: >
+      Ife is the place Yoruba tradition names as where the earth was created and where the first kings
+      (descendants of Oduduwa) were sent out from. Ryder dates Itayemoo charcoal to 960-1160 and potsherd
+      pavements from c.1100. The classical florescence (copper-alloy and terracotta heads, glass beads)
+      falls c.1200-1400. Ogundiran puts the "atrophy" of Ife's regional system from c.1400.
+    evidence: [src-ryder-gha4-volta-cameroon, src-ogundiran-yoruba-new-history, src-babalola-2018-igbo-olokun]
+    confidence: medium
+
+  - id: pl-benin
+    name: Benin (Edo kingdom)
+    alt_names: [Igodomigodo (Ogiso era), Ubini, Edo]
+    kind: polity
+    region: west-african-forest
+    location: {lat: 6.34, lon: 5.62}
+    span: {start: 1000, end: 1897, approx: true}
+    parent: null
+    geometry_note: >
+      Benin City and Edo-speaking hinterland (south-central Nigeria). Not the modern Republic of Benin.
+      Large-scale earthworks (iya) ring the city and countryside; the city walls are dated variously
+      (13th to mid-15th c.; see ex-benin-iya). Expansion beyond the Edo heartland begins with Ewuare,
+      c.1440 onward.
+    basemap_match: ["Benin", "Kingdom of Benin", "Edo"]
+    polity_profile:
+      - year: 1300
+        base: AGR
+        flow: EXT
+        membership: [KIN, PLACE]
+        ruled_not_counted: not documented
+        standing: SOV
+        shape: LAYERED
+        rulers: ONE
+        right: [DESCENT, DIVINE]
+        flag: >
+          The new Oba line claimed Ife descent, but the hereditary uzama chiefs kept great power (Ryder);
+          the Oba's ONE was checked by a FEW in practice.
+      - year: 1450
+        base: AGR
+        flow: EXT
+        membership: [KIN, PLACE]
+        ruled_not_counted: conquered communities beyond the Edo heartland; captives
+        standing: SOV
+        shape: IMPERIAL
+        rulers: ONE
+        right: [DESCENT, DIVINE]
+        flag: >
+          Ewuare (from c.1440) is credited with rebuilding the capital, reorganizing chiefs into palace,
+          town and uzama orders, and conquests; Ryder doubts the tradition that he took the throne by killing
+          his brother and suggests a reaction to foreign conquest.
+    detail: >
+      Edo tradition (Egharevba) names an Ogiso dynasty, a crisis under Ogiso Owodo, an interregnum (Evian,
+      Ogiamwen), and a request to Ife that brought Oranmiyan, whose son Eweka became the first Oba.
+      Egharevba dates Eweka c.1200; Ryder dates the Ife prince c.1300; Ryder (1965) proposed the dynasty
+      came from further north (Nupe-Igala); Ogundiran (2020) calls the Ife story a stock narrative serving
+      Ife's expansion.
+    evidence: [src-egharevba-short-history-benin, src-ryder-gha4-volta-cameroon, src-ryder-1965-ife-benin, src-ogundiran-yoruba-new-history]
+    confidence: medium
+
+  - id: pl-agadez
+    name: Agadez (Air sultanate)
+    alt_names: [Agades, Sultanate of Air, Tenere sultanate]
+    kind: polity
+    region: central-sahel
+    location: {lat: 16.97, lon: 7.99}
+    span: {start: 1405, end: null, approx: true}
+    parent: null
+    geometry_note: >
+      Sultanate of the Air massif (north-central Niger), seated at Agadez. Founding date is debated:
+      1405 (Adamu, citing Hunwick 1971); city founding 1413 (Hunwick, Marmol), 1438 (Cooley), 1413-1424
+      (Hamani), all reviewed by Rossi (2016); other summaries give 1430 or 1449. Earlier seats are placed in
+      the Air (Tadaliza, Tin Chaman) before the move to Agadez. Draw the polity from 1405 (approx) with the
+      seat at Agadez from c.1430 and a "date debated" flag.
+    basemap_match: ["Agadez", "Air", "Tuareg"]
+    polity_profile:
+      - year: 1430
+        base: PAS
+        flow: EXT
+        membership: [KIN, FAITH]
+        ruled_not_counted: enslaved and servile people (iklan); sedentary farming and trading communities of the Air valleys
+        standing: SOV
+        shape: LEAGUE
+        rulers: ONE
+        right: [CONSENT, DESCENT]
+        flag: >
+          A sultan chosen by Tuareg confederations to mediate among them: he had a title and a seat, but the
+          confederations kept their own leaders and arms, so LEAGUE (with ONE at the center) is a judgment
+          call worth debating.
+    detail: >
+      Agadez Chronicles (Arabic manuscripts copied in 1907 and published by Palmer 1928 and Urvoy 1934) and
+      oral traditions say the Air confederations chose an outsider as sultan; versions name Yunus as the
+      first. One modern tradition links the line to "Istanbul," which scholars read as a metaphor for
+      neutrality (and which is anachronistic: Constantinople was Byzantine until 1453). Rossi argues parts of
+      the Chronicles were edited in 1907 for political reasons. Al-Umari already knew a Muslim Berber
+      "sultan of Air" in the 1330s, before Agadez.
+    evidence: [src-adamu-gha4-hausa, src-rossi-2016-agadez-chronicles, src-agadez-chronicles]
+    confidence: low
+
+  - id: pl-tuareg
+    name: Tuareg (Kel Tamasheq)
+    alt_names: [Kel Tamasheq, Imuhagh, Imajeghen]
+    kind: people
+    region: central-sahel
+    location: {lat: 18.0, lon: 8.5}
+    span: {start: 1000, end: null, approx: true}
+    parent: null
+    geometry_note: >
+      Soft area for Tamasheq-speaking pastoral confederations: the Air massif, the Adrar des Ifoghas and
+      the Niger bend north of Timbuktu, and the Hoggar. In this window Tuareg groups pressed south into Air
+      (late 14th c., Adamu) and took Timbuktu c.1433-34 (see ev-tuareg-timbuktu). Timbuktu itself is
+      defined by wsahel (pl-timbuktu).
+    basemap_match: ["Tuareg", "Tuaregs"]
+    detail: >
+      Tamasheq is a Berber (Amazigh) language. Society is ranked: noble lineages, tributary herders (imghad),
+      clerical lineages (ineslemen), artisans (inadan) and enslaved people (iklan); Rasmussen and others
+      describe matrilineal inheritance of leadership (to a sister's son) and women's ownership of the tent.
+      Most of that description comes from 19th-20th c. ethnography; for 1200-1450 the evidence is thin
+      (al-Umari, Ibn Battuta, the Agadez Chronicles, the Tarikh al-Sudan), and it should not be projected
+      backward without saying so.
+    evidence: [src-rasmussen-tuareg, src-adamu-gha4-hausa, src-izard-gha4-niger-bend]
+    confidence: medium
+
+  # ---- places created by csahel (not in the registry) ----
+  - id: pl-sao
+    name: Sao communities (Lake Chad plains)
+    alt_names: [So, Sau]
+    kind: people
+    region: central-sahel
+    location: {lat: 12.0, lon: 14.8}
+    span: {start: 1000, end: 1600, approx: true}
+    parent: null
+    geometry_note: >
+      Walled towns and settlements south and west of Lake Chad (Logone-Chari plains, modern Cameroon, Chad
+      and Nigeria). "Sao" is the Kanuri-language name for the peoples who preceded Kanuri rule; later Kotoko
+      towns claim continuity.
+    basemap_match: ["Sao"]
+    detail: >
+      Lange: four Sayfawa kings died fighting the Sao in the mid-14th c.; Leo Africanus (early 16th c.) still
+      places Sao west of the lake and south of Bornu. Their own religion is not described by any written
+      source of the period; archaeology of the region (urn burials, figurines) is the best evidence.
+    evidence: [src-lange-gha4-chad]
+    confidence: low
+
+  - id: pl-bulala
+    name: Bulala (Kanem under Bulala rule)
+    alt_names: [Bilala]
+    kind: polity
+    region: central-sahel
+    location: {lat: 12.83, lon: 17.5}
+    span: {start: 1380, end: 1630, approx: true}
+    parent: null
+    geometry_note: >
+      Herding people from around Lake Fitri (central Chad) who took Kanem from the Sayfawa in the late 14th c.
+      Draw as a polity covering Kanem from c.1387 and its Fitri homeland.
+    basemap_match: ["Bulala"]
+    polity_profile:
+      - year: 1400
+        base: PAS
+        flow: EXT
+        membership: [KIN]
+        ruled_not_counted: Kanem's sedentary population; the Kuba (Lange)
+        standing: SOV
+        shape: IMPERIAL
+        rulers: ONE
+        right: [VICTORY, DESCENT]
+        flag: null
+    detail: >
+      Lange: probably pastoralists settled around Lake Fitri, dominating the Kuba; allied with Tubu and Arab
+      groups against the Sayfawa. Barth linked them to a son of Dunama Dibbalemi; Nachtigal doubted any
+      Sayfawa kinship. Whether they were Muslim in this period is disputed (see rp-bulala-court-1380-1450).
+    evidence: [src-lange-gha4-chad, src-al-maqrizi]
+    confidence: low
+
+  - id: pl-takedda
+    name: Takedda (Azelik)
+    alt_names: [Tegidda, Azelik wan Birni]
+    kind: city
+    region: central-sahel
+    location: {lat: 17.45, lon: 6.75}
+    span: {start: 1000, end: 1500, approx: true}
+    parent: pl-tuareg
+    geometry_note: >
+      Copper-producing caravan town west of the Air massif, usually identified with the ruins at Azelik.
+      Coordinates approximate.
+    basemap_match: []
+    detail: >
+      Ibn Battuta left from Takedda for the north in 1353 (Rossi notes the caravan's origin). Ryder (UNESCO
+      GHA IV) suggests Takedda copper may have reached Ife, Benin and Igbo-Ukwu; later lead-isotope work
+      points to Nigerian ores for Ife castings, so treat the link as debated.
+    evidence: [src-ibn-battuta-rihla, src-ryder-gha4-volta-cameroon, src-rossi-2016-agadez-chronicles]
+    confidence: low
+
+  - id: pl-kawar
+    name: Kawar oases (Dirku, Bilma)
+    alt_names: [Kawar, Kaouar]
+    kind: city
+    region: central-sahel
+    location: {lat: 18.99, lon: 12.88}
+    span: {start: 800, end: null, approx: true}
+    parent: null
+    geometry_note: >
+      Chain of salt and date oases on the Fezzan-Lake Chad route (north-east Niger); point at Dirku.
+    basemap_match: []
+    detail: >
+      Lange argues the Sayfawa founder Hummay probably came from a deeply Islamized Berber milieu, possibly
+      Kawar; Kanem tradition names Hummay's mother as a woman of the Kay (Koyam) of Dirku.
+    evidence: [src-lange-gha4-chad, src-kanem-diwan]
+    confidence: low
+
+religion_profiles:
+  # ---------------- KANEM ----------------
+  - id: rp-kanem-court-1086-1210
+    place: pl-kanem
+    span: {start: 1086, end: 1210, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: dominant, local_form: "Sayfawa court Islam; royal pilgrimage to Mecca (Hummay died in Egypt, Dunama I was killed there on pilgrimage)"}
+      - {family: local, tradition: indigenous, branch: other, share: significant, local_form: "Kanem sacred kingship centered on the mune, a sealed royal cult object, and the mai's ritual seclusion"}
+    relation: plural
+    basis: projected
+    summary: >
+      Kanem's Sayfawa kings were Muslims who went on pilgrimage, and later writers suggest they also kept
+      the mune, a sacred object at the heart of Kanem's royal religion. The two traditions seem to have
+      run side by side at court.
+    detail: >
+      The girgam/diwan presents the Sayfawa as the house that professed Islam, but also names Muslim rulers
+      before Hummay; some scholars suggest the earlier rulers were Ibadi and Hummay Sunni, which is why branch
+      is sunni-unspecified. Kanem tradition (the mahram of Umme Jilmi, in Palmer's translations) credits a
+      teacher, Muhammad b. Mani, with converting the king; this research did not see that text, so treat it as
+      unverified. The mune's existence before Dunama is inferred from later writers (Ibn Furtu, 16th c.)
+      who say Dunama destroyed it. Plural, not syncretic: the evidence shows two separate institutions,
+      not one blended rite.
+    evidence: [src-kanem-diwan, src-lange-gha4-chad, src-ibn-furtu-kanem-wars, src-bobboyi-1993-ulama]
+    confidence: medium
+    flag: null
+
+  - id: rp-kanem-court-1210-1250
+    place: pl-kanem
+    span: {start: 1210, end: 1250, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant, local_form: "Dunama Dibbalemi's reforming Islam: holy war, a Kanem madrasa in Cairo"}
+      - {family: local, tradition: indigenous, branch: other, share: minority, local_form: "Supporters of the mune royal cult"}
+    relation: contested
+    basis: projected
+    summary: >
+      Mai Dunama Dibbalemi pushed a stricter Islam and is said to have opened or destroyed the mune, the sacred object
+      of Kanem's royal religion. Later Kanem writers blamed that act for wars and troubles that followed.
+    detail: >
+      Lange (UNESCO GHA IV): Dunama (c.1210-1248) is the great Muslim reformer of Kanem; Ibn Sa'id, using
+      Ibn Fatima who visited Kanem, praises his holy war. Ibn Furtu, a Bornu imam writing in the 1570s,
+      blamed the destruction of the mune for later troubles including the long Tubu war. Nobody knows what
+      the mune was: later writers compare it to the Ark of the Covenant; Lange once proposed an Amun-cult
+      object; Insoll sees the focal point of a pre-Islamic cult. Contested because the act destroyed a
+      shrine object and was remembered as a rupture. Note the interpretive frame: the main narrators are
+      Muslim scholars judging the act's consequences, so the cult's own adherents are silent.
+      Maliki branch: al-Umari reports Kanem as Maliki in the 14th c.; projecting that to Dunama's day is
+      likely but not proven.
+    evidence: [src-lange-gha4-chad, src-ibn-furtu-kanem-wars, src-ibn-said-jughrafiya, src-insoll-archaeology-islam]
+    confidence: medium
+    flag: >
+      Dunama's dates differ by chronology: 1210-1248 (Lange) vs. c.1221-1259 (Barth, Palmer). Use approx.
+
+  - id: rp-kanem-court-1250-1387
+    place: pl-kanem
+    span: {start: 1250, end: 1387, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant, local_form: "Maliki law and learning; ties to Mamluk Cairo"}
+      - {family: local, tradition: indigenous, branch: other, share: significant, local_form: "Sacred-king seclusion: the mai unseen by subjects, speaking from behind a curtain"}
+    relation: syncretic
+    basis: inferred
+    summary: >
+      Al-Umari in Cairo called Kanem-Bornu's people Maliki Muslims (followers of one school of Islamic
+      law), and Ibn Battuta heard at Takedda that its king spoke to his people only from behind a curtain.
+      Neither writer visited, but together they suggest a Muslim ruler who was also a hidden, sacred king.
+    detail: >
+      Al-Umari (Cairo, 1330s-40s) reports that the people follow the rite of Malik and that justice prevails.
+      Ibn Battuta (1353), who heard about Bornu at Takedda but did not visit, reports that its king Idris did
+      not show himself to his people and spoke to them from behind a curtain. Both are outsiders; the second
+      is hearsay. Syncretic because the seclusion is part of how a Muslim sovereign held court, not a
+      separate cult. Basis inferred: the religious reading of the curtain seclusion is an inference from
+      court protocol, and the curtain report is Ibn Battuta's hearsay at Takedda, not in any cited url.
+    evidence: [src-al-umari-masalik, src-ibn-battuta-rihla, src-lange-gha4-chad]
+    confidence: medium
+    flag: null
+
+  - id: rp-njimi-urban-1200-1387
+    place: pl-njimi
+    span: {start: 1200, end: 1387, approx: true}
+    stratum: urban
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >
+      We know Njimi had Muslim scholars tied to the court, but no source describes the religion of ordinary
+      townspeople, and archaeologists have not even found the city.
+    detail: >
+      Evidence missing: no excavated townscape (site not located; Tie proposed), no local description of
+      households, markets or shrines. The only urban-adjacent evidence is court and scholarly (the Cairo
+      madrasa, jurists named by outsiders). A site report from Tie, if confirmed and dated, would fill this.
+    evidence: [src-lange-gha4-chad, src-magnavita-2019-lake-chad]
+    confidence: high
+    flag: null
+
+  - id: rp-kanem-rural-1086-1210
+    place: pl-kanem
+    span: {start: 1086, end: 1210, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >
+      No source from this time tells us what Kanem's farmers and herders believed.
+    detail: >
+      Lange: Islam had few deep roots in Kanem before the 13th c. That is an inference from court sources,
+      not direct evidence about villagers or herders. Missing: local archaeology of rural sites, any text
+      from or about non-elite Kanembu, Tubu or lake communities.
+    evidence: [src-lange-gha4-chad]
+    confidence: high
+    flag: null
+
+  - id: rp-kanem-rural-1210-1387
+    place: pl-kanem
+    span: {start: 1210, end: 1387, approx: true}
+    stratum: rural
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: unknown, local_form: null}
+      - {family: local, tradition: indigenous, branch: other, share: unknown, local_form: "Kanembu, Tubu and lake peoples' own cults (not named in surviving sources)"}
+    relation: contested
+    summary: >
+      An Arab geographer says Dunama forced neighboring peoples to accept Islam, and the Tubu fought him for
+      years. How ordinary people in Kanem actually worshipped is not described.
+    detail: >
+      Ibn Sa'id (via Lange) says Dunama compelled various peoples to accept Islam; Lange concludes that
+      orthodox Islam reached the popular strata under him. Ibn Furtu records a Tubu war of "seven years,
+      seven months and seven days" (a formula, not a count). Contested by Test 3 (forced conversion, war).
+      Shares are unknown: the sources speak of campaigns, not congregations.
+    evidence: [src-lange-gha4-chad, src-ibn-said-jughrafiya, src-ibn-furtu-kanem-wars]
+    confidence: low
+    flag: >
+      Claim vs. practice: the sources are victory claims by Muslim writers; they show policy, not what villagers did.
+
+  - id: rp-bulala-court-1380-1450
+    place: pl-bulala
+    span: {start: 1380, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: unknown, local_form: null}
+      - {family: local, tradition: indigenous, branch: other, share: unknown, local_form: "Lake Fitri herders' practices (not described)"}
+    relation: undocumented
+    summary: >
+      The Bulala who conquered Kanem may or may not have been Muslim; the sources disagree and none of them
+      is a Bulala voice.
+    detail: >
+      Lange notes that al-Maqrizi's account can be read to mean the Bulala were not Muslims, but neither the
+      diwan nor Ibn Furtu confirms it. Some traditions make the Bulala a cadet branch of the Sayfawa, which
+      would imply a Muslim court. Missing: any Bulala source or archaeology at Fitri for this period.
+    evidence: [src-lange-gha4-chad, src-al-maqrizi]
+    confidence: low
+    flag: null
+
+  # ---------------- BORNU ----------------
+  - id: rp-bornu-court-1387-1450
+    place: pl-bornu
+    span: {start: 1387, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant, local_form: "Muslim chancery writing in Arabic to the Mamluk sultan"}
+    relation: exclusive
+    basis: inferred
+    summary: >
+      In exile west of Lake Chad, the Sayfawa court presented itself to Egypt as a Muslim kingdom whose
+      Muslim subjects were being wrongly enslaved by Arab raiders.
+    detail: >
+      Based mainly on the letter of Bir (Abu Amr Uthman) b. Idris to Cairo, preserved by al-Qalqashandi.
+      Al-Maqrizi says Bornu's inhabitants were Muslims who fought Kanem. "Exclusive" records the court's
+      self-presentation; the sacred-king seclusion seen in the 1350s and attested again in 16th-c. sources
+      probably continued, which would make this syncretic in practice.
+    evidence: [src-bornu-letter-1391, src-lange-gha4-chad, src-al-maqrizi]
+    confidence: low
+    flag: >
+      Claim vs. practice: the evidence is a diplomatic letter meant to persuade a Muslim sultan; court
+      ritual outside Islam is likely but undocumented for these decades.
+
+  - id: rp-bornu-urban-1387-1450
+    place: pl-bornu
+    span: {start: 1387, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >
+      Bornu had no fixed capital for about a century after the move, and no source describes its townspeople.
+    detail: >
+      Missing: a dated urban site for 1387-1470 (Gazargamu is later); local chronicles for the period are
+      dynastic only.
+    evidence: [src-lange-gha4-chad]
+    confidence: high
+    flag: null
+
+  - id: rp-bornu-rural-1387-1450
+    place: pl-bornu
+    span: {start: 1387, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: significant, local_form: "Kanembu and early Kanuri settler communities"}
+      - {family: local, tradition: indigenous, branch: other, share: significant, local_form: "Sao and other pre-Kanuri communities' own practices (not described in writing)"}
+    relation: contested
+    summary: >
+      Muslim Kanembu settlers moved into Bornu while Sao towns fought them, and several kings died in those
+      wars. Over time many people of both backgrounds became the Kanuri.
+    detail: >
+      Lange: four Sayfawa kings died fighting the Sao in the mid-14th c.; Bornu wars against non-Muslim
+      neighbors were framed as holy war, and captives were sold. Kanuri identity is usually explained as
+      formed from Kanembu and Sao intermarriage (family as carrier), a slow process that runs past 1450.
+      Shares are estimates from the political story, not counts.
+    evidence: [src-lange-gha4-chad, src-al-maqrizi]
+    confidence: low
+    flag: null
+
+  - id: rp-sao-community-1200-1450
+    place: pl-sao
+    span: {start: 1200, end: 1450, approx: true}
+    stratum: community
+    community_name: Sao towns of the Lake Chad plains
+    traditions: []
+    relation: undocumented
+    summary: >
+      The Sao appear in Kanem and Bornu sources only as enemies, so their own religion goes unrecorded in
+      writing.
+    detail: >
+      Evidence missing: no Sao written source; the Kanuri-language chronicles name them as foes. Archaeology
+      of the Logone-Chari towns (urn burials, terracotta figurines, walled mounds) and Kotoko oral
+      traditions recorded later are the routes to their religion; this research did not reach dated site
+      reports for 1200-1450. Good teaching point: who gets to describe a people when only their enemies wrote.
+    evidence: [src-lange-gha4-chad]
+    confidence: high
+    flag: null
+
+  # ---------------- KANO / HAUSA ----------------
+  - id: rp-kano-court-1200-1349
+    place: pl-kano
+    span: {start: 1200, end: 1349, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: local, tradition: indigenous, branch: other, share: dominant, local_form: "Kano kingship tied to the cult of Tsumburbura at the Jakara stream and the Dala hill shrine, and to the Tchibiri sacred site"}
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: unknown, local_form: "Muslim traders and clerics, per Adamu"}
+    relation: plural
+    basis: projected
+    summary: >
+      According to the Kano Chronicle, Kano's early kings ruled alongside priests of the spirit Tsumburbura,
+      whose shrine stood at a sacred tree by the Jakara stream. The historian Adamu argues that Muslim
+      traders and clerics were probably in Kano by this time too.
+    detail: >
+      The Kano Chronicle (compiled 1880s) tells of Barbushe, priest of Tsumburbura on Dala hill, and of a
+      shrine at a sacred tree by the Jakara stream; the Bagauda kings fight and absorb the Dala priests'
+      authority. Adamu: Dala had six generations of chiefs whose authority was ritual. Adamu also argues
+      Muslims (traders and clerics from Bornu and the north) were probably in Kano before Yaji, and that
+      people with Muslim names appear among earlier Kano figures. Recoded from exclusive to plural with a
+      minority Islam entry (share unknown) to follow Adamu; basis projected because the only source for
+      the span is an 1880s compilation. Barbushe and Tsumburbura come from the Chronicle, which was not
+      read in this research.
+    evidence: [src-kano-chronicle, src-adamu-gha4-hausa]
+    confidence: low
+    flag: >
+      The Chronicle frames the past as Muslims against non-believers; Adamu calls that framing a later reinterpretation.
+
+  - id: rp-kano-court-1349-1390
+    place: pl-kano
+    span: {start: 1349, end: 1390, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: significant, local_form: "Yaji's court Islam with Wangara clerics as judge, imam and muezzin"}
+      - {family: local, tradition: indigenous, branch: other, share: significant, local_form: "Tsumburbura and Santolo cult centers and their office-holders"}
+    relation: contested
+    basis: projected
+    summary: >
+      The Kano Chronicle says Kano's king, Sarki Yaji, accepted Islam from Wangara clerics, built a mosque
+      under the sacred tree, and destroyed the shrine at Santolo. In the Chronicle, a leader of Kano's shrine
+      religion fought back by defiling the mosque.
+    detail: >
+      Chronicle as summarized by Adamu and by secondary summaries of Palmer's translation: about forty Wangarawa arrive from Mali
+      under Abd al-Rahman Zaite; Yaji appoints them as qadi, imam and muezzin; the mosque is built under the
+      sacred tree; the Sarkin Gazarzawa repeatedly defiles it; after a night of prayer he is struck blind
+      (the Chronicle's miracle story). Yaji then destroys the Santolo cult center, which Adamu calls the
+      last of the old ritual sites destroyed under Yaji. Contested by Test 3. Dating debate: the Asl
+      al-Wangariyin (1650-51) puts the Wangara mission under Rumfa (late 15th c.); al-Hajj sided with the
+      Asl; Adamu argues it merges two missions a century apart.
+    evidence: [src-kano-chronicle, src-adamu-gha4-hausa, src-asl-al-wangariyin]
+    confidence: medium
+    flag: null
+
+  - id: rp-kano-court-1390-1410
+    place: pl-kano
+    span: {start: 1390, end: 1410, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: local, tradition: indigenous, branch: other, share: dominant, local_form: "Tchibiri rites restored by Sarki Kanajeji under the Sarkin Tchibiri"}
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: minority, local_form: "Wangara clerics and Muslim office-holders"}
+    relation: contested
+    basis: projected
+    summary: >
+      The Kano Chronicle says that after a defeat, Yaji's son Kanajeji turned back to the Tchibiri rites that
+      his father had attacked. In this account Kano's court religion swung within one generation.
+    detail: >
+      Kano Chronicle (Palmer): after losing to Zazzau, Kanajeji consults the Sarkin Tchibiri and performs the
+      Tchibiri rites, then wins. The Chronicle calls him a non-Muslim despite his father's conversion. This
+      is the clearest local evidence that court Islam in Kano was a choice made and unmade for practical
+      reasons (victory, protection), not a one-way conversion.
+    evidence: [src-kano-chronicle, src-adamu-gha4-hausa]
+    confidence: low
+    flag: null
+
+  - id: rp-kano-court-1410-1450
+    place: pl-kano
+    span: {start: 1410, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: significant, local_form: "Bornu-trained mallams arriving under Dauda (1421-1438)"}
+      - {family: local, tradition: indigenous, branch: other, share: significant, local_form: "Royal Tchibiri and Dala rites; the sacred trees still stand until Rumfa"}
+    relation: plural
+    basis: projected
+    summary: >
+      A Bornu prince and Muslim scholars came to Kano's court, but the sacred trees were still standing.
+      Kano's kings used both Islam and the rites of their spirit shrines.
+    detail: >
+      Adamu (Kano Chronicle): under Dauda a Bornu prince arrives with many mallams; Bornu titles (galadima,
+      chiroma, kaigama) come into use. The felling of the sacred tree and the building of a minaret on its site
+      are attributed to Rumfa (1463-1499), outside this window: a forward pointer, and a sign that the old
+      sanctuaries stood until then.
+    evidence: [src-kano-chronicle, src-adamu-gha4-hausa]
+    confidence: medium
+    flag: null
+
+  - id: rp-kano-urban-1200-1349
+    place: pl-kano
+    span: {start: 1200, end: 1349, approx: true}
+    stratum: urban
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >
+      We do not know how Kano's townspeople worshipped before the mid-1300s; the only source is a much later
+      chronicle focused on kings and priests.
+    detail: >
+      Adamu argues Islam reached Hausaland before the 14th c. through Bornu and Saharan traders (Arabic
+      religious words in Hausa came via Kanuri), so Muslim traders may have lived in Kano; there is no direct
+      evidence. Missing: excavated, dated urban deposits from Kano for 1200-1350.
+    evidence: [src-adamu-gha4-hausa]
+    confidence: high
+    flag: null
+
+  - id: rp-kano-urban-1349-1450
+    place: pl-kano
+    span: {start: 1349, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: local, tradition: indigenous, branch: other, share: dominant, local_form: "Iskoki spirit cults of Kano's townspeople and quarters (later known as bori)"}
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: minority, local_form: "Wangara and Bornu Muslim quarter"}
+    relation: coexisting
+    basis: projected
+    summary: >
+      The Kano Chronicle presents the Wangara Muslims as a separate community in Kano with their own
+      mosque, judge and prayer leaders. Most townspeople probably kept honoring Kano's spirit shrines.
+    detail: >
+      Coexisting (Test 4): a separate community with its own officials (qadi, imam). Adamu notes the Wangara
+      adopted Hausa as their public language, a sign of integration. The name bori for the possession cult
+      is attested later; for this period the Chronicle names specific cults, not a system.
+    evidence: [src-kano-chronicle, src-adamu-gha4-hausa]
+    confidence: low
+    flag: null
+
+  - id: rp-kano-wangara-1349-1450
+    place: pl-kano
+    span: {start: 1349, end: 1450, approx: true}
+    stratum: community
+    community_name: Wangarawa (Mande Muslim merchant-clerics from Mali)
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant, local_form: "Wangara (Jula) clerical and trading lineages"}
+    relation: exclusive
+    basis: projected
+    summary: >
+      The Wangarawa were Muslim traders and scholars from the Mali world who settled in Kano and served its
+      court as judges and prayer leaders.
+    detail: >
+      Adamu identifies them as Mande-speaking (Jula/Soninke) merchant-clerics; they adopted Hausa in public
+      life and their clan names rarely survived. The Asl al-Wangariyin is their own later (1650-51) account.
+    evidence: [src-adamu-gha4-hausa, src-asl-al-wangariyin, src-kano-chronicle]
+    confidence: medium
+    flag: null
+
+  - id: rp-kano-rural-1349-1450
+    place: pl-kano
+    span: {start: 1349, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions:
+      - {family: local, tradition: indigenous, branch: other, share: dominant, local_form: "Iskoki spirit veneration at trees, hills and water; Santolo cult center"}
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: trace, local_form: null}
+    relation: contested
+    basis: projected
+    summary: >
+      The Kano Chronicle says Yaji's army destroyed the shrine at Santolo, a rural center of Kano's shrine
+      religion. Most country people seem to have kept honoring their own spirits.
+    detail: >
+      Adamu: rural people kept their own religion long after the courts adopted Islam, and opposed Islam only
+      when jurists demanded changes to social practice. The Santolo destruction is the one recorded clash.
+      Evidence quality is low: one late chronicle, written from the court's side.
+    evidence: [src-kano-chronicle, src-adamu-gha4-hausa]
+    confidence: low
+    flag: null
+
+  - id: rp-hausa-rural-1200-1349
+    place: pl-hausa-states
+    span: {start: 1200, end: 1349, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >
+      No source from this period describes Hausa farmers' religion; what we know of Hausa spirit religion
+      comes from much later observers.
+    detail: >
+      The names Maguzanci, bori and iskoki and detailed descriptions of the spirit "houses" come from
+      19th-20th c. ethnography (e.g. Greenberg 1946 on Maguzawa) and cannot be projected back unchanged.
+      Missing: rural archaeology of Hausaland for 1200-1350; oral traditions of Maguzawa lineages recorded
+      with attention to time depth.
+    evidence: [src-adamu-gha4-hausa, src-greenberg-1946-maguzawa]
+    confidence: high
+    flag: null
+
+  - id: rp-hausa-rural-1349-1450
+    place: pl-hausa-states
+    span: {start: 1349, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions:
+      - {family: local, tradition: indigenous, branch: other, share: dominant, local_form: "Iskoki (spirits) honored at sacred trees, hills and waters by lineage and town priests; the root of later Maguzanci and bori"}
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: trace, local_form: null}
+    relation: plural
+    basis: projected
+    summary: >
+      Later evidence suggests Hausa country people kept honoring spirits of trees, hills and water (later
+      called iskoki) even as some kings took up Islam. No source from this time describes village religion
+      directly.
+    detail: >
+      Adamu: rural Hausa kept their own religion, magic and healing for a long time; resistance came mainly
+      when jurists tried to change social customs. Plural rather than exclusive because later evidence shows
+      Muslim and spirit practices used side by side by the same people for different needs, but that is a
+      projection from later centuries; confidence low. Katsina's Bawada shrine (Adamu p.301) is an example of
+      the kind of sacred site involved.
+    evidence: [src-adamu-gha4-hausa, src-greenberg-1946-maguzawa]
+    confidence: low
+    flag: null
+
+  # ---------------- KATSINA ----------------
+  - id: rp-katsina-court-1300-1445
+    place: pl-katsina
+    span: {start: 1300, end: 1445, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: local, tradition: indigenous, branch: other, share: unknown, local_form: "Durbawa priest-rulers, keepers of knowledge of local spirits; Bawada sacred tamarind"}
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: unknown, local_form: null}
+    relation: undocumented
+    summary: >
+      Katsina tradition remembers early rulers called Durbawa who kept the spirit shrines, but no written
+      source of the time describes their court.
+    detail: >
+      Later Katsina tradition (Palmer 1927 "History of Katsina," summarized by Adamu) makes the Durbawa the
+      original keepers of local religious knowledge. Missing: dated sources before Korau; the Durbi ta
+      Kusheyi burial mounds are the archaeological lead.
+    evidence: [src-adamu-gha4-hausa]
+    confidence: medium
+    flag: null
+
+  - id: rp-katsina-court-1445-1500
+    place: pl-katsina
+    span: {start: 1445, end: 1500, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: significant, local_form: "Muhammad Korau, remembered as a mallam-king"}
+      - {family: local, tradition: indigenous, branch: other, share: significant, local_form: "Durbawa lineage keeps a role in choosing rulers; Bawada sacred tree"}
+    relation: plural
+    basis: projected
+    summary: >
+      Katsina remembers Muhammad Korau as its first Muslim king, but the old Durbawa priestly families kept a
+      voice in choosing rulers. His dates are disputed by up to half a century.
+    detail: >
+      Adamu: Korau is traditionally Katsina's first Muslim ruler, but the chronology is uncertain and he may
+      have been Rumfa's contemporary (late 15th c.), after Abdullahi Smith's correction of Palmer's dates.
+      If the later dating holds, this profile belongs just after the 1450 window edge; it stays here
+      flagged because the classroom question is the date itself.
+    evidence: [src-adamu-gha4-hausa]
+    confidence: low
+    flag: >
+      Date debated: 1445-1495 (Palmer/Katsina list) vs. a later reign (Smith's eclipse correction).
+
+  - id: rp-katsina-urban-1300-1450
+    place: pl-katsina
+    span: {start: 1300, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >
+      Katsina was a market town on Saharan routes, so Muslim traders likely passed through, but no source
+      of the time describes its residents' religion.
+    detail: >
+      Missing: any contemporary text; dated urban archaeology. Adamu treats Katsina and Daura as market
+      towns in the Bayajidda legend's division of labor, which reflects later conditions.
+    evidence: [src-adamu-gha4-hausa]
+    confidence: high
+    flag: null
+
+  # ---------------- AIR / TUAREG ----------------
+  - id: rp-agadez-court-1405-1450
+    place: pl-agadez
+    span: {start: 1405, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant, local_form: "Sultan as Muslim mediator chosen by Tuareg confederations"}
+    relation: exclusive
+    basis: projected
+    summary: >
+      Air's sultan was a Muslim ruler chosen by the Tuareg confederations to settle their disputes.
+    detail: >
+      Al-Umari (1330s) already describes a Muslim Berber sultan of Air. Rossi notes the Agadez Chronicles
+      contain legal material and mention Mamluk Egyptian contacts. Exclusive is low confidence: Tuareg
+      matrilineal succession customs shaped who could rule (traditions say early sultans' mothers or wives
+      had to be of a particular status), but that is kinship law, not a second religion.
+    evidence: [src-al-umari-masalik, src-rossi-2016-agadez-chronicles, src-agadez-chronicles]
+    confidence: low
+    flag: null
+
+  - id: rp-agadez-urban-1430-1450
+    place: pl-agadez
+    span: {start: 1430, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >
+      Agadez was young in these years, and no source describes its early townspeople.
+    detail: >
+      The Grand Mosque on its present site is attributed to 1515 (after the Songhay conquest) and the famous
+      minaret to the 19th c. Missing: dated archaeology of early Agadez.
+    evidence: [src-rossi-2016-agadez-chronicles]
+    confidence: high
+    flag: null
+
+  - id: rp-takedda-urban-1340-1360
+    place: pl-takedda
+    span: {start: 1340, end: 1360, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: dominant, local_form: "Saharan Berber merchant town"}
+    relation: exclusive
+    basis: inferred
+    summary: >
+      Ibn Battuta, who stayed in Takedda in 1353, describes a Muslim trading town that lived on copper and
+      caravans.
+    detail: >
+      Ibn Battuta is a Maliki jurist from Morocco and a short-term visitor; he records the town's merchants,
+      not its servile laborers or the herders around it. Exclusive applies to the people he met.
+    evidence: [src-ibn-battuta-rihla]
+    confidence: medium
+    flag: null
+
+  - id: rp-tuareg-rural-1200-1450
+    place: pl-tuareg
+    span: {start: 1200, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-maliki, share: unknown, local_form: null}
+      - {family: local, tradition: indigenous, branch: other, share: unknown, local_form: "Tamasheq matrilineal spirit and kinship practices associated with women (attested in later ethnography)"}
+    relation: undocumented
+    summary: >
+      No source from this period describes how Tuareg herding camps practiced religion. Later observers
+      found Islam combined with older customs of tracing family and inheritance through mothers.
+    detail: >
+      Rasmussen and other ethnographers (20th c.) describe a pre-Islamic layer tied to matriliny and to women,
+      with Muslim patrilineal values layered on top. The Tuareg pages of general references claim
+      Maliki Islam spread among them in the 16th c. under al-Maghili; that is too neat. Missing: any
+      1200-1450 description of camp life; dated Tifinagh inscriptions with religious content.
+    evidence: [src-rasmussen-tuareg, src-adamu-gha4-hausa]
+    confidence: medium
+    flag: null
+
+  # ---------------- IFE ----------------
+  - id: rp-ife-court-1200-1350
+    place: pl-ife
+    span: {start: 1200, end: 1350, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: local, tradition: indigenous, branch: other, share: dominant, local_form: "Yoruba orisa worship centered on the Ooni's sacred kingship (Oduduwa's stool); Obalufon, patron of casting; ori and ase honored in the head"}
+    relation: exclusive
+    basis: projected
+    summary: >
+      Ife's Ooni (king) was a sacred ruler at the center of the worship of the orisa, the Yoruba deities.
+      His court commissioned copper-alloy and clay heads that honored rulers and the power held in the
+      head.
+    detail: >
+      Ryder (UNESCO GHA IV): most Ife heads probably depict the oni and many fragments come from shrines,
+      suggesting ritual use; Ryder also suggests they were made after an oni's death for his tomb. Blier
+      argues much of the corpus was made in one generation c.1250-1350 under Obalufon II; Kart's review
+      notes the debate over a single-generation dating. Islam is absent: not resistance but a different
+      religious world with its own centers and its own spread (see df-ife-kingship-to-benin). Ifa
+      divination is left out of local_form because its antiquity at Ife rests on tradition; this research
+      found no dated evidence for Ifa in the window (flagged under df and contested list).
+    evidence: [src-ryder-gha4-volta-cameroon, src-blier-art-and-risk, src-ife-heads, src-abimbola-ifa]
+    confidence: medium
+    flag: null
+
+  - id: rp-ife-court-1350-1450
+    place: pl-ife
+    span: {start: 1350, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: local, tradition: indigenous, branch: other, share: dominant, local_form: "Ooni sacred kingship and orisa cults; Ife as ritual center for kings who claim Oduduwa descent"}
+    relation: exclusive
+    basis: projected
+    summary: >
+      Ife's political power weakened after about 1400, but it stayed the holy city where Yoruba and Edo kings
+      traced their right to rule.
+    detail: >
+      Ogundiran places the "atrophy" of the Ife system from c.1400; Ryder suggests a later catastrophe (16th
+      c., possibly foreign conquest). What changes between spans is Ife's political reach, not its religion.
+    evidence: [src-ogundiran-yoruba-new-history, src-ryder-gha4-volta-cameroon]
+    confidence: medium
+    flag: null
+
+  - id: rp-ife-urban-1200-1450
+    place: pl-ife
+    span: {start: 1200, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: local, tradition: indigenous, branch: other, share: dominant, local_form: "Orisa shrines and groves of Ife's quarters (e.g. the Olokun grove, site of glass-working); craft lineages under patron orisa"}
+    relation: exclusive
+    basis: projected
+    summary: >
+      Ife's quarters were full of orisa shrines and sacred groves; glass beads were even made at the grove
+      of Olokun, the orisa of the sea and wealth.
+    detail: >
+      Babalola et al. (2018): Igbo Olokun yielded more than 12,000 glass beads and glass-working debris,
+      radiocarbon-dated 1295-1423 cal AD at the base; crucible fragments in shrine contexts suggest ritual
+      significance. Potsherd pavements mark the urban fabric from c.1100 (Ryder).
+    evidence: [src-babalola-2018-igbo-olokun, src-ryder-gha4-volta-cameroon]
+    confidence: medium
+    flag: null
+
+  - id: rp-ife-rural-1200-1450
+    place: pl-ife
+    span: {start: 1200, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >
+      Ife's art and city are well studied, but almost no evidence speaks to how farmers outside the city
+      worshipped in these centuries.
+    detail: >
+      Missing: excavated, dated rural Yoruba settlements for 1200-1450 with shrine evidence. Ogundiran's
+      regional archaeology is the lead to check (needs library). Do not assume rural practice simply copied
+      the capital.
+    evidence: [src-ogundiran-yoruba-new-history]
+    confidence: high
+    flag: null
+
+  # ---------------- BENIN ----------------
+  - id: rp-benin-court-1200-1300
+    place: pl-benin
+    span: {start: 1200, end: 1300, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: local, tradition: indigenous, branch: other, share: dominant, local_form: "Edo kingship religion in transition from the Ogiso to the Oba line: royal ancestor altars, the creator Osanobua and his son Olokun, chiefs with earth-priest roles (Evian was an ogifa)"}
+    relation: exclusive
+    basis: projected
+    summary: >
+      Edo tradition says Benin's people overthrew the last Ogiso king and asked Ife for a prince, whose son
+      Eweka became the first Oba, crowned with regalia from Ife.
+    detail: >
+      Egharevba (Edo court historian, 1934 Edo, English editions to 1968) is the main written form of this
+      tradition. The crisis is a political-religious one inside one tradition: authority shifts from Ogiso to
+      an earth-priest (Evian) to an Ife-linked line. Ogundiran (2020) reads the Ife-request story as a stock
+      narrative used by Ife's leaders; Ryder (1965) proposed a northern origin for the dynasty.
+    evidence: [src-egharevba-short-history-benin, src-ryder-1965-ife-benin, src-ogundiran-yoruba-new-history]
+    confidence: medium
+    flag: null
+
+  - id: rp-benin-court-1300-1450
+    place: pl-benin
+    span: {start: 1300, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: local, tradition: indigenous, branch: other, share: dominant, local_form: "Divine kingship of the Oba with Ife-derived regalia; royal ancestor altars; Olokun as the Oba's counterpart in the waters"}
+    relation: exclusive
+    basis: projected
+    summary: >
+      Benin's Obas ruled as sacred kings and honored their ancestors at palace altars. Later evidence links
+      their power to Ife and to Olokun, god of the waters and wealth, but how this worked before 1450 is
+      inferred.
+    detail: >
+      Edo cosmology (as recorded by Bradbury and later scholars) makes Olokun the senior son of the creator
+      Osanobua, ruler of the waters and source of wealth and children, paired with the Oba on land. That
+      pairing is documented in 20th-c. ethnography; its form in 1300-1450 is inferred.
+    evidence: [src-egharevba-short-history-benin, src-ryder-gha4-volta-cameroon]
+    confidence: low
+    flag: null
+
+  - id: rp-benin-urban-1300-1450
+    place: pl-benin
+    span: {start: 1300, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: local, tradition: indigenous, branch: other, share: dominant, local_form: "Edo ward and guild cults in Benin City, including the brass-casters' guild (Igun Eronmwon) and its venerated founder Iguegha"}
+    relation: exclusive
+    basis: projected
+    summary: >
+      Edo tradition says Benin City's wards and craft guilds each kept their own shrines, and the
+      brass-casters still honor a founder remembered as coming from Ife. How far back this goes depends on the
+      tradition's dates, which historians debate.
+    detail: >
+      Guild organization and the Iguegha shrine are documented in tradition (Egharevba) and 20th-c. study;
+      their existence in 1300-1450 depends on accepting Egharevba's chronology (see df-ife-casting-to-benin).
+    evidence: [src-egharevba-short-history-benin, src-bortolot-met-benin]
+    confidence: low
+    flag: null
+
+  - id: rp-benin-rural-1200-1450
+    place: pl-benin
+    span: {start: 1200, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >
+      The vast earthworks around Benin show that many rural communities lived there, but no evidence of the
+      time tells us how they worshipped.
+    detail: >
+      The rural iya earthworks (thousands of kilometers, Darling) are evidence of village organization, not of
+      belief. Household Olokun shrines are widespread in the 20th c. (Bradbury); projecting them back is a
+      guess. Missing: dated rural shrine archaeology.
+    evidence: [src-ogundiran-2005-four-millennia]
+    confidence: high
+    flag: null
+
+diffusions:
+  # ---------- RELIGION (14) ----------
+  - id: df-islam-kawar-to-kanem-court
+    lens: religion
+    what: Islam as the religion of Kanem's ruling dynasty (the Sayfawa)
+    from: [pl-kawar]
+    to: pl-kanem
+    span: {start: 1075, end: 1210, approx: true}
+    mechanism: hierarchical
+    carriers: [ruler, family, merchant]
+    outcome: elite-only
+    summary: >
+      Kanem's Sayfawa kings, whose founder probably came from the Muslim Berber oases of the Sahara, made Islam
+      the religion of the court. For over a century it stayed mostly a royal and scholarly religion.
+    detail: >
+      Lange: Hummay probably came from a deeply Islamized Berber milieu, possibly Kawar; tradition names his
+      mother as a Kay woman of Dirku (family as carrier). Islam was already known at court before Hummay
+      (the diwan's Hu and Selema). Lange: Islam had few deep roots in Kanem before the 13th c. Kanem
+      tradition (the mahram of Umme Jilmi) also credits a scholar, Muhammad b. Mani: unverified here.
+      Holl (2000) reads the diwan as a political charter shaped in the 16th c., which makes its dynastic
+      Islam story partly a legitimacy claim.
+    evidence: [src-lange-gha4-chad, src-kanem-diwan, src-holl-diwan-revisited]
+    confidence: medium
+    ap_topics: ["1.2", "1.5", "2.4"]
+
+  - id: df-hajj-to-kanem
+    lens: religion
+    what: Pilgrimage practice and Hijazi/Egyptian Islamic norms brought home by royal pilgrims
+    from: [pl-ext-hijaz, pl-cairo]
+    to: pl-kanem
+    span: {start: 1086, end: 1250, approx: true}
+    mechanism: hierarchical
+    carriers: [pilgrim, ruler]
+    outcome: elite-only
+    summary: >
+      Kanem's king lists say its kings made the long pilgrimage to Mecca through Egypt, and at least one died on
+      the way. Pilgrimage tied the court to the wider Muslim world long before Mansa Musa's famous hajj.
+    detail: >
+      Diwan tradition: Hummay died in Egypt (possibly on pilgrimage); Dunama I was killed in Egypt on
+      pilgrimage; al-Maqrizi records a Fezzan tomb of a mai who died on pilgrimage. Good comparison for AP
+      1.5/2.4 with Mali (owned by wsahel).
+    evidence: [src-kanem-diwan, src-lange-gha4-chad, src-al-maqrizi]
+    confidence: medium
+    ap_topics: ["1.2", "1.5", "2.4"]
+
+  - id: df-dunama-reform-kanem
+    lens: religion
+    what: Reforming Sunni (Maliki) Islam pressed on Kanem's people, and the opening of the mune
+    from: [pl-njimi]
+    to: pl-kanem
+    span: {start: 1210, end: 1250, approx: true}
+    mechanism: imposed
+    carriers: [ruler, military, scholar]
+    outcome: adoption
+    summary: >
+      Mai Dunama Dibbalemi pushed Islam beyond the court and is said to have opened the mune, the sacred
+      object of Kanem's royal religion. Islam reached ordinary people in his reign, though Kanem's own
+      later writers remembered the act as the start of rebellion and war.
+    detail: >
+      Lange: under Dunama orthodox Islam reached popular strata; Ibn Furtu blamed the mune's destruction for
+      later troubles, including the Tubu war. Outcome "adoption" follows the cited source: Lange says
+      orthodox Islam reached the popular strata under Dunama. It was earlier coded "resistance" because the
+      act is blamed for the succession wars among his sons, but Ibn Furtu's 16th-c. blame of the mune's
+      destruction is remembered opposition, not attested refusal; what was fought over was the dynasty's
+      authority, not Islam itself. A good outcome-coding debate. Mechanism imposed (Test 1): the reform was
+      pressed by the ruler with military force and included destroying the mune, a rival sacred object;
+      outcome is still adoption because Islam took hold among the people.
+    evidence: [src-lange-gha4-chad, src-ibn-furtu-kanem-wars, src-insoll-archaeology-islam]
+    confidence: medium
+    ap_topics: ["1.2", "1.5"]
+
+  - id: df-kanem-jihad-sao-lake
+    lens: religion
+    what: Holy-war campaigns against lake and southern peoples, with conversion and enslavement
+    from: [pl-kanem]
+    to: pl-sao
+    span: {start: 1210, end: 1450, approx: true}
+    mechanism: imposed
+    carriers: [military, ruler]
+    outcome: resistance
+    summary: >
+      Kanem and later Bornu attacked non-Muslim neighbors around Lake Chad, calling it holy war and selling
+      captives north. The Sao fought back hard; four Sayfawa kings died in those wars.
+    detail: >
+      Ibn Sa'id (via Lange): Dunama kept an arsenal on the lake and launched boat raids on non-Muslim lake
+      peoples. Lange: slaves, taken in raids on southern non-Muslims, were Kanem's main export. Holy-war
+      language justified enslavement, since Muslim law barred enslaving free Muslims (compare the 1391
+      letter, where Bornu protests exactly that). Only enemies' sources survive. Mechanism imposed (Test
+      1): conversion pressed by war, with enslavement of those who did not convert.
+    evidence: [src-lange-gha4-chad, src-ibn-said-jughrafiya]
+    confidence: medium
+    ap_topics: ["1.5", "2.4"]
+
+  - id: df-maliki-learning-cairo-kanem
+    lens: religion
+    what: Maliki Sunni learning through Kanem's own madrasa in Cairo
+    from: [pl-cairo]
+    to: pl-kanem
+    span: {start: 1242, end: 1400, approx: true}
+    mechanism: hierarchical
+    carriers: [scholar, pilgrim, ruler]
+    outcome: elite-only
+    summary: >
+      Kanem paid for a school in Cairo where its students and pilgrims could stay and study. Al-Umari,
+      writing in Cairo, describes Kanem as following Maliki law, one of the four Sunni schools of Islamic
+      law.
+    detail: >
+      Lange: al-Umari reports a madrasa in Cairo for people of Kanem, probably founded c.1242-1252 under
+      Dunama; al-Umari also calls Kanem Maliki. Later Egyptian writers (al-Maqrizi) give it the name of
+      Ibn Rashiq; not checked in this research. Mahrams (charters granting privileges to scholar families,
+      studied by Bobboyi) show how the court rewarded learned lineages, mostly from later centuries.
+    evidence: [src-lange-gha4-chad, src-al-umari-masalik, src-bobboyi-1993-ulama]
+    confidence: medium
+    ap_topics: ["1.2", "1.5", "2.5"]
+
+  - id: df-islam-kanem-to-bornu
+    lens: religion
+    what: Islam carried west across Lake Chad with the Sayfawa court and Kanembu settlers
+    from: [pl-kanem]
+    to: pl-bornu
+    span: {start: 1300, end: 1450, approx: true}
+    mechanism: relocation
+    carriers: [ruler, migrant, military, family]
+    outcome: adoption
+    summary: >
+      When the Bulala pushed the Sayfawa out of Kanem, the court and its followers moved west into Bornu and
+      brought their Islam with them. Out of settlers and local people, the Muslim Kanuri people slowly took shape.
+    detail: >
+      Lange: Bornu was a loyal province before the move; Umar b. Idris left Njimi c.1382-87. Al-Maqrizi
+      calls Bornu's people Muslims. Kanuri identity formed through Kanembu-Sao intermarriage (family) over
+      generations. Outcome adoption applies to the Kanuri; Sao communities resisted (see df-kanem-jihad-sao-lake).
+    evidence: [src-lange-gha4-chad, src-al-maqrizi]
+    confidence: medium
+    ap_topics: ["1.2", "1.5"]
+
+  - id: df-wangara-islam-kano
+    lens: religion
+    what: Islam brought to Kano's court by Wangara (Mande) clerics and merchants
+    from: [pl-mali]
+    to: pl-kano
+    span: {start: 1349, end: 1385, approx: true}
+    mechanism: relocation
+    carriers: [merchant, scholar, religious-specialist]
+    outcome: elite-only
+    summary: >
+      The Kano Chronicle says about forty Wangara Muslims from the Mali world came to Kano, converted Sarki Yaji,
+      and became his judge and prayer leaders. Their Islam took hold at court but was soon challenged.
+    detail: >
+      Kano Chronicle (compiled 1880s; Palmer 1908) and Adamu. The Asl al-Wangariyin (1650-51) dates the
+      Wangara mission to Rumfa (1463-99); al-Hajj accepted that; Adamu argues the Asl merges two missions.
+      Hunwick (1994) and Last (1980) debate when and how the Chronicle was composed. The Wangara built the
+      mosque under the sacred tree (architecture); they later spoke Hausa in public (Adamu), an example of
+      carriers adopting the host language.
+    evidence: [src-kano-chronicle, src-adamu-gha4-hausa, src-asl-al-wangariyin, src-hunwick-1994-whodunit, src-last-1980-metaphors]
+    confidence: medium
+    ap_topics: ["1.2", "1.5", "2.4", "2.5"]
+
+  - id: df-bornu-mallams-kano
+    lens: religion
+    what: Bornu-trained Muslim scholars (mallams) at Kano's court
+    from: [pl-bornu]
+    to: pl-kano
+    span: {start: 1421, end: 1450, approx: true}
+    mechanism: hierarchical
+    carriers: [ruler, scholar, migrant]
+    outcome: elite-only
+    summary: >
+      Under Sarki Dauda, a Bornu prince arrived in Kano with many Muslim scholars. Islam in Hausaland was shaped
+      by Bornu as much as by Mali.
+    detail: >
+      Adamu: Islam was practiced in Kanem-Bornu from the 11th c., Hausa contact with Bornu predates the 14th c.,
+      and Arabic religious vocabulary in Hausa came through Kanuri, so Islam reached Kano from the east too.
+      The Dauda episode is the Chronicle's dated instance.
+    evidence: [src-adamu-gha4-hausa, src-kano-chronicle]
+    confidence: medium
+    ap_topics: ["1.2", "1.5"]
+
+  - id: df-saharan-islam-gobir
+    lens: religion
+    what: Islam reaching northern Hausaland (Gobir) through Saharan trade routes from Air
+    from: [pl-takedda]
+    to: pl-hausa-states
+    span: {start: 1200, end: 1400, approx: true}
+    mechanism: contagious
+    carriers: [merchant]
+    outcome: elite-only
+    summary: >
+      Gobir sat on a Saharan caravan road, so Muslim traders may have brought Islam there before it reached
+      Kano's court. This is a likely route, not a documented event.
+    detail: >
+      Adamu (pp.317-318) proposes that North African merchants on the trans-Saharan route reached Gobir well
+      before the 14th c. Ibn Battuta names Gobir (Kubar) among Takedda's copper markets (citation-only). Low
+      confidence: inference from trade geography.
+    evidence: [src-adamu-gha4-hausa, src-ibn-battuta-rihla]
+    confidence: low
+    ap_topics: ["2.4", "2.5"]
+
+  - id: df-korau-islam-katsina
+    lens: religion
+    what: Islam at Katsina's court under Muhammad Korau
+    from: [pl-kano]
+    to: pl-katsina
+    span: {start: 1445, end: 1495, approx: true}
+    mechanism: hierarchical
+    carriers: [ruler, scholar]
+    outcome: elite-only
+    summary: >
+      Katsina remembers Muhammad Korau, a Muslim scholar (mallam) who seized the throne, as its first
+      Muslim king. When this happened is disputed.
+    detail: >
+      The "from" is a placeholder for the wider Hausa-Bornu-Wangara Muslim network: tradition does not say
+      where Korau learned his Islam, and Katsina later called its dynasty Wangarawa. Adamu notes the dating
+      problem (Smith vs. Palmer). Al-Maghili's visit c.1490s is outside the window.
+    evidence: [src-adamu-gha4-hausa]
+    confidence: low
+    ap_topics: ["1.2", "1.5"]
+
+  - id: df-islam-tuareg
+    lens: religion
+    what: Maliki Islam among Tamasheq-speaking pastoral confederations
+    from: [pl-takedda, pl-sijilmasa]
+    to: pl-tuareg
+    span: {start: 1200, end: 1450, approx: true}
+    mechanism: contagious
+    carriers: [merchant, religious-specialist, family]
+    outcome: syncretism
+    summary: >
+      Islam probably spread among Tuareg herders through trade towns and families of Muslim teachers. Studies of
+      later Tuareg life show Islam combined with customs that trace family through mothers, but no source from
+      1200 to 1450 describes this directly.
+    detail: >
+      Origins listed stand for Saharan Muslim trade towns generally (Takedda, Maghribi hubs); the route is
+      inferred. Al-Umari knew a Muslim sultan of Air in the 1330s; Ibn Battuta found Muslim merchants at
+      Takedda in 1353. Rasmussen's ethnography supports the syncretism outcome but describes the 20th c.
+      Ibn Battuta's shocked report of matrilineal inheritance among the Massufa at Walata (a related Saharan
+      Berber group, not identical to the Tuareg) is the nearest in-window evidence; note he judges it by
+      Moroccan Maliki norms.
+    evidence: [src-rasmussen-tuareg, src-ibn-battuta-rihla, src-al-umari-masalik]
+    confidence: low
+    ap_topics: ["1.2", "2.4", "2.5"]
+
+  - id: df-islam-air-sultanate
+    lens: religion
+    what: Islam as the legitimating religion of the new Air sultanate
+    from: [pl-takedda, pl-cairo]
+    to: pl-agadez
+    span: {start: 1405, end: 1450, approx: true}
+    mechanism: hierarchical
+    carriers: [ruler, scholar, merchant]
+    outcome: elite-only
+    summary: >
+      When Tuareg groups created a sultan of Air, they chose a Muslim office, probably linked to Saharan trade
+      towns and to Mamluk Egypt. Islam may have given the sultan an authority that stood above the rival groups.
+    detail: >
+      Al-Umari (1330s) already describes a Muslim Berber sultan of Air, so the office was Islamic from the
+      start. Rossi notes Mamluk Egyptian contacts and legal material in the Agadez Chronicles. The "from"
+      places are the likely channels (Saharan Muslim towns such as Takedda; Cairo), an inference.
+      Al-Maghili's visit to Agadez (c.1490s) is a later strengthening, outside the window.
+    evidence: [src-al-umari-masalik, src-rossi-2016-agadez-chronicles, src-agadez-chronicles]
+    confidence: low
+    ap_topics: ["1.2", "1.5", "2.4"]
+
+  - id: df-ife-kingship-to-benin
+    lens: religion
+    what: Ife-derived sacred kingship (Oduduwa descent, royal regalia) adopted by the Edo monarchy
+    from: [pl-ife]
+    to: pl-benin
+    span: {start: 1200, end: 1300, approx: true}
+    mechanism: hierarchical
+    carriers: [ruler, family]
+    outcome: syncretism
+    summary: >
+      Edo tradition says Benin asked Ife for a prince, and his half-Edo son Eweka became the first Oba with regalia
+      from Ife. Benin blended Ife's sacred kingship with its own chiefs and gods.
+    detail: >
+      Egharevba: Oranmiyan married an Edo woman, Erinmwinde; their son Eweka was crowned c.1200 (Egharevba)
+      or c.1300 (Ryder). The uzama chiefs kept power; Ryder notes their titles resemble Yoruba ones but
+      borrowing could run either way. Ryder (1965) proposed a northern (Nupe-Igala) origin instead; Ogundiran
+      reads the story as Ife propaganda. This is diffusion within African traditions, not a "resistance to
+      Islam" story: Ife was a religious center that others borrowed from.
+    evidence: [src-egharevba-short-history-benin, src-ryder-gha4-volta-cameroon, src-ryder-1965-ife-benin, src-ogundiran-yoruba-new-history]
+    confidence: medium
+    ap_topics: ["1.5", "1.7"]
+
+  - id: df-olokun-ife-benin
+    lens: religion
+    what: Olokun, deity of the sea, wealth and fertility, shared by Yoruba and Edo
+    from: [pl-ife]
+    to: pl-benin
+    span: {start: 1200, end: 1450, approx: true}
+    mechanism: contagious
+    carriers: [religious-specialist, family]
+    outcome: syncretism
+    summary: >
+      Both Ife and Benin honor Olokun, a deity of the waters and wealth, but in different forms. Scholars do not
+      agree on which way, or when, the worship traveled.
+    detail: >
+      In Ife, Olokun has a grove (Igbo Olokun) where glass was worked in the 11th-15th c.; in Edo cosmology
+      Olokun is the senior son of the creator Osanobua. A suggestion attributed to Ben-Amos holds the name may
+      be Yoruba in origin. Direction and dating are not established: keep low confidence and use as a debate,
+      not a fact.
+    evidence: [src-babalola-2018-igbo-olokun, src-egharevba-short-history-benin]
+    confidence: low
+    ap_topics: ["1.5"]
+
+  # ---------- OTHER LENSES (9) ----------
+  - id: df-ife-casting-to-benin
+    lens: technology
+    what: Lost-wax copper-alloy casting and naturalistic royal heads
+    from: [pl-ife]
+    to: pl-benin
+    span: {start: 1280, end: 1450, approx: true}
+    mechanism: relocation
+    carriers: [artisan, ruler]
+    outcome: adoption
+    summary: >
+      Benin's court tradition says Oba Oguola asked Ife for a master caster, Iguegha, who taught Benin to cast
+      brass. Many scholars question that story.
+    detail: >
+      Tradition (Egharevba): Oguola (c.1280-1295 in his chronology) requests a caster; the Met essay gives
+      c.1400 and notes the earliest Benin heads echo Ife naturalism. Doubts: Ryder (UNESCO) says pre-16th-c.
+      Benin brass was mostly forged and casting flourished with 16th-c. European brass; Denis Williams found
+      no Ife tradition or archaeology linking the two; Usuanlele and Falola argue brass work existed in the
+      Ogiso era. Tradition vs. scholarship is the lesson.
+    evidence: [src-egharevba-short-history-benin, src-bortolot-met-benin, src-ryder-gha4-volta-cameroon, src-williams-icon-image, src-usuanlele-falola-1998-egharevba]
+    confidence: low
+    ap_topics: ["1.5", "2.5"]
+
+  - id: df-ife-glass-beads
+    lens: technology
+    what: Ife-made high-lime, high-alumina glass beads traded across West Africa
+    from: [pl-ife]
+    to: pl-gao
+    span: {start: 1000, end: 1450, approx: true}
+    mechanism: contagious
+    carriers: [merchant, artisan]
+    outcome: adoption
+    summary: >
+      Ife's workshops made their own glass from local sand, and beads of Ife-type glass turn up at sites as far
+      away as Gao on the Niger. West Africans were glassmakers, not only buyers of foreign glass.
+    detail: >
+      Babalola et al. (2018): HLHA glass is chemically unlike any other Old World glass; LLHA identified too;
+      HLHA beads appear at Igbo-Ukwu (9th-12th c.), Gao Ancien (10th-12th c.), Essouk (12th-14th c.),
+      Diouboye (11th-14th c.), always alongside imported glass. Beaded crowns on Ife heads link beads to
+      kingship. Gao is the destination drawn; Essouk and others belong to other researchers' areas.
+    evidence: [src-babalola-2018-igbo-olokun]
+    confidence: high
+    ap_topics: ["1.5", "2.4", "2.5"]
+
+  - id: df-takedda-copper-forest
+    lens: technology
+    what: Saharan copper for forest casting traditions
+    from: [pl-takedda]
+    to: pl-ife
+    span: {start: 1000, end: 1450, approx: true}
+    mechanism: contagious
+    carriers: [merchant]
+    outcome: adoption
+    summary: >
+      A UNESCO historian suggested that copper from Takedda in the Sahara reached the casters of Ife and Benin.
+      Newer metal analysis suggests local Nigerian ores, so the link is in doubt.
+    detail: >
+      Ryder (GHA IV, n.11): Takedda copper may have reached Ife, Benin and Igbo-Ukwu by the 9th-10th c.
+      Later lead-isotope studies (reported by the British Museum) favor local Nigerian ores for Ife castings.
+      Ibn Battuta describes Takedda's copper trade (citation-only). Keep as a contested link.
+    evidence: [src-ryder-gha4-volta-cameroon, src-ibn-battuta-rihla, src-ife-heads]
+    confidence: low
+    ap_topics: ["2.4", "2.6"]
+
+  - id: df-cavalry-to-kanem-kano
+    lens: technology
+    what: Imported horses and heavy cavalry (later with chain mail and quilted armor)
+    from: [pl-hafsids, pl-mamluks]
+    to: pl-kanem
+    span: {start: 1210, end: 1410, approx: true}
+    mechanism: hierarchical
+    carriers: [merchant, ruler, military]
+    outcome: adoption
+    summary: >
+      Kanem's kings bought horses from North Africa and built a large cavalry, paying largely in captives. By about
+      1400, Kano's cavalry also used chain mail, iron helmets, and quilted padding called lifidi.
+    detail: >
+      Lange: chroniclers credit Dunama with 41,000 horses; al-Maqrizi says Kanem horses were small, which
+      suggests local breeding too. Leo Africanus (early 16th c.) describes North African merchants waiting
+      up to a year in Bornu to trade horses for slaves. Adamu: Kano adopted lifidi, steel helmets and chain
+      mail under Kanajeji (1390-1410). Origin of Kano's armor (via Bornu?) is not stated in the sources.
+    evidence: [src-lange-gha4-chad, src-al-maqrizi, src-leo-africanus-description, src-adamu-gha4-hausa]
+    confidence: medium
+    ap_topics: ["1.5", "2.4", "2.6"]
+
+  - id: df-horse-slave-exchange-lake-chad
+    lens: social
+    what: Trans-Saharan exchange of enslaved captives for horses and goods
+    from: [pl-kanem]
+    to: pl-mamluks
+    span: {start: 1200, end: 1450, approx: true}
+    mechanism: relocation
+    carriers: [enslaved-people, merchant, military]
+    outcome: undocumented
+    summary: >
+      Raids around Lake Chad turned people into Kanem-Bornu's main export, marched across the Sahara to North
+      Africa and Egypt. Their own voices are almost entirely missing from the record.
+    detail: >
+      Lange: slaves were the main export, taken in raids on non-Muslim southern peoples, exchanged for horses,
+      iron weapons and textiles. The 1391 letter complains that Arab raiders were enslaving Bornu's free
+      Muslims, which shows the trade's legal line (Muslim vs. non-Muslim) and its breach. Ibn Battuta reports
+      Bornu's exports included enslaved women and eunuchs (citation-only). Outcome coexistence is a
+      placeholder: enslaved Central Sudanese in North Africa and Egypt kept practices as minorities, but this
+      research found no 1200-1450 evidence of what survived. Kano's southern raids and slave tribute to Bornu
+      (Abdullahi Burja, 1438-52) are a parallel regional flow.
+    evidence: [src-lange-gha4-chad, src-bornu-letter-1391, src-ibn-battuta-rihla, src-leo-africanus-description]
+    confidence: medium
+    ap_topics: ["1.5", "2.4", "2.7"]
+
+  - id: df-arabic-chancery-kanem
+    lens: language
+    what: Arabic writing for diplomacy, king lists and Qur'anic teaching; later Old Kanembu (Tarjumo) glosses in Ajami
+    from: [pl-cairo]
+    to: pl-kanem
+    span: {start: 1200, end: 1450, approx: true}
+    mechanism: hierarchical
+    carriers: [scholar, ruler]
+    outcome: elite-only
+    summary: >
+      Kanem-Bornu's court wrote in Arabic to rulers in Egypt and kept lists of its kings. Writing Kanembu itself in
+      Arabic letters came later; the oldest surviving manuscripts are from about the 1600s.
+    detail: >
+      In window: the 1391 letter to Cairo; Lange's view that precise reign lengths imply a written king list
+      by the 13th c. (Holl disagrees, dating the diwan's composition to the later 16th c.). Old Kanembu
+      (Tarjumo) Qur'an glosses: practice possibly from c.15th c., oldest dated manuscripts 17th c.
+      (Bondarev). Do not show Kanembu Ajami on the map before 1450.
+    evidence: [src-bornu-letter-1391, src-lange-gha4-chad, src-holl-diwan-revisited, src-bondarev-2006-glosses]
+    confidence: medium
+    ap_topics: ["1.2", "2.5"]
+
+  - id: df-kanuri-islamic-vocabulary-hausa
+    lens: language
+    what: Arabic religious vocabulary entering Hausa through Kanuri
+    from: [pl-bornu]
+    to: pl-hausa-states
+    span: {start: 1200, end: 1450, approx: true}
+    mechanism: contagious
+    carriers: [merchant, scholar]
+    outcome: adoption
+    summary: >
+      Many Hausa words for Islamic ideas came through Kanuri, the language of Bornu, not straight from Arabic. The
+      words show that Islam reached Hausaland from the east, not only from Mali.
+    detail: >
+      Adamu (p.317) uses this loanword route as evidence for Bornu's role. Dating is linguistic and loose.
+      Hausa Ajami writing comes later: Adamu notes no Hausa Ajami manuscript before 1600 has been found.
+    evidence: [src-adamu-gha4-hausa]
+    confidence: medium
+    ap_topics: ["2.5"]
+
+  - id: df-bornu-titles-kano
+    lens: governance
+    what: Bornu court titles and offices (galadima, chiroma, kaigama)
+    from: [pl-bornu]
+    to: pl-kano
+    span: {start: 1421, end: 1450, approx: true}
+    mechanism: hierarchical
+    carriers: [ruler, migrant]
+    outcome: adoption
+    summary: >
+      A Bornu prince who settled in Kano brought Bornu's system of court titles, which Kano adopted. Bornu became
+      Kano's model, and soon its overlord.
+    detail: >
+      Adamu (Kano Chronicle): titles in use under Dauda (1421-38); Kano paid tribute to Bornu from Abdullahi
+      Burja (1438-52). Adamu stresses the Hausa states treated Bornu as a model, not an enemy.
+    evidence: [src-adamu-gha4-hausa, src-kano-chronicle]
+    confidence: medium
+    ap_topics: ["1.5"]
+
+  - id: df-sayfawa-population-bornu
+    lens: population
+    what: Movement of the Sayfawa court and Kanembu followers from Kanem to Bornu
+    from: [pl-kanem]
+    to: pl-bornu
+    span: {start: 1380, end: 1400, approx: true}
+    mechanism: relocation
+    carriers: [ruler, migrant, military]
+    outcome: adoption
+    summary: >
+      Pushed out by the Bulala, the Sayfawa court and many followers crossed to the west side of Lake Chad.
+      Bornu, once a province, became the heart of the kingdom.
+    detail: >
+      Lange: Umar b. Idris (c.1382-87) abandoned Njimi; Kaka (possibly Djadja) became a residence. The
+      environmental and pastoral pressures (Arab and Tubu allies of the Bulala) are part of the cause.
+    evidence: [src-lange-gha4-chad]
+    confidence: medium
+    ap_topics: ["1.5", "2.6"]
+
+exemplars:
+  - id: ex-mune
+    name: The mune (sacred royal object of Kanem)
+    place: pl-kanem
+    location: {lat: 14.0, lon: 15.6}
+    span: {start: 1086, end: 1248, approx: true}
+    lenses: [religion]
+    summary: >
+      The mune was a sacred object at the heart of Kanem's royal religion that Mai Dunama is said to have opened.
+      No one today knows what it looked like.
+    detail: >
+      Known only from later Muslim writers (Ibn Furtu, 16th c.) and later literature; Lange (GHA IV) calls it
+      probably the central element of a pre-Islamic royal cult. A good "absent object" exemplar: students
+      reconstruct a thing from what its destroyers' heirs said.
+    image_hint: "No image exists; use a map pin with a question mark"
+    evidence: [src-lange-gha4-chad, src-ibn-furtu-kanem-wars]
+    confidence: medium
+
+  - id: ex-kanem-madrasa-cairo
+    name: Kanem's madrasa in Cairo
+    place: pl-cairo
+    location: {lat: 30.05, lon: 31.25}
+    span: {start: 1242, end: 1400, approx: true}
+    lenses: [knowledge, religion]
+    summary: >
+      Around the 1240s, Kanem founded a school in Cairo where its students and pilgrims could live and study
+      Maliki law. It is a sign of how far Kanem's scholarly network reached.
+    detail: >
+      Lange: reported by al-Umari; probably founded 1242-1252. The building has not been identified on the
+      ground in this research.
+    image_hint: "Wikimedia Commons: medieval Cairo madrasa (generic; no known image of this one)"
+    evidence: [src-lange-gha4-chad, src-al-umari-masalik]
+    confidence: medium
+
+  - id: ex-bornu-letter-1391
+    name: Letter of Bornu's king to the Mamluk sultan (c.1391)
+    place: pl-bornu
+    location: {lat: 12.6, lon: 12.8}
+    span: {start: 1391, end: 1392, approx: true}
+    lenses: [governance, social, language]
+    summary: >
+      Bornu's king wrote in Arabic to Egypt's sultan protesting that Arab raiders were enslaving his free Muslim
+      subjects and selling them north. It is the oldest surviving letter from a Lake Chad ruler.
+    detail: >
+      Sender: Bir (Abu Amr Uthman) b. Idris. Preserved in al-Qalqashandi's chancery manual Subh al-a'sha
+      (c.1412). Lange also reads it as saying Umar b. Idris was killed by "Judham" Arabs. Lange's text names
+      the addressee "Baybars," an anachronism (Baybars died 1277); others identify him as Barquq. Translations:
+      Levtzion and Hopkins (CEAS); al-Hajj (1983).
+    image_hint: "No image; use a stylized letter icon"
+    evidence: [src-bornu-letter-1391, src-lange-gha4-chad, src-al-hajj-1983-diplomatic]
+    confidence: high
+
+  - id: ex-dala-tsumburbura
+    name: Dala Hill and the Jakara shrine of Tsumburbura, Kano
+    place: pl-kano
+    location: {lat: 12.005, lon: 8.506}
+    span: {start: 999, end: 1463, approx: true}
+    lenses: [religion, architecture]
+    summary: >
+      Dala, Kano's founding hill, and the shrine of the spirit Tsumburbura by the Jakara stream were the sacred
+      places of Kano's own religion. The Kano Chronicle tells how the first mosque was built beside the shrine's
+      sacred tree.
+    detail: >
+      Chronicle traditions: Barbushe, priest of Tsumburbura, lived on Dala; the shrine stood at a tree by the
+      Jakara. The sacred tree is felled under Rumfa (1463-99) per the Chronicle (Adamu p.320), so the span ends
+      at 1463 approx. Dala Hill still stands inside old Kano.
+    image_hint: "Wikimedia Commons search: Dala Hill Kano"
+    evidence: [src-kano-chronicle, src-adamu-gha4-hausa]
+    confidence: medium
+
+  - id: ex-kano-walls
+    name: Kano city walls (Ganuwar Kano)
+    place: pl-kano
+    location: {lat: 12.0, lon: 8.52}
+    span: {start: 1100, end: null, approx: true}
+    lenses: [architecture, governance]
+    summary: >
+      The Kano Chronicle says Kano's earthen walls were begun in the 1100s and enlarged later, enclosing farmland
+      as well as houses so the city could hold out in a siege. They made Kano a birni, a walled capital.
+    detail: >
+      Kano Chronicle via Adamu: begun under Gijimasu, completed under Tsaraki (12th c. in the Chronicle's
+      dating), extended under Rumfa (1463-99), who is also credited with the palace Gidan Rumfa (a forward
+      pointer for palace forms; nothing of Kano's 1200-1450 palace survives). Some summaries put a completion under Zamnagawa (mid-14th c.);
+      unresolved. Moody (1969) is the survey of walls and gates.
+    image_hint: "Wikimedia Commons search: Ancient Kano City Walls"
+    evidence: [src-adamu-gha4-hausa, src-kano-chronicle, src-moody-1969-kano-walls]
+    confidence: medium
+
+  - id: ex-ife-heads
+    name: Ife copper-alloy and terracotta heads
+    place: pl-ife
+    location: {lat: 7.49, lon: 4.56}
+    span: {start: 1200, end: 1450, approx: true}
+    lenses: [art-music, religion, technology]
+    summary: >
+      Ife artists cast life-size, naturalistic heads of rulers in copper alloy and modeled others in clay. They
+      honored the head as the seat of a person's inner power and destiny.
+    detail: >
+      Seventeen heads were found at Wunmonije compound in 1938. Dating: 12th-15th c. broadly; the British
+      Museum gives 14th-15th c. for its head; Blier argues c.1250-1350 under Obalufon II. Frobenius (1910)
+      claimed Greek colonists made them, a racist misreading later scholarship rejected; a good historiography
+      moment. The metal is leaded zinc-brass, now thought to be from Nigerian ores.
+    image_hint: "Wikimedia Commons search: Ife head British Museum"
+    evidence: [src-ife-heads, src-ryder-gha4-volta-cameroon, src-blier-art-and-risk]
+    confidence: high
+
+  - id: ex-igbo-olokun
+    name: Igbo Olokun glass workshop, Ile-Ife
+    place: pl-ife
+    location: {lat: 7.50, lon: 4.55}
+    span: {start: 1000, end: 1450, approx: true}
+    lenses: [technology, religion]
+    summary: >
+      At the sacred grove of Olokun, Ife's craftspeople made their own glass beads, the earliest direct evidence
+      of glassmaking south of the Sahara.
+    detail: >
+      Babalola et al. (2018): over 12,000 beads and kilograms of debris; basal radiocarbon dates 1295-1423 and
+      1304-1423 cal AD; HLHA and LLHA glass from local granitic sand. Lead author is a Nigerian archaeologist.
+    image_hint: "Wikimedia Commons search: Ife glass beads"
+    evidence: [src-babalola-2018-igbo-olokun]
+    confidence: high
+
+  - id: ex-benin-iya
+    name: Benin City moats and earthworks (iya)
+    place: pl-benin
+    location: {lat: 6.34, lon: 5.62}
+    span: {start: 1280, end: null, approx: true}
+    lenses: [architecture, governance]
+    summary: >
+      Benin's kings dug deep moats and banks around their capital, and rural communities built thousands of
+      kilometers more around their villages.
+    detail: >
+      Tradition (Egharevba) credits Oguola (late 13th c.) with the first defensive trenches; Ryder cites
+      archaeology dating Ewuare's city walls to the 15th c.; Ogundiran (2005) and others suggest 13th to
+      mid-15th c. for parts. Start date is debated.
+    image_hint: "Wikimedia Commons search: Benin City walls"
+    evidence: [src-egharevba-short-history-benin, src-ryder-gha4-volta-cameroon, src-ogundiran-2005-four-millennia]
+    confidence: medium
+
+  - id: ex-tifinagh-air
+    name: Tifinagh inscriptions of the Air
+    place: pl-tuareg
+    location: {lat: 18.5, lon: 8.6}
+    span: {start: 1000, end: null, approx: true}
+    lenses: [language]
+    summary: >
+      The Tuareg kept writing their language in Tifinagh, an alphabet older than Islam in North Africa, on rocks,
+      jewelry and short messages. It survives in use today.
+    detail: >
+      The Libyco-Berber script is attested from the late first millennium BCE; it disappeared in the northern
+      Berber zone with Islamization but the Tuareg kept it (Inalco overview). Rock inscriptions are mostly
+      undated; the span here is a placeholder. Religious texts were written in Arabic script instead, so the
+      two scripts did different jobs.
+    image_hint: "Wikimedia Commons search: Tifinagh rock inscription Air"
+    evidence: [src-inalco-tifinagh]
+    confidence: medium
+
+  - id: ex-takedda-copper
+    name: Takedda copper workings (Azelik)
+    place: pl-takedda
+    location: {lat: 17.45, lon: 6.75}
+    span: {start: 1000, end: 1450, approx: true}
+    lenses: [technology]
+    summary: >
+      Takedda's copper mines made it a stop on Saharan caravan roads; Ibn Battuta said its copper was traded south to
+      Hausaland and Bornu.
+    detail: >
+      Ibn Battuta (1353) describes copper smelted into bars used as currency and sent to Gobir and Bornu
+      (citation-only). Copper-working at Azelik goes back to the first millennium BCE (Grebenart). Coordinates
+      approximate.
+    image_hint: "No reliable image identified"
+    evidence: [src-ibn-battuta-rihla, src-ryder-gha4-volta-cameroon]
+    confidence: medium
+
+events:
+  - id: ev-dunama-opens-mune
+    year: 1230
+    approx: true
+    place: pl-kanem
+    title: Mai Dunama Dibbalemi opens the mune
+    keyframe: true
+    lenses: [religion]
+    summary: >
+      Mai (king) Dunama Dibbalemi of Kanem pushes a stricter Islam and, according to later Muslim writers, breaks
+      open the mune, the sacred object of Kanem's royal religion. Those writers blame this act for generations of
+      trouble.
+    detail: >
+      Exact year unknown; placed mid-reign (Lange: 1210-1248). Narrative card: whose story is this? The only
+      tellers are later Muslim scholars; ask what the mune's keepers would have said.
+    evidence: [src-lange-gha4-chad, src-ibn-furtu-kanem-wars]
+    confidence: medium
+    ap_topics: ["1.2", "1.5"]
+
+  - id: ev-kanem-madrasa-cairo
+    year: 1245
+    approx: true
+    place: pl-kanem
+    title: Kanem founds a madrasa in Cairo
+    keyframe: false
+    lenses: [knowledge, religion]
+    summary: >
+      Kanem sets up a school in Cairo for its students and pilgrims, linking Lake Chad to the learning of Ayyubid
+      and Mamluk Egypt.
+    detail: >
+      Lange: c.1242-1252 (from al-Umari). Compare with Mali's scholarly ties (wsahel).
+    evidence: [src-lange-gha4-chad, src-al-umari-masalik]
+    confidence: medium
+    ap_topics: ["1.2", "2.5"]
+
+  - id: ev-yaji-wangara-kano
+    year: 1350
+    approx: true
+    place: pl-kano
+    title: Wangara clerics arrive in Kano under Sarki Yaji
+    keyframe: true
+    lenses: [religion, architecture]
+    summary: >
+      The Kano Chronicle says Wangara Muslims from the Mali world reached Kano, Sarki (king) Yaji accepted Islam,
+      and a mosque rose beside the sacred tree, but keepers of Kano's shrines fought back. Another source dates the
+      Wangara arrival about a century later.
+    detail: >
+      Yaji: 1349-1385 (Chronicle chronology). Rival date: the Asl al-Wangariyin puts the Wangara under Rumfa
+      (1463-99). The Chronicle itself is an 1880s compilation; Last argued for an older (17th c.) core. The
+      mosque-by-the-sacred-tree episode is from the Chronicle itself (Palmer 1908), not checked against the
+      text in this research. Adamu also notes that Islam was probably in Kano before the Wangara, via
+      Kanem-Bornu.
+    evidence: [src-kano-chronicle, src-adamu-gha4-hausa, src-asl-al-wangariyin]
+    confidence: medium
+    ap_topics: ["1.2", "1.5", "2.4"]
+
+  - id: ev-umar-leaves-njimi
+    year: 1385
+    approx: true
+    place: pl-bornu
+    title: The Sayfawa abandon Njimi and move to Bornu
+    keyframe: true
+    lenses: [population, governance, religion]
+    summary: >
+      After Bulala attacks kill several kings, Mai Umar b. Idris leaves Kanem and the Sayfawa court moves west of
+      Lake Chad into Bornu.
+    detail: >
+      Lange: Umar b. Idris c.1382-1387. Kanem stays under Bulala rule past 1450.
+    evidence: [src-lange-gha4-chad]
+    confidence: medium
+    ap_topics: ["1.5"]
+
+  - id: ev-bornu-letter-cairo
+    year: 1391
+    approx: true
+    place: pl-bornu
+    title: Bornu's king writes to the Mamluk sultan
+    keyframe: false
+    lenses: [governance, social, language]
+    summary: >
+      Bornu's ruler complains to Egypt's sultan that Arab raiders are enslaving his free Muslim subjects and asks
+      for them to be found and returned.
+    detail: >
+      Request for return follows standard summaries of the letter (al-Hajj 1983; CEAS); Lange (read) confirms
+      the complaint about enslavement and the killing of Umar by Arabs.
+    evidence: [src-bornu-letter-1391, src-lange-gha4-chad, src-al-hajj-1983-diplomatic]
+    confidence: medium
+    ap_topics: ["1.2", "2.4"]
+
+  - id: ev-kanajeji-tchibiri
+    year: 1400
+    approx: true
+    place: pl-kano
+    title: Kano's king Kanajeji returns to the Tchibiri rites (Kano Chronicle)
+    keyframe: false
+    lenses: [religion, technology]
+    summary: >
+      The Kano Chronicle says Yaji's son Kanajeji, after losing a war, turned back to the Tchibiri rites of
+      Kano's shrine religion. It also credits him with giving his cavalry quilted armor and chain mail.
+    detail: >
+      Reign 1390-1410 (Chronicle). Shows that conversion at court could be reversed.
+    evidence: [src-kano-chronicle, src-adamu-gha4-hausa]
+    confidence: low
+    ap_topics: ["1.2", "1.5"]
+
+  - id: ev-air-sultanate
+    year: 1405
+    approx: true
+    place: pl-agadez
+    title: Tuareg confederations create the sultanate of Air
+    keyframe: false
+    lenses: [governance, religion]
+    summary: >
+      Tuareg groups who had moved into the Air mountains choose a Muslim sultan to settle disputes among them; the
+      seat later moves to Agadez.
+    detail: >
+      1405 per Adamu (citing Hunwick 1971); alternatives 1413, 1424, 1430, 1438, 1449 (see pl-agadez).
+    evidence: [src-adamu-gha4-hausa, src-rossi-2016-agadez-chronicles]
+    confidence: low
+    ap_topics: ["1.5"]
+
+  - id: ev-tuareg-timbuktu
+    year: 1433
+    approx: true
+    place: pl-tuareg
+    title: Tuareg take Timbuktu from Mali
+    keyframe: true
+    lenses: [governance, population]
+    summary: >
+      Tuareg forces take control of Timbuktu as Mali's power on the Niger bend weakens. They hold it until Songhay's
+      Sunni Ali takes the city in 1468.
+    detail: >
+      Izard (GHA IV) dates the takeover 1433-34. The Tarikh al-Sudan names the Tuareg leader Akil
+      (citation-only). Coordinate with wsahel, which defines pl-timbuktu.
+    evidence: [src-izard-gha4-niger-bend, src-tarikh-al-sudan]
+    confidence: medium
+    ap_topics: ["1.5", "2.4"]
+
+  - id: ev-eweka-first-oba
+    year: 1250
+    approx: true
+    place: pl-benin
+    title: Eweka becomes the first Oba of Benin
+    keyframe: true
+    lenses: [religion, governance]
+    summary: >
+      Edo tradition says the son of an Ife prince and an Edo woman becomes the first Oba, crowned with regalia from
+      Ife. Benin's kingship now claims Ife's sacred authority.
+    detail: >
+      Year is a midpoint: Egharevba c.1200; Ryder c.1300. Classroom question: why would a kingdom want its
+      kings to come from somewhere else?
+    evidence: [src-egharevba-short-history-benin, src-ryder-gha4-volta-cameroon]
+    confidence: low
+    ap_topics: ["1.5", "1.7"]
+
+  - id: ev-ife-florescence
+    year: 1300
+    approx: true
+    place: pl-ife
+    title: Ife's age of heads and glass
+    keyframe: true
+    lenses: [art-music, technology, religion]
+    summary: >
+      Between about 1250 and 1400, Ife's artists cast its famous lifelike heads, and its workshops made glass beads
+      for kings and shrines. Scholars still debate exactly when the heads were made.
+    detail: >
+      Blier ties the florescence to Obalufon II c.1250-1350; the British Museum dates its head 14th-early 15th c.
+      Babalola et al. (2018) date the Igbo Olokun glass workshop to the 11th-15th c.; their two basal radiocarbon
+      dates calibrate to 1295-1404 and 1304-1423.
+    evidence: [src-blier-art-and-risk, src-babalola-2018-igbo-olokun]
+    confidence: medium
+    ap_topics: ["1.5", "2.5"]
+
+  - id: ev-kano-tribute-bornu
+    year: 1440
+    approx: true
+    place: pl-kano
+    title: Kano begins paying tribute to Bornu
+    keyframe: false
+    lenses: [governance, social]
+    summary: >
+      Under Abdullahi Burja, Kano starts sending tribute to Bornu, opens trade routes east, and sends many captives
+      from its southern raids to Bornu.
+    detail: >
+      Reign 1438-1452 (Chronicle). Adamu: Kano reduced to vassal status. A parallel to Kanem's own
+      horse-for-captives economy.
+    evidence: [src-adamu-gha4-hausa, src-kano-chronicle]
+    confidence: medium
+    ap_topics: ["1.5", "2.4"]
+
+sources:
+  # ---------------- PRIMARY ----------------
+  - id: src-kano-chronicle
+    title: Kano Chronicle (Asl al-Kano / "Kano Chronicle")
+    author: Anonymous Kano compiler (attributed to Malam Barka, a palace official, per Lovejoy 2018)
+    author_from: Kano
+    date: c.1880s compilation of earlier records and tradition
+    kind: primary
+    type: chronicle-local
+    voice: insider
+    happ:
+      historical_situation: >
+        Compiled in Arabic in emirate Kano after the Sokoto jihad, drawing on older king lists and oral
+        tradition; Palmer obtained a copy at Sabon Gari near Katsina.
+      audience: Kano's emirate court and scholarly elite.
+      purpose: Record the succession of 48 rulers and their deeds; frame Kano's past as a story of Islam's arrival.
+      point_of_view: >
+        Muslim court scholarship looking back at non-Muslim and partly Muslim kings; Adamu notes it recasts
+        old conflicts as Muslims against non-believers. Last argues for a witty 17th-c. compiler; Hunwick
+        reviews the authorship puzzle.
+    citation: "H.R. Palmer, trans., \"The Kano Chronicle,\" Journal of the Royal Anthropological Institute 38 (1908): 58-98. Hausa version: R.M. East, Labarun Hausawa da Makwabtansu (1933)."
+    url: https://zenodo.org/records/2415833
+    access: open-url
+    verification: citation-only
+    notes: >
+      The Zenodo PDF of Palmer 1908 could not be read by the research tools; claims are taken from Adamu
+      (UNESCO GHA IV, read) and secondary summaries. Teacher should read the Yaji, Kanajeji, Dauda and
+      Abdullahi Burja sections directly.
+
+  - id: src-asl-al-wangariyin
+    title: Asl al-Wangariyin (Origin of the Wangara)
+    author: Wangara community scholars of Kano
+    author_from: Kano
+    date: 1650-1651
+    kind: primary
+    type: chronicle-local
+    voice: insider
+    happ:
+      historical_situation: Written by a Kano Muslim lineage of Mande (Wangara) origin in the mid-17th c.
+      audience: The Wangara community and Kano's rulers.
+      purpose: Establish the lineage's founding role in Kano Islam and its privileges.
+      point_of_view: A clerical lineage's own origin story; places the Wangara mission under Rumfa.
+    citation: "Asl al-Wangariyin, ed. and trans. M.A. al-Hajj, \"A seventeenth-century chronicle on the origins and missionary activities of the Wangarawa,\" Kano Studies 1, no. 4 (1968)."
+    url: null
+    access: library
+    verification: needs-library
+    notes: Known here through Adamu (GHA IV p.318 n.102), who disputes al-Hajj's dating conclusion.
+
+  - id: src-kanem-diwan
+    title: Diwan of the sultans of Kanem-Bornu (girgam)
+    author: Court specialists of the Sayfawa dynasty
+    author_from: Kanem / Bornu
+    date: oral girgam with written Arabic forms; surviving copies 19th c. (Barth collected two)
+    kind: primary
+    type: chronicle-local
+    voice: insider
+    happ:
+      historical_situation: Royal chronicle maintained by court specialists; written copies in Arabic.
+      audience: Sayfawa court and its rivals.
+      purpose: Record rulers, reign lengths, mothers and burial places; legitimize the dynasty.
+      point_of_view: >
+        Dynastic and Muslim; Lange reads its precise reign lengths as evidence of early writing; Holl reads it
+        as an oral epic reorganized as a political charter (16th c.).
+    citation: "D. Lange, Le Diwan des sultans du (Kanem-)Bornu: chronologie et histoire d'un royaume africain (Wiesbaden: Steiner, 1977). Also H.R. Palmer, \"The Bornu Girgam,\" Journal of the African Society 12 (1912)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Not read directly; cited via Lange's GHA IV chapter and the Tourneux review of Holl.
+
+  - id: src-ibn-furtu-kanem-wars
+    title: Ibn Furtu's accounts of Idris Alooma's wars (Bornu and Kanem campaigns)
+    author: Ahmad b. Furtu, imam of the Bornu court
+    author_from: Bornu
+    date: 1570s-1580s
+    kind: primary
+    type: chronicle-local
+    voice: insider
+    happ:
+      historical_situation: Written for Mai Idris Alooma during his wars, two centuries after the move to Bornu.
+      audience: Bornu court.
+      purpose: Praise the mai's campaigns as holy war; explain past misfortunes.
+      point_of_view: >
+        Court imam; interprets Dunama's destruction of the mune as the cause of later troubles, a moral reading
+        by a Muslim scholar of an older religious act.
+    citation: "Ahmad b. Furtu, trans. H.R. Palmer, History of the First Twelve Years of the Reign of Mai Idris Alooma of Bornu (Lagos, 1926); D. Lange, A Sudanic Chronicle: The Borno Expeditions of Idris Alauma (Stuttgart, 1987)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Mune passage cited via Lange GHA IV (p.281, French ed.).
+
+  - id: src-ibn-said-jughrafiya
+    title: Kitab al-Jughrafiya (Book of Geography)
+    author: Ibn Sa'id al-Maghribi, relaying Ibn Fatima
+    author_from: al-Andalus / North Africa
+    date: mid-13th c. (Ibn Sa'id d. 1286)
+    kind: primary
+    type: travel-geography
+    voice: regional-outsider
+    happ:
+      historical_situation: Geographer compiling reports; his informant Ibn Fatima visited Kanem in the first half of the 13th c.
+      audience: Learned readers in North Africa and al-Andalus.
+      purpose: Describe the known world.
+      point_of_view: >
+        Outsider Muslim geographer; praises Dunama's holy war and forced conversions as piety; little interest
+        in the religion of those conquered.
+    citation: "Ibn Sa'id, in N. Levtzion and J.F.P. Hopkins, eds., Corpus of Early Arabic Sources for West African History (Cambridge, 1981; repr. Markus Wiener, 2000)."
+    url: null
+    access: book
+    verification: citation-only
+    notes: Content cited via Lange GHA IV.
+
+  - id: src-al-umari-masalik
+    title: Masalik al-absar fi mamalik al-amsar
+    author: Ibn Fadl Allah al-Umari
+    author_from: Damascus / Cairo
+    date: c.1337-1349
+    kind: primary
+    type: travel-geography
+    voice: regional-outsider
+    happ:
+      historical_situation: Mamluk chancery official compiling reports on foreign kingdoms, including Kanem and Air.
+      audience: Mamluk administrators and learned readers.
+      purpose: Inform the chancery about rulers it corresponded with.
+      point_of_view: >
+        Cairo bureaucrat measuring African kingdoms by wealth, troops and Muslim orthodoxy; calls Kanem weak but
+        pious and Maliki.
+    citation: "al-Umari, in Levtzion and Hopkins, eds., Corpus of Early Arabic Sources for West African History (1981)."
+    url: null
+    access: book
+    verification: citation-only
+    notes: Kanem passage cited via Lange GHA IV; Air sultan passage via Rossi (2016).
+
+  - id: src-al-maqrizi
+    title: Works of al-Maqrizi on Kanem and Bornu (incl. al-Ilmam and al-Khitat)
+    author: Taqi al-Din al-Maqrizi
+    author_from: Cairo
+    date: early 15th c.
+    kind: primary
+    type: travel-geography
+    voice: regional-outsider
+    happ:
+      historical_situation: Mamluk-era historian using reports from Kanem/Bornu pilgrims and envoys.
+      audience: Cairo's learned public.
+      purpose: History and topography of Egypt and of Muslim peoples connected to it.
+      point_of_view: >
+        Cairo scholar; wrongly calls Dunama Dibbalemi the first Muslim of his dynasty; describes Bornu's people
+        as Muslims and hints the Bulala were not.
+    citation: "al-Maqrizi, in Levtzion and Hopkins, eds., Corpus of Early Arabic Sources for West African History (1981)."
+    url: null
+    access: book
+    verification: citation-only
+    notes: Cited via Lange GHA IV.
+
+  - id: src-bornu-letter-1391
+    title: Letter of the king of Bornu to the Mamluk sultan
+    author: Bir (Abu Amr Uthman) b. Idris, mai of Bornu
+    author_from: Bornu
+    date: c.1391-1392 (late 14th c.)
+    kind: primary
+    type: documentary
+    voice: insider
+    happ:
+      historical_situation: >
+        Bornu court in exile from Kanem, at war with the Bulala and raided by Arab groups; preserved by
+        al-Qalqashandi in Subh al-a'sha (c.1412), a Cairo chancery manual.
+      audience: The Mamluk sultan and his chancery.
+      purpose: >
+        Protest the enslavement of Bornu's free Muslims by Arab raiders and ask Egypt to act; present Bornu as a
+        legitimate Muslim kingdom.
+      point_of_view: >
+        A Muslim king writing to a more powerful Muslim ruler; stresses shared faith and law; silent on
+        non-Muslims enslaved by Bornu itself.
+    citation: "Letter in al-Qalqashandi, Subh al-a'sha; trans. in Levtzion and Hopkins, Corpus of Early Arabic Sources (1981), and M. al-Hajj, \"Some diplomatic correspondence of the Seifuwa Mais of Borno with Egypt, Turkey and Morocco,\" in Y.B. Usman and M.N. Alkali, eds., Studies in the History of Pre-colonial Borno (Zaria, 1983)."
+    url: null
+    access: book
+    verification: citation-only
+    notes: >
+      Content of the complaint confirmed via Lange GHA IV (read): Arabs enslaving Muslim subjects; Umar b. Idris
+      killed by "Judham" Arabs. Lange names the addressee "Baybars" (likely an error); others say Barquq.
+
+  - id: src-ibn-battuta-rihla
+    title: Tuhfat al-nuzzar (the Rihla)
+    author: Ibn Battuta (dictated to Ibn Juzayy)
+    author_from: Tangier, Morocco
+    date: 1355-1356
+    kind: primary
+    type: travel-geography
+    voice: regional-outsider
+    happ:
+      historical_situation: Written for the Marinid court after his return from Mali via Takedda (1353).
+      audience: Marinid sultan Abu Inan and his court in Fez.
+      purpose: Record and entertain; display the reach of Islam and the author's piety and learning.
+      point_of_view: >
+        Maliki jurist from Morocco judging West African practice by North African norms; his Bornu information is
+        hearsay gathered at Takedda.
+    citation: "Ibn Battuta. In Hamdun and King, eds., Ibn Battuta in Black Africa (Markus Wiener, 1994)."
+    url: null
+    access: book
+    verification: citation-only
+    notes: Used here for Takedda (copper, Muslim merchants), Bornu (secluded king Idris; exports) and the Massufa comparison.
+
+  - id: src-leo-africanus-description
+    title: Description of Africa (Descrittione dell'Africa)
+    author: al-Hasan al-Wazzan (Leo Africanus)
+    author_from: Granada / Fez
+    date: 1526 (published 1550)
+    kind: primary
+    type: travel-geography
+    voice: regional-outsider
+    happ:
+      historical_situation: Written in Italy by a captured Fezzi diplomat who had traveled in the Sudan c.1510s.
+      audience: Italian humanist and papal readers.
+      purpose: Describe Africa for European readers.
+      point_of_view: North African Muslim outsider writing for Christians; after this window, used here only as later evidence.
+    citation: "Leo Africanus, Description of Africa; cited via D. Lange in UNESCO GHA IV."
+    url: null
+    access: book
+    verification: citation-only
+    notes: Horse-for-slave trade in Bornu (via Lange). Outside 1200-1450; marks continuity.
+
+  - id: src-tarikh-al-sudan
+    title: Tarikh al-Sudan
+    author: Abd al-Rahman al-Sa'di
+    author_from: Timbuktu
+    date: c.1655
+    kind: primary
+    type: chronicle-local
+    voice: insider
+    happ:
+      historical_situation: Timbuktu scholar writing under Moroccan (Arma) rule.
+      audience: Timbuktu's scholarly elite.
+      purpose: Record Songhay and Timbuktu history and its scholars.
+      point_of_view: Timbuktu Muslim scholar; sees the Tuareg period from the city's side.
+    citation: "J.O. Hunwick, Timbuktu and the Songhay Empire: al-Sa'di's Ta'rikh al-sudan down to 1613 (Leiden: Brill, 1999)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Tuareg leader Akil and the 1433-34 takeover; wsahel likely defines the same source id.
+
+  - id: src-agadez-chronicles
+    title: Agadez Chronicles
+    author: Agadez court scholars
+    author_from: Agadez
+    date: Arabic manuscripts circulated in copies of 1907 (older content)
+    kind: primary
+    type: chronicle-local
+    voice: insider
+    happ:
+      historical_situation: Copies given to colonial officers in the early 1900s by Sultan Ibrahim Ed Dasouqy.
+      audience: Agadez elites and, in 1907, French and British colonial officers.
+      purpose: Record the sultans and their supporting groups; support political claims.
+      point_of_view: Court perspective; Rossi argues some lists of supporting groups were added in 1907.
+    citation: "H.R. Palmer, Sudanese Memoirs vol. 3 (1928), text LVII; Y. Urvoy, \"Chroniques d'Agades,\" Journal de la Societe des Africanistes 4 (1934)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Known here through Rossi (2016), read.
+
+  - id: src-egharevba-short-history-benin
+    title: A Short History of Benin (Ekhere vb Itan Edo)
+    author: Jacob U. Egharevba
+    author_from: Benin City
+    date: 1934 (Edo); English eds. 1936-1968
+    kind: primary
+    type: chronicle-local
+    voice: insider
+    happ:
+      historical_situation: Written by an Edo historian close to the restored palace after the 1897 British conquest.
+      audience: Edo readers, colonial officials, schools.
+      purpose: Record and defend the royal tradition and its chronology.
+      point_of_view: >
+        Palace-centered transcription of oral tradition; Usuanlele and Falola assess his scholarship; his
+        dates (Eweka c.1200, Oguola late 13th c.) are one chronology among several.
+    citation: "J.U. Egharevba, A Short History of Benin, 4th ed. (Ibadan: Ibadan University Press, 1968)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Content as summarized in secondary sources; teacher should check the Oguola/Iguegha and Oranmiyan chapters.
+
+  - id: src-ife-heads
+    title: Ife copper-alloy heads (Wunmonije find and others)
+    author: Ife casters, probably under royal patronage
+    author_from: Ile-Ife
+    date: c.12th-15th c. (14th-15th c. per the British Museum for Af1939,34.1)
+    kind: primary
+    type: material-culture
+    voice: insider
+    happ:
+      historical_situation: Made for the Ooni's court and shrines during Ife's classical era.
+      audience: Ife's court, priests and ancestors.
+      purpose: Ritual commemoration of rulers; honoring the head (ori) as seat of power.
+      point_of_view: Insider royal art; Blier ties much of it to Obalufon II's reign.
+    citation: "Head of a king (Ooni), British Museum Af1939,34.1; National Commission for Museums and Monuments, Ife; see E. Platte, Bronze Head from Ife (British Museum Press, 2010)."
+    url: null
+    access: book
+    verification: citation-only
+    notes: Composition (heavily leaded zinc-brass) and Nigerian-ore attribution per British Museum summaries.
+
+  # ---------------- SECONDARY ----------------
+  - id: src-lange-gha4-chad
+    title: "The kingdoms and peoples of Chad (French ed.: Royaumes et peuples du Tchad)"
+    author: Dierk Lange
+    author_from: Germany (Bayreuth)
+    date: 1984 (French ed. read)
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "D. Lange, \"The kingdoms and peoples of Chad,\" in D.T. Niane, ed., UNESCO General History of Africa IV: Africa from the Twelfth to the Sixteenth Century (Paris/Berkeley, 1984), ch.10."
+    url: https://bokundoli.org/wp-content/uploads/2021/12/T4-14.pdf
+    access: open-url
+    verification: web-checked
+    notes: >
+      Read the French chapter online (pp. c.265-292 of the French edition). Lange's later work argues for
+      Near Eastern (including Israelite/Canaanite) origins of Chadic kingship, which Nigerian scholars
+      (e.g. the Bayero/Maiduguri schools) and others have contested; this file uses only his 1984 chapter.
+
+  - id: src-adamu-gha4-hausa
+    title: "The Hausa and their neighbours in the central Sudan (French ed.: Les Hawsa et leurs voisins du Soudan central)"
+    author: Mahdi Adamu
+    author_from: Nigeria (Ahmadu Bello University; later Usmanu Danfodiyo University)
+    date: 1984 (French ed. read)
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "M. Adamu, \"The Hausa and their neighbours in the central Sudan,\" in UNESCO General History of Africa IV (1984), ch.11."
+    url: https://bokundoli.org/wp-content/uploads/2021/12/T4-15.pdf
+    access: open-url
+    verification: web-checked
+    notes: Read online, pp. c.293-322 (French ed.). Cites Abdullahi Smith on Katsina chronology and Hunwick (1971) for Agadez 1405.
+
+  - id: src-ryder-gha4-volta-cameroon
+    title: "From the Volta to Cameroon (French ed.: De la Volta au Cameroun)"
+    author: Alan F.C. Ryder
+    author_from: United Kingdom (taught at University of Ibadan)
+    date: 1984 (French ed. read)
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "A.F.C. Ryder, \"From the Volta to Cameroon,\" in UNESCO General History of Africa IV (1984), ch.14."
+    url: https://bokundoli.org/wp-content/uploads/2021/12/T4-18.pdf
+    access: open-url
+    verification: web-checked
+    notes: Read online, pp. c.369-402 (French ed.). Ife chronology, Benin dynasty c.1300, Benin brass casting, Takedda copper note.
+
+  - id: src-izard-gha4-niger-bend
+    title: "The peoples and kingdoms of the Niger Bend and the Volta basin (French ed.)"
+    author: Michel Izard
+    author_from: France
+    date: 1984 (French ed. read)
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "M. Izard, \"The peoples and kingdoms of the Niger Bend and the Volta basin from the 12th to the 16th century,\" in UNESCO General History of Africa IV (1984), ch.9."
+    url: https://bokundoli.org/wp-content/uploads/2021/12/T4-13.pdf
+    access: open-url
+    verification: web-checked
+    notes: Footnote (French ed. p.239) dates the Tuareg capture of Timbuktu to 1433-34.
+
+  - id: src-ryder-1965-ife-benin
+    title: A Reconsideration of the Ife-Benin Relationship
+    author: Alan F.C. Ryder
+    author_from: United Kingdom (University of Ibadan)
+    date: 1965
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "A.F.C. Ryder, \"A Reconsideration of the Ife-Benin Relationship,\" Journal of African History 6, no. 1 (1965): 25-37."
+    url: https://doi.org/10.1017/S0021853700005314
+    access: library
+    verification: web-checked
+    notes: Abstract read (northern Nupe-Igala origin proposed); full text not read.
+
+  - id: src-hunwick-1994-whodunit
+    title: "A Historical Whodunit: The So-Called \"Kano Chronicle\" and its Place in the Historiography of Kano"
+    author: John O. Hunwick
+    author_from: United Kingdom / USA
+    date: 1994
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "J. Hunwick, \"A Historical Whodunit,\" History in Africa 21 (1994): 127-146."
+    url: https://www.cambridge.org/core/journals/history-in-africa/article/abs/historical-whodunit-the-socalled-kano-chronicle-and-its-place-in-the-historiography-of-kano/8DC5438DE86A0CF05C1E6FCE707FE67E
+    access: library
+    verification: web-checked
+    notes: Abstract/extract read; summarizes Last's 17th-c. compilation thesis and Palmer's 1880s dating.
+
+  - id: src-last-1980-metaphors
+    title: Historical Metaphors in the Kano Chronicle
+    author: Murray Last
+    author_from: United Kingdom (long at Ahmadu Bello University)
+    date: 1980
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "M. Last, \"Historical Metaphors in the Kano Chronicle,\" History in Africa 7 (1980): 161-178."
+    url: null
+    access: library
+    verification: needs-library
+    notes: Known via Hunwick 1994. Last reads the Chronicle's episodes as structured metaphors, not plain record.
+
+  - id: src-holl-diwan-revisited
+    title: "The Diwan Revisited: Literacy, State Formation and the Rise of Kanuri Domination (AD 1200-1600)"
+    author: Augustin F.C. Holl
+    author_from: Cameroon
+    date: 2000
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "A.F.C. Holl, The Diwan Revisited (London: Kegan Paul, 2000)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: >
+      Argument read via H. Tourneux's review, BCAI 17 (2001), https://www.ifao.egnet.net/bcai/17/6 . Holl
+      treats the diwan as an oral epic and political charter, against Lange's reading of an early written record.
+
+  - id: src-bobboyi-1993-ulama
+    title: "Relations of the Borno 'Ulama' with the Sayfawa Rulers: The Role of the Mahrams"
+    author: Hamidu Bobboyi
+    author_from: Nigeria
+    date: 1993
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "H. Bobboyi, \"Relations of the Borno 'Ulama' with the Sayfawa Rulers: The Role of the Mahrams,\" Sudanic Africa 4 (1993)."
+    url: null
+    access: library
+    verification: needs-library
+    notes: Cited for the mahram as an institution; check what it says about the Umme Jilmi mahram and Muhammad b. Mani.
+
+  - id: src-al-hajj-1983-diplomatic
+    title: Some diplomatic correspondence of the Seifuwa Mais of Borno with Egypt, Turkey and Morocco
+    author: Muhammad al-Hajj
+    author_from: Sudan / Nigeria (Bayero University, Kano)
+    date: 1983
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "M. al-Hajj, in Y.B. Usman and M.N. Alkali, eds., Studies in the History of Pre-colonial Borno (Zaria: Northern Nigerian Publishing, 1983)."
+    url: null
+    access: library
+    verification: needs-library
+    notes: Translation and analysis of the 1391 letter.
+
+  - id: src-bondarev-2006-glosses
+    title: The language of the glosses in the Bornu quranic manuscripts
+    author: Dmitry Bondarev
+    author_from: Russia / United Kingdom (SOAS, Hamburg)
+    date: 2006
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "D. Bondarev, \"The language of the glosses in the Bornu quranic manuscripts,\" Bulletin of SOAS 69, no. 1 (2006): 113-140."
+    url: https://doi.org/10.1017/S0041977X06000061
+    access: library
+    verification: citation-only
+    notes: Old Kanembu (Tarjumo); oldest dated manuscripts 17th c. (Hamburg CSMC note dates the Konduga Qur'an 17th-18th c.).
+
+  - id: src-insoll-archaeology-islam
+    title: The Archaeology of Islam in Sub-Saharan Africa
+    author: Timothy Insoll
+    author_from: United Kingdom
+    date: 2003
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "T. Insoll, The Archaeology of Islam in Sub-Saharan Africa (Cambridge University Press, 2003)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Mune as focal point of a pre-Islamic cult; Kanem archaeology.
+
+  - id: src-dewiere-2024-kanem-borno
+    title: The Kanem and Borno Sultanates (11th-19th Centuries)
+    author: Remi Dewiere
+    author_from: France / United Kingdom
+    date: 2024
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "R. Dewiere, \"The Kanem and Borno Sultanates (11th-19th Centuries),\" Oxford Research Encyclopedia of African History (2024)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Supports identifying Tie with Njimi (per secondary summaries).
+
+  - id: src-magnavita-2019-lake-chad
+    title: The Lake Chad region as a crossroads
+    author: Carlos Magnavita, Zakinet Dangbet and Tchago Bouimon
+    author_from: Germany / Chad
+    date: 2019
+    kind: secondary
+    type: archaeology
+    voice: scholar-international
+    citation: "C. Magnavita, Z. Dangbet and T. Bouimon, \"The Lake Chad region as a crossroads,\" Afrique: Archeologie & Arts 15 (2019)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Proposes Tie as Njimi (fired bricks, place-name links; bricks undated). Two co-authors are Chadian; tag kept international for the lead author.
+
+  - id: src-rossi-2016-agadez-chronicles
+    title: "The Agadez Chronicles and Y Tarichi: A Reinterpretation"
+    author: Benedetta Rossi
+    author_from: Italy / United Kingdom (Birmingham)
+    date: 2016
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "B. Rossi, \"The Agadez Chronicles and Y Tarichi: A Reinterpretation,\" History in Africa 43 (2016)."
+    url: https://research.birmingham.ac.uk/files/26711289/Rossi_The_Agadez_Chronicles_and_Y_Tarichi_HiA_2016_final_pre_proof.pdf
+    access: open-url
+    verification: web-checked
+    notes: Pre-proof read (first part). Reviews founding dates (1413, 1438, 1413-1424 per Hamani) and 1907 editing.
+
+  - id: src-babalola-2018-igbo-olokun
+    title: "Chemical analysis of glass beads from Igbo Olokun, Ile-Ife (SW Nigeria): New light on raw materials, production, and interregional interactions"
+    author: Abidemi Babatunde Babalola, Laure Dussubieux, Susan Keech McIntosh, Thilo Rehren
+    author_from: Nigeria (lead author) / USA / UK
+    date: 2018
+    kind: secondary
+    type: archaeology
+    voice: scholar-from-region
+    citation: "A.B. Babalola et al., Journal of Archaeological Science 90 (2018): 92-105. https://doi.org/10.1016/j.jas.2017.12.005"
+    url: https://discovery-pp.ucl.ac.uk/10043216/1/Babalola%20et%20al%202018%20Ile-Ife%20glass%20beads%20JAS%2090%20sm.pdf
+    access: open-url
+    verification: web-checked
+    notes: Read the author manuscript; dates, compositions and distribution sites taken from it.
+
+  - id: src-ogundiran-yoruba-new-history
+    title: "The Yoruba: A New History"
+    author: Akinwumi Ogundiran
+    author_from: Nigeria (UNC Charlotte)
+    date: 2020
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "A. Ogundiran, The Yoruba: A New History (Bloomington: Indiana University Press, 2020)."
+    url: https://muse.jhu.edu/book/98113
+    access: library
+    verification: needs-library
+    notes: >
+      Table of contents and reviews read (Part II c.300 BC-AD 1420; Part III "Atrophy" c.1400-1650; Ife
+      Empire with client states; Benin stock narrative cited at p.111 per secondary summary). Check the
+      Ife and Benin passages directly.
+
+  - id: src-ogundiran-2005-four-millennia
+    title: "Four Millennia of Cultural History in Nigeria (ca. 2000 B.C.-A.D. 1900): Archaeological Perspectives"
+    author: Akinwumi Ogundiran
+    author_from: Nigeria
+    date: 2005
+    kind: secondary
+    type: archaeology
+    voice: scholar-from-region
+    citation: "A. Ogundiran, Journal of World Prehistory 19, no. 2 (2005)."
+    url: null
+    access: library
+    verification: needs-library
+    notes: Cited (per secondary summaries) for dating parts of the Benin earthworks to the 13th-mid-15th c.; also a lead for rural evidence.
+
+  - id: src-blier-art-and-risk
+    title: "Art and Risk in Ancient Yoruba: Ife History, Power, and Identity, c.1300"
+    author: Suzanne Preston Blier
+    author_from: USA
+    date: 2015
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "S.P. Blier, Art and Risk in Ancient Yoruba (Cambridge University Press, 2015)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Argument read via S. Kart's review, caa.reviews, https://m.caareviews.org/reviews/2782 .
+
+  - id: src-abimbola-ifa
+    title: "Ifa: An Exposition of Ifa Literary Corpus"
+    author: Wande Abimbola
+    author_from: Nigeria
+    date: 1976
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "W. Abimbola, Ifa: An Exposition of Ifa Literary Corpus (Ibadan: Oxford University Press Nigeria, 1976)."
+    url: null
+    access: library
+    verification: needs-library
+    notes: Insider-scholar account of Ifa's 256 odu; does not date Ifa to this window. Use for concepts, not dates.
+
+  - id: src-bortolot-met-benin
+    title: "Origins and Empire: The Benin, Owo, and Ijebu Kingdoms"
+    author: Alexander Ives Bortolot
+    author_from: USA (Columbia University)
+    date: 2003
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "A.I. Bortolot, \"Origins and Empire,\" Heilbrunn Timeline of Art History, Metropolitan Museum of Art (2003)."
+    url: https://www.metmuseum.org/essays/origins-and-empire-the-benin-owo-and-ijebu-kingdoms
+    access: open-url
+    verification: web-checked
+    notes: Iguegha c.1400 at Oguola's request; early Benin heads echo Ife naturalism.
+
+  - id: src-williams-icon-image
+    title: "Icon and Image: A Study of Sacred and Secular Forms of African Classical Art"
+    author: Denis Williams
+    author_from: Guyana (worked in Nigeria)
+    date: 1974
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "D. Williams, Icon and Image (London: Allen Lane, 1974)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Cited (per secondary summaries) for lack of evidence linking early Benin castings to Ife.
+
+  - id: src-usuanlele-falola-1998-egharevba
+    title: The Scholarship of Jacob Egharevba of Benin
+    author: Uyilawa Usuanlele and Toyin Falola
+    author_from: Nigeria
+    date: 1998
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "U. Usuanlele and T. Falola, \"The Scholarship of Jacob Egharevba of Benin,\" History in Africa 25 (1998)."
+    url: null
+    access: library
+    verification: needs-library
+    notes: Cited (per secondary summaries) for brass work in Benin before Oguola; verify title and claim.
+
+  - id: src-greenberg-1946-maguzawa
+    title: The Influence of Islam on a Sudanese Religion
+    author: Joseph H. Greenberg
+    author_from: USA
+    date: 1946
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "J.H. Greenberg, The Influence of Islam on a Sudanese Religion (New York: J.J. Augustin, 1946)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Ethnography of Maguzawa (non-Muslim Hausa) religion; evidence for the 20th c., used only to warn against back-projection.
+
+  - id: src-rasmussen-tuareg
+    title: Spirit Possession and Personhood among the Kel Ewey Tuareg
+    author: Susan J. Rasmussen
+    author_from: USA
+    date: 1995
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "S.J. Rasmussen, Spirit Possession and Personhood among the Kel Ewey Tuareg (Cambridge University Press, 1995)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Matrilineal "vestiges," women and pre-Islamic cosmology; modern ethnography of Air Tuareg.
+
+  - id: src-moody-1969-kano-walls
+    title: The Walls and Gates of Kano City
+    author: H.L.B. Moody
+    author_from: United Kingdom (Nigerian Department of Antiquities)
+    date: 1969
+    kind: secondary
+    type: archaeology
+    voice: scholar-international
+    citation: "H.L.B. Moody, The Walls and Gates of Kano City (Lagos: Federal Department of Antiquities, 1969)."
+    url: null
+    access: library
+    verification: needs-library
+    notes: Survey of the walls; check phase dating.
+
+  - id: src-inalco-tifinagh
+    title: "The tifinagh / Berber alphabet: history and current status"
+    author: El Mustapha Barqach and Driss Rabih
+    author_from: not verified (Inalco, Paris)
+    date: n.d. (online)
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "E.M. Barqach and D. Rabih, \"The tifinagh / Berber alphabet: history and current status,\" Inalco."
+    url: https://inalco.fr/en/tifinagh/berber-alphabet-history-and-current-status
+    access: open-url
+    verification: web-checked
+    notes: Script antiquity (Casajus 6th-4th c. BCE), Tuareg retention, uses on jewelry and short texts. Voice tag uncertain.

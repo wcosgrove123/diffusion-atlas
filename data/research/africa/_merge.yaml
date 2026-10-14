@@ -1,0 +1,20 @@
+# Merge decisions applied by tools/build_data.py. Research files stay as their authors wrote them;
+# every reconciliation lives here so it can be audited and reversed.
+
+# Same work, different ids from different researchers. alias -> canonical
+source_aliases:
+  src-tarikh-al-sudan: src-al-sadi-tarikh-al-sudan
+  src-al-sadi-tarikh-sudan: src-al-sadi-tarikh-al-sudan
+  src-tamrat-horn-gha4: src-tamrat-unesco-horn
+
+# Same event recorded twice. Drop the listed id; references to it are rewritten to the kept id.
+event_merges:
+  ev-tuareg-timbuktu: ev-tuareg-take-timbuktu   # csahel's copy; wsahel owns Timbuktu
+
+# Keyframe overrides (the slider snaps to keyframes; one per moment)
+keyframe_overrides:
+  ev-musa-in-cairo: false        # Cairo end of the hajj; ev-musa-hajj is the keyframe and links to it
+
+# Derived AP tags. The CED files religion in Africa under 1.2 (KC-3.1.III.D.iii).
+derive_ap:
+  religion_lens_adds: "1.2"

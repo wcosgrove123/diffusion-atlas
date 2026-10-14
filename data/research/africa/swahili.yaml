@@ -1,0 +1,3241 @@
+# Research file: East African (Swahili) coast, Mogadishu to Sofala, plus the interior gold partner
+# (Great Zimbabwe, with Mapungubwe before it and Mutapa after it). Africa module, 1200-1450.
+# Owner: swahili. Written 2026-10-14.
+#
+# Perspective notes for the coordinator:
+# - Swahili society is treated as African, Bantu-speaking and cosmopolitan. The colonial-era picture of
+#   "Arab" or "Persian" colonies (Strandes, Coupland, Kirkman's 1954 title "The Arab City of Gedi",
+#   early Chittick) is recorded as historiography, not as fact.
+# - The Shirazi origin stories (Kilwa Chronicle, Pate Chronicle, family genealogies) are insider sources
+#   with their own purposes (claims of rank, legitimacy, and Islamic credentials), read with HAPP.
+# - Ancient DNA (Brielle et al. 2023) shows real Persian-related and Indian-related male ancestry mixing
+#   with African women from about AD 1000. That supports contact and intermarriage, not colonization:
+#   language, most ancestry, and the towns themselves are African.
+# - Great Zimbabwe is the clean control case: deep trade with Muslim merchants, no trace of Islam.
+
+places:
+  - id: pl-kilwa
+    name: Kilwa Kisiwani (Kilwa Sultanate)
+    alt_names: [Kilwa, Kulwa, Quiloa]
+    kind: polity
+    region: east-african-coast
+    location: {lat: -8.957, lon: 39.512}
+    span: {start: 1000, end: 1505, approx: true}
+    parent: null
+    geometry_note: >-
+      Island town off the southern Tanzanian coast. Core: Kilwa Kisiwani island and neighboring Songo Mnara
+      (founded late 14th c.) and Sanje ya Kati. Hegemony, strongest c.1300-1350, over the Mafia archipelago
+      (Kisimani Mafia, Kua) and the gold port of Sofala, where Kilwa appointed a governor. Mainland opposite
+      (Kilwa Kivinje area) belonged to non-Muslim farming peoples whom Kilwa traded with and raided. First
+      coral buildings and coins at the end of the 10th c. (Horton et al. 2022). Portuguese sack 1505.
+    basemap_match: ["Kilwa Sultanate", "Kilwa"]
+    polity_profile:
+      - year: 1330
+        base: COM
+        flow: MKT
+        membership: [PLACE, FAITH]
+        ruled_not_counted: enslaved people taken from the mainland; non-Muslim mainland neighbors who were raided
+        standing: SOV
+        shape: CENTRAL
+        rulers: ONE
+        right: [DESCENT, DIVINE]
+        flag: >-
+          The Mahdali founder al-Hasan ibn Talut took power by force (VICTORY in practice), while the dynasty
+          claimed descent from the Prophet's family. Kilwa's hold on Sofala and Mafia makes the shape partly
+          IMPERIAL.
+      - year: 1430
+        base: COM
+        flow: MKT
+        membership: [PLACE, FAITH]
+        ruled_not_counted: enslaved agricultural and household workers
+        standing: SOV
+        shape: CENTRAL
+        rulers: FEW
+        right: [DESCENT, DIVINE]
+        flag: >-
+          Sultans kept the title, but in the 15th c. amirs (governors) and a council of patricians and lesser
+          royals made and unmade sultans (Saad 1979). Claim ONE, practice FEW.
+    evidence: [src-horton-2022-kilwa-chronology, src-chami-pre-islamic-kilwa, src-matveiev-swahili-civilization, src-unesco-whc-kilwa, src-saad-1979-kilwa-historiography, src-samuel-ahe-kilwa-timeline]
+    confidence: medium
+
+  - id: pl-mogadishu
+    name: Mogadishu (Sultanate of Mogadishu)
+    alt_names: [Maqdishu, Xamar, Hamar, Muqdisho]
+    kind: polity
+    region: east-african-coast
+    location: {lat: 2.039, lon: 45.343}
+    span: {start: 1100, end: 1600, approx: true}
+    parent: null
+    geometry_note: >-
+      Benadir coast of southern Somalia. Old quarters Hamar Weyne and Shingani. A Somali-speaking (Benadiri)
+      Muslim port, not a Kiswahili-speaking town; it belongs in this region as the northern anchor of the same
+      coastal trading world (Brava, Merca further south). Yaqut (c.1220s) and Ibn Said already describe it as
+      a leading Muslim town. Ming fleets called 1417-1433.
+    basemap_match: ["Mogadishu", "Sultanate of Mogadishu", "Ajuran"]
+    polity_profile:
+      - year: 1331
+        base: COM
+        flow: MKT
+        membership: [PLACE, KIN]
+        ruled_not_counted: pastoral peoples of the hinterland who supplied camels and cattle (status unclear); enslaved people
+        standing: SOV
+        shape: CENTRAL
+        rulers: ONE
+        right: [DESCENT, DIVINE]
+        flag: >-
+          Ibn Battuta calls the ruler "shaykh" and the court has wazirs, amirs and a qadi; how far lineage
+          councils limited him is unknown. Later dynastic history (Fakhr al-Din line, then Muzaffar, Ajuran
+          overlordship) is poorly dated.
+    evidence: [src-ibn-battuta-rihla, src-matveiev-swahili-civilization, src-tamrat-horn-gha4, src-mogadishu-mosque-inscriptions]
+    confidence: medium
+
+  - id: pl-mombasa
+    name: Mombasa
+    alt_names: [Mvita, Manbasa, Kongowea]
+    kind: polity
+    region: east-african-coast
+    location: {lat: -4.062, lon: 39.666}
+    span: {start: 1100, end: null, approx: true}
+    parent: null
+    geometry_note: >-
+      Island town on the Kenyan coast; earliest settlement traditions place it at Kongowea on the island's
+      north side. Al-Idrisi (1154) names it; Ibn Battuta stayed one night (1331). Mainland hinterland held
+      Sabaki-speaking farmers (later Mijikenda). Whether Kilwa held any authority over it in the 14th c. is
+      uncertain.
+    basemap_match: ["Mombasa"]
+    polity_profile:
+      - year: 1331
+        base: COM
+        flow: MKT
+        membership: [PLACE, KIN]
+        ruled_not_counted: undocumented for this date
+        standing: SOV
+        shape: CENTRAL
+        rulers: ONE
+        right: [DESCENT]
+        flag: >-
+          Thin evidence. Ibn Battuta describes the people, not the government. Later Mombasa was organized by
+          lineage confederations (Thenashara Taifa, "twelve nations"), which suggests FEW; their dating is unknown.
+    evidence: [src-ibn-battuta-rihla, src-matveiev-swahili-civilization, src-mombasa-oral-traditions]
+    confidence: low
+
+  - id: pl-malindi
+    name: Malindi
+    alt_names: [Melinde, Malind]
+    kind: polity
+    region: east-african-coast
+    location: {lat: -3.219, lon: 40.117}
+    span: {start: 1250, end: null, approx: true}
+    parent: null
+    geometry_note: >-
+      Kenyan coast north of Mombasa. Al-Idrisi (12th c.) names a Malindi known for fishing and iron; the
+      present town probably dates from the 13th-14th c. and its relation to the earlier place (possibly the
+      Gedi area inland) is debated. Sent envoys and giraffes to Ming China (1414-1415); allied with the
+      Portuguese from 1498.
+    basemap_match: ["Malindi"]
+    polity_profile:
+      - year: 1415
+        base: COM
+        flow: MKT
+        membership: [PLACE, KIN]
+        ruled_not_counted: undocumented
+        standing: SOV
+        shape: CENTRAL
+        rulers: ONE
+        right: [DESCENT]
+        flag: null
+    evidence: [src-matveiev-swahili-civilization, src-ming-voyage-records, src-sciencenews-giraffes]
+    confidence: low
+
+  - id: pl-zanzibar
+    name: Zanzibar archipelago towns (Unguja and Pemba)
+    alt_names: [Unguja, Pemba, Tumbatu, Kizimkazi]
+    kind: city
+    region: east-african-coast
+    location: {lat: -5.9, lon: 39.3}
+    span: {start: 1000, end: null, approx: true}
+    parent: null
+    geometry_note: >-
+      Not one polity: a cluster of island towns, each with its own ruling lineage. Unguja: Tumbatu (12th-15th c.,
+      several mosques, abandoned after a violent episode c.1350), Kizimkazi (Kufic mosque inscription dated
+      1107, baseline). Pemba: Chwaka (see pl-chwaka), Mtambwe Mkuu (11th-15th c.), Mkia wa Ng'ombe, Pujini
+      (fortified, 15th c.), Ras Mkumbuu. Label point sits between Unguja and Tumbatu. Zanzibar Town is a
+      much later (17th-19th c.) center; do not draw it for this period.
+    basemap_match: []
+    evidence: [src-laviolette-fleisher-2009-pemba, src-samuel-ahe-pemba, src-matveiev-swahili-civilization, src-samuel-ahe-kilwa-timeline]
+    confidence: medium
+
+  - id: pl-chwaka
+    name: Chwaka (Pemba)
+    alt_names: [Harouni]
+    kind: city
+    region: east-african-coast
+    location: {lat: -4.95, lon: 39.78}
+    span: {start: 1050, end: 1500, approx: true}
+    parent: pl-zanzibar
+    geometry_note: >-
+      Northern Pemba, just south of the earlier trading village of Tumbe (c.600-1050). Grew to about 12 ha by
+      1300; 3,000-5,000 people, mostly in earthen (wattle-and-daub) houses around one stone house. Coordinates
+      approximate (near Tumbe).
+    basemap_match: []
+    evidence: [src-laviolette-fleisher-2009-pemba, src-samuel-ahe-pemba]
+    confidence: medium
+
+  - id: pl-pate
+    name: Pate (town and island, with Shanga)
+    alt_names: [Pate Island, Shanga, Siyu, Faza]
+    kind: city
+    region: east-african-coast
+    location: {lat: -2.103, lon: 40.99}
+    span: {start: 1300, end: null, approx: true}
+    parent: null
+    geometry_note: >-
+      Lamu archipelago, northern Kenya. Pate town rises to prominence in the 14th c. (archaeology; Chittick,
+      Horton, Matveiev); the Pate Chronicle's claim of a Nabhani dynasty from 600 AH (1203-04) is an insider
+      claim not supported by excavation. Shanga, on the island's south coast, was occupied from the 8th c. to
+      its abandonment c.1400-1425 (its people, the Washanga, are remembered at Siyu). Faza dates to at least
+      the 14th c.
+    basemap_match: ["Pate"]
+    evidence: [src-pate-chronicle, src-horton-shanga, src-matveiev-swahili-civilization]
+    confidence: low
+
+  - id: pl-lamu
+    name: Lamu
+    alt_names: [Amu]
+    kind: city
+    region: east-african-coast
+    location: {lat: -2.269, lon: 40.902}
+    span: {start: 1370, end: null, approx: true}
+    parent: null
+    geometry_note: >-
+      Lamu island, northern Kenya. Founding often given as c.1370, and UNESCO cites "over 700 years" of
+      continuous occupation; neither date was checked against excavation reports here. Earliest written
+      mention reported is a Lamu qadi met in Mecca in 1441 (not verified). Draw as a point from 1370, low
+      confidence.
+    basemap_match: ["Lamu"]
+    evidence: [src-unesco-whc-lamu, src-allen-swahili-origins]
+    confidence: low
+
+  - id: pl-gedi
+    name: Gedi (Gede)
+    alt_names: [Gede, Kilimani]
+    kind: city
+    region: east-african-coast
+    location: {lat: -3.309, lon: 40.017}
+    span: {start: 1100, end: 1650, approx: true}
+    parent: null
+    geometry_note: >-
+      Walled stone town about 6.5 km inland near Watamu, Kenya. Occupied 11th/12th-17th c.; flourished
+      12th-15th c.; densest 15th-16th c. Not named in any surviving Arabic text; identity with Kirkman's
+      "Kilimani" or with an early Malindi is debated. Inscribed as a UNESCO World Heritage Site in July 2024.
+    basemap_match: []
+    evidence: [src-icomos-2024-gedi, src-kirkman-gedi, src-matveiev-swahili-civilization]
+    confidence: medium
+
+  - id: pl-sofala
+    name: Sofala
+    alt_names: [Sufala, al-Sufala, Sofala of the gold]
+    kind: city
+    region: east-african-coast
+    location: {lat: -20.16, lon: 34.72}
+    span: {start: 1000, end: null, approx: true}
+    parent: pl-kilwa
+    geometry_note: >-
+      Buzi estuary, central Mozambique (point is approximate: much of old Sofala has been lost to the sea and
+      the estuary). "Sofala" in Arabic geographers names a gold-producing coast, not one town, until a town
+      of that name emerges by the 15th c. Parent pl-kilwa applies c.1300-1505 only: Kilwa appointed a governor
+      who acted more like a consul for merchants than a ruler of the hinterland. Earlier coastal sites to the
+      south (Chibuene) show the same trade from the 6th c.
+    basemap_match: ["Sofala"]
+    evidence: [src-samuel-ahe-sofala, src-matveiev-swahili-civilization, src-abu-al-fida-taqwim, src-ibn-battuta-rihla]
+    confidence: medium
+
+  - id: pl-great-zimbabwe
+    name: Great Zimbabwe
+    alt_names: [Dzimba dzemabwe, Zimbabwe, Symbaoe]
+    kind: polity
+    region: southern-africa-interior
+    location: {lat: -20.271, lon: 30.934}
+    span: {start: 1200, end: 1450, approx: true}
+    parent: null
+    geometry_note: >-
+      Capital of a Shona (Karanga) state on the southern Zimbabwe plateau near Masvingo, with many smaller
+      stone-walled "zimbabwe" centres across the plateau. Stone walling begins late 12th/early 13th c.; peak
+      14th-15th c. The end date 1450 follows UNESCO and older syntheses; Chirikure et al. (2013) show
+      occupation continuing into the 16th-17th c., with Khami (from c.1450) overlapping. Linked to the coast
+      by gold and ivory routes running to Sofala and on to Kilwa. Draw the polity as a soft area over the
+      plateau, not a hard border.
+    basemap_match: ["Great Zimbabwe", "Kingdom of Zimbabwe"]
+    polity_profile:
+      - year: 1350
+        base: AGR
+        flow: EXT
+        membership: [KIN]
+        ruled_not_counted: commoner farming households and herders; subordinate zimbabwe centres; status of gold miners unknown
+        standing: SOV
+        shape: LAYERED
+        rulers: ONE
+        right: [DIVINE, DESCENT]
+        flag: >-
+          Shape is debated. The older model (Huffman, Garlake) reads one king ruling through provincial
+          zimbabwes; Chirikure, Pikirayi and colleagues argue for a more polycentric system that overlapped
+          with Mapungubwe and Khami. Cattle (PAS) are central to wealth even though most people farmed.
+    evidence: [src-chirikure-2013-bayesian-gz, src-chirikure-2013-new-pathways, src-unesco-whc-great-zimbabwe, src-fagan-zambezi-limpopo, src-pikirayi-zimbabwe-culture]
+    confidence: medium
+
+  - id: pl-mapungubwe
+    name: Mapungubwe
+    alt_names: [K2, Bambandyanalo]
+    kind: polity
+    region: southern-africa-interior
+    location: {lat: -22.193, lon: 29.239}
+    span: {start: 1220, end: 1290, approx: true}
+    parent: null
+    geometry_note: >-
+      Shashe-Limpopo confluence (South Africa, Botswana, Zimbabwe border). Earlier capital at K2 (settled
+      11th c.); elite moved onto Mapungubwe Hill c.1220; abandoned c.1290-1300. Some syntheses (UNESCO) give
+      the kingdom c.900-1300. Precedes and overlaps the rise of Great Zimbabwe; Chirikure et al. (2013) reject
+      a simple Mapungubwe-to-Zimbabwe succession.
+    basemap_match: ["Mapungubwe"]
+    polity_profile:
+      - year: 1250
+        base: AGR
+        flow: EXT
+        membership: [KIN]
+        ruled_not_counted: commoners living below the hill, separated from the secluded ruler
+        standing: SOV
+        shape: CENTRAL
+        rulers: ONE
+        right: [DIVINE, DESCENT]
+        flag: null
+    evidence: [src-chirikure-2013-new-pathways, src-unesco-whc-mapungubwe, src-met-mapungubwe]
+    confidence: medium
+
+  - id: pl-mutapa
+    name: Mutapa (Mwenemutapa)
+    alt_names: [Munhumutapa, Monomotapa, Mwene Mutapa]
+    kind: polity
+    region: southern-africa-interior
+    location: {lat: -16.6, lon: 31.4}
+    span: {start: 1430, end: 1902, approx: true}
+    parent: null
+    geometry_note: >-
+      Northern Zimbabwe plateau and Zambezi escarpment (Dande). Founding by Nyatsimba Mutota, remembered in
+      Shona tradition, is placed in the 15th c.; c.1430-1450 is a convention, not a fixed date. Forward
+      pointer only: on a 1200-1450 slider it should appear at the very end. Label point approximate.
+    basemap_match: ["Mutapa", "Monomotapa"]
+    polity_profile:
+      - year: 1450
+        base: AGR
+        flow: EXT
+        membership: [KIN, OATH]
+        ruled_not_counted: tributary chiefdoms
+        standing: SOV
+        shape: IMPERIAL
+        rulers: ONE
+        right: [DESCENT, DIVINE]
+        flag: >-
+          This snapshot projects 16th-c. Portuguese descriptions and later oral traditions back to the
+          founding. Mudenge shows the traditions are telescoped; Beach suggests Mutota may be a symbolic
+          founder.
+    evidence: [src-shona-oral-traditions, src-mudenge-munhumutapa, src-beach-shona]
+    confidence: low
+
+  - id: pl-coast-hinterland
+    name: Coastal hinterland farmers (Sabaki-speaking mainland; later Mijikenda)
+    alt_names: [Nyika, Mijikenda ancestors]
+    kind: people
+    region: east-african-coast
+    location: {lat: -3.9, lon: 39.5}
+    span: {start: 1000, end: null, approx: true}
+    parent: null
+    geometry_note: >-
+      Soft area: the mainland strip, roughly 10-50 km deep, behind the Kenyan and northern Tanzanian coast,
+      plus Kilwa's mainland neighbors further south. These farming, herding and hunting peoples spoke
+      Northeast Coast Bantu languages closely related to Kiswahili. The Mijikenda kaya (fortified hilltop
+      forest villages) are dated by Mijikenda tradition, UNESCO and excavators to the mid-to-late 16th c., so
+      they are a forward pointer, not a 1200-1450 feature.
+    basemap_match: []
+    evidence: [src-kiriama-2006-kaya-bate, src-unesco-whc-kaya, src-nurse-spear-1985-swahili]
+    confidence: low
+
+religion_profiles:
+  # ------------------------------------------------------------------ Kilwa
+  - id: rp-kilwa-court-1200-1277
+    place: pl-kilwa
+    span: {start: 1200, end: 1277, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: dominant, local_form: "sultans named on coins with pious rhyming phrases; Friday mosque"}
+    relation: exclusive
+    basis: inferred
+    summary: >-
+      Kilwa's first ruling line, remembered as "Shirazi," minted coins in Arabic and built a Friday mosque.
+      Only their public Muslim practice left evidence.
+    detail: >-
+      Evidence: copper coins naming rulers such as Ali ibn al-Hasan (types in circulation for centuries;
+      Chittick 1965 placed him c.1200, Horton et al. 2022 put the first coins at the end of the 10th c.), and
+      the 11th-12th c. northern prayer hall of the Great Mosque, enlarged in the 13th c. The Kilwa Chronicle,
+      written about 300 years later, calls this line Persian from Shiraz; current scholarship (Spear, Pouwels,
+      Allen, Horton) reads that as a status claim by an African Muslim lineage, possibly with Gulf ancestry
+      through marriage. Legal school is not attested before Ibn Battuta. Whether the court also kept non-Islamic
+      ritual is not documented either way, hence the flag.
+    evidence: [src-kilwa-coinage, src-chittick-1965-shirazi, src-horton-2022-kilwa-chronology, src-spear-1984-shirazi]
+    confidence: medium
+    flag: Exclusive reflects only what coins and mosques record; private or royal non-Islamic ritual is undocumented, not disproven.
+
+  - id: rp-kilwa-court-1277-1450
+    place: pl-kilwa
+    span: {start: 1277, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-shafii, share: dominant, local_form: "sharifian (Mahdali) dynasty; royal hajj; patronage of visiting sharifs and scholars"}
+    relation: exclusive
+    basis: attested
+    summary: >-
+      After about 1277 the Mahdali sultans, who claimed descent from the Prophet's family, made Kilwa's court a
+      showcase of Sunni Islam. Ibn Battuta, a Moroccan visitor, reports that Sultan al-Hasan gave a fifth of
+      his war booty to religious causes.
+    detail: >-
+      The Kilwa Chronicle names al-Hasan ibn Talut as founder of the new line; its date c.1277 rests on
+      Freeman-Grenville's reading of regnal years and could be a generation later (Chittick 1965 saw a cultural
+      break late 13th/early 14th c.). Al-Hasan ibn Sulayman (Abu al-Mawahib, "father of gifts," r. c.1310-1333)
+      made the hajj, reportedly studied in Aden, built Husuni Kubwa and domed the Great Mosque. Ibn Battuta
+      (1331) describes him rewarding sharifs and pious visitors and campaigning against non-Muslim mainland
+      neighbors; Ibn Battuta's framing of these raids as holy war is his own Maliki traveler's lens. Shafi'i
+      affiliation is reported for the coast in the full Rihla (Hamdun and King translation, for Mombasa) and
+      in later practice; check the Kilwa passage in a full translation. The brief asked about Hadrami scholars:
+      the Mahdali link is to Yemen (the Ahdal/Mahdali sharifs), and the large Hadrami (Ba Alawi) scholarly
+      migration to the coast is mostly 16th c. and later, so "Hadrami scholars at Kilwa before 1450" is not
+      supported by what I could check.
+    evidence: [src-ibn-battuta-rihla, src-kilwa-chronicle-arabic, src-sutton-kilwa, src-pouwels-horn-crescent, src-chittick-1965-shirazi]
+    confidence: medium
+    flag: Shafi'i label for Kilwa itself needs a check in a full Rihla translation.
+
+  - id: rp-kilwa-urban-1200-1300
+    place: pl-kilwa
+    span: {start: 1200, end: 1300, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: significant, local_form: null}
+      - {family: local, tradition: indigenous, branch: other, share: unknown, local_form: "Swahili mizimu (ancestral spirits) and spirit (pepo, jini) practice; known from later ethnography, inferred for this period"}
+    relation: plural
+    basis: projected
+    summary: >-
+      Kilwa's merchants and stone-house families were Muslim, while most townspeople lived in earthen houses
+      and their religious practice is unclear. One UNESCO historian argues Islam spread from merchants to
+      the old nobility to ordinary people over generations.
+    detail: >-
+      Matveiev (UNESCO GHA IV) argues conversion on the coast was voluntary, without organized missions, and
+      that Islam coexisted with older cults; he gives the order merchants, then old nobility, then commoners.
+      Pouwels describes coastal Islam before 1800 as shaped by its African setting, absorbing local ideas.
+      Medieval evidence for mizimu practice specifically is indirect (later ethnography; deposits of coins and
+      beads in houses and graves at Songo Mnara in the next span). Share of the local tradition set to unknown
+      on purpose.
+    evidence: [src-matveiev-swahili-civilization, src-pouwels-horn-crescent]
+    confidence: low
+    flag: null
+
+  - id: rp-kilwa-urban-1300-1450
+    place: pl-kilwa
+    span: {start: 1300, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-shafii, share: dominant, local_form: null}
+      - {family: local, tradition: indigenous, branch: other, share: unknown, local_form: "Swahili mizimu (ancestral spirits); coins and carnelian beads buried in house foundations and near graves at Songo Mnara"}
+    relation: plural
+    summary: >-
+      By the 1300s most townspeople of Kilwa and Songo Mnara were Muslims who prayed in many neighborhood
+      mosques. They also buried coins in house foundations and cared for graves in ways that point to local
+      ideas about ancestors and place.
+    detail: >-
+      Songo Mnara (founded late 14th c.) had six mosques and four cemeteries for a small town. Perkins,
+      Fleisher and Wynne-Jones (2014) excavated more than 300 Kilwa-type copper coins with a carnelian
+      necklace in a stonehouse foundation, reading it as building value into the house; other coins lie near
+      graves, possibly as memorials. This is the kind of practice the taxonomy calls plural: the same people use
+      Islam for prayer and law and local practice for house, lineage and the dead. Ibn Battuta describes the
+      majority of Kilwa's people as Zanj (local Africans) with facial tattoo marks, which itself shows that
+      Kilwa's Muslims were Africans.
+    evidence: [src-perkins-2014-songo-mnara-coins, src-wynne-jones-fleisher-coins-context, src-ibn-battuta-rihla, src-matveiev-swahili-civilization]
+    confidence: medium
+    flag: null
+
+  - id: rp-kilwa-rural-1200-1450
+    place: pl-kilwa
+    span: {start: 1200, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >-
+      We know almost nothing about the farmers and fishers who fed Kilwa. No surviving text or excavation
+      tells us what religion they practiced.
+    detail: >-
+      Missing evidence: excavated rural villages on the Kilwa mainland and Mafia for 1200-1450, and burial
+      data. Ibn Battuta calls the mainland neighbors non-Muslims, and a 15th-16th c. source cited by Matveiev
+      mentions enslaved people doing farm work at Kilwa, but neither describes rural religion.
+    evidence: [src-matveiev-swahili-civilization, src-ibn-battuta-rihla]
+    confidence: medium
+    flag: null
+
+  - id: rp-kilwa-enslaved-1300-1450
+    place: pl-kilwa
+    span: {start: 1300, end: 1450, approx: true}
+    stratum: community
+    community_name: Enslaved people from the mainland
+    traditions: []
+    relation: undocumented
+    summary: >-
+      Ibn Battuta saw the sultan's son give a beggar ten enslaved people as a gift, so enslaved people lived
+      in Kilwa's households. Their own beliefs were never written down.
+    detail: >-
+      Rødland (Teaching Medieval Slavery and Captivity) notes this is the only known text for slavery used
+      inside East African coastal society in this period; the enslaved were probably domestic and farm workers
+      taken from non-Swahili mainland communities. Whether they converted, kept their own practice, or both is
+      unknown. Missing evidence: household archaeology of slave quarters, burials, later testimony.
+    evidence: [src-rodland-medievalslavery-kilwa, src-ibn-battuta-rihla]
+    confidence: medium
+    flag: null
+
+  # ------------------------------------------------------------------ Mogadishu
+  - id: rp-mogadishu-court-1200-1300
+    place: pl-mogadishu
+    span: {start: 1200, end: 1300, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: dominant, local_form: "royal mosque building (Fakhr al-Din mosque, mihrab dated 1269)"}
+    relation: exclusive
+    basis: inferred
+    summary: >-
+      Mogadishu's rulers paid for stone mosques with dated Arabic inscriptions, including one finished in
+      1269. Their public religion was Islam.
+    detail: >-
+      Dated monuments: minaret of the Jama'a mosque in Hamar Weyne dated 636 AH (1238-39); Fakhr al-Din mosque,
+      inscription of 1269, with a marble mihrab (marble reportedly from India) and an early use of vaulting.
+      Yaqut (c.1220s) already calls Mogadishu a leading Muslim town. The Fakhr al-Din dynasty's origins are
+      disputed: older accounts (Cerulli, Lewis) take Arab and Persian founding councils from a late text
+      (Kitab al-Zunuj) that modern scholars distrust; others read the founders as local Somali.
+    evidence: [src-mogadishu-mosque-inscriptions, src-yaqut-mujam-al-buldan, src-matveiev-swahili-civilization, src-pradines-historic-mosques]
+    confidence: medium
+    flag: Public practice only.
+
+  - id: rp-mogadishu-court-1300-1450
+    place: pl-mogadishu
+    span: {start: 1300, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: dominant, local_form: "Friday prayer behind the ruler's screen; qadi, wazirs and amirs; royal procession under silk canopies"}
+    relation: exclusive
+    basis: attested
+    summary: >-
+      Ibn Battuta reports that Mogadishu's ruler, Abu Bakr, spoke the local Maqdishi language and Arabic and
+      held Friday prayer with his qadi (judge) and ministers. The court also had its own royal ceremony of
+      drums, trumpets and silk canopies.
+    detail: >-
+      Ibn Battuta (visit 1331 in most chronologies; Matveiev gives 1332) says the ruler is called "shaykh,"
+      of Barbara origin (the Somali coast), and that visiting jurists and sharifs must meet him before taking
+      lodging. A coin dated 1322 shows a Mogadishu mint. The canopy procession is royal ceremonial, not shown
+      to be religious, so it is not entered as a second tradition. Shafi'i is likely by analogy with the rest
+      of the coast and later Somali practice, but I did not confirm it for Mogadishu in 1331.
+    evidence: [src-ibn-battuta-rihla, src-matveiev-swahili-civilization]
+    confidence: medium
+    flag: null
+
+  - id: rp-mogadishu-urban-1200-1300
+    place: pl-mogadishu
+    span: {start: 1200, end: 1300, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: dominant, local_form: null}
+    relation: exclusive
+    basis: inferred
+    summary: >-
+      Arabic geographers describe Mogadishu's merchants as Muslims, and the town had several stone mosques by
+      1300. No source describes any other religious practice in the town.
+    detail: >-
+      Yaqut describes Muslim inhabitants of mixed origin; Ibn Said (d. 1286) calls it the leading Islamic
+      town of the region (via secondary syntheses). These are regional-outsider texts that would not record
+      non-Islamic practice they did not care about, hence low confidence on "exclusive."
+    evidence: [src-yaqut-mujam-al-buldan, src-matveiev-swahili-civilization]
+    confidence: low
+    flag: Outsider texts only.
+
+  - id: rp-mogadishu-urban-1300-1450
+    place: pl-mogadishu
+    span: {start: 1300, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: dominant, local_form: "host system: each foreign merchant lodged with a local host who handled his trade"}
+    relation: exclusive
+    basis: attested
+    summary: >-
+      Ibn Battuta describes a huge merchant town that welcomed Muslim traders and scholars, with each visiting
+      merchant assigned a local host. Its woven cloth was sold as far as Egypt.
+    detail: >-
+      The host system shows how Islam and trade worked together: shared religion made strangers into guests
+      with legal standing. Mogadishu also sent scholars outward (Sa'id of Mogadishu, born c.1301, studied 28
+      years in Mecca and Medina; see ev-said-of-mogadishu).
+    evidence: [src-ibn-battuta-rihla, src-matveiev-swahili-civilization]
+    confidence: medium
+    flag: null
+
+  - id: rp-mogadishu-rural-1200-1450
+    place: pl-mogadishu
+    span: {start: 1200, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >-
+      The Somali herders and farmers of the hinterland supplied Mogadishu with camels and grain, but no source
+      from this period describes their religion. When and how Islam spread among them is not recorded.
+    detail: >-
+      Missing evidence: hinterland archaeology and dated rural mosques or graves; later Somali genealogies
+      that tie clans to Arabian saints are later insider traditions with their own purposes and cannot date
+      rural conversion.
+    evidence: [src-ibn-battuta-rihla, src-tamrat-horn-gha4]
+    confidence: medium
+    flag: null
+
+  # ------------------------------------------------------------------ Zanzibar archipelago
+  - id: rp-zanzibar-court-1200-1350
+    place: pl-zanzibar
+    span: {start: 1200, end: 1350, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: dominant, local_form: null}
+    relation: exclusive
+    basis: inferred
+    summary: >-
+      Island rulers on Pemba and Tumbatu issued coins with Arabic names and built town mosques. Like Kilwa's
+      rulers, they presented themselves as Muslims.
+    detail: >-
+      The Mtambwe Mkuu hoard (Pemba, buried c.1066) names local rulers matching Kilwa Chronicle names, showing
+      Muslim rulers before the window; Tumbatu (12th-15th c.) has several mosques. Some sources link the Kilwa
+      Mahdali founder al-Hasan ibn Talut to Tumbatu (Wynne-Jones, via Samuel); not checked. Earlier Ibadi
+      features at Mtambwe gave way to a Shafi'i-type mosque by the mid-11th c. (Samuel, citing Horton).
+    evidence: [src-samuel-ahe-pemba, src-samuel-ahe-kilwa-timeline]
+    confidence: low
+    flag: Ruling lineages are known almost only from coins; practice beyond public Islam undocumented.
+
+  - id: rp-zanzibar-court-1350-1450
+    place: pl-zanzibar
+    span: {start: 1350, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-shafii, share: dominant, local_form: null}
+    relation: exclusive
+    basis: inferred
+    summary: >-
+      After Tumbatu was abandoned around 1350, Pemba towns such as Chwaka and the fortified site of Pujini
+      became the islands' centers of power. Their elites kept building mosques.
+    detail: >-
+      Thin evidence: Pujini (15th c.) has a stone mosque inside its rampart. Shafi'i assumed from the regional
+      pattern. Low confidence.
+    evidence: [src-samuel-ahe-pemba]
+    confidence: low
+    flag: null
+
+  - id: rp-zanzibar-urban-1200-1300
+    place: pl-zanzibar
+    span: {start: 1200, end: 1300, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: significant, local_form: null}
+      - {family: local, tradition: indigenous, branch: other, share: unknown, local_form: "Swahili mizimu and spirit practice (inferred)"}
+    relation: plural
+    summary: >-
+      In Pemba towns like Chwaka, most people lived in earthen houses around a few stone buildings and a
+      growing number of mosques. Islam was present and spreading, but its share of daily religious life is
+      unknown.
+    detail: >-
+      Chwaka's congregational mosque dates to the 11th c., with more mosques added in the 12th and 13th c.
+      LaViolette and Fleisher (2009) argue Pemba was a place of competing towns and villages, not a mere
+      farming periphery, before 1500.
+    evidence: [src-laviolette-fleisher-2009-pemba, src-samuel-ahe-pemba]
+    confidence: low
+    flag: null
+
+  - id: rp-zanzibar-urban-1300-1450
+    place: pl-zanzibar
+    span: {start: 1300, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-shafii, share: dominant, local_form: null}
+      - {family: local, tradition: indigenous, branch: other, share: unknown, local_form: "Swahili mizimu and spirit practice (inferred)"}
+    relation: plural
+    summary: >-
+      In the 1300s Chwaka rebuilt its main mosque with two side halls that tripled its size. That growth
+      suggests most of the town now attended Friday prayer.
+    detail: >-
+      The 14th-c. mosque enlargement (Samuel, citing LaViolette and Fleisher) is the best proxy we have for
+      the share of townspeople praying as Muslims. A fourth, small mosque followed in the 15th c.
+    evidence: [src-samuel-ahe-pemba, src-laviolette-fleisher-2009-pemba]
+    confidence: medium
+    flag: null
+
+  - id: rp-zanzibar-rural-1200-1450
+    place: pl-zanzibar
+    span: {start: 1200, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >-
+      Archaeologists have only recently begun digging Pemba's villages to study what they call the "hidden
+      majority." What those villagers believed is not yet known.
+    detail: >-
+      LaViolette's village excavations in northern Pemba (Kimimba, Kaliwa) target exactly this gap; the
+      published summaries I could read pose questions about town-country relations but do not report on rural
+      religion. Missing evidence: village burials, small mosques, ritual deposits.
+    evidence: [src-laviolette-fleisher-2009-pemba]
+    confidence: medium
+    flag: null
+
+  # ------------------------------------------------------------------ Mombasa
+  - id: rp-mombasa-court-1200-1450
+    place: pl-mombasa
+    span: {start: 1200, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >-
+      Mombasa's own traditions remember a queen, Mwana Mkisi, ruling before a Muslim leader, Shehe Mvita, who
+      built the first stone mosque. No dated source tells us when that change happened.
+    detail: >-
+      The Mwana Mkisi and Shehe Mvita traditions are kept by the Thenashara Taifa (Twelve Nations) lineages:
+      insider oral sources that explain the town's Muslim identity and lineage rights, undated. Missing
+      evidence: inscriptions, coins, or a dated palace or Friday mosque for 1200-1450.
+    evidence: [src-mombasa-oral-traditions]
+    confidence: low
+    flag: null
+
+  - id: rp-mombasa-urban-1300-1450
+    place: pl-mombasa
+    span: {start: 1300, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-shafii, share: dominant, local_form: "well-built wooden mosques"}
+    relation: exclusive
+    basis: inferred
+    summary: >-
+      Ibn Battuta, who stayed one night in 1331, reports that Mombasa's people were Shafi'i Muslims with
+      well-built wooden mosques. He describes them as religious and trustworthy.
+    detail: >-
+      One night's visit by a Moroccan jurist is a thin basis for "exclusive": he praises their piety by his own
+      standards and would not have recorded spirit or ancestral practice. Shafi'i attribution is in the fuller
+      Hamdun and King translation (as quoted by Sacred Footsteps); Gibb's 1929 abridgment omits it.
+    evidence: [src-ibn-battuta-rihla]
+    confidence: medium
+    flag: An outsider's one-night snapshot.
+
+  - id: rp-mombasa-rural-1200-1450
+    place: pl-mombasa
+    span: {start: 1200, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >-
+      Ibn Battuta notes that Mombasa had to bring in grain from the mainland, so it depended on mainland
+      farmers. Their religion in this period is undocumented.
+    detail: >-
+      See pl-coast-hinterland. The later Mijikenda kaya institutions cannot be projected back before the 16th c.
+    evidence: [src-ibn-battuta-rihla, src-kiriama-2006-kaya-bate]
+    confidence: medium
+    flag: null
+
+  # ------------------------------------------------------------------ Malindi
+  - id: rp-malindi-court-1250-1450
+    place: pl-malindi
+    span: {start: 1250, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: dominant, local_form: null}
+    relation: exclusive
+    basis: inferred
+    summary: >-
+      Malindi's ruler was probably Muslim, like other coastal rulers, and acted as an independent king,
+      even sending envoys to China. Little else about the court's religion survives from before 1450.
+    detail: >-
+      Inferred from regional pattern and from the court's diplomacy; the 15th-c. Juma (Friday) mosque and
+      pillar tombs are the main material evidence but I did not confirm their dates.
+    evidence: [src-matveiev-swahili-civilization, src-ming-voyage-records]
+    confidence: low
+    flag: Inference, not direct evidence.
+
+  - id: rp-malindi-urban-1250-1450
+    place: pl-malindi
+    span: {start: 1250, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: significant, local_form: null}
+      - {family: local, tradition: indigenous, branch: other, share: unknown, local_form: "Swahili mizimu and spirit practice (inferred)"}
+    relation: plural
+    summary: >-
+      Malindi was a town of fishers, ironworkers and traders. Islam was its public religion, but how townspeople
+      combined it with older practice is not recorded.
+    detail: >-
+      Al-Idrisi's 12th-c. description stresses fishing and iron (via Matveiev). No direct religious evidence for
+      ordinary townspeople before 1450.
+    evidence: [src-matveiev-swahili-civilization]
+    confidence: low
+    flag: null
+
+  - id: rp-malindi-rural-1250-1450
+    place: pl-malindi
+    span: {start: 1250, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >-
+      The farmers around Malindi left no record of their religion in this period. This is a gap in the evidence,
+      not proof of anything.
+    detail: Missing evidence as for pl-coast-hinterland.
+    evidence: [src-kiriama-2006-kaya-bate]
+    confidence: medium
+    flag: null
+
+  # ------------------------------------------------------------------ Pate / Shanga
+  - id: rp-pate-court-1300-1450
+    place: pl-pate
+    span: {start: 1300, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: dominant, local_form: null}
+    relation: exclusive
+    basis: projected
+    summary: >-
+      The Pate Chronicle says Muslim sultans from Oman, the Nabhani, ruled Pate from 1204, but excavations show
+      the town only rose in the 1300s. The chronicle tells us what Pate's later rulers wanted to claim.
+    detail: >-
+      The Chronicle survives only in Swahili-in-Arabic-script copies made from 1903 on (Stigand 1913, Werner
+      1914, Tolmacheva 1993), descended from a lost text; Chittick judged much of its early part unhistorical.
+      Its Nabhani founder marries the daughter of the last pre-Nabhani king, the same marriage motif as the
+      Kilwa Chronicle. Treat it as a legitimacy text of the 18th-19th c. Pate dynasty.
+    evidence: [src-pate-chronicle, src-matveiev-swahili-civilization]
+    confidence: low
+    flag: Court identity rests on a much later insider chronicle.
+
+  - id: rp-pate-urban-1200-1450
+    place: pl-pate
+    span: {start: 1200, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: dominant, local_form: null}
+      - {family: local, tradition: indigenous, branch: other, share: unknown, local_form: "Swahili mizimu and spirit practice (inferred)"}
+    relation: plural
+    summary: >-
+      Shanga on Pate Island had a mosque on the same spot since the 700s, rebuilt again and again in timber,
+      then coral. By 1200 Islam had been the town's public religion for centuries.
+    detail: >-
+      Horton's Shanga excavation found a sequence of mosques from the late 8th c., timber first, coral by the
+      10th c., a stone mosque with mihrab and Kufic inscriptions by c.1150. Shanga was abandoned c.1400-1425.
+      Horton reads the first Muslims there as local Africans, not immigrants. Pillar tombs appear in the Lamu
+      archipelago in the 13th c. (see df-pillar-tombs).
+    evidence: [src-horton-shanga, src-samuel-ahe-swahili-architecture, src-archaeology-2014-colonial-archaeology]
+    confidence: medium
+    flag: null
+
+  - id: rp-pate-rural-1200-1450
+    place: pl-pate
+    span: {start: 1200, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >-
+      No source speaks to the religion of the farmers and fishers of Pate Island and the facing mainland in this
+      period.
+    detail: 'Missing evidence: village excavations on Pate and the mainland opposite.'
+    evidence: [src-horton-shanga]
+    confidence: medium
+    flag: null
+
+  # ------------------------------------------------------------------ Lamu
+  - id: rp-lamu-court-1370-1450
+    place: pl-lamu
+    span: {start: 1370, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >-
+      Nothing reliable survives about who ruled Lamu before 1450 or how they worshipped.
+    detail: 'Missing evidence: excavation reports for early Lamu town; dated inscriptions.'
+    evidence: [src-unesco-whc-lamu]
+    confidence: medium
+    flag: null
+
+  - id: rp-lamu-urban-1370-1450
+    place: pl-lamu
+    span: {start: 1370, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: dominant, local_form: null}
+    relation: exclusive
+    basis: inferred
+    summary: >-
+      Lamu was probably a Muslim town from its founding, and a judge from Lamu is reported in Mecca in 1441.
+      Its fame as a center of Islamic learning came much later.
+    detail: >-
+      The 1441 report (a Lamu qadi met in Mecca by the writer Abu al-Mahasin) comes from a secondary summary I
+      could not trace to an edition; flag it. UNESCO's description of Lamu as a religious center refers to the
+      19th c. onward.
+    evidence: [src-unesco-whc-lamu, src-allen-swahili-origins]
+    confidence: low
+    flag: The 1441 qadi report is unverified.
+
+  - id: rp-lamu-rural-1370-1450
+    place: pl-lamu
+    span: {start: 1370, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >-
+      The religion of Lamu Island's farmers before 1450 is not documented.
+    detail: 'Missing evidence: rural archaeology of Lamu island and the facing mainland.'
+    evidence: [src-unesco-whc-lamu]
+    confidence: medium
+    flag: null
+
+  # ------------------------------------------------------------------ Gedi
+  - id: rp-gedi-court-1200-1450
+    place: pl-gedi
+    span: {start: 1200, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >-
+      Gedi has a large 15th-century house called the palace, but no text names its rulers. Their religion
+      can only be guessed from the mosques they lived beside.
+    detail: 'Gedi is absent from all surviving Arabic texts (Matveiev). Missing evidence: written sources, coins.'
+    evidence: [src-matveiev-swahili-civilization, src-kirkman-gedi]
+    confidence: medium
+    flag: null
+
+  - id: rp-gedi-urban-1200-1450
+    place: pl-gedi
+    span: {start: 1200, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: dominant, local_form: "mosques without minarets; pillar tombs; Chinese porcelain set into mosque and tomb walls"}
+      - {family: local, tradition: indigenous, branch: other, share: unknown, local_form: "talismans in houses; African forms in tomb design (per the Kenyan nomination)"}
+    relation: plural
+    summary: >-
+      Gedi's townspeople built several mosques and tall pillar tombs, one dated 1399. Kenya's World Heritage
+      nomination argues that houses and tombs also show African beliefs blended with Islam.
+    detail: >-
+      Three superimposed mosques (12th-14th c.) in the north of the site; a 15th-c. Great Mosque inside the
+      inner wall. ICOMOS (2024) reports the State Party's claim of a fusion of African and Islamic belief
+      (tomb design, house talismans) and asks for more specific evidence, so I used plural, not syncretic.
+      Teaching point: James Kirkman titled his 1954 excavation report "The Arab City of Gedi"; Kenyan heritage
+      bodies now present it as a Swahili, Bantu-speaking town.
+    evidence: [src-icomos-2024-gedi, src-kirkman-gedi, src-gedi-dated-tomb-inscription]
+    confidence: medium
+    flag: null
+
+  - id: rp-gedi-rural-1200-1450
+    place: pl-gedi
+    span: {start: 1200, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >-
+      Gedi's oral histories link it to the Waata, forest hunters later absorbed into the Mijikenda, but their
+      religion in this period is undocumented.
+    detail: >-
+      The Waata link is from oral histories reported in the ICOMOS evaluation; undated. Missing evidence:
+      excavation of the forest margin settlements.
+    evidence: [src-icomos-2024-gedi]
+    confidence: medium
+    flag: null
+
+  # ------------------------------------------------------------------ Sofala
+  - id: rp-sofala-court-1300-1450
+    place: pl-sofala
+    span: {start: 1300, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: dominant, local_form: null}
+    relation: exclusive
+    basis: projected
+    summary: >-
+      Sofala's governor was a Muslim official sent from Kilwa to manage the gold trade. He spoke for the
+      merchants, not for the peoples of the interior.
+    detail: >-
+      Kilwa's governor acted more like a consul for the merchant community than a ruler (Newitt via secondary
+      summaries). In 1505 the Portuguese dealt with a Muslim sheikh, Isuf, at Sofala.
+    evidence: [src-samuel-ahe-sofala, src-matveiev-swahili-civilization]
+    confidence: low
+    flag: null
+
+  - id: rp-sofala-urban-1300-1450
+    place: pl-sofala
+    span: {start: 1300, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: dominant, local_form: "elite Muslim tombs (15th c.)"}
+    relation: exclusive
+    basis: inferred
+    summary: >-
+      The geographer Abu al-Fida reports that Sofala's inhabitants were Muslims, and 15th-century tombs there
+      are Muslim. This was a small Swahili merchant community at the edge of a much larger non-Muslim world.
+    detail: >-
+      Abu al-Fida (d. 1331, writing from earlier reports) is a regional outsider. About 800 Swahili merchants
+      lived there in 1505 (Portuguese count via Samuel). The urban stratum here is the merchant town only.
+    evidence: [src-abu-al-fida-taqwim, src-samuel-ahe-sofala]
+    confidence: medium
+    flag: null
+
+  - id: rp-sofala-rural-1300-1450
+    place: pl-sofala
+    span: {start: 1300, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >-
+      The Shona-speaking farmers and gold producers inland of Sofala are not described in any source from this
+      period. Later evidence shows they did not become Muslim.
+    detail: >-
+      Later Portuguese sources and Shona traditions (16th c. on) show Shona religion, not Islam, in the
+      hinterland; that is consistent with, but does not document, 1300-1450. Missing evidence: excavated
+      villages of the coastal plain (Chibuene's 1300-1700 phase is the nearest).
+    evidence: [src-samuel-ahe-sofala, src-pegado-barros-zimbabwe]
+    confidence: medium
+    flag: null
+
+  # ------------------------------------------------------------------ Great Zimbabwe
+  - id: rp-great-zimbabwe-court-1200-1300
+    place: pl-great-zimbabwe
+    span: {start: 1200, end: 1300, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: local, tradition: indigenous, branch: other, share: dominant, local_form: "Shona (Karanga) royal ancestor (midzimu) veneration and rain-making centred on the Hill Complex"}
+    relation: exclusive
+    basis: projected
+    summary: >-
+      As the first stone walls rose at Great Zimbabwe, its rulers probably based their authority on Shona
+      religion, especially royal ancestors and rain, a reading drawn from later Shona practice. Nothing at
+      the site points to Islam.
+    detail: >-
+      The Hill Complex is widely read as the ritual and royal core. Interpretation leans on later Shona
+      ethnography and on the Mapungubwe model of a ruler linked to a rain-making hill. Stone walling begins
+      late 12th/early 13th c. (Chirikure et al. 2013).
+    evidence: [src-chirikure-2013-bayesian-gz, src-fagan-zambezi-limpopo, src-garlake-great-zimbabwe]
+    confidence: medium
+    flag: null
+
+  - id: rp-great-zimbabwe-court-1300-1450
+    place: pl-great-zimbabwe
+    span: {start: 1300, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: local, tradition: indigenous, branch: other, share: dominant, local_form: "Shona royal ancestors and Mwari (the high god), approached through spirit mediums (svikiro); soapstone birds on monoliths in the Hill Complex Eastern Enclosure"}
+    relation: exclusive
+    basis: projected
+    summary: >-
+      At its height Great Zimbabwe's kings traded gold with Muslim merchants for Chinese porcelain and Persian
+      glass, yet left no mosque, Arabic inscription or Muslim grave. Later Shona practice suggests their
+      religion centered on royal ancestors and spirit mediums, and the soapstone bird pillars may honor those
+      ancestors.
+    detail: >-
+      Eight soapstone birds, six from the Eastern Enclosure of the Hill Complex (Met; UNESCO), are read as
+      emblems of royal authority, perhaps royal ancestors, or as the bateleur eagle (chapungu), a messenger of
+      Mwari and the ancestors in Shona thought (Matenga; Fontein via Wikipedia). Fagan (GHA IV) reports D.P.
+      Abraham's view that chiefs and priests controlled the Mwari cult; Ken Mufuka argues that mediums at the
+      Hill shrine acted as the state's conscience. These readings draw on later Shona practice. The absence of
+      Islam is the point: trade did not carry religion inland.
+    evidence: [src-gz-soapstone-birds, src-met-great-zimbabwe, src-matenga-soapstone-birds, src-fagan-zambezi-limpopo, src-unesco-whc-great-zimbabwe]
+    confidence: medium
+    flag: Mwari's link to Great Zimbabwe is inferred from later practice.
+
+  - id: rp-great-zimbabwe-urban-1300-1450
+    place: pl-great-zimbabwe
+    span: {start: 1300, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: local, tradition: indigenous, branch: other, share: dominant, local_form: "Shona household ancestors (midzimu) and clan totems (mutupo), inferred from later practice"}
+    relation: exclusive
+    basis: projected
+    summary: >-
+      Perhaps 10,000 people lived in and around Great Zimbabwe's walls. Their daily religion is inferred from
+      later Shona practice, and none of them left any sign of Islam.
+    detail: >-
+      Population estimates range from under 10,000 to about 18,000. Exclusive is used for the negative finding
+      (no Islam); the positive content is inference, so confidence is low.
+    evidence: [src-unesco-whc-great-zimbabwe, src-chirikure-2013-new-pathways]
+    confidence: low
+    flag: Content inferred from ethnography.
+
+  - id: rp-great-zimbabwe-rural-1200-1450
+    place: pl-great-zimbabwe
+    span: {start: 1200, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >-
+      The farming and herding families of the plateau left homesteads and pottery but no direct record of their
+      beliefs. Historians fill this gap with later Shona practice, which is a risky shortcut.
+    detail: >-
+      Missing evidence: excavated commoner homesteads with ritual features; the plateau's many small zimbabwes
+      are elite sites.
+    evidence: [src-pikirayi-zimbabwe-culture]
+    confidence: medium
+    flag: null
+
+  # ------------------------------------------------------------------ Mapungubwe
+  - id: rp-mapungubwe-court-1220-1290
+    place: pl-mapungubwe
+    span: {start: 1220, end: 1290, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: local, tradition: indigenous, branch: other, share: dominant, local_form: "sacral kingship: ruler secluded on the rain-making hill; elite hilltop burials with gold (the gold rhinoceros)"}
+    relation: exclusive
+    basis: inferred
+    summary: >-
+      Mapungubwe's king lived apart from his people on top of a hill linked to rain-making. He was buried with
+      gold objects, including a famous gold-foil rhinoceros.
+    detail: >-
+      UNESCO describes an elite class with sacred leadership and a secluded king. Imported glass beads and
+      Chinese celadon arrived through the coast, with no trace of Islam.
+    evidence: [src-unesco-whc-mapungubwe, src-met-mapungubwe]
+    confidence: medium
+    flag: null
+
+  - id: rp-mapungubwe-urban-1220-1290
+    place: pl-mapungubwe
+    span: {start: 1220, end: 1290, approx: true}
+    stratum: urban
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >-
+      Several thousand commoners lived below Mapungubwe Hill, but their religious life has not been studied
+      directly.
+    detail: 'Missing evidence: ritual features in commoner residential zones.'
+    evidence: [src-met-mapungubwe]
+    confidence: medium
+    flag: null
+
+  - id: rp-mapungubwe-rural-1220-1290
+    place: pl-mapungubwe
+    span: {start: 1220, end: 1290, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >-
+      The religion of farming villages in the Shashe-Limpopo basin is undocumented for this period.
+    detail: Missing evidence as above.
+    evidence: [src-unesco-whc-mapungubwe]
+    confidence: medium
+    flag: null
+
+  # ------------------------------------------------------------------ Mutapa
+  - id: rp-mutapa-court-1430-1500
+    place: pl-mutapa
+    span: {start: 1430, end: 1500, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: local, tradition: indigenous, branch: other, share: dominant, local_form: "royal ancestral spirits (midzimu) honored at coronations; mhondoro (lion) spirit mediums consulted on war, succession and rain; Mwari as high god"}
+    relation: exclusive
+    basis: projected
+    summary: >-
+      Later sources suggest Mutapa's founders carried Great Zimbabwe's religion north: royal ancestors and
+      lion-spirit mediums who advised kings on war and rain. Muslim traders reached its markets later, but
+      its kings did not become Muslim.
+    detail: >-
+      Forward pointer. Sources are 16th-c. and later (Portuguese accounts; oral traditions studied by Beach and
+      Mudenge). Swahili Muslim traders from Angoche were active on the Zambezi routes in the 16th c.; a
+      Mutapa ruler was baptized in 1561 and the Jesuit Silveira killed, with Muslim traders blamed. All outside
+      the window.
+    evidence: [src-mudenge-munhumutapa, src-beach-shona, src-shona-oral-traditions]
+    confidence: low
+    flag: Projected back from later sources.
+
+  - id: rp-mutapa-urban-1430-1500
+    place: pl-mutapa
+    span: {start: 1430, end: 1500, approx: true}
+    stratum: urban
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >-
+      Mutapa's early capitals have barely been excavated, so townspeople's practice is unknown.
+    detail: 'Missing evidence: excavations at early capitals in Dande.'
+    evidence: [src-mudenge-munhumutapa]
+    confidence: medium
+    flag: null
+
+  - id: rp-mutapa-rural-1430-1500
+    place: pl-mutapa
+    span: {start: 1430, end: 1500, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >-
+      Rural religion in early Mutapa is known only from much later sources.
+    detail: 'Missing evidence: anything contemporary.'
+    evidence: [src-beach-shona]
+    confidence: medium
+    flag: null
+
+  # ------------------------------------------------------------------ Hinterland
+  - id: rp-coast-hinterland-rural-1200-1450
+    place: pl-coast-hinterland
+    span: {start: 1200, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >-
+      The mainland neighbors of the Swahili towns spoke related Bantu languages and traded with the coast, but
+      no source from 1200 to 1450 describes their religion. Their famous sacred kaya forests date from the 1500s.
+    detail: >-
+      Ibn Battuta calls Kilwa's mainland neighbors non-Muslims and reports raids on them; that tells us only
+      that they were not Muslim. Mijikenda kaya forests (UNESCO "created as of the 16th century"; Kiriama et
+      al. cite traditions of mid-16th c. settlement) are sacred ancestral sites governed by councils of elders
+      (ngambi) and still used for rain and peace prayers, but some writers claim far earlier dates; treat them
+      as post-1450. Missing evidence: excavated 1200-1450 villages (Kusimba's Tsavo surveys show many inland
+      sites but date mostly later).
+    evidence: [src-ibn-battuta-rihla, src-unesco-whc-kaya, src-kiriama-2006-kaya-bate, src-fowler-2005-place-without-history]
+    confidence: medium
+    flag: null
+
+diffusions:
+  # ============================ RELIGION (14 of 23)
+  - id: df-islam-through-marriage
+    lens: religion
+    what: Islam carried into African households through marriage of Persian Gulf and other Muslim traders with local women
+    from: [pl-ext-persian-gulf, pl-ext-oman]
+    to: pl-kilwa
+    span: {start: 1000, end: 1450, approx: true}
+    mechanism: relocation
+    carriers: [merchant, family]
+    outcome: adoption
+    summary: >-
+      Ancient DNA shows that from about AD 1000, men with mostly Persian-related ancestry had children with
+      African women in the coastal towns. The scientists suggest these children spoke their mothers' Bantu
+      language, which helps explain how Islam became a Swahili religion rather than a foreign one.
+    detail: >-
+      Brielle et al. (Nature 2023; co-senior author Chapurukha Kusimba) sampled 80 individuals from Mtwapa,
+      Manda, Faza, Kilwa, Songo Mnara and Lindi (c.1250-1800): mtDNA almost entirely African, Asian ancestry
+      mostly through male lines, mostly Persian-related; admixture began c.AD 1000, matching the spread of
+      Islam on the coast. The authors call Kiswahili an African Bantu language with Asian loanwords and suggest
+      immigrant men's children took their mothers' language. African ancestry averaged 74% at Kilwa. This
+      supports intermarriage within African towns, not colonization; the paper's own phrase is ongoing
+      cultural mixing. Note: some readers took the paper as confirming the Kilwa Chronicle's Shirazi story;
+      the authors say only that Persian-related ancestry is consistent with it.
+    evidence: [src-brielle-2023-swahili-adna, src-kusimba-rise-fall-swahili, src-chami-pre-islamic-kilwa, src-samuel-ahe-persian-myths]
+    confidence: high
+    ap_topics: ["2.3", "2.5"]
+
+  - id: df-shafii-school-coast
+    lens: religion
+    what: Shafi'i Sunni law and scholarship (replacing earlier Ibadi traces)
+    from: [pl-ext-yemen, pl-ext-hijaz]
+    to: pl-kilwa
+    span: {start: 1250, end: 1450, approx: true}
+    mechanism: hierarchical
+    carriers: [scholar, religious-specialist, ruler, pilgrim]
+    outcome: adoption
+    summary: >-
+      By the 1300s Swahili Muslims followed the Shafi'i school of law, the same school as Yemen across the
+      sea. Rulers who made the pilgrimage and welcomed visiting scholars helped make it the coast's standard.
+    detail: >-
+      Earlier features at Mtambwe Mkuu (Pemba) suggest Ibadi practice, replaced by a Shafi'i-type mosque by
+      the mid-11th c. (Samuel, citing Horton). Ibn Battuta's full text calls Mombasa's people Shafi'i (Hamdun
+      and King translation). Sultan al-Hasan ibn Sulayman made the hajj and reportedly studied in Aden (Sutton).
+      Shafi'i fiqh remains the coast's school today. Mechanism hierarchical because rulers and scholars
+      sponsored it; but urban adoption was broad by 1331. Carriers are Yemeni and Hijazi scholars and local
+      pilgrims returning.
+    evidence: [src-ibn-battuta-rihla, src-samuel-ahe-pemba, src-sutton-kilwa, src-pouwels-horn-crescent, src-sheriff-dhow-cultures]
+    confidence: medium
+    ap_topics: ["1.2", "2.3", "2.5"]
+
+  - id: df-mahdali-sharifs-kilwa
+    lens: religion
+    what: Sharifian (Prophet's-family) dynastic legitimacy and Yemeni scholarly ties of the Mahdali sultans
+    from: [pl-ext-yemen]
+    to: pl-kilwa
+    span: {start: 1277, end: 1333, approx: true}
+    mechanism: hierarchical
+    carriers: [ruler, religious-specialist, family]
+    outcome: elite-only
+    summary: >-
+      Around 1277 a new family, the Mahdali, took Kilwa's throne and claimed descent from the Prophet through a
+      Yemeni lineage. The claim raised the court's religious prestige; how it affected ordinary townspeople is
+      not recorded.
+    detail: >-
+      The Kilwa Chronicle (Arabic version) names al-Hasan ibn Talut as founder; Barros calls him an excellent
+      knight who seized power. Pouwels links the Mahdali to Yemen. Some sources say al-Hasan ibn Talut came
+      via Tumbatu (Zanzibar), which would make the "Yemeni" dynasty already a coastal lineage. Date c.1277 is
+      Freeman-Grenville's; Chittick's late 13th/early 14th c. break is compatible. "Hadrami scholars" in the
+      brief: not supported for this period; the Ahdal/Mahdali are from Yemen's Tihama, and Hadrami sayyid
+      migration is mostly post-1500.
+    evidence: [src-kilwa-chronicle-arabic, src-kilwa-chronicle-barros, src-pouwels-horn-crescent, src-chittick-1965-shirazi, src-saad-1979-kilwa-historiography]
+    confidence: medium
+    ap_topics: ["1.2", "1.5", "2.3"]
+
+  - id: df-islam-mogadishu
+    lens: religion
+    what: Islam as the public religion of the Benadir port, with royal mosque building
+    from: [pl-ext-yemen, pl-ext-persian-gulf, pl-ext-hijaz]
+    to: pl-mogadishu
+    span: {start: 1200, end: 1450, approx: true}
+    mechanism: contagious
+    carriers: [merchant, scholar, ruler]
+    outcome: adoption
+    summary: >-
+      Islam spread at Mogadishu through centuries of trade with Arabia and the Persian Gulf, and by the 1200s
+      its rulers were building mosques with dated Arabic inscriptions. Ibn Battuta found a Muslim court that
+      welcomed foreign scholars in 1331.
+    detail: >-
+      Islam was established before 1200 (Yaqut). Within the window: minaret of 1238, Fakhr al-Din mosque 1269,
+      coinage (a coin dated 1322), Ibn Battuta 1331. Mogadishu also exported scholars (Sa'id of Mogadishu),
+      showing it was a node in, not just a receiver of, Islamic learning. Taddesse Tamrat (GHA IV ch. 17)
+      treats Mogadishu with the other Muslim coastal principalities of the Horn.
+    evidence: [src-mogadishu-mosque-inscriptions, src-yaqut-mujam-al-buldan, src-ibn-battuta-rihla, src-tamrat-horn-gha4]
+    confidence: high
+    ap_topics: ["1.2", "2.3", "2.5"]
+
+  - id: df-islam-mombasa
+    lens: religion
+    what: Shafi'i Islam and wooden mosque building at Mombasa
+    from: [pl-kilwa, pl-ext-yemen]
+    to: pl-mombasa
+    span: {start: 1200, end: 1450, approx: true}
+    mechanism: contagious
+    carriers: [merchant, family]
+    outcome: adoption
+    summary: >-
+      When Ibn Battuta stopped in Mombasa in 1331, he described its people as Shafi'i Muslims (followers of one
+      school of Islamic law) with well-built wooden mosques. Mombasa's own traditions say a Muslim leader,
+      Shehe Mvita, followed an earlier queen.
+    detail: >-
+      The from-places are illustrative: Mombasa sat in the same coastal network as Kilwa and traded with Yemen.
+      No source dates Mombasa's first mosque; the Mwana Mkisi to Shehe Mvita sequence is the insider memory of
+      that change.
+    evidence: [src-ibn-battuta-rihla, src-mombasa-oral-traditions]
+    confidence: medium
+    ap_topics: ["2.3", "2.5"]
+
+  - id: df-islam-malindi
+    lens: religion
+    what: Islam as the religion of Malindi's ruling town
+    from: [pl-mombasa, pl-gedi]
+    to: pl-malindi
+    span: {start: 1250, end: 1450, approx: true}
+    mechanism: contagious
+    carriers: [merchant, family]
+    outcome: adoption
+    summary: >-
+      Malindi probably grew up as a Muslim Swahili town in the 1200s and 1300s, like Mombasa and Gedi,
+      though little direct evidence survives. By the 1400s its ruler was sending envoys to Ming China.
+    detail: Low-evidence record to keep Malindi on the religion layer; detail from regional pattern.
+    evidence: [src-matveiev-swahili-civilization]
+    confidence: low
+    ap_topics: ["2.3"]
+
+  - id: df-islam-gedi
+    lens: religion
+    what: Mosque building and Muslim burial at an inland Swahili town
+    from: [pl-malindi, pl-pate]
+    to: pl-gedi
+    span: {start: 1150, end: 1450, approx: true}
+    mechanism: contagious
+    carriers: [merchant, family, artisan]
+    outcome: syncretism
+    summary: >-
+      Gedi's people built mosques from the 1100s onward and buried their leaders in tall pillar tombs. Kenya's
+      heritage experts argue that Gedi's houses and tombs blend Islamic and African belief.
+    detail: >-
+      Outcome syncretism follows the Kenyan nomination as reported by ICOMOS, which itself asks for more
+      evidence; treat as medium-low. Mosques at Gedi lack minarets, which some link to Ibadi influence (via
+      Wikipedia summary of Kirkman); not checked.
+    evidence: [src-icomos-2024-gedi, src-kirkman-gedi]
+    confidence: medium
+    ap_topics: ["2.3", "2.5"]
+
+  - id: df-islam-pemba-chwaka
+    lens: religion
+    what: Growth of congregational Islam in a Pemba town
+    from: [pl-ext-persian-gulf, pl-kilwa]
+    to: pl-chwaka
+    span: {start: 1200, end: 1450, approx: true}
+    mechanism: contagious
+    carriers: [merchant, family]
+    outcome: adoption
+    summary: >-
+      At Chwaka on Pemba the main mosque was enlarged in the 1300s to three times its size, and a fourth mosque
+      followed. The bigger mosque suggests Islam had become the religion of most townspeople, not just a few
+      merchants.
+    detail: >-
+      Mosque sequence 11th, 13th, 14th (rebuild with side halls), 15th c. Imports were only 1-2% of finds, so
+      this is not a town of foreigners. Kilwa coins reached Pemba and Mafia, a sign of the southern network.
+    evidence: [src-samuel-ahe-pemba, src-laviolette-fleisher-2009-pemba]
+    confidence: medium
+    ap_topics: ["2.3", "2.5"]
+
+  - id: df-islam-tumbatu-unguja
+    lens: religion
+    what: Stone mosques at Tumbatu and Unguja towns
+    from: [pl-ext-persian-gulf, pl-ext-yemen]
+    to: pl-zanzibar
+    span: {start: 1200, end: 1350, approx: true}
+    mechanism: contagious
+    carriers: [merchant, family]
+    outcome: adoption
+    summary: >-
+      Tumbatu, a coral-stone town off Unguja, had several mosques before it was abandoned around 1350. Its
+      people followed the same Muslim building tradition as Kilwa and Pemba.
+    detail: >-
+      Tumbatu surveyed by Horton and Clark (1980s), recently by Rødland. Kizimkazi's Kufic inscription of 1107
+      is the archipelago's baseline before the window.
+    evidence: [src-samuel-ahe-kilwa-timeline, src-matveiev-swahili-civilization]
+    confidence: low
+    ap_topics: ["2.3"]
+
+  - id: df-islam-pate-shanga
+    lens: religion
+    what: Long-established town Islam in the Lamu archipelago (Shanga baseline, Pate's rise)
+    from: [pl-ext-persian-gulf, pl-ext-oman]
+    to: pl-pate
+    span: {start: 1200, end: 1450, approx: true}
+    mechanism: contagious
+    carriers: [merchant, family]
+    outcome: adoption
+    summary: >-
+      Shanga's mosque had been rebuilt on the same spot since the 700s, so Islam in the Lamu islands was very
+      old by 1200. When Pate town rose in the 1300s, it inherited that tradition.
+    detail: >-
+      Horton's interpretation of Shanga's first Muslims as local people overturned Chittick-era assumptions of
+      immigrant founders. The Pate Chronicle's Omani Nabhani story (1204) is the dynasty's later account.
+    evidence: [src-horton-shanga, src-archaeology-2014-colonial-archaeology, src-pate-chronicle]
+    confidence: medium
+    ap_topics: ["2.3", "2.5"]
+
+  - id: df-islam-sofala-merchants
+    lens: religion
+    what: Islam carried south with Kilwa's merchants and governor to the gold port
+    from: [pl-kilwa]
+    to: pl-sofala
+    span: {start: 1300, end: 1450, approx: true}
+    mechanism: relocation
+    carriers: [merchant, ruler]
+    outcome: coexistence
+    summary: >-
+      Kilwa's merchants and governor brought Islam to Sofala, where they lived as a Muslim trading community.
+      The Shona-speaking peoples who brought the gold kept their own religion.
+    detail: >-
+      Abu al-Fida (d.1331) says Sofala's inhabitants were Muslims; 15th-c. elite Muslim tombs. Coexistence is
+      the right outcome: the merchant colony kept Islam; its hinterland partners did not adopt it.
+    evidence: [src-abu-al-fida-taqwim, src-samuel-ahe-sofala]
+    confidence: medium
+    ap_topics: ["2.3", "2.5"]
+
+  - id: df-islam-no-uptake-great-zimbabwe
+    lens: religion
+    what: Islam reaching the gold-producing plateau through trade contacts
+    from: [pl-sofala, pl-kilwa]
+    to: pl-great-zimbabwe
+    span: {start: 1250, end: 1450, approx: true}
+    mechanism: contagious
+    carriers: [merchant]
+    outcome: no-uptake
+    summary: >-
+      Gold from Great Zimbabwe paid for Kilwa's mosques, and a Kilwa coin even turned up at the site, yet
+      Great Zimbabwe shows no sign of Islam. Trade connected the two worlds without changing the plateau's
+      religion.
+    detail: >-
+      Clean control case. Imports at the site: glass beads, Chinese celadon and porcelain, Persian faience,
+      Syrian glass (Fagan, GHA IV), plus a copper coin of al-Hasan ibn Sulayman of Kilwa (c.1320-1333). No
+      mosques, Arabic inscriptions or Muslim burials. Most likely the exchange happened through Shona
+      intermediaries and coastal agents at fairs, so Muslim traders rarely lived on the plateau before the
+      16th c. Ibn Battuta knows only hearsay: gold comes to Sofala from Yufi, a month inland. Teaching contrast:
+      Mali's court adopted Islam through the same kind of trade. Why not here? (No Muslim scholars resident;
+      kingship already anchored in ancestral and rain ritual; trade mediated at the coast.)
+    evidence: [src-fagan-zambezi-limpopo, src-unesco-whc-great-zimbabwe, src-ibn-battuta-rihla, src-chirikure-2013-new-pathways]
+    confidence: high
+    ap_topics: ["1.5", "1.7", "2.3", "2.5", "2.7"]
+
+  - id: df-islam-no-uptake-hinterland
+    lens: religion
+    what: Islam reaching mainland farming neighbors of the Swahili towns
+    from: [pl-kilwa, pl-mombasa, pl-malindi]
+    to: pl-coast-hinterland
+    span: {start: 1200, end: 1450, approx: true}
+    mechanism: contagious
+    carriers: [merchant, family]
+    outcome: no-uptake
+    summary: >-
+      The mainland peoples who traded food, ivory and iron with the Swahili towns spoke languages related
+      to Kiswahili but did not become Muslim in this period. Ibn Battuta reports that Kilwa's sultan
+      raided them and took captives.
+    detail: >-
+      Ibn Battuta (1331) calls Kilwa's neighbors non-Muslims and the sultan's campaigns holy war, his framing;
+      the gains included enslaved people. Ironically, raiding gave the hinterland a reason to keep its distance
+      from coastal religion. Later (16th c.+) Mijikenda kaya institutions show a separate, ancestor-centered
+      religious life, with exchange and alliance with Mombasa. Some coastal Islam may have reached marriage
+      partners and clients, but no evidence says so; no-uptake is the safest reading.
+    evidence: [src-ibn-battuta-rihla, src-kiriama-2006-kaya-bate, src-fowler-2005-place-without-history]
+    confidence: medium
+    ap_topics: ["2.3", "2.5"]
+
+  - id: df-pillar-tombs
+    lens: religion
+    what: Pillar tombs, a Swahili-invented Muslim funerary monument
+    from: [pl-pate]
+    to: pl-gedi
+    span: {start: 1250, end: 1450, approx: true}
+    mechanism: contagious
+    carriers: [artisan, family]
+    outcome: adoption
+    summary: >-
+      Swahili builders invented a new kind of Muslim grave marker, a tall coral pillar rising from the tomb,
+      first seen in the Lamu islands in the 1200s. It spread down the coast and appears at Gedi with a tomb
+      dated 1399.
+    detail: >-
+      Pillar tombs have no close model in Arabia or Persia; they may carry inset Chinese bowls, niches and
+      carving, and pillars can be round, square, polygonal or fluted. They spread to many sites in the 14th-15th
+      c. An example of diffusion within Africa, outward from an African origin. Scholars link them to lineage
+      memory (honoring founders), which connects to mizimu ideas, but that reading is interpretive.
+    evidence: [src-samuel-ahe-swahili-architecture, src-gedi-dated-tomb-inscription, src-kirkman-gedi]
+    confidence: medium
+    ap_topics: ["2.5"]
+
+  # ============================ OTHER LENSES (9 of 23)
+  - id: df-arabic-loanwords-kiswahili
+    lens: language
+    what: Arabic (and some Persian) loanwords entering Kiswahili, a Bantu language
+    from: [pl-ext-yemen, pl-ext-oman, pl-ext-persian-gulf]
+    to: pl-kilwa
+    span: {start: 1000, end: 1450, approx: true}
+    mechanism: contagious
+    carriers: [merchant, scholar, family]
+    outcome: syncretism
+    summary: >-
+      Kiswahili is a Bantu language from the same family as its mainland neighbors' languages, and it took in
+      Arabic words for religion, law and trade. The grammar stayed Bantu, so the borrowed words became Swahili
+      words.
+    detail: >-
+      Swahili belongs to the Sabaki branch of Northeast Coast Bantu (Nurse and Spear 1985). Loan estimates
+      vary widely (16-20% to claims of 40%); Spear (2000) found 72-91% of basic vocabulary inherited from Sabaki;
+      Persian loans are about 3%. How many Arabic loans entered before 1450 versus in the Omani period (18th-19th
+      c.) is contested; Sutton argues most are recent. Writing: no Kiswahili text survives from before 1450.
+      Earliest dated Swahili writing in Arabic script is debated: a Hamziya translation dated 1652 (Knappert),
+      letters of 1711 from Kilwa, letters of 1724 found in Goa (Vierke), the Utendi wa Tambuka c.1728. Misjugin's
+      claim (via Matveiev) that the script was created in the 10th-13th c. lacks surviving evidence. Mogadishu
+      spoke Maqdishi (Benadiri Somali), not Kiswahili.
+    evidence: [src-nurse-spear-1985-swahili, src-vierke-2021-swahili-manuscripts, src-brielle-2023-swahili-adna, src-matveiev-swahili-civilization, src-mazrui-shariff-swahili-identity]
+    confidence: medium
+    ap_topics: ["2.3", "2.5"]
+
+  - id: df-arabic-written-religion-law
+    lens: knowledge
+    what: Arabic as the written language of religion, law, inscriptions and coins
+    from: [pl-ext-yemen, pl-ext-hijaz]
+    to: pl-kilwa
+    span: {start: 1200, end: 1450, approx: true}
+    mechanism: hierarchical
+    carriers: [scholar, religious-specialist, ruler]
+    outcome: elite-only
+    summary: >-
+      Swahili rulers and scholars wrote in Arabic on coins, mosque inscriptions and tombstones, and Islamic
+      judges (qadis) used it in their courts. Most people spoke Kiswahili and could not read Arabic.
+    detail: >-
+      Ibn Battuta mentions qadis at Mogadishu and Kilwa (via Matveiev). Inscriptions: Husuni Kubwa (naming
+      al-Hasan ibn Sulayman), Mogadishu mosques 1238 and 1269, Gedi tomb 1399. The Kilwa Chronicle (16th c.)
+      was written in Arabic. Elite-only because literacy in Arabic was restricted to scholars and ruling
+      lineages.
+    evidence: [src-husuni-kubwa-inscription, src-mogadishu-mosque-inscriptions, src-matveiev-swahili-civilization, src-kilwa-chronicle-arabic]
+    confidence: medium
+    ap_topics: ["1.2", "2.5"]
+
+  - id: df-domes-vaults-coral
+    lens: architecture
+    what: Domes, vaults and coral-rag-and-lime masonry for mosques and palaces
+    from: [pl-mogadishu, pl-ext-yemen, pl-ext-persian-gulf]
+    to: pl-kilwa
+    span: {start: 1269, end: 1450, approx: true}
+    mechanism: stimulus
+    carriers: [artisan, ruler]
+    outcome: syncretism
+    summary: >-
+      Swahili masons built with coral stone cut from reefs and lime they burned themselves, and in the 1200s
+      and 1300s they began roofing buildings with domes and vaults. Builders took the idea of the dome from the
+      wider Muslim world but made it in local coral with local designs.
+    detail: >-
+      Sequence (Samuel, citing Horton, Pradines, Wynne-Jones): Porites coral in mud (10th-11th c.), then
+      coral-rag ashlar and coral concrete from the 13th c., lime mortar by the early 14th c. Vaulting appears
+      first at the Fakhr al-Din mosque, Mogadishu (c.1269-72), then at Husuni Kubwa and the Great Mosque
+      extension at Kilwa (early 14th c.), then in 15th-c. mosques and domed tombs. Mihrab forms and Kufic
+      inscriptions show affinities with Yemen, Oman and Siraf; Swahili-style mosques at Siraf and Sharma (Yemen)
+      may have served African Muslims abroad, so influence ran both ways. Stimulus: the principle traveled,
+      the forms are local.
+    evidence: [src-samuel-ahe-swahili-architecture, src-unesco-whc-kilwa, src-sutton-kilwa, src-chittick-kilwa-1974]
+    confidence: medium
+    ap_topics: ["2.3", "2.5"]
+
+  - id: df-kilwa-coinage
+    lens: governance
+    what: Locally minted copper (and briefly gold) coinage with Arabic legends naming sultans
+    from: [pl-ext-persian-gulf, pl-ext-yemen]
+    to: pl-kilwa
+    span: {start: 1000, end: 1450, approx: true}
+    mechanism: stimulus
+    carriers: [ruler, artisan]
+    outcome: syncretism
+    summary: >-
+      Kilwa's sultans minted their own small copper coins with their names and a rhyming religious phrase in
+      Arabic. The idea of coinage came from the Islamic world, but the coins followed local rules, without mint
+      names or dates.
+    detail: >-
+      First coins at the end of the 10th c. (Horton et al. 2022). Kilwa-type coins circulated for centuries,
+      with old types kept in circulation for centuries (Ali ibn al-Hasan coins in a deposit of c.1400).
+      Al-Hasan ibn Sulayman issued the only gold coins on the coast (1320s; Brown 1991 via Sutton). Matveiev
+      links the lack of mint and date to local custom. Coins were cut, pierced and buried in house
+      foundations, showing local meanings (Wynne-Jones and Fleisher). Mogadishu minted too (coin dated 1322).
+      Spread from Kilwa to Mafia, Zanzibar and Pemba; one reached Great Zimbabwe (no coin use adopted there).
+    evidence: [src-kilwa-coinage, src-horton-2022-kilwa-chronology, src-perkins-2014-songo-mnara-coins, src-wynne-jones-fleisher-coins-context, src-matveiev-swahili-civilization]
+    confidence: high
+    ap_topics: ["2.3", "2.7"]
+
+  - id: df-imports-great-zimbabwe
+    lens: art-music
+    what: Glass beads, Chinese celadon and porcelain, Persian faience used as prestige goods on the plateau
+    from: [pl-ext-china, pl-ext-persian-gulf, pl-ext-gujarat]
+    to: pl-great-zimbabwe
+    span: {start: 1220, end: 1450, approx: true}
+    mechanism: contagious
+    carriers: [merchant]
+    outcome: elite-only
+    summary: >-
+      Chinese porcelain, Persian pottery and Indian Ocean glass beads reached Great Zimbabwe and Mapungubwe in
+      exchange for gold and ivory. Rulers used them as status objects in their own way, without adopting the
+      cultures that made them.
+    detail: >-
+      Glass beads (some resembling Indian types, per Matveiev), Chinese celadon and blue-and-white (14th-15th
+      c.), Persian faience, Syrian glass (Fagan). At Mapungubwe, beads were fused into large prestige "garden
+      rollers." From-places: China, the Gulf, Gujarat are origin regions, but everything came via Swahili
+      ports. Elite-only: imports are rare and cluster in elite contexts.
+    evidence: [src-fagan-zambezi-limpopo, src-unesco-whc-great-zimbabwe, src-unesco-whc-mapungubwe, src-matveiev-swahili-civilization]
+    confidence: high
+    ap_topics: ["2.3", "2.7"]
+
+  - id: df-porcelain-in-walls
+    lens: art-music
+    what: Chinese porcelain bowls set into mosque, tomb and house walls as decoration
+    from: [pl-ext-china]
+    to: pl-gedi
+    span: {start: 1300, end: 1450, approx: true}
+    mechanism: stimulus
+    carriers: [merchant, artisan]
+    outcome: syncretism
+    summary: >-
+      Swahili builders pressed Chinese porcelain bowls into the plaster of mosques, tombs and houses as
+      decoration. Chinese objects became part of a Swahili way of showing status and piety.
+    detail: >-
+      Celadon was prized in the 14th c.; blue-and-white replaced it in the early 15th. At Gedi porcelain is
+      inlaid in mosques and tombs (ICOMOS draft statement). Later Swahili houses (Lamu, 18th-19th c.) continue
+      the practice in wall niches.
+    evidence: [src-icomos-2024-gedi, src-kirkman-gedi, src-matveiev-swahili-civilization]
+    confidence: medium
+    ap_topics: ["2.3", "2.5"]
+
+  - id: df-malindi-giraffe-to-china
+    lens: governance
+    what: Diplomatic gifts and envoys from Malindi to the Ming court, the giraffe read as a qilin
+    from: [pl-malindi]
+    to: pl-ext-china
+    span: {start: 1414, end: 1416, approx: true}
+    mechanism: hierarchical
+    carriers: [ruler, merchant]
+    outcome: syncretism
+    summary: >-
+      In 1414 and 1415 giraffes from Malindi arrived at the Ming court, and Chinese officials hailed them as the
+      qilin, a sacred creature that signals a good ruler. An East African ruler's gift was reinterpreted to
+      support the Yongle emperor's legitimacy.
+    detail: >-
+      Common account (Duyvendak; Science News summary): Malindi envoys at the Bengal court in 1413-14 had given
+      Bengal a giraffe, which was passed to Zheng He's officers and presented in 1414; Shen Du painted it with
+      a poem naming it qilin. In 1415 Malindi envoys brought another giraffe directly (1415 route per
+      Duyvendak; Science News says only 'a year later'). Direction matters for students: here culture flows out
+      of Africa and is reshaped in China.
+    evidence: [src-shen-du-giraffe-painting, src-sciencenews-giraffes, src-ming-voyage-records]
+    confidence: medium
+    ap_topics: ["2.3", "2.5"]
+
+  - id: df-shirazi-status-identity
+    lens: social
+    what: '"Shirazi" descent claims as a marker of high rank and early Muslim credentials'
+    from: [pl-kilwa]
+    to: pl-zanzibar
+    span: {start: 1200, end: 1450, approx: true}
+    mechanism: hierarchical
+    carriers: [ruler, family]
+    outcome: adoption
+    summary: >-
+      Ruling and leading families on the southern coast came to call themselves "Shirazi," claiming founders
+      from Shiraz in Persia. Historians read this as a claim to old Muslim status, not a record of a migration.
+    detail: >-
+      Chittick (1965) tied a Shirazi dynasty to coins of Ali ibn al-Hasan and suggested the "Shirazi" came from
+      the Benadir coast, not directly from Persia. Spear (1984) and Allen (1993) treat Shirazi traditions as
+      status claims; Pouwels as merged origin myths. The traditions are written down only in the 16th c.
+      (Kilwa Chronicle) and later, so the dating of the identity's spread to Zanzibar, Pemba and Mafia in this
+      window is inference. aDNA shows real but limited Persian-related male ancestry from about AD 1000, which
+      explains why a Persian name carried prestige. Low confidence on span.
+    evidence: [src-chittick-1965-shirazi, src-spear-1984-shirazi, src-allen-swahili-origins, src-pouwels-horn-crescent, src-brielle-2023-swahili-adna]
+    confidence: low
+    ap_topics: ["2.3", "2.5"]
+
+  - id: df-enslaved-from-mainland
+    lens: social
+    what: Mainland people taken by raids into coastal households as enslaved workers
+    from: [pl-coast-hinterland]
+    to: pl-kilwa
+    span: {start: 1300, end: 1450, approx: true}
+    mechanism: relocation
+    carriers: [enslaved-people, military]
+    outcome: undocumented
+    summary: >-
+      Ibn Battuta reports that Kilwa's sultan raided non-Muslim mainland peoples and that enslaved people were
+      given as gifts at court. These captives brought their own languages and beliefs into Kilwa's households,
+      but no record says what became of them.
+    detail: >-
+      Ibn Battuta's anecdote (Freeman-Grenville translation; Rødland's commentary): the sultan's son gives a
+      beggar ten enslaved people; the sultan adds ten more and two loads of ivory. Matveiev cites a 15th-16th c.
+      source for enslaved farm workers at Kilwa. Outcome is a placeholder: nothing records whether captives'
+      practices persisted, blended or vanished; "coexistence" is the least presumptuous value in the list (see
+      taxonomy pressure). The large-scale export slave trade from this coast belongs mostly to later centuries;
+      do not project it back.
+    evidence: [src-ibn-battuta-rihla, src-rodland-medievalslavery-kilwa, src-matveiev-swahili-civilization]
+    confidence: low
+    ap_topics: ["2.3", "2.5"]
+
+exemplars:
+  - id: ex-great-mosque-kilwa
+    name: Great Mosque of Kilwa
+    place: pl-kilwa
+    location: {lat: -8.958, lon: 39.507}
+    span: {start: 1100, end: null, approx: true}
+    fabric_date: 1421
+    lenses: [architecture, religion]
+    summary: >-
+      Kilwa's Friday mosque began as a pillared hall in the 1100s and was enlarged with a great domed extension
+      by Sultan al-Hasan in the early 1300s. Its many coral domes and vaults made it the largest mosque on the
+      coast for centuries.
+    detail: >-
+      Northern prayer hall 11th-12th c. (UNESCO: built 11th c., enlarged 13th c.); early-14th-c. southern
+      extension with a great dome under al-Hasan ibn Sulayman, collapsed probably late in his reign or soon
+      after; rebuilt in the 15th c. under Sulayman ibn Muhammad (c.1412/1421-1442; sources differ) with
+      octagonal coral-rag pillars. Ibn Battuta claimed Kilwa's buildings were wooden, which excavation
+      contradicts for this mosque. fabric_date 1421 marks the start of Sulayman ibn Muhammad's rebuild
+      (c.1412/1421-1442), which produced most of the standing domes and pillars; the northern hall is
+      older. Treat as approximate.
+    image_hint: "Wikimedia Commons search: Great Mosque of Kilwa"
+    evidence: [src-unesco-whc-kilwa, src-chittick-kilwa-1974, src-samuel-ahe-kilwa-timeline]
+    confidence: high
+
+  - id: ex-husuni-kubwa
+    name: Husuni Kubwa palace, Kilwa
+    place: pl-kilwa
+    location: {lat: -8.947, lon: 39.521}
+    span: {start: 1310, end: 1333, approx: true}
+    lenses: [architecture, governance]
+    summary: >-
+      Sultan al-Hasan ibn Sulayman began this huge cliff-top palace and trading house in the early 1300s, with
+      courtyards, over a hundred rooms and an octagonal bathing pool. It was never finished.
+    detail: >-
+      UNESCO dates it c.1310-1333. An inscription names al-Hasan ibn Sulayman with the title al-Malik al-Mansur,
+      the only known inscription at Kilwa naming a ruler (Sutton 1997). The large south court is read as a
+      caravanserai or warehouse. Imported glazed ware is mostly Chinese celadon. An early use of domes and
+      vaults south of Mogadishu.
+    image_hint: "Wikimedia Commons search: Husuni Kubwa"
+    evidence: [src-unesco-whc-kilwa, src-husuni-kubwa-inscription, src-sutton-kilwa]
+    confidence: high
+
+  - id: ex-kilwa-coins
+    name: Kilwa copper coins (Songo Mnara deposit)
+    place: pl-kilwa
+    location: {lat: -9.051, lon: 39.565}
+    span: {start: 1000, end: 1500, approx: true}
+    lenses: [governance, religion]
+    summary: >-
+      Kilwa's small copper coins carry a sultan's name paired with a rhyming religious phrase in Arabic. More
+      than 300 were found buried in a house foundation at Songo Mnara, as if building wealth into the house.
+    detail: >-
+      Perkins, Fleisher and Wynne-Jones (2014): first deposit in clear context, late 14th/early 15th c.,
+      including Ali ibn al-Hasan types (late 11th-early 12th c.) and Nasir al-Dunya types (14th-15th c.), with
+      a carnelian necklace. Coins come in gold, silver and copper, standardized at about 2 cm, sometimes cut or
+      pierced. Location is Songo Mnara.
+    image_hint: "British Museum collection search: Kilwa coin; Wikimedia Commons: Kilwa coin"
+    evidence: [src-perkins-2014-songo-mnara-coins, src-wynne-jones-fleisher-coins-context, src-kilwa-coinage]
+    confidence: high
+
+  - id: ex-marchinbar-coins
+    name: Kilwa coins found in Australia (Marchinbar Island)
+    place: pl-kilwa
+    location: {lat: -8.957, lon: 39.512}
+    found_at: {name: "Marchinbar Island, Wessel Islands, Northern Territory, Australia", lat: -11.25, lon: 136.63}
+    span: {start: 1944, end: null, approx: false}
+    on_slider: false
+    lenses: [technology]
+    summary: >-
+      In 1944 an Australian airman found five Kilwa coins on a beach in northern Australia, along with Dutch
+      coins of the 1600s-1700s. Nobody knows how they got there.
+    detail: >-
+      Found by RAAF serviceman Morry Isenberg on Marchinbar Island (Wessel Islands, Northern Territory). A 2013
+      expedition (Ian McIntosh and colleagues) could not settle the question; options include a shipwreck,
+      later traders, Portuguese loot after 1505, or a collector. A further coin was reported from Elcho Island
+      in 2018 (not checked). The Kilwa coins' issue dates are uncertain because old types stayed in circulation
+      for centuries. Use as a hook for "how far could Indian Ocean objects travel?", not as evidence of
+      medieval Swahili voyages to Australia. Span is the find date; location is Kilwa, where the coins were
+      minted, found_at holds the Australian findspot, and on_slider is false so the card stays off the
+      1200-1450 timeline.
+    image_hint: "Wikimedia Commons search: Marchinbar Island Kilwa coins"
+    evidence: [src-australian-geographic-2014-kilwa-coins]
+    confidence: low
+
+  - id: ex-kilwa-chronicle
+    name: The Kilwa Chronicle (Kitab al-Sulwa fi akhbar Kulwa)
+    place: pl-kilwa
+    location: {lat: -8.96, lon: 39.512}
+    span: {start: 1520, end: 1552, approx: true}
+    on_slider: false
+    lenses: [knowledge, religion]
+    summary: >-
+      The Kilwa Chronicle is Kilwa's own history of its sultans, written in the 1500s in Arabic and also kept
+      in Portuguese. It tells of a prince from Shiraz in Persia who bought the island with cloth, which
+      historians read as a claim to status, not a real migration.
+    detail: >-
+      Two versions: the Arabic Kitab al-Sulwa (one manuscript, British Library Or. 2666, copied 1877 in Zanzibar
+      under Sultan Barghash; Strong edited it 1895) and the Portuguese version in Barros, Decadas da Asia (1552).
+      They share genealogies but differ in detail; Freeman-Grenville and Chittick read the differences
+      differently, and Saad (1979) argues they record rival dynastic accounts. Arabahmadi (2023) sees a 16th-c.
+      layer plus a 19th-c. Omani redaction. Composed during the succession crisis after the Portuguese
+      intervention (1505-1512), it presents Kilwa as Muslim and urban against its mainland. Span is the
+      composition range; on_slider is false because the marker is a source card, not a 1200-1450 event.
+    image_hint: "SOAS Digital Collections: Kitab al-Sulwa fi Akhbar Kulwa (MS 53501a)"
+    evidence: [src-kilwa-chronicle-arabic, src-kilwa-chronicle-barros, src-saad-1979-kilwa-historiography, src-arabahmadi-2023-kilwa-chronicle]
+    confidence: high
+
+  - id: ex-fakhr-al-din-mosque
+    name: Fakhr al-Din Mosque, Mogadishu
+    place: pl-mogadishu
+    location: {lat: 2.035, lon: 45.343}
+    span: {start: 1269, end: null, approx: false}
+    lenses: [architecture, religion]
+    summary: >-
+      This Mogadishu mosque has an inscription dated 1269 on its mihrab (the prayer niche facing Mecca),
+      naming its builder, Sultan Fakhr al-Din. Its vaulted roof is among the earliest on the East African
+      coast.
+    detail: >-
+      Marble mihrab (marble reportedly from India); conical domes; compact rectangular plan. The Jama'a mosque
+      minaret in Hamar Weyne is dated 1238. Location approximate (Hamar Weyne).
+    image_hint: "Wikimedia Commons search: Fakr ad-Din Mosque Mogadishu"
+    evidence: [src-mogadishu-mosque-inscriptions, src-pradines-historic-mosques, src-matveiev-swahili-civilization]
+    confidence: high
+
+  - id: ex-gedi-dated-tomb
+    name: The Dated Tomb and pillar tombs of Gedi
+    place: pl-gedi
+    location: {lat: -3.309, lon: 40.017}
+    span: {start: 1399, end: null, approx: false}
+    lenses: [religion, architecture]
+    summary: >-
+      Gedi's Dated Tomb carries an Arabic inscription for the year 1399, and nearby pillar tombs show a grave
+      style invented on the Swahili coast. Its colonial-era excavator called Gedi an "Arab city," but today it
+      is recognized as a Swahili African town.
+    detail: >-
+      Inscription A.H. 802 (1399), a fixed point for the site's sequence. Four large pillar tombs with recessed
+      panels. Kirkman, The Arab City of Gedi (1954), is the teaching example of the colonial framing; the 2024
+      World Heritage listing presents a Swahili town.
+    image_hint: "Wikimedia Commons search: Gedi ruins pillar tomb"
+    evidence: [src-gedi-dated-tomb-inscription, src-kirkman-gedi, src-icomos-2024-gedi]
+    confidence: high
+
+  - id: ex-shanga-mosques
+    name: Shanga mosque sequence (Pate Island)
+    place: pl-pate
+    location: {lat: -2.15, lon: 41.03}
+    span: {start: 780, end: 1425, approx: true}
+    lenses: [religion, architecture]
+    summary: >-
+      At Shanga archaeologists found mosques rebuilt on one spot from the late 700s, first in timber and later
+      in coral stone. The excavator reads the sequence as local Africans becoming Muslim centuries before
+      Kilwa's golden age.
+    detail: >-
+      Baseline for the window. Horton (1996): an earthen town with the same layout as the later stone town,
+      a series of timber mosques, coral by the 10th c., a stone mosque with mihrab and Kufic inscriptions c.1150;
+      town abandoned c.1400-1425. Location approximate.
+    image_hint: "Wikimedia Commons search: Shanga Kenya ruins"
+    evidence: [src-horton-shanga, src-archaeology-2014-colonial-archaeology, src-samuel-ahe-swahili-architecture]
+    confidence: high
+
+  - id: ex-zimbabwe-birds
+    name: Soapstone birds of Great Zimbabwe
+    place: pl-great-zimbabwe
+    location: {lat: -20.268, lon: 30.929}
+    span: {start: 1300, end: 1450, approx: true}
+    lenses: [religion, art-music]
+    summary: >-
+      Eight carved soapstone birds once stood on tall pillars at Great Zimbabwe, six of them in the Hill
+      Complex's Eastern Enclosure. They are read as emblems of royal ancestors or as messengers between people,
+      ancestors and Mwari, and one is now on Zimbabwe's flag.
+    detail: >-
+      Looting: a bird was cut off its pedestal in 1889 (Posselt) and sold to Cecil Rhodes (standard account,
+      not in the cited Al Jazeera piece; cite to Matenga 1998 after a library check); the pedestal went to
+      Berlin in 1907. South Africa returned birds in 1981; Germany returned the pedestal in 2003; Al Jazeera
+      (2020) says one bird remained at Rhodes's former home. Godfrey Mahachi (National Museums and Monuments
+      of Zimbabwe): "They connect the present with our past." Location: Hill Complex.
+    image_hint: "Wikimedia Commons search: Zimbabwe Bird soapstone"
+    evidence: [src-gz-soapstone-birds, src-met-great-zimbabwe, src-aljazeera-2020-zimbabwe-birds, src-matenga-soapstone-birds]
+    confidence: high
+
+  - id: ex-great-enclosure
+    name: Great Enclosure and conical tower, Great Zimbabwe
+    place: pl-great-zimbabwe
+    location: {lat: -20.273, lon: 30.936}
+    span: {start: 1300, end: 1450, approx: true}
+    lenses: [architecture, governance]
+    summary: >-
+      The Great Enclosure's curving granite walls, built without mortar in the 1300s, are the largest early
+      stone structure south of the Sahara. Colonial writers claimed foreigners built it, but archaeology proved
+      it a Shona achievement.
+    detail: >-
+      Built gradually in the 14th c. (UNESCO; Fagan). Purpose of the conical tower unknown. Colonial denial: Bent
+      (1891) and Hall (1902-04) argued for foreign builders and destroyed stratigraphy; Rhodesian authorities
+      later pressured archaeologists; Randall-MacIver (1906) and Caton-Thompson (1929) showed African origin,
+      confirmed by Summers, Robinson and Garlake. Barros (1552) already reports that coastal Muslim merchants
+      could not say who built such structures.
+    image_hint: "Wikimedia Commons search: Great Enclosure Great Zimbabwe"
+    evidence: [src-unesco-whc-great-zimbabwe, src-fagan-zambezi-limpopo, src-zimfieldguide-early-descriptions, src-garlake-great-zimbabwe]
+    confidence: high
+
+  - id: ex-mapungubwe-gold-rhino
+    name: Gold rhinoceros of Mapungubwe
+    place: pl-mapungubwe
+    location: {lat: -22.193, lon: 29.239}
+    span: {start: 1220, end: 1290, approx: true}
+    lenses: [art-music, religion]
+    summary: >-
+      This small rhinoceros of gold foil over a carved wooden core was buried with a high-status person on
+      Mapungubwe Hill. It shows local goldwork made for an elite burial, not for export.
+    detail: >
+      Found in the hilltop elite cemetery in 1932-33; held by the University of Pretoria.
+    image_hint: "Wikimedia Commons search: Golden Rhinoceros of Mapungubwe"
+    evidence: [src-met-mapungubwe, src-unesco-whc-mapungubwe]
+    confidence: high
+
+  - id: ex-malindi-giraffe-painting
+    name: Tribute giraffe with attendant (Shen Du, 1414)
+    place: pl-malindi
+    location: {lat: -3.219, lon: 40.117}
+    span: {start: 1414, end: null, approx: false}
+    lenses: [art-music, governance]
+    summary: >-
+      This Ming court painting shows an East African giraffe led by an attendant, with a poem calling it a
+      qilin, a sign of heaven's favor. It records Malindi's diplomacy with China through Chinese eyes.
+    detail: >-
+      Original by Shen Du; a later copy is in the Philadelphia Museum of Art (not checked). Pinned at Malindi
+      because the giraffe diplomacy began there.
+    image_hint: "Wikimedia Commons search: Shen Du giraffe tribute"
+    evidence: [src-shen-du-giraffe-painting, src-sciencenews-giraffes]
+    confidence: medium
+
+events:
+  - id: ev-mapungubwe-hill-capital
+    year: 1220
+    approx: true
+    place: pl-mapungubwe
+    title: Mapungubwe's rulers move onto the hill
+    keyframe: false
+    lenses: [religion, governance]
+    summary: >-
+      Around 1220 Mapungubwe's elite moved onto a hilltop above their people, linking kingship to rain-making.
+      The kingdom traded gold and ivory to the coast for beads and cloth.
+    detail: Hill capital c.1220-1290 (Chirikure et al. 2013; Met). K2 below the hill from the 11th c.
+    evidence: [src-chirikure-2013-new-pathways, src-met-mapungubwe]
+    confidence: medium
+    ap_topics: ["1.5", "2.3"]
+
+  - id: ev-fakhr-al-din-mosque
+    year: 1269
+    approx: false
+    place: pl-mogadishu
+    title: Fakhr al-Din mosque inscribed at Mogadishu
+    keyframe: false
+    lenses: [religion, architecture]
+    summary: >-
+      An inscription on the mihrab (prayer niche) dates Mogadishu's Fakhr al-Din mosque to 1269. Its curved
+      stone roof marks the start of dome and vault building on the coast.
+    detail: See ex-fakhr-al-din-mosque.
+    evidence: [src-mogadishu-mosque-inscriptions, src-samuel-ahe-swahili-architecture]
+    confidence: high
+    ap_topics: ["1.2", "2.3"]
+
+  - id: ev-mahdali-takeover
+    year: 1277
+    approx: true
+    place: pl-kilwa
+    title: The Mahdali dynasty takes Kilwa
+    keyframe: true
+    lenses: [religion, governance]
+    summary: >-
+      Around 1277 al-Hasan ibn Talut seized power at Kilwa and founded the Mahdali dynasty, which claimed descent
+      from the Prophet's family through Yemen. Under his grandson Kilwa controlled the gold trade of Sofala and
+      reached its peak.
+    detail: >-
+      Date from Freeman-Grenville's chronology of the Kilwa Chronicle; Chittick puts the dynastic break late
+      13th/early 14th c. The Chronicle and Barros differ on details (Saad). Kilwa had taken Sofala from
+      Mogadishu's merchants in the late 13th c. (Pouwels via Samuel) or earlier (some versions say 12th c.).
+      Ask students: what did a sharifian claim give a ruler who had taken the throne by force?
+    evidence: [src-kilwa-chronicle-arabic, src-kilwa-chronicle-barros, src-saad-1979-kilwa-historiography, src-chittick-1965-shirazi]
+    confidence: medium
+    ap_topics: ["1.2", "1.5", "2.3"]
+
+  - id: ev-ibn-battuta-swahili-coast
+    year: 1331
+    approx: true
+    place: pl-kilwa
+    title: Ibn Battuta sails the Swahili coast
+    keyframe: true
+    lenses: [religion, knowledge, social]
+    summary: >-
+      The Moroccan traveler Ibn Battuta visited Mogadishu, Mombasa and Kilwa and described their Muslim courts,
+      wooden mosques and generous sultan. He wrote as an outsider, judging African Muslims by North African
+      standards.
+    detail: >-
+      Date: 1331 in Gibb and Dunn's chronology; 1330 or 1332 in other works. Key claims: Mogadishu's ruler Abu
+      Bakr speaks Maqdishi and Arabic, merchants lodge with hosts; Mombasa's people are Shafi'i with wooden
+      mosques; Kilwa is beautifully built, its people mostly Zanj with facial tattoos, its sultan Abu
+      al-Muzaffar Hasan (Abu al-Mawahib) generous and campaigning against mainland non-Muslims, giving away
+      slaves and ivory. He only heard about Sofala's gold from Yufi. HAPP: dictated in Fez c.1355 for the
+      Marinid court.
+    evidence: [src-ibn-battuta-rihla, src-rodland-medievalslavery-kilwa]
+    confidence: high
+    ap_topics: ["1.2", "2.3", "2.5"]
+
+  - id: ev-said-of-mogadishu
+    year: 1315
+    approx: true
+    place: pl-mogadishu
+    title: Sa'id of Mogadishu leaves to study in Mecca and Medina
+    keyframe: false
+    lenses: [knowledge, religion]
+    summary: >-
+      According to Ibn Battuta, who met him in India, a young scholar from Mogadishu named Sa'id studied in
+      Mecca and Medina for many years and later traveled to India and China. African Muslims were teachers and
+      travelers in the Islamic world, not only learners.
+    detail: >-
+      Born c.1301, reported by Ibn Battuta (who met him in India) as studying 14 years in each holy city. Year
+      1315 is an estimate of departure ("as a teenager"). Kept as an event because the taxonomy has no outcome
+      for a scholar joining an existing shared tradition abroad (see taxonomy pressure).
+    evidence: [src-ibn-battuta-rihla]
+    confidence: medium
+    ap_topics: ["1.2", "2.3"]
+
+  - id: ev-great-zimbabwe-peak
+    year: 1350
+    approx: true
+    place: pl-great-zimbabwe
+    title: Great Zimbabwe at its height
+    keyframe: true
+    lenses: [architecture, religion, governance]
+    summary: >-
+      By the mid-1300s Great Zimbabwe's builders were raising the Great Enclosure, and the city's rulers grew
+      rich from gold traded to the coast. They kept their own Shona religion while trading with Muslim
+      merchants.
+    detail: >-
+      Peak building 14th-15th c.; imports peak 14th c. (Fagan). Pair this keyframe with
+      ev-ibn-battuta-swahili-coast (1331) to show the two ends of one trade route with two different
+      religious outcomes.
+    evidence: [src-chirikure-2013-bayesian-gz, src-fagan-zambezi-limpopo, src-unesco-whc-great-zimbabwe]
+    confidence: high
+    ap_topics: ["1.5", "1.7", "2.3"]
+
+  - id: ev-tumbatu-abandoned
+    year: 1350
+    approx: true
+    place: pl-zanzibar
+    title: Tumbatu abandoned
+    keyframe: false
+    lenses: [population]
+    summary: >-
+      The stone town of Tumbatu, off Unguja (Zanzibar), was abandoned around 1350, and its cause is not
+      known. Power in the islands shifted toward Pemba's towns.
+    detail: Wynne-Jones via Samuel; cause not established. Matches a wider late-14th-c. downturn (gold prices, plague?).
+    evidence: [src-samuel-ahe-kilwa-timeline]
+    confidence: low
+    ap_topics: ["2.3"]
+
+  - id: ev-malindi-giraffe
+    year: 1414
+    approx: false
+    place: pl-malindi
+    title: An East African giraffe reaches the Ming court
+    keyframe: true
+    lenses: [governance, art-music]
+    summary: >-
+      In 1414 a giraffe from Malindi was presented to the Yongle emperor, and in 1415 Malindi's own envoys brought
+      another. The Chinese court treated the animal as a qilin, proof of the emperor's virtue.
+    detail: See df-malindi-giraffe-to-china. The 1414 animal came via Bengal; 1415 directly from Malindi.
+    evidence: [src-sciencenews-giraffes, src-shen-du-giraffe-painting]
+    confidence: medium
+    ap_topics: ["2.3", "2.5"]
+
+  - id: ev-ming-fleets-east-africa
+    year: 1418
+    approx: true
+    place: pl-mogadishu
+    title: Ming treasure-fleet squadrons call at Mogadishu, Brava and Malindi
+    keyframe: false
+    lenses: [governance, technology]
+    summary: >-
+      Squadrons of Zheng He's fleets reached Mogadishu, Brava and Malindi between 1417 and 1433, trading silk
+      and porcelain and escorting envoys home. The visits ended when the Ming stopped the voyages, leaving
+      little lasting trace.
+    detail: >-
+      Fifth voyage (1417-1419) lists Mogadishu, Brava and Malindi; sixth (1421-1422) sent detached squadrons to
+      Mogadishu and Brava; seventh (1431-1433) names them in the Mingshi. Whether Zheng He himself came is
+      unclear (Dreyer). Matveiev dates the first reliable records to 1417-1419 and 1421-1422. Legends of Chinese
+      shipwreck survivors on Pate are unproven.
+    evidence: [src-ming-voyage-records, src-dreyer-zheng-he, src-matveiev-swahili-civilization]
+    confidence: medium
+    ap_topics: ["2.3"]
+
+  - id: ev-kilwa-great-mosque-rebuilt
+    year: 1430
+    approx: true
+    place: pl-kilwa
+    title: Kilwa's Great Mosque rebuilt as amirs rise
+    keyframe: false
+    lenses: [architecture, governance]
+    summary: >-
+      Under Sultan Sulayman ibn Muhammad, Kilwa rebuilt its Great Mosque with coral pillars and vaults. At the
+      same time real power was shifting from sultans to governors and councils of leading families.
+    detail: Sulayman ibn Muhammad c.1421-1442 (Matveiev gives 1412-1442). Saad on 15th-c. decentralization.
+    evidence: [src-matveiev-swahili-civilization, src-saad-1979-kilwa-historiography, src-samuel-ahe-kilwa-timeline]
+    confidence: medium
+    ap_topics: ["1.5", "2.3"]
+
+  - id: ev-great-zimbabwe-decline
+    year: 1450
+    approx: true
+    place: pl-great-zimbabwe
+    title: Great Zimbabwe declines; Khami and Mutapa rise
+    keyframe: true
+    lenses: [population, governance, religion]
+    summary: >-
+      During the 1400s Great Zimbabwe lost its place as the region's main center, while Khami in the
+      southwest and Mutapa in the north grew. Shona tradition says people left because salt ran short;
+      archaeologists also point to worn-out land and shifting trade.
+    detail: >-
+      Contested: UNESCO gives abandonment c.1450 (overpopulation, deforestation); Chirikure et al. (2013) show
+      occupation into the 16th c. and probably the 17th; the overlap their abstract discusses is with
+      Mapungubwe, not Khami. Explanations: land and resource exhaustion (the "salt" of tradition may stand for
+      this), falling gold demand, new Zambezi trade routes. Fagan (GHA IV) gives environmental limits and a
+      late-15th-c. decline. The salt tradition (Mutota leaving to find salt) is citation-only.
+    evidence: [src-unesco-whc-great-zimbabwe, src-chirikure-2013-bayesian-gz, src-shona-oral-traditions, src-fagan-zambezi-limpopo]
+    confidence: medium
+    ap_topics: ["1.5", "1.7", "2.6"]
+
+  - id: ev-mutapa-founding
+    year: 1450
+    approx: true
+    place: pl-mutapa
+    title: Nyatsimba Mutota founds Mutapa (tradition)
+    keyframe: false
+    lenses: [governance, religion]
+    summary: >-
+      Shona traditions say Nyatsimba Mutota led people north from the Zimbabwe plateau, found salt in Dande and
+      founded the Mutapa kingdom. Historians accept a 15th-century founding but not an exact date.
+    detail: 'Forward pointer. Beach: Mutota may be symbolic; Mudenge: traditions telescoped.'
+    evidence: [src-shona-oral-traditions, src-mudenge-munhumutapa, src-beach-shona]
+    confidence: low
+    ap_topics: ["1.5"]
+
+sources:
+  # ------------------------------------------------------------ PRIMARY
+  - id: src-ibn-battuta-rihla
+    title: Tuhfat al-nuzzar (the Rihla), East African section
+    author: Ibn Battuta (dictated to Ibn Juzayy)
+    author_from: Tangier, Morocco
+    date: 1355-1356
+    kind: primary
+    type: travel-geography
+    voice: regional-outsider
+    happ:
+      historical_situation: Dictated in Fez after decades of travel; describes a voyage down the coast about 1331.
+      audience: Marinid sultan Abu Inan and his court in Fez.
+      purpose: Record and entertain; display the reach of Islam and the author's piety, learning and patrons.
+      point_of_view: Maliki jurist from Morocco judging coastal practice by North African norms; brief stays (one night at Mombasa); reports Sofala only by hearsay.
+    citation: >-
+      Ibn Battuta, Travels in Asia and Africa 1325-1354, trans. H.A.R. Gibb (Routledge, 1929), pp. 110-112
+      (abridged); full: Gibb, Travels of Ibn Battuta vol. 2 (Hakluyt Society, 1962); Hamdun and King, Ibn Battuta
+      in Black Africa (Markus Wiener); Freeman-Grenville, The East African Coast: Select Documents (1975), pp. 31-32.
+    url: https://sourcebooks.web.fordham.edu/Halsall/source/ibnbattuta-africa14C.asp
+    access: open-url
+    verification: web-checked
+    notes: >-
+      Web-checked against the Gibb 1929 abridgment (Fordham), a Gibb 1958 excerpt (Lafayette exhibit,
+      https://exhibits.lafayette.edu/s/museumstudies/item/27529: Mogadishu ruler Abu Bakr of Barbara origin,
+      speaks Maqdishi and Arabic), and the Freeman-Grenville extract on slaves (medievalslavery.org). The
+      Shafi'i statement for Mombasa and the holy-war phrasing for Kilwa come from Hamdun and King as quoted at
+      https://sacredfootsteps.com/2023/07/03/ibn-battuta-in-east-africa/ ; check in a full edition. The 1929
+      abridgment uses a pejorative word for Kilwa's mainland neighbors; paraphrase it in class materials.
+
+  - id: src-kilwa-chronicle-arabic
+    title: Kitab al-Sulwa fi akhbar Kulwa (Kilwa Chronicle, Arabic version)
+    author: Anonymous Kilwa author(s); 1877 copy by Shaykh Abdullah ibn Musbah al-Suwafi
+    author_from: Kilwa (copy made in Zanzibar)
+    date: c.1520-1550 (composition); 1877 (surviving copy)
+    kind: primary
+    type: chronicle-local
+    voice: insider
+    happ:
+      historical_situation: Written during Kilwa's succession crisis after the Portuguese intervention of 1505-1512; recopied for Sultan Barghash of Zanzibar in 1877.
+      audience: Kilwa's ruling lineages and Muslim learned elite; in 1877, the Omani-Zanzibari court.
+      purpose: Legitimize a royal line by tracing it to a Shirazi founder and a sharifian dynasty; present Kilwa as Muslim and urban in contrast to the mainland.
+      point_of_view: Court insider; dynastic partisan; Islamic frame for local history; possible 19th-c. Omani edits.
+    citation: >-
+      British Library Or. 2666. Ed. S. Arthur Strong, "The History of Kilwa," Journal of the Royal Asiatic
+      Society (1895). English typescript translation: SOAS MS 53501.
+    url: null
+    access: library
+    verification: citation-only
+    notes: Composition and manuscript facts web-checked via Arabahmadi 2023 abstract and Saad 1979 abstract.
+
+  - id: src-kilwa-chronicle-barros
+    title: Kilwa Chronicle, Portuguese version (in Decadas da Asia, Dec. I, liv. 8, cap. 6)
+    author: Kilwa informants, as compiled by Joao de Barros
+    author_from: Kilwa / Lisbon
+    date: 1552 (publication); possibly composed 1505-1512
+    kind: primary
+    type: chronicle-local
+    voice: insider
+    happ:
+      historical_situation: Portuguese occupation of Kilwa (1505-1512) and its aftermath.
+      audience: Portuguese officials and readers of Barros's imperial history.
+      purpose: For the Kilwa informants, to state dynastic claims to the new power; for Barros, to explain the lands Portugal entered.
+      point_of_view: Insider genealogy filtered through a distant-outsider editor with imperial interests.
+    citation: Joao de Barros, Da Asia, Decada I (Lisbon, 1552).
+    url: null
+    access: library
+    verification: citation-only
+    notes: Saad (1979) suggests it was composed quickly for the Portuguese during the occupation.
+
+  - id: src-pate-chronicle
+    title: Pate Chronicle (Habari za Pate)
+    author: Pate court tradition; recited by Bwana Kitini (Muhammad bin Fumo Omar Nabhani)
+    author_from: Pate and Lamu
+    date: lost original; copies 1903 onward
+    kind: primary
+    type: chronicle-local
+    voice: insider
+    happ:
+      historical_situation: Written down in the colonial era from a memorized text of the deposed Nabhani dynasty.
+      audience: Lamu officials (the 1903 copy was ordered by the liwali of Lamu) and British administrators.
+      purpose: Legitimize Nabhani claims to rule and to past greatness.
+      point_of_view: Dynastic insider; telescopes and inflates early history.
+    citation: >-
+      Stigand, The Land of Zinj (1913); Werner, Journal of the African Society (1914-15); M. Tolmacheva, The
+      Pate Chronicle (Michigan State University Press, 1993).
+    url: null
+    access: book
+    verification: citation-only
+    notes: Facts about versions checked via Wikipedia "Pate Chronicle" summary.
+
+  - id: src-abu-al-fida-taqwim
+    title: Taqwim al-buldan
+    author: Abu al-Fida
+    author_from: Hama, Syria
+    date: c.1321
+    kind: primary
+    type: travel-geography
+    voice: regional-outsider
+    happ:
+      historical_situation: Compiled by an Ayyubid prince-governor under the Mamluks from earlier geographies.
+      audience: Learned Arabic readers.
+      purpose: Systematic geography of the known world.
+      point_of_view: Never visited East Africa; relays earlier reports.
+    citation: Abu al-Fida, Taqwim al-buldan; extracts in Freeman-Grenville, The East African Coast (1975).
+    url: null
+    access: book
+    verification: citation-only
+    notes: His statement that Sofala's people were Muslim is taken from Samuel, African History Extra (Sofala).
+
+  - id: src-yaqut-mujam-al-buldan
+    title: Mu'jam al-buldan
+    author: Yaqut al-Hamawi
+    author_from: born in Byzantine Anatolia; worked in Baghdad, Merv, Aleppo
+    date: c.1224-1228
+    kind: primary
+    type: travel-geography
+    voice: regional-outsider
+    happ:
+      historical_situation: Geographical dictionary compiled from travelers' reports and books.
+      audience: Learned Arabic readers.
+      purpose: Alphabetical reference of places.
+      point_of_view: Never visited the coast; relays merchants' accounts.
+    citation: Yaqut, Mu'jam al-buldan; cited in Matveiev, UNESCO GHA IV ch. 18.
+    url: null
+    access: book
+    verification: citation-only
+
+  - id: src-kilwa-coinage
+    title: Kilwa-type coins (copper, silver, gold)
+    author: Kilwa sultans' mint
+    author_from: Kilwa
+    date: late 10th-16th c.
+    kind: primary
+    type: epigraphy
+    voice: insider
+    happ:
+      historical_situation: Local coinage for a commercial island state.
+      audience: Townspeople and traders of the southern coast.
+      purpose: Announce the ruler's name and piety; provide small change; store value.
+      point_of_view: Royal and Muslim self-presentation; names paired with rhyming pious phrases.
+    citation: >-
+      Perkins, Fleisher and Wynne-Jones 2014 (Azania 49:1); Chittick 1965; Brown, "Kilwa coinage" (1991,
+      cited via Sutton).
+    url: null
+    access: library
+    verification: citation-only
+
+  - id: src-husuni-kubwa-inscription
+    title: Husuni Kubwa palace inscription
+    author: Court of al-Hasan ibn Sulayman
+    author_from: Kilwa
+    date: c.1310-1333
+    kind: primary
+    type: epigraphy
+    voice: insider
+    happ:
+      historical_situation: Building program of Kilwa's most powerful sultan.
+      audience: Visitors and subjects.
+      purpose: Assert royal authority with the title al-Malik al-Mansur.
+      point_of_view: Royal.
+    citation: Reported in Sutton 1997 and Chittick 1974.
+    url: null
+    access: library
+    verification: citation-only
+
+  - id: src-mogadishu-mosque-inscriptions
+    title: Mogadishu mosque inscriptions (Jama'a minaret 636 AH/1238; Fakhr al-Din mihrab 1269)
+    author: Mogadishu rulers and builders
+    author_from: Mogadishu
+    date: 1238; 1269
+    kind: primary
+    type: epigraphy
+    voice: insider
+    happ:
+      historical_situation: Royal and communal mosque building in a wealthy Muslim port.
+      audience: Worshippers and visitors.
+      purpose: Record the founder and date; display piety.
+      point_of_view: Ruling elite.
+    citation: Matveiev, GHA IV ch. 18; Pradines, Historic Mosques in Sub-Saharan Africa (2022).
+    url: null
+    access: library
+    verification: citation-only
+    notes: Dates checked via Matveiev (French edition) and Wikipedia mosque entries.
+
+  - id: src-gedi-dated-tomb-inscription
+    title: Inscription of the Dated Tomb, Gedi (A.H. 802 / 1399)
+    author: Gedi family of the deceased
+    author_from: Gedi
+    date: 1399
+    kind: primary
+    type: epigraphy
+    voice: insider
+    happ:
+      historical_situation: Funerary monument in a prosperous Swahili town.
+      audience: Townspeople and descendants.
+      purpose: Commemorate the dead in Arabic Muslim form.
+      point_of_view: Patrician family.
+    citation: Kirkman, Gedi (1975).
+    url: null
+    access: library
+    verification: citation-only
+
+  - id: src-ming-voyage-records
+    title: Ming records of the treasure voyages (Mingshi; Fei Xin, Xingcha shenglan, 1436)
+    author: Ming officials; Fei Xin
+    author_from: Ming China
+    date: 1436 (Fei Xin); 1739 (Mingshi)
+    kind: primary
+    type: travel-geography
+    voice: distant-outsider
+    happ:
+      historical_situation: Records of the Yongle and Xuande emperors' fleets (1405-1433).
+      audience: Ming court and later officials.
+      purpose: Record tributary relations; display imperial reach.
+      point_of_view: Frames all foreign states as tributaries of the Ming.
+    citation: Fei Xin, Xingcha shenglan, trans. Mills and Ptak (1996); Mingshi.
+    url: null
+    access: book
+    verification: citation-only
+    notes: Voyage stops checked via Wikipedia "Ming treasure voyages" summary of Dreyer and Pelliot.
+
+  - id: src-shen-du-giraffe-painting
+    title: Tribute giraffe with attendant (painting with eulogy)
+    author: Shen Du
+    author_from: Ming court, Nanjing
+    date: 1414
+    kind: primary
+    type: material-culture
+    voice: distant-outsider
+    happ:
+      historical_situation: Arrival of a giraffe at the Yongle court.
+      audience: Emperor and court.
+      purpose: Celebrate an auspicious qilin as a sign of the emperor's virtue.
+      point_of_view: Chinese cosmology; Malindi appears only as a tributary.
+    citation: Shen Du, Tribute Giraffe with Attendant (later copy, Philadelphia Museum of Art).
+    url: null
+    access: book
+    verification: citation-only
+
+  - id: src-pegado-barros-zimbabwe
+    title: Portuguese descriptions of Great Zimbabwe (Vicente Pegado 1531, via Barros 1552)
+    author: Vicente Pegado; Joao de Barros
+    author_from: Sofala garrison; Lisbon
+    date: 1531; 1552
+    kind: primary
+    type: travel-geography
+    voice: distant-outsider
+    happ:
+      historical_situation: Portuguese at Sofala seeking control of the gold trade.
+      audience: Portuguese crown and readers.
+      purpose: Describe the gold lands; later fitted to Ophir and Prester John stories.
+      point_of_view: Secondhand, from Swahili traders; Barros reports the "Moorish" merchants could not read an inscription or name the builders.
+    citation: Barros, Da Asia, Dec. I (1552); summarized in Zimbabwe Field Guide.
+    url: null
+    access: book
+    verification: citation-only
+
+  - id: src-shona-oral-traditions
+    title: Shona oral traditions of the Mutapa founding and Great Zimbabwe's decline
+    author: Shona (Karanga, Korekore) tradition-bearers, spirit mediums and royal houses
+    author_from: Zimbabwe plateau
+    date: recorded 19th-20th c.
+    kind: primary
+    type: oral-tradition
+    voice: insider
+    happ:
+      historical_situation: Recorded by missionaries, administrators and historians (D.P. Abraham, Beach, Mudenge).
+      audience: Descendant communities; later historians.
+      purpose: Explain royal origins, land rights and spirit-medium authority.
+      point_of_view: Royal and lineage interests; telescoped chronology.
+    citation: Discussed in Mudenge (1988) and Beach (1980).
+    url: null
+    access: book
+    verification: citation-only
+
+  - id: src-mombasa-oral-traditions
+    title: Mombasa traditions of Mwana Mkisi and Shehe Mvita
+    author: Thenashara Taifa (Twelve Nations) lineages of Mombasa
+    author_from: Mombasa
+    date: recorded 19th-20th c.
+    kind: primary
+    type: oral-tradition
+    voice: insider
+    happ:
+      historical_situation: Lineage confederations defending their rights in Mombasa.
+      audience: Townspeople, later administrators and historians.
+      purpose: Explain founding, Muslim identity and lineage precedence.
+      point_of_view: Patrician lineages.
+    citation: Summarized in histories of Mombasa (e.g. Berg 1968; Meier 2016).
+    url: null
+    access: library
+    verification: needs-library
+    notes: Content known only from the Wikipedia "History of Mombasa" summary; check in Berg or Spear.
+
+  - id: src-gz-soapstone-birds
+    title: Soapstone birds and monoliths of Great Zimbabwe
+    author: Shona sculptors of Great Zimbabwe
+    author_from: Great Zimbabwe
+    date: 13th-15th c.
+    kind: primary
+    type: material-culture
+    voice: insider
+    happ:
+      historical_situation: Ritual furnishing of the Hill Complex at the capital's height.
+      audience: Rulers, ritual specialists, ancestors.
+      purpose: Ritual and royal symbolism (exact purpose debated).
+      point_of_view: Royal and ritual elite.
+    citation: Matenga (1998); Huffman (1985); Met Heilbrunn essay.
+    url: null
+    access: open-url
+    verification: citation-only
+
+  # ------------------------------------------------------------ SECONDARY: scholars from the region
+  - id: src-chami-pre-islamic-kilwa
+    title: The Archaeology of Pre-Islamic Kilwa Kisiwani (Island)
+    author: Felix A. Chami
+    author_from: University of Dar es Salaam, Tanzania
+    date: 2019
+    kind: secondary
+    type: archaeology
+    voice: scholar-from-region
+    citation: Chami, F. A. "The Archaeology of Pre-Islamic Kilwa Kisiwani (Island)." Studies in the African Past (UDSM), 2019.
+    url: https://journals.udsm.ac.tz/index.php/sap/article/view/2686
+    access: open-url
+    verification: web-checked
+    notes: >-
+      Abstract read: argues long cultural continuity at Kilwa from Early Iron Working communities, against
+      colonial-era immigrant-founder models. Chami's earlier work (Mafia, TIW) makes the same case.
+
+  - id: src-kusimba-rise-fall-swahili
+    title: The Rise and Fall of Swahili States
+    author: Chapurukha M. Kusimba
+    author_from: Kenyan; Field Museum / American University
+    date: 1999
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: Kusimba, C. M. The Rise and Fall of Swahili States. AltaMira, 1999.
+    url: null
+    access: library
+    verification: needs-library
+    notes: Not opened. Kusimba's views also reached via Brielle et al. 2023 and Fowler 2005.
+
+  - id: src-mazrui-shariff-swahili-identity
+    title: "The Swahili: Idiom and Identity of an African People"
+    author: Alamin M. Mazrui and Ibrahim Noor Shariff
+    author_from: Kenya (both)
+    date: 1994
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: 'Mazrui, A. M. and I. N. Shariff. The Swahili: Idiom and Identity of an African People. Africa World Press, 1994.'
+    url: null
+    access: library
+    verification: needs-library
+    notes: Argues Swahili identity is African; they also criticized Knappert's framing of Swahili literature as essentially Islamic. Not opened.
+
+  - id: src-sheriff-dhow-cultures
+    title: "Dhow Cultures of the Indian Ocean: Cosmopolitanism, Commerce and Islam"
+    author: Abdul Sheriff
+    author_from: Zanzibar, Tanzania
+    date: 2010
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: Sheriff, A. Dhow Cultures of the Indian Ocean. Hurst, 2010.
+    url: https://lucas.leeds.ac.uk/review/dhow-cultures-of-the-indian-ocean/
+    access: library
+    verification: citation-only
+    notes: >-
+      Only a review was read (Rose, LUCAS). Used for the framing that Islam spread along monsoon trade networks
+      as a shared idiom that made cosmopolitan relations possible. The reviewer faults Sheriff for softening
+      slavery; worth raising with students.
+
+  - id: src-chirikure-2013-bayesian-gz
+    title: "A Bayesian chronology for Great Zimbabwe: re-threading the sequence of a vandalised monument"
+    author: Shadreck Chirikure, Mark Pollard, Munyaradzi Manyanga, Foreman Bandama
+    author_from: University of Cape Town / Zimbabwe
+    date: 2013
+    kind: secondary
+    type: archaeology
+    voice: scholar-from-region
+    citation: 'Chirikure et al. Antiquity 87(337): 854-872, 2013.'
+    url: https://www.cambridge.org/core/journals/antiquity/article/abs/bayesian-chronology-for-great-zimbabwe-rethreading-the-sequence-of-a-vandalised-monument/0BFAF99EA338FB35BE0056D50BD8BF65
+    access: open-url
+    verification: web-checked
+
+  - id: src-chirikure-2013-new-pathways
+    title: New pathways of sociopolitical complexity in southern Africa
+    author: Shadreck Chirikure, Munyaradzi Manyanga, Innocent Pikirayi, A. Mark Pollard
+    author_from: Zimbabwe / South Africa
+    date: 2013
+    kind: secondary
+    type: archaeology
+    voice: scholar-from-region
+    citation: 'Chirikure et al. African Archaeological Review 30(4): 339-366, 2013.'
+    url: https://repository.up.ac.za/handle/2263/41780
+    access: open-url
+    verification: web-checked
+    notes: Mapungubwe 1220-1290, Great Zimbabwe 1300-1450, Khami 1450-1820, with overlaps.
+
+  - id: src-pikirayi-zimbabwe-culture
+    title: "The Zimbabwe Culture: Origins and Decline of Southern Zambezian States"
+    author: Innocent Pikirayi
+    author_from: Zimbabwean; University of Pretoria
+    date: 2001
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: Pikirayi, I. The Zimbabwe Culture. AltaMira, 2001.
+    url: null
+    access: library
+    verification: needs-library
+
+  - id: src-matenga-soapstone-birds
+    title: "The Soapstone Birds of Great Zimbabwe: Symbols of a Nation"
+    author: Edward Matenga
+    author_from: Zimbabwe (National Museums and Monuments)
+    date: 1998
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: Matenga, E. The Soapstone Birds of Great Zimbabwe. African Publishing Group, 1998.
+    url: null
+    access: library
+    verification: needs-library
+
+  - id: src-mudenge-munhumutapa
+    title: A Political History of Munhumutapa c.1400-1902
+    author: S. I. G. Mudenge
+    author_from: Zimbabwe
+    date: 1988
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: Mudenge, S. I. G. A Political History of Munhumutapa c.1400-1902. Zimbabwe Publishing House, 1988.
+    url: null
+    access: library
+    verification: citation-only
+    notes: Telescoping argument checked only via Wikipedia "Mutapa Empire" summary.
+
+  - id: src-tamrat-horn-gha4
+    title: "The Horn of Africa: the Solomonids in Ethiopia and the states of the Horn of Africa (UNESCO GHA IV, ch. 17)"
+    author: Taddesse Tamrat
+    author_from: Ethiopia
+    date: 1984
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: Tamrat, T. In D.T. Niane, ed., UNESCO General History of Africa IV (1984), ch. 17 (French ed. pp. 457-489).
+    url: https://bokundoli.org/wp-content/uploads/2021/12/T4-21.pdf
+    access: open-url
+    verification: citation-only
+    notes: French edition PDF located; only its scope (Muslim coastal principalities including Mogadishu) was confirmed.
+
+  - id: src-kiriama-2006-kaya-bate
+    title: "Excavations at Kaya Bate: An Ancient Mijikenda Settlement"
+    author: Herman Kiriama, Mohammed Mchulla, George Ghandi, Phillip Wanyama
+    author_from: National Museums of Kenya
+    date: 2006
+    kind: secondary
+    type: archaeology
+    voice: scholar-from-region
+    citation: 'Kiriama et al. Studies in the African Past 5: 167-181 (2006).'
+    url: https://journals.udsm.ac.tz/index.php/sap/article/view/2688/2725
+    access: open-url
+    verification: web-checked
+    notes: Mijikenda traditions place kaya settlement from the mid-16th c.
+
+  # ------------------------------------------------------------ SECONDARY: international and institutional
+  - id: src-matveiev-swahili-civilization
+    title: "The development of Swahili civilization (UNESCO GHA IV, ch. 18; French: L'essor de la civilisation swahili)"
+    author: Victor V. Matveiev
+    author_from: USSR (Leningrad)
+    date: 1984
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: Matveiev, V. V. In D.T. Niane, ed., UNESCO General History of Africa IV (1984), ch. 18 (French ed. pp. 491-517).
+    url: https://bokundoli.org/wp-content/uploads/2021/12/T4-22.pdf
+    access: open-url
+    verification: web-checked
+    notes: >-
+      Read via the French edition PDF. Key points: dynasties "of unquestionably African origin"; Shirazi as a
+      common coastal myth; voluntary conversion, Islam coexisting with older cults; merchants then nobility then
+      commoners; mosques dated 1107 (Kizimkazi), 1238, 1269; Mogadishu coin 1322; Chinese fleets 1417-1419 and
+      1421-1422. Part of the African-directed UNESCO project (vol. ed. D.T. Niane).
+
+  - id: src-fagan-zambezi-limpopo
+    title: "The Zambezi and Limpopo basins, 1100-1500 (UNESCO GHA IV, ch. 21)"
+    author: Brian M. Fagan
+    author_from: UK / USA
+    date: 1984
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: Fagan, B. M. In D.T. Niane, ed., UNESCO General History of Africa IV (1984), ch. 21 (French ed. pp. 567-595).
+    url: https://bokundoli.org/wp-content/uploads/2021/12/T4-25.pdf
+    access: open-url
+    verification: web-checked
+    notes: Kilwa coin of al-Hasan ibn Sulayman at Great Zimbabwe (p. 577 n. 9); imports list; Mwari cult (Abraham); African origin of the architecture.
+
+  - id: src-brielle-2023-swahili-adna
+    title: Entwined African and Asian genetic roots of medieval peoples of the Swahili coast
+    author: Esther S. Brielle et al. (incl. Stephanie Wynne-Jones; co-senior authors Chapurukha M. Kusimba and David Reich)
+    author_from: international team incl. Kenyan, Tanzanian and US institutions
+    date: 2023
+    kind: secondary
+    type: archaeology
+    voice: scholar-international
+    citation: 'Brielle, E. S. et al. Nature 615: 866-873 (2023).'
+    url: https://eprints.whiterose.ac.uk/198218/1/s41586_023_05754_w.pdf
+    access: open-url
+    verification: web-checked
+
+  - id: src-horton-shanga
+    title: "Shanga: The Archaeology of a Muslim Trading Community on the Coast of East Africa"
+    author: Mark Horton
+    author_from: UK
+    date: 1996
+    kind: secondary
+    type: archaeology
+    voice: scholar-international
+    citation: Horton, M. Shanga. British Institute in Eastern Africa Memoir 14, 1996.
+    url: null
+    access: library
+    verification: citation-only
+    notes: Sequence details checked via Archaeology magazine (2014) and Samuel (African History Extra).
+
+  - id: src-horton-2022-kilwa-chronology
+    title: The Chronology of Kilwa Kisiwani, AD 800-1500
+    author: Mark Horton, Jesper Olsen, Jeffrey Fleisher, Stephanie Wynne-Jones
+    author_from: UK / Denmark / USA
+    date: 2022
+    kind: secondary
+    type: archaeology
+    voice: scholar-international
+    citation: 'Horton et al. African Archaeological Review 39: 143-166 (2022).'
+    url: https://eprints.whiterose.ac.uk/194369
+    access: open-url
+    verification: web-checked
+
+  - id: src-chittick-1965-shirazi
+    title: The 'Shirazi' Colonization of East Africa
+    author: H. Neville Chittick
+    author_from: UK (British Institute in Eastern Africa)
+    date: 1965
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: 'Chittick, H. N. Journal of African History 6(3): 275-294 (1965).'
+    url: https://www.cambridge.org/core/journals/journal-of-african-history/article/abs/shirazi-colonization-of-east-africa/8D17F7DB2C4A6291F0D34501949706BF
+    access: open-url
+    verification: web-checked
+    notes: 'Abstract read. Part of the historiography: the title''s "colonization" framing is what later scholars rejected.'
+
+  - id: src-chittick-kilwa-1974
+    title: "Kilwa: An Islamic Trading City on the East African Coast"
+    author: H. Neville Chittick
+    author_from: UK
+    date: 1974
+    kind: secondary
+    type: archaeology
+    voice: scholar-international
+    citation: Chittick, H. N. Kilwa. 2 vols. British Institute in Eastern Africa, 1974.
+    url: null
+    access: library
+    verification: needs-library
+
+  - id: src-sutton-kilwa
+    title: "Kilwa: A History of the Ancient Swahili Town with a Guide to the Monuments"
+    author: John E. G. Sutton
+    author_from: UK (long based in East Africa)
+    date: 1997-1998
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: Sutton, J. E. G. Kilwa. Azania 33 (1998) / British Institute in Eastern Africa.
+    url: null
+    access: library
+    verification: citation-only
+    notes: Husuni Kubwa inscription, gold coins, al-Hasan's hajj and Aden study known via Wikipedia and Samuel summaries.
+
+  - id: src-saad-1979-kilwa-historiography
+    title: "Kilwa Dynastic Historiography: A Critical Study"
+    author: Elias Saad
+    author_from: USA
+    date: 1979
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: 'Saad, E. History in Africa 6: 177-207 (1979).'
+    url: https://www.cambridge.org/core/journals/history-in-africa/article/abs/kilwa-dynastic-historiography-a-critical-study/6378AC68CFD88648D91BA961D185C401
+    access: open-url
+    verification: web-checked
+
+  - id: src-spear-1984-shirazi
+    title: The Shirazi in Swahili Traditions, Culture, and History
+    author: Thomas Spear
+    author_from: USA
+    date: 1984
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: 'Spear, T. History in Africa 11: 291-305 (1984).'
+    url: https://www.cambridge.org/core/journals/history-in-africa/article/abs/shirazi-in-swahili-traditions-culture-and-history1/E7628AE469E7D48970E214FBB5DB3795
+    access: open-url
+    verification: web-checked
+    notes: Extract read; critiques diffusionist and racist assumptions behind the "Arab diaspora" model.
+
+  - id: src-pouwels-horn-crescent
+    title: "Horn and Crescent: Cultural Change and Traditional Islam on the East African Coast, 800-1900"
+    author: Randall L. Pouwels
+    author_from: USA
+    date: 1987
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: Pouwels, R. L. Horn and Crescent. Cambridge University Press, 1987.
+    url: https://www.cambridge.org/core/books/abs/horn-and-crescent/introduction/D3CF67B39D69A2295041243913A2B5F9
+    access: library
+    verification: citation-only
+    notes: Introduction summary read; Mahdali-Yemen link and Shirazi-as-myth not checked in the text.
+
+  - id: src-allen-swahili-origins
+    title: "Swahili Origins: Swahili Culture and the Shungwaya Phenomenon"
+    author: James de Vere Allen
+    author_from: UK (former curator, Lamu Museum)
+    date: 1993
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: Allen, J. de V. Swahili Origins. James Currey, 1993.
+    url: null
+    access: library
+    verification: needs-library
+
+  - id: src-arabahmadi-2023-kilwa-chronicle
+    title: "A Comprehensive Critical Reappraisal of 'The Kilwa Chronicle': Manuscript Traditions, Historiographical Layers, and Scholarly Debate"
+    author: Amirbahram Arabahmadi
+    author_from: University of Tehran, Iran
+    date: 2023
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: 'Arabahmadi, A. Anais de Historia de Alem-Mar 24: 115-131 (2023).'
+    url: https://revistas.rcaap.pt/aham/article/view/46384
+    access: open-url
+    verification: web-checked
+
+  - id: src-perkins-2014-songo-mnara-coins
+    title: A deposit of Kilwa-type coins from Songo Mnara, Tanzania
+    author: John Perkins, Jeffrey Fleisher, Stephanie Wynne-Jones
+    author_from: Australia / USA / UK
+    date: 2014
+    kind: secondary
+    type: archaeology
+    voice: scholar-international
+    citation: 'Perkins, Fleisher and Wynne-Jones. Azania 49(1): 102-116 (2014).'
+    url: https://researchnow.flinders.edu.au/en/publications/a-deposit-of-kilwa-type-coins-from-songo-mnara-tanzania/
+    access: open-url
+    verification: web-checked
+
+  - id: src-wynne-jones-fleisher-coins-context
+    title: "Coins in context: local economy, value and practice on the East African Swahili coast"
+    author: Stephanie Wynne-Jones and Jeffrey Fleisher
+    author_from: UK / USA
+    date: 2012
+    kind: secondary
+    type: archaeology
+    voice: scholar-international
+    citation: Wynne-Jones and Fleisher. Cambridge Archaeological Journal 22(1) (2012).
+    url: https://cb51-16.omeka.fas.harvard.edu/exhibits/show/ht/cshub/kilwa-kisiwani--coins-from-son
+    access: open-url
+    verification: citation-only
+    notes: Read via a Harvard teaching exhibit summary only.
+
+  - id: src-laviolette-fleisher-2009-pemba
+    title: "The Urban History of a Rural Place: Swahili Archaeology on Pemba Island, Tanzania, 700-1500 AD"
+    author: Adria LaViolette and Jeffrey Fleisher
+    author_from: USA
+    date: 2009
+    kind: secondary
+    type: archaeology
+    voice: scholar-international
+    citation: LaViolette and Fleisher. International Journal of African Historical Studies 42(3) (2009).
+    url: https://www.bu.edu/phpbin/ijahs/publications/?pid=48
+    access: open-url
+    verification: web-checked
+
+  - id: src-archaeology-2014-colonial-archaeology
+    title: "Matters of Context (sidebar on colonial archaeology of the Swahili coast)"
+    author: Archaeology magazine staff (quoting Fleisher, Kusimba, Horton, Schmidt)
+    author_from: USA
+    date: 2014
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: Archaeology 67(1), January/February 2014.
+    url: https://archaeology.org/issues/116-1401/sidebars/1719-colonial-archaeology-swahili-coast
+    access: open-url
+    verification: web-checked
+    notes: Kusimba calls the colonial framing racist at its core; Fleisher calls it a textbook colonial archaeology.
+
+  - id: src-fowler-2005-place-without-history
+    title: A Place Without History
+    author: Brenda Fowler
+    author_from: USA
+    date: 2005
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: Fowler, B. Archaeology 58(5), September/October 2005.
+    url: https://archive.archaeology.org/0509/abstracts/africa.html
+    access: open-url
+    verification: web-checked
+    notes: On Kusimba's Tsavo hinterland surveys and later slave-raiding memories.
+
+  - id: src-vierke-2021-swahili-manuscripts
+    title: "Writing Songs, Singing Texts: Orality and Literacy in Swahili Manuscripts"
+    author: Clarissa Vierke
+    author_from: Germany (Bayreuth)
+    date: 2021
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: 'Vierke, C. manuscript cultures 17: 87-104 (2021).'
+    url: https://www.csmc.uni-hamburg.de/publications/mc/files/articles/mc17-vierke.pdf
+    access: open-url
+    verification: web-checked
+
+  - id: src-nurse-spear-1985-swahili
+    title: "The Swahili: Reconstructing the History and Language of an African Society, 800-1500"
+    author: Derek Nurse and Thomas Spear
+    author_from: Canada / USA
+    date: 1985
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: Nurse, D. and T. Spear. The Swahili. University of Pennsylvania Press, 1985.
+    url: null
+    access: library
+    verification: citation-only
+    notes: Sabaki classification and loanword estimates checked via Wikipedia "Swahili language" summary.
+
+  - id: src-garlake-great-zimbabwe
+    title: Great Zimbabwe
+    author: Peter Garlake
+    author_from: UK / Zimbabwe (Rhodesian monuments inspector, resigned over political pressure)
+    date: 1973
+    kind: secondary
+    type: archaeology
+    voice: scholar-international
+    citation: Garlake, P. Great Zimbabwe. Thames and Hudson, 1973.
+    url: null
+    access: library
+    verification: citation-only
+
+  - id: src-beach-shona
+    title: The Shona and Zimbabwe 900-1850
+    author: David N. Beach
+    author_from: Zimbabwe (University of Zimbabwe)
+    date: 1980
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: Beach, D. N. The Shona and Zimbabwe 900-1850. Mambo Press / Heinemann, 1980.
+    url: null
+    access: library
+    verification: citation-only
+
+  - id: src-kirkman-gedi
+    title: The Arab City of Gedi (1954); Gedi (1975)
+    author: James S. Kirkman
+    author_from: UK (Warden of Coastal Historical Sites, Kenya)
+    date: 1954; 1975
+    kind: secondary
+    type: archaeology
+    voice: scholar-international
+    citation: Kirkman, J. S. The Arab City of Gedi. Oxford University Press, 1954; Gedi. National Museums of Kenya, 1975.
+    url: null
+    access: library
+    verification: citation-only
+    notes: Site facts checked via Wikipedia "Gedi Ruins" summary of Kirkman. The 1954 title is itself a historiography exhibit.
+
+  - id: src-dreyer-zheng-he
+    title: "Zheng He: China and the Oceans in the Early Ming Dynasty, 1405-1433"
+    author: Edward L. Dreyer
+    author_from: USA
+    date: 2007
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: Dreyer, E. L. Zheng He. Pearson Longman, 2007.
+    url: null
+    access: library
+    verification: citation-only
+
+  - id: src-pradines-historic-mosques
+    title: "Historic Mosques in Sub-Saharan Africa: From Timbuktu to Zanzibar"
+    author: Stephane Pradines
+    author_from: France (Aga Khan University, London)
+    date: 2022
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: Pradines, S. Historic Mosques in Sub-Saharan Africa. Brill, 2022.
+    url: null
+    access: library
+    verification: citation-only
+
+  - id: src-rodland-medievalslavery-kilwa
+    title: "Source: Ibn Battuta on Slaves at Kilwa (introduction)"
+    author: Henriette Rødland
+    author_from: Norway / UK
+    date: c.2021
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: Rødland, H. Teaching Medieval Slavery and Captivity (medievalslavery.org), CC BY-NC-ND 4.0.
+    url: https://medievalslavery.org/?p=3340
+    access: open-url
+    verification: web-checked
+
+  - id: src-unesco-whc-kilwa
+    title: Ruins of Kilwa Kisiwani and Ruins of Songo Mnara (World Heritage List 144)
+    author: UNESCO World Heritage Centre
+    author_from: international
+    date: 1981 (inscription); page current
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: UNESCO WHC, "Ruins of Kilwa Kisiwani and Ruins of Songo Mnara."
+    url: https://whc.unesco.org/en/list/144
+    access: open-url
+    verification: web-checked
+
+  - id: src-unesco-whc-great-zimbabwe
+    title: Great Zimbabwe National Monument (World Heritage List 364)
+    author: UNESCO World Heritage Centre
+    author_from: international
+    date: 1986 (inscription); page current
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: UNESCO WHC, "Great Zimbabwe National Monument."
+    url: https://whc.unesco.org/en/list/364/
+    access: open-url
+    verification: web-checked
+
+  - id: src-unesco-whc-kaya
+    title: Sacred Mijikenda Kaya Forests (World Heritage List 1231)
+    author: UNESCO World Heritage Centre
+    author_from: international
+    date: 2008 (inscription); page current
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: UNESCO WHC, "Sacred Mijikenda Kaya Forests."
+    url: https://whc.unesco.org/en/list/1231
+    access: open-url
+    verification: web-checked
+
+  - id: src-unesco-whc-mapungubwe
+    title: Mapungubwe Cultural Landscape (World Heritage List 1099)
+    author: UNESCO World Heritage Centre
+    author_from: international
+    date: 2003 (inscription); page current
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: UNESCO WHC, "Mapungubwe Cultural Landscape."
+    url: https://whc.unesco.org/en/list/1099
+    access: open-url
+    verification: web-checked
+
+  - id: src-unesco-whc-lamu
+    title: Lamu Old Town (World Heritage List 1055)
+    author: UNESCO World Heritage Centre
+    author_from: international
+    date: 2001 (inscription); page current
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: UNESCO WHC, "Lamu Old Town."
+    url: https://whc.unesco.org/en/list/1055
+    access: open-url
+    verification: web-checked
+
+  - id: src-icomos-2024-gedi
+    title: ICOMOS evaluation, The Historic Town and Archaeological Site of Gedi (Kenya), No. 1720
+    author: ICOMOS, reporting the nomination by the Republic of Kenya (National Museums of Kenya)
+    author_from: international, with Kenyan State Party claims
+    date: 2024
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: ICOMOS, Evaluation for the 46th Session of the World Heritage Committee, 2024.
+    url: https://whc.unesco.org/document/208507
+    access: open-url
+    verification: web-checked
+    notes: Distinguishes Kenyan nomination claims (insider heritage voice) from ICOMOS's own assessments. Inscription July 2024 confirmed at kenya-delegation-unesco.org.
+
+  - id: src-met-great-zimbabwe
+    title: Great Zimbabwe (11th-15th Century), Heilbrunn Timeline of Art History
+    author: Department of the Arts of Africa, Oceania, and the Americas, The Metropolitan Museum of Art
+    author_from: USA
+    date: 2001
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: The Met, Heilbrunn Timeline, "Great Zimbabwe (11th-15th Century)."
+    url: https://www.metmuseum.org/en/essays/great-zimbabwe-11th-15th-century
+    access: open-url
+    verification: web-checked
+
+  - id: src-met-mapungubwe
+    title: Mapungubwe (ca. 1050-1270), Heilbrunn Timeline of Art History
+    author: Alice Apley
+    author_from: USA
+    date: 2001, updated 2017
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: Apley, A. "Mapungubwe." The Met, Heilbrunn Timeline.
+    url: https://www.metmuseum.org/en/essays/mapungubwe-ca-1050-1270
+    access: open-url
+    verification: web-checked
+
+  - id: src-zimfieldguide-early-descriptions
+    title: Great Zimbabwe, early written descriptions and photographs
+    author: Zimbabwe Field Guide
+    author_from: Zimbabwe
+    date: undated (accessed 2026)
+    kind: secondary
+    type: reference
+    voice: scholar-from-region
+    citation: 'Zimbabwe Field Guide, "Great Zimbabwe: Early Written Descriptions and Photographs."'
+    url: https://zimfieldguide.com/masvingo/great-zimbabwe-%E2%80%93-early-written-descriptions-and-photographs
+    access: open-url
+    verification: web-checked
+
+  - id: src-aljazeera-2020-zimbabwe-birds
+    title: Zimbabwe gets back iconic bird statues stolen during colonialism
+    author: Al Jazeera (quoting Godfrey Mahachi, National Museums and Monuments of Zimbabwe)
+    author_from: Qatar / Zimbabwe
+    date: 2020
+    kind: secondary
+    type: reference
+    voice: scholar-from-region
+    citation: Al Jazeera, 13 March 2020.
+    url: https://www.aljazeera.com/features/2020/03/13/zimbabwe-gets-back-iconic-bird-statues-stolen-during-colonialism/
+    access: open-url
+    verification: web-checked
+    notes: Voice set to scholar-from-region because the substantive claims come from Zimbabwe's heritage officials.
+
+  - id: src-sciencenews-giraffes
+    title: The giraffes that sailed to medieval China
+    author: Science News (Wild Things blog)
+    author_from: USA
+    date: undated
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: Science News, "The giraffes that sailed to medieval China."
+    url: https://www.sciencenews.org/blog/wild-things/giraffes-sailed-medieval-china
+    access: open-url
+    verification: web-checked
+
+  - id: src-australian-geographic-2014-kilwa-coins
+    title: Unravelling the mystery of Arnhem Land's ancient African coins
+    author: Australian Geographic (expedition co-leader's account)
+    author_from: Australia
+    date: 2014
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: Australian Geographic, August 2014.
+    url: https://www.australiangeographic.com.au/history-culture/2014/08/mystery-of-ancient-african-coins-found-in-australia/
+    access: open-url
+    verification: web-checked
+
+  - id: src-samuel-ahe-kilwa-timeline
+    title: "Kilwa: the complete chronological history"
+    author: Isaac Samuel (African History Extra)
+    author_from: not verified
+    date: c.2023
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: Samuel, I. African History Extra (Substack).
+    url: https://www.africanhistoryextra.com/p/kilwa-the-complete-chronological
+    access: open-url
+    verification: web-checked
+    notes: Popular synthesis with footnotes to Wynne-Jones, Sutton, Saad, Pradines, Pouwels; cite the underlying works when possible.
+
+  - id: src-samuel-ahe-swahili-architecture
+    title: Origins and Development of Swahili Architecture (ca. 500-1900 CE)
+    author: Isaac Samuel (African History Extra)
+    author_from: not verified
+    date: c.2023
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: Samuel, I. African History Extra (Substack).
+    url: https://www.africanhistoryextra.com/p/origins-and-development-of-swahili
+    access: open-url
+    verification: web-checked
+
+  - id: src-samuel-ahe-pemba
+    title: "Forgotten Cities of the Swahili coast: A history of Pemba in the Medieval Indian Ocean World"
+    author: Isaac Samuel (African History Extra)
+    author_from: not verified
+    date: c.2023
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: Samuel, I. African History Extra (Substack).
+    url: https://www.africanhistoryextra.com/p/forgotten-cities-of-the-swahili-coast
+    access: open-url
+    verification: web-checked
+
+  - id: src-samuel-ahe-sofala
+    title: A history of the medieval coastal settlements of Mozambique (Sofala, Chibuene)
+    author: Isaac Samuel (African History Extra)
+    author_from: not verified
+    date: c.2023
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: Samuel, I. African History Extra (Substack).
+    url: https://www.africanhistoryextra.com/p/a-history-of-the-medieval-coastal
+    access: open-url
+    verification: web-checked
+
+  - id: src-samuel-ahe-persian-myths
+    title: Persian myths and realities on the Swahili coast
+    author: Isaac Samuel (African History Extra)
+    author_from: not verified
+    date: c.2023
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: Samuel, I. African History Extra (Substack).
+    url: https://www.africanhistoryextra.com/p/persian-myths-and-realities-on-the
+    access: open-url
+    verification: web-checked

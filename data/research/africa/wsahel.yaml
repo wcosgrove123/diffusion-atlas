@@ -1,0 +1,3347 @@
+# Western Sahel & Senegambia (owner: wsahel)
+# Africa 1200-1450 module, Diffusion Atlas. Researcher file; see docs/research-brief.md.
+# Research date: 2026-10-14. The UNESCO General History of Africa vol. IV chapters were read in the
+# French edition (Histoire generale de l'Afrique IV, 1985) via PDFs hosted at bokundoli.org; page numbers
+# cited in detail fields are the French edition's and were reported from those PDFs.
+
+places:
+  # ---------------------------------------------------------------- polities
+  - id: pl-mali
+    name: Mali
+    alt_names: [Manden, Manden Kurufaba, Malal (pre-1200 core principality in al-Bakri)]
+    kind: polity
+    region: western-sahel
+    location: {lat: 11.95, lon: -8.30}
+    span: {start: 1235, end: 1600, approx: true}
+    parent: null
+    geometry_note: >
+      Core: upper Niger and Sankarani between Kangaba and Siguiri, with the Bure goldfield; Bambuk to the
+      west. Greatest extent about 1330-1360 from the Gambia and Senegal rivers to Gao and Walata. Lost
+      Timbuktu and Walata to the Tuareg about 1433 and Gao to the Sunni dynasty in the early 15th c.;
+      shifted west toward the Gambia in the 15th c. (Ly-Tall). The capital's location is debated: see
+      pl-niani. Label point placed in the Kangaba-Siguiri core, not at any one capital candidate.
+    basemap_match: ["Mali Empire", "Mali"]
+    polity_profile:
+      - year: 1240
+        base: AGR
+        flow: EXT
+        membership: [KIN, OATH]
+        ruled_not_counted: conquered Sosso and Soninke lands; enslaved captives
+        standing: SOV
+        shape: IMPERIAL
+        rulers: ONE
+        right: [VICTORY, DESCENT]
+        flag: >
+          The epic grounds Sunjata's right in hunter's occult power (nyama), his mother's buffalo-woman
+          lineage and victory at Kirina; the Right axis has no value for occult or ritual power, so
+          VICTORY is the nearest fit.
+      - year: 1330
+        base: AGR
+        flow: EXT
+        membership: [KIN, FAITH]
+        ruled_not_counted: tributary peoples including the gold-producing peoples; enslaved people
+        standing: SOV
+        shape: IMPERIAL
+        rulers: ONE
+        right: [DESCENT, DIVINE]
+        flag: >
+          Double legitimacy. Griots give the Keita a Muslim genealogy from Bilal ibn Rabah while the
+          court also presented the mansa as a master of Mande power on the model of the Komo society;
+          the court claimed Islam while governing a mostly non-Muslim population it did not try to convert.
+    evidence: [src-niane-unesco-mali, src-ly-tall-unesco-mali-decline, src-gomez-african-dominion, src-levtzion-ancient-ghana-mali]
+    confidence: high
+
+  - id: pl-sosso
+    name: Sosso
+    alt_names: [Soso, Susu, Sosoe, Kaniaga (allied/core region)]
+    kind: polity
+    region: western-sahel
+    location: {lat: 12.86, lon: -7.56}
+    span: {start: 1180, end: 1235, approx: true}
+    parent: null
+    geometry_note: >
+      Core in the Koulikoro hills north of the Niger (Niane), with control over former Ghana provinces
+      about 1180-1235. The exact site of the capital Soso is not established; label point at Koulikoro,
+      where traditions place Sumaoro's disappearance and a shrine.
+    basemap_match: ["Sosso"]
+    polity_profile:
+      - year: 1220
+        base: AGR
+        flow: EXT
+        membership: [KIN]
+        ruled_not_counted: Soninke and Maninka tributaries; captives
+        standing: SOV
+        shape: IMPERIAL
+        rulers: ONE
+        right: [VICTORY, DESCENT]
+        flag: >
+          Tradition calls Sumaoro a sorcerer-king whose power rested on occult objects (the Sosso Bala
+          balafon, protective fetters); that ritual basis has no value on the Right axis. Everything known
+          comes from later Mande oral tradition, mostly told from Mali's side.
+    evidence: [src-niane-unesco-mali, src-conrad-oral-sources-links, src-birmingham-sumanguru-epic]
+    confidence: low
+
+  - id: pl-ghana-wagadu
+    name: Ghana (Wagadu) and its Soninke successor kingdom
+    alt_names: [Wagadu, Ghana, Kumbi, Koumbi Saleh]
+    kind: polity
+    region: western-sahel
+    location: {lat: 15.67, lon: -7.99}
+    span: {start: 1076, end: 1240, approx: true}
+    parent: null
+    geometry_note: >
+      After the 11th-century crisis (the Almoravid "conquest" of 1076 is itself debated) the Soninke
+      kingdom survived with a reduced core around Kumbi and the Hodh. Sosso dominated it about 1180/1203-1235;
+      afterwards it was a tributary of Mali whose ruler, per al-Umari about 1337, alone kept the title malik.
+      Label point at Koumbi Saleh.
+    basemap_match: ["Ghana", "Ghana Empire", "Wagadou"]
+    polity_profile:
+      - year: 1150
+        base: AGR
+        flow: EXT
+        membership: [KIN, FAITH]
+        ruled_not_counted: tributary Soninke chiefdoms; enslaved people
+        standing: SOV
+        shape: IMPERIAL
+        rulers: ONE
+        right: [DESCENT, DIVINE]
+        flag: >
+          al-Idrisi (1154) describes a Muslim ruler; Soninke tradition remembers kingship bound to the
+          serpent Bida's gift of rain and gold. Which claim the court leaned on in practice is unclear.
+      - year: 1220
+        base: AGR
+        flow: EXT
+        membership: [KIN]
+        ruled_not_counted: enslaved people
+        standing: BOUND
+        shape: CENTRAL
+        rulers: ONE
+        right: [DESCENT]
+        flag: null
+    evidence: [src-niane-unesco-mali, src-al-bakri-masalik, src-levtzion-ancient-ghana-mali, src-conrad-fisher-conquest]
+    confidence: medium
+
+  - id: pl-takrur
+    name: Takrur
+    alt_names: [Tekrur, Fuuta Tooro (later name of the region)]
+    kind: polity
+    region: senegambia
+    location: {lat: 16.6, lon: -14.5}
+    span: {start: 1000, end: 1500, approx: true}
+    parent: null
+    geometry_note: >
+      Middle Senegal River valley (later Fuuta Tooro). Under Mali's overlordship from the late 13th c.
+      (about 1286 in Fuuta traditions) with farba governors; Fulbe Lam Termes / Lam Taaga lineages rise in
+      the 14th c.; Jolof overlordship in the 15th; Denianke (Koli Tengella) conquest about 1490s-1520s.
+    basemap_match: ["Takrur", "Tekrur"]
+    polity_profile:
+      - year: 1250
+        base: AGR
+        flow: EXT
+        membership: [KIN, FAITH]
+        ruled_not_counted: Serer and other non-Muslim farmers; enslaved people
+        standing: SOV
+        shape: CENTRAL
+        rulers: ONE
+        right: [DESCENT, DIVINE]
+        flag: null
+      - year: 1330
+        base: AGR
+        flow: EXT
+        membership: [KIN, FAITH]
+        ruled_not_counted: enslaved people
+        standing: BOUND
+        shape: CENTRAL
+        rulers: ONE
+        right: [DESCENT]
+        flag: null
+    evidence: [src-niane-unesco-mali, src-kane-fuuta-tooro, src-al-bakri-masalik]
+    confidence: low
+
+  - id: pl-jolof
+    name: Jolof
+    alt_names: [Djolof, Wolof empire, Grand Jolof]
+    kind: polity
+    region: senegambia
+    location: {lat: 15.4, lon: -15.1}
+    span: {start: 1350, end: 1549, approx: true}
+    parent: null
+    geometry_note: >
+      Inland Wolof kingdom (capital area near modern Linguere) overlord of Waalo, Kajoor, Bawol and later
+      Siin and Saalum. Founding date debated: about 1350-1360 is common (Ogot), Boulegue and others argue
+      earlier; broke up after Kajoor's victory at Danki (1549).
+    basemap_match: ["Jolof", "Wolof"]
+    polity_profile:
+      - year: 1420
+        base: AGR
+        flow: EXT
+        membership: [KIN]
+        ruled_not_counted: tributary coastal kingdoms; enslaved people
+        standing: SOV
+        shape: IMPERIAL
+        rulers: ONE
+        right: [DESCENT, VICTORY]
+        flag: >
+          The founder Ndiadiane Ndiaye is given Almoravid-Muslim descent in some versions and Fulbe or
+          Serer descent in others; a Muslim origin story sat beside a court that was only partly Muslim.
+    evidence: [src-boulegue-grand-jolof, src-barry-senegambia, src-ly-tall-unesco-mali-decline]
+    confidence: low
+
+  - id: pl-songhay-gao
+    name: Songhay kingdom of Gao
+    alt_names: [Kawkaw, Kuku, Za / Zuwa dynasty, Sunni (Sonni) dynasty]
+    kind: polity
+    region: western-sahel
+    location: {lat: 16.27, lon: -0.04}
+    span: {start: 1000, end: 1464, approx: true}
+    parent: null
+    geometry_note: >
+      Middle Niger around Gao and Kukiya. A Muslim royal dynasty (epitaphs about 1100-1120) ruled from
+      Gao; Mali conquered Gao probably 1285-1300 (Cissoko), so it was a Mali dependency in the 14th c.
+      Ali Kolon, first Sunni ruler, revolted in the 14th c.; lasting independence under Sunni Sulayman Dama
+      in the first half of the 15th c. (often put in the 1430s). The empire proper begins with Sunni Ali (1464).
+    basemap_match: ["Songhai", "Songhay", "Gao"]
+    polity_profile:
+      - year: 1110
+        base: AGR
+        flow: MKT
+        membership: [KIN, FAITH]
+        ruled_not_counted: Songhay river and farming communities who largely kept their own religion
+        standing: SOV
+        shape: CENTRAL
+        rulers: ONE
+        right: [DESCENT, DIVINE]
+        flag: >
+          The royal epitaphs proclaim Muslim kings with names of the Prophet and first caliphs and imply
+          descent through women, which the 17th-century chronicles never mention.
+      - year: 1340
+        base: AGR
+        flow: EXT
+        membership: [KIN]
+        ruled_not_counted: enslaved people
+        standing: BOUND
+        shape: CENTRAL
+        rulers: ONE
+        right: [DESCENT]
+        flag: null
+      - year: 1440
+        base: AGR
+        flow: EXT
+        membership: [KIN]
+        ruled_not_counted: enslaved people; conquered riverine peoples
+        standing: SOV
+        shape: CENTRAL
+        rulers: ONE
+        right: [VICTORY, DESCENT]
+        flag: >
+          Sunni rulers prayed as Muslims but were famed (and later condemned by Timbuktu chroniclers) as
+          masters of Songhay ritual power.
+    evidence: [src-cissoko-unesco-songhay, src-moraes-farias-inscriptions, src-al-sadi-tarikh-sudan, src-henige-inscriptions-texts]
+    confidence: medium
+
+  - id: pl-bono
+    name: Bono (Bono-Manso)
+    alt_names: [Bonoman, Brong, Techiman-Bono]
+    kind: polity
+    region: forest-edge
+    location: {lat: 7.65, lon: -1.9}
+    span: {start: 1300, end: 1723, approx: true}
+    parent: null
+    geometry_note: >
+      Early Akan kingdom north of the forest, capital Bono Manso near Techiman; origin tradition at the
+      Amowi cave near Pinihi. Bono Manso settled by the 13th c. and a commercial and ritual center by the
+      14th-15th c. (Effah-Gyamfi). Conquered by Asante 1723. Location approximate.
+    basemap_match: ["Bono", "Bonoman"]
+    polity_profile:
+      - year: 1420
+        base: AGR
+        flow: EXT
+        membership: [KIN]
+        ruled_not_counted: enslaved gold miners; foreign traders
+        standing: SOV
+        shape: CENTRAL
+        rulers: ONE
+        right: [DIVINE, DESCENT]
+        flag: null
+    evidence: [src-effah-gyamfi-bono-manso, src-warren-techiman-bono, src-kipre-unesco-lagunes-volta]
+    confidence: low
+
+  - id: pl-kaabu
+    name: Kaabu
+    alt_names: [Gabu, Ngabou]
+    kind: polity
+    region: senegambia
+    location: {lat: 12.28, lon: -14.22}
+    span: {start: 1250, end: 1867, approx: true}
+    parent: null
+    geometry_note: >
+      NEW PLACE (not in registry). Mandinka western province of Mali south of the Gambia (Guinea-Bissau,
+      Casamance), founded in tradition by Sunjata's general Tiramaghan Traore; autonomous from the 15th c.
+      Label point at Gabu town, Guinea-Bissau.
+    basemap_match: ["Kaabu", "Gabu"]
+    polity_profile:
+      - year: 1350
+        base: AGR
+        flow: EXT
+        membership: [KIN]
+        ruled_not_counted: non-Mande farming peoples; enslaved people
+        standing: BOUND
+        shape: CENTRAL
+        rulers: ONE
+        right: [DESCENT, VICTORY]
+        flag: null
+    evidence: [src-person-unesco-coastal, src-niane-unesco-mali, src-ly-tall-unesco-mali-decline]
+    confidence: medium
+
+  # ---------------------------------------------------------------- cities and sites
+  - id: pl-gao
+    name: Gao
+    alt_names: [Kawkaw, Gao-Saney (Sarnah), Gao Ancien]
+    kind: city
+    region: western-sahel
+    location: {lat: 16.27, lon: -0.04}
+    span: {start: 700, end: null, approx: true}
+    parent: pl-songhay-gao
+    geometry_note: >
+      Twin towns: Gao Ancien (in the modern city) and Gao-Saney about 4 km east, the site of the royal
+      cemetery and stelae. Under Mali about 1300-1430s (parent shown is the Songhay kingdom).
+    basemap_match: []
+    evidence: [src-insoll-archaeology-islam, src-cissoko-unesco-songhay]
+    confidence: high
+
+  - id: pl-timbuktu
+    name: Timbuktu
+    alt_names: [Tombouctou, Tinbuktu]
+    kind: city
+    region: western-sahel
+    location: {lat: 16.77, lon: -3.0}
+    span: {start: 1100, end: null, approx: true}
+    parent: pl-mali
+    geometry_note: >
+      Tuareg seasonal camp turned town (12th c. per al-Sadi; no 11th-12th-c. remains found yet, Insoll).
+      Under Mali about 1325-1433; Tuareg (Akil ag Malwal) 1433-1468; Songhay from 1468.
+    basemap_match: []
+    evidence: [src-al-sadi-tarikh-sudan, src-insoll-archaeology-islam]
+    confidence: high
+
+  - id: pl-djenne
+    name: Djenne
+    alt_names: [Jenne, Djenne-Djeno (older site nearby)]
+    kind: city
+    region: western-sahel
+    location: {lat: 13.906, lon: -4.555}
+    span: {start: 1100, end: null, approx: true}
+    parent: null
+    geometry_note: >
+      Inland Niger Delta town beside the much older Jenne-jeno (occupied from about 250 BCE, abandoned by
+      about 1400). Relation to Mali disputed: al-Sadi says Mali attacked 99 times and never took it; the
+      Tarikh al-Fattash makes its chief a Mali subordinate. Parent left null for that reason.
+    basemap_match: []
+    evidence: [src-al-sadi-tarikh-sudan, src-tarikh-al-fattash, src-niane-unesco-mali]
+    confidence: high
+
+  - id: pl-walata
+    name: Walata
+    alt_names: [Oualata, Iwalatan, Biru]
+    kind: city
+    region: western-sahel
+    location: {lat: 17.3, lon: -7.03}
+    span: {start: 1224, end: null, approx: true}
+    parent: pl-mali
+    geometry_note: >
+      Desert-edge terminus of the caravan route from Taghaza and Sijilmasa; replaced Awdaghust in the early
+      13th c. Seat of a Mali farba (governor) in 1352; lost to the Tuareg about 1433; besieged by the
+      Mossi about 1480.
+    basemap_match: []
+    evidence: [src-ibn-battuta-rihla, src-niane-unesco-mali]
+    confidence: high
+
+  - id: pl-niani
+    name: Niani (capital question)
+    alt_names: [Mali (city), Malli, Dakajalan (rival candidate), Kangaba (rival candidate)]
+    kind: city
+    region: western-sahel
+    location: {lat: 11.37, lon: -8.38}
+    span: {start: 1250, end: 1600, approx: true}
+    parent: pl-mali
+    geometry_note: >
+      DEBATED. Niani on the Sankarani (Guinea) was proposed by Delafosse and defended by Niane with the
+      Guinean-Polish excavations (Filipowiak, from 1965/1968). Conrad (1994) argues oral tradition points
+      to Dakajalan and that Mali may have had no permanent capital; Fauvelle notes few excavated samples
+      from the late 13th to early 15th c. Show as a candidate site with a question mark, not as THE capital.
+    basemap_match: []
+    evidence: [src-niane-unesco-mali, src-conrad-dakajalan, src-fauvelle-golden-rhinoceros]
+    confidence: low
+
+  - id: pl-begho
+    name: Begho
+    alt_names: [Bighu, Bitu (in Wilks's reading)]
+    kind: city
+    region: forest-edge
+    location: {lat: 8.2, lon: -2.1}
+    span: {start: 1100, end: 1750, approx: true}
+    parent: null
+    geometry_note: >
+      Market town at the forest-savanna edge north of the Black Volta bend (near Hani, Ghana). Quarters
+      identified archaeologically: Brong/Nyarko (earliest), Kramo (Mande Muslim traders), Dwinfuor (metal
+      workers), market. Not politically subordinate to Bono. Location approximate.
+    basemap_match: []
+    evidence: [src-posnansky-begho, src-kipre-unesco-lagunes-volta]
+    confidence: medium
+
+  - id: pl-mossi
+    name: Mossi
+    alt_names: [Mosi, Moose, Moaga; Wagadugu and Yatenga kingdoms (later)]
+    kind: people
+    region: volta-basin
+    location: {lat: 13.5, lon: -1.8}
+    span: {start: 1250, end: null, approx: true}
+    parent: null
+    geometry_note: >
+      Soft area south of the Niger bend. The "Mossi" who raided Timbuktu (about 1337) and Walata (about
+      1480) in the Timbuktu chronicles may or may not be the founders of the Volta Mossi kingdoms, whose
+      states Izard dates to the late 15th-16th c. Drawn as a people, not a polity, for 1250-1450.
+    basemap_match: ["Mossi"]
+    evidence: [src-izard-unesco-niger-volta, src-al-sadi-tarikh-sudan]
+    confidence: low
+
+  - id: pl-diakha-bambuk
+    name: Diakha-Bambukhu (Jakhanke clerical town)
+    alt_names: [Jakha, Diakhaba, Diakha-Ba]
+    kind: city
+    region: senegambia
+    location: {lat: 13.1, lon: -11.2}
+    span: {start: 1250, end: 1500, approx: true}
+    parent: null
+    geometry_note: >
+      NEW PLACE (not in registry). Clerical town in Bambuk on the Bafing associated with al-Hajj Salim
+      Suwari and the Jakhanke; besieged 1493 in the Songhay succession war. Founding date depends on the
+      Suwari dating debate (Sanneh: 12th-13th c.; Wilks: about 1500). Location approximate.
+    basemap_match: []
+    evidence: [src-sanneh-clericalism, src-wilks-juula]
+    confidence: low
+
+  - id: pl-bambuk-bure
+    name: Bambuk and Bure goldfields
+    alt_names: [Wangara (gold land of the Arabic geographers), Bambouk, Boure]
+    kind: people
+    region: western-sahel
+    location: {lat: 12.5, lon: -10.3}
+    span: {start: 1000, end: null, approx: true}
+    parent: null
+    geometry_note: >
+      NEW PLACE (not in registry). Two gold-producing districts: Bambuk between the Faleme and Bafing,
+      Bure on the upper Niger near Siguiri. Their miners paid tribute to Mali but were not ruled directly.
+      Soft area spanning both.
+    basemap_match: []
+    evidence: [src-al-umari-masalik, src-levtzion-ancient-ghana-mali]
+    confidence: medium
+
+religion_profiles:
+  # ------------------------------------------------------------ Mali
+  - id: rp-mali-court-1235-1300
+    place: pl-mali
+    span: {start: 1235, end: 1300, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - family: local
+        tradition: indigenous
+        branch: other
+        share: dominant
+        local_form: "Mande: hunters' (donso) power and nyama, Komo-style power associations, blacksmith ritual, jeli praise of the mansa"
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-unspecified
+        share: significant
+        local_form: "Muslim clerical clans allied to the Keita (the mori kanda of Kurukan Fuga tradition); royal hajj"
+    relation: plural
+    basis: projected
+    summary: >
+      Sunjata's court drew its power from Mande hunters' and blacksmiths' knowledge while keeping Muslim
+      allies and advisers. His son Mansa Uli made the pilgrimage to Mecca, so Islam was one tool among several.
+    detail: >
+      Niane (UNESCO IV, ch. 6, French ed. pp. 157-159) says Sunjata protected Muslims and had Muslim allies
+      but that oral tradition remembers him as liberator of the Maninka, not a propagator of Islam; Gomez
+      calls his Islam syncretic at best; Fage found nothing Muslim in the epic. Ibn Battuta claims Musa's
+      grandfather converted, which may or may not mean Sunjata. Ibn Khaldun reports Mansa Uli's pilgrimage
+      in Baybars's reign (1260-1277) and Sakura's hajj. Plural rather than syncretic because the evidence
+      shows the two traditions serving different purposes (hajj prestige vs. hunter-king power), not a
+      documented fused rite in this span.
+    evidence: [src-niane-unesco-mali, src-ibn-khaldun-ibar, src-gomez-african-dominion, src-niane-sundiata]
+    confidence: medium
+    flag: null
+
+  - id: rp-mali-court-1300-1450
+    place: pl-mali
+    span: {start: 1300, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-maliki
+        share: dominant
+        local_form: null
+      - family: local
+        tradition: indigenous
+        branch: other
+        share: significant
+        local_form: "Mande royal ritual: jeli Dugha's praise performance, masked jeliw in bird costumes, dust-pouring before the mansa; Komo ritual objects"
+    relation: syncretic
+    basis: inferred
+    summary: >
+      Mansa Musa and Mansa Sulayman led Friday prayer and funded mosques, but court ceremonies kept Mande
+      rituals of praise and power. Ibn Battuta, a Moroccan judge, admired the prayer and condemned the rest.
+    detail: >
+      Ibn Battuta (1352-53) praises Friday attendance and the qadi's children chained until they memorized
+      the Qur'an, and condemns dust-pouring, the jeliw performing inside feathered bird figures, and women's
+      dress. He judges by Maliki North African norms; what he calls un-Islamic is Mande royal protocol.
+      Conrad (1992), as cited by Gomez, reports traditions that Musa brought objects from Mecca for Komo
+      rituals, a fused practice; Gomez and Fauvelle describe the mansa as both pious sultan and master of
+      Mande power. Niane (p. 178) calls the court's Islam a thin varnish, a judgment the teacher may want
+      students to test. After 1360 the evidence thins (Ibn Khaldun ends about 1393; Portuguese sources cover
+      only the Gambia provinces from 1455), so the 1360-1450 part of this span is inferred and lower
+      confidence. basis is set to inferred for the whole profile because one profile carries one basis;
+      1300-1360 is attested (Ibn Battuta, al-Umari). Splitting the span at 1360 would let each part carry
+      its own basis.
+    evidence: [src-ibn-battuta-rihla, src-gomez-african-dominion, src-conrad-fakoli, src-niane-unesco-mali, src-ly-tall-unesco-mali-decline]
+    confidence: high
+    flag: null
+
+  - id: rp-mali-urban-1235-1324
+    place: pl-mali
+    span: {start: 1235, end: 1324, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-unspecified
+        share: significant
+        local_form: "Wangara (Soninke-Mande) merchant-clerics"
+      - family: local
+        tradition: indigenous
+        branch: other
+        share: significant
+        local_form: "Mande: craft-group ritual (numu smiths, jeliw), hunters' associations"
+    relation: coexisting
+    basis: inferred
+    summary: >
+      Mali's market towns probably had Muslim Wangara merchants and clerics living beside Mande artisans
+      and hunters who kept their own rituals, each group with its own leaders. This picture is
+      reconstructed from earlier and later sources, since no eyewitness describes these towns.
+    detail: >
+      Direct evidence for 13th-century towns is thin. The pattern is inferred from al-Bakri's earlier
+      account of Ghana's separate Muslim town (1068), Niane's account of Wangara trading towns, and the
+      Kurukan Fuga traditions that assign clerical clans and craft clans separate roles. Treat as a
+      reasoned reconstruction, not an eyewitness picture.
+    evidence: [src-niane-unesco-mali, src-al-bakri-masalik, src-wilks-juula]
+    confidence: low
+    flag: null
+
+  - id: rp-mali-urban-1324-1450
+    place: pl-mali
+    span: {start: 1324, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-maliki
+        share: dominant
+        local_form: "Friday mosques, Qur'an schools, qadis and khatibs"
+      - family: local
+        tradition: indigenous
+        branch: other
+        share: significant
+        local_form: "Mande ritual specialists and nyamakala craft groups"
+    relation: coexisting
+    summary: >
+      After Musa's pilgrimage, Mali's royal town and trading towns had Friday mosques, judges and Qur'an
+      schools. Mande artisans and servants who followed Mande religion lived in the same towns.
+    detail: >
+      Ibn Battuta describes crowds at Friday prayer, a qadi and khatib, and Qur'an schooling in the capital
+      (1352). Niane (pp. 176-177) credits Musa with Qur'anic schools and book purchases. The excavated
+      mihrab and 'Arab quarter' at Niani (if Niani is the capital) fit the picture of a separate Muslim
+      quarter; see pl-niani for the dating problem.
+    evidence: [src-ibn-battuta-rihla, src-niane-unesco-mali]
+    confidence: medium
+    flag: null
+
+  - id: rp-mali-rural-1235-1450
+    place: pl-mali
+    span: {start: 1235, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >
+      No source from this period describes what Mali's farming villages believed or practiced. Historians
+      assume most kept Mande religion because later evidence shows it, but that is an inference.
+    detail: >
+      Missing evidence: no village-level texts, no excavated rural shrines dated to 1235-1450, and the
+      Arabic visitors saw only court and towns. What we have is (1) al-Bakri's remark (1068) that in Malal
+      only the king and nobles converted, (2) al-Umari's report on the gold country (see pl-bambuk-bure),
+      and (3) 19th-20th-century ethnography of Komo, hunters' societies and nyama (McNaughton; Y.T. Cisse)
+      projected backward. Ly-Tall (UNESCO IV ch. 7, pp. 203-205) describes the western Manden as attached
+      to their ancestral religion and judging sorcery by ordeal, from Portuguese sources of the 1450s.
+      Good discussion question: how far back can 20th-century ethnography be projected?
+    evidence: [src-al-bakri-masalik, src-mcnaughton-mande-blacksmiths, src-cisse-chasseurs, src-ly-tall-unesco-mali-decline]
+    confidence: medium
+    flag: null
+
+  - id: rp-mali-community-enslaved-1300-1450
+    place: pl-mali
+    span: {start: 1300, end: 1450, approx: true}
+    stratum: community
+    community_name: Enslaved people in royal and merchant households
+    traditions: []
+    relation: undocumented
+    summary: >
+      Enslaved people served in Mali's palaces, caravans and households, but no source records their own
+      beliefs. Their religion is a gap in the evidence.
+    detail: >
+      Ibn Battuta notes enslaved women and girls at court and on the caravan routes; al-Maqrizi records
+      slave purchases by Musa's party in Cairo; captives were taken in wars on Mali's frontiers. Captives
+      came from many peoples, so they likely carried many traditions, but no text speaks for them.
+    evidence: [src-ibn-battuta-rihla, src-gomez-african-dominion]
+    confidence: medium
+    flag: null
+
+  # ------------------------------------------------------------ Bambuk-Bure (gold country)
+  - id: rp-bambuk-bure-rural-1300-1350
+    place: pl-bambuk-bure
+    span: {start: 1300, end: 1350, approx: true}
+    stratum: rural
+    community_name: null
+    traditions:
+      - family: local
+        tradition: indigenous
+        branch: other
+        share: dominant
+        local_form: "Malinke and Soninke goldfield communities' own rites (specific forms not recorded in the medieval sources)"
+    relation: exclusive
+    basis: inferred
+    summary: >
+      Al-Umari, citing a Moroccan who lived in Mali for 35 years, reports that Mali's kings left the gold-producing peoples
+      to their own religion, believing the gold would vanish if Islam spread there. If the report is accurate, the gold
+      country stayed outside Islam by royal choice, and the kings took tribute instead.
+    detail: >
+      al-Umari (about 1337-38), on the authority of Abu 'Uthman Sa'id al-Dukkali, who lived at Yiti for 35
+      years (in Levtzion and Hopkins, Corpus; also Kenny, ch.11,
+      https://dhspriory.org/kenny/NWAfr/a11.htm). He attributes the belief to 'the kings of this kingdom',
+      not to Musa; the land is named Mazazat al-Tibr, and the identification of al-Umari's 'land of gold'
+      with Bambuk/Bure is modern. I did not read the passage itself during this research (citation-only);
+      widely cited in Levtzion 1973. Read critically: the gold-belief may be the Malian court's or the
+      informant's explanation of a policy of indirect rule over miners who guarded their sites; it shows a
+      ruler choosing not to convert people, which breaks any picture of Islam spreading by royal command.
+      The exact wording should be checked in the Corpus.
+    evidence: [src-al-umari-masalik, src-levtzion-ancient-ghana-mali]
+    confidence: medium
+    flag: >
+      Outsider report of what Mali's kings believed, via al-Umari's informant; the miners' own religion is not
+      described.
+
+  # ------------------------------------------------------------ Sosso
+  - id: rp-sosso-court-1180-1235
+    place: pl-sosso
+    span: {start: 1180, end: 1235, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - family: local
+        tradition: indigenous
+        branch: other
+        share: dominant
+        local_form: "Sosso blacksmith-king ritual: occult power objects (the Sosso Bala balafon), smiths' nyama"
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-unspecified
+        share: trace
+        local_form: "Muslim Soninke traders in Sosso-ruled lands"
+    relation: contested
+    basis: projected
+    summary: >
+      Mande tradition remembers Sumaoro Kante of Sosso as a blacksmith-king of great spiritual power, the
+      force Mande people call nyama, who fought Islam's spread. That picture comes from his enemies'
+      descendants, so historians debate it.
+    detail: >
+      Niane (UNESCO IV ch. 6, pp. 150-151 and n. 18) presents the Sosso as hostile to Islam and attached to
+      ancestral tradition, and Sumaoro as a fierce adversary of Islam and a sorcerer-king; he also reports a
+      smiths' tradition that Sumaoro tried to stop the Soninke-Maninka slave trade (n. 22). Conrad (1984)
+      and Jansen stress that the traditions vary and are mythic. A 1997 performance by the griot Abdoulaye
+      Sako gives Sumaoro his own epic (University of Birmingham project). 'Contested' follows the
+      tradition's framing of open conflict; whether the conflict was religious or political is unproven.
+    evidence: [src-niane-unesco-mali, src-conrad-oral-sources-links, src-birmingham-sumanguru-epic, src-niane-sundiata]
+    confidence: low
+    flag: >
+      The religious-war framing may be a later Muslim-griot reading that casts Mali's founder on Islam's
+      side; no contemporary text describes Sosso religion.
+
+  - id: rp-sosso-urban-1180-1235
+    place: pl-sosso
+    span: {start: 1180, end: 1235, approx: true}
+    stratum: urban
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >
+      No source describes life in Sosso's towns. Even the capital's location is unknown.
+    detail: >
+      Missing evidence: no identified capital site, no excavation, no Arabic description. Only oral
+      tradition (Mali-side and the Sako Sumaoro epic) speaks of Sosso.
+    evidence: [src-niane-unesco-mali]
+    confidence: high
+    flag: null
+
+  - id: rp-sosso-rural-1180-1235
+    place: pl-sosso
+    span: {start: 1180, end: 1235, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >
+      Nothing written or excavated tells us about Sosso's farming villages. Their religion is a gap.
+    detail: Missing evidence as for the towns; the epics concern rulers, heroes and smiths.
+    evidence: [src-niane-unesco-mali]
+    confidence: high
+    flag: null
+
+  # ------------------------------------------------------------ Ghana / Wagadu
+  - id: rp-ghana-court-1068-1100
+    place: pl-ghana-wagadu
+    span: {start: 1068, end: 1100, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - family: local
+        tradition: indigenous
+        branch: other
+        share: dominant
+        local_form: "Soninke royal religion: sacred grove (al-ghaba) with priests and royal tombs; Wagadu-Bida serpent tradition"
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-unspecified
+        share: minority
+        local_form: "Muslim treasurer, interpreters and most officials; a mosque for Muslim visitors in the royal town"
+    relation: coexisting
+    summary: >
+      In 1068 al-Bakri described Ghana's king worshipping at a sacred grove while Muslims served as his
+      treasurer and officials. This is the pre-1200 baseline for the region.
+    detail: >
+      al-Bakri (Cordoba, 1068), via Levtzion & Hopkins, Corpus. The twin-town plan (royal town with grove
+      and a separate Muslim merchant town with twelve mosques) is the classic coexisting case. Soninke oral
+      tradition (Dinga, the serpent Bida who gave rain and gold for a yearly maiden) is the insider account
+      of royal religion; its recorded versions are 19th-20th c. (Conrad & Fisher 1983).
+    evidence: [src-al-bakri-masalik, src-levtzion-islam-africa, src-conrad-fisher-conquest]
+    confidence: high
+    flag: null
+
+  - id: rp-ghana-court-1100-1240
+    place: pl-ghana-wagadu
+    span: {start: 1100, end: 1240, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-maliki
+        share: dominant
+        local_form: null
+      - family: local
+        tradition: indigenous
+        branch: other
+        share: significant
+        local_form: "Soninke Wagadu-Bida tradition and royal ancestor rites"
+    relation: plural
+    summary: >
+      By the 1150s an Arab geographer called Ghana's ruler a Muslim, yet Soninke memory ties Wagadu's fall
+      to the end of the serpent Bida's protection. The court likely used both traditions for different needs.
+    detail: >
+      al-Idrisi (1154) describes a Muslim ruler. Whether this followed an Almoravid conquest (1076) is
+      debated: Conrad & Fisher (1982) argue the conquest never happened. The Bida story explains drought and
+      dispersal of the Soninke (the Wangara diaspora) in religious terms. Evidence for actual court practice
+      1100-1240 is very thin; confidence low.
+    evidence: [src-levtzion-ancient-ghana-mali, src-conrad-fisher-conquest, src-niane-unesco-mali]
+    confidence: low
+    flag: null
+
+  - id: rp-ghana-urban-1068-1240
+    place: pl-ghana-wagadu
+    span: {start: 1068, end: 1240, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-maliki
+        share: dominant
+        local_form: "Muslim merchant town with twelve mosques, imams, muezzins, jurists"
+      - family: local
+        tradition: indigenous
+        branch: other
+        share: significant
+        local_form: "Soninke ritual life of the royal town"
+    relation: coexisting
+    summary: >
+      Al-Bakri, writing in Spain in 1068, described Ghana's capital as two towns: a Muslim merchants' town
+      with many mosques and a royal town around the sacred grove. Each kept its own religious leaders.
+    detail: >
+      al-Bakri 1068. After the 11th-century crisis the Muslim merchant population increasingly dispersed
+      south and west (Gomez; Niane), which is the start of the Wangara diaspora (see df-soninke-diaspora-islam).
+    evidence: [src-al-bakri-masalik, src-niane-unesco-mali]
+    confidence: medium
+    flag: null
+
+  - id: rp-ghana-rural-1068-1240
+    place: pl-ghana-wagadu
+    span: {start: 1068, end: 1240, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >
+      Soninke farming and herding villages are not described in any medieval source. Their religion in
+      this period is unknown.
+    detail: >
+      Missing evidence: al-Bakri describes only the capital; the Wagadu-Bida traditions concern the royal
+      clans. No rural shrines from this period have been excavated and dated.
+    evidence: [src-al-bakri-masalik]
+    confidence: high
+    flag: null
+
+  # ------------------------------------------------------------ Takrur
+  - id: rp-takrur-court-1035-1200
+    place: pl-takrur
+    span: {start: 1035, end: 1200, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-maliki
+        share: dominant
+        local_form: null
+    relation: exclusive
+    basis: inferred
+    summary: >
+      Al-Bakri reports that Takrur's king War Jabi (died 1040/41) became Muslim and imposed Islamic law. His
+      son fought beside the Almoravids, a Saharan Muslim reform movement, making Takrur one of the earliest
+      Muslim kingdoms in West Africa.
+    detail: >
+      Pre-1200 baseline. al-Bakri via the Corpus (citation-only). The court is called exclusive only in the
+      sense that the outsider sources record no second tradition at court; that may be a silence, not a fact.
+    evidence: [src-al-bakri-masalik, src-levtzion-ancient-ghana-mali]
+    confidence: medium
+    flag: null
+
+  - id: rp-takrur-court-1200-1450
+    place: pl-takrur
+    span: {start: 1200, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-maliki
+        share: dominant
+        local_form: null
+    relation: exclusive
+    basis: inferred
+    summary: >
+      Takrur's rulers stayed Muslim as Mali, then Fulbe lineages, then Jolof took control of the valley.
+      The details of court religion in these centuries are barely recorded.
+    detail: >
+      Fuuta Tooro traditions (Oumar Kane) record Mali's farba governors from about 1286 and the Lam Termes
+      and Lam Taaga Fulbe lineages; Egyptian writers used 'Takruri' for all West African Muslims, a sign of
+      Takrur's early reputation. Evidence for actual court practice 1200-1450 is thin; low confidence.
+    evidence: [src-kane-fuuta-tooro, src-niane-unesco-mali]
+    confidence: low
+    flag: null
+
+  - id: rp-takrur-rural-1200-1450
+    place: pl-takrur
+    span: {start: 1200, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions:
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-unspecified
+        share: significant
+        local_form: null
+      - family: local
+        tradition: indigenous
+        branch: other
+        share: significant
+        local_form: "Serer religion (Roog as creator, pangool ancestral spirits), as known from later Serer tradition"
+    relation: contested
+    basis: projected
+    summary: >
+      Serer oral traditions say families who refused Islam left the Senegal valley for Siin and Saloum, at
+      dates ranging from the 1000s to the 1300s. No written source of the time describes village religion
+      in the valley.
+    detail: >
+      Serer migration traditions were recorded in the 19th-20th c.; dates for the migrations range from
+      the 11th to the 14th c. and are debated. Summaries in Kane and Ba (via secondary citation) and Barry.
+      'Contested' rests on tradition, not a contemporary text; keep the flag visible to students.
+    evidence: [src-kane-fuuta-tooro, src-barry-senegambia]
+    confidence: low
+    flag: Based on later oral tradition; the timing and scale of Serer departures are uncertain.
+
+  # ------------------------------------------------------------ Jolof
+  - id: rp-jolof-court-1350-1450
+    place: pl-jolof
+    span: {start: 1350, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - family: local
+        tradition: indigenous
+        branch: other
+        share: dominant
+        local_form: "Wolof royal and lineage ritual; spirit cults that later ethnography calls rab and tuur (14th-15th-c. forms not documented)"
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-maliki
+        share: significant
+        local_form: "Muslim clerics (Saharan and Mande/Soninke) as advisers, scribes and amulet-makers"
+    relation: plural
+    basis: projected
+    summary: >
+      The Wolof kings of Jolof kept Muslim clerics at court, and one version of their founding story gives
+      them a Muslim ancestor, but most royal ritual was Wolof. Islam became the majority religion in Wolof
+      country only much later.
+    detail: >
+      Ndiadiane Ndiaye's founding legend has Almoravid-Muslim, Fulbe and Serer versions (Boulegue; Searing),
+      each a claim about where legitimacy comes from. Cadamosto (1455, just after this span) describes the
+      Kajoor ruler Budomel with Muslim clerics and prayer in his household; that report is citation-only
+      here. Barry places Islam's mass spread in Senegambia in the 17th-19th c. Fage's characterization
+      of the nobility as nominally non-Muslim mixing in Islam supports 'plural'.
+    evidence: [src-boulegue-grand-jolof, src-barry-senegambia, src-cadamosto-voyages]
+    confidence: low
+    flag: null
+
+  - id: rp-jolof-rural-1350-1450
+    place: pl-jolof
+    span: {start: 1350, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >
+      No source from these years describes Wolof village religion. Portuguese visitors arrived only in the 1440s and stayed on the coast.
+    detail: >
+      Missing evidence: no texts or excavated shrines from Jolof's villages for 1350-1450. Later
+      ethnography of Wolof spirit cults cannot be dated back securely.
+    evidence: [src-barry-senegambia]
+    confidence: high
+    flag: null
+
+  # ------------------------------------------------------------ Kaabu
+  - id: rp-kaabu-court-1300-1450
+    place: pl-kaabu
+    span: {start: 1300, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - family: local
+        tradition: indigenous
+        branch: other
+        share: dominant
+        local_form: "Mandinka: royal lineage shrines, hunters' and smiths' power, jeli praise"
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-maliki
+        share: minority
+        local_form: "Mande trading clerics (Jakhanke and Dyula) in separate settlements"
+    relation: coexisting
+    summary: >
+      Kaabu's Mandinka rulers stayed attached to Mande religion, while Muslim merchant-clerics lived in
+      their own villages and served the trade. Islam was a minority here, but trade could not run without it.
+    detail: >
+      Ly-Tall (UNESCO IV ch. 7) and Person (ch. 12, p. 340) describe Islam in Mande Senegambia as a
+      minority tied to long-distance trade, and Kaabu as attached to its ancestral religion; Portuguese
+      visitors (1455-56) found Islam weak at Gambia courts and one Casamance mansa taking omens from his
+      imam. Kaabu's Muslim-clerical villages fit the Suwarian pattern of separation from rulers.
+    evidence: [src-ly-tall-unesco-mali-decline, src-person-unesco-coastal]
+    confidence: medium
+    flag: null
+
+  # ------------------------------------------------------------ Songhay / Gao
+  - id: rp-songhay-court-1080-1300
+    place: pl-songhay-gao
+    span: {start: 1080, end: 1300, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-unspecified
+        share: dominant
+        local_form: "Royal epitaphs naming kings after the Prophet and first caliphs"
+      - family: local
+        tradition: indigenous
+        branch: other
+        share: significant
+        local_form: "Songhay kingship ritual (inferred); inscriptions imply descent through women"
+    relation: plural
+    basis: inferred
+    summary: >
+      Gao's kings were buried under Arabic epitaphs, some on marble carved in Spain, which call them Muslim
+      rulers. The same stones hint at succession through mothers, a local custom later chroniclers left out.
+    detail: >
+      Moraes Farias (2003) re-edited the Gao-Saney stelae (early 12th c.). Henige's review notes that the
+      inscriptions imply matriliny, which the 17th-century Timbuktu chronicles never mention, and that
+      chroniclers may have reshaped early king lists. Cissoko (UNESCO IV ch. 8, p. 214) dates the king's
+      conversion to 1019 and says it did not spread to the Songhay people. Lange identifies these kings
+      with the chronicles' Za dynasty; Hunwick rejected that. The indigenous share is inferred.
+    evidence: [src-gao-saney-stelae, src-moraes-farias-inscriptions, src-henige-inscriptions-texts, src-cissoko-unesco-songhay, src-lange-gao-sane]
+    confidence: medium
+    flag: null
+
+  - id: rp-songhay-court-1300-1430
+    place: pl-songhay-gao
+    span: {start: 1300, end: 1430, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-maliki
+        share: dominant
+        local_form: "Mali governors and Musa's mosque at Gao"
+      - family: local
+        tradition: indigenous
+        branch: other
+        share: significant
+        local_form: "Songhay princely lineages' ritual (the Sunni line)"
+    relation: plural
+    summary: >
+      Under Mali, Gao was governed by the mansa's men, and Musa built a mosque there in 1325. The Tarikh
+      al-Sudan, a later Timbuktu chronicle, says Songhay princes held as hostages at Mali's court led the
+      revolt that founded the Sunni dynasty.
+    detail: >
+      Cissoko p. 214 (Mali conquest probably 1285-1300; Musa's mosque 1324-25); Ibn Battuta visited Gao
+      in 1353 and calls it one of the finest Sudanic cities. The hostage story of Ali Kolon comes from the
+      Tarikh al-Sudan.
+    evidence: [src-cissoko-unesco-songhay, src-ibn-battuta-rihla, src-al-sadi-tarikh-sudan]
+    confidence: medium
+    flag: null
+
+  - id: rp-songhay-court-1430-1464
+    place: pl-songhay-gao
+    span: {start: 1430, end: 1464, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - family: local
+        tradition: indigenous
+        branch: other
+        share: dominant
+        local_form: "Songhay royal power: sohanci magic, Dongo (thunder) and Harakoy Dikko (river) cults"
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-maliki
+        share: significant
+        local_form: null
+    relation: plural
+    basis: projected
+    summary: >
+      Little is recorded about the first independent Sunni kings; judging from their successor Sunni Ali,
+      they likely prayed as Muslims while drawing on Songhay spiritual power. Later Timbuktu scholars
+      condemned Sunni Ali for this.
+    detail: >
+      Cissoko (pp. 219, 233): Sunni Ali (1464-1492, just after this span) never abandoned Songhay cults and
+      was called a great magician; the sohanci healer-magicians claim descent from the Sunni line. For
+      1430-1464 itself the evidence is very thin; this profile projects back from Sunni Ali.
+    evidence: [src-cissoko-unesco-songhay, src-al-sadi-tarikh-sudan]
+    confidence: low
+    flag: Projected from Sunni Ali's reign; the first Sunni kings are poorly documented.
+
+  - id: rp-songhay-rural-1100-1450
+    place: pl-songhay-gao
+    span: {start: 1100, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >
+      The Songhay fishers and farmers of the river are not described in medieval sources. Historians infer
+      they kept their own spirit religion, but no text from the time says so.
+    detail: >
+      Missing evidence: no rural texts or dated shrines. Cissoko's statement that the Songhay stayed loyal to
+      their beliefs is a modern inference from later evidence (Sorko and Do river cults, holey spirit
+      possession recorded in the 20th c.).
+    evidence: [src-cissoko-unesco-songhay]
+    confidence: high
+    flag: null
+
+  - id: rp-gao-urban-1100-1325
+    place: pl-gao
+    span: {start: 1100, end: 1325, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-unspecified
+        share: dominant
+        local_form: "North African and Saharan merchants; Muslim cemetery at Gao-Saney"
+      - family: local
+        tradition: indigenous
+        branch: other
+        share: significant
+        local_form: "Songhay townspeople's spirit religion (inferred)"
+    relation: coexisting
+    basis: inferred
+    summary: >
+      Gao was a twin town where Muslim traders from the north lived beside Songhay residents. Its cemetery
+      stones are the oldest Arabic writing in the region.
+    detail: >
+      Insoll's and Cisse's excavations at Gao Ancien and Gao-Saney; al-Bakri (1068) describes two towns.
+      The indigenous share is inferred, not attested.
+    evidence: [src-insoll-archaeology-islam, src-al-bakri-masalik, src-gao-saney-stelae]
+    confidence: medium
+    flag: null
+
+  - id: rp-gao-urban-1325-1450
+    place: pl-gao
+    span: {start: 1325, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-maliki
+        share: dominant
+        local_form: "Musa's mosque; Mali's governor; Muslim merchant quarters"
+      - family: local
+        tradition: indigenous
+        branch: other
+        share: significant
+        local_form: "Songhay residents' spirit religion (inferred)"
+    relation: coexisting
+    summary: >
+      Under Mali, Gao gained a royal mosque and remained a busy Muslim trading town on the Niger. Ibn Battuta
+      praised it in 1353.
+    detail: >
+      Ibn Battuta stayed about a month in Gao (1353). The tomb of Askia Muhammad, often shown for Gao, is
+      1490s and outside this span.
+    evidence: [src-ibn-battuta-rihla, src-cissoko-unesco-songhay]
+    confidence: medium
+    flag: null
+
+  # ------------------------------------------------------------ Timbuktu
+  - id: rp-timbuktu-urban-1100-1325
+    place: pl-timbuktu
+    span: {start: 1100, end: 1325, approx: true}
+    stratum: urban
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >
+      Timbuktu's first two centuries are known only from a story written down in the 1650s. Archaeologists
+      have not yet found the early town under the sand.
+    detail: >
+      al-Sadi says Tuareg herders founded a seasonal depot here about 1100; Insoll found no 11th-12th-c.
+      remains in the modern city. Likely Muslim (Tuareg and Saharan traders), but undocumented.
+    evidence: [src-al-sadi-tarikh-sudan, src-insoll-archaeology-islam]
+    confidence: high
+    flag: null
+
+  - id: rp-timbuktu-urban-1325-1433
+    place: pl-timbuktu
+    span: {start: 1325, end: 1433, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-maliki
+        share: dominant
+        local_form: "Friday mosque (Djinguereber), Sankore and other mosque-schools; Masufa, Soninke and Mande scholars"
+    relation: exclusive
+    basis: inferred
+    summary: >
+      Under Mali, Timbuktu became a Muslim town of scholars and merchants built around Musa's great mosque.
+      Ibn Battuta found most residents were Masufa, a Saharan Sanhaja people.
+    detail: >
+      Ibn Battuta (1353) saw al-Sahili's grave there. The enslaved and riverine (Bozo, Sorko) people who
+      also lived in and around the town are not described; 'exclusive' describes the recorded free urban
+      population only.
+    evidence: [src-ibn-battuta-rihla, src-al-sadi-tarikh-sudan, src-cissoko-unesco-songhay]
+    confidence: medium
+    flag: null
+
+  - id: rp-timbuktu-urban-1433-1468
+    place: pl-timbuktu
+    span: {start: 1433, end: 1468, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-maliki
+        share: dominant
+        local_form: "Scholarly families incl. the Aqit (Masufa) arriving from Masina; Sidi Yahya mosque"
+    relation: exclusive
+    basis: inferred
+    summary: >
+      When Tuareg chiefs took Timbuktu from Mali, its Muslim scholars stayed and their schools grew. Scholar
+      families such as the Aqit settled in this period.
+    detail: >
+      Tuareg control under Akil ag Malwal from 1433-34 (Hunwick 1999; Ly-Tall p. 200), with a local
+      Timbuktu-koi; the Sidi Yahya mosque tradition gives about 1400-1440. Timbuktu's famous 'golden age'
+      of manuscript production is mostly 16th c. and later.
+    evidence: [src-al-sadi-tarikh-sudan, src-ly-tall-unesco-mali-decline]
+    confidence: medium
+    flag: null
+
+  - id: rp-timbuktu-court-1325-1468
+    place: pl-timbuktu
+    span: {start: 1325, end: 1468, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-maliki
+        share: dominant
+        local_form: "Mali's governor (to 1433), then Tuareg chiefs and the Timbuktu-koi"
+    relation: exclusive
+    basis: inferred
+    summary: >
+      Timbuktu's governors, first Mali's officials and then Tuareg chiefs, were Muslim. Real authority over
+      daily life lay heavily with the city's judges and scholars.
+    detail: Based on al-Sadi and Ibn Battuta; the governors' personal practice is not described in detail.
+    evidence: [src-al-sadi-tarikh-sudan, src-ibn-battuta-rihla]
+    confidence: medium
+    flag: null
+
+  - id: rp-timbuktu-rural-1325-1450
+    place: pl-timbuktu
+    span: {start: 1325, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >
+      The herders and river farmers around Timbuktu do not appear in the sources for this period. Their
+      religious life is a gap.
+    detail: >
+      Missing evidence: chroniclers wrote about scholars and rulers; no rural sites are dated and published.
+    evidence: [src-al-sadi-tarikh-sudan]
+    confidence: high
+    flag: null
+
+  # ------------------------------------------------------------ Djenne
+  - id: rp-djenne-court-1200-1330
+    place: pl-djenne
+    span: {start: 1200, end: 1330, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-maliki
+        share: dominant
+        local_form: "Koi Kunboro's conversion; palace turned into the first mosque"
+      - family: local
+        tradition: indigenous
+        branch: other
+        share: significant
+        local_form: "Pre-conversion Djenne royal and founding rites (Bozo and Nono traditions)"
+    relation: plural
+    basis: projected
+    summary: >
+      The Tarikh al-Sudan, a Timbuktu chronicle written about 1655, says Djenne's ruler Koi Kunboro became
+      Muslim, tore down his palace and made it a mosque. Scholars date this anywhere from about 1200 to
+      1330.
+    detail: >
+      Tarikh al-Sudan (Hunwick trans.; cited by Bourgeois and others). Proposed dates run from about 1180 to
+      1330 (Bourgeois 1987 gives a 1200-1330 range); the popular '1240' is not secure. A figure of 4,200
+      scholars present at the conversion is widely repeated but was NOT verified in this research. The
+      'plural' relation reflects the transition span, not attested dual practice.
+    evidence: [src-al-sadi-tarikh-sudan, src-bourgeois-djenne, src-aramco-maas-djenne]
+    confidence: low
+    flag: Conversion date debated; chronicle written about 400 years later.
+
+  - id: rp-djenne-urban-1300-1450
+    place: pl-djenne
+    span: {start: 1300, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-maliki
+        share: dominant
+        local_form: "Great mosque, scholars, merchant houses"
+      - family: local
+        tradition: indigenous
+        branch: other
+        share: significant
+        local_form: "Bozo fishers' and Nono farmers' water and land rites (inferred from later evidence)"
+    relation: coexisting
+    basis: inferred
+    summary: >
+      Djenne grew into a Muslim trading city that linked the Sahel with the gold and kola routes to the south.
+      Fishing and farming families of the delta likely kept their own water and land rituals.
+    detail: >
+      Niane (UNESCO IV ch. 6, p. 142) uses the McIntoshes' Jenne-jeno excavations to argue that urban life
+      here predates Arab trade, an African-centered correction to older trade-origin stories. Djenne peaked
+      in the 15th c. The indigenous share is inferred.
+    evidence: [src-niane-unesco-mali, src-al-sadi-tarikh-sudan]
+    confidence: low
+    flag: null
+
+  - id: rp-djenne-rural-1200-1450
+    place: pl-djenne
+    span: {start: 1200, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >
+      The chronicle claims thousands of villages around Djenne, but none of their religious life is
+      recorded. Jenne-jeno's abandonment by 1400 is still unexplained.
+    detail: >
+      Niane (p. 182) treats al-Sadi's 7,077 villages as doubtful. Missing evidence: dated rural shrines or texts.
+    evidence: [src-niane-unesco-mali, src-al-sadi-tarikh-sudan]
+    confidence: high
+    flag: null
+
+  # ------------------------------------------------------------ Walata
+  - id: rp-walata-urban-1300-1450
+    place: pl-walata
+    span: {start: 1300, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-maliki
+        share: dominant
+        local_form: "Masufa (Sanhaja) Muslims who kept matrilineal inheritance"
+    relation: exclusive
+    basis: attested
+    summary: >
+      Ibn Battuta found Walata's Masufa people devout at prayer, but their customs shocked him: a man's
+      heirs were his sisters' sons, and women went unveiled and had male friends. He judged them by Moroccan
+      rules, but here Muslims kept their own Saharan family customs.
+    detail: >
+      Ibn Battuta (1352): 'A person's heirs are his sister's sons, not his own sons' (Gibb trans.). Read
+      critically: he measures Masufa custom against Moroccan Maliki norms; matriliny is a Sanhaja and wider
+      Saharan pattern (compare the Gao epitaphs), not a sign of weak Islam. He also reports a qadi calling
+      a woman his companion. Women's high status here is an observed practice, filtered through his shock.
+    evidence: [src-ibn-battuta-rihla]
+    confidence: high
+    flag: null
+
+  - id: rp-walata-court-1300-1433
+    place: pl-walata
+    span: {start: 1300, end: 1433, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-maliki
+        share: dominant
+        local_form: "Mali's farba (governor) Husayn in 1352"
+    relation: exclusive
+    basis: attested
+    summary: >
+      Walata was run by a governor for the mansa of Mali until the Tuareg took it around 1433. Ibn Battuta
+      disliked how the governor received him through an interpreter.
+    detail: Ibn Battuta 1352; Ly-Tall p. 200 for the Tuareg seizure.
+    evidence: [src-ibn-battuta-rihla, src-ly-tall-unesco-mali-decline]
+    confidence: medium
+    flag: null
+
+  - id: rp-walata-rural-1300-1450
+    place: pl-walata
+    span: {start: 1300, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions:
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-unspecified
+        share: dominant
+        local_form: "Masufa pastoral nomads and caravan guides"
+    relation: exclusive
+    basis: attested
+    summary: >
+      The desert herders around Walata were Masufa Muslims who guided caravans across the Sahara. Ibn
+      Battuta traveled with them from Taghaza.
+    detail: Ibn Battuta describes Masufa guides (takshif) on the Taghaza-Walata leg.
+    evidence: [src-ibn-battuta-rihla]
+    confidence: medium
+    flag: null
+
+  # ------------------------------------------------------------ Niani
+  - id: rp-niani-urban-1250-1450
+    place: pl-niani
+    span: {start: 1250, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-unspecified
+        share: minority
+        local_form: "Excavated mosque mihrab and 'Arab quarter' (Filipowiak)"
+      - family: local
+        tradition: indigenous
+        branch: other
+        share: significant
+        local_form: "Mande royal town with smiths' and fishers' hamlets"
+    relation: coexisting
+    summary: >
+      Excavations at Niani found a mosque niche and a separate traders' quarter beside the royal town. Whether
+      Niani was Mali's capital in the 1300s is still argued.
+    detail: >
+      Niane (pp. 169-170) and Filipowiak's Guinean-Polish mission. Fauvelle points to few dated samples for
+      the late 13th to early 15th c., so this profile may describe a 15th-c. town.
+    evidence: [src-niane-unesco-mali, src-fauvelle-golden-rhinoceros, src-conrad-dakajalan]
+    confidence: low
+    flag: Dating of the excavated layers is disputed.
+
+  # ------------------------------------------------------------ Mossi
+  - id: rp-mossi-court-1330-1450
+    place: pl-mossi
+    span: {start: 1330, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - family: local
+        tradition: indigenous
+        branch: other
+        share: dominant
+        local_form: "Mossi: earth-priest (tengsoba) shrines, ancestor consultation, sky god Wende (as recorded among later Volta Mossi)"
+    relation: exclusive
+    basis: projected
+    summary: >
+      The Songhay chronicles say the Mossi who raided Timbuktu and Walata were not Muslim, and in 1498 a
+      Mossi king consulted his ancestors before refusing Islam. Little else is known about Mossi religion
+      in this period.
+    detail: >
+      Izard (UNESCO IV ch. 9) says little is known of Mossi belief in this period; the Songhay chronicles
+      just call them non-Muslims. The ancestor-consultation scene (Askia Muhammad's envoy, 1498) is later
+      than this span but is the clearest insider-framed episode in al-Sadi.
+    evidence: [src-izard-unesco-niger-volta, src-al-sadi-tarikh-sudan]
+    confidence: low
+    flag: Unclear whether the 14th-c. raiders and the later Volta kingdoms were one people.
+
+  - id: rp-mossi-rural-1250-1450
+    place: pl-mossi
+    span: {start: 1250, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >
+      Nothing records the religion of farmers in the Volta basin in this period. Later earth-shrine
+      traditions may be old, but that cannot be shown.
+    detail: >
+      Missing evidence: no texts; little dated archaeology of the period in the Mossi plateau.
+    evidence: [src-izard-unesco-niger-volta]
+    confidence: high
+    flag: null
+
+  # ------------------------------------------------------------ Begho
+  - id: rp-begho-urban-1100-1350
+    place: pl-begho
+    span: {start: 1100, end: 1350, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - family: local
+        tradition: indigenous
+        branch: other
+        share: dominant
+        local_form: "Brong (Akan) religion: Nyame, abosom, ancestors (as known from later Bono tradition)"
+    relation: exclusive
+    basis: projected
+    summary: >
+      Begho began as a Brong (Akan) town at the forest edge. There is no sign of Islam there before
+      Mande traders settled.
+    detail: Nyarko (Brong) quarter is the earliest (Posnansky; Kipre p. 355 gives about 1100).
+    evidence: [src-posnansky-begho, src-kipre-unesco-lagunes-volta]
+    confidence: low
+    flag: null
+
+  - id: rp-begho-urban-1350-1450
+    place: pl-begho
+    span: {start: 1350, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - family: local
+        tradition: indigenous
+        branch: other
+        share: dominant
+        local_form: "Brong (Akan) religion: Nyame, abosom, ancestors"
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-unspecified
+        share: minority
+        local_form: "Mande-speaking Dyula traders in the Kramo quarter"
+    relation: coexisting
+    summary: >
+      By the 1300s-1400s Begho had a Brong quarter and a Kramo quarter of Muslim Mande traders, each with
+      its own leaders. Gold and kola moved north through this town.
+    detail: >
+      Posnansky's Begho excavations (University of Ghana, 1970-79) identified quarters by pottery and
+      features; 'Kramo' is the Akan word for Muslim. Kipre (p. 359) calls Begho one of the most important
+      kola markets of the 14th c.; Dyula dominance of trade is 15th c. (Massing; Wilks). The Kramo quarter's
+      start date is not secure.
+    evidence: [src-posnansky-begho, src-kipre-unesco-lagunes-volta, src-wilks-juula]
+    confidence: medium
+    flag: null
+
+  - id: rp-begho-community-dyula-1350-1450
+    place: pl-begho
+    span: {start: 1350, end: 1450, approx: true}
+    stratum: community
+    community_name: Dyula (Wangara) Muslim traders of the Kramo quarter
+    traditions:
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-maliki
+        share: dominant
+        local_form: "Suwarian-style clerics who did not seek converts"
+    relation: exclusive
+    basis: projected
+    summary: >
+      The Dyula traders kept Islam inside their own quarter and did not try to convert their Akan hosts.
+      Their clerics later explained this with the Suwarian teaching that God decides when people convert.
+    detail: >
+      Wilks links the Dyula of the Volta region to the Suwarian tradition; whether that teaching was already
+      formulated by 1450 depends on Suwari's dates (see df-suwarian-clerical-tradition).
+    evidence: [src-wilks-juula, src-posnansky-begho]
+    confidence: low
+    flag: null
+
+  # ------------------------------------------------------------ Bono
+  - id: rp-bono-court-1350-1450
+    place: pl-bono
+    span: {start: 1350, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - family: local
+        tradition: indigenous
+        branch: other
+        share: dominant
+        local_form: "Akan: Nyame, abosom such as Taa Kora (Tano) at Tanoboase, Asaase Yaa, ancestors; the Bonohene as ritual head"
+    relation: exclusive
+    basis: projected
+    summary: >
+      Later Akan evidence suggests Bono's king was both ruler and religious head, serving the Akan gods
+      and the river power Taa Kora. Muslim traders came to Bono's markets, but the court did not adopt
+      Islam.
+    detail: >
+      Effah-Gyamfi's archaeology and Warren's ethnography; Bono's origin tradition at Amowi cave is an
+      insider source that Konadu and Warren read as local emergence, against older claims of migration from
+      ancient Ghana or Timbuktu. Meyerowitz's 1295 founding date is unsupported (Warren, Flight).
+    evidence: [src-effah-gyamfi-bono-manso, src-warren-techiman-bono]
+    confidence: low
+    flag: null
+
+  - id: rp-bono-urban-1350-1450
+    place: pl-bono
+    span: {start: 1350, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - family: local
+        tradition: indigenous
+        branch: other
+        share: dominant
+        local_form: "Akan town shrines and ancestors"
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-unspecified
+        share: trace
+        local_form: "Visiting Dyula merchants at the Dwabirim market"
+    relation: coexisting
+    summary: >
+      At Bono Manso's market, visiting Muslim Dyula merchants traded with Akan townspeople. They came and
+      went without changing the town's religion.
+    detail: Effah-Gyamfi on the Dwabirim market south of the capital; dating to this span is approximate.
+    evidence: [src-effah-gyamfi-bono-manso]
+    confidence: low
+    flag: null
+
+  - id: rp-bono-rural-1300-1450
+    place: pl-bono
+    span: {start: 1300, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >
+      Bono's farming and gold-mining villages left no records of their religion from this time. Later Akan
+      practice is a guide, not proof.
+    detail: >
+      Missing evidence: excavation has focused on the capital and Amowi; no rural texts.
+    evidence: [src-effah-gyamfi-bono-manso]
+    confidence: high
+    flag: null
+
+  # ------------------------------------------------------------ Diakha
+  - id: rp-diakha-urban-1250-1450
+    place: pl-diakha-bambuk
+    span: {start: 1250, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - family: abrahamic
+        tradition: islam
+        branch: sunni-maliki
+        share: dominant
+        local_form: "Jakhanke clerical community following al-Hajj Salim Suwari"
+    relation: exclusive
+    basis: projected
+    summary: >
+      Tradition remembers Diakha as a town of Muslim teachers who stayed out of politics and war, a model
+      for clerical villages across Senegambia. Its founding date depends on when its teacher al-Hajj Salim
+      Suwari lived, which historians dispute.
+    detail: >
+      Sanneh (1976, writing from the University of Ghana) puts Suwari in the 12th-13th c. and Diakha-Bambukhu
+      as his community; Wilks dates him about 1500. If Wilks is right, this profile belongs after 1450.
+    evidence: [src-sanneh-clericalism, src-wilks-juula]
+    confidence: low
+    flag: Founding date depends on the unresolved Suwari dating.
+
+diffusions:
+  # ------------------------------------------------------------ religion
+  - id: df-islam-takrur-war-jabi
+    lens: religion
+    what: Islam and Islamic law at the Takrur court (pre-1200 baseline)
+    from: [pl-sijilmasa]
+    to: pl-takrur
+    span: {start: 1030, end: 1041, approx: true}
+    mechanism: hierarchical
+    carriers: [merchant, religious-specialist, ruler]
+    outcome: adoption
+    summary: >
+      Al-Bakri reports that King War Jabi of Takrur became Muslim and made his people follow Islamic law
+      before 1041. It is one of the earliest recorded royal conversions south of the Sahara.
+    detail: >
+      Baseline before the module. Source of the teachers is not named; the Sijilmasa-Awdaghust caravan
+      route is the likely channel (shown as from: Sijilmasa). Outcome 'adoption' follows al-Bakri's claim
+      that the people converted; rural depth is unknown (see rp-takrur-rural-1200-1450).
+    evidence: [src-al-bakri-masalik, src-levtzion-ancient-ghana-mali]
+    confidence: medium
+    ap_topics: ["1.2", "2.4"]
+
+  - id: df-islam-malal-king
+    lens: religion
+    what: Conversion of the king of Malal (Mali's forerunner) after a drought
+    from: [pl-ghana-wagadu]
+    to: pl-mali
+    span: {start: 1050, end: 1068, approx: true}
+    mechanism: hierarchical
+    carriers: [religious-specialist, merchant]
+    outcome: elite-only
+    summary: >
+      Al-Bakri tells how a Muslim guest prayed for rain during a drought in Malal and the king converted when
+      the rain came. In al-Bakri's account, the king and nobles became Muslim, but the common people did not.
+    detail: >
+      al-Bakri 1068 (Corpus); the story is summarized by Levtzion and in many readers. In al-Bakri the
+      king also had the sacred objects broken and the specialists expelled, and later rulers bore the title
+      al-muslimani (Niane p. 151 gives 'El-Moslemani'; Ibn Khaldun's Barmandana). The guest's origin is not
+      stated; Ghana's Muslim merchant community is the likeliest network, hence from: Ghana. Note the
+      story's shape: it is a contest of rain-power, the same currency as Mande ritual, which explains why
+      it persuaded. Pre-1200 baseline.
+    evidence: [src-al-bakri-masalik, src-levtzion-islam-africa, src-niane-unesco-mali]
+    confidence: medium
+    ap_topics: ["1.2", "1.5", "2.5"]
+
+  - id: df-soninke-diaspora-islam
+    lens: religion
+    what: Soninke (Wangara) Muslim merchant-clerics dispersing south from Wagadu
+    from: [pl-ghana-wagadu]
+    to: pl-mali
+    span: {start: 1100, end: 1250, approx: true}
+    mechanism: relocation
+    carriers: [merchant, religious-specialist, migrant]
+    outcome: coexistence
+    summary: >
+      As Wagadu weakened and the Sahel dried, Soninke Muslim traders moved south to the Niger and the
+      goldfields. They settled as separate Muslim communities among Mande farmers.
+    detail: >
+      Niane (pp. 142-143) on the Wangara/Jula/Wakore as merchant names and the Soninke spread toward the
+      Niger; Gomez suggests stricter Islam after the 11th-c. crisis also pushed the diaspora. Soninke memory
+      ties the dispersal to the death of the serpent Bida. Relocation with coexistence is the core pattern
+      that later carried Islam to Djenne, Begho and Hausaland.
+    evidence: [src-niane-unesco-mali, src-gomez-african-dominion, src-conrad-fisher-conquest]
+    confidence: medium
+    ap_topics: ["2.4", "2.5"]
+
+  - id: df-islam-sosso-resisted
+    lens: religion
+    what: Islam's advance into Sosso-ruled lands, opposed by the Sosso kings (as tradition tells it)
+    from: [pl-ghana-wagadu]
+    to: pl-sosso
+    span: {start: 1180, end: 1235, approx: true}
+    mechanism: contagious
+    carriers: [merchant, religious-specialist]
+    outcome: resistance
+    summary: >
+      Mande epics present Sumaoro Kante of Sosso as a champion of Mande ancestral religion who resisted
+      the Muslim traders and clerics of former Ghana. His defeat at Kirina is told as Sunjata's victory,
+      not Islam's.
+    detail: >
+      Niane, p. 150 n. 18 and p. 151. Debated: the epic is told by Mali's griots, and some versions add a
+      Muslim gloss later; a smiths' tradition makes Sumaoro an opponent of slave-raiding instead (n. 22).
+      Students should ask whose story calls this a religious war.
+    evidence: [src-niane-unesco-mali, src-conrad-oral-sources-links, src-birmingham-sumanguru-epic]
+    confidence: low
+    ap_topics: ["1.5", "2.5"]
+
+  - id: df-mali-royal-hajj
+    lens: religion
+    what: Royal pilgrimage to Mecca by the mansas (Uli, Sakura, Musa)
+    from: [pl-ext-hijaz, pl-cairo]
+    to: pl-mali
+    span: {start: 1260, end: 1325, approx: true}
+    mechanism: hierarchical
+    carriers: [pilgrim, ruler, scholar]
+    outcome: elite-only
+    summary: >
+      Starting with Sunjata's son Mansa Uli, Mali's rulers made the pilgrimage to Mecca and came back with
+      scholars, books and Mamluk contacts. Islam grew stronger at court and in the towns; no source
+      describes the villages.
+    detail: >
+      Ibn Khaldun: Uli's hajj in Baybars's reign (1260-1277); Sakura killed on the way home; Musa's hajj
+      1324-25 (al-Umari on Cairo, Levtzion & Hopkins pp. 269-273, read via World History Commons). Gomez
+      notes the royal hajj also echoed the Mande hunter's quest for power abroad, so the journey carried
+      meaning in both traditions.
+    evidence: [src-ibn-khaldun-ibar, src-al-umari-masalik, src-gomez-african-dominion, src-niane-unesco-mali]
+    confidence: high
+    ap_topics: ["1.2", "1.5", "2.4", "2.5"]
+
+  - id: df-mecca-objects-komo
+    lens: religion
+    what: Objects from Mecca absorbed into Mande Komo ritual
+    from: [pl-ext-hijaz]
+    to: pl-mali
+    span: {start: 1325, end: 1350, approx: true}
+    mechanism: stimulus
+    carriers: [pilgrim, ruler]
+    outcome: syncretism
+    summary: >
+      Mande traditions, recorded in the 1900s, say Mansa Musa brought sacred objects back from Mecca for
+      the rituals of Komo, a Mande power association. If so, power from the holy city was folded into Mande
+      religion rather than replacing it.
+    detail: >
+      Conrad (1992), as cited by Gomez and the Mali Empire literature; I did not see Conrad's passage
+      (citation-only). It is an insider (griot/Komo) tradition, recorded in the 20th c.; it shows the
+      hajj's prestige working inside Mande religion rather than replacing it.
+    evidence: [src-conrad-fakoli, src-gomez-african-dominion]
+    confidence: low
+    ap_topics: ["1.5", "2.5"]
+
+  - id: df-islam-djenne-court
+    lens: religion
+    what: Conversion of Djenne's ruler Koi Kunboro and the founding of its mosque
+    from: [pl-ghana-wagadu]
+    to: pl-djenne
+    span: {start: 1180, end: 1330, approx: true}
+    mechanism: hierarchical
+    carriers: [ruler, religious-specialist, merchant]
+    outcome: adoption
+    summary: >
+      Djenne's ruler converted, turned his palace into a mosque, and the town followed him, according to
+      the Tarikh al-Sudan. Dates proposed range from about 1180 to 1330.
+    detail: >
+      al-Sadi (about 1655), Hunwick trans. Origin of the teachers is not given; Soninke merchant-clerics
+      (Wangara) are the likely network, hence from: Ghana. The 4,200-scholars figure and exact date are
+      unverified here.
+    evidence: [src-al-sadi-tarikh-sudan, src-bourgeois-djenne, src-aramco-maas-djenne]
+    confidence: low
+    ap_topics: ["1.2", "2.4", "2.5"]
+
+  - id: df-almeria-epitaphs-gao
+    lens: religion
+    what: Muslim royal burial with imported carved marble epitaphs
+    from: [pl-ext-al-andalus]
+    to: pl-gao
+    span: {start: 1100, end: 1120, approx: true}
+    mechanism: hierarchical
+    carriers: [merchant, ruler, artisan]
+    outcome: elite-only
+    summary: >
+      Gao's kings were buried under marble gravestones carved in Almeria, Spain, and carried across the
+      Sahara. Their Arabic texts announce a Muslim dynasty about a century before Mali existed.
+    detail: >
+      Found 1939 at Gao-Saney; Almeria origin per Leube 2016 and the ICESCO site note; re-edited by Moraes
+      Farias (2003). Kings bore the names of the Prophet and the first caliphs. Only the dynasty is shown
+      Muslim; Cissoko (p. 214) says the people largely were not.
+    evidence: [src-gao-saney-stelae, src-moraes-farias-inscriptions, src-cissoko-unesco-songhay]
+    confidence: medium
+    ap_topics: ["1.2", "2.4", "2.5"]
+
+  - id: df-mali-court-islam-to-gao
+    lens: religion
+    what: Mali's royal Islam extended to Gao (Musa's mosque, Mali governors)
+    from: [pl-mali]
+    to: pl-gao
+    span: {start: 1300, end: 1350, approx: true}
+    mechanism: hierarchical
+    carriers: [ruler, artisan, military]
+    outcome: elite-only
+    summary: >
+      Returning from Mecca in 1325, Mansa Musa ordered a mosque built at Gao, which Mali now ruled. Royal
+      patronage added to a town that already had a long Muslim history.
+    detail: >
+      Cissoko p. 214; Niane p. 175 credits Musa's architect with the Gao mosque, an attribution modern
+      scholars doubt (Aradeon; Hunwick 1990).
+    evidence: [src-cissoko-unesco-songhay, src-niane-unesco-mali, src-aradeon-al-sahili]
+    confidence: medium
+    ap_topics: ["1.2", "1.5"]
+
+  - id: df-maliki-scholarship-timbuktu
+    lens: religion
+    what: Maliki Sunni scholarship and teaching networks
+    from: [pl-fez, pl-cairo, pl-walata]
+    to: pl-timbuktu
+    span: {start: 1325, end: 1450, approx: true}
+    mechanism: hierarchical
+    carriers: [scholar, ruler, pilgrim]
+    outcome: adoption
+    summary: >
+      Royal patronage after Musa's hajj and scholars traveling from Walata, Cairo and Morocco made Timbuktu
+      a center of Maliki Islamic learning. Teaching happened in mosques and scholars' homes, not a single university.
+    detail: >
+      Teaching model: individual scholars with students, no central administration (Sankore literature).
+      Claims that Musa sent students to Fez to study are common but I could not verify them here
+      (needs-library: check al-Sadi in Hunwick). Ibn Battuta and Ibn Khaldun record diplomatic exchanges
+      between Mali and the Marinids of Fez. Most famous Timbuktu scholarship is 15th-16th c.
+    evidence: [src-al-sadi-tarikh-sudan, src-ibn-battuta-rihla, src-cissoko-unesco-songhay, src-jeppie-diagne-timbuktu]
+    confidence: medium
+    ap_topics: ["1.2", "2.4", "2.5"]
+
+  - id: df-suwarian-clerical-tradition
+    lens: religion
+    what: The Suwarian (Jakhanke) teaching of peaceful coexistence and non-coercion
+    from: [pl-diakha-bambuk]
+    to: pl-mali
+    span: {start: 1250, end: 1450, approx: true}
+    mechanism: relocation
+    carriers: [religious-specialist, scholar, merchant]
+    outcome: coexistence
+    summary: >
+      Clerics following al-Hajj Salim Suwari taught that God decides when people convert, so Muslims should live
+      peacefully under non-Muslim rulers and teach by example. Historians disagree on when Suwari lived, from the
+      1200s to about 1500, so this teaching may come after 1450.
+    detail: >
+      DATE DEBATED. Sanneh (1976) puts Suwari's floruit in the 12th-13th c. and rejects Wilks's later date,
+      which rests on Suwari teaching the Tafsir al-Jalalayn (finished after 1485); Wilks puts him about
+      1500. If Wilks is right this diffusion belongs after 1450 and should be hidden on the slider before then.
+      Levtzion called the result 'accommodationist Islam'.
+    evidence: [src-sanneh-clericalism, src-wilks-juula]
+    confidence: low
+    ap_topics: ["1.2", "2.5"]
+
+  - id: df-dyula-islam-begho
+    lens: religion
+    what: Islam carried by Mande Dyula traders to the forest-edge gold and kola markets
+    from: [pl-djenne, pl-mali]
+    to: pl-begho
+    span: {start: 1350, end: 1450, approx: true}
+    mechanism: relocation
+    carriers: [merchant, religious-specialist]
+    outcome: coexistence
+    summary: >
+      Mande Muslim traders settled in Begho's Kramo quarter to buy gold and kola from the Akan. Islam stayed
+      in their quarter rather than spreading to their hosts.
+    detail: >
+      Niane p. 143 (Begho founded by Maninka merchants in Akan country, a debatable phrasing since Begho's
+      Brong quarter is older); Kipre p. 355; Person p. 341 on routes from Djenne to Begho; Posnansky's quarters.
+    evidence: [src-posnansky-begho, src-kipre-unesco-lagunes-volta, src-person-unesco-coastal, src-niane-unesco-mali]
+    confidence: medium
+    ap_topics: ["2.4", "2.5"]
+
+  - id: df-islam-bono-no-uptake
+    lens: religion
+    what: Contact with Muslim traders at Bono's markets
+    from: [pl-begho]
+    to: pl-bono
+    span: {start: 1400, end: 1450, approx: true}
+    mechanism: contagious
+    carriers: [merchant]
+    outcome: no-uptake
+    summary: >
+      Muslim traders reached Bono's markets, but Bono's kings and people kept the Akan gods. Trade
+      contact did not lead to conversion here.
+    detail: >
+      Effah-Gyamfi on Dyula at the Dwabirim market; later scholarship (Konadu, as summarized secondarily)
+      argues Muslim merchants gained no political or institutional role in Bono. Kipre notes the Akan
+      calendar may combine a local and Muslim seven-day cycle, a debated possible trace.
+    evidence: [src-effah-gyamfi-bono-manso, src-kipre-unesco-lagunes-volta]
+    confidence: low
+    ap_topics: ["2.4", "2.5"]
+
+  - id: df-islam-gold-country-no-uptake
+    lens: religion
+    what: Islam held back from the gold-producing peoples by royal policy
+    from: [pl-mali]
+    to: pl-bambuk-bure
+    span: {start: 1300, end: 1350, approx: true}
+    mechanism: hierarchical
+    carriers: [ruler, merchant]
+    outcome: withheld
+    summary: >
+      Al-Umari reports that Mali's rulers chose not to convert the gold miners, believing gold would
+      disappear if Islam spread there. They took tribute instead.
+    detail: >
+      al-Umari on the authority of Abu 'Uthman Sa'id al-Dukkali, who lived 35 years in Mali (Levtzion and
+      Hopkins; Kenny ch.11). He attributes the belief to 'the kings of this kingdom', not to Musa. The
+      identification of his 'land of gold' with Bambuk/Bure is modern. A counter-example to 'hierarchical
+      spread': here the hierarchy blocked diffusion for economic and political reasons.
+    evidence: [src-al-umari-masalik, src-levtzion-ancient-ghana-mali]
+    confidence: medium
+    ap_topics: ["1.5", "2.4", "2.5"]
+
+  - id: df-islam-mossi-resisted
+    lens: religion
+    what: Islam from the Niger bend towns meeting the Mossi
+    from: [pl-timbuktu, pl-mali]
+    to: pl-mossi
+    span: {start: 1330, end: 1450, approx: true}
+    mechanism: contagious
+    carriers: [merchant, military]
+    outcome: resistance
+    summary: >
+      The Mossi raided Muslim trading towns such as Timbuktu and kept their own religion, though the raids
+      may have been about power and wealth more than faith. When a Songhay king demanded in 1498 that they
+      convert, the Mossi ruler consulted his ancestors and refused.
+    detail: >
+      Mossi sack of Timbuktu about 1337 (Izard; dates given range 1333-1343), Walata about 1480, Askia's
+      jihad 1497-98 (after this span). Resistance here is political as much as religious: Izard says the
+      Songhay wars became 'holy war' only from Askia Muhammad on.
+    evidence: [src-izard-unesco-niger-volta, src-al-sadi-tarikh-sudan]
+    confidence: medium
+    ap_topics: ["1.5", "2.5"]
+
+  - id: df-islam-jolof-court
+    lens: religion
+    what: Muslim clerics at the Wolof courts of Jolof
+    from: [pl-takrur, pl-mali]
+    to: pl-jolof
+    span: {start: 1350, end: 1450, approx: true}
+    mechanism: hierarchical
+    carriers: [religious-specialist, ruler, merchant]
+    outcome: elite-only
+    summary: >
+      Jolof's kings kept Muslim clerics as advisers and scribes while ruling Wolof farmers who mostly
+      followed Wolof religion. Islam stayed at the top of Wolof society for centuries.
+    detail: >
+      Boulegue; Barry; Cadamosto 1455 for the Kajoor court (citation-only). Mass conversion in Wolof country
+      is 19th c. (Barry).
+    evidence: [src-boulegue-grand-jolof, src-barry-senegambia, src-cadamosto-voyages]
+    confidence: low
+    ap_topics: ["1.2", "1.5"]
+
+  - id: df-mande-religion-kaabu
+    lens: religion
+    what: Mande (Mandinka) religion and royal institutions carried west to Kaabu and the Gambia
+    from: [pl-mali]
+    to: pl-kaabu
+    span: {start: 1250, end: 1450, approx: true}
+    mechanism: relocation
+    carriers: [military, migrant, family]
+    outcome: adoption
+    summary: >
+      Mande traditions say Mandinka warriors and settlers under Sunjata's general Tiramaghan carried Mande
+      religion and kingship to Kaabu. By the 1400s much of Senegambia was culturally Mande.
+    detail: >
+      Niane p. 158 and p. 182 (Senegambia strongly 'mandenguisee' by the 15th c.); Person p. 342 (Kaabu as
+      a center of Maninka culture); Ly-Tall on Kaabu's attachment to its ancestral religion. Here the
+      diffusing religion is the Mande one, not Islam.
+    evidence: [src-niane-unesco-mali, src-person-unesco-coastal, src-ly-tall-unesco-mali-decline]
+    confidence: medium
+    ap_topics: ["1.5", "2.5"]
+
+  # ------------------------------------------------------------ other lenses
+  - id: df-sudano-sahelian-mosque-form
+    lens: architecture
+    what: Sudano-Sahelian earthen mosque form (mud brick, wooden toron, buttresses)
+    from: [pl-djenne]
+    to: pl-timbuktu
+    span: {start: 1325, end: 1450, approx: true}
+    mechanism: stimulus
+    carriers: [artisan, ruler]
+    outcome: adoption
+    summary: >
+      Builders shaped mosques for Islam using the region's own earth-building methods: mud brick, palm-wood
+      beams and yearly replastering. Many scholars argue the style grew locally, though the buildings
+      standing today are later rebuilds.
+    detail: >
+      Niane (pp. 176-177) calls the Djenne and Timbuktu mosques prototypes of the Sudanese style; Prussin
+      and Aradeon argue the form is local and the story of al-Sahili as its designer is a myth. Caution:
+      the standing buildings are later rebuilds (Djinguereber renovated from 1570 and since; Djenne's
+      mosque is 1906-07), so 14th-c. appearance is inferred.
+    evidence: [src-niane-unesco-mali, src-prussin-hatumere, src-aradeon-al-sahili, src-bourgeois-djenne]
+    confidence: medium
+    ap_topics: ["2.5"]
+
+  - id: df-andalusi-audience-hall
+    lens: architecture
+    what: An Andalusi-designed domed audience hall for the mansa
+    from: [pl-ext-al-andalus]
+    to: pl-mali
+    span: {start: 1325, end: 1346, approx: true}
+    mechanism: hierarchical
+    carriers: [scholar, ruler]
+    outcome: elite-only
+    summary: >
+      Musa brought the Granada poet al-Sahili home from the hajj, and Ibn Khaldun says he built the mansa a
+      plastered, domed audience hall. That single building is the only one sources firmly credit to him.
+    detail: >
+      Ibn Khaldun reports 12,000 mithqals paid; Hunwick (1990) shows al-Sahili was a jurist-poet whose role
+      was decorative or organizational; Aradeon (1989) calls the wider attribution a historians' myth of
+      technology transfer. Al-Sahili died in Timbuktu in 1346 (Ibn Battuta saw his grave).
+    evidence: [src-ibn-khaldun-ibar, src-hunwick-andalusian-in-mali, src-aradeon-al-sahili]
+    confidence: medium
+    ap_topics: ["1.2", "2.5"]
+
+  - id: df-local-arabic-epigraphy-gao
+    lens: language
+    what: Arabic writing carved locally on stone at Gao after imported models
+    from: [pl-ext-al-andalus]
+    to: pl-gao
+    span: {start: 1100, end: 1450, approx: true}
+    mechanism: stimulus
+    carriers: [artisan, scholar]
+    outcome: adoption
+    summary: >
+      After marble gravestones were imported from Spain, Gao's own carvers began cutting Arabic epitaphs on
+      local stone. Writing in Arabic became a local craft.
+    detail: >
+      Cissoko (p. 214) notes stelae of quartz and schist alongside the imported marble; Moraes Farias (2003)
+      publishes over 100 medieval Arabic inscriptions from Gao, Gao-Saney and Essouk. Ajami (African
+      languages in Arabic script) is NOT attested in this period in our sources; surviving Ajami
+      manuscripts are later.
+    evidence: [src-cissoko-unesco-songhay, src-moraes-farias-inscriptions]
+    confidence: medium
+    ap_topics: ["2.5"]
+
+  - id: df-mande-trade-language
+    lens: language
+    what: Mande (Dyula) as the trade language of the gold and kola routes
+    from: [pl-mali, pl-djenne]
+    to: pl-begho
+    span: {start: 1350, end: 1450, approx: true}
+    mechanism: relocation
+    carriers: [merchant]
+    outcome: coexistence
+    summary: >
+      Mande-speaking traders made their language the language of business from the Niger to the forest edge.
+      Mande trade words also entered Akan.
+    detail: >
+      Niane p. 142 n. 1 ('Jula' means merchant); Wilks on Mande-derived trade vocabulary in Akan (via
+      secondary summary). Dyula remains a lingua franca in Cote d'Ivoire, Burkina Faso and northern Ghana.
+    evidence: [src-niane-unesco-mali, src-wilks-juula]
+    confidence: medium
+    ap_topics: ["2.4", "2.5"]
+
+  - id: df-jeliya-nyamakala-senegambia
+    lens: social
+    what: Mande occupational groups (nyamakalaw) and jeli praise-singing carried west
+    from: [pl-mali]
+    to: pl-kaabu
+    span: {start: 1250, end: 1450, approx: true}
+    mechanism: relocation
+    carriers: [migrant, military, artisan]
+    outcome: adoption
+    summary: >
+      Mande settlers brought their social order west: freeborn lineages, hereditary smiths, leatherworkers
+      and jeliw who kept history in song. Gambian and Senegalese griot traditions grew from this.
+    detail: >
+      nyamakala = those who handle nyama (vital force); Conrad & Frank (1995) question the colonial label
+      'caste'. Jeliya is attested at Mali's court by Ibn Battuta (Dugha, 1352). The Kurukan Fuga list of
+      craft clans comes from oral tradition and from a 1998 Kankan reconstruction that Jansen and Simonis
+      treat as modern; do not present it as a 1236 document. Spread to Senegambia per Niane and Person.
+    evidence: [src-conrad-frank-nyamakalaw, src-ibn-battuta-rihla, src-niane-unesco-mali, src-person-unesco-coastal, src-wikipedia-kurukan-fuga]
+    confidence: medium
+    ap_topics: ["1.5", "2.5"]
+
+  - id: df-walata-scholars-to-timbuktu
+    lens: knowledge
+    what: Scholars and the caravan terminus moving from Walata to Timbuktu
+    from: [pl-walata]
+    to: pl-timbuktu
+    span: {start: 1350, end: 1450, approx: true}
+    mechanism: relocation
+    carriers: [scholar, merchant]
+    outcome: adoption
+    summary: >
+      In the later 1300s caravans and scholars shifted from Walata to Timbuktu, which became the main
+      desert port. Masufa and Soninke scholar families carried their libraries and teaching with them.
+    detail: >
+      Levtzion; Ibn Battuta shows both towns with Masufa majorities in 1352. The movement reverses after
+      1468, when many Timbuktu scholars fled Sunni Ali to Walata.
+    evidence: [src-levtzion-ancient-ghana-mali, src-ibn-battuta-rihla]
+    confidence: medium
+    ap_topics: ["2.4", "2.5"]
+
+exemplars:
+  - id: ex-djinguereber
+    name: Djinguereber Mosque, Timbuktu
+    place: pl-timbuktu
+    location: {lat: 16.771, lon: -3.009}
+    span: {start: 1327, end: null, approx: true}
+    fabric_date: 1570
+    lenses: [architecture, religion]
+    summary: >
+      Timbuktu's great Friday mosque was founded after Mansa Musa's pilgrimage, around 1325-1327. The
+      earthen building standing today is the product of many rebuildings since.
+    detail: >
+      Founding traditionally 1325/1327. Attribution to al-Sahili is contested (Aradeon 1989; Hunwick 1990).
+      Renovated under qadi al-Aqib from about 1570; limestone parts added in the 1960s; restored 2006-07;
+      UNESCO World Heritage 1988. Teach as a 14th-c. foundation with a later fabric. fabric_date 1570 marks
+      qadi al-Aqib's renovation, the oldest major layer of the standing building; later work (1960s,
+      2006-07) is layered on top, so treat the year as approximate.
+    image_hint: "Wikimedia Commons search: Djinguereber Mosque"
+    evidence: [src-wikipedia-djinguereber, src-aradeon-al-sahili, src-niane-unesco-mali]
+    confidence: high
+
+  - id: ex-gao-saney-stelae
+    name: Royal epitaph stelae of Gao-Saney
+    place: pl-gao
+    location: {lat: 16.29, lon: 0.01}
+    span: {start: 1100, end: 1120, approx: true}
+    lenses: [religion, language, art-music]
+    summary: >
+      Marble gravestones carved in Almeria, Spain, mark the graves of Muslim kings of Gao in the early
+      1100s. They are the oldest direct written evidence of a Muslim dynasty in the region.
+    detail: >
+      Found 1939 in a sand-covered cave at Gao-Saney; first published by Sauvaget; re-edited by Moraes
+      Farias (2003). Lange identifies the kings with the chronicles' Za dynasty; Hunwick disagreed. Henige
+      notes the inscriptions imply matriliny that the chronicles omit. Good insider-vs-chronicle exercise.
+    image_hint: "Wikimedia Commons search: Gao-Saney stele"
+    evidence: [src-gao-saney-stelae, src-moraes-farias-inscriptions, src-wikipedia-gao-saney, src-henige-inscriptions-texts]
+    confidence: high
+
+  - id: ex-great-mosque-djenne
+    name: Great Mosque of Djenne (1906-07 rebuild on the Kunburu site)
+    place: pl-djenne
+    location: {lat: 13.905, lon: -4.556}
+    span: {start: 1200, end: null, approx: true}
+    fabric_date: 1907
+    on_slider: false
+    lenses: [architecture, religion]
+    summary: >
+      The world's largest mud-brick building stands where Koi Kunboro is said to have turned his palace
+      into a mosque. The present structure was built in 1906-07 by Djenne's masons' guild.
+    detail: >
+      Span starts with the founding, when Koi Kunboro turned his palace into a mosque (dated anywhere from
+      about 1180 to 1330; see df-islam-djenne-court); fabric_date 1907 is the standing building, and
+      on_slider is false so the 1907 rebuild does not sit on the 1200-1450 timeline. The medieval mosque
+      does not survive. Seku Amadu let the old mosque decay and built a plain one (1834-36); Caillie
+      (1828) found it abandoned. The 1907 rebuild was led by Ismaila Traore, head of the barey ton
+      (masons' guild), with forced colonial-era labor. Bourgeois argues the design is basically African.
+      Toron (palm-wood projections) serve as scaffolding for the annual community replastering. Use it to
+      teach continuity of technique, not of the building.
+    image_hint: "Wikimedia Commons search: Great Mosque of Djenne"
+    evidence: [src-bourgeois-djenne, src-aramco-maas-djenne, src-al-sadi-tarikh-sudan]
+    confidence: high
+
+  - id: ex-sunjata-epic
+    name: The Sunjata epic (Mande oral tradition)
+    place: pl-mali
+    location: {lat: 11.93, lon: -8.42}
+    span: {start: 1235, end: null, approx: true}
+    lenses: [religion, art-music, knowledge]
+    summary: >
+      Jeliw (griots) have performed Sunjata's story for centuries; it is Mali's own account of its founding.
+      It gives Sunjata both a Muslim ancestor, Bilal, and the spiritual power (nyama) of Mande hunters.
+    detail: >
+      Recorded versions: Niane (1960) from Mamadou Kouyate of Siguiri; Cisse & Kamissoko from Wa Kamissoko
+      of Kirina (1975 Bamako colloquium; 'La grande geste du Mali', 1988/1991); Johnson's Son-Jara from
+      Fa-Digi Sisoko; Conrad's from Djanka Tassey Conde (2004). Conrad (1985) traces the Bilali and Surakata
+      Muslim-ancestor traditions; Sogolon's buffalo-woman descent and hunters' nyama give the other
+      legitimacy. HAPP each version: performer, patron, date, place. Label point at Kangaba (Kamabolon).
+    image_hint: "Wikimedia Commons search: griot kora Mali"
+    evidence: [src-niane-sundiata, src-cisse-kamissoko-grande-geste, src-conrad-sunjata-conde, src-johnson-son-jara, src-conrad-bilali-surakata]
+    confidence: high
+
+  - id: ex-sosso-bala
+    name: Sosso Bala, the balafon of Sumaoro (Niagassola)
+    place: pl-sosso
+    location: {lat: 12.33, lon: -9.11}
+    span: {start: 1235, end: null, approx: true}
+    lenses: [art-music, religion]
+    summary: >
+      A balafon said to have belonged to Sumaoro Kante is still guarded by the Kouyate jeli family in
+      Niagassola, Guinea. In the epic, Sunjata's griot took it from Sosso to Mali.
+    detail: >
+      UNESCO proclaimed the 'Cultural space of Sosso-Bala' a Masterpiece of Oral and Intangible Heritage
+      in 2001. The instrument's medieval date is a claim of the tradition, not a tested date; teach it as a
+      living ritual object whose authority comes from the story.
+    image_hint: "Wikimedia Commons search: Sosso Bala Niagassola"
+    evidence: [src-unesco-sosso-bala, src-birmingham-sumanguru-epic]
+    confidence: medium
+
+  - id: ex-kamabolon
+    name: Kamabolon, sacred house of Kangaba
+    place: pl-mali
+    location: {lat: 11.94, lon: -8.41}
+    span: {start: 1250, end: null, approx: true}
+    lenses: [religion, art-music, architecture]
+    summary: >
+      Every seven years the people of Kangaba re-roof this sacred house while Diabate jeliw from nearby Kela
+      recite the history of the Mande. It is a living setting where oral tradition is performed and checked.
+    detail: >
+      UNESCO Intangible Heritage listing (2009). Traditions link it to the Keita; its founding date is not
+      established. Use with ex-sunjata-epic to show who transmits the story and in what setting.
+    image_hint: "Wikimedia Commons search: Kamablon Kangaba"
+    evidence: [src-unesco-kamabolon]
+    confidence: medium
+
+  - id: ex-sankore
+    name: Sankore mosque and teaching circles, Timbuktu
+    place: pl-timbuktu
+    location: {lat: 16.778, lon: -3.003}
+    span: {start: 1350, end: null, approx: true}
+    lenses: [knowledge, religion, architecture]
+    summary: >
+      Sankore's mosque became a gathering place for Timbuktu's scholars and their students. It worked as a
+      network of teachers rather than a single university with a fixed course.
+    detail: >
+      Founded 14th-15th c. (tradition credits a wealthy Tuareg woman as patron); courtyard rebuilt by
+      al-Aqib 1578-82. Its peak as a learning center is 16th c.; Cissoko (p. 234) describes it as the
+      mosque of higher learning. Avoid 'University of Sankore' framing for 1350-1450.
+    image_hint: "Wikimedia Commons search: Sankore Mosque Timbuktu"
+    evidence: [src-cissoko-unesco-songhay, src-wikipedia-sankore]
+    confidence: medium
+
+  - id: ex-timbuktu-manuscripts
+    name: Timbuktu manuscript libraries
+    place: pl-timbuktu
+    location: {lat: 16.775, lon: -3.007}
+    span: {start: 1400, end: null, approx: true}
+    lenses: [knowledge, language]
+    summary: >
+      Timbuktu's families and the Ahmed Baba Institute hold hundreds of thousands of manuscripts in Arabic and
+      in African languages written in Arabic script (Ajami). Most were written long after 1450.
+    detail: >
+      Honest dating: collections range from late medieval to the 20th c., and the large majority are
+      16th-19th c.; I found no securely dated pre-1450 manuscript in the accessible sources, so the span
+      start is a placeholder. About 4,200 were destroyed in 2012-13 and most were evacuated to Bamako
+      (Haidara, SAVAMA-DCI). Scholarship: Jeppie & Diagne eds. (2008).
+    image_hint: "Wikimedia Commons search: Timbuktu manuscripts"
+    evidence: [src-wikipedia-timbuktu-manuscripts, src-jeppie-diagne-timbuktu]
+    confidence: medium
+
+  - id: ex-niani-excavations
+    name: Niani excavations (Guinean-Polish mission)
+    place: pl-niani
+    location: {lat: 11.37, lon: -8.38}
+    span: {start: 1250, end: 1600, approx: true}
+    lenses: [architecture, religion]
+    summary: >
+      Archaeologists at Niani found stone house foundations, a royal enclosure and a mosque's mihrab
+      (prayer niche). Whether this was Mansa Musa's capital is one of the big open questions about Mali.
+    detail: >
+      Filipowiak's work from 1965/1968 (Niane pp. 169-170). Conrad (1994) and Fauvelle doubt Niani was the
+      14th-c. capital; Niane defends it. A ready-made classroom debate.
+    image_hint: "Wikimedia Commons search: Niani Guinea"
+    evidence: [src-niane-unesco-mali, src-conrad-dakajalan, src-fauvelle-golden-rhinoceros]
+    confidence: medium
+
+  - id: ex-begho-quarters
+    name: Begho's quarters (Brong, Kramo, Dwinfuor)
+    place: pl-begho
+    location: {lat: 8.2, lon: -2.1}
+    span: {start: 1100, end: 1750, approx: true}
+    lenses: [religion, population, technology]
+    summary: >
+      Excavations at Begho show an Akan quarter, a Muslim traders' quarter and a metalworkers' quarter in one
+      market town. It is a map of coexistence in the ground.
+    detail: >
+      University of Ghana excavations 1970-79 (Posnansky): 1,000-1,500 house mounds, peak population perhaps
+      7,000-10,000; brass working at Dwinfuor; dye pits in Kramo.
+    image_hint: "Wikimedia Commons search: Begho archaeology"
+    evidence: [src-posnansky-begho, src-kipre-unesco-lagunes-volta]
+    confidence: medium
+
+  - id: ex-taa-kora-tanoboase
+    name: Taa Kora shrine at Tanoboase
+    place: pl-bono
+    location: {lat: 7.68, lon: -1.88}
+    span: {start: 1350, end: null, approx: true}
+    lenses: [religion]
+    summary: >
+      A rock shrine near Tanoboase is the seat of Taa Kora, the Tano river power central to Bono religion,
+      and other Akan states later sent delegations there for sacred water. Tradition holds the shrine is
+      very old, but it has not been dated.
+    detail: >
+      Warren's Techiman-Bono ethnography; the shrine's medieval date is a tradition, not an excavated date.
+      Location approximate.
+    image_hint: "Wikimedia Commons search: Tanoboase"
+    evidence: [src-warren-techiman-bono, src-effah-gyamfi-bono-manso]
+    confidence: low
+
+events:
+  - id: ev-gao-royal-epitaph
+    year: 1100
+    approx: true
+    place: pl-gao
+    title: Earliest dated royal gravestone at Gao-Saney
+    keyframe: false
+    lenses: [religion, language]
+    summary: >
+      A king of Gao named Muhammad was buried around 1100 under an Arabic gravestone of marble carved in
+      Almeria, Spain. Muslim kingship on the Niger River is older than Mali, though scholars still debate
+      the exact dates.
+    detail: >
+      Date per the commonly cited reading of the earliest royal marble stele (about 1100, with successors
+      about 1110 and 1120); approx because I did not see the inscription edition (Moraes Farias 2003).
+      Sources conflict: Cissoko (UNESCO IV p. 214) cites a quartz stele for a Muhammad who died 1103 and a
+      royal daughter Hawa (1140); the Wikipedia Gao-Saney page says end of 12th / start of 13th c. Check
+      Moraes Farias before fixing the year.
+    evidence: [src-gao-saney-stelae, src-moraes-farias-inscriptions]
+    confidence: medium
+    ap_topics: ["1.2", "2.4"]
+
+  - id: ev-kirina
+    year: 1235
+    approx: true
+    place: pl-mali
+    title: Battle of Kirina, Sunjata defeats Sumaoro
+    keyframe: true
+    lenses: [religion, governance]
+    summary: >
+      Mande tradition says Sunjata Keita's coalition defeated Sumaoro Kante of Sosso at Kirina, founding
+      Mali. The epic credits the victory to hunters' secrets and the betrayal of Sumaoro's protective taboo.
+    detail: >
+      1235 comes from Delafosse's chronology, which Niane calls relative; Niane places the war 1220-1235
+      and notes the battlefield is hard to locate. Ibn Khaldun confirms Mari Jata conquered the Susu. The
+      tradition's Muslim framing (Sunjata as Bilal's descendant) and Mande framing (nyama, sorcery) coexist.
+    evidence: [src-niane-unesco-mali, src-niane-sundiata, src-ibn-khaldun-ibar, src-cisse-kamissoko-grande-geste]
+    confidence: medium
+    ap_topics: ["1.5"]
+
+  - id: ev-uli-hajj
+    year: 1265
+    approx: true
+    place: pl-mali
+    title: Mansa Uli makes the pilgrimage to Mecca
+    keyframe: false
+    lenses: [religion]
+    summary: >
+      Ibn Khaldun reports that Sunjata's son Mansa Uli made the hajj (the pilgrimage to Mecca) while Baybars
+      ruled Egypt, between 1260 and 1277. Mali's royal ties to Mecca and Cairo began half a century before
+      Mansa Musa.
+    detail: >
+      Ibn Khaldun: during Baybars's reign (1260-1277); year is a midpoint placeholder.
+    evidence: [src-ibn-khaldun-ibar, src-niane-unesco-mali]
+    confidence: medium
+    ap_topics: ["1.2", "1.5"]
+
+  - id: ev-musa-hajj
+    year: 1324
+    approx: false
+    place: pl-mali
+    title: Mansa Musa's hajj
+    keyframe: true
+    lenses: [religion, knowledge, architecture]
+    summary: >
+      Mansa Musa reached Cairo in July 1324 on his way to Mecca, and al-Umari, a Cairo official, reports
+      that he gave away so much gold that its value in Egypt fell. He returned with scholars, books and
+      al-Sahili, a poet from Muslim Spain.
+    detail: >
+      al-Umari (Levtzion & Hopkins pp. 269-273): Musa refused to kiss the ground before the sultan, saying he
+      bowed only to God, and the mithqal fell from 25 to about 22 dirhams. Schultz argues the drop was within
+      normal fluctuation. Musa's account to Cairo of his predecessor's Atlantic voyage is also from al-Umari.
+    evidence: [src-al-umari-masalik, src-niane-unesco-mali, src-gomez-african-dominion]
+    confidence: high
+    ap_topics: ["1.2", "1.5", "2.4", "2.5"]
+
+  - id: ev-musa-gao-timbuktu
+    year: 1325
+    approx: true
+    place: pl-timbuktu
+    title: Musa's return through Gao and Timbuktu; mosques founded
+    keyframe: false
+    lenses: [architecture, religion]
+    summary: >
+      On his way home Musa ordered mosques at Gao and Timbuktu, including Timbuktu's Djinguereber. Mali's
+      rule over the Niger bend towns was now on display.
+    detail: Djinguereber dated 1325-1327 in different sources; see ex-djinguereber.
+    evidence: [src-cissoko-unesco-songhay, src-niane-unesco-mali]
+    confidence: medium
+    ap_topics: ["1.5", "2.5"]
+
+  - id: ev-al-umari-goldfields
+    year: 1337
+    approx: true
+    place: pl-bambuk-bure
+    title: Al-Umari records how Mali handled the gold country
+    keyframe: false
+    lenses: [religion, governance]
+    summary: >
+      Writing in Cairo, al-Umari recorded a Moroccan informant's report that Mali's kings left the gold
+      miners unconverted and took tribute from them instead. If his report is accurate, it shows Mali's
+      kings choosing not to force Islam on their subjects.
+    detail: >
+      Masalik al-absar's Mali section dates about 1337-38 (Levtzion & Hopkins, via secondary citation).
+      The passage (Kenny ch.11) is on the authority of Abu 'Uthman Sa'id al-Dukkali, who lived 35 years in
+      Mali; he attributes the belief to 'the kings of this kingdom', not to Musa (fact-check 2026-10-14).
+    evidence: [src-al-umari-masalik]
+    confidence: medium
+    ap_topics: ["1.5", "2.4"]
+
+  - id: ev-mossi-sack-timbuktu
+    year: 1337
+    approx: true
+    place: pl-timbuktu
+    title: Mossi raiders sack Timbuktu
+    keyframe: false
+    lenses: [religion]
+    summary: >
+      The Tarikh al-Sudan, a Timbuktu chronicle written in the 1650s, reports that a Mossi army looted and
+      burned Timbuktu while Mali ruled it, around 1337. Historians debate the date and whether these
+      raiders were ancestors of the later Mossi kingdoms.
+    detail: >
+      Usually dated about 1337 (Izard); other modern dates range 1333-1343; al-Sadi links it to the era of
+      Kankan Musa. Whether these raiders are the ancestors of the Volta Mossi kingdoms is debated (Izard).
+    evidence: [src-al-sadi-tarikh-sudan, src-izard-unesco-niger-volta]
+    confidence: low
+    ap_topics: ["1.5"]
+
+  - id: ev-ibn-battuta-mali
+    year: 1352
+    approx: false
+    place: pl-mali
+    title: Ibn Battuta visits Walata and Mansa Sulayman's court
+    keyframe: true
+    lenses: [religion, social, knowledge]
+    summary: >
+      The Moroccan traveler Ibn Battuta spent 1352-53 in Mali, praising its prayer and safety while
+      condemning Mande court rituals and women's freedom. His account is the fullest outsider view of Mali.
+    detail: >
+      Reached Walata about April 1352, the capital in mid-1352 (June or July, by different chronologies),
+      stayed about eight to nine months, left via Timbuktu and Gao (1353). Praises: 'There is complete
+      security in their country' (Gibb trans.). Condemns: dust-pouring, masked jeliw, unclothed servants,
+      women's companions. Dictated to Ibn Juzayy for the Marinid court; some scholars question parts of
+      its firsthand reliability.
+    evidence: [src-ibn-battuta-rihla, src-niane-unesco-mali]
+    confidence: high
+    ap_topics: ["1.2", "1.5", "2.4", "2.5"]
+
+  - id: ev-jolof-founded
+    year: 1350
+    approx: true
+    place: pl-jolof
+    title: Jolof emerges as the Wolof overlord kingdom
+    keyframe: false
+    lenses: [governance, religion]
+    summary: >
+      Wolof tradition says Ndiadiane Ndiaye united the Wolof kingdoms into Jolof, which broke free of Mali
+      around the later 1300s, though some historians date it earlier. Different tellers give the founder
+      Muslim, Fulbe or Serer roots, each a claim about where the right to rule came from.
+    detail: About 1350-1360 (Ogot); Boulegue and others argue for an earlier start.
+    evidence: [src-boulegue-grand-jolof, src-barry-senegambia]
+    confidence: low
+    ap_topics: ["1.5"]
+
+  - id: ev-sunni-independence
+    year: 1430
+    approx: true
+    place: pl-songhay-gao
+    title: Gao breaks from Mali under the Sunni dynasty
+    keyframe: false
+    lenses: [governance, religion]
+    summary: >
+      Songhay princes of the Sunni line broke Gao free of Mali's rule, though historians disagree on when,
+      with dates from the 1300s to the early 1400s. Later sources describe their kings combining Islam
+      with Songhay spiritual power.
+    detail: >
+      Chronology unresolved: Ali Kolon's 14th-c. revolt; lasting independence under Sunni Sulayman Dama in
+      the first half of the 15th c.; Cissoko's chapter gives both a 13th-c. and an end-14th-c. date.
+    evidence: [src-cissoko-unesco-songhay, src-al-sadi-tarikh-sudan]
+    confidence: low
+    ap_topics: ["1.5"]
+
+  - id: ev-tuareg-take-timbuktu
+    year: 1433
+    approx: true
+    place: pl-timbuktu
+    title: Tuareg take Timbuktu and Walata from Mali
+    keyframe: true
+    lenses: [governance, knowledge]
+    summary: >
+      Tuareg forces under Akil ag Malwal took control of Timbuktu around 1433 as Mali weakened. The city's
+      Muslim scholars kept teaching under new masters.
+    detail: >
+      Hunwick 1999 (1433-34; names Akil, not checked here); Ly-Tall p. 200 (about 1433, also Walata and Nema; does not
+      name Akil) is the web-checked support. al-Sa'di is citation-only for this passage. Songhay takes Timbuktu in
+      1468.
+    evidence: [src-ly-tall-unesco-mali-decline, src-al-sadi-tarikh-sudan]
+    confidence: medium
+    ap_topics: ["1.5", "2.4"]
+
+sources:
+  # ------------------------------------------------------------ primary
+  - id: src-ibn-battuta-rihla
+    title: Tuhfat al-nuzzar (the Rihla), West African section
+    author: Ibn Battuta (dictated to Ibn Juzayy)
+    author_from: Tangier, Morocco
+    date: 1355-1356
+    kind: primary
+    type: travel-geography
+    voice: regional-outsider
+    happ:
+      historical_situation: Written for the Marinid court after his 1352-53 journey to Walata, Mali's capital, Timbuktu and Gao.
+      audience: Marinid sultan Abu Inan and his court in Fez.
+      purpose: Record and entertain; display the reach of Islam and the author's piety and learning.
+      point_of_view: Maliki jurist from Morocco judging West African practice by North African norms.
+    citation: "Ibn Battuta. In Hamdun and King, eds., Ibn Battuta in Black Africa (Markus Wiener, 1994); excerpt in H.A.R. Gibb trans., Travels in Asia and Africa 1325-1354 (1929), pp. 319-334."
+    url: https://digfir-published.macmillanusa.com/strayer2e/strayer2e_ch7_24.html
+    access: open-url
+    verification: citation-only
+    notes: "The Gibb excerpt at the url was read (Walata women and inheritance, court ceremony, Friday prayer, security) and supports those claims; the Timbuktu (Masufa majority, al-Sahili's grave), Gao and Taghaza-Walata passages cited in this file are not in it, so the record is citation-only overall. Levtzion & Hopkins Corpus has the standard translation."
+
+  - id: src-al-umari-masalik
+    title: Masalik al-absar fi mamalik al-amsar (Mali section)
+    author: Ibn Fadl Allah al-Umari
+    author_from: Damascus and Cairo (Mamluk chancery)
+    date: about 1337-1338
+    kind: primary
+    type: travel-geography
+    voice: regional-outsider
+    happ:
+      historical_situation: Mamluk official writing about 12 years after Musa's 1324 visit, from Cairo informants who had met him.
+      audience: Mamluk administrators and educated readers.
+      purpose: An administrative encyclopedia of the world's realms and their relations with Egypt.
+      point_of_view: Cairo bureaucrat impressed by Mali's wealth, interested in protocol and the gold trade.
+    citation: "al-Umari, in N. Levtzion and J.F.P. Hopkins, eds., Corpus of Early Arabic Sources for West African History (Cambridge UP, 1981; Markus Wiener 2000), Cairo visit pp. 269-273."
+    url: https://worldhistorycommons.org/al-umaris-account-mansa-musas-visit-cairo
+    access: open-url
+    verification: citation-only
+    notes: "Cairo visit passage web-checked via World History Commons excerpt. The gold-country passage is in Kenny ch.11 (https://dhspriory.org/kenny/NWAfr/a11.htm), confirmed by the 2026-10-14 fact-check: its informant is Abu 'Uthman Sa'id al-Dukkali, who lived 35 years in Mali, not Musa."
+
+  - id: src-al-bakri-masalik
+    title: Kitab al-masalik wa'l-mamalik (West African sections)
+    author: Abu Ubayd al-Bakri
+    author_from: Cordoba, al-Andalus
+    date: 1068
+    kind: primary
+    type: travel-geography
+    voice: distant-outsider
+    happ:
+      historical_situation: Compiled in al-Andalus from merchants' reports and earlier archives; al-Bakri never visited West Africa.
+      audience: Andalusi courtly and learned readers.
+      purpose: Geography of routes and kingdoms, with attention to Islam's reach.
+      point_of_view: Andalusi Muslim scholar relying on Muslim traders' accounts.
+    citation: "al-Bakri, in Levtzion and Hopkins, eds., Corpus of Early Arabic Sources for West African History (1981)."
+    url: null
+    access: book
+    verification: citation-only
+    notes: Malal conversion and Ghana twin-town passages known via Levtzion's summaries; translation itself not read.
+
+  - id: src-ibn-khaldun-ibar
+    title: Kitab al-Ibar (history of the kings of Mali)
+    author: Ibn Khaldun
+    author_from: Tunis; worked in Fez, Granada and Cairo
+    date: about 1377-1393
+    kind: primary
+    type: travel-geography
+    voice: regional-outsider
+    happ:
+      historical_situation: Written in Cairo and the Maghrib from informants including Mali envoys and a Takrur-born jurist.
+      audience: Learned Muslim readers and patrons.
+      purpose: Universal history of dynasties; the only medieval Arabic king list for Mali.
+      point_of_view: North African historian-jurist; sympathetic to Mali's Muslim rulers.
+    citation: "Ibn Khaldun, in Levtzion and Hopkins, eds., Corpus of Early Arabic Sources for West African History (1981)."
+    url: null
+    access: book
+    verification: citation-only
+    notes: Used for Mari Jata, Uli's hajj under Baybars, Sakura, al-Sahili's audience hall payment.
+
+  - id: src-al-sadi-tarikh-sudan
+    title: Tarikh al-Sudan
+    author: Abd al-Rahman al-Sadi
+    author_from: Timbuktu
+    date: about 1655
+    kind: primary
+    type: chronicle-local
+    voice: insider
+    happ:
+      historical_situation: Written under Moroccan (Arma) rule by a Timbuktu scholar-administrator, 60 years after Songhay's fall.
+      audience: Timbuktu's scholarly and administrative elite.
+      purpose: Record the region's dynasties and honor its scholars; mourn the lost Songhay order.
+      point_of_view: Timbuktu Muslim scholar; hostile to Sunni Ali and to non-Muslim rulers; early sections rest on oral tradition.
+    citation: "John O. Hunwick, Timbuktu and the Songhay Empire: al-Sadi's Tarikh al-Sudan down to 1613 and Other Contemporary Documents (Brill, 1999; 2nd ed. 2003)."
+    url: null
+    access: book
+    verification: citation-only
+    notes: Insider for Timbuktu, Djenne and Gao; closer to regional-outsider for Mali. Used via secondary citations (Kunburu, Mali's 99 attacks on Djenne, Mossi, Tuareg).
+
+  - id: src-tarikh-al-fattash
+    title: Tarikh al-Fattash
+    author: attributed to Mahmud Kati and Ibn al-Mukhtar
+    author_from: Timbuktu
+    date: 17th c. (with 19th-c. interpolations)
+    kind: primary
+    type: chronicle-local
+    voice: insider
+    happ:
+      historical_situation: Timbuktu chronicle compiled in the 17th c.; parts rewritten in the 19th c. to support Masina's Hamdallahi state.
+      audience: Timbuktu and later Masina elites.
+      purpose: Dynastic and scholarly history; later edited to legitimize new rulers.
+      point_of_view: Timbuktu Muslim scholarship; its authorship and layers are debated.
+    citation: "Tarikh el-Fettach, ed. and trans. O. Houdas and M. Delafosse (Paris, 1913)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Used only for its contrary claim that Djenne's chief was Mali's subordinate.
+
+  - id: src-cadamosto-voyages
+    title: Navigazioni (voyages to Senegambia)
+    author: Alvise Cadamosto
+    author_from: Venice (sailing for Portugal)
+    date: 1455-1456 (written about 1460s)
+    kind: primary
+    type: travel-geography
+    voice: distant-outsider
+    happ:
+      historical_situation: Venetian merchant on Portuguese-licensed voyages to the Senegal and Gambia rivers.
+      audience: Italian and Portuguese readers interested in trade and discovery.
+      purpose: Commercial reconnaissance and travel narrative.
+      point_of_view: Christian European trader; relied on Wolof interpreters; judges religion by Christian norms.
+    citation: "G.R. Crone, trans. and ed., The Voyages of Cadamosto (Hakluyt Society, 1937)."
+    url: null
+    access: book
+    verification: needs-library
+    notes: Budomel of Kajoor and his Muslim clerics; check passage before using in class.
+
+  - id: src-niane-sundiata
+    title: Soundjata ou l'epopee mandingue (Sundiata, an Epic of Old Mali)
+    author: Mamadou Kouyate (jeli, performer); D.T. Niane (recorder and prose editor)
+    author_from: Djeliba Koro near Siguiri, Guinea (performer); Conakry/Dakar (editor)
+    date: recorded 1950s; published 1960 (Eng. trans. 1965)
+    kind: primary
+    type: oral-tradition
+    voice: insider
+    happ:
+      historical_situation: Recorded on the eve of Guinea's independence by a Guinean historian from a Kouyate griot of the Siguiri region.
+      audience: Originally Mande listeners; in print, francophone and later world readers.
+      purpose: Preserve and honor the Mande founding story; in print, also a national-cultural statement.
+      point_of_view: Kouyate jeli lineage, hereditary griots of the Keita; Niane rewrote it as literary prose.
+    citation: "D.T. Niane, Soundjata ou l'epopee mandingue (Presence Africaine, 1960); Sundiata: An Epic of Old Mali, trans. G.D. Pickett (Longman, 1965)."
+    url: https://takamtikou.bnf.fr/print/pdf/node/1345
+    access: book
+    verification: citation-only
+    notes: BnF Takamtikou review confirms Mamadou Kouyate and the Siguiri region as the source.
+
+  - id: src-cisse-kamissoko-grande-geste
+    title: La grande geste du Mali
+    author: Wa Kamissoko (jeli, Kirina, 1925-1976); Youssouf Tata Cisse (recorder, editor)
+    author_from: Kirina, Mali (performer); Mali (editor)
+    date: performances 1975-1976 (Bamako colloquia); published 1988 and 1991
+    kind: primary
+    type: oral-tradition
+    voice: insider
+    happ:
+      historical_situation: Recorded at the Fondation SCOA colloquia in Bamako (1975, 1976) and in fieldwork; Kamissoko died 1976.
+      audience: Malian and international historians at the colloquia; later francophone readers.
+      purpose: Give the Kirina tradition of Mande history in full, with commentary.
+      point_of_view: Kirina griot tradition (a different lineage and region from Niane's Kouyate).
+    citation: "Y.T. Cisse and W. Kamissoko, La grande geste du Mali: des origines a la fondation de l'Empire (Karthala, 1988); Soundjata, la gloire du Mali (1991)."
+    url: https://data.bnf.fr/11928740/wa_kamissoko/en.pdf
+    access: book
+    verification: citation-only
+    notes: BnF record checked for Kamissoko's dates and titles; content not read.
+
+  - id: src-conrad-sunjata-conde
+    title: "Sunjata: A West African Epic of the Mande Peoples"
+    author: Djanka Tassey Conde (jeli, performer); David C. Conrad (recorder, translator)
+    author_from: Fadama, Guinea (performer); USA (translator)
+    date: recorded 1994; published 2004
+    kind: primary
+    type: oral-tradition
+    voice: insider
+    happ:
+      historical_situation: Performed for Conrad's tape recorder in Fadama, Guinea, over several sessions.
+      audience: Local listeners present; in print, students and scholars.
+      purpose: Recount Mande origins and clan histories; in print, a teaching edition.
+      point_of_view: Conde jeli lineage of the upper Niger (Hamana), with strong Muslim-genealogy framing.
+    citation: "David C. Conrad, ed. and trans., Sunjata: A West African Epic of the Mande Peoples (Hackett, 2004)."
+    url: null
+    access: book
+    verification: citation-only
+    notes: null
+
+  - id: src-johnson-son-jara
+    title: "Son-Jara: The Mande Epic"
+    author: Fa-Digi Sisoko (jeli, performer); John William Johnson (recorder, translator)
+    author_from: Kita region, Mali (performer)
+    date: recorded 1968; 3rd ed. 2003
+    kind: primary
+    type: oral-tradition
+    voice: insider
+    happ:
+      historical_situation: Recorded in Kita, Mali, in 1968.
+      audience: Mande listeners; in print, students.
+      purpose: Performance of the founding epic with genealogy.
+      point_of_view: Kita jeli tradition; opens with a Muslim genealogy linking the Keita to Bilali.
+    citation: "John William Johnson, Son-Jara: The Mande Epic, performed by Fa-Digi Sisoko (Indiana UP, 3rd ed. 2003)."
+    url: null
+    access: book
+    verification: citation-only
+    notes: Version with the Bilali genealogy opening; check before quoting.
+
+  - id: src-birmingham-sumanguru-epic
+    title: The Epic of Sumanguru Kante (performance by Abdoulaye Sako, 1997)
+    author: Abdoulaye Sako (griot, performer); University of Birmingham 'Re-thinking Sunjata' project (editors)
+    author_from: Mali (performer)
+    date: performed 1997; edition with Brill
+    kind: primary
+    type: oral-tradition
+    voice: insider
+    happ:
+      historical_situation: A rare griot epic told from Sumaoro's side, recorded in 1997 and edited with English translation.
+      audience: Mande listeners; scholarly readers of the edition.
+      purpose: Tell the deeds of Sumaoro and Soso, including episodes not documented elsewhere.
+      point_of_view: Sosso-centered tradition, a counterweight to the Keita-centered Sunjata versions.
+    citation: "University of Birmingham, Dept. of African Studies and Anthropology, 'Re-thinking Sunjata' project page describing the Brill edition of Abdoulaye Sako's 1997 performance."
+    url: https://www.birmingham.ac.uk/schools/historycultures/departments/dasa/research/re-thinking-sunjata
+    access: open-url
+    verification: web-checked
+    notes: Only the project description was read; the edition itself needs a library check for full bibliographic details.
+
+  - id: src-gao-saney-stelae
+    title: Royal epitaph stelae of Gao-Saney
+    author: Unknown carvers (Almeria workshops and local carvers) for the Muslim kings of Gao
+    author_from: Almeria (al-Andalus) and Gao
+    date: early 12th c. (about 1100-1120) and later
+    kind: primary
+    type: epigraphy
+    voice: insider
+    happ:
+      historical_situation: Grave markers for kings and royal women of Gao, found 1939 in a sand-covered cave at Gao-Saney.
+      audience: The dead, God, and the dynasty's subjects and visitors.
+      purpose: Proclaim the kings' Muslim identity and lineage.
+      point_of_view: The ruling house's own self-presentation, which includes descent through women.
+    citation: "First published by Jean Sauvaget (1949-50); re-edited in P.F. de Moraes Farias, Arabic Medieval Inscriptions from the Republic of Mali (OUP for the British Academy, 2003)."
+    url: https://en.wikipedia.org/wiki/Gao-Saney
+    access: library
+    verification: citation-only
+    notes: Almeria origin web-checked on ICESCO and Wikipedia pages; inscription texts not seen.
+
+  # ------------------------------------------------------------ scholarship from the region
+  - id: src-niane-unesco-mali
+    title: "Le Mali et la deuxieme expansion manden (UNESCO General History of Africa IV, ch. 6)"
+    author: Djibril Tamsir Niane
+    author_from: Guinea
+    date: 1984 (French ed. 1985)
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "D.T. Niane, 'Le Mali et la deuxieme expansion manden,' in D.T. Niane, ed., Histoire generale de l'Afrique IV: L'Afrique du XIIe au XVIe siecle (UNESCO/NEA, 1985), ch. 6, pp. 141-196. English ed.: 'Mali and the second Mandingo expansion.'"
+    url: https://bokundoli.org/wp-content/uploads/2021/12/T4-10.pdf
+    access: open-url
+    verification: web-checked
+    notes: Page numbers cited are the French edition's as reported from this PDF.
+
+  - id: src-ly-tall-unesco-mali-decline
+    title: "Le declin de l'empire du Mali (UNESCO General History of Africa IV, ch. 7)"
+    author: Madina Ly-Tall
+    author_from: Senegal
+    date: 1984 (French ed. 1985)
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "M. Ly-Tall, 'Le declin de l'empire du Mali,' in Niane, ed., Histoire generale de l'Afrique IV (UNESCO, 1985), ch. 7."
+    url: https://bokundoli.org/wp-content/uploads/2021/12/T4-11.pdf
+    access: open-url
+    verification: web-checked
+    notes: Her chapter characterizes western Manden religion with a term now on the banned list; paraphrased here.
+
+  - id: src-cissoko-unesco-songhay
+    title: "Les Songhay du XIIe au XVIe siecle (UNESCO General History of Africa IV, ch. 8)"
+    author: Sekene Mody Cissoko
+    author_from: Mali
+    date: 1984 (French ed. 1985)
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "S.M. Cissoko, 'Les Songhay du XIIe au XVIe siecle,' in Niane, ed., Histoire generale de l'Afrique IV (UNESCO, 1985), ch. 8."
+    url: https://bokundoli.org/wp-content/uploads/2021/12/T4-12.pdf
+    access: open-url
+    verification: web-checked
+    notes: Chapter is internally inconsistent on the date of Sunni independence.
+
+  - id: src-kipre-unesco-lagunes-volta
+    title: "Des lagunes ivoiriennes a la Volta (UNESCO General History of Africa IV, ch. 13)"
+    author: Pierre Kipre
+    author_from: Cote d'Ivoire
+    date: 1984 (French ed. 1985)
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "P. Kipre, 'Des lagunes ivoiriennes a la Volta,' in Niane, ed., Histoire generale de l'Afrique IV (UNESCO, 1985), ch. 13."
+    url: https://bokundoli.org/wp-content/uploads/2021/12/T4-17.pdf
+    access: open-url
+    verification: web-checked
+    notes: null
+
+  - id: src-sanneh-clericalism
+    title: The Origins of Clericalism in West African Islam
+    author: Lamin Sanneh
+    author_from: The Gambia (writing from the University of Ghana, Legon)
+    date: 1976
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "Lamin Sanneh, 'The Origins of Clericalism in West African Islam,' Journal of African History 17, no. 1 (1976): 49-72."
+    url: https://www.cambridge.org/core/journals/journal-of-african-history/article/origins-of-clericalism-in-west-african-islam/9AB25B84855B359DBF7043940D81E817
+    access: open-url
+    verification: web-checked
+    notes: Abstract and visible notes read (12th-13th c. floruit for Suwari; critique of Wilks).
+
+  - id: src-effah-gyamfi-bono-manso
+    title: "Bono Manso: An Archaeological Investigation into Early Akan Urbanism"
+    author: Kwaku Effah-Gyamfi
+    author_from: Ghana
+    date: 1985
+    kind: secondary
+    type: archaeology
+    voice: scholar-from-region
+    citation: "K. Effah-Gyamfi, Bono Manso: An Archaeological Investigation into Early Akan Urbanism (University of Calgary Press, African Occasional Papers 2, 1985)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Findings known via secondary summaries; check settlement dates.
+
+  - id: src-kane-fuuta-tooro
+    title: "La premiere hegemonie peule: le Fuuta Tooro de Koli Tenella a Almaami Abdul"
+    author: Oumar Kane
+    author_from: Senegal
+    date: 2004
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "Oumar Kane, La premiere hegemonie peule: le Fuuta Tooro de Koli Tenella a Almaami Abdul (Karthala, 2004)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Known via secondary citation for Takrur's dynasties and Serer migration traditions.
+
+  - id: src-barry-senegambia
+    title: Senegambia and the Atlantic Slave Trade
+    author: Boubacar Barry
+    author_from: Guinea / Senegal
+    date: 1998 (French 1988)
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "Boubacar Barry, Senegambia and the Atlantic Slave Trade (Cambridge UP, 1998)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Begins in the 15th c.; used for the slow pace of Islamization among the Wolof and Serer.
+
+  - id: src-cisse-chasseurs
+    title: Notes sur les societes de chasseurs malinke
+    author: Youssouf Tata Cisse
+    author_from: Mali
+    date: 1964
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "Y.T. Cisse, 'Notes sur les societes de chasseurs malinke,' Journal de la Societe des Africanistes 34 (1964)."
+    url: null
+    access: library
+    verification: needs-library
+    notes: Ethnography of 20th-c. hunters' brotherhoods; projecting it to 1235-1450 is an inference.
+
+  - id: src-jeppie-diagne-timbuktu
+    title: The Meanings of Timbuktu
+    author: Shamil Jeppie and Souleymane Bachir Diagne, eds.
+    author_from: South Africa; Senegal
+    date: 2008
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "S. Jeppie and S.B. Diagne, eds., The Meanings of Timbuktu (HSRC Press / CODESRIA, 2008)."
+    url: null
+    access: book
+    verification: citation-only
+    notes: Check whether HSRC's free PDF is available; best single source on manuscript dating.
+
+  - id: src-warren-techiman-bono
+    title: "The Techiman-Bono of Ghana: An Ethnography of an Akan Society"
+    author: Dennis M. Warren
+    author_from: USA (fieldwork in Techiman)
+    date: 1975
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "D.M. Warren, The Techiman-Bono of Ghana: An Ethnography of an Akan Society (Kendall/Hunt, 1975)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Taa Kora shrine, critique of Meyerowitz's chronology (via secondary citation).
+
+  # ------------------------------------------------------------ international scholarship
+  - id: src-izard-unesco-niger-volta
+    title: "Les peuples et les royaumes de la boucle du Niger et du bassin des Volta du XIIe au XVIe siecle (UNESCO GHA IV, ch. 9)"
+    author: Michel Izard
+    author_from: France
+    date: 1984 (French ed. 1985)
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "M. Izard, in Niane, ed., Histoire generale de l'Afrique IV (UNESCO, 1985), ch. 9, pp. 237-264."
+    url: https://bokundoli.org/wp-content/uploads/2021/12/T4-13.pdf
+    access: open-url
+    verification: web-checked
+    notes: null
+
+  - id: src-person-unesco-coastal
+    title: "Les peuples cotiers: premiers contacts avec les Portugais, de la Casamance aux lagunes ivoiriennes (UNESCO GHA IV, ch. 12)"
+    author: Yves Person
+    author_from: France
+    date: 1984 (French ed. 1985)
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "Y. Person, in Niane, ed., Histoire generale de l'Afrique IV (UNESCO, 1985), ch. 12."
+    url: https://bokundoli.org/wp-content/uploads/2021/12/T4-16.pdf
+    access: open-url
+    verification: web-checked
+    notes: null
+
+  - id: src-levtzion-ancient-ghana-mali
+    title: Ancient Ghana and Mali
+    author: Nehemia Levtzion
+    author_from: Israel
+    date: 1973
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "N. Levtzion, Ancient Ghana and Mali (Methuen, 1973)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: null
+
+  - id: src-levtzion-islam-africa
+    title: Islam in Africa to 1800
+    author: Nehemia Levtzion
+    author_from: Israel
+    date: 1999
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "N. Levtzion, 'Islam in Africa to 1800,' in J.L. Esposito, ed., The Oxford History of Islam (OUP, 1999)."
+    url: https://bridgingcultures-muslimjourneys.org/items/show/261
+    access: open-url
+    verification: web-checked
+    notes: Summarizes al-Bakri's Malal story and Ibn Battuta's views.
+
+  - id: src-gomez-african-dominion
+    title: "African Dominion: A New History of Empire in Early and Medieval West Africa"
+    author: Michael A. Gomez
+    author_from: USA
+    date: 2018
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "M.A. Gomez, African Dominion (Princeton UP, 2018)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Known via secondary citations (Komo model of kingship; hajj of Wali, Sakura, Musa).
+
+  - id: src-conrad-fakoli
+    title: "Searching for History in the Sunjata Epic: The Case of Fakoli"
+    author: David C. Conrad
+    author_from: USA
+    date: 1992
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "D.C. Conrad, 'Searching for History in the Sunjata Epic: The Case of Fakoli,' History in Africa 19 (1992): 147-200."
+    url: null
+    access: library
+    verification: needs-library
+    notes: Cited secondhand (p. 152) for Musa bringing objects from Mecca for Komo rituals; confirm the passage.
+
+  - id: src-conrad-bilali-surakata
+    title: "Islam in the Oral Traditions of Mali: Bilali and Surakata"
+    author: David C. Conrad
+    author_from: USA
+    date: 1985
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "D.C. Conrad, 'Islam in the Oral Traditions of Mali: Bilali and Surakata,' Journal of African History 26 (1985)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: null
+
+  - id: src-conrad-dakajalan
+    title: "A Town Called Dakajalan: The Sunjata Tradition and the Question of Ancient Mali's Capital"
+    author: David C. Conrad
+    author_from: USA
+    date: 1994
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "D.C. Conrad, 'A Town Called Dakajalan,' Journal of African History 35 (1994): 355-377."
+    url: null
+    access: library
+    verification: citation-only
+    notes: null
+
+  - id: src-conrad-oral-sources-links
+    title: Oral Sources on Links between Great States
+    author: David C. Conrad
+    author_from: USA
+    date: 1984
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "D.C. Conrad, 'Oral Sources on Links between Great States: Sumanguru, Servile Lineage, the Jariso, and Kaniaga,' History in Africa 11 (1984): 35-55."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Subtitle from memory; confirm.
+
+  - id: src-conrad-frank-nyamakalaw
+    title: "Status and Identity in West Africa: Nyamakalaw of Mande"
+    author: David C. Conrad and Barbara E. Frank, eds.
+    author_from: USA
+    date: 1995
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "D.C. Conrad and B.E. Frank, eds., Status and Identity in West Africa: Nyamakalaw of Mande (Indiana UP, 1995)."
+    url: https://davidcconrad.com/node/15
+    access: book
+    verification: citation-only
+    notes: Publisher description read (questions the 'caste' label); chapters not read.
+
+  - id: src-conrad-fisher-conquest
+    title: "The Conquest That Never Was: Ghana and the Almoravids, 1076"
+    author: David C. Conrad and Humphrey J. Fisher
+    author_from: USA; UK
+    date: 1982-1983
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "D.C. Conrad and H.J. Fisher, 'The Conquest That Never Was,' History in Africa 9 (1982) and 10 (1983)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Part II treats the Soninke (Wagadu-Bida) oral sources.
+
+  - id: src-mcnaughton-mande-blacksmiths
+    title: "The Mande Blacksmiths: Knowledge, Power, and Art in West Africa"
+    author: Patrick R. McNaughton
+    author_from: USA
+    date: 1988
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "P.R. McNaughton, The Mande Blacksmiths (Indiana UP, 1988)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Nyama, Komo and smiths' power, from 20th-c. fieldwork.
+
+  - id: src-wilks-juula
+    title: The Juula and the Expansion of Islam into the Forest
+    author: Ivor Wilks
+    author_from: UK (long at University of Ghana)
+    date: 2000
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "I. Wilks, 'The Juula and the Expansion of Islam into the Forest,' in N. Levtzion and R.L. Pouwels, eds., The History of Islam in Africa (Ohio UP, 2000)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Suwarian tradition; Wangara at Begho.
+
+  - id: src-posnansky-begho
+    title: "Begho: Life and Times"
+    author: Merrick Posnansky
+    author_from: UK/USA (excavated as University of Ghana professor)
+    date: 2015
+    kind: secondary
+    type: archaeology
+    voice: scholar-international
+    citation: "M. Posnansky, 'Begho: Life and Times,' Journal of West African History 1, no. 2 (2015)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Quarters and population estimates via secondary summary.
+
+  - id: src-moraes-farias-inscriptions
+    title: "Arabic Medieval Inscriptions from the Republic of Mali: Epigraphy, Chronicles and Songhay-Tuareg History"
+    author: Paulo Fernando de Moraes Farias
+    author_from: Brazil (University of Birmingham)
+    date: 2003
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "P.F. de Moraes Farias, Arabic Medieval Inscriptions from the Republic of Mali (OUP for the British Academy, Fontes Historiae Africanae n.s. 4, 2003)."
+    url: https://research.birmingham.ac.uk/en/publications/arabic-medieval-inscriptions-from-the-republic-of-mali-epigraphy-/
+    access: library
+    verification: citation-only
+    notes: Bibliographic record checked; content via reviews and secondary summaries.
+
+  - id: src-henige-inscriptions-texts
+    title: Inscriptions Are Texts Too
+    author: David Henige
+    author_from: USA
+    date: 2005
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "D. Henige, 'Inscriptions Are Texts Too,' History in Africa 32 (2005): 185-197 (review of Moraes Farias 2003)."
+    url: https://www.cambridge.org/core/journals/history-in-africa/article/abs/inscriptions-are-texts-too1/AB4A89A1E7878DAA595BED830DBFAA04
+    access: open-url
+    verification: web-checked
+    notes: First page and notes read (matriliny in inscriptions vs chronicles).
+
+  - id: src-lange-gao-sane
+    title: Les rois de Gao-Sane et les Almoravides
+    author: Dierk Lange
+    author_from: Germany
+    date: 1991
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "D. Lange, 'Les rois de Gao-Sane et les Almoravides,' Journal of African History 32, no. 2 (1991): 251-275; reply by J. Hunwick, 'Gao and the Almoravids revisited,' JAH 35 (1994)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: null
+
+  - id: src-insoll-archaeology-islam
+    title: The Archaeology of Islam in Sub-Saharan Africa
+    author: Timothy Insoll
+    author_from: UK
+    date: 2003
+    kind: secondary
+    type: archaeology
+    voice: scholar-international
+    citation: "T. Insoll, The Archaeology of Islam in Sub-Saharan Africa (Cambridge UP, 2003)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Gao excavations; absence of early remains at Timbuktu.
+
+  - id: src-fauvelle-golden-rhinoceros
+    title: "The Golden Rhinoceros: Histories of the African Middle Ages"
+    author: Francois-Xavier Fauvelle
+    author_from: France
+    date: 2018 (French 2013)
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "F.-X. Fauvelle, The Golden Rhinoceros (Princeton UP, 2018)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Skeptical of Niani as capital.
+
+  - id: src-aradeon-al-sahili
+    title: "Al-Sahili: the historian's myth of architectural technology transfer from North Africa"
+    author: Suzan B. Aradeon
+    author_from: USA (worked in Nigeria)
+    date: 1989
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "S.B. Aradeon, 'Al-Sahili: the historian's myth of architectural technology transfer from North Africa,' Journal des africanistes 59, no. 1 (1989): 99-131."
+    url: null
+    access: library
+    verification: citation-only
+    notes: null
+
+  - id: src-hunwick-andalusian-in-mali
+    title: "An Andalusian in Mali: a contribution to the biography of Abu Ishaq al-Sahili"
+    author: John O. Hunwick
+    author_from: UK (long at University of Ghana and Ibadan)
+    date: 1990
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "J.O. Hunwick, 'An Andalusian in Mali,' Paideuma 36 (1990): 59-66."
+    url: null
+    access: library
+    verification: citation-only
+    notes: null
+
+  - id: src-prussin-hatumere
+    title: "Hatumere: Islamic Design in West Africa"
+    author: Labelle Prussin
+    author_from: USA
+    date: 1986
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "L. Prussin, Hatumere: Islamic Design in West Africa (University of California Press, 1986)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: null
+
+  - id: src-bourgeois-djenne
+    title: The History of the Great Mosques of Djenne
+    author: Jean-Louis Bourgeois
+    author_from: USA
+    date: 1987
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "J.-L. Bourgeois, 'The History of the Great Mosques of Djenne,' African Arts 20, no. 3 (1987)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Source of the 1200-1330 range for the first mosque.
+
+  - id: src-boulegue-grand-jolof
+    title: Le Grand Jolof (XIIIe-XVIe siecle)
+    author: Jean Boulegue
+    author_from: France
+    date: 1987
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "J. Boulegue, Le Grand Jolof (XIIIe-XVIe siecle) (Facades, 1987)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: null
+
+  # ------------------------------------------------------------ references and heritage listings
+  - id: src-aramco-maas-djenne
+    title: "Djenne: Living Tradition"
+    author: Pierre Maas
+    author_from: Netherlands (Eindhoven University of Technology)
+    date: 1990
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "P. Maas, 'Djenne: Living Tradition,' Saudi Aramco World (May/June 1990)."
+    url: https://archive.aramcoworld.com/issue/199006/djenn.-living.tradition.htm
+    access: open-url
+    verification: web-checked
+    notes: Kunburu as first Muslim chief; barey ton masons' guild.
+
+  - id: src-wikipedia-djinguereber
+    title: Djinguereber Mosque (Wikipedia)
+    author: Wikipedia contributors
+    author_from: n/a
+    date: accessed 2026-10-14
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "'Djinguereber Mosque,' Wikipedia, accessed 14 Oct 2026."
+    url: https://en.wikipedia.org/wiki/Djinguereber_Mosque
+    access: open-url
+    verification: web-checked
+    notes: Rebuild history; replace with Prussin or UNESCO WHC documentation if possible.
+
+  - id: src-wikipedia-gao-saney
+    title: Gao-Saney (Wikipedia)
+    author: Wikipedia contributors
+    author_from: n/a
+    date: accessed 2026-10-14
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "'Gao-Saney,' Wikipedia, accessed 14 Oct 2026 (cites Leube 2016; Lange 1991; Hunwick 1994)."
+    url: https://en.wikipedia.org/wiki/Gao-Saney
+    access: open-url
+    verification: web-checked
+    notes: null
+
+  - id: src-wikipedia-sankore
+    title: Sankore Madrasah (Wikipedia)
+    author: Wikipedia contributors
+    author_from: n/a
+    date: accessed 2026-10-14
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "'Sankore Madrasah,' Wikipedia, accessed 14 Oct 2026."
+    url: https://en.wikipedia.org/wiki/Sankore_Madrasah
+    access: open-url
+    verification: web-checked
+    notes: null
+
+  - id: src-wikipedia-timbuktu-manuscripts
+    title: Timbuktu Manuscripts (Wikipedia)
+    author: Wikipedia contributors
+    author_from: n/a
+    date: accessed 2026-10-14
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "'Timbuktu Manuscripts,' Wikipedia, accessed 14 Oct 2026."
+    url: https://en.wikipedia.org/wiki/Timbuktu_Manuscripts
+    access: open-url
+    verification: web-checked
+    notes: Gives a late-13th-c. start for the collections without a dated example.
+
+  - id: src-wikipedia-kurukan-fuga
+    title: Kouroukan Fouga (Wikipedia)
+    author: Wikipedia contributors
+    author_from: n/a
+    date: accessed 2026-10-14
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "'Kouroukan Fouga,' Wikipedia, accessed 14 Oct 2026 (cites Jansen 2016; Simonis 2015 on the 1998 Kankan reconstruction)."
+    url: https://en.wikipedia.org/wiki/Kouroukan_Fouga
+    access: open-url
+    verification: web-checked
+    notes: null
+
+  - id: src-unesco-sosso-bala
+    title: Cultural Space of Sosso-Bala (UNESCO Intangible Heritage)
+    author: UNESCO
+    author_from: Paris
+    date: proclaimed 2001; inscribed 2008
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "UNESCO, 'Cultural space of Sosso-Bala,' Representative List of the Intangible Cultural Heritage of Humanity."
+    url: null
+    access: book
+    verification: citation-only
+    notes: Nomination file was prepared with Guinea; check for the Kouyate (Dokala) family's own account.
+
+  - id: src-unesco-kamabolon
+    title: Renovation ritual of the Kamablon, sacred house of Kangaba (UNESCO Intangible Heritage)
+    author: UNESCO
+    author_from: Paris
+    date: 2009
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "UNESCO, 'Septennial re-roofing ceremony of the Kamablon, sacred house of Kangaba,' Representative List of the Intangible Cultural Heritage of Humanity (2009)."
+    url: null
+    access: book
+    verification: citation-only
+    notes: Title wording from memory; confirm on ich.unesco.org.

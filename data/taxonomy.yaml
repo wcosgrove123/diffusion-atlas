@@ -1,0 +1,251 @@
+# Diffusion Atlas taxonomy v0.2 (2026-10-14)
+# v0.2: added after the Africa research pass ("taxonomy pressure" from five researchers):
+#   outcomes undocumented/withheld/loss/impact; profile basis; economy lens; christianity latin-african;
+#   source types community-heritage/reference-web; exemplar fabric_date/found_at/on_slider; parent spans;
+#   intra-tradition disputes; corrected AP topic titles and added all Unit 1-2 topics.
+# World-general controlled vocabularies. Africa 1200-1450 is the first module;
+# Asia, the Middle East, and Europe will reuse every list here.
+# Rule: every value in a data file must come from these lists. To add a value,
+# add it here with a definition and a tie-break test, never inline in data.
+
+meta:
+  version: 0.2
+  design_rules:
+    - Color people, not states. A place's religion is recorded per social stratum, never as one value for the polity.
+    - Lists are mutually exclusive by tie-break test and exhaustive by testing against real cases.
+    - Snapshot rule. Every profile has a time span; change over time is a value moving.
+    - Claim vs practice. Record what the evidence shows people did; if rulers claimed otherwise, set flag and explain.
+    - Absence is data. If no evidence exists for a stratum, record relation undocumented, never a guess.
+    - No ladder. Nothing here ranks traditions or implies conversion is progress.
+
+# ---------------------------------------------------------------------------
+# 1. RELIGION: family > tradition > branch > local form
+#    family and tradition are controlled. branch is controlled per tradition.
+#    local_form is free text naming the practice the way its practitioners or
+#    the best scholarship names it (e.g. "Mande: komo power association, nyama").
+# ---------------------------------------------------------------------------
+religion:
+  families:
+    abrahamic:
+      traditions:
+        judaism:
+          branches: [rabbanite, karaite, beta-israel, samaritan, other]
+        christianity:
+          branches:
+            - miaphysite-coptic        # Coptic Orthodox (Egypt), Nubian church under the Coptic patriarch
+            - miaphysite-ethiopian     # Ethiopian Orthodox Tewahedo
+            - miaphysite-syriac        # Syriac Orthodox
+            - miaphysite-armenian
+            - church-of-the-east       # "Nestorian"; Central and East Asia
+            - eastern-orthodox         # Byzantine/Chalcedonian (incl. Melkites)
+            - latin-catholic
+            - latin-african            # indigenous North African Latin Christianity (Ifriqiya, Djerid), distinct from foreign Latin Christians
+            - other
+        islam:
+          branches:
+            - sunni-maliki
+            - sunni-shafii
+            - sunni-hanafi
+            - sunni-hanbali
+            - sunni-unspecified        # when the evidence shows Sunni practice but not the legal school
+            - shia-twelver
+            - shia-ismaili
+            - shia-zaydi
+            - ibadi
+            - other
+          overlays: [sufi]             # an order can be named in local_form (e.g. Qadiriyya, Shadhiliyya)
+    iranian:
+      traditions:
+        zoroastrianism: {branches: [other]}
+        manichaeism: {branches: [other]}
+    dharmic:
+      traditions:
+        hinduism: {branches: [shaiva, vaishnava, shakta, smarta, other]}
+        buddhism: {branches: [theravada, mahayana, vajrayana, other]}
+        jainism: {branches: [digambara, svetambara, other]}
+    east-asian:
+      traditions:
+        confucianism: {branches: [classical, neo-confucian, other]}
+        daoism: {branches: [other]}
+        shinto: {branches: [other]}
+    local:
+      # Religions tied to a people, place, and ancestors rather than a scripture
+      # spread across regions. Name the specific practice in local_form.
+      # NEVER use "animist", "pagan", "fetish", "heathen", or "traditional" as the name.
+      traditions:
+        indigenous: {branches: [other]}
+
+  # How much of a stratum follows a tradition. Use within one profile.
+  share:
+    dominant: most people in the stratum
+    significant: a large, visible part
+    minority: a small, distinct community
+    trace: practices or objects survive, few or no full adherents
+    unknown: evidence does not say
+
+  # The core teaching variable: how traditions sit together in one stratum.
+  # Run the tests in order; the first yes wins.
+  relation:
+    undocumented: "Test 1: Is there no direct evidence for this stratum in this span? (common for rural majorities)"
+    exclusive: "Test 2: Does one tradition account for essentially all practice, with no meaningful second?"
+    contested: "Test 3: Are adherents of the traditions in open conflict, forced conversion, persecution, or destruction of shrines/churches/mosques?"
+    coexisting: "Test 4: Do different communities keep separate traditions side by side (separate quarters, separate rites, separate leaders)?"
+    syncretic: "Test 5: Do the same people combine elements of two traditions into one practice or rite (e.g. Friday prayer plus Mande royal ritual in one court ceremony)?"
+    plural: "Test 6 (default): Do the same people use more than one tradition for different purposes without fusing them (e.g. Islam for law and prayer, ancestral shrines for rain and land)?"
+  relation_notes:
+    - Disputes inside one tradition (Ethiopian Stephanites vs. the court; Almohad vs. Maliki) are recorded by listing the same tradition twice with different branch or local_form. contested and coexisting then count two entries.
+    - exclusive can rest on silence (only one tradition is recorded). When it does, set basis to inferred and say so in detail.
+
+  # How the profile is known. Optional on every religion profile; default attested.
+  basis:
+    attested: direct evidence from the span itself
+    inferred: reasoned from indirect evidence of the same span (e.g. political narratives, conquest accounts, absence)
+    projected: read backward from later evidence (later ethnography, 16th-century texts, modern practice)
+
+# Social strata. A profile is written per stratum.
+strata:
+  court: rulers, royal household, officials, army command
+  urban: town and city residents, especially merchants, scholars, and artisans
+  rural: farmers, herders, fishers; the majority in almost every pre-modern place
+  # An optional fourth, only when a group is distinct from all three:
+  community: a named minority community within the place (e.g. Jewish quarter, Coptic villages, foreign merchant colony); requires community_name
+
+# ---------------------------------------------------------------------------
+# 2. DIFFUSION
+# ---------------------------------------------------------------------------
+diffusion:
+  # How it moved. Tie-break: the mechanism that best explains how the idea reached the RECEIVING people.
+  # Run in order; first yes wins.
+  mechanism:
+    imposed: "1. Was it pushed on people by force or legal pressure from a ruling power (conquest, forced conversion, discriminatory law, destruction of rival sites)?"
+    relocation: carriers move and settle, bringing the practice with them (merchant diaspora, migration, colonists)
+    hierarchical: "adopted first by rulers or elites by choice, then spreads downward or to subordinate centers (not coercion: use imposed)"
+    contagious: spreads person to person through daily contact, without elite sponsorship
+    stimulus: the idea is taken up but reshaped into something new (a script adapted to a local language; a new architectural form from borrowed principles)
+  carriers:
+    - merchant
+    - scholar           # teachers, jurists, students, scribes
+    - religious-specialist  # clerics, monks, missionaries, Sufi shaykhs, priests
+    - pilgrim
+    - ruler             # sponsorship, diplomacy, royal marriage alliances
+    - military          # conquest, garrisons, raids
+    - migrant           # pastoral or agricultural movement, refugees
+    - artisan           # builders, smiths, craft specialists
+    - enslaved-people   # forced movement of people who carried their own culture
+    - family            # intermarriage, households, women as transmitters
+  # What happened where it arrived. Run in order; first yes wins.
+  outcome:
+    undocumented: "1. Does no evidence show what happened to it in the receiving place? (e.g. the religion of enslaved people carried across the Sahara)"
+    impact: "2. Is it something people undergo rather than take up (disease, environmental change)? Record the effect in detail."
+    withheld: "3. Did rulers deliberately keep it from a group (e.g. Mali not converting the goldfield peoples)?"
+    resistance: "4. Was it actively refused, rolled back, or fought?"
+    coexistence: "5. Did it arrive with a community that kept it separate from the host majority?"
+    syncretism: "6. Was it combined with existing practice into a blended form?"
+    elite-only: "7. Was it taken up by the court or urban elite but not (yet) the majority?"
+    adoption: "8. Did the receiving people take it up broadly as their own?"
+    loss: "9. Did an existing practice fade in the receiving place without the incoming one replacing it (e.g. written Old Nubian)?"
+    no-uptake: "10 (default). Did it arrive and leave little trace?"
+
+# ---------------------------------------------------------------------------
+# 3. LENSES (domains of cultural diffusion) mapped to InSPECT
+#    InSPECT = Interaction w/ Environment (ENV), Social (SIO), Political (GOV),
+#    Economic (ECN), Cultural (CDI), Technological (TEC)
+# ---------------------------------------------------------------------------
+lenses:
+  religion: {inspect: CDI, note: default lens}
+  language: {inspect: CDI, note: languages, scripts, lingua francas, loanwords}
+  architecture: {inspect: CDI, note: sacred and royal building forms and materials}
+  knowledge: {inspect: CDI, note: education, scholarship, law, manuscripts, institutions of learning}
+  art-music: {inspect: CDI, note: visual art, music, oral performance}
+  social: {inspect: SIO, note: gender, social status, castes and occupational groups, slavery, kinship}
+  population: {inspect: ENV, note: settlement, density, migration, disease}
+  economy: {inspect: ECN, note: "coinage, weights, credit, commercial law. Trade routes stay a background layer; this lens is for economic PRACTICES that spread, not for routes."}
+  technology: {inspect: TEC, note: tools, techniques, agriculture, metallurgy, navigation}
+  governance: {inspect: GOV, note: legal and administrative forms that spread (e.g. sharia courts, titles, chancery practice); use with the Polity Profile}
+
+# ---------------------------------------------------------------------------
+# 4. PLACES
+# ---------------------------------------------------------------------------
+# parent may be one place id, or a list of {id, start, end} when a city changed hands (Zeila: Ifat, then Adal).
+# Exemplar optional fields: fabric_date (when the surviving structure dates, if different from founding),
+# found_at {name, lat, lon} (findspot far from origin), on_slider (false for later sources shown only as cards).
+place_kinds:
+  polity: a state with a center that gives orders (kingdom, empire, sultanate, city-state)
+  city: a town or city drawn as a point, usually inside a polity
+  people: a named people or cultural region outside any polity's direct rule (drawn as a soft area)
+  site: a single monument or archaeological site with no surrounding polity record
+  external: an origin outside the module's map frame (e.g. Hijaz, Hadramawt, Gujarat, al-Andalus); point only
+
+# Polity Profile (from Wil's Polity Profile taxonomy, claude/polity-taxonomy.md)
+polity_profile:
+  base: [FOR, PAS, AGR, COM, IND, SVC]
+  flow: [REC, RED, EXT, MKT, CMD]
+  membership: [KIN, PLACE, OATH, FAITH, NATION, LAW, TREATY]
+  standing: [SOV, BOUND, ABS]
+  shape: [DIFFUSE, IMPERIAL, LEAGUE, FEDERAL, LAYERED, CENTRAL]
+  rulers: [ONE, FEW, MANY]
+  right: [DIVINE, DESCENT, VICTORY, MERIT, CONSENT, DOCTRINE]
+
+# ---------------------------------------------------------------------------
+# 5. EVIDENCE
+# ---------------------------------------------------------------------------
+sources:
+  kind: [primary, secondary]
+  type:
+    oral-tradition: recorded performances or collected traditions (griot/jeli epics, praise poetry, clan histories)
+    chronicle-local: written by people of the region about their own region (Timbuktu tarikhs, Kilwa Chronicle, Kano Chronicle, Ethiopian royal chronicles)
+    religious-text-local: scripture, hagiography, liturgy, legal opinions produced in the region
+    travel-geography: accounts by visitors or distant geographers (al-Bakri, al-Umari, Ibn Battuta, Zheng He's chroniclers)
+    epigraphy: inscriptions, epitaphs, coins
+    documentary: letters, legal documents, administrative records
+    archaeology: excavation reports and material analysis
+    material-culture: surviving buildings, objects, art
+    scholarship: secondary analysis
+    reference: encyclopedias, syntheses, textbooks (use sparingly; prefer what they cite)
+    reference-web: Wikipedia and similar web references; flagged so they can be replaced by what they cite
+    community-heritage: modern statements by a community's own heritage bodies (e.g. Ethiopian Jewry Heritage Center), UNESCO nominations prepared with communities
+  # Whose eyes. Relative to the place being described.
+  voice:
+    insider: produced by people of the place or region described
+    regional-outsider: produced elsewhere in the same broad world (e.g. Cairo writer on Mali), with ties to it
+    distant-outsider: produced far away with little direct contact
+    scholar-from-region: modern scholarship by a researcher born in the region studied OR long based in its institutions (diaspora scholars born in the region count; note the institution in notes)
+    scholar-international: modern scholarship from outside the region
+  verification:
+    web-checked: the claim was confirmed against an accessible text during research
+    citation-only: the work is known and cited, but the specific claim was not checked against the text
+    needs-library: should be checked against a library copy (AU/GW access)
+  confidence: [high, medium, low]
+
+# ---------------------------------------------------------------------------
+# 6. AP alignment. Verified against the AP World History: Modern CED, Effective Fall 2026 (V.1);
+#    see docs/ap-ced-alignment.md. Note: the CED files religion in Africa (KC-3.1.III.D.iii) under 1.2,
+#    not 1.5. Tag religion profiles and religion diffusions 1.2; 1.5 is governance and state building.
+# ---------------------------------------------------------------------------
+ap_topics:
+  "1.1": Developments in East Asia from c. 1200 to c. 1450
+  "1.2": Developments in Dar al-Islam from c. 1200 to c. 1450
+  "1.3": Developments in South and Southeast Asia from c. 1200 to c. 1450
+  "1.4": State Building in the Americas
+  "1.5": State Building in Africa
+  "1.6": Developments in Europe from c. 1200 to c. 1450
+  "2.1": The Silk Roads
+  "2.2": The Mongol Empire and the Making of the Modern World
+  "1.7": Comparison in the Period from c. 1200 to c. 1450
+  "2.3": Exchange in the Indian Ocean
+  "2.4": Trans-Saharan Trade Routes
+  "2.5": Cultural Consequences of Connectivity
+  "2.6": Environmental Consequences of Connectivity
+  "2.7": Comparison of Economic Exchange
+
+# ---------------------------------------------------------------------------
+# 7. LANGUAGE RULES for every summary and detail field
+# ---------------------------------------------------------------------------
+writing_rules:
+  banned_terms: [animist, animism, pagan, heathen, fetish, fetishism, juju, witch doctor, "Dark Continent", "Black Africa", Hamitic, primitive, tribe (as a generic label for any African polity)]
+  require:
+    - Name indigenous practice specifically (e.g. "Mande power associations such as Komo", "Yoruba orisa worship and Ifa divination"), not generically.
+    - Arabic and European visitors are outsiders; summaries attribute their claims ("al-Umari reports...").
+    - Oral tradition is a source with its own transmitters and purposes, not legend to be corrected by Arabic texts.
+    - Conversion is described as a choice people made for their own reasons, not as Islam or Christianity "civilizing" anyone.
+    - summary fields are student-facing, high-school readable, at most 2 sentences. detail fields are for the teacher.

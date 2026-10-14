@@ -1,0 +1,84 @@
+# Canonical place IDs for the Africa module, with the research file that owns each one.
+# Any file may REFERENCE these ids (diffusion from/to, parent). Only the owner DEFINES the full place record.
+# External places (outside the map frame) are defined in full here and owned by nobody.
+# Owners: wsahel = western Sahel & Senegambia; csahel = central Sahel & forest; north = North Africa & Egypt;
+#         nile-horn = Nubia & Ethiopian region; swahili = East African coast.
+registry:
+  # western Sahel
+  - {id: pl-mali, owner: wsahel}
+  - {id: pl-sosso, owner: wsahel}
+  - {id: pl-ghana-wagadu, owner: wsahel}
+  - {id: pl-takrur, owner: wsahel}
+  - {id: pl-jolof, owner: wsahel}
+  - {id: pl-songhay-gao, owner: wsahel}
+  - {id: pl-gao, owner: wsahel}
+  - {id: pl-timbuktu, owner: wsahel}
+  - {id: pl-djenne, owner: wsahel}
+  - {id: pl-walata, owner: wsahel}
+  - {id: pl-niani, owner: wsahel}
+  - {id: pl-mossi, owner: wsahel}
+  - {id: pl-begho, owner: wsahel}
+  - {id: pl-bono, owner: wsahel}
+  # central Sahel & forest
+  - {id: pl-kanem, owner: csahel}
+  - {id: pl-bornu, owner: csahel}
+  - {id: pl-njimi, owner: csahel}
+  - {id: pl-kano, owner: csahel}
+  - {id: pl-katsina, owner: csahel}
+  - {id: pl-hausa-states, owner: csahel}
+  - {id: pl-ife, owner: csahel}
+  - {id: pl-benin, owner: csahel}
+  - {id: pl-agadez, owner: csahel}
+  - {id: pl-tuareg, owner: csahel}
+  # North Africa & Egypt
+  - {id: pl-marinids, owner: north}
+  - {id: pl-almohads, owner: north}
+  - {id: pl-hafsids, owner: north}
+  - {id: pl-zayyanids, owner: north}
+  - {id: pl-mamluks, owner: north}
+  - {id: pl-ayyubids, owner: north}
+  - {id: pl-fez, owner: north}
+  - {id: pl-marrakesh, owner: north}
+  - {id: pl-tlemcen, owner: north}
+  - {id: pl-tunis, owner: north}
+  - {id: pl-kairouan, owner: north}
+  - {id: pl-cairo, owner: north}
+  - {id: pl-alexandria, owner: north}
+  - {id: pl-sijilmasa, owner: north}
+  # Nile & Horn
+  - {id: pl-makuria, owner: nile-horn}
+  - {id: pl-alodia, owner: nile-horn}
+  - {id: pl-dongola, owner: nile-horn}
+  - {id: pl-zagwe, owner: nile-horn}
+  - {id: pl-ethiopia-solomonic, owner: nile-horn}
+  - {id: pl-lalibela, owner: nile-horn}
+  - {id: pl-ifat, owner: nile-horn}
+  - {id: pl-adal, owner: nile-horn}
+  - {id: pl-zeila, owner: nile-horn}
+  - {id: pl-beta-israel, owner: nile-horn}
+  # Swahili coast
+  - {id: pl-mogadishu, owner: swahili}
+  - {id: pl-kilwa, owner: swahili}
+  - {id: pl-mombasa, owner: swahili}
+  - {id: pl-malindi, owner: swahili}
+  - {id: pl-zanzibar, owner: swahili}
+  - {id: pl-pate, owner: swahili}
+  - {id: pl-lamu, owner: swahili}
+  - {id: pl-sofala, owner: swahili}
+  - {id: pl-gedi, owner: swahili}
+  - {id: pl-great-zimbabwe, owner: swahili}   # interior partner of the gold trade, shown as linked site
+
+# External origins, defined in full here.
+places:
+  - {id: pl-ext-hijaz, name: "Hijaz (Mecca and Medina)", kind: external, location: {lat: 21.42, lon: 39.83}}
+  - {id: pl-ext-yemen, name: "Yemen", kind: external, location: {lat: 15.35, lon: 44.2}}
+  - {id: pl-ext-hadramawt, name: "Hadramawt", kind: external, location: {lat: 15.93, lon: 48.79}}
+  - {id: pl-ext-persian-gulf, name: "Persian Gulf (Siraf, Hormuz, Shiraz)", kind: external, location: {lat: 27.1, lon: 56.3}}
+  - {id: pl-ext-oman, name: "Oman", kind: external, location: {lat: 23.6, lon: 58.4}}
+  - {id: pl-ext-gujarat, name: "Gujarat (Cambay)", kind: external, location: {lat: 22.3, lon: 72.6}}
+  - {id: pl-ext-al-andalus, name: "al-Andalus (Granada)", kind: external, location: {lat: 37.18, lon: -3.6}}
+  - {id: pl-ext-levant, name: "Levant (Jerusalem, Damascus)", kind: external, location: {lat: 31.78, lon: 35.23}}
+  - {id: pl-ext-iraq, name: "Iraq (Baghdad)", kind: external, location: {lat: 33.31, lon: 44.36}}
+  - {id: pl-ext-china, name: "Ming China", kind: external, location: {lat: 32.06, lon: 118.8}}
+  - {id: pl-ext-iberia-christian, name: "Christian Iberia (Portugal, Castile, Aragon)", kind: external, location: {lat: 38.72, lon: -9.14}}
+  - {id: pl-ext-italy, name: "Italian city-states (Venice, Genoa)", kind: external, location: {lat: 45.44, lon: 12.33}}

@@ -1,0 +1,318 @@
+# Contested questions: where scholars (or sources) disagree. Collected from the five regional research passes.
+# The app shows these as "Historians disagree" cards on linked places/records. Each is a ready LEQ/Socratic prompt.
+# positions name WHO holds each view so students practice attributing claims.
+debates:
+  # ---------------- western Sahel ----------------
+  - id: db-sunjata-religion
+    region: western-sahel
+    question: "Was Sunjata a Muslim king or a Mande hunter-king whose power came from nyama?"
+    positions:
+      - {view: "A Muslim ruler; the epic's Bilali genealogy is part of his legitimacy", who: "Niane (UNESCO GHA IV)"}
+      - {view: "A Mande hunter-king; Islam was a later layer added by Muslim jeliw and chroniclers", who: "Gomez; Fage"}
+      - {view: "The epic deliberately carries both legitimacies at once", who: "reading of the Kouyaté and Kamissoko recordings"}
+    links: [pl-mali]
+  - id: db-sumaoro-old-religion
+    region: western-sahel
+    question: "Was Sumaoro (Sumanguru) of Sosso really defending the older religion against Islam, or is that a later Muslim framing?"
+    positions:
+      - {view: "A real religious contest between Mande ritual power and Islam", who: "Niane"}
+      - {view: "A political rivalry later cast as religious by Muslim-influenced griots", who: "Conrad; the Sako Sumaoro epic tells it from Sosso's side"}
+    links: [pl-sosso, pl-mali]
+  - id: db-mali-capital
+    region: western-sahel
+    question: "Where was Mali's capital, and did it have a fixed one at all?"
+    positions:
+      - {view: "Niani on the Sankarani", who: "Niane; Filipowiak's excavations"}
+      - {view: "Dakajalan or another site", who: "Conrad 1994"}
+      - {view: "A mobile court with no single fixed capital", who: "Fauvelle"}
+    links: [pl-niani, pl-mali]
+  - id: db-suwari-date
+    region: western-sahel
+    question: "When did al-Hajj Salim Suwari live, and so does the Suwarian tradition of non-coercion belong on a pre-1450 map?"
+    positions:
+      - {view: "12th to 13th century", who: "Sanneh"}
+      - {view: "About 1500", who: "Wilks"}
+    links: [pl-diakha-bambuk]
+  - id: db-mali-court-islam
+    region: western-sahel
+    question: "Was Islam at Mali's court a \"thin varnish\" or a deliberate double role alongside Mande kingship?"
+    positions:
+      - {view: "A thin varnish over Mande kingship", who: "Niane"}
+      - {view: "A deliberate double role: mansa as Muslim ruler and Mande sacred king", who: "Gomez; Fauvelle"}
+    links: [pl-mali]
+  - id: db-al-sahili-architect
+    region: western-sahel
+    question: "Did Abu Ishaq al-Sahili design Mali's mosques, or is the Sudano-Sahelian style African in origin?"
+    positions:
+      - {view: "He built mosques for Musa", who: "Niane"}
+      - {view: "Only an audience hall is attested; the style is local", who: "Hunwick; Aradeon"}
+    links: [pl-timbuktu, pl-mali]
+  - id: db-walata-women
+    region: western-sahel
+    question: "What do Ibn Battuta's complaints about women in Walata tell us: weak Islam, or a Saharan matrilineal norm judged by a Moroccan jurist?"
+    positions:
+      - {view: "Evidence that Islam was shallow", who: "older readings of the Rihla"}
+      - {view: "Evidence of Saharan matriliny and of the observer's own Maliki norms", who: "current scholarship"}
+    links: [pl-walata]
+  - id: db-kurukan-fuga
+    region: western-sahel
+    question: "Is the Kurukan Fuga charter a 1236 constitution or a text reconstructed in 1998?"
+    positions:
+      - {view: "An oral charter from Sunjata's assembly", who: "Mande tradition; UNESCO intangible heritage listing"}
+      - {view: "A modern reconstruction (Kankan, 1998) projected back", who: "Jansen; Simonis"}
+    links: [pl-mali]
+  - id: db-almoravid-ghana
+    region: western-sahel
+    question: "Did the Almoravids conquer Ghana in 1076?"
+    positions:
+      - {view: "Yes, and it pushed Islamization", who: "older consensus from Arabic sources"}
+      - {view: "No conquest happened; the story is a misreading", who: "Conrad & Fisher"}
+    links: [pl-ghana-wagadu]
+  - id: db-djenne-mali
+    region: western-sahel
+    question: "Was Djenné ever under Mali?"
+    positions:
+      - {view: "Mali attacked 99 times and never took it", who: "al-Sadi, Tarikh al-Sudan"}
+      - {view: "Its ruler was Mali's vassal", who: "Tarikh al-Fattash"}
+    links: [pl-djenne, pl-mali]
+  - id: db-gao-epitaphs
+    region: western-sahel
+    question: "Do the kings named on the Gao royal epitaphs match the Za dynasty of the Timbuktu chronicles?"
+    positions:
+      - {view: "Yes", who: "Lange"}
+      - {view: "No", who: "Hunwick"}
+      - {view: "The stelae imply matriliny that the chronicles leave out", who: "Henige"}
+    links: [pl-gao]
+  # ---------------- central Sahel & forest ----------------
+  - id: db-mune
+    region: central-sahel
+    question: "When Mai Dunama Dibbalemi opened the mune, was it religious reform, sacrilege, or a political move against rival princes?"
+    positions:
+      - {view: "Reform that spread orthodox Islam", who: "Lange reading the Kanem king list"}
+      - {view: "Sacrilege that caused civil war", who: "16th-century Bornu writer Ahmad Furtu's blame"}
+      - {view: "A power play against rival princes", who: "political readings"}
+    links: [pl-kanem]
+  - id: db-kanem-chronology
+    region: central-sahel
+    question: "Is the Kanem king list a reliable written record or a 16th-century political charter?"
+    positions:
+      - {view: "A reliable record; Dunama ruled 1210 to 1248", who: "Lange"}
+      - {view: "Dunama c.1221 to 1259", who: "Barth; Palmer"}
+      - {view: "A political charter written later", who: "Holl"}
+    links: [pl-kanem]
+  - id: db-kano-chronicle
+    region: central-sahel
+    question: "Is the Kano Chronicle history or court ideology?"
+    positions:
+      - {view: "An 1880s compilation of older tradition", who: "Hunwick"}
+      - {view: "A 17th-century composition written as political metaphor", who: "Last"}
+    links: [pl-kano]
+  - id: db-wangara-kano-date
+    region: central-sahel
+    question: "Did Wangara Muslims reach Kano under Sarki Yaji (1349 to 1385) or a century later under Rumfa?"
+    positions:
+      - {view: "Under Yaji", who: "Kano Chronicle; Adamu"}
+      - {view: "Under Rumfa", who: "Asl al-Wangariyin"}
+    links: [pl-kano]
+  - id: db-hausa-islam-origin
+    region: central-sahel
+    question: "Did Hausa Islam come from the Mali world (Wangara) or from Bornu and the Sahara?"
+    positions:
+      - {view: "From Wangara of the Mali world", who: "Kano Chronicle tradition"}
+      - {view: "From Bornu and Saharan Gobir, shown by Kanuri loanwords", who: "Adamu"}
+    links: [pl-hausa-states, pl-kano, pl-bornu]
+  - id: db-benin-dynasty
+    region: forest
+    question: "Did Benin's Oba dynasty come from Ife?"
+    positions:
+      - {view: "Yes, through Oranmiyan", who: "Benin court tradition; Egharevba"}
+      - {view: "From the Nupe-Igala north", who: "Ryder 1965"}
+      - {view: "An Ife 'stock narrative' many kingdoms used", who: "Ogundiran"}
+    links: [pl-benin, pl-ife]
+  - id: db-benin-brass
+    region: forest
+    question: "Was Benin brass casting taught from Ife around 1300 to 1400?"
+    positions:
+      - {view: "Yes, under Oba Oguola via the caster Iguegha", who: "Benin court tradition"}
+      - {view: "Casting already existed earlier and flourished in the 1500s", who: "Ryder; Denis Williams; Usuanlele and Falola"}
+    links: [pl-benin, pl-ife]
+  - id: db-ife-heads
+    region: forest
+    question: "Were Ife's heads made in one generation, and was there an Ife empire?"
+    positions:
+      - {view: "Made in one generation under Obalufon II", who: "Blier"}
+      - {view: "Made over several generations", who: "other art historians"}
+      - {view: "An Ife empire existed", who: "Ogundiran"}
+      - {view: "Ife's reach was ritual prestige, not empire", who: "Ryder"}
+    links: [pl-ife]
+  # ---------------- North Africa & Egypt ----------------
+  - id: db-egypt-muslim-majority
+    region: north-africa
+    question: "When did Egypt become majority Muslim, and was 1354 the turning point?"
+    positions:
+      - {view: "1354 crisis as a turning point", who: "Little; Wiet"}
+      - {view: "A Muslim majority by about the 800s; 1354 is a late conclusion", who: "O'Sullivan"}
+      - {view: "The decisive shift was in the 1300s", who: "el-Leithy"}
+    links: [pl-mamluks, pl-cairo]
+  - id: db-1321-churches
+    region: north-africa
+    question: "Were the 1321 church destructions popular anger, a purge the state tolerated, or both?"
+    positions:
+      - {view: "Popular violence", who: "readings of al-Maqrizi"}
+      - {view: "Tolerated or encouraged by the state", who: "other readings"}
+    note: "Our main account comes from al-Maqrizi, writing about a century later."
+    links: [pl-cairo, pl-mamluks]
+  - id: db-last-african-christians
+    region: north-africa
+    question: "When did the last indigenous North African Christians disappear?"
+    positions:
+      - {view: "By the mid-1200s", who: "Prevost; Cristini"}
+      - {view: "Into the 1300s or later", who: "other scholars"}
+    links: [pl-tozeur, pl-hafsids]
+  - id: db-fez-mellah
+    region: north-africa
+    question: "Was the Fez mellah protection, segregation, or both, and was it created in 1438 or gradually?"
+    positions:
+      - {view: "Created in 1438", who: "traditional date"}
+      - {view: "A gradual move after 1276", who: "Rguig; Gilson Miller"}
+    links: [pl-fez]
+  - id: db-marinid-madrasas
+    region: north-africa
+    question: "Were Marinid madrasas acts of piety or legitimacy-building by a dynasty with no religious founding claim?"
+    positions:
+      - {view: "Legitimacy-building", who: "Shatzmiller; Kably"}
+      - {view: "Piety and patronage of learning", who: "other readings"}
+    links: [pl-marinids, pl-fez]
+  - id: db-musa-gold-cairo
+    region: north-africa
+    question: "Did Mansa Musa's gold really lower gold prices in Cairo?"
+    positions:
+      - {view: "Yes, for years", who: "al-Umari"}
+      - {view: "The drop was within normal fluctuation", who: "Schultz"}
+    links: [pl-cairo, pl-mali]
+  # ---------------- Nile & Horn ----------------
+  - id: db-kebra-nagast
+    region: horn
+    question: "Is the Kebra Nagast a 14th-century Ethiopian composition for Solomonic legitimacy, or a translation of an older text?"
+    positions:
+      - {view: "A 14th-century composition supporting the Solomonic dynasty", who: "most modern scholars"}
+      - {view: "A translation from Coptic and Arabic, as its colophon says", who: "the text's own closing note"}
+      - {view: "A text with a 6th-century core", who: "some scholars"}
+    links: [pl-ethiopia-solomonic]
+  - id: db-lalibela-dating
+    region: horn
+    question: "Were Lalibela's churches carved in one reign or in several phases?"
+    positions:
+      - {view: "By King Lalibela around 1200", who: "Ethiopian tradition; the Gadla Lalibela"}
+      - {view: "In four or five phases from the 7th to the 13th century, some first as palaces or forts", who: "Phillipson; Fauvelle and Mensan"}
+    links: [pl-lalibela, pl-zagwe]
+  - id: db-new-jerusalem
+    region: horn
+    question: "Was Lalibela's 'New Jerusalem' a response to Saladin taking Jerusalem in 1187?"
+    positions:
+      - {view: "Yes", who: "common modern account"}
+      - {view: "A modern reading of a holy-city idea rooted in Ethiopia's own tradition", who: "other scholars"}
+    links: [pl-lalibela]
+  - id: db-nubia-islamization
+    region: nile
+    question: "How did Nubia become Muslim: conquest, or slow intermarriage?"
+    positions:
+      - {view: "Juhayna Arab conquest", who: "Ibn Khaldun"}
+      - {view: "Slow intermarriage and settlement", who: "Gerhards; Godlewski"}
+      - {view: "Dongola was not Islamized before the 16th century", who: "Godlewski"}
+    links: [pl-makuria, pl-dongola]
+  - id: db-dongola-mosque
+    region: nile
+    question: "Does the 1317 Dongola throne-hall mosque show conversion or Mamluk subjugation?"
+    positions:
+      - {view: "A sign of the kingdom's conversion", who: "older reading"}
+      - {view: "A mark of Mamluk control, used mainly by newcomers", who: "Godlewski"}
+    links: [pl-dongola]
+  - id: db-makuria-end
+    region: nile
+    question: "When did Christian Nubia (Dotawo/Makuria) end?"
+    positions:
+      - {view: "Late 15th century (King Joel, 1463 and 1484)", who: "usual date"}
+      - {view: "As late as 1615 to 1620", who: "Simmons"}
+    links: [pl-makuria, pl-qasr-ibrim]
+  - id: db-alodia-fall
+    region: nile
+    question: "When did Alodia fall?"
+    positions:
+      - {view: "Decline from the 12th century, no finds after the 13th", who: "archaeology at Soba"}
+      - {view: "Fell between 1474 and 1509", who: "Sudanese tradition"}
+    links: [pl-alodia]
+  - id: db-beta-israel-origins
+    region: horn
+    question: "Where do the Beta Israel come from?"
+    positions:
+      - {view: "Ancient Israel via Egypt and the Nile, often linked to the tribe of Dan", who: "Beta Israel tradition"}
+      - {view: "The group formed in the 14th to 16th centuries", who: "Kaplan; Quirin"}
+      - {view: "Their liturgy is closely tied to Ethiopian Christian monasticism", who: "Shelemay"}
+    note: "The community rejects the theory that they descend from Agaw converts."
+    links: [pl-beta-israel]
+  - id: db-tekle-haymanot-1270
+    region: horn
+    question: "Did Tekle Haymanot make Yekuno Amlak king in 1270?"
+    positions:
+      - {view: "Yes", who: "the hagiographies"}
+      - {view: "A later Debre Libanos invention", who: "Taddesse Tamrat"}
+    links: [pl-ethiopia-solomonic, pl-debre-libanos]
+  - id: db-zara-yaqob
+    region: horn
+    question: "Was Zara Yaqob's campaign against dissenters religious reform or a political purge?"
+    positions:
+      - {view: "Religious reform", who: "royal texts"}
+      - {view: "Political purge and royal cult", who: "Solomon Gebreyes Beyene"}
+    links: [pl-ethiopia-solomonic]
+  - id: db-walasma-descent
+    region: horn
+    question: "Was the Walasma dynasty's Arab descent real or a legitimacy claim?"
+    positions:
+      - {view: "A legitimacy claim by a locally rooted dynasty", who: "Cerulli; Trimingham; Tamrat"}
+      - {view: "Genuine descent", who: "the dynasty's own genealogy"}
+    links: [pl-ifat, pl-adal]
+  # ---------------- Swahili coast ----------------
+  - id: db-swahili-identity
+    region: swahili-coast
+    question: "Were the Swahili towns African towns that chose Islam, or Arab and Persian colonies?"
+    positions:
+      - {view: "Arab or Persian colonies", who: "Chittick; Kirkman (colonial-era)"}
+      - {view: "African, Bantu-speaking towns that joined the Islamic world", who: "Horton; Chami; Kusimba; Spear; Allen; Pouwels"}
+    links: [pl-kilwa, pl-gedi]
+  - id: db-kilwa-dna
+    region: swahili-coast
+    question: "What does the 2023 ancient-DNA study of Swahili burials prove?"
+    positions:
+      - {view: "It confirms the Kilwa Chronicle's Persian story", who: "some readers"}
+      - {view: "Persian-related ancestry is only consistent with it; men married into African families, not colonization", who: "the study's authors"}
+    links: [pl-kilwa]
+  - id: db-kilwa-chronicle
+    region: swahili-coast
+    question: "Is the Kilwa Chronicle history or a 16th-century argument for legitimacy?"
+    positions:
+      - {view: "Usable history with care", who: "Freeman-Grenville"}
+      - {view: "A legitimacy argument", who: "Chittick; Saad 1979"}
+      - {view: "Has a later Omani editing layer", who: "Arabahmadi 2023"}
+    links: [pl-kilwa]
+  - id: db-great-zimbabwe-no-islam
+    region: swahili-coast
+    question: "Why did Great Zimbabwe trade gold with Muslims for 200 years and never adopt Islam, when Mali's court did?"
+    positions:
+      - {view: "Open question for students: compare who carried Islam, where, and what rulers gained", who: "classroom comparison"}
+    links: [pl-great-zimbabwe, pl-mali]
+  - id: db-great-zimbabwe-end
+    region: swahili-coast
+    question: "Did Great Zimbabwe end around 1450, and why?"
+    positions:
+      - {view: "Declined around 1450", who: "UNESCO"}
+      - {view: "Occupied into the 16th and 17th centuries", who: "Chirikure et al. 2013"}
+      - {view: "Causes: environment, the 'salt' of Shona tradition, or shifting trade routes", who: "various"}
+    links: [pl-great-zimbabwe, pl-mutapa]
+  - id: db-zheng-he-africa
+    region: swahili-coast
+    question: "Did Zheng He himself reach Mogadishu and Malindi, or only detached squadrons?"
+    positions:
+      - {view: "Detached squadrons", who: "Dreyer; Pelliot"}
+      - {view: "The main fleet", who: "popular accounts"}
+    links: [pl-malindi, pl-mogadishu]

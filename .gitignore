@@ -1,0 +1,6 @@
+data/geometry/raw/
+data/build/
+node_modules/
+app/dist/
+__pycache__/
+.DS_Store

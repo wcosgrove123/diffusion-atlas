@@ -1,0 +1,3555 @@
+# Nile-Horn research file: middle Nile (Nubia), Ethiopian/Eritrean highlands, and the Muslim Horn, 1200-1450.
+# Owner: nile-horn. Built 2026-10-14. Read docs/research-brief.md for the perspective rules this file follows.
+# Verification honesty: the open web was reachable but most key monographs (Taddesse Tamrat, Kaplan, Quirin,
+# Ruffini, Derat, Werner, Zarroug, Yusuf Fadl Hasan) were not; those are marked citation-only or needs-library.
+# The UNESCO GHA vol. IV chapters 16 (Kropacek) and 17 (Tamrat) could not be opened past the front matter.
+
+places:
+  - id: pl-makuria
+    name: Makuria (Dotawo)
+    alt_names: [Dotawo, Muqurra, "al-Muqurra", "Kingdom of Dongola"]
+    kind: polity
+    region: middle-nile
+    location: {lat: 18.22, lon: 30.75}
+    span: {start: 580, end: 1500, approx: true}
+    parent: null
+    geometry_note: >
+      Nile valley from the First Cataract (Aswan frontier; Lower Nubia = the old kingdom of Nobadia, run by an
+      eparch based at Qasr Ibrim) south past Dongola to about the Fourth/Fifth Cataract, where al-Abwab and Alodia began.
+      Label point is Old Dongola, the capital until the court moved north to Daw (often identified with Gebel Adda)
+      after the civil war of 1365; after that, draw a shrinking rump in Lower Nubia. "Dotawo" is the kingdom's own
+      Old Nubian name in documents from the 1180s to the 1490s. End date is debated: the usual narrative ends Christian
+      royal rule in the late 15th century (last known king Joel, 1463 and 1484), but Adam Simmons argues the kingdom
+      survived in reduced form until 1615-1620. Urban strata are recorded on pl-dongola and pl-qasr-ibrim.
+    basemap_match: ["Makuria", "Nubia"]
+    polity_profile:
+      - year: 1250
+        base: AGR
+        flow: EXT
+        membership: [FAITH, KIN]
+        ruled_not_counted: enslaved people; Arab-descended settlers in Lower Nubia under their own leaders
+        standing: SOV
+        shape: CENTRAL
+        rulers: ONE
+        right: [DESCENT, DIVINE]
+        flag: >
+          The baqt with Egypt (an exchange arrangement dating to 651/652) is read by some as tribute; Ruffini and others
+          read it as an exchange between equals, so SOV is the better reading for 1250.
+      - year: 1320
+        base: AGR
+        flow: EXT
+        membership: [FAITH, KIN]
+        ruled_not_counted: enslaved people; Muslim newcomers (soldiers, merchants, tax agents) under Mamluk protection
+        standing: BOUND
+        shape: CENTRAL
+        rulers: ONE
+        right: [DESCENT, VICTORY]
+        flag: >
+          Kings still claimed the throne by royal descent (Barshambu and Kanz al-Dawla were both nephews of King David),
+          but after 1276 the Mamluk sultan installed and removed kings by force, demanded tribute on top of the baqt, and
+          imposed the jizya. Claim DESCENT; practice VICTORY by a foreign army.
+    evidence: [src-werner-christentum-nubien, src-seignobos-nubia-mamluks, src-wikipedia-makuria, src-simmons-dotawo-redating, src-dbmnt]
+    confidence: medium
+
+  - id: pl-dongola
+    name: Old Dongola
+    alt_names: [Dunqula, Tungul]
+    kind: city
+    region: middle-nile
+    location: {lat: 18.22, lon: 30.75}
+    span: {start: 500, end: null, approx: true}
+    parent: pl-makuria
+    geometry_note: >
+      East bank of the Nile between the Third and Fourth Cataracts. Royal capital of Makuria until the 1365 civil war;
+      afterwards a regional town (Evliya Celebi still describes a functioning town in the 17th century). Polish Centre
+      of Mediterranean Archaeology (University of Warsaw) has excavated here since 1964.
+    evidence: [src-godlewski-dongola-social-change, src-heritagedaily-dongola]
+    confidence: high
+
+  - id: pl-qasr-ibrim
+    name: Qasr Ibrim
+    alt_names: [Silmi, Primis, Ibrim]
+    kind: city
+    region: middle-nile
+    location: {lat: 22.65, lon: 31.99}
+    span: {start: -1000, end: 1812, approx: true}
+    parent: pl-makuria
+    geometry_note: >
+      Fortified hilltop town in Lower Nubia (now an island in Lake Nasser). Seat of the bishop of Ibrim and, in the
+      Makurian period, center of the eparch of Nobadia. Its dry conditions preserved hundreds of Old Nubian, Coptic,
+      Greek and Arabic documents. Not in the registry; created here because the Christian persistence story depends on it.
+    evidence: [src-ruffini-bishop-eparch-king, src-dbmnt, src-timotheos-scrolls]
+    confidence: high
+
+  - id: pl-alodia
+    name: Alodia (Alwa)
+    alt_names: [Alwa, "Aloa", "Kingdom of Soba"]
+    kind: polity
+    region: middle-nile
+    location: {lat: 15.52, lon: 32.68}
+    span: {start: 580, end: 1504, approx: true}
+    parent: null
+    geometry_note: >
+      Capital Soba East, near the confluence of the Blue and White Niles (south of modern Khartoum). Territory covered
+      the Gezira and reached toward the Atbara; its northern province became the separate kingdom of al-Abwab by 1268/9.
+      The end date is contested: Sudanese tradition (Funj Chronicle, Shendi documents) puts Soba's fall between the
+      1470s and 1509; archaeology shows Soba in decline from the 12th century and no pottery or glass after the 13th.
+    basemap_match: ["Alodia", "Alwa"]
+    polity_profile:
+      - year: 1250
+        base: AGR
+        flow: EXT
+        membership: [FAITH, KIN]
+        ruled_not_counted: herding and farming peoples of the Gezira and Butana whose religion is not recorded
+        standing: SOV
+        shape: IMPERIAL
+        rulers: ONE
+        right: [DESCENT, DIVINE]
+        flag: >
+          This profile leans on the 10th-century description by Ibn Selim al-Aswani and on Zarroug's model of a
+          multi-ethnic kingdom; almost nothing written survives for the 13th century. Treat every cell as a hypothesis.
+    evidence: [src-zarroug-alwa, src-wikipedia-alodia, src-gerhards-gezira]
+    confidence: low
+
+  - id: pl-zagwe
+    name: Zagwe kingdom
+    alt_names: ["Zagwe dynasty", "Lasta kingdom"]
+    kind: polity
+    region: ethiopian-highlands
+    location: {lat: 12.1, lon: 39.1}
+    span: {start: 1137, end: 1270, approx: true}
+    parent: null
+    geometry_note: >
+      Core in Lasta and Wag (Agaw country), with authority over Tigray, Eritrean highlands and Amhara. Royal centers at
+      Adefa and Roha (later called Lalibela). Start date debated (c. 930 to c. 1137 depending on which king lists are
+      trusted); ends with the battle of Ansata, 1270. Zagwe descendants kept Wag and Lasta under the title Wagshum.
+    basemap_match: ["Ethiopia", "Abyssinia", "Zagwe"]
+    polity_profile:
+      - year: 1210
+        base: AGR
+        flow: EXT
+        membership: [FAITH, KIN]
+        ruled_not_counted: non-Christian peoples on the southern and western frontiers; enslaved people
+        standing: SOV
+        shape: IMPERIAL
+        rulers: ONE
+        right: [DIVINE, DESCENT]
+        flag: >
+          Zagwe kings presented themselves as holy Christian kings (Lalibela is venerated as a saint and the town as a
+          New Jerusalem). The later Solomonic texts call them non-Israelite usurpers; that is the winners' claim, not
+          evidence about Zagwe legitimacy in their own day.
+    evidence: [src-tamrat-church-state, src-sergew-hable-sellassie-ancient-medieval, src-wikipedia-zagwe, src-lalibela-land-grants]
+    confidence: medium
+
+  - id: pl-lalibela
+    name: Lalibela (Roha)
+    alt_names: [Roha, "Warwar"]
+    kind: city
+    region: ethiopian-highlands
+    location: {lat: 12.03, lon: 39.04}
+    span: {start: 1100, end: null, approx: true}
+    parent: pl-zagwe
+    geometry_note: >
+      Lasta highlands. Zagwe royal center called Roha, renamed after King Lalibela soon after his death. Inside the
+      Solomonic kingdom after 1270, where it remained a pilgrimage and monastic center.
+    evidence: [src-unesco-whc-lalibela, src-windmuller-luna-met-lalibela]
+    confidence: high
+
+  - id: pl-ethiopia-solomonic
+    name: Christian kingdom of Ethiopia (Solomonic dynasty)
+    alt_names: ["Ethiopia", "Abyssinia", "al-Habasha", "Amhara (in al-Umari)"]
+    kind: polity
+    region: ethiopian-highlands
+    location: {lat: 10.5, lon: 39.2}
+    span: {start: 1270, end: 1974}
+    parent: null
+    geometry_note: >
+      The court was a moving camp, not a fixed capital, until Zara Yaqob settled at Debre Berhan (after 1456). Core in
+      Amhara and Shewa (label point), with Tigray, Lasta, Gojjam and the Eritrean highlands. Expansion under Amda Seyon
+      (1314-1344), Dawit I and Yeshaq made the Muslim sultanates of Ifat, Dawaro, Bali and Hadiya, and the kingdom of
+      Damot, tributary for long stretches; draw a core plus a tributary halo.
+    basemap_match: ["Ethiopia", "Abyssinia", "Ethiopian Empire"]
+    polity_profile:
+      - year: 1350
+        base: AGR
+        flow: EXT
+        membership: [FAITH, KIN]
+        ruled_not_counted: tributary Muslim sultanates (Ifat, Dawaro, Bali, Hadiya); Damot and Gojjam peoples; Beta Israel; enslaved people
+        standing: SOV
+        shape: IMPERIAL
+        rulers: ONE
+        right: [DESCENT, DIVINE]
+        flag: >
+          The dynasty claimed descent from Solomon and the Queen of Sheba (Kebra Nagast). Yekuno Amlak took the throne
+          by defeating the last Zagwe king in battle in 1270, so in practice VICTORY founded what the texts call DESCENT.
+      - year: 1445
+        base: AGR
+        flow: EXT
+        membership: [FAITH, KIN]
+        ruled_not_counted: Muslim tributaries; Beta Israel; Agaw and southern peoples; dissenting Christian monks; enslaved people
+        standing: SOV
+        shape: IMPERIAL
+        rulers: ONE
+        right: [DIVINE, DESCENT]
+        flag: >
+          Zara Yaqob made FAITH membership something the state checked: Christians had to wear written formulas on
+          forehead and arms, and refusers lost property or life. He also required prostration before the king, which
+          the Stephanite monks refused as worship owed to God alone.
+    evidence: [src-tamrat-church-state, src-tamrat-unesco-horn, src-kebra-nagast, src-solomon-gebreyes-practices, src-wikipedia-zara-yaqob]
+    confidence: high
+
+  - id: pl-damot
+    name: Damot
+    alt_names: ["Damot kingdom"]
+    kind: polity
+    region: ethiopian-highlands
+    location: {lat: 9.3, lon: 37.6}
+    span: {start: 1200, end: 1550, approx: true}
+    parent: null
+    geometry_note: >
+      Kingdom south of the Blue Nile (Abbay) bend; exact extent unknown and probably shifting. Raided Shewa in the
+      13th century under a ruler the Christian hagiographies call Motalami. Conquered or made tributary by Amda Seyon
+      (1316/7); afterward a frontier province. Not in the registry; created here as the target of southern evangelization.
+      No polity_profile: no source from Damot survives, and the hagiographies are too late and hostile to profile it.
+    evidence: [src-tamrat-church-state, src-gadla-takla-haymanot, src-wikipedia-amda-seyon]
+    confidence: low
+
+  - id: pl-hadiya
+    name: Hadiya
+    alt_names: ["Hadya", "Hadiyya"]
+    kind: polity
+    region: horn-interior
+    location: {lat: 7.8, lon: 38.0}
+    span: {start: 1250, end: 1600, approx: true}
+    parent: null
+    geometry_note: >
+      Muslim kingdom in the southern highlands, south of the Awash, location approximate. One of the "seven Muslim
+      kingdoms" of the Habasha in al-Umari; tributary to the Christian kingdom for much of the 14th-15th centuries.
+      Not in the registry; created here for the slave-trade and southern Islam threads.
+    polity_profile:
+      - year: 1340
+        base: AGR
+        flow: EXT
+        membership: [FAITH, KIN]
+        ruled_not_counted: enslaved people brought through the kingdom, including eunuchs
+        standing: BOUND
+        shape: CENTRAL
+        rulers: ONE
+        right: [DESCENT]
+        flag: Only outsider evidence (al-Umari's informants; Christian royal texts). Treat as provisional.
+    evidence: [src-al-umari-masalik, src-tamrat-church-state]
+    confidence: low
+
+  - id: pl-ifat
+    name: Ifat (Walasma sultanate)
+    alt_names: ["Awfat", "Wafat", "Yifat", "Walashma sultanate"]
+    kind: polity
+    region: horn-interior
+    location: {lat: 10.0, lon: 39.9}
+    span: {start: 1285, end: 1415, approx: true}
+    parent: null
+    geometry_note: >
+      Eastern Shewa escarpment and the lowlands toward the Awash, reaching to the port of Zeila. Capital Wafat; ruled
+      by the Walasma dynasty, which absorbed the older Makhzumi sultanate of Shewa around 1278-1285. Ended when Sa'd
+      al-Din II was killed near Zeila (al-Maqrizi: 1402/3; Ethiopian-based dating and Cerulli: 1414/15). Its dynasty
+      re-formed as Adal (pl-adal).
+    basemap_match: ["Ifat", "Ifat Sultanate"]
+    polity_profile:
+      - year: 1310
+        base: AGR
+        flow: EXT
+        membership: [FAITH, KIN]
+        ruled_not_counted: pastoral Afar and Somali groups at the edges; enslaved people
+        standing: SOV
+        shape: IMPERIAL
+        rulers: ONE
+        right: [DESCENT, DIVINE]
+        flag: >
+          The Walasma claimed Arab descent (from the Prophet's family via Aqil or al-Hasan). Cerulli, Trimingham and
+          Taddesse Tamrat treat the dynasty as locally rooted, and the claim as a legitimacy strategy common in the Horn.
+      - year: 1340
+        base: AGR
+        flow: EXT
+        membership: [FAITH, KIN]
+        ruled_not_counted: same
+        standing: BOUND
+        shape: IMPERIAL
+        rulers: ONE
+        right: [DESCENT, DIVINE]
+        flag: After Amda Seyon's campaigns (1328-1332), Ifat's sultans ruled as tributaries installed by the Christian king, and revolted repeatedly.
+    evidence: [src-wikipedia-walashma, src-britannica-ifat, src-chekroun-barr-sad-al-din, src-trimingham-islam-ethiopia, src-al-maqrizi-ilmam]
+    confidence: medium
+
+  - id: pl-adal
+    name: Adal (Barr Sa'd al-Din)
+    alt_names: ["Barr Sa'd al-Din", "Adal sultanate"]
+    kind: polity
+    region: horn-interior
+    location: {lat: 9.2, lon: 42.3}
+    span: {start: 1415, end: 1577, approx: true}
+    parent: null
+    geometry_note: >
+      Re-founded by the sons of Sa'd al-Din II after their return from Yemen, with its first capital at Dakkar on the
+      Harar plateau (location approximate; Harar became capital in 1520). "Adal" is also an older regional name that
+      appears under Ifat in the 14th century. Chekroun's term Barr Sa'd al-Din ("land of Sa'd al-Din") is the name the
+      sultanate's own Arabic sources use.
+    basemap_match: ["Adal", "Adal Sultanate"]
+    polity_profile:
+      - year: 1440
+        base: AGR
+        flow: EXT
+        membership: [FAITH, KIN]
+        ruled_not_counted: pastoral Afar and Somali groups; enslaved people
+        standing: SOV
+        shape: CENTRAL
+        rulers: ONE
+        right: [DESCENT, DIVINE]
+        flag: null
+    evidence: [src-chekroun-barr-sad-al-din, src-wikipedia-walashma, src-al-maqrizi-ilmam]
+    confidence: medium
+
+  - id: pl-zeila
+    name: Zeila
+    alt_names: [Zayla, "Saylac"]
+    kind: city
+    region: horn-coast
+    location: {lat: 11.35, lon: 43.47}
+    span: {start: 850, end: null, approx: true}
+    parent: [{id: pl-ifat, start: 1285, end: 1415}, {id: pl-adal, start: 1415, end: null}]
+    geometry_note: >
+      Gulf of Aden port opposite Aden. Governed by local shaykhs in the 13th century, then the main port of the Walasma
+      (Ifat, later Adal). Medieval site about 50 ha per the Fauvelle et al. survey. Parent is a span list: no parent
+      before about 1285 (local shaykhs), Ifat 1285-1415, Adal from 1415.
+    evidence: [src-africanhistoryextra-zeila, src-fauvelle-zeyla-archaeology, src-ibn-battuta-rihla, src-al-umari-masalik]
+    confidence: high
+
+  - id: pl-beta-israel
+    name: Beta Israel
+    alt_names: ["Betä Esra'el", "Falasha (outsider term, now considered offensive)", "Ayhud (in Christian royal texts; label also used for Christian dissidents)"]
+    kind: people
+    region: ethiopian-highlands
+    location: {lat: 13.0, lon: 37.9}
+    span: {start: 1200, end: null}
+    parent: null
+    geometry_note: >
+      Northwestern highlands: Semien, Wegera, Dembiya, Tselemt and Tsegede, around and north of Lake Tana. The span
+      start marks the module window, NOT an origin date: when the community began is itself the central historical
+      debate (community traditions place it in antiquity; Kaplan and Quirin place ethnogenesis in the 14th-16th
+      centuries).
+    evidence: [src-ejhc-beta-israel-traditions, src-kaplan-beta-israel, src-quirin-evolution-ethiopian-jews, src-wikipedia-jews-ethiopia]
+    confidence: medium
+
+  - id: pl-debre-libanos
+    name: Debre Libanos (Debre Asbo)
+    alt_names: ["Däbrä Libanos", "Debre Asbo", "Debre Atsbo"]
+    kind: city
+    region: ethiopian-highlands
+    location: {lat: 9.712, lon: 38.848}
+    span: {start: 1284, end: null, approx: true}
+    parent: pl-ethiopia-solomonic
+    geometry_note: >
+      Monastery in northern Shewa (Selale), founded as Debre Asbo by Tekle Haymanot around 1284 and renamed Debre Libanos
+      in the 15th century. A monastery-town: its abbot (later titled Ichege) became the second figure of the church after
+      the Egyptian abun. Not in the registry.
+    evidence: [src-wikipedia-debre-libanos, src-tamrat-church-state]
+    confidence: high
+
+  - id: pl-hayq
+    name: Hayq Istifanos monastery
+    alt_names: ["Däbrä Hayq Estifanos", "Lake Hayq monastery"]
+    kind: site
+    region: ethiopian-highlands
+    location: {lat: 11.30, lon: 39.68}
+    span: {start: 1248, end: null, approx: true}
+    parent: null
+    geometry_note: >
+      Island monastery in Lake Hayq (Amhara/Wollo), led by Iyasus Mo'a in the mid-13th century; the school where Tekle
+      Haymanot and other founders of southern monasteries studied. Founding date 1248 is the traditional date for Iyasus
+      Mo'a's arrival and is approximate. Not in the registry.
+    evidence: [src-tamrat-church-state, src-wikipedia-tekle-haymanot]
+    confidence: medium
+
+  - id: pl-serae-ewostatewos
+    name: Ewostatewos communities of Serae
+    alt_names: ["House of Ewostatewos", "Debre Maryam (Qohayn)", "Debre Bizen (later daughter house)"]
+    kind: site
+    region: eritrean-highlands
+    location: {lat: 14.89, lon: 38.82}
+    span: {start: 1300, end: null, approx: true}
+    parent: null
+    geometry_note: >
+      Ewostatewos founded his community in Serae (south-central Eritrea) before leaving for Egypt about 1337. His
+      followers built a network of monasteries across the Eritrean highlands and northern Tigray. Label point is the
+      Mendefera area; the specific founding site is approximate. Not in the registry.
+    evidence: [src-wikipedia-ewostatewos, src-tamrat-church-state]
+    confidence: medium
+
+religion_profiles:
+  # ---------------- MAKURIA ----------------
+  - id: rp-makuria-court-1200-1275
+    place: pl-makuria
+    span: {start: 1200, end: 1275, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-coptic, share: dominant,
+         local_form: "Nubian church under the Coptic patriarch of Alexandria; Greek, Coptic and Old Nubian in liturgy and records; royal patronage of cathedrals at Dongola and Faras"}
+    relation: exclusive
+    basis: attested
+    summary: >
+      Makuria's kings were Christian rulers whose bishops were appointed by the Coptic patriarch in Egypt. Church texts
+      and inscriptions used Greek, Coptic and the Nubians' own written language, Old Nubian.
+    detail: >
+      Old Nubian use peaked in the 13th century (Lajtar and Ochala 2020, via Wikipedia); Greek remained the prestige
+      liturgical language and Coptic marked the tie to Egypt. Faras cathedral paintings show kings and bishops under the
+      protection of Christ, Mary and archangels, with Nubian rulers painted with darker skin than biblical figures, a
+      choice that marks them as Nubian. The baqt kept relations with Egypt stable; Muslim merchants and envoys were the
+      only Muslims at Dongola (Godlewski 2013, via Wikipedia).
+    evidence: [src-wikipedia-makuria, src-werner-christentum-nubien, src-faras-cathedral-paintings, src-godlewski-dongola-social-change]
+    confidence: high
+    flag: null
+
+  - id: rp-makuria-court-1276-1365
+    place: pl-makuria
+    span: {start: 1276, end: 1365}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-coptic, share: significant, local_form: "Christian kings of the old royal line (David, Semamun, Kudanbes, Abraam)"}
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: significant, local_form: "Muslim princes installed or recognized by the Mamluk sultan (Sayf al-Din Abdallah Barshambu 1316-17; Kanz al-Dawla from 1317)"}
+    relation: contested
+    summary: >
+      After a Mamluk army sacked Dongola in 1276, Egypt's sultans installed and removed Makurian kings, some Christian
+      and some Muslim. In 1317 the first Muslim king turned the royal throne hall into a mosque and was killed within months.
+    detail: >
+      Sequence (Seignobos 2018, 2020; Werner 2013, via Wikipedia): King David raided the Red Sea port of Aidhab (1272);
+      Baybars' army set out on 20 January 1276 and defeated him at Dongola in spring 1276; the king of al-Abwab handed
+      David to the Mamluks; the installed king swore fealty, paid tribute beyond the baqt and the jizya was imposed.
+      Further Mamluk invasions in the late 1280s left destruction visible in Dongola's archaeology. In 1316 al-Nasir
+      Muhammad installed Barshambu, a Muslim nephew of David; his throne hall became a mosque (stela dated 29 May 1317);
+      he was killed the same year by Kanz al-Dawla, another Muslim nephew of David and emir of the Banu Kanz of Aswan, who
+      ruled with intermittent Mamluk recognition. Contested, not plural: the throne itself was fought over by armies and
+      assassins along religious and dynastic lines. Godlewski notes some princes converted before coronation to win
+      Egypt's favor; conversion here was a political strategy, not evidence about the population.
+    evidence: [src-seignobos-nubia-mamluks, src-werner-christentum-nubien, src-wikipedia-makuria, src-dongola-mosque-stela, src-al-nuwayri-nihaya, src-godlewski-dongola-social-change]
+    confidence: high
+    flag: null
+
+  - id: rp-makuria-court-1365-1450
+    place: pl-makuria
+    span: {start: 1365, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-coptic, share: dominant, local_form: "Kings of Dotawo ruling from Daw in Lower Nubia; bishops still consecrated by the Coptic patriarch (Timotheos, 1371/2)"}
+    relation: exclusive
+    basis: inferred
+    summary: >
+      After civil war in 1365 the Makurian court left Dongola and moved north to Daw, where Christian kings of
+      "Dotawo" kept ruling. Old Nubian documents show these kings still issuing land deeds as late as 1463.
+    detail: >
+      Evidence is thin for 1365-1450 itself: the consecration scrolls of Bishop Timotheos (1371/2), found under his body
+      at Qasr Ibrim, show the church still tied to Alexandria; the 1463 Old Nubian land sale from Qasr Ibrim names King
+      Ioel (Joel) as king of Dotawo with a queen mother, an eparch of Nobadia and a bishop of Ibrim, i.e. the full
+      Christian court hierarchy, just after this window. Simmons argues Dotawo lasted into the early 17th century;
+      Godlewski treats the 15th century as the end of literate Christian court culture. "Exclusive" is inferred from
+      Christian documents; Muslim princes of the Kanz line may also have ruled parts of the kingdom in this period.
+    evidence: [src-timotheos-scrolls, src-qasr-ibrim-old-nubian-documents, src-dbmnt, src-simmons-dotawo-redating, src-wikipedia-makuria]
+    confidence: low
+    flag: Gap between 1372 and 1463 has almost no court evidence; the profile bridges two documents ninety years apart.
+
+  - id: rp-makuria-rural-1200-1350
+    place: pl-makuria
+    span: {start: 1200, end: 1350, approx: true}
+    stratum: rural
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-coptic, share: dominant, local_form: "village churches and Old Nubian-language Christian practice in Lower Nubia and the Batn el-Hajar"}
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: minority, local_form: "Arab-descended settlers on the Egyptian frontier who had intermarried and spoke Nubian"}
+    relation: coexisting
+    summary: >
+      Farming villages along the Nile in northern Nubia built and used their own churches. Near the Egyptian border,
+      Muslim families of Arab descent lived alongside them and spoke Nubian.
+    detail: >
+      Rural evidence is unevenly spread. Lower Nubia (the stretch flooded by Lake Nasser) was excavated village by
+      village in the 1960s UNESCO salvage campaign, so its village churches and houses are known (Adams); the Dongola
+      reach and the region south of it are far less excavated, and their villages are mostly known from surface survey.
+      What villagers believed beyond building churches (healing, rain, burial customs) is not documented in texts. Arab
+      settlers in Lower Nubia from the 9th century intermarried and shifted to speaking Nubian (Seignobos 2010, via
+      Wikipedia).
+    evidence: [src-adams-nubia-corridor, src-wikipedia-makuria, src-seignobos-nubia-mamluks]
+    confidence: medium
+    flag: Southern Makurian villages are close to undocumented; this profile is weighted toward Lower Nubia.
+
+  - id: rp-makuria-rural-1350-1450
+    place: pl-makuria
+    span: {start: 1350, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-coptic, share: significant, local_form: "village Christianity continuing without regular bishops in many districts"}
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: significant, local_form: "Islam of Bedouin newcomers and of families formed by intermarriage; early holy men (fuqara) remembered in Sudanese tradition"}
+    relation: coexisting
+    basis: inferred
+    summary: >
+      Plague, war and the arrival of Arab herding groups changed the Nubian countryside after 1350. Christian villages
+      continued, while Muslim herders and mixed families settled nearby, and Islam spread slowly through marriage.
+    detail: >
+      Ibn Khaldun (writing c. 1377-1382, an outsider in Tunis and Cairo) says Juhayna Bedouin overran Nubia and that
+      Nubian royal succession through a sister's son let Arab husbands' sons inherit; modern scholars (Gerhards 2025,
+      via Wikipedia) think he exaggerated the Juhayna role. Two groups, the Banu Ja'd and Banu Ikrima, are reported as
+      settling in Makuria after a Bedouin revolt crushed in Upper Egypt in 1353. Godlewski finds a new house type at
+      Dongola from c. 1400, built by an incoming population, but no evidence that families had yet reorganized around
+      Islamic norms. Archaeology shows sharp decline of Christian Nubia from the mid-14th century, probably including
+      plague (no text says plague reached Nubia). Whether rural Nubians in 1400 were mostly Christian, mostly Muslim, or
+      combined both is not answerable from current evidence; "coexisting" is the least-assumption reading.
+    evidence: [src-ibn-khaldun-ibar, src-wikipedia-makuria, src-godlewski-dongola-social-change, src-yusuf-fadl-hasan-arabs-sudan]
+    confidence: low
+    flag: Arabic narratives (Ibn Khaldun) describe conquest; Nubian archaeology suggests slow overlap. Students should weigh both.
+
+  - id: rp-makuria-community-bedouin-1350-1450
+    place: pl-makuria
+    span: {start: 1350, end: 1450, approx: true}
+    stratum: community
+    community_name: Arab pastoral groups (Banu Ja'd, Banu Ikrima, Juhayna lineages) settling in Nubia
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: dominant, local_form: "Bedouin Islam, carried by genealogy and lineage leaders rather than mosques or schools"}
+    relation: exclusive
+    basis: inferred
+    summary: >
+      Arab herding groups moving south from Egypt brought Islam into Nubia as part of their family and lineage identity.
+      They married into Nubian families, and many historians think these marriages spread Islam more than any army did.
+    detail: >
+      These groups are known mostly from Mamluk-era writers and from much later Sudanese genealogies that trace descent to
+      Arab ancestors (Juhayna, Ja'aliyyin). Genealogies are themselves sources with purposes: in the Funj and later
+      periods, Arab descent carried prestige. The Wikipedia article on Islamization describes the groups as "nominally
+      Muslim" on arrival; that judgment comes from outsider sources and should be treated with care.
+    evidence: [src-ibn-khaldun-ibar, src-yusuf-fadl-hasan-arabs-sudan, src-wikipedia-makuria]
+    confidence: low
+    flag: null
+
+  # ---------------- DONGOLA ----------------
+  - id: rp-dongola-urban-1200-1316
+    place: pl-dongola
+    span: {start: 1200, end: 1316, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-coptic, share: dominant, local_form: "cathedral and churches of Dongola, the monastery of St Anthony (Kom H), Old Nubian graffiti by lay people and clergy"}
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: minority, local_form: "visiting Muslim merchants and diplomats; no mosque inside the city before 1317"}
+    relation: coexisting
+    summary: >
+      Dongola was a Christian royal city with large churches and a monastery. Muslim merchants and envoys visited, but
+      the city had no mosque until 1317.
+    detail: >
+      In the 10th century al-Aswani reports that he and about 60 other Muslims had to pray outside Dongola even though
+      the baqt promised a mosque (Holt 2011, via Wikipedia). Godlewski (2018) lists the Great Church of Jesus, the
+      Cathedral of the Holy Trinity and the monastery of Anthony as still functioning in the 14th century.
+    evidence: [src-godlewski-dongola-social-change, src-wikipedia-makuria]
+    confidence: high
+    flag: null
+
+  - id: rp-dongola-urban-1317-1450
+    place: pl-dongola
+    span: {start: 1317, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-coptic, share: dominant, local_form: "functioning churches and monastery; new churches built in the mid-14th century; Old Nubian in daily writing"}
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: minority, local_form: "mosque in the converted throne hall, serving Mamluk soldiers, merchants and tax agents"}
+    relation: coexisting
+    summary: >
+      Even with a mosque in the old throne hall, Dongola stayed a mostly Christian city through the 1400s. Its churches
+      kept working and new ones were built.
+    detail: >
+      Godlewski (2018) argues the 1317 mosque marks Makuria's subjugation and lost royal prestige, not local conversion:
+      the mosque mainly served newcomers from the north. The last dated inscription in the Dongola monastery is 1498. He
+      argues the city cannot be called Islamized before the 16th century; Old Nubian writing stops in the 15th century
+      and Arabic writing does not replace it, so a long period of non-literacy hides the change.
+    evidence: [src-godlewski-dongola-social-change, src-dongola-mosque-stela]
+    confidence: high
+    flag: The mosque was imposed from above by a Mamluk-backed ruler; it is evidence of power, not of what townspeople practiced.
+
+  # ---------------- QASR IBRIM ----------------
+  - id: rp-qasr-ibrim-urban-1200-1450
+    place: pl-qasr-ibrim
+    span: {start: 1200, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-coptic, share: dominant, local_form: "cathedral town of the bishop of Ibrim; Old Nubian legal documents opening with Christian formulas"}
+    relation: exclusive
+    basis: inferred
+    summary: >
+      Qasr Ibrim was a Christian cathedral town whose people wrote letters, land sales and church records in Old Nubian.
+      Its last known bishop was buried there with his letters of appointment from the Coptic patriarch in the 1370s.
+    detail: >
+      Ruffini's edition (2014) publishes mainly 12th-century land sales, letters and a royal decree; the DBMNT records a
+      1463 land sale naming King Ioel, the eparch of Nobadia and the bishop of Ibrim. Muslim traders are likely to have
+      passed through this frontier town but are not documented as residents in the sources seen.
+    evidence: [src-ruffini-bishop-eparch-king, src-qasr-ibrim-old-nubian-documents, src-timotheos-scrolls, src-dbmnt]
+    confidence: medium
+    flag: null
+
+  # ---------------- ALODIA ----------------
+  - id: rp-alodia-court-1200-1300
+    place: pl-alodia
+    span: {start: 1200, end: 1300, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-coptic, share: dominant, local_form: "royal Christianity at Soba under bishops from Alexandria; churches at Soba East"}
+    relation: exclusive
+    basis: inferred
+    summary: >
+      Alodia's court at Soba had been Christian since the 580s and kept its own churches and bishops. By 1300 the
+      kingdom was shrinking and its capital was in decline.
+    detail: >
+      The court converted c. 580; its bishops answered to the Coptic patriarch. Excavations at Soba (1950s, 1980s-90s,
+      Welsby) show churches and a palace but a decline from the 12th century. The c. 1200 Arabic church survey attributed
+      to Abu al-Makarim (formerly to Abu Salih) describes Alodian churches; that passage was not seen in this research.
+    evidence: [src-wikipedia-alodia, src-welsby-medieval-kingdoms-nubia, src-zarroug-alwa, src-abu-al-makarim-churches]
+    confidence: medium
+    flag: null
+
+  - id: rp-alodia-court-1300-1450
+    place: pl-alodia
+    span: {start: 1300, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-coptic, share: unknown, local_form: null}
+    relation: undocumented
+    summary: >
+      Almost nothing is written about Alodia's rulers after 1300. Historians do not know who ruled at Soba or what
+      faith the court followed in the 1400s.
+    detail: >
+      No pottery or glass later than the 13th century has been found at Soba, and the kingdom may have broken into small
+      states. Sudanese tradition remembers a "Christian" Soba destroyed by Abdallah Jamma's Arabs and the Funj
+      (1474-1509 in the Shendi documents). The missing evidence: no Alodian documents, inscriptions or court records
+      survive for this period, and Arabic writers say little. A teaching point: a kingdom can fall out of the written
+      record long before it ends.
+    evidence: [src-wikipedia-alodia, src-zarroug-alwa, src-funj-chronicle]
+    confidence: medium
+    flag: null
+
+  - id: rp-alodia-urban-1200-1300
+    place: pl-alodia
+    span: {start: 1200, end: 1300, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-coptic, share: dominant, local_form: "Soba's churches and monasteries"}
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: minority, local_form: "Muslim merchant quarter at Soba (attested in the 10th century)"}
+    relation: coexisting
+    basis: inferred
+    summary: >
+      Soba was a large brick-built Christian capital with many churches. Earlier writers say Muslim traders had their
+      own quarter there.
+    detail: >
+      The Muslim quarter is reported by Ibn Selim al-Aswani in the 10th century; its survival into the 13th century is
+      an assumption. Soba covered about 2.75 sq km of brick rubble.
+    evidence: [src-wikipedia-alodia, src-welsby-medieval-kingdoms-nubia]
+    confidence: low
+    flag: Carries a 10th-century observation forward three centuries.
+
+  - id: rp-alodia-rural-1200-1450
+    place: pl-alodia
+    span: {start: 1200, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >
+      We do not know what most farmers and herders in Alodia believed. The sources come almost entirely from the capital.
+    detail: >
+      Conversion of the countryside was slow and its extent is unknown (Wikipedia, Alodia, summarizing Welsby). Only Soba
+      has been extensively excavated. Missing: excavated villages in the Gezira and Butana, burial studies outside Soba,
+      and any text from rural Alodia. Gerhards (2021) collects later travelers' reports of church ruins and memories
+      of Soba in the Gezira, which show a Christian landscape but not who used it or how.
+    evidence: [src-wikipedia-alodia, src-gerhards-gezira, src-zarroug-alwa]
+    confidence: high
+    flag: null
+
+  # ---------------- ZAGWE ----------------
+  - id: rp-zagwe-court-1200-1270
+    place: pl-zagwe
+    span: {start: 1200, end: 1270, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-ethiopian, share: dominant,
+         local_form: "Ethiopian Orthodox (Tewahedo) Christianity under an Egyptian metropolitan (abun); saint-kings; church-building and land grants; Ge'ez liturgy"}
+    relation: exclusive
+    basis: attested
+    summary: >
+      The Zagwe kings, from the Agaw people of Lasta, were devout Christian rulers who carved churches from rock and gave
+      land to churches. They needed a bishop sent from Egypt to anoint their clergy.
+    detail: >
+      The Ethiopian church depended on the Coptic patriarch of Alexandria for its single metropolitan bishop (abun);
+      a Zagwe king seems to have asked for an abun who would endorse the dynasty. Lalibela's land grants (1204 and
+      1225) survive. An embassy from the patriarch visited c. 1210. Zagwe kings are venerated as saints (Lalibela,
+      Yemrehana Krestos, Na'akueto La'ab). Agaw identity of the dynasty does not mean the court followed Agaw religion:
+      the evidence is consistently Christian.
+    evidence: [src-tamrat-church-state, src-wikipedia-zagwe, src-lalibela-land-grants, src-gadla-lalibela]
+    confidence: high
+    flag: null
+
+  - id: rp-zagwe-rural-1200-1270
+    place: pl-zagwe
+    span: {start: 1200, end: 1270, approx: true}
+    stratum: rural
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-ethiopian, share: unknown, local_form: null}
+      - {family: local, tradition: indigenous, branch: other, share: unknown, local_form: "Agaw and other highland practices; later hagiographies mention sky-god worship, a fire cult, serpent veneration and spirit specialists in the 13th century"}
+    relation: undocumented
+    summary: >
+      The written record shows kings and churches, not ordinary farmers. How far Christianity reached into Agaw and other
+      villages in the 1200s is unknown.
+    detail: >
+      Land grants show peasants owing dues to churches, which is evidence of church landholding, not of belief. Solomon
+      Gebreyes Beyene (2022) notes that 13th-century hagiographies describe sky-god worship, fire and serpent cults and
+      spirit practices, but all the sources are Christian and none come from practitioners. Missing: any text or
+      archaeology of village religion in Lasta, Wag or Tigray in this century.
+    evidence: [src-solomon-gebreyes-practices, src-lalibela-land-grants, src-crummey-land-society]
+    confidence: medium
+    flag: null
+
+  - id: rp-zagwe-community-muslims-1200-1270
+    place: pl-zagwe
+    span: {start: 1200, end: 1270, approx: true}
+    stratum: community
+    community_name: Muslim communities of eastern Tigray
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: dominant, local_form: "settlements with Arabic funerary inscriptions in eastern Tigray (e.g. the Kwiha / Bilet area)"}
+    relation: exclusive
+    basis: inferred
+    summary: >
+      Small Muslim communities lived in eastern Tigray inside the Christian kingdom, leaving Arabic gravestones. They
+      seem to have declined in the 1100s and 1200s.
+    detail: >
+      Wikipedia (Zagwe dynasty) reports evidence of Muslim settlements in Tigray, possibly under Fatimid-era trade
+      patronage, declining from the 12th century. The specific site names in local_form are from memory of the
+      literature (Kwiha / Bilet; Schneider's and Insoll's work on Arabic stelae) and were not re-checked; needs library.
+    evidence: [src-wikipedia-zagwe, src-tamrat-church-state]
+    confidence: low
+    flag: Site names not verified in this research.
+
+  # ---------------- LALIBELA ----------------
+  - id: rp-lalibela-urban-1200-1270
+    place: pl-lalibela
+    span: {start: 1200, end: 1270, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-ethiopian, share: dominant, local_form: "royal-clerical center of Roha; rock-hewn churches arranged as a New Jerusalem, with a stream named Jordan"}
+    relation: exclusive
+    basis: inferred
+    summary: >
+      Roha, renamed Lalibela after its king, was a royal center where churches were cut down into the rock. Its layout and
+      place names copied the holy places of Jerusalem.
+    detail: >
+      See ex-lalibela-churches for the dating debate. The town's population beyond clergy and court is not described in
+      surviving sources.
+    evidence: [src-unesco-whc-lalibela, src-windmuller-luna-met-lalibela, src-gnisci-review-lalibela]
+    confidence: high
+    flag: null
+
+  - id: rp-lalibela-urban-1270-1450
+    place: pl-lalibela
+    span: {start: 1270, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-ethiopian, share: dominant, local_form: "pilgrimage and monastic center venerating King Lalibela as a saint; site of royal and literary activity"}
+    relation: exclusive
+    basis: inferred
+    summary: >
+      After the Zagwe kings fell in 1270, Lalibela stayed a holy place where pilgrims came and monks wrote and copied books.
+      The new Solomonic kings kept it honored even though they had replaced its founders.
+    detail: >
+      The Bosc-Tiessé and Derat volume (2019) studies Lalibela as a pilgrimage site, political arena and center of
+      literary and artistic production over the long term (per Gnisci's 2025 review). Yekuno Amlak is credited with
+      Gennete Maryam church nearby.
+    evidence: [src-gnisci-review-lalibela, src-bosc-tiesse-derat-lalibela, src-wikipedia-yekuno-amlak]
+    confidence: medium
+    flag: null
+
+  # ---------------- SOLOMONIC ETHIOPIA ----------------
+  - id: rp-solomonic-court-1270-1433
+    place: pl-ethiopia-solomonic
+    span: {start: 1270, end: 1433}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-ethiopian, share: dominant,
+         local_form: "Ethiopian Orthodox Christianity; royal ideology of descent from Solomon and Sheba and of Ethiopia as the new Israel (Kebra Nagast); Egyptian abun; court clergy"}
+    relation: exclusive
+    basis: attested
+    summary: >
+      The new Solomonic kings were Christian and claimed to descend from King Solomon and the Queen of Sheba. They fought
+      with monks over royal marriages and church independence, but always as Christians.
+    detail: >
+      Kings repeatedly asked Mamluk sultans to allow a new abun to travel from Alexandria (Yekuno Amlak to Baybars,
+      1273). Amda Seyon clashed with monks led by Basalota Mika'el and Anorewos who condemned his marriages; Dawit I and
+      Zara Yaqob became patrons of new Marian devotion. Muslim officials, merchants and envoys moved through the court
+      but are recorded as a distinct group (see the urban profile). Confidence medium until Taddesse Tamrat is read: the
+      checked support is Wikipedia.
+    evidence: [src-tamrat-church-state, src-wikipedia-yekuno-amlak, src-wikipedia-amda-seyon, src-kebra-nagast]
+    confidence: medium
+    flag: >
+      The Solomonic descent claim (Kebra Nagast) was a legitimacy claim made after Yekuno Amlak won power in battle;
+      the profile records it as the court's self-description.
+
+  - id: rp-solomonic-court-1434-1468
+    place: pl-ethiopia-solomonic
+    span: {start: 1434, end: 1468}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-ethiopian, share: dominant, local_form: "Zara Yaqob's reformed state church: Marian feasts, Sabbath compromise of 1450, mandatory written professions of faith on body"}
+      - {family: local, tradition: indigenous, branch: other, share: minority, local_form: "cults of the spirits Dask and Dino, diviners and star-readers consulted by courtiers (as described in Mashafa Berhan and Tomara Tesbe'et)"}
+    relation: contested
+    summary: >
+      King Zara Yaqob accused officials and even his own children of honoring the spirits Dask and Dino, and had many
+      punished or killed. The accusations also served his politics, so historians cannot tell how many courtiers
+      really honored these spirits.
+    detail: >
+      Solomon Gebreyes Beyene (2022) reads the king's own texts (Mashafa Berhan, Tomara Tesbe'et) and argues that the
+      campaign also served political purges and built a royal cult that required prostration before the king. Dask is
+      linked to Shewa, Dino to Angot. All evidence is Christian and royal; no practitioner's account survives, so the
+      names and practices are as the king's writers described them.
+    evidence: [src-solomon-gebreyes-practices, src-mashafa-berhan, src-chronicle-zara-yaqob, src-wikipedia-zara-yaqob]
+    confidence: medium
+    flag: The accusations served the king's politics; how many courtiers actually honored these spirits cannot be known.
+
+  - id: rp-solomonic-urban-1270-1450
+    place: pl-ethiopia-solomonic
+    span: {start: 1270, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-ethiopian, share: significant, local_form: "royal camp, churches and large monasteries acting as towns (Debre Libanos, Hayq, Debre Damo)"}
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: significant, local_form: "Muslim merchants running caravan and market trade between the highlands and Zeila, some serving the king as agents"}
+    relation: coexisting
+    summary: >
+      The Christian kingdom had few towns; its biggest settlements were the moving royal camp and large monasteries.
+      Much long-distance trade was run by Muslim merchants who lived and worked inside the Christian kingdom.
+    detail: >
+      Taddesse Tamrat describes Muslim traders as essential to royal trade and as a channel to the coast; Hussein Ahmed
+      argues Ethiopian historiography long treated Muslims as outsiders even when they were long-settled subjects. The
+      shares are rough: no census exists. Coexistence broke down in war years (1320s-1330s, 1400s-1440s), when
+      merchants could be seized as enemies.
+    evidence: [src-tamrat-church-state, src-hussein-ahmed-historiography-islam, src-al-umari-masalik]
+    confidence: medium
+    flag: null
+
+  - id: rp-solomonic-rural-1270-1433
+    place: pl-ethiopia-solomonic
+    span: {start: 1270, end: 1433, approx: true}
+    stratum: rural
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-ethiopian, share: dominant, local_form: "parish churches, fasting, saints' days, monastic schools in the Christian core (Tigray, Amhara, Lasta)"}
+      - {family: local, tradition: indigenous, branch: other, share: significant, local_form: "rain-making and spirit specialists, offerings at mountains and trees, the spirits later named Dask and Dino and Segwe'e"}
+    relation: plural
+    basis: projected
+    summary: >
+      Most farmers in the Christian heartland probably went to church and kept Christian fasts. Later royal texts complain
+      that many also turned to local religious specialists and spirit offerings for rain, harvest and illness.
+    detail: >
+      The evidence is backward-looking: Zara Yaqob's 1430s-60s texts describe practices that were plainly already old,
+      and earlier hagiographies describe saints confronting them. "Plural" is chosen over "syncretic" because the sources
+      describe separate specialists and rites used alongside Christian ones, not a fused rite; that distinction rests on
+      hostile sources and is debatable. Taddesse Tamrat and the UNESCO introduction (Niane) note that Ethiopian
+      Christianity absorbed older practices in Christian form.
+    evidence: [src-solomon-gebreyes-practices, src-tamrat-church-state, src-unesco-gha-vol4]
+    confidence: low
+    flag: Rural practice before 1434 is inferred from later royal complaints and from hagiographies written long after the saints lived.
+
+  - id: rp-solomonic-rural-1434-1468
+    place: pl-ethiopia-solomonic
+    span: {start: 1434, end: 1468}
+    stratum: rural
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-ethiopian, share: dominant, local_form: "royally enforced Christianity: written formulas on forehead and hands, church attendance, Marian feasts"}
+      - {family: local, tradition: indigenous, branch: other, share: significant, local_form: "cults of Dask, Dino and other spirits; animal offerings on mountains; diviners"}
+    relation: contested
+    summary: >
+      Zara Yaqob used spies and punishments to force Christians to give up older spirit practices. Those who refused could
+      lose their houses, be beaten, or be killed.
+    detail: >
+      Mashafa Berhan describes offerings of cattle, sheep, goats, birds and dogs and says the mountains reeked of them
+      (paraphrase via Solomon Gebreyes Beyene 2022). The decree that Christians wear written formulas, including one
+      renouncing Dask, is reported in the king's own texts and his chronicle. Persecution itself is documented; how
+      widely the practices survived it is not.
+    evidence: [src-mashafa-berhan, src-solomon-gebreyes-practices, src-chronicle-zara-yaqob, src-tsehai-dacb-zara-yaqob]
+    confidence: medium
+    flag: null
+
+  - id: rp-solomonic-community-stephanites-1434-1468
+    place: pl-ethiopia-solomonic
+    span: {start: 1434, end: 1468}
+    stratum: community
+    community_name: Stephanite monks (Däqiqä Estifanos, disciples of Abba Estifanos of Gwendagwende)
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-ethiopian, share: dominant, local_form: "Stephanite reform: worship to God alone, refusal to prostrate before the king or to venerate Mary and the cross beyond what they read in scripture"}
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-ethiopian, share: minority, local_form: "royal reform Christianity imposed on captured monks (forced prostration, recantation)"}
+    relation: contested
+    summary: >
+      A group of Ethiopian monks led by Abba Estifanos refused to bow to the king or to honor Mary and the cross in
+      the way he demanded. Zara Yaqob had them chained, tortured, exiled or killed.
+    detail: >
+      Both sides were Ethiopian Orthodox Christians; this is a fight inside one tradition over royal authority and
+      devotion. Getatchew Haile edited and translated the Ge'ez Acts of Estifanos (2006); Taddesse Tamrat's first
+      international article (1966) was on this movement. Opponents called the Stephanites "ayhud" (Jews), a polemical
+      label also applied to other dissidents, which matters for reading the Beta Israel evidence. The movement survived
+      and later rejoined the wider monastic world (Gunda Gunde).
+    evidence: [src-gadla-estifanos, src-wikipedia-stephanites, src-tamrat-church-state, src-solomon-gebreyes-practices]
+    confidence: high
+    flag: >
+      Taxonomy pressure: relation tests compare traditions, so an intra-Christian persecution is entered as the same
+      tradition listed twice with different local_form.
+
+  - id: rp-solomonic-community-agaw-1270-1450
+    place: pl-ethiopia-solomonic
+    span: {start: 1270, end: 1450, approx: true}
+    stratum: community
+    community_name: Agaw communities of Agaw Meder, Lasta and the Lake Tana region
+    traditions:
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-ethiopian, share: unknown, local_form: null}
+      - {family: local, tradition: indigenous, branch: other, share: unknown, local_form: "Agaw practices named only by hostile outsiders; the later Qemant religion (sky god Yidära or Mizgäna, sacred groves, priestly orders) is documented only from the 19th-20th centuries"}
+    relation: undocumented
+    summary: >
+      Agaw-speaking communities lived inside and on the edges of the Christian kingdom, and Zara Yaqob sent campaigns to
+      convert them. What they themselves practiced in these centuries was not written down.
+    detail: >
+      Tsehai Berhane Selassie (DACB) reports Zara Yaqob's efforts to convert Damot and Agaw Meder. The Qemant, an Agaw
+      people near Gondar, kept a distinct religion with a high god (Yidära / Mizgäna), sacred groves (degegna) and
+      priestly orders, studied by Gamst in the 1960s and described by a missionary in the 1830s. It is tempting to read
+      that back into 1300; the evidence does not allow it. Missing: any medieval account from Agaw communities.
+    evidence: [src-tsehai-dacb-zara-yaqob, src-gamst-qemant, src-wikipedia-qemant]
+    confidence: high
+    flag: Do not project 20th-century Qemant ethnography onto 1200-1450 as fact.
+
+  # ---------------- DAMOT ----------------
+  - id: rp-damot-court-1250-1316
+    place: pl-damot
+    span: {start: 1250, end: 1316, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: local, tradition: indigenous, branch: other, share: dominant, local_form: "royal religion of Damot, described only in Christian hagiography (the ruler Motalami as opponent of Tekle Haymanot); specifics unknown"}
+    relation: exclusive
+    basis: projected
+    summary: >
+      Damot was a powerful kingdom south of the Blue Nile whose rulers kept their own religion rather than
+      Christianity or Islam. Everything known about it comes from its Christian enemies, such as later stories of the
+      monk Tekle Haymanot confronting its king, Motalami.
+    detail: >
+      The hagiographies of Tekle Haymanot date from the 15th-16th centuries (Waldebba version first quarter of the 15th
+      century; Debre Libanos version early 16th, per Huntingford via Wikipedia), long after the events, and their
+      conversion stories serve Debre Libanos. Amda Seyon campaigned against Damot in 1316/7 and exiled many of its people.
+    evidence: [src-gadla-takla-haymanot, src-tamrat-church-state, src-wikipedia-amda-seyon]
+    confidence: low
+    flag: Everything known comes from enemies writing later; no Damot source exists.
+
+  - id: rp-damot-rural-1317-1450
+    place: pl-damot
+    span: {start: 1317, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions:
+      - {family: local, tradition: indigenous, branch: other, share: dominant, local_form: "practices of Damot's farming peoples, unnamed in surviving sources"}
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-ethiopian, share: minority, local_form: "frontier churches, military colonists and monk-founded houses after conquest"}
+    relation: contested
+    summary: >
+      After the Christian kings conquered Damot, they planted churches and soldiers there and pushed conversion. Royal
+      texts still complained of non-Christian practice there in the 1400s.
+    detail: >
+      Taddesse Tamrat describes evangelization of the south as following conquest, with monks and royal garrisons
+      working together; he does not hide its coercive side. Zara Yaqob's texts mention human sacrifice in Damot, a charge
+      from a hostile source that historians cannot check.
+    evidence: [src-tamrat-church-state, src-solomon-gebreyes-practices, src-tsehai-dacb-zara-yaqob]
+    confidence: low
+    flag: null
+
+  # ---------------- BETA ISRAEL ----------------
+  - id: rp-beta-israel-rural-1270-1413
+    place: pl-beta-israel
+    span: {start: 1270, end: 1413, approx: true}
+    stratum: rural
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: judaism, branch: beta-israel, share: dominant, local_form: "Torah-centered religion of the Ayhud of Semien, Wegera and Dembiya; Ge'ez Orit (Octateuch); later Beta Israel practice of purity, Sabbath and sacrifice"}
+    relation: exclusive
+    basis: projected
+    summary: >
+      Christian royal records from the 1300s describe "Ayhud" (Jews) in the northwestern mountains who fought the king's
+      soldiers. Beta Israel tradition remembers these communities as their ancestors, descended from ancient Israel.
+    detail: >
+      In 1329, after reports that Jews were burning churches in Semien, Wegera, Tselemt and Tsegede, Amda Seyon
+      ordered Tsaga Christos, governor of Begemder, to lead forces there (Wikipedia, Beta Israel, summarizing the
+      chronicle). Whether these 14th-century "Ayhud" were the same community as later Beta Israel is a scholarly
+      question: Kaplan notes the label was also hurled at Christian dissidents (citation-only; the Wikipedia page
+      says only that the chronicle calls some people 'like Jews', kama ayhud). Beta Israel tradition, in its most
+      common version, says the ancestors came from Israel via Egypt and the Nile (often linked to the tribe of Dan);
+      another version connects them with Menelik's companions from Jerusalem. "Exclusive" describes how the community
+      is recorded; their daily practice in this century is not described by any insider source.
+    evidence: [src-wikipedia-beta-israel, src-kaplan-beta-israel, src-ejhc-beta-israel-traditions, src-chronicle-amda-seyon]
+    confidence: low
+    flag: Identification of 14th-century "Ayhud" with Beta Israel is debated; see contested questions.
+
+  - id: rp-beta-israel-rural-1414-1468
+    place: pl-beta-israel
+    span: {start: 1414, end: 1468, approx: true}
+    stratum: rural
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: judaism, branch: beta-israel, share: dominant, local_form: "Beta Israel religion with monastic leadership attributed to Abba Sabra and Saga Amlak; Ge'ez Orit; Sabbath laws (Te'ezaza Sanbat)"}
+      - {family: abrahamic, tradition: christianity, branch: miaphysite-ethiopian, share: minority, local_form: "baptism required to keep inherited land under Yeshaq's decree"}
+    relation: contested
+    basis: projected
+    summary: >
+      King Yeshaq defeated a Beta Israel revolt and ruled that only baptized people could inherit their fathers' land.
+      Many lost land and status, and wars continued under Zara Yaqob, who took the title "Exterminator of the Jews."
+    detail: >
+      The land decree and the battle at Kossoge are reported in Ethiopian accounts and oral tradition (Kaplan,
+      Encyclopaedia Aethiopica, via Wikipedia). One proposed origin for the outsider name "Falasha" (landless,
+      wanderer) ties it to this decree; the earliest firm attestation of the name is early 16th century. Beta Israel
+      tradition credits Abba Sabra and his disciple Saga Amlak (by some accounts a son of Zara Yaqob) with preserving
+      and organizing religious life after the defeats. Shelemay and Kaplan read the monastic leadership as adapted from
+      Ethiopian Christian monasticism in this very century; the community's own tradition presents it as preserving
+      ancient Israelite faith. Elijah of Ferrara met an Ethiopian Jew in Jerusalem in 1435.
+    evidence: [src-wikipedia-jews-ethiopia, src-kaplan-beta-israel, src-shelemay-music-ritual, src-ejhc-beta-israel-traditions, src-te-ezaza-sanbat, src-elijah-ferrara-letter]
+    confidence: medium
+    flag: Saga Amlak's parentage is reported from memory of the literature, not verified here.
+
+  # ---------------- IFAT ----------------
+  - id: rp-ifat-court-1285-1415
+    place: pl-ifat
+    span: {start: 1285, end: 1415, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: dominant, local_form: "Walasma sultans claiming descent from the Prophet's family; jurists linked to Zeila, Cairo and Yemen"}
+    relation: exclusive
+    basis: attested
+    summary: >
+      Ifat's Walasma sultans were Muslim rulers who sent scholars as envoys to Cairo and traded through Zeila. They fought
+      the Christian kings for independence and were made tributaries after 1332.
+    detail: >
+      Al-Umari's informant was the jurist Abdallah al-Zayla'i, who led an Ifat embassy to Cairo to seek Mamluk pressure
+      on the Ethiopian king. Zayla'i scholars in Egypt were Hanafi (Uthman al-Zayla'i, Abdallah al-Zayla'i); Hadiya's
+      people were Hanafi per al-Umari; Ifat's own school is not stated in sources seen, hence sunni-unspecified.
+      Arabic was a lingua franca alongside Cushitic and Ethio-Semitic languages.
+    evidence: [src-al-umari-masalik, src-africanhistoryextra-zeila, src-wikipedia-walashma, src-al-maqrizi-ilmam]
+    confidence: medium
+    flag: null
+
+  - id: rp-ifat-urban-1285-1415
+    place: pl-ifat
+    span: {start: 1285, end: 1415, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: dominant, local_form: "market towns of the eastern escarpment with mosques and Muslim merchant families"}
+    relation: exclusive
+    basis: inferred
+    summary: >
+      Ifat's towns were Muslim trading centers linking the highlands to the coast. Al-Umari, writing in Cairo, lists
+      several of them from what Ifat's scholars told him.
+    detail: >
+      Al-Umari names cities including Shewa and Adal and gives large army figures, which Pankhurst thinks exaggerated.
+      Archaeological work on Ifat's towns exists (Chekroun, Fauvelle and Hirsch on Muslim sites of eastern Shewa) but was
+      not checked here. Christian traders or captives in these towns are not described in the sources seen.
+    evidence: [src-al-umari-masalik, src-wikipedia-walashma, src-chekroun-barr-sad-al-din]
+    confidence: low
+    flag: null
+
+  - id: rp-ifat-rural-1285-1415
+    place: pl-ifat
+    span: {start: 1285, end: 1415, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >
+      Ifat's farmers and herders, who spoke Cushitic and Ethio-Semitic languages, left no record of their beliefs.
+      The sources speak only about sultans, scholars and armies.
+    detail: >
+      Al-Umari's informants were urban scholars; Christian chronicles describe enemies, not villagers. Missing: rural
+      archaeology, insider texts, and any description of Afar, Argobba or Harla rural practice in this period.
+    evidence: [src-al-umari-masalik, src-chronicle-amda-seyon, src-wikipedia-walashma]
+    confidence: high
+    flag: null
+
+  # ---------------- ADAL ----------------
+  - id: rp-adal-court-1415-1468
+    place: pl-adal
+    span: {start: 1415, end: 1468, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: dominant, local_form: "Walasma sultans returned from Yemen, ruling from Dakkar; sultans such as Badlay framed war with the Christian kingdom in religious terms"}
+    relation: exclusive
+    basis: attested
+    summary: >
+      The sons of Ifat's last sultan returned from exile in Yemen and built a new Muslim state, Adal, on the Harar
+      plateau. Sultan Badlay raided the Christian kingdom until he was killed at Gomit in 1445.
+    detail: >
+      Badlay (Shihab al-Din Ahmad, r. 1433-1445) captured Bali before his defeat; Muhammad ibn Badlay reportedly agreed
+      to pay tribute afterward. Al-Maqrizi, writing in Cairo in the 1430s, is the main Arabic narrative and gives the
+      Muslim side; the Ethiopian chronicles give the royal side.
+    evidence: [src-wikipedia-walashma, src-al-maqrizi-ilmam, src-chekroun-barr-sad-al-din, src-wikipedia-zara-yaqob]
+    confidence: medium
+    flag: null
+
+  - id: rp-adal-urban-1415-1468
+    place: pl-adal
+    span: {start: 1415, end: 1468, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: dominant, local_form: "Dakkar and the Harar plateau towns; Zeila as port"}
+    relation: exclusive
+    basis: inferred
+    summary: >
+      Adal's towns on the Harar plateau were Muslim centers tied by trade to Zeila and Yemen.
+    detail: >
+      Harar's own traditions date its Islamic foundations much earlier (the saint Shaykh Abadir); those traditions were
+      not checked here. Dakkar's location and size are poorly known.
+    evidence: [src-chekroun-barr-sad-al-din, src-wikipedia-walashma]
+    confidence: low
+    flag: null
+
+  - id: rp-adal-rural-1415-1468
+    place: pl-adal
+    span: {start: 1415, end: 1468, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >
+      How Adal's farmers and Somali and Afar herders practiced religion in the 1400s is not recorded.
+    detail: >
+      Later (16th-century) Adal sources describe herders joining jihad armies under Imam Ahmad, but they are outside
+      this window. Missing: any 15th-century insider text or rural archaeology.
+    evidence: [src-chekroun-barr-sad-al-din]
+    confidence: high
+    flag: null
+
+  # ---------------- ZEILA ----------------
+  - id: rp-zeila-court-1200-1415
+    place: pl-zeila
+    span: {start: 1200, end: 1415, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: dominant, local_form: "governing shaykhs of Zeila, later Walasma governors"}
+    relation: exclusive
+    basis: attested
+    summary: >
+      Zeila was ruled first by its own Muslim shaykhs and later by the sultans of Ifat. Its rulers profited from customs
+      on the busy trade with Aden.
+    detail: >
+      Ibn al-Mujawir (13th century) noted Zeila's ships formed a significant share of Aden's customs revenue (via
+      africanhistoryextra summary of Vallet).
+    evidence: [src-africanhistoryextra-zeila, src-al-umari-masalik]
+    confidence: medium
+    flag: null
+
+  - id: rp-zeila-urban-1200-1450
+    place: pl-zeila
+    span: {start: 1200, end: 1450, approx: true}
+    stratum: urban
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-unspecified, share: dominant, local_form: "port mosques (Masjid al-Qiblatayn), resident jurists of the Hanafi and Shafi'i schools, scholars who traveled to Yemen, Mecca, Cairo and Damascus"}
+    relation: exclusive
+    basis: attested
+    summary: >
+      Zeila was a large Muslim port city whose scholars studied and taught as far away as Cairo and Damascus. Ibn
+      Battuta visited in 1331 and complained about its smell of fish and camel blood.
+    detail: >
+      Ibn Battuta's description is an outsider's judgment (he found the city unpleasant); it tells us about busy
+      markets and butchery more than about religion. Some readings of the Rihla say part of Zeila's population was
+      Shi'i; this was NOT verified in this research and is not entered as a tradition.
+    evidence: [src-ibn-battuta-rihla, src-africanhistoryextra-zeila, src-fauvelle-zeyla-archaeology]
+    confidence: medium
+    flag: Possible Shi'i community reported by Ibn Battuta not verified.
+
+  # ---------------- HADIYA ----------------
+  - id: rp-hadiya-court-1330-1450
+    place: pl-hadiya
+    span: {start: 1330, end: 1450, approx: true}
+    stratum: court
+    community_name: null
+    traditions:
+      - {family: abrahamic, tradition: islam, branch: sunni-hanafi, share: dominant, local_form: "Hanafi Muslim rulers, tributary to the Christian king"}
+    relation: exclusive
+    basis: attested
+    summary: >
+      Hadiya was a Muslim kingdom in the southern highlands that al-Umari calls the strongest of the seven Muslim
+      kingdoms of the Habasha. Its rulers paid tribute to the Christian kings.
+    detail: >
+      Al-Umari says Hadiya's people followed the Hanafi school. A Hadiya princess, Eleni, later married Zara Yaqob and
+      became a Christian queen with great influence into the early 16th century (from memory of the literature; not
+      checked here).
+    evidence: [src-al-umari-masalik, src-tamrat-church-state]
+    confidence: medium
+    flag: null
+
+  - id: rp-hadiya-rural-1330-1450
+    place: pl-hadiya
+    span: {start: 1330, end: 1450, approx: true}
+    stratum: rural
+    community_name: null
+    traditions: []
+    relation: undocumented
+    summary: >
+      Al-Umari says Hadiya's people were Muslims, but his information came from scholars in towns. How villagers in
+      Hadiya actually practiced religion is not recorded.
+    detail: >
+      Oromo religion (Waaqa) should NOT be mapped here for 1200-1450: the large Oromo movements into these highlands are
+      16th-century, though Mohammed Hassen argues some Oromo groups were present earlier. Missing: rural archaeology and
+      any insider text for the southern highlands before 1500.
+    evidence: [src-al-umari-masalik, src-mohammed-hassen-oromo]
+    confidence: high
+    flag: null
+
+diffusions:
+  # ---------------- NUBIA ----------------
+  - id: df-coptic-bishops-to-nubia
+    lens: religion
+    what: Bishops consecrated by the Coptic patriarch of Alexandria for the Nubian church
+    from: [pl-cairo, pl-alexandria]
+    to: pl-makuria
+    span: {start: 1200, end: 1372, approx: true}
+    mechanism: hierarchical
+    carriers: [religious-specialist, ruler]
+    outcome: adoption
+    summary: >
+      Nubian Christians could not ordain their own top clergy; bishops were chosen and consecrated by the Coptic patriarch
+      in Egypt. The last known one, Timotheos, was consecrated in 1371 or 1372 and carried his appointment letters home to Qasr Ibrim.
+    detail: >
+      A centuries-old link, still working in the late 14th century. Timotheos's two scrolls (one Coptic with some Greek,
+      one Arabic; each holding the same five letters) were found under his body in the north crypt of the Qasr Ibrim
+      cathedral. The Coptic scroll is the only known Bohairic Coptic text from medieval Nubia. After him no Nubian bishop
+      is documented, which helps explain how village Christianity could fade without clergy. The dependence on
+      Alexandria also tied the Nubian church's fate to Mamluk Cairo's politics.
+    evidence: [src-timotheos-scrolls, src-wikipedia-timotheos, src-british-museum-timotheos-cross]
+    confidence: high
+    ap_topics: ["1.5", "2.5"]
+
+  - id: df-mamluk-court-islam-dongola
+    lens: religion
+    what: Islam at the Makurian court, imposed through Mamluk military intervention and installed Muslim princes
+    from: [pl-mamluks, pl-cairo]
+    to: pl-dongola
+    span: {start: 1276, end: 1365}
+    mechanism: imposed
+    carriers: [military, ruler]
+    outcome: elite-only
+    summary: >
+      Mamluk armies from Egypt sacked Dongola in 1276 and later put Muslim princes on the Makurian throne. Islam arrived at
+      the top by force, while the city around the palace stayed mostly Christian.
+    detail: >
+      Mamluk campaigns: 1276 (Baybars), late 1280s (several, described by al-Nuwayri, destruction confirmed at Dongola),
+      1316 (installing Barshambu), 1323 (installing Kudanbes). The jizya was imposed after 1276. Godlewski (2018) reads
+      the 1317 mosque as evidence of subjugation, used mainly by northern newcomers; no evidence of mass conversion in
+      Dongola before the 16th century. Arabic accounts (al-Nuwayri, al-Mufaddal, al-Maqrizi) are Mamluk court writing:
+      they present Nubian kings as rebels and vassals, which is the conqueror's frame. Test 5 (coexistence) is arguable:
+      Godlewski reads the 1317 mosque as serving northern newcomers. Christian kings (Kudanbes) also reigned after
+      Barshambu. Mechanism imposed (Test 1): Islam reached the Makurian throne through Mamluk conquest, tribute and
+      installed princes, not by elite choice.
+    evidence: [src-seignobos-nubia-mamluks, src-al-nuwayri-nihaya, src-godlewski-dongola-social-change, src-wikipedia-makuria]
+    confidence: high
+    ap_topics: ["1.2", "1.5"]
+
+  - id: df-bedouin-islam-nubia
+    lens: religion
+    what: Islam carried by Arab pastoral groups (Banu Kanz, Juhayna, Banu Ja'd and others) settling and intermarrying in Nubia
+    from: [pl-mamluks]
+    to: pl-makuria
+    span: {start: 1300, end: 1450, approx: true}
+    mechanism: relocation
+    carriers: [migrant, family]
+    outcome: coexistence
+    summary: >
+      Arab herding groups moving south from Upper Egypt settled in Nubia and married into Nubian families. Islam spread
+      mostly through these marriages and households, slowly and over generations.
+    detail: >
+      Ibn Khaldun (late 14th century, outsider) says Juhayna overran Nubia and that Arab husbands' sons inherited Nubian
+      chiefships through their mothers; Gerhards (2025, via Wikipedia) and others think he exaggerated. The Banu Kanz,
+      Arab emirs of Aswan who intermarried with Nubians (the origin of the Kunuz), produced Kanz al-Dawla, king from
+      1317. Expelled from Aswan in 1412/3, they merged further into Nubian society. Yusuf Fadl Hasan (University of
+      Khartoum, 1967) built the classic account of gradual Arabization through intermarriage and matrilineal
+      inheritance. Outcome is "coexistence" for 1300-1450: in this window Muslim and Christian households lived side
+      by side; broad adoption of Islam in Nubia belongs to the 16th century and later. Elzein's archaeology of Islam in
+      Sudan distinguishes Egyptian Sunni influence from the north and Sufi influence from the Red Sea.
+    evidence: [src-ibn-khaldun-ibar, src-yusuf-fadl-hasan-arabs-sudan, src-wikipedia-makuria, src-elzein-islamic-archaeology-sudan, src-kropacek-unesco-nubia]
+    confidence: medium
+    ap_topics: ["1.2", "2.5"]
+
+  - id: df-arabic-writing-dongola
+    lens: language
+    what: Arabic as a written language replacing Old Nubian
+    from: [pl-mamluks]
+    to: pl-dongola
+    span: {start: 1317, end: 1450, approx: true}
+    mechanism: hierarchical
+    carriers: [ruler, military, merchant]
+    outcome: no-uptake
+    summary: >
+      Old Nubian writing died out in the 1400s, but Arabic writing did not take its place in Dongola. For a long time the
+      town seems to have written very little at all.
+    detail: >
+      Godlewski (2018) describes a long period of illiteracy beginning in the 15th century: Old Nubian texts stop and no
+      Arabic texts replace them, which makes Islamization impossible to measure in writing. Old Nubian kept being written at
+      Qasr Ibrim at least to 1463 and 1484 (DBMNT), and its spoken descendants survive today. The 1317 Arabic stela shows
+      Arabic arrived with power, not with a literate community. Outcome is for this window only.
+    evidence: [src-godlewski-dongola-social-change, src-dongola-mosque-stela, src-dbmnt]
+    confidence: medium
+    ap_topics: ["2.5"]
+
+  # ---------------- ZAGWE AND JERUSALEM ----------------
+  - id: df-new-jerusalem-lalibela
+    lens: religion
+    what: Jerusalem's holy places as a model for a sacred city in Ethiopia ("New Jerusalem")
+    from: [pl-ext-levant]
+    to: pl-lalibela
+    span: {start: 1187, end: 1270, approx: true}
+    mechanism: stimulus
+    carriers: [pilgrim, ruler, religious-specialist]
+    outcome: adoption
+    summary: >
+      Tradition says King Lalibela, who had lived in Jerusalem, rebuilt its holy places in rock at Roha after Saladin took
+      Jerusalem in 1187. Its churches carry Jerusalem names and a stream is called the Jordan.
+    detail: >
+      The idea is taken up and remade in an Ethiopian form (stimulus), not copied. The Gadla Lalibela (a later
+      hagiography) credits angels with helping. The 1187 link is a widely repeated interpretation (UNESCO; Met essay;
+      the UNESCO GHA introduction ties it to Ethiopia's isolation from Alexandria). Ethiopian Christians' own frame is a
+      holy king making Ethiopia a place of the Holy Land, connected to the later Solomonic idea of Ethiopia as heir of
+      Israel. Do not frame this as a crusade response: Lalibela's world was Coptic Egypt and Jerusalem pilgrimage, and
+      Ayyubid Egypt, which controlled the route, was also the Ethiopian church's link to its patriarch.
+    evidence: [src-unesco-whc-lalibela, src-windmuller-luna-met-lalibela, src-gadla-lalibela, src-unesco-gha-vol4, src-wikipedia-lalibela-king]
+    confidence: medium
+    ap_topics: ["1.5", "2.5"]
+
+  - id: df-aksumite-forms-rock-churches
+    lens: architecture
+    what: Aksumite building forms (stepped walls, monkey-head beams, window frames) carved into living rock
+    from: [pl-zagwe]
+    to: pl-lalibela
+    span: {start: 1100, end: 1270, approx: true}
+    mechanism: stimulus
+    carriers: [artisan, ruler]
+    outcome: adoption
+    summary: >
+      Lalibela's carvers copied the look of older Aksumite stone-and-timber buildings, but cut them down into solid rock.
+      An old building style became a new kind of monument.
+    detail: >
+      Fauvelle and Mensan's stratigraphy proposes four phases at Lalibela: small caves; larger hypogean complexes in an
+      Aksumite style; a first monumental phase (Betä Maryam); and a second monumental phase with new trenches (per
+      Gnisci's review of Bosc-Tiessé and Derat 2019). They argue much of the southern complex began as fortification.
+      Phillipson (2009) gives a different phased chronology. The local material is mostly basaltic scoria (Bruxelles and
+      Mensan). The "from" place is the wider Zagwe kingdom, where earlier rock-hewn churches in Tigray show the tradition.
+    evidence: [src-gnisci-review-lalibela, src-bosc-tiesse-derat-lalibela, src-phillipson-ancient-churches, src-windmuller-luna-met-lalibela]
+    confidence: medium
+    ap_topics: ["1.5"]
+
+  - id: df-ethiopian-community-jerusalem
+    lens: religion
+    what: Ethiopian monks and pilgrims settling in Jerusalem and on the pilgrimage route through Egypt
+    from: [pl-ethiopia-solomonic]
+    to: pl-ext-levant
+    span: {start: 1270, end: 1450, approx: true}
+    mechanism: relocation
+    carriers: [pilgrim, religious-specialist]
+    outcome: coexistence
+    summary: >
+      Ethiopian monks and pilgrims built a lasting community in Jerusalem, living alongside Coptic, Armenian, Syriac,
+      Greek and Latin Christians. It became Ethiopia's window onto the wider Christian and Muslim world.
+    detail: >
+      Earliest firm evidence for an Ethiopian community in Jerusalem is later 13th century (Wikipedia, Zagwe dynasty).
+      Ethiopian hostels and monasteries lined the route: Qwesqwam and Scetis in Egypt, Cairo, Jerusalem, Cyprus (Wion's
+      review of Kelly 2024). Ewostatewos visited Jerusalem in the 1340s. The Jerusalem community sent delegates to the
+      Council of Florence (1441). Tigab Bezie (2013) traces the community and Deir es-Sultan from foundation, from an
+      Ethiopian Orthodox perspective. Medieval chapel holdings in the Holy Sepulchre were not verified here.
+    evidence: [src-wikipedia-zagwe, src-wion-review-kelly, src-tigab-bezie-jerusalem, src-wikipedia-ewostatewos]
+    confidence: medium
+    ap_topics: ["2.5"]
+
+  # ---------------- SOLOMONIC KINGDOM ----------------
+  - id: df-abun-from-alexandria
+    lens: religion
+    what: The Egyptian metropolitan bishop (abun) sent by the Coptic patriarch to head the Ethiopian church
+    from: [pl-alexandria, pl-cairo]
+    to: pl-ethiopia-solomonic
+    span: {start: 1200, end: 1450, approx: true}
+    mechanism: hierarchical
+    carriers: [religious-specialist, ruler]
+    outcome: adoption
+    summary: >
+      The Ethiopian church's single bishop always came from Egypt, so Ethiopian kings had to bargain with Muslim Egypt's
+      rulers to get one. Ethiopia used the Nile and the fate of Egypt's Christians as bargaining chips.
+    detail: >
+      Yekuno Amlak wrote to Baybars in 1273 asking for an abun. Amda Seyon (1321-2) and Zara Yaqob protested Mamluk
+      treatment of Copts; Ethiopian kings hinted they could divert the Nile (a claim more symbolic than practical).
+      The abun's monopoly on ordination gave Egyptian prelates leverage in Ethiopian disputes (e.g., Abuna Yaqob vs.
+      Ewostatewos in the 1330s; the abuns Mika'el and Gabriel at Debre Mitmaq in 1450). An Ethiopian-made church with a
+      foreign head: the Ethiopian church was not a branch office of Egypt but depended on it for one key office.
+    evidence: [src-tamrat-church-state, src-wikipedia-yekuno-amlak, src-wikipedia-amda-seyon, src-wikipedia-zara-yaqob]
+    confidence: high
+    ap_topics: ["1.2", "1.5", "2.5"]
+
+  - id: df-monastic-movement-shewa
+    lens: religion
+    what: Monastic Christianity and monastic schools carried south from Tigray and Lake Hayq into Shewa
+    from: [pl-hayq]
+    to: pl-debre-libanos
+    span: {start: 1248, end: 1350, approx: true}
+    mechanism: relocation
+    carriers: [religious-specialist]
+    outcome: adoption
+    summary: >
+      Monks trained at Lake Hayq and Debre Damo, like Tekle Haymanot, moved south to found monasteries in Shewa. Their
+      communities became schools, landholders and bases for spreading Christianity.
+    detail: >
+      Taddesse Tamrat's central argument: monastic revival under Iyasus Mo'a at Hayq (mid-13th century) produced founders
+      who planted houses in the expanding south; Tekle Haymanot (about 1215-1313) founded Debre Asbo about 1284.
+      Hagiographies claiming Tekle Haymanot or Iyasus Mo'a made Yekuno Amlak king are late, and Taddesse Tamrat treats the
+      Tekle Haymanot version as an invention reflecting Debre Libanos's later rise. Monks also clashed with kings
+      (Amda Seyon exiled critics of his marriages), so this was not simply state religion.
+    evidence: [src-tamrat-church-state, src-wikipedia-tekle-haymanot, src-gadla-takla-haymanot]
+    confidence: high
+    ap_topics: ["1.5", "2.5"]
+
+  - id: df-christianity-to-damot
+    lens: religion
+    what: Christian churches, monks and military colonists in the conquered southern and western provinces
+    from: [pl-debre-libanos, pl-ethiopia-solomonic]
+    to: pl-damot
+    span: {start: 1317, end: 1450, approx: true}
+    mechanism: imposed
+    carriers: [military, religious-specialist, ruler]
+    outcome: elite-only
+    summary: >
+      After conquering Damot and other southern lands, Christian kings settled soldiers and built churches there, and
+      monks preached. Local leaders often converted, but royal writings complain that many people kept older practices.
+    detail: >
+      Taddesse Tamrat describes evangelization of the south as conquest plus monastic mission, with land grants to
+      churches. Zara Yaqob's own texts complain of spirit cults and (in Damot) human sacrifice, accusations from a
+      hostile source. Coercion is documented: forced professions of faith, confiscation, executions. "Elite-only" is a
+      judgment for 1450; Mohammed Hassen stresses the Christian kingdom built an empire, not a single people, in these
+      provinces. Mechanism imposed (Test 1): conquest, military colonies, forced professions of faith, confiscation and
+      executions; monastic preaching worked inside that frame.
+    evidence: [src-tamrat-church-state, src-solomon-gebreyes-practices, src-tsehai-dacb-zara-yaqob, src-mohammed-hassen-oromo]
+    confidence: medium
+    ap_topics: ["1.5"]
+
+  - id: df-ewostatewos-sabbath
+    lens: religion
+    what: Observance of both Saturday and Sunday as Sabbaths, taught by Ewostatewos and his followers
+    from: [pl-serae-ewostatewos]
+    to: pl-ethiopia-solomonic
+    span: {start: 1330, end: 1450, approx: true}
+    mechanism: contagious
+    carriers: [religious-specialist]
+    outcome: adoption
+    summary: >
+      The monk Ewostatewos taught that Christians should keep Saturday as well as Sunday holy, and Egyptian bishops
+      opposed him. His followers spread the practice through monasteries until the king and church accepted it in 1450.
+    detail: >
+      Ewostatewos (1273-1352) left about 1337 after Abuna Yaqob opposed him, defended his views before the Coptic
+      patriarch in Cairo, visited Jerusalem and died in Cilician Armenia. His followers built a hierarchy independent
+      of the abun across northern Ethiopia and Eritrea. Zara Yaqob brokered a compromise: the Ewostathians accepted by
+      1442 and the Egyptian abuns at the Council of Debre Mitmaq, 1450. Taddesse Tamrat argues Saturday observance
+      already existed in Alexandria, so this is not a "Jewish survival." Mechanism moves from contagious (monastery to
+      monastery, against the hierarchy) to hierarchical (royal adoption in 1450).
+    evidence: [src-wikipedia-ewostatewos, src-tamrat-church-state, src-wikipedia-zara-yaqob]
+    confidence: high
+    ap_topics: ["2.5"]
+
+  - id: df-kebra-nagast-solomonic-ideology
+    lens: religion
+    what: The Solomon-and-Sheba story and the Ark as a charter of Ethiopian kingship (Kebra Nagast)
+    from: [pl-cairo]
+    to: pl-ethiopia-solomonic
+    span: {start: 1314, end: 1350, approx: true}
+    mechanism: stimulus
+    carriers: [religious-specialist, scholar, ruler]
+    outcome: adoption
+    summary: >
+      Many scholars date the Ge'ez Kebra Nagast to the early 1300s, and its own closing note says clergy at Aksum
+      translated it. It tells how Menelik, son of Solomon and the Queen of Sheba, brought the Ark of the Covenant to
+      Ethiopia, which made the new dynasty's rule look like God's plan.
+    detail: >
+      Colophon: translated from Coptic to Arabic in the "year of mercy" 409 (AD 1225), then into Ge'ez by Yeshaq and
+      others under Abuna Giyorgis, possibly for Ya'ibika Egzi of Enderta; Conti Rossini, Littmann and Cerulli date it
+      1314-1322. Many scholars doubt a Coptic original; some think Ethiopian authors wrote much of it themselves.
+      Gizachew Tiruneh argues for an older Arabic text; others see a 6th-century core. Stimulus: shared biblical and
+      Arabic Solomon traditions reshaped into a distinctly Ethiopian national epic. Ironically it was finished in the
+      Tigrayan circle of a governor who rebelled against Amda Seyon (Taddesse Tamrat; not checked), yet it became the
+      Solomonic charter.
+    evidence: [src-kebra-nagast, src-wikipedia-kebra-nagast, src-tiruneh-kebra-nagast]
+    confidence: medium
+    ap_topics: ["1.5", "2.5"]
+
+  - id: df-marian-devotion-miracles
+    lens: religion
+    what: Marian devotion and the Miracles of Mary (Ta'ammera Maryam) translated from Arabic and made royal policy
+    from: [pl-cairo]
+    to: pl-ethiopia-solomonic
+    span: {start: 1380, end: 1468, approx: true}
+    mechanism: imposed
+    carriers: [religious-specialist, ruler]
+    outcome: adoption
+    summary: >
+      Stories of Mary's miracles came from Egypt in Arabic and were translated into Ge'ez with royal support. Zara Yaqob
+      made feasts and devotion to Mary a duty for all Christians.
+    detail: >
+      The Ta'ammera Maryam is commonly dated to translation under Dawit I (about 1380-1412) from an Arabic collection, with
+      Ethiopian miracles added later (from memory of the literature; Getatchew Haile and Balicka-Witakowska; not checked
+      here). Zara Yaqob's fillet inscriptions named the wearer Mary's servant. The Stephanites' refusal to venerate Mary as
+      demanded shows the policy met resistance inside the church. Painter Fre Seyon's Marian icons belong to this program
+      (see df-marian-icons). Mechanism imposed (Test 1) for the span as a whole: translation under Dawit I was royal
+      patronage by choice, but Zara Yaqob made Marian devotion compulsory and punished refusers (the Stephanites), so the
+      first yes in the tie-break is imposed.
+    evidence: [src-wikipedia-zara-yaqob, src-tamrat-church-state, src-wikipedia-stephanites]
+    confidence: medium
+    ap_topics: ["2.5"]
+
+  - id: df-arabic-christian-texts-geez
+    lens: knowledge
+    what: Coptic-Arabic Christian literature translated into Ge'ez (hagiographies, homilies, canon law, apocalyptic and wisdom texts)
+    from: [pl-cairo]
+    to: pl-ethiopia-solomonic
+    span: {start: 1340, end: 1450, approx: true}
+    mechanism: stimulus
+    carriers: [religious-specialist, scholar]
+    outcome: adoption
+    summary: >
+      In the 1300s and 1400s Ethiopian and Egyptian clergy translated many Arabic Christian books into Ge'ez. This
+      "second literary age" of Ge'ez produced the kingdom's chronicles, saints' lives and law books.
+    detail: >
+      Commonly linked to Abuna Salama (in office about 1348-1388, remembered as "the translator"); from memory of the
+      literature, not verified here. Kaplan (2018) notes several biblically themed works shared by Christians and Beta
+      Israel reached Ethiopia in Arabic and cannot date before the 13th-14th century. The translations were reshaped:
+      Ethiopian saints' lives, the royal chronicle and Zara Yaqob's treatises are original Ge'ez works built on this base.
+    evidence: [src-tamrat-church-state, src-kaplan-groundwork-2018]
+    confidence: medium
+    ap_topics: ["2.5"]
+
+  - id: df-fetha-nagast-law
+    lens: governance
+    what: The Fetha Nagast ("Law of the Kings"), a Coptic-Arabic legal compilation by Ibn al-Assal
+    from: [pl-cairo]
+    to: pl-ethiopia-solomonic
+    span: {start: 1450, end: 1563, approx: true}
+    mechanism: hierarchical
+    carriers: [religious-specialist, ruler]
+    outcome: elite-only
+    summary: >
+      A law book written in Arabic by a Coptic scholar in Egypt around 1240 was translated into Ge'ez and became Ethiopia's
+      royal law. Some records place its arrival under Zara Yaqob around 1450.
+    detail: >
+      Dating is uncertain: "a few historical records" (Wikipedia) place the translation about 1450 under Zara Yaqob; its
+      first recorded use as royal law is under Sarsa Dengel from 1563. Its church section may already have circulated in
+      the Senodos. Includes rules on slavery (who may be enslaved, conditions of manumission), which later Ethiopian law
+      cited; specific clauses not checked here. Outcome elite-only: a learned and royal text, not village custom.
+    evidence: [src-wikipedia-fetha-negest]
+    confidence: low
+    ap_topics: ["1.5"]
+
+  - id: df-mamluk-military-technology
+    lens: technology
+    what: Mamluk military techniques, incendiary weapons (naft) and court ceremonial
+    from: [pl-mamluks]
+    to: pl-ethiopia-solomonic
+    span: {start: 1414, end: 1429}
+    mechanism: relocation
+    carriers: [military, artisan]
+    outcome: elite-only
+    summary: >
+      According to the Egyptian historian al-Maqrizi, Mamluk soldiers who came to King Yeshaq's court trained his army in
+      swordfighting and incendiary weapons. This is the earliest report of such weapons in Ethiopia.
+    detail: >
+      Al-Maqrizi names their leader al-Tabingha; he also describes a Coptic visitor who reorganized court ceremonial and
+      dress. Pankhurst calls it the earliest reference to firearms (naft) in Ethiopia; "naft" may mean incendiaries
+      rather than guns. Al-Maqrizi's purpose (a Cairo scholar writing on Muslims of the Habasha and blaming apostates who
+      helped a Christian king) shapes the story. Yeshaq also sought artisans from Aragon (embassy reached Alfonso V, 1428).
+    evidence: [src-al-maqrizi-ilmam, src-wikipedia-yeshaq]
+    confidence: low
+    ap_topics: ["1.5", "2.6"]
+
+  # ---------------- MUSLIM HORN ----------------
+  - id: df-islam-zeila-to-ifat
+    lens: religion
+    what: Islamic law, learning and merchant networks from Arabia and Yemen through Zeila into the eastern highlands
+    from: [pl-ext-yemen, pl-ext-hijaz, pl-zeila]
+    to: pl-ifat
+    span: {start: 1200, end: 1415, approx: true}
+    mechanism: relocation
+    carriers: [merchant, scholar]
+    outcome: elite-only
+    summary: >
+      Merchants and scholars moving between Yemen, Mecca and Zeila carried Islamic law and learning into the trading towns
+      and courts of the eastern Ethiopian highlands. Islam had been present there for centuries, but these links tied it
+      to the wider Muslim world.
+    detail: >
+      Scholars from the Horn brought books and Hanafi and Shafi'i law back from the Hijaz, Yemen and Egypt, and spread
+      the Qadiriyya order (per the Zeila synthesis drawing on Vallet, Chekroun, Trimingham); Qadiriyya dating in this
+      period should be checked. "Elite-only" reflects the evidence: courts and towns are Muslim in every source; rural
+      practice in Ifat is undocumented. Hussein Ahmed argues that older Ethiopian historiography wrongly treated Islam in
+      Ethiopia as foreign; in Ifat it was the faith of a local dynasty and people.
+    evidence: [src-africanhistoryextra-zeila, src-al-umari-masalik, src-trimingham-islam-ethiopia, src-hussein-ahmed-historiography-islam]
+    confidence: medium
+    ap_topics: ["1.2", "2.3", "2.5"]
+
+  - id: df-zeila-scholars-abroad
+    lens: knowledge
+    what: Scholars from Zeila and the Horn (al-Zayla'i and al-Jabarti families) teaching in Cairo, Yemen and Damascus
+    from: [pl-zeila]
+    to: pl-cairo
+    span: {start: 1300, end: 1450, approx: true}
+    mechanism: relocation
+    carriers: [scholar]
+    outcome: coexistence
+    summary: >
+      Scholars from Zeila became respected jurists and teachers in Cairo, Yemen and Damascus. Knowledge flowed out of the
+      Horn, not only into it.
+    detail: >
+      Uthman al-Zayla'i (d. 1342) and Abdallah al-Zayla'i (d. 1360) were Hanafi jurists in Egypt; Abdallah led an Ifat
+      embassy and informed al-Umari. Sharaf al-Din Isma'il al-Jabarti (d. 1403) was a Qadiri scholar close to the Rasulid
+      sultan in Yemen. Scholars from the Horn had reserved spaces at the Umayyad Mosque and al-Azhar (the riwaq of the
+      Jabartis at al-Azhar is attested later; not verified for this period). A good corrective to maps where all arrows
+      point into Africa.
+    evidence: [src-africanhistoryextra-zeila, src-al-umari-masalik]
+    confidence: medium
+    ap_topics: ["1.2", "2.3", "2.5"]
+
+  - id: df-slave-trade-southern-highlands
+    lens: social
+    what: Forced movement of enslaved people, including castrated boys, from the southern highlands to Red Sea markets
+    from: [pl-hadiya, pl-ifat]
+    to: pl-ext-yemen
+    span: {start: 1300, end: 1450, approx: true}
+    mechanism: relocation
+    carriers: [enslaved-people, merchant]
+    outcome: undocumented
+    summary: >
+      Al-Umari reports that traders took enslaved people from the southern highlands to the coast, and that boys were
+      castrated on the way because eunuchs sold for more. He says the Christian king of Amhara had banned castration in
+      his lands.
+    detail: >
+      Al-Umari's informant, the merchant al-Hajj Faraj al-Funi, said traders took captives to Washlu for castration and
+      then to Hadiya for a second operation, and that more died than survived. This is an outsider (Cairo) account via
+      merchants, and its numbers cannot be checked, but it is unusually direct about suffering. Christian kings also
+      took captives in war and gave enslaved people as gifts; the ban on castration is a regulation of slavery, not an
+      abolition. Enslaved Habasha in Yemen and Egypt carried their languages and religions with them; their history
+      there is outside this file. Outcome is a forced fit (see taxonomy pressure).
+    evidence: [src-al-umari-masalik, src-medievalslavery-al-umari-hadiya]
+    confidence: medium
+    ap_topics: ["2.3", "2.6", "2.7"]
+
+  # ---------------- BETA ISRAEL ----------------
+  - id: df-christian-pressure-beta-israel
+    lens: religion
+    what: Forced Christianization through war, land law and missions in Beta Israel country
+    from: [pl-ethiopia-solomonic]
+    to: pl-beta-israel
+    span: {start: 1329, end: 1468}
+    mechanism: imposed
+    carriers: [military, ruler, religious-specialist]
+    outcome: resistance
+    summary: >
+      Christian kings sent armies and missionaries into the northwestern mountains and made baptism the price of keeping
+      family land. Beta Israel communities fought back and kept their own faith, at great cost.
+    detail: >
+      1329: Amda Seyon ordered Tsaga Christos, governor of Begemder, to lead forces to Semien, Wegera, Tselemt and
+      Tsegede (royal account, via Wikipedia, Beta Israel). About 1414-1429: Yeshaq defeats a revolt at Kossoge and
+      decrees that only the baptized may inherit their father's land (Ethiopian accounts and oral tradition, per
+      Kaplan). Zara Yaqob crushes a revolt in Semien and is called "Exterminator of the Jews" in his chronicle. Beta
+      Israel memory treats these as heroic resistance. The royal texts' label "ayhud" was also used for Christian
+      dissidents, so not every "Jew" in them is Beta Israel. Mechanism imposed (Test 1): war and a land law that
+      made baptism the price of inheritance.
+    evidence: [src-wikipedia-jews-ethiopia, src-wikipedia-beta-israel, src-kaplan-beta-israel, src-ejhc-beta-israel-traditions, src-chronicle-zara-yaqob]
+    confidence: medium
+    ap_topics: ["1.5"]
+
+  - id: df-monastic-forms-beta-israel
+    lens: religion
+    what: Monasticism, liturgical forms and Ge'ez texts shared between Ethiopian Christian monks and Beta Israel
+    from: [pl-ethiopia-solomonic]
+    to: pl-beta-israel
+    span: {start: 1380, end: 1500, approx: true}
+    mechanism: stimulus
+    carriers: [religious-specialist]
+    outcome: adoption
+    summary: >
+      Beta Israel religious life was led by monks and used Ge'ez scriptures, much like Ethiopian Christian monasteries.
+      Historians disagree about why: Beta Israel tradition sees ancient Israelite faith preserved, while some scholars
+      see forms adapted from Christian monks in the 1400s.
+    detail: >
+      Shelemay (1986/1989) found Beta Israel liturgy closely tied to Ethiopian Christian monastic tradition; Kaplan
+      (1992) argues the community's name, hierarchy, texts and crafts took shape in the 14th-16th centuries; Quirin
+      (1992) frames them as a caste-like group within Ethiopian society. Beta Israel tradition credits Abba Sabra and
+      Saga Amlak with preserving the faith, and the community rejects the idea of descent from converted Agaw
+      Christians. The Gadla Gabra Iyasus is the first Ethiopian text to call them immigrants from Israel rather than
+      apostates (Kaplan 2018). Both readings can be held at once: shared Ethiopian forms do not settle where a
+      community's faith came from. Confidence is low because this is the debate itself.
+    evidence: [src-shelemay-music-ritual, src-kaplan-beta-israel, src-quirin-evolution-ethiopian-jews, src-kaplan-groundwork-2018, src-ejhc-beta-israel-traditions]
+    confidence: low
+    ap_topics: ["2.5"]
+
+  # ---------------- OUTWARD LINKS ----------------
+  - id: df-ethiopian-delegates-florence
+    lens: religion
+    what: Ethiopian Orthodox delegates at the Council of Florence and the Latin church's "Prester John" idea
+    from: [pl-ethiopia-solomonic]
+    to: pl-ext-italy
+    span: {start: 1441, end: 1441}
+    mechanism: relocation
+    carriers: [religious-specialist, pilgrim]
+    outcome: no-uptake
+    summary: >
+      In 1441 Ethiopian monks came to the Council of Florence, where the pope hoped to unite the churches. Italian
+      churchmen called the Ethiopian king "Prester John," a name the Ethiopians did not use.
+    detail: >
+      Delegates came via the Ethiopian community in Jerusalem (often said to be sent by its abbot, Nicodemus, rather than
+      directly by Zara Yaqob; this attribution is from memory and needs library confirmation). They were puzzled to hear
+      their king called Prester John. The union decree had no effect in Ethiopia. A European legend, not the delegates'
+      own frame, is why this meeting is remembered in Europe; for Ethiopia it is one moment in long contact via
+      Jerusalem. Zara Yaqob separately sent Pietro Rombulo to Aragon in 1450 asking for craftsmen.
+    evidence: [src-wikipedia-zara-yaqob, src-tsehai-dacb-zara-yaqob, src-usc-prester-john-zara-yaqob]
+    confidence: medium
+    ap_topics: ["1.7", "2.5"]
+
+  - id: df-marian-icons
+    lens: art-music
+    what: Panel icons of the Virgin and Child, painted for Zara Yaqob's Marian program (Fre Seyon)
+    from: [pl-ext-levant, pl-ext-italy]
+    to: pl-ethiopia-solomonic
+    span: {start: 1440, end: 1468, approx: true}
+    mechanism: stimulus
+    carriers: [artisan, religious-specialist, pilgrim]
+    outcome: syncretism
+    summary: >
+      Court painters such as Fre Seyon made icons of Mary and the Christ child for Zara Yaqob's churches. Scholars see in
+      them borrowed foreign features turned into a new Ethiopian style.
+    detail: >
+      Heldman (1994) studies Fre Seyon and argues for Italo-Byzantine models reaching Ethiopia, probably via Jerusalem
+      and Mediterranean contacts; specifics not checked here. Earlier book painting (Zir Ganela Gospels, 1400-1401) shows
+      a strong local style. Outcome "syncretism" here means art forms fused, not religions.
+    evidence: [src-heldman-fre-seyon, src-morgan-zir-ganela]
+    confidence: low
+    ap_topics: ["2.5"]
+
+exemplars:
+  - id: ex-dongola-throne-hall-mosque
+    name: Throne Hall of Dongola, converted to a mosque (1317)
+    place: pl-dongola
+    location: {lat: 18.22, lon: 30.75}
+    span: {start: 1317, end: 1969}
+    lenses: [architecture, religion, governance]
+    summary: >
+      A 9th-century royal hall of the Christian kings of Makuria was turned into a mosque in 1317 by the first Muslim
+      king, Barshambu. It served as a mosque until 1969 and is now a monument.
+    detail: >
+      Built probably under Zacharias III and Georgios I (first half of the 9th century). A marble stela with a 10-line
+      Arabic foundation inscription, still in place left of the mihrab, is dated 16 Rabi I 717 = 29 May 1317 (DBMNT 611;
+      older editions misdate it, including Insoll 2003). English translation in Godlewski 2015 and Crawford 1951.
+      Excavated by the PCMA 1970-1983.
+    image_hint: "Wikimedia Commons search: Throne Hall Old Dongola"
+    evidence: [src-dongola-mosque-stela, src-wikipedia-throne-hall-dongola, src-godlewski-dongola-social-change]
+    confidence: high
+
+  - id: ex-faras-cathedral-paintings
+    name: Faras Cathedral wall paintings
+    place: pl-makuria
+    location: {lat: 22.21, lon: 31.47}
+    span: {start: 707, end: 1400, approx: true}
+    lenses: [art-music, religion]
+    summary: >
+      More than 160 wall paintings from the cathedral of Faras show Nubian bishops, kings, queens, saints and Mary. They
+      were saved in the 1960s before Lake Nasser flooded the site and are now in Khartoum and Warsaw.
+    detail: >
+      Painted in layers from the 8th to the 14th century; a list of bishops found on site allowed dating. 169 uncovered,
+      120 removed; Sudan National Museum (Khartoum) and National Museum in Warsaw. About every second painting had a
+      female sponsor (Ruffini, via Wikipedia). Polish team under Michałowski, 1960-64, UNESCO Nubian campaign: an
+      international rescue with Sudanese partners; ownership was split between the two museums.
+    image_hint: "Wikimedia Commons search: Faras Cathedral painting National Museum Warsaw"
+    evidence: [src-faras-cathedral-paintings, src-wikipedia-makuria]
+    confidence: high
+
+  - id: ex-timotheos-scrolls
+    name: Scrolls and cross of Bishop Timotheos, Qasr Ibrim
+    place: pl-qasr-ibrim
+    location: {lat: 22.65, lon: 31.99}
+    span: {start: 1371, end: 1372, approx: true}
+    lenses: [religion, language]
+    summary: >
+      Bishop Timotheos was buried at Qasr Ibrim in the 1370s with an iron cross on his chest. Under him lay his letters of
+      appointment from the Coptic patriarch, in Coptic and Arabic, which show the Nubian church was still organized late in
+      the 1300s.
+    detail: >
+      Consecrated in Egypt (British Museum: 19 November 1371; Wikipedia: 1372) by Patriarch Gabriel IV. Scrolls in the
+      Coptic Museum, Cairo; cross (EA71955) and clothing in the British Museum. Last documented Nubian bishop of Faras /
+      Ibrim. Plumley published the scrolls in 1975.
+    image_hint: "British Museum collection online EA71955 (check license); Wikimedia Commons: Qasr Ibrim"
+    evidence: [src-timotheos-scrolls, src-british-museum-timotheos-cross, src-wikipedia-timotheos]
+    confidence: high
+
+  - id: ex-ioel-land-sale-1463
+    name: Old Nubian land sale naming King Ioel of Dotawo (1463)
+    place: pl-qasr-ibrim
+    location: {lat: 22.65, lon: 31.99}
+    span: {start: 1463, end: 1463}
+    lenses: [language, governance, religion]
+    summary: >
+      A leather deed from Qasr Ibrim, written in Old Nubian in 1463, records a land sale under King Ioel of Dotawo. It names
+      a queen mother, a regional governor (eparch) and a bishop, showing a Christian Nubian kingdom still running.
+    detail: >
+      DBMNT 644: dated by the Era of the Martyrs, year 1180, Athyr 17 = 14 November 1463; found in a sealed jar in the
+      western fortifications (Archive 1). Seller Ismale; buyers Ionngoka and Kasla. Titles include king of Dotawo, queen
+      mother, eparch of Nobadia, bishop of Silmi (Ibrim), and tot of Faras. museum no. EA 90225 per DBMNT (present
+      location "unknown, probably Egypt"). An insider document: Nubians recording their own property in their own language.
+      Just outside the 1450 window but the best evidence for the kingdom in it.
+    image_hint: "No open image known; use a Qasr Ibrim site photo from Wikimedia Commons"
+    evidence: [src-qasr-ibrim-old-nubian-documents, src-dbmnt]
+    confidence: high
+
+  - id: ex-lalibela-churches
+    name: Rock-hewn churches of Lalibela
+    place: pl-lalibela
+    location: {lat: 12.032, lon: 39.041}
+    span: {start: 1150, end: null, approx: true}
+    lenses: [architecture, religion]
+    summary: >
+      Eleven churches were carved down into solid rock at Lalibela, in two groups divided by a stream named the Jordan.
+      Ethiopian tradition credits King Lalibela, while archaeologists think the work took several phases over centuries.
+    detail: >
+      Tradition: Lalibela (reigned about 1181-1221) carved them in 24 years with angels' help (Gadla Lalibela; priests told
+      Alvares the same in the 1520s). Scholarship: four or five phases, 7th-13th centuries (Met essay); some structures
+      (Bete Mercurios, Bete Gabriel-Rufael) probably began as fortifications (Fauvelle and Mensan) or palaces (Phillipson).
+      Bete Giyorgis stands apart. Still a living pilgrimage center, especially at Genna (Ethiopian Christmas). UNESCO World
+      Heritage since 1978.
+    image_hint: "Wikimedia Commons search: Bete Giyorgis Lalibela"
+    evidence: [src-unesco-whc-lalibela, src-windmuller-luna-met-lalibela, src-gnisci-review-lalibela, src-gadla-lalibela]
+    confidence: high
+
+  - id: ex-kebra-nagast
+    name: Kebra Nagast ("Glory of the Kings")
+    place: pl-ethiopia-solomonic
+    location: {lat: 14.13, lon: 38.72}
+    span: {start: 1314, end: 1322, approx: true}
+    lenses: [religion, language, governance]
+    summary: >
+      This Ge'ez book tells how Menelik, son of Solomon and the Queen of Sheba, brought the Ark of the Covenant to
+      Ethiopia. Ethiopian kings used it for six centuries to say God had chosen their family.
+    detail: >
+      Label point Aksum, where the colophon places the translator Yeshaq. Dating and the claimed Coptic-Arabic origin are
+      debated (see df-kebra-nagast-solomonic-ideology). Insider source with a purpose: legitimacy for a dynasty that won
+      its throne in battle in 1270. Cited in the 1955 Ethiopian constitution. English translation by Budge (1922);
+      German by Bezold (1905).
+    image_hint: "Wikimedia Commons search: Kebra Nagast manuscript"
+    evidence: [src-kebra-nagast, src-wikipedia-kebra-nagast, src-tiruneh-kebra-nagast]
+    confidence: high
+
+  - id: ex-debre-libanos
+    name: Debre Libanos monastery
+    place: pl-debre-libanos
+    location: {lat: 9.712, lon: 38.848}
+    span: {start: 1284, end: null, approx: true}
+    lenses: [religion, knowledge]
+    summary: >
+      Founded by the monk Tekle Haymanot around 1284, Debre Libanos became the most powerful monastery in Ethiopia.
+      Its abbot ranked second only to the bishop from Egypt.
+    detail: >
+      Founded as Debre Asbo; renamed in the 15th century (Zara Yaqob promoted Tekle Haymanot's cult and Debre Libanos's
+      rank). Its later hagiographies rewrote history to give Tekle Haymanot a role in the 1270 restoration (Taddesse
+      Tamrat). Zara Yaqob also had its abbot Takla Hawariat beaten after he criticized royal violence; he died in prison.
+    image_hint: "Wikimedia Commons search: Debre Libanos"
+    evidence: [src-wikipedia-debre-libanos, src-tamrat-church-state, src-wikipedia-zara-yaqob]
+    confidence: high
+
+  - id: ex-zir-ganela-gospels
+    name: Zir Ganela Gospels (1400-1401)
+    place: pl-ethiopia-solomonic
+    location: {lat: 12.5, lon: 39.3}
+    span: {start: 1400, end: 1401}
+    lenses: [art-music, religion, social]
+    summary: >
+      This illuminated Ge'ez Gospel book was commissioned by Princess Zir Ganela, an abbess and granddaughter of Amda
+      Seyon. Its 26 full-page paintings in bright orange and warm colors show Ethiopia's own painting style.
+    detail: >
+      Colophon dates it 29 August 1400 to 28 August 1401, under her brother Dawit I. Made for the monastery she led (not
+      named by the Morgan). Now Morgan Library MS M.828 (New York). Location field is a placeholder in the
+      northern highlands; the monastery is unidentified. A woman as patron and abbess: a social-history entry point.
+    image_hint: "Morgan Library online: Zir Ganela Gospels MS M.828 (check license)"
+    evidence: [src-morgan-zir-ganela]
+    confidence: high
+
+  - id: ex-mashafa-berhan
+    name: Mashafa Berhan ("Book of Light") of Zara Yaqob
+    place: pl-ethiopia-solomonic
+    location: {lat: 9.68, lon: 39.53}
+    span: {start: 1434, end: 1468}
+    lenses: [religion, governance, language]
+    summary: >
+      Written for King Zara Yaqob, this Ge'ez book lays out his church rules and attacks the spirit cults of Dask and
+      Dino. It is the best surviving description of non-Christian religion in the highlands, written by its enemy.
+    detail: >
+      Edited by Conti Rossini and Ricci (CSCO, 1964-65). Pankhurst credits Zara Yaqob with Mashafa Berhan, Mashafa Milad
+      and Mashafa Selassie; Ullendorff only the first two. Label point Debre Berhan, his capital after 1456. HAPP: author is
+      the king or his clerics; audience clergy and officials; purpose enforce uniformity; point of view royal-orthodox.
+    image_hint: "No open image known; use Debre Berhan Selassie church photo from Wikimedia Commons"
+    evidence: [src-mashafa-berhan, src-solomon-gebreyes-practices, src-wikipedia-zara-yaqob]
+    confidence: medium
+
+  - id: ex-zeila-qiblatayn
+    name: Masjid al-Qiblatayn and the medieval port of Zeila
+    place: pl-zeila
+    location: {lat: 11.353, lon: 43.473}
+    span: {start: 1200, end: null, approx: true}
+    lenses: [architecture, religion]
+    summary: >
+      Zeila's ruins include an old mosque with two prayer niches, one facing Jerusalem and one facing Mecca. Imported
+      Islamic and Chinese pottery found there shows how far the port's trade reached.
+    detail: >
+      Survey (Fauvelle et al.) estimated a ~50 ha medieval site with at least three old mosques and coral-limestone tombs;
+      finds of local pottery and imported Islamic and Chinese wares from the 13th-18th centuries helped date building
+      phases. Local tradition dates the Qiblatayn mosque to the Prophet's lifetime; the archaeology does not support so
+      early a date for the standing building. The start year is approximate.
+    image_hint: "Wikimedia Commons search: Zeila mosque"
+    evidence: [src-fauvelle-zeyla-archaeology, src-africanhistoryextra-zeila]
+    confidence: medium
+
+  - id: ex-amharic-soldier-songs
+    name: Amharic soldiers' songs for Amda Seyon
+    place: pl-ethiopia-solomonic
+    location: {lat: 10.5, lon: 39.2}
+    span: {start: 1314, end: 1344, approx: true}
+    lenses: [language, art-music]
+    summary: >
+      A few songs praising King Amda Seyon are usually called the oldest texts in Amharic, the court's spoken language,
+      beside Ge'ez, the language of church and books. The oldest surviving copy was made around 1600, so their 1300s
+      date rests on tradition.
+    detail: >
+      Composed in his reign per standard accounts (Wikipedia: four soldiers' songs; Britannica: hymns praising him), but
+      the manuscript that preserves the royal songs (Oxford, Bodleian Bruce 88) is late 16th or early 17th century
+      (Hamburg Amharic summer-school slides date it 1610-1632, and date Amharic texts from about the 16th century). So
+      the 14th-century date rests on attribution, not on a 14th-century copy. Amharic's role as "lessana negus" (language
+      of the king) is the reason the songs exist at all.
+    image_hint: "No open image known"
+    evidence: [src-wikipedia-amda-seyon, src-hamburg-amharic-slides]
+    confidence: low
+
+events:
+  - id: ev-lalibela-new-jerusalem
+    year: 1200
+    approx: true
+    place: pl-lalibela
+    title: King Lalibela's New Jerusalem
+    keyframe: true
+    lenses: [religion, architecture]
+    summary: >
+      Ethiopian tradition says King Lalibela, who ruled around 1181-1221, turned his capital Roha into a holy city modeled
+      on Jerusalem, with churches cut from the rock. Archaeologists think the carving took several phases, and Ethiopians
+      still go there on pilgrimage today.
+    detail: >
+      Reign about 1181-1221; land grants of 1204 and 1225 survive. The year is a label for his reign, not a construction
+      date; see ex-lalibela-churches for the phasing debate.
+    evidence: [src-unesco-whc-lalibela, src-windmuller-luna-met-lalibela, src-lalibela-land-grants]
+    confidence: medium
+    ap_topics: ["1.5", "2.5"]
+
+  - id: ev-yekuno-amlak-1270
+    year: 1270
+    approx: false
+    place: pl-ethiopia-solomonic
+    title: Yekuno Amlak takes the throne; the Solomonic dynasty begins
+    keyframe: true
+    lenses: [religion, governance]
+    summary: >
+      Yekuno Amlak, a lord from Amhara, defeated the last Zagwe king in 1270 and founded a new dynasty. His successors
+      claimed descent from Solomon and Sheba and called their rise a "restoration."
+    detail: >
+      Battle of Ansata. Taddesse Tamrat argued the last Zagwe king was Yetbarak, whose name the records erased;
+      Getatchew Mekonnen Hasen names Na'akueto La'ab. Tradition calls the Zagwe king Za-Ilmaknun ('the unknown'). Yekuno
+      Amlak had aid from the Muslim sultanate of Shewa and wrote to Baybars in 1273 for an abun. The "restoration"
+      language is the dynasty's own; to the Zagwe it was a usurpation.
+    evidence: [src-tamrat-church-state, src-wikipedia-yekuno-amlak]
+    confidence: medium
+    ap_topics: ["1.5"]
+
+  - id: ev-mamluk-sack-dongola
+    year: 1276
+    approx: false
+    place: pl-dongola
+    title: Mamluk army sacks Dongola
+    keyframe: true
+    lenses: [religion, governance]
+    summary: >
+      In 1276 an army sent by the Mamluk sultan Baybars defeated King David of Makuria and sacked Dongola. From then on
+      Egypt's sultans chose or removed Nubia's kings and taxed its Christians.
+    detail: >
+      The Mamluk army set out on 20 January 1276 (Wikipedia, citing Seignobos), took Gebel Adda and Meinarti, and defeated
+      David's army at Dongola in spring 1276. The campaign followed King David's 1272 raid on Aidhab. David fled to
+      al-Abwab, whose king Adur handed him over; he died a prisoner in Cairo. Mashkouda was installed on 4 June 1276 and
+      swore fealty to Baybars. Arabic narratives (al-Mufaddal, al-Nuwayri) are the conqueror's record.
+    evidence: [src-seignobos-nubia-mamluks, src-al-nuwayri-nihaya, src-wikipedia-makuria, src-wikipedia-al-abwab]
+    confidence: high
+    ap_topics: ["1.2", "1.5"]
+
+  - id: ev-dongola-mosque-1317
+    year: 1317
+    approx: false
+    place: pl-dongola
+    title: Throne hall becomes a mosque under Makuria's first Muslim king
+    keyframe: true
+    lenses: [religion, architecture, governance]
+    summary: >
+      On 29 May 1317, the royal throne hall in Dongola was turned into a mosque under Abdallah Barshambu, a Muslim prince
+      put on the throne by the Mamluks. Months later he was killed, but the building stayed a mosque.
+    detail: >
+      See ex-dongola-throne-hall-mosque. Barshambu is also spelled Barshanbu. Killed by Kanz al-Dawla, who took the
+      throne himself. Neither later Christian nor Muslim kings restored the hall's royal function (Mamluk pressure).
+      Teaching point: a mosque at the top does not mean a Muslim country; Dongola's churches kept working for another 150
+      years.
+    evidence: [src-dongola-mosque-stela, src-wikipedia-throne-hall-dongola, src-godlewski-dongola-social-change, src-seignobos-nubia-mamluks]
+    confidence: high
+    ap_topics: ["1.2", "1.5", "2.5"]
+
+  - id: ev-amda-seyon-ifat-1332
+    year: 1332
+    approx: true
+    place: pl-ifat
+    title: Amda Seyon's war with Ifat
+    keyframe: true
+    lenses: [religion, governance]
+    summary: >
+      King Amda Seyon defeated Ifat and the Muslim states of the eastern highlands and made them pay tribute. A Ge'ez
+      chronicle celebrates his campaign as a holy war; Arabic writers in Cairo describe Muslims suffering under it.
+    detail: >
+      Trigger (per chronicle): Ifat's sultan Haqq al-Din killed the royal envoy Ti'yintay amid tension over Mamluk
+      persecution of Copts (1320-22). Sabr al-Din's revolt and the campaign through Adal: 1332 (Dillmann, Conti Rossini,
+      Cerulli) or 1329 (Huntingford). The Chronicle of Amda Seyon is a royal text, possibly composed or reworked in the
+      15th century; Marrassini reads it as a church homily with propaganda purpose. Not a crusade: a regional war over
+      trade routes, tribute and the treatment of co-religionists, framed in religious terms by both sides.
+    evidence: [src-chronicle-amda-seyon, src-wikipedia-amda-seyon, src-tamrat-church-state, src-al-umari-masalik]
+    confidence: medium
+    ap_topics: ["1.2", "1.5", "1.7"]
+
+  - id: ev-dongola-court-leaves-1365
+    year: 1365
+    approx: true
+    place: pl-makuria
+    title: Civil war; the Makurian court leaves Dongola for Daw
+    keyframe: false
+    lenses: [governance, population]
+    summary: >
+      After a civil war in which Arab allies and a Mamluk army took part, the Makurian court abandoned Dongola and moved
+      north to Daw in Lower Nubia. The kingdom, now called Dotawo in its documents, survived there in smaller form.
+    detail: >
+      1365 civil war; Mamluks withdrew in early 1366 without retaking Dongola (Werner 2013 via Wikipedia). Godlewski: the
+      transfer is described in Arab sources for the second half of the 14th century; Daw is often identified with Gebel Adda.
+      The town at Dongola continued, partly settled by the Banu Ja'd per some accounts.
+    evidence: [src-werner-christentum-nubien, src-wikipedia-makuria, src-godlewski-dongola-social-change, src-heritagedaily-dongola]
+    confidence: medium
+    ap_topics: ["1.5"]
+
+  - id: ev-timotheos-consecrated
+    year: 1371
+    approx: true
+    place: pl-qasr-ibrim
+    title: Bishop Timotheos consecrated for Nubia
+    keyframe: false
+    lenses: [religion]
+    summary: >
+      The Coptic patriarch in Egypt consecrated a Nubian monk named Timotheos as bishop for Faras and Qasr Ibrim. He is the
+      last Nubian bishop we know of.
+    detail: >
+      19 November 1371 (British Museum) or 1372 (Wikipedia, following other sources). See ex-timotheos-scrolls.
+    evidence: [src-timotheos-scrolls, src-british-museum-timotheos-cross]
+    confidence: high
+    ap_topics: ["2.5"]
+
+  - id: ev-sad-al-din-killed
+    year: 1403
+    approx: true
+    place: pl-zeila
+    title: Sultan Sa'd al-Din of Ifat killed near Zeila
+    keyframe: false
+    lenses: [governance, religion]
+    summary: >
+      Christian forces pursued Ifat's sultan Sa'd al-Din toward the coast and killed him, in 1403 or 1415 depending on
+      the source. His sons fled to Yemen and later returned to found the sultanate of Adal.
+    detail: >
+      Date disputed: al-Maqrizi gives 1402/3 (under Dawit I); Cerulli and others 1414/15 (under Yeshaq). Some recent work
+      doubts the Zeila invasion account. Somali tradition remembers Sa'd al-Din at Saad Din island off Zeila, where a tomb
+      is attributed to him. Ethiopian royal hymns celebrate the victory; al-Maqrizi treats Sa'd al-Din as a martyr.
+    evidence: [src-al-maqrizi-ilmam, src-wikipedia-walashma, src-africanhistoryextra-zeila]
+    confidence: medium
+    ap_topics: ["1.2", "1.5"]
+
+  - id: ev-yeshaq-beta-israel
+    year: 1420
+    approx: true
+    place: pl-beta-israel
+    title: Yeshaq's war in Wegera and the land-for-baptism decree
+    keyframe: false
+    lenses: [religion, social]
+    summary: >
+      King Yeshaq defeated a Beta Israel revolt at Kossoge, and Ethiopian accounts and Beta Israel memory say he ruled
+      that only baptized Christians could inherit land. Many Beta Israel are remembered as losing their land rather
+      than give up their faith.
+    detail: >
+      Yeshaq reigned 1414-1429/30; he built Debre Yeshaq church to mark the victory. Decree reported from Ethiopian
+      accounts and oral tradition (Kaplan, via Wikipedia). One proposed origin of "Falasha" (landless, wanderer).
+    evidence: [src-wikipedia-yeshaq, src-wikipedia-jews-ethiopia, src-kaplan-beta-israel]
+    confidence: medium
+    ap_topics: ["1.5"]
+
+  - id: ev-council-florence-1441
+    year: 1441
+    approx: false
+    place: pl-ethiopia-solomonic
+    title: Ethiopian delegates at the Council of Florence
+    keyframe: false
+    lenses: [religion]
+    summary: >
+      Ethiopian monks attended the Council of Florence in Italy in 1441. It was one of the first direct meetings between
+      the Ethiopian church and the pope's church.
+    detail: >
+      See df-ethiopian-delegates-florence for who sent them and the Prester John confusion.
+    evidence: [src-wikipedia-zara-yaqob, src-tsehai-dacb-zara-yaqob]
+    confidence: medium
+    ap_topics: ["1.7", "2.5"]
+
+  - id: ev-gomit-1445
+    year: 1445
+    approx: false
+    place: pl-adal
+    title: Battle of Gomit; Sultan Badlay of Adal killed
+    keyframe: false
+    lenses: [governance]
+    summary: >
+      Adal's sultan Badlay invaded the Christian kingdom's province of Dawaro and was killed by Zara Yaqob's army at Gomit
+      in 1445. Adal then paid tribute for a time, but rebuilt its strength in the following decades.
+    detail: >
+      After Gomit, Zara Yaqob tightened control over the Sidama kingdoms. Badlay reigned 1433-1445.
+    evidence: [src-wikipedia-zara-yaqob, src-wikipedia-walashma, src-tsehai-dacb-zara-yaqob]
+    confidence: medium
+    ap_topics: ["1.5"]
+
+  - id: ev-debre-mitmaq-1450
+    year: 1450
+    approx: false
+    place: pl-ethiopia-solomonic
+    title: Council of Debre Mitmaq settles the Sabbath dispute
+    keyframe: true
+    lenses: [religion]
+    summary: >
+      At a church council called by Zara Yaqob, the Egyptian bishops accepted that Ethiopian Christians keep both Saturday
+      and Sunday as holy days. It ended a split of about a century that began with the monk Ewostatewos and his followers.
+    detail: >
+      Held at Debre Mitmaq in Tegulet (Shewa). Debre Mitmaq was named after an Egyptian monastery destroyed by Mamluk
+      authorities, which Zara Yaqob protested to Sultan Jaqmaq. Unity came with coercion: the same reign persecuted the
+      Stephanites.
+    evidence: [src-wikipedia-zara-yaqob, src-wikipedia-ewostatewos, src-tamrat-church-state]
+    confidence: high
+    ap_topics: ["2.5"]
+
+sources:
+  # ================= PRIMARY: NUBIA =================
+  - id: src-dongola-mosque-stela
+    title: Arabic foundation stela of the Dongola mosque (DBMNT 611)
+    author: Unknown (issued under Sayf al-Din Abdallah Barshambu)
+    author_from: Dongola, Makuria
+    date: "1317-05-29"
+    kind: primary
+    type: epigraphy
+    voice: insider
+    happ:
+      historical_situation: A Mamluk-installed Muslim prince had just taken the Makurian throne; Mamluk power over Nubia was at its height.
+      audience: Muslims praying in the new mosque, Mamluk officials, and the Dongola court.
+      purpose: Record and sanctify the conversion of the royal hall, and display the new ruler's Islamic legitimacy.
+      point_of_view: The new ruler's and his Mamluk backers'; it does not speak for Dongola's Christian majority.
+    citation: "Marble stela, in situ, Throne Hall, Old Dongola. Database of Medieval Nubian Texts (DBMNT) no. 611; translation in Godlewski 2015 and Crawford 1951."
+    url: https://dbmnt.uw.edu.pl/texts/611/
+    access: open-url
+    verification: web-checked
+    notes: >
+      Voice is insider (produced in Dongola) though the patron depended on Egypt. Web-checked for date, findspot and
+      description only; the translation was not seen. DBMNT flags older misdatings (RCEA, Insoll 2003).
+
+  - id: src-qasr-ibrim-old-nubian-documents
+    title: Old Nubian land sale under King Ioel of Dotawo (DBMNT 644)
+    author: Unknown Nubian scribe
+    author_from: Qasr Ibrim, Nobadia
+    date: "1463-11-14"
+    kind: primary
+    type: documentary
+    voice: insider
+    happ:
+      historical_situation: Late Dotawo; court based in Lower Nubia after the 1365 move from Dongola.
+      audience: The parties, witnesses and officials who would later need proof of ownership.
+      purpose: Record a legal sale of land in the official Nubian protocol.
+      point_of_view: Nubian landholders and officials writing in their own language.
+    citation: "Deed of land sale, Ismale to Ionngoka and Kasla, Qasr Ibrim (Archive 1). DBMNT no. 644; museum no. EA 90225."
+    url: https://www.dbmnt.uw.edu.pl/texts/644/
+    access: open-url
+    verification: web-checked
+    notes: Dating and titles read from the DBMNT record; full text not read.
+
+  - id: src-timotheos-scrolls
+    title: The consecration scrolls of Bishop Timotheos (Coptic and Arabic)
+    author: Patriarch Gabriel IV of Alexandria and his chancery
+    author_from: Cairo, Egypt
+    date: 1371-1372
+    kind: primary
+    type: documentary
+    voice: regional-outsider
+    happ:
+      historical_situation: Coptic patriarchate under Mamluk rule still appointing bishops for a shrinking Nubian church.
+      audience: The clergy and faithful of Nubia, and the bishop himself.
+      purpose: Certify Timotheos's consecration and authority as bishop of Faras with seat at Ibrim.
+      point_of_view: The Coptic church hierarchy in Egypt, the Nubian church's parent body.
+    citation: "J. M. Plumley, The Scrolls of Bishop Timotheos: Two Documents from Medieval Nubia (London: Egypt Exploration Society, 1975)."
+    url: null
+    access: book
+    verification: citation-only
+    notes: Content summarized from British Museum record and Wikipedia; scroll text not read.
+
+  - id: src-dbmnt
+    title: Database of Medieval Nubian Texts (DBMNT)
+    author: Adam Łajtar, Grzegorz Ochała and team (University of Warsaw)
+    author_from: Warsaw, Poland
+    date: ongoing
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Database of Medieval Nubian Texts, University of Warsaw, https://dbmnt.uw.edu.pl"
+    url: https://dbmnt.uw.edu.pl
+    access: open-url
+    verification: web-checked
+    notes: Catalog of inscriptions and documents with dates, findspots and bibliography. Polish (international) project.
+
+  - id: src-al-nuwayri-nihaya
+    title: Nihayat al-arab fi funun al-adab (sections on Nubia)
+    author: Shihab al-Din al-Nuwayri
+    author_from: Upper Egypt / Cairo (Mamluk official)
+    date: c. 1314-1333
+    kind: primary
+    type: chronicle-local
+    voice: regional-outsider
+    happ:
+      historical_situation: Mamluk sultanate at its height, recently intervening repeatedly in Nubia.
+      audience: Mamluk officials and learned readers in Cairo.
+      purpose: Encyclopedic history of the Mamluk state, recording its campaigns.
+      point_of_view: Mamluk chancery official; presents Nubian kings as vassals and rebels.
+    citation: "Al-Nuwayri, Nihayat al-arab; Nubian passages translated in G. Vantini, Oriental Sources Concerning Nubia (Heidelberg and Warsaw, 1975)."
+    url: null
+    access: library
+    verification: needs-library
+    notes: Type is chronicle-local only in the sense of chronicle; voice regional-outsider relative to Nubia. Known here via Wikipedia's citation chain.
+
+  - id: src-ibn-khaldun-ibar
+    title: Kitab al-Ibar (passage on the Arabs in Nubia)
+    author: Ibn Khaldun
+    author_from: Tunis; wrote in the Maghrib and Cairo
+    date: c. 1377-1382
+    kind: primary
+    type: chronicle-local
+    voice: distant-outsider
+    happ:
+      historical_situation: Written after decades of Bedouin movement into Upper Egypt and Nubia, which he never visited.
+      audience: Learned Muslim readers in North Africa and Egypt.
+      purpose: Explain the rise and fall of dynasties through his theory of nomadic group solidarity.
+      point_of_view: North African scholar whose theory makes nomads the drivers of change; likely exaggerates Juhayna conquest.
+    citation: "Ibn Khaldun, Kitab al-Ibar; Nubian passage translated in Vantini, Oriental Sources Concerning Nubia (1975)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: The passage on matrilineal inheritance passing chiefdoms to Arab husbands' sons is widely cited (Yusuf Fadl Hasan, Adams); not read here.
+
+  - id: src-funj-chronicle
+    title: Funj Chronicle (Katib al-Shuna tradition)
+    author: Ahmad Katib al-Shuna and later editors
+    author_from: Sennar region, Sudan
+    date: 19th century compilation
+    kind: primary
+    type: chronicle-local
+    voice: insider
+    happ:
+      historical_situation: Compiled in the Turco-Egyptian period, centuries after Soba's fall.
+      audience: Sudanese readers and officials interested in Funj history.
+      purpose: Record the origins and history of the Funj sultanate.
+      point_of_view: Funj-era and later Muslim Sudanese memory; Soba's fall is the founding story of a new order.
+    citation: "Funj Chronicle; see P. M. Holt, The Sudan of the Three Niles: The Funj Chronicle 910-1288/1504-1871 (Leiden: Brill, 1999)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Known here via the Wikipedia Alodia article's summary of the dating debate.
+
+  - id: src-abu-al-makarim-churches
+    title: History of the Churches and Monasteries (Tarikh al-kana'is wa-l-adyira)
+    author: Abu al-Makarim (formerly attributed to Abu Salih the Armenian)
+    author_from: Egypt (Coptic)
+    date: c. 1200
+    kind: primary
+    type: travel-geography
+    voice: regional-outsider
+    happ:
+      historical_situation: Late Fatimid and Ayyubid Egypt; Coptic church still the parent of the Nubian and Ethiopian churches.
+      audience: Coptic clergy and readers.
+      purpose: Survey churches and monasteries of Egypt and its daughter churches.
+      point_of_view: Coptic writer in Egypt, sympathetic to Nubian and Ethiopian Christians but writing from hearsay.
+    citation: "B. T. A. Evetts, trans., The Churches and Monasteries of Egypt and Some Neighbouring Countries, attributed to Abu Salih the Armenian (Oxford, 1895)."
+    url: null
+    access: library
+    verification: needs-library
+    notes: Cited only for the existence of Alodian churches c. 1200; passage not read.
+
+  # ================= PRIMARY: ETHIOPIA =================
+  - id: src-kebra-nagast
+    title: Kebra Nagast (The Glory of the Kings)
+    author: Yeshaq (nebura'ed of Aksum) and fellow clergy, per the colophon
+    author_from: Aksum, Tigray
+    date: c. 1314-1322
+    kind: primary
+    type: religious-text-local
+    voice: insider
+    happ:
+      historical_situation: Early Solomonic period, a generation after the dynasty seized power from the Zagwe in 1270.
+      audience: The court, clergy and nobility of the Christian kingdom.
+      purpose: Show that Ethiopia's kings descend from Solomon and that God moved the Ark and the covenant to Ethiopia.
+      point_of_view: Tigrayan clergy (possibly under a rebel governor) building a national-religious charter.
+    citation: "E. A. Wallis Budge, trans., The Queen of Sheba and Her Only Son Menyelek (Kebra Nagast) (London, 1922); C. Bezold, Kebra Nagast (Munich, 1905)."
+    url: https://sacred-texts.com/chr/kn/kn000-2.htm
+    access: open-url
+    verification: citation-only
+    notes: Budge's 1922 translation is public domain and online. Colophon and dating details were read in secondary summaries, not in the text.
+
+  - id: src-chronicle-amda-seyon
+    title: Chronicle of Amda Seyon (the "Glorious Victories")
+    author: Anonymous court cleric
+    author_from: Christian kingdom of Ethiopia
+    date: 14th-15th century (date of composition debated)
+    kind: primary
+    type: chronicle-local
+    voice: insider
+    happ:
+      historical_situation: Composed after Amda Seyon's 1329/1332 campaigns, possibly a century later.
+      audience: Royal court and clergy.
+      purpose: Glorify the king as God's champion against Muslim enemies; Marrassini reads it as a homily with a propaganda aim.
+      point_of_view: Christian royal; describes Muslims as enemies of God and puts boasts in the sultan's mouth.
+    citation: "G. W. B. Huntingford, trans., The Glorious Victories of Amda Seyon, King of Ethiopia (Oxford: Clarendon, 1965); P. Marrassini, Lo scettro e la croce (Naples, 1993)."
+    url: https://betamasaheft.eu/works/LIT4275ChronAmdS
+    access: library
+    verification: needs-library
+    notes: Beta maṣāḥǝft record web-checked for editions and dating notes; the text itself was not read.
+
+  - id: src-chronicle-zara-yaqob
+    title: Chronicle of Zara Yaqob
+    author: Anonymous court chronicler(s)
+    author_from: Christian kingdom of Ethiopia
+    date: late 15th century
+    kind: primary
+    type: chronicle-local
+    voice: insider
+    happ:
+      historical_situation: Written during or after a reign of forceful religious reform and heresy trials.
+      audience: Royal court and clergy.
+      purpose: Record and justify the king's deeds, including punishment of dissenters.
+      point_of_view: Royal and orthodox; calls dissenters breakers of the faith's unity.
+    citation: "J. Perruchon, Les chroniques de Zar'a Ya'eqob et de Ba'eda Maryam, rois d'Éthiopie de 1434 à 1478 (Paris, 1893)."
+    url: null
+    access: library
+    verification: needs-library
+    notes: Known via DACB bibliography and Wikipedia; not read.
+
+  - id: src-mashafa-berhan
+    title: Mashafa Berhan (Book of Light)
+    author: Zara Yaqob (attributed) and court clergy
+    author_from: Christian kingdom of Ethiopia (Shewa)
+    date: 1434-1468
+    kind: primary
+    type: religious-text-local
+    voice: insider
+    happ:
+      historical_situation: Mid-15th-century campaign to impose a single orthodoxy and stamp out spirit cults.
+      audience: Clergy and officials who would enforce the king's rules; also read in churches.
+      purpose: Lay down church rules, condemn the cults of Dask and Dino, defend the king's reforms.
+      point_of_view: The king's; describes non-Christian practice only as its enemy.
+    citation: "C. Conti Rossini and L. Ricci, eds. and trans., Il Mashafa Berhan e il Mashafa Milad, CSCO (Louvain, 1964-65)."
+    url: null
+    access: library
+    verification: needs-library
+    notes: Content known via Solomon Gebreyes Beyene (2022).
+
+  - id: src-gadla-estifanos
+    title: Gadla Estifanos (Acts of Abba Estifanos of Gwendagwende)
+    author: Stephanite monks
+    author_from: Gunda Gunde, Tigray
+    date: 15th-16th century
+    kind: primary
+    type: religious-text-local
+    voice: insider
+    happ:
+      historical_situation: Written by a persecuted monastic movement after the death of its founder (c. 1450).
+      audience: Stephanite monks and supporters.
+      purpose: Commemorate the founder as a martyr and justify refusing the king's demands.
+      point_of_view: Dissenting Ethiopian Orthodox monks; hostile to Zara Yaqob.
+    citation: "Getatchew Haile, ed. and trans., The Ge'ez Acts of Abba Estifanos of Gwendagwende, CSCO 620 (Louvain: Peeters, 2006)."
+    url: null
+    access: library
+    verification: needs-library
+    notes: Edited and translated by Getatchew Haile (Ethiopian scholar, Hill Museum & Manuscript Library). Known here via Wikipedia.
+
+  - id: src-gadla-lalibela
+    title: Gadla Lalibela (Acts of King Lalibela)
+    author: Anonymous Ethiopian hagiographer
+    author_from: Lasta, Ethiopia
+    date: later than his reign (15th century often proposed)
+    kind: primary
+    type: religious-text-local
+    voice: insider
+    happ:
+      historical_situation: Composed after Lalibela was venerated as a saint, under the Solomonic dynasty that replaced his line.
+      audience: Clergy and pilgrims at Lalibela; liturgical reading on his feast.
+      purpose: Celebrate the king as a saint whose churches were made with angels' help.
+      point_of_view: Ethiopian Orthodox devotional; supernatural account of building.
+    citation: "J. Perruchon, Vie de Lalibala, roi d'Éthiopie (Paris, 1892)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Composition date not confirmed in sources seen; Wikipedia only calls it later than the events.
+
+  - id: src-gadla-takla-haymanot
+    title: Gadla Takla Haymanot (Acts of Tekle Haymanot)
+    author: Monks of Waldebba (Abba Samuel) and of Debre Libanos (several recensions)
+    author_from: Waldebba and Debre Libanos, Ethiopia
+    date: first quarter of the 15th century to early 16th century
+    kind: primary
+    type: religious-text-local
+    voice: insider
+    happ:
+      historical_situation: Composed a century or more after the saint's death, as Debre Libanos rose in power.
+      audience: Monks, clergy and patrons of Debre Libanos and allied houses.
+      purpose: Glorify the founder and his monastery, including a role in the 1270 dynasty change.
+      point_of_view: Debre Libanos's own; Taddesse Tamrat treats its political claims as later inventions.
+    citation: "E. A. Wallis Budge, The Life of Takla Haymanot (London, 1906); dating per Huntingford, via Wikipedia."
+    url: null
+    access: library
+    verification: citation-only
+    notes: null
+
+  - id: src-lalibela-land-grants
+    title: Land grants of King Lalibela (1204, 1225)
+    author: Zagwe royal chancery
+    author_from: Zagwe kingdom
+    date: 1204-1225
+    kind: primary
+    type: documentary
+    voice: insider
+    happ:
+      historical_situation: Zagwe kingship at its height, endowing churches.
+      audience: Churches receiving land, local officials and peasants who owed dues.
+      purpose: Record grants of land and revenue to churches.
+      point_of_view: The king's; shows obligations of peasants without their voice.
+    citation: "Grants edited by C. Conti Rossini; discussed in M.-L. Derat's chapter in Bosc-Tiessé and Derat, eds., Lalibela (2019)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Known via Wikipedia (Zagwe dynasty, Lalibela) and Gnisci's review.
+
+  - id: src-te-ezaza-sanbat
+    title: Te'ezaza Sanbat (Commandments of the Sabbath)
+    author: Beta Israel tradition (attributed in part to Abba Sabra / Saga Amlak circle)
+    author_from: Beta Israel communities, northwestern Ethiopia
+    date: uncertain (14th-16th centuries proposed)
+    kind: primary
+    type: religious-text-local
+    voice: insider
+    happ:
+      historical_situation: Composed in the period when Beta Israel religious life was organized around monks.
+      audience: Beta Israel priests (qessotch) and monks.
+      purpose: Teach Sabbath observance and its sanctity.
+      point_of_view: Beta Israel religious leadership.
+    citation: "W. Leslau, Falasha Anthology (New Haven: Yale University Press, 1951), includes a translation."
+    url: null
+    access: library
+    verification: needs-library
+    notes: Cited from memory of the literature; date and attribution not verified here. Flagged in final report.
+
+  - id: src-elijah-ferrara-letter
+    title: Letter of Elijah of Ferrara to his children (Jerusalem)
+    author: Elijah of Ferrara
+    author_from: Ferrara, Italy (living in Jerusalem)
+    date: 1435
+    kind: primary
+    type: documentary
+    voice: distant-outsider
+    happ:
+      historical_situation: Italian rabbi in Mamluk Jerusalem meeting Jews from many lands.
+      audience: His family in Italy.
+      purpose: Report news from Jerusalem, including a meeting with an Ethiopian Jew.
+      point_of_view: Rabbinic Jew comparing Ethiopian practice to Karaite and Rabbinic norms.
+    citation: "Letter of Elijah of Ferrara, 1435; cited in Wikipedia, History of the Jews in Ethiopia."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Earliest Jewish outsider report of a Beta Israel individual in this window.
+
+  - id: src-ejhc-beta-israel-traditions
+    title: About Ethiopian Jewry (community traditions of origin and history)
+    author: Ethiopian Jewry Heritage Center
+    author_from: Israel (Ethiopian-Israeli community institution)
+    date: accessed 2026
+    kind: primary
+    type: oral-tradition
+    voice: insider
+    happ:
+      historical_situation: Modern heritage institution recording the community's memory after aliyah.
+      audience: Israeli public, community members, visitors.
+      purpose: Preserve and present Beta Israel identity and history.
+      point_of_view: The community's own; rejects the Agaw-convert theory; affirms descent from ancient Israel.
+    citation: "Ethiopian Jewry Heritage Center, 'About Ethiopian Jewry', https://ethiopianjhc.org.il/en/?p=71"
+    url: https://ethiopianjhc.org.il/en/?p=71
+    access: open-url
+    verification: web-checked
+    notes: >
+      A modern institutional summary of oral traditions, not a medieval transcription; used because it is the community
+      speaking for itself. Lists the Egypt-Nile route, Dan, Menelik, the Gideonite kingdom, Judith, Abba Sabra and Saga Amlak.
+
+  # ================= PRIMARY: OUTSIDERS ON THE HORN =================
+  - id: src-al-umari-masalik
+    title: Masalik al-absar fi mamalik al-amsar (section on the Muslim kingdoms of the Habasha)
+    author: Ibn Fadl Allah al-Umari
+    author_from: Damascus; Mamluk chancery in Cairo
+    date: c. 1338-1349
+    kind: primary
+    type: travel-geography
+    voice: regional-outsider
+    happ:
+      historical_situation: Written in Cairo soon after Amda Seyon's wars made the Muslim states tributary.
+      audience: Mamluk officials and chancery staff.
+      purpose: Inform Mamluk diplomacy about the world's kingdoms, including Muslims under Christian pressure.
+      point_of_view: Mamluk official relying on Zeila scholars (Abdallah al-Zayla'i) and merchants (al-Hajj Faraj al-Funi); sympathetic to Muslims of the Horn.
+    citation: "Al-Umari, Masalik al-absar, French trans. M. Gaudefroy-Demombynes, L'Afrique moins l'Égypte (Paris, 1927); Hadiya passage trans. K. Peloquin and H. Barker, medievalslavery.org."
+    url: https://medievalslavery.org/?p=4049
+    access: open-url
+    verification: citation-only
+    notes: Web-checked for the Hadiya and eunuch passage and informants only; other claims via secondary summaries.
+
+  - id: src-ibn-battuta-rihla
+    title: Tuhfat al-nuzzar (the Rihla), passage on Zeila
+    author: Ibn Battuta (dictated to Ibn Juzayy)
+    author_from: Tangier, Morocco
+    date: 1355-1356 (visit 1331)
+    kind: primary
+    type: travel-geography
+    voice: distant-outsider
+    happ:
+      historical_situation: Sailing down the Red Sea and East African coast in 1331.
+      audience: Marinid sultan Abu Inan and his court in Fez.
+      purpose: Record and entertain; display the reach of Islam and the author's learning.
+      point_of_view: Maliki jurist from Morocco judging an unfamiliar port by his own tastes and norms.
+    citation: "Ibn Battuta, Travels in Asia and Africa 1325-1354, trans. H. A. R. Gibb (London: Broadway House, 1929), via Fordham Internet Medieval Sourcebook."
+    url: https://sourcebooks.web.fordham.edu/source/ibnbattuta-africa14C.asp
+    access: open-url
+    verification: web-checked
+    notes: Shared id with other module files. Zeila passage web-checked (stench of fish and camel blood).
+
+  - id: src-al-maqrizi-ilmam
+    title: Al-Ilmam bi-akhbar man bi-ard al-Habasha min muluk al-Islam
+    author: Taqi al-Din al-Maqrizi
+    author_from: Cairo, Egypt
+    date: c. 1435-1438
+    kind: primary
+    type: chronicle-local
+    voice: regional-outsider
+    happ:
+      historical_situation: Written in Cairo while Adal's sultans fought the Christian kingdom and sought Mamluk support.
+      audience: Learned Muslim readers in Cairo.
+      purpose: Record the history of the Muslim kings of the Habasha, presenting them as defenders of Islam.
+      point_of_view: Cairene Sunni scholar sympathetic to the Walasma; hostile to the Christian kings and to Muslims who served them.
+    citation: "Al-Maqrizi, al-Ilmam; summarized in Trimingham, Islam in Ethiopia (1952), and cited in Wikipedia, Walashma dynasty."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Source of the 1402/3 date for Sa'd al-Din's death and the al-Tabingha story. Not read directly.
+
+  # ================= ARCHAEOLOGY / MATERIAL =================
+  - id: src-faras-cathedral-paintings
+    title: Faras cathedral wall paintings (Polish excavations 1960-1964)
+    author: Kazimierz Michałowski and the Polish Centre of Mediterranean Archaeology
+    author_from: Warsaw, Poland
+    date: 1964-1974 (publications)
+    kind: secondary
+    type: archaeology
+    voice: scholar-international
+    citation: "K. Michałowski, Faras: Wall Paintings in the Collection of the National Museum in Warsaw (Warsaw, 1974); summary via Wikipedia, Faras."
+    url: https://en.wikipedia.org/wiki/Faras
+    access: library
+    verification: citation-only
+    notes: Wikipedia summary was read; the Michałowski volumes were not.
+
+  - id: src-british-museum-timotheos-cross
+    title: Iron benedictional cross of Bishop Timotheos (EA71955)
+    author: British Museum curatorial record
+    author_from: London, UK
+    date: accessed 2026
+    kind: secondary
+    type: material-culture
+    voice: scholar-international
+    citation: "British Museum, EA71955, collection online."
+    url: https://www.britishmuseum.org/collection/object/Y_EA71955
+    access: open-url
+    verification: web-checked
+    notes: Gives consecration date 19 November 1371.
+
+  - id: src-fauvelle-zeyla-archaeology
+    title: "Le port de Zeyla et son arrière-pays au Moyen Âge"
+    author: François-Xavier Fauvelle-Aymar, Bertrand Hirsch, Amélie Chekroun and others
+    author_from: France (CNRS / Université Paris 1)
+    date: 2011
+    kind: secondary
+    type: archaeology
+    voice: scholar-international
+    citation: "F.-X. Fauvelle-Aymar et al., 'Le port de Zeyla et son arrière-pays au Moyen Âge', in Espaces musulmans de la Corne de l'Afrique au Moyen Âge (Paris/Addis Ababa: CFEE / De Boccard, 2011)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Known via the africanhistoryextra Zeila synthesis; title and volume from memory, check before citing.
+
+  # ================= SECONDARY: AFRICAN AND REGIONAL SCHOLARS =================
+  - id: src-tamrat-church-state
+    title: Church and State in Ethiopia, 1270-1527
+    author: Taddesse Tamrat
+    author_from: Addis Ababa, Ethiopia (Addis Ababa University; Institute of Ethiopian Studies)
+    date: 1972
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "Taddesse Tamrat, Church and State in Ethiopia, 1270-1527 (Oxford: Clarendon Press, 1972). Based on SOAS PhD thesis (1968), open access at https://doi.org/10.25501/SOAS.00028644."
+    url: https://doi.org/10.25501/SOAS.00028644
+    access: library
+    verification: citation-only
+    notes: >
+      The foundational work for the Solomonic sections. The SOAS thesis abstract was read (web-checked for its overall
+      argument); specific claims attributed to Taddesse Tamrat here come via secondary summaries. The teacher should check
+      chapters on Amda Seyon, the monastic movements, Ewostatewos and Zara Yaqob in a library copy.
+
+  - id: src-tamrat-unesco-horn
+    title: "The Horn of Africa: the Solomonids in Ethiopia and the states of the Horn of Africa"
+    author: Taddesse Tamrat
+    author_from: Addis Ababa, Ethiopia
+    date: 1984
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "T. Tamrat, ch. 17 in D. T. Niane, ed., UNESCO General History of Africa IV (Paris/Berkeley: UNESCO/Heinemann/University of California Press, 1984), pp. 423-454."
+    url: null
+    access: library
+    verification: needs-library
+    notes: Chapter number, title and opening page (423) confirmed from the table of contents; body not read.
+
+  - id: src-unesco-gha-vol4
+    title: General History of Africa IV. Africa from the Twelfth to the Sixteenth Century
+    author: D. T. Niane (ed.)
+    author_from: Guinea / Senegal; UNESCO International Scientific Committee
+    date: 1984
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "D. T. Niane, ed., UNESCO General History of Africa IV (Paris: UNESCO, 1984); Portuguese ed. via projetos.uel.br."
+    url: https://projetos.uel.br/bibliotecacomum/bc-texto/obras/ue000321.pdf
+    access: open-url
+    verification: web-checked
+    notes: >
+      Shared id. Only the front matter and Niane's introduction (ch. 1) were read in this research: it describes Ethiopian
+      Christianity as particularly African and absorbing older practices, and ties Lalibela's New Jerusalem to the break
+      with Alexandria. Chapters 16-17 not read.
+
+  - id: src-kropacek-unesco-nubia
+    title: "Nubia from the late 12th century to the Funj conquest in the early 15th century"
+    author: Luboš Kropáček
+    author_from: Prague, Czechoslovakia
+    date: 1984
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "L. Kropáček, ch. 16 in D. T. Niane, ed., UNESCO General History of Africa IV (1984), pp. 398-422."
+    url: null
+    access: library
+    verification: needs-library
+    notes: Note that the UNESCO chapter title dates the Funj conquest to the early 15th century; the Portuguese TOC says early 16th. The 16th is correct (Funj sultanate 1504-05); the English title as summarized may be a transcription error. Check.
+
+  - id: src-sergew-hable-sellassie-ancient-medieval
+    title: Ancient and Medieval Ethiopian History to 1270
+    author: Sergew Hable Sellassie
+    author_from: Addis Ababa, Ethiopia
+    date: 1972
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "Sergew Hable Sellassie, Ancient and Medieval Ethiopian History to 1270 (Addis Ababa: United Printers, 1972)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Standard Ethiopian survey of the Zagwe period; cited by Wikipedia's Zagwe and Lalibela articles.
+
+  - id: src-hussein-ahmed-historiography-islam
+    title: "Work on Islam in Ethiopian historiography, incl. 'Coexistence and/or Confrontation?: Towards a Reappraisal of Christian-Muslim Encounter in Contemporary Ethiopia'"
+    author: Hussein Ahmed
+    author_from: Addis Ababa, Ethiopia (Addis Ababa University)
+    date: 2001-2006
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "Hussein Ahmed, Islam in Nineteenth-Century Wallo, Ethiopia (Leiden: Brill, 2001), introduction; and 'Coexistence and/or Confrontation?', Journal of Religion in Africa 36 (2006)."
+    url: null
+    access: library
+    verification: needs-library
+    notes: >
+      Cited for his historiographical argument that Ethiopian history treated Muslims as outsiders. His work is mostly on
+      the 19th-20th centuries; the citation details are from memory and must be checked. Flagged in final report.
+
+  - id: src-mohammed-hassen-oromo
+    title: The Oromo of Ethiopia, a History 1570-1860; and The Oromo and the Christian Kingdom of Ethiopia, 1300-1700
+    author: Mohammed Hassen
+    author_from: Ethiopia (Oromo historian; Georgia State University)
+    date: 1990, 2015
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "Mohammed Hassen, The Oromo and the Christian Kingdom of Ethiopia, 1300-1700 (Woodbridge: James Currey, 2015)."
+    url: null
+    access: library
+    verification: needs-library
+    notes: Argues some Oromo groups were present in the southern highlands before the 16th-century expansion, against the older narrative. Cited here to explain why Waaqa is NOT mapped before 1450 except as a debate.
+
+  - id: src-solomon-gebreyes-practices
+    title: "Pagan Religious Practices in Medieval Ethiopia: Development and Resistance of the Christian Kingdom (1434-1468)"
+    author: Solomon Gebreyes Beyene
+    author_from: Ethiopia (Ethiopian scholar; Hamburg / Ethiopian universities)
+    date: 2022
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "Solomon Gebreyes Beyene, 'Pagan Religious Practices in Medieval Ethiopia...', Entangled Religions 11.5 (2022)."
+    url: https://ojs.ub.rub.de/index.php/ER/article/download/9864/9429/8611?inline=1
+    access: open-url
+    verification: web-checked
+    notes: >
+      Key open-access source for Dask, Dino and the 15th-century campaign. Uses the word "pagan" in its title; this file
+      does not repeat it outside the citation. Author's institutional affiliation not confirmed.
+
+  - id: src-tsehai-dacb-zara-yaqob
+    title: Zara Yakub (Dictionary of African Christian Biography)
+    author: Tsehai Berhane Selassie
+    author_from: Ethiopia
+    date: 1997 (reprinted DACB)
+    kind: secondary
+    type: reference
+    voice: scholar-from-region
+    citation: "Tsehai Berhane Selassie, 'Zara Yakub', Encyclopaedia Africana Dictionary of African Biography vol. 1 (1977/1997), reprinted in DACB."
+    url: https://dacb.org/stories/ethiopia/zara-yakub/
+    access: open-url
+    verification: web-checked
+    notes: null
+
+  - id: src-yusuf-fadl-hasan-arabs-sudan
+    title: The Arabs and the Sudan from the Seventh to the Early Sixteenth Century
+    author: Yusuf Fadl Hasan
+    author_from: Sudan (University of Khartoum)
+    date: 1967
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "Yusuf Fadl Hasan, The Arabs and the Sudan from the Seventh to the Early Sixteenth Century (Edinburgh: Edinburgh University Press, 1967)."
+    url: null
+    access: library
+    verification: needs-library
+    notes: Classic Sudanese account of Arab migration, intermarriage and gradual Islamization. Not read; check its treatment of Ibn Khaldun's matrilineal passage.
+
+  - id: src-zarroug-alwa
+    title: The Kingdom of Alwa
+    author: Mohi el-Din Abdalla Zarroug
+    author_from: Sudan
+    date: 1991
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "Mohi el-Din Abdalla Zarroug, The Kingdom of Alwa (Calgary: University of Calgary Press, 1991)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Reviewer (Hill) notes it relies on models from later states and covers research only to 1981.
+
+  - id: src-elzein-islamic-archaeology-sudan
+    title: Islamic Archaeology in the Sudan
+    author: Intisar Soghayroun Elzein
+    author_from: Sudan (University of Khartoum)
+    date: 2004
+    kind: secondary
+    type: archaeology
+    voice: scholar-from-region
+    citation: "Intisar Soghayroun Elzein, Islamic Archaeology in the Sudan, BAR International Series S1289 (Oxford: Archaeopress, 2004)."
+    url: https://barpublishing.com/islamic-archaeology-in-the-sudan.html
+    access: library
+    verification: citation-only
+    notes: Publisher description read; argues for Sunni influence via Egypt and Sufi influence via the Red Sea.
+
+  - id: src-tigab-bezie-jerusalem
+    title: The Ethiopian religious community and its ancient monastery, Dier es Sultan in Jerusalem, from foundation to 1850s
+    author: Tigab Bezie
+    author_from: Ethiopia
+    date: 2013
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "Tigab Bezie, Journal of Ethiopian Church Studies 3 (2013): 53-63."
+    url: https://journals.eotcmk.org/index.php/files/article/view/20
+    access: open-url
+    verification: citation-only
+    notes: Abstract read only.
+
+  - id: src-tiruneh-kebra-nagast
+    title: Kebra Nagast (World Epics project entry) and articles on its dating
+    author: Gizachew Tiruneh
+    author_from: Ethiopia (University of Central Arkansas)
+    date: 2014-2015
+    kind: secondary
+    type: scholarship
+    voice: scholar-from-region
+    citation: "Gizachew Tiruneh, 'Kebra Nagast', World Epics, Columbia University, https://edblogs.columbia.edu/worldepics/project/kebra-nagast"
+    url: https://edblogs.columbia.edu/worldepics/project/kebra-nagast
+    access: open-url
+    verification: web-checked
+    notes: Argues the Arabic text may be older than the Ge'ez; a minority position.
+
+  # ================= SECONDARY: INTERNATIONAL =================
+  - id: src-godlewski-dongola-social-change
+    title: Archaeological and architectural evidence of social change in 13th-17th century Dongola
+    author: Włodzimierz Godlewski
+    author_from: Warsaw, Poland (PCMA)
+    date: 2018
+    kind: secondary
+    type: archaeology
+    voice: scholar-international
+    citation: "W. Godlewski, Polish Archaeology in the Mediterranean 27/1 (2018): 617-643."
+    url: https://api.sopw.openform.pl/open/journal_article_files/019cd9b2-34b4-732e-badd-6b68522e5ffc/download
+    access: open-url
+    verification: web-checked
+    notes: "Polish excavator of Dongola since the 1960s; argues Dongola stayed Christian through the 15th century. Does not mention Barshambu."
+
+  - id: src-seignobos-nubia-mamluks
+    title: Articles on Nubia and the Mamluks (1270s-1320s)
+    author: Robin Seignobos
+    author_from: France
+    date: 2018-2023
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "R. Seignobos, 'La liste des conquêtes nubiennes de Baybars...' (2018) and 'Kanz al-Dawla...', Médiévales 79 (2020): 137-160; via Wikipedia, Makuria."
+    url: null
+    access: library
+    verification: citation-only
+    notes: "Event dates come from Wikipedia (Makuria) citing Seignobos: 20 Jan 1276 is the Mamluk army's departure (the battle at Dongola came later in spring 1276); 4 June 1276 installation; 1316-1317. Article titles were abbreviated from memory and are NOT verified; check the full titles in a library."
+
+  - id: src-werner-christentum-nubien
+    title: Das Christentum in Nubien. Geschichte und Gestalt einer afrikanischen Kirche
+    author: Roland Werner
+    author_from: Germany
+    date: 2013
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "Roland Werner, Das Christentum in Nubien (Berlin: LIT, 2013)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Via Wikipedia, Makuria. German.
+
+  - id: src-ruffini-bishop-eparch-king
+    title: "The Bishop, the Eparch, and the King: Old Nubian Texts from Qasr Ibrim (P. QI 4)"
+    author: Giovanni R. Ruffini
+    author_from: United States (Fairfield University)
+    date: 2014
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "G. R. Ruffini, The Bishop, the Eparch, and the King, JJP Supplements 22 (Warsaw, 2014); reviewed by V. W. J. van Gerven Oei, BMCR 2015.04.28."
+    url: https://bmcr.brynmawr.edu/2015/2015.04.28/
+    access: library
+    verification: citation-only
+    notes: Review read; texts mainly 12th century.
+
+  - id: src-simmons-dotawo-redating
+    title: "Rethinking and redating the fall of the Nubian kingdom of Dotawo: Are we a century out?"
+    author: Adam Simmons
+    author_from: United Kingdom (Nottingham Trent University)
+    date: 2022-2023
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "A. Simmons, Leeds Institute for Medieval Studies seminar paper; see also Nubia, Ethiopia, and the Crusading World, 1095-1402 (Routledge, 2022). News summary: University of Leeds."
+    url: https://ahc.leeds.ac.uk/news/article/2255/dr-adam-simmons-rewrites-the-historical-narrative-of-the-fall-of-dotawo-in-historical-research-paper
+    access: open-url
+    verification: web-checked
+    notes: Argues Dotawo fell 1615-1620, not c. 1500. Published article version not seen.
+
+  - id: src-adams-nubia-corridor
+    title: "Nubia: Corridor to Africa"
+    author: William Y. Adams
+    author_from: United States
+    date: 1977
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "W. Y. Adams, Nubia: Corridor to Africa (Princeton: Princeton University Press, 1977)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Classic synthesis based on the Lower Nubian salvage excavations. Its title's "corridor" frame (Nubia as passage between Egypt and Africa) is itself a historiographical choice worth discussing.
+
+  - id: src-welsby-medieval-kingdoms-nubia
+    title: "The Medieval Kingdoms of Nubia: Pagans, Christians and Muslims along the Middle Nile"
+    author: Derek A. Welsby
+    author_from: United Kingdom (British Museum)
+    date: 2002
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "D. A. Welsby, The Medieval Kingdoms of Nubia (London: British Museum Press, 2002)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Excavator of Soba. Subtitle uses a term this project avoids; quoted only as a title.
+
+  - id: src-gerhards-gezira
+    title: Some notes on the Christian medieval heritage of the Gezira (central Sudan)
+    author: Gabriel Gerhards
+    author_from: Germany (independent researcher)
+    date: 2021
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "G. Gerhards, Polish Archaeology in the Mediterranean 30/2 (2021): 439-460."
+    url: https://pam-journal.pl/article/156826/en
+    access: open-url
+    verification: web-checked
+    notes: Abstract read.
+
+  - id: src-chekroun-barr-sad-al-din
+    title: Work on Barr Sa'd al-Din and the Walasma sultans
+    author: Amélie Chekroun
+    author_from: France (CNRS)
+    date: 2013-2023
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "A. Chekroun, Le Futuh al-Habasa: écriture de l'histoire, guerre et société dans le Barr Sa'd ad-din (PhD, Paris 1, 2013), and articles; cited via Wikipedia and africanhistoryextra."
+    url: null
+    access: library
+    verification: needs-library
+    notes: Title from memory; check.
+
+  - id: src-trimingham-islam-ethiopia
+    title: Islam in Ethiopia
+    author: J. Spencer Trimingham
+    author_from: United Kingdom
+    date: 1952
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "J. S. Trimingham, Islam in Ethiopia (London: Oxford University Press, 1952)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Older missionary-scholar synthesis; useful for Arabic sources, but Hussein Ahmed and others critique its framing.
+
+  - id: src-kaplan-beta-israel
+    title: "The Beta Israel (Falasha) in Ethiopia: From Earliest Times to the Twentieth Century"
+    author: Steven Kaplan
+    author_from: Israel (Hebrew University of Jerusalem)
+    date: 1992
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "S. Kaplan, The Beta Israel (Falasha) in Ethiopia (New York: NYU Press, 1992)."
+    url: https://muse.jhu.edu/book/7681
+    access: library
+    verification: citation-only
+    notes: Publisher summary read. Argues ethnogenesis in the 14th-16th centuries.
+
+  - id: src-kaplan-groundwork-2018
+    title: "Groundwork, Fieldwork and Transnational Research: Christians and Jews in Ethiopia"
+    author: Steven Kaplan
+    author_from: Israel (Hebrew University of Jerusalem)
+    date: 2018
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "S. Kaplan, Entangled Religions 6 (2018): 345-357."
+    url: https://ojs.ub.rub.de/index.php/ER/article/download/867/821/2255
+    access: open-url
+    verification: web-checked
+    notes: Historiographical review of Beta Israel studies (Shelemay, Quirin, Kaplan).
+
+  - id: src-quirin-evolution-ethiopian-jews
+    title: "The Evolution of the Ethiopian Jews: A History of the Beta Israel (Falasha) to 1920"
+    author: James Quirin
+    author_from: United States (Fisk University)
+    date: 1992
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "J. Quirin, The Evolution of the Ethiopian Jews (Philadelphia: University of Pennsylvania Press, 1992)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Built partly on oral histories he collected among Beta Israel; caste-formation framework.
+
+  - id: src-shelemay-music-ritual
+    title: Music, Ritual, and Falasha History
+    author: Kay Kaufman Shelemay
+    author_from: United States (Harvard)
+    date: 1986
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "K. K. Shelemay, Music, Ritual, and Falasha History (East Lansing: African Studies Center, Michigan State University, 1986; 2nd ed. 1989)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Liturgy closely linked to Ethiopian Christian monasticism (via Kaplan 2018).
+
+  - id: src-gamst-qemant
+    title: "The Qemant: A Pagan-Hebraic Peasantry of Ethiopia"
+    author: Frederick C. Gamst
+    author_from: United States
+    date: 1969
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "F. C. Gamst, The Qemant (New York: Holt, Rinehart and Winston, 1969)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: 1960s ethnography; title uses a term this project avoids, quoted only as a title. Not evidence for 1200-1450.
+
+  - id: src-windmuller-luna-met-lalibela
+    title: The Rock-Hewn Churches of Lalibela
+    author: Kristen Windmuller-Luna
+    author_from: United States (Princeton University)
+    date: 2014
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "K. Windmuller-Luna, 'The Rock-Hewn Churches of Lalibela', Heilbrunn Timeline of Art History, Metropolitan Museum of Art, 2014."
+    url: https://www.metmuseum.org/en/essays/the-rock-hewn-churches-of-lalibela
+    access: open-url
+    verification: web-checked
+    notes: null
+
+  - id: src-gnisci-review-lalibela
+    title: "Review of Bosc-Tiessé and Derat, eds., Lalibela: site rupestre chrétien d'Éthiopie"
+    author: Jacopo Gnisci
+    author_from: United Kingdom (University College London)
+    date: 2025
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "J. Gnisci, Aethiopica 28 (2025): 286-291."
+    url: https://journals.sub.uni-hamburg.de/aethiopica/article/download/2387/2349/7816
+    access: open-url
+    verification: web-checked
+    notes: Source for the Fauvelle-Mensan phase model.
+
+  - id: src-bosc-tiesse-derat-lalibela
+    title: "Lalibela: site rupestre chrétien d'Éthiopie"
+    author: Claire Bosc-Tiessé and Marie-Laure Derat (eds.)
+    author_from: France (CNRS), with Ethiopian collaborators
+    date: 2019
+    kind: secondary
+    type: archaeology
+    voice: scholar-international
+    citation: "C. Bosc-Tiessé and M.-L. Derat, eds., Lalibela: site rupestre chrétien d'Éthiopie (Toulouse: Presses Universitaires du Midi, 2019)."
+    url: null
+    access: library
+    verification: citation-only
+    notes: Known via Gnisci's review.
+
+  - id: src-phillipson-ancient-churches
+    title: "Ancient Churches of Ethiopia: Fourth-Fourteenth Centuries"
+    author: David W. Phillipson
+    author_from: United Kingdom (Cambridge)
+    date: 2009
+    kind: secondary
+    type: archaeology
+    voice: scholar-international
+    citation: "D. W. Phillipson, Ancient Churches of Ethiopia (New Haven: Yale University Press, 2009)."
+    url: null
+    access: library
+    verification: needs-library
+    notes: His phased chronology for Lalibela was not read; the teacher should check its argument for pre-Zagwe phases.
+
+  - id: src-crummey-land-society
+    title: "Land and Society in the Christian Kingdom of Ethiopia: From the Thirteenth to the Twentieth Century"
+    author: Donald Crummey
+    author_from: Canada / United States (University of Illinois)
+    date: 2000
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "D. Crummey, Land and Society in the Christian Kingdom of Ethiopia (Urbana: University of Illinois Press; Addis Ababa: AAU Press, 2000)."
+    url: https://boydellandbrewer.com/9780852557631/land-and-society-in-the-christian-kingdom-of-ethiopia
+    access: library
+    verification: citation-only
+    notes: On gult (royal grants of rights to tribute and taxation) to churches and nobles.
+
+  - id: src-heldman-fre-seyon
+    title: "The Marian Icons of the Painter Fre Seyon: A Study of Fifteenth-Century Ethiopian Art, Patronage, and Spirituality"
+    author: Marilyn E. Heldman
+    author_from: United States
+    date: 1994
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "M. E. Heldman, The Marian Icons of the Painter Fre Seyon (Wiesbaden: Harrassowitz, 1994)."
+    url: null
+    access: library
+    verification: needs-library
+    notes: Cited from memory; not seen in this research.
+
+  - id: src-morgan-zir-ganela
+    title: Zir Ganela Gospels (MS M.828)
+    author: Morgan Library & Museum catalog
+    author_from: New York, United States
+    date: accessed 2026
+    kind: secondary
+    type: material-culture
+    voice: scholar-international
+    citation: "Morgan Library & Museum, MS M.828, Zir Ganela Gospels, catalog record."
+    url: https://www.themorgan.org/manuscript/158943
+    access: open-url
+    verification: web-checked
+    notes: null
+
+  - id: src-wion-review-kelly
+    title: "Review of Samantha Kelly, Translating Faith: Ethiopian Pilgrims in Renaissance Rome"
+    author: Anaïs Wion
+    author_from: France (CNRS)
+    date: 2024
+    kind: secondary
+    type: scholarship
+    voice: scholar-international
+    citation: "A. Wion, Aethiopica 27 (2024): 320-324."
+    url: https://journals.sub.uni-hamburg.de/aethiopica/article/download/2317/2170/6908
+    access: open-url
+    verification: web-checked
+    notes: Source for Ethiopian hostels on the pilgrimage route (Qwesqwam, Cairo, Scetis, Jerusalem, Cyprus).
+
+  - id: src-hamburg-amharic-slides
+    title: Amharic written tradition (HLCEES Summer School slides)
+    author: Hiob Ludolf Centre for Ethiopian and Eritrean Studies, Universität Hamburg
+    author_from: Hamburg, Germany
+    date: 2020
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "HLCEES Summer School 2020, 'Amharic written tradition' (slides)."
+    url: https://www.aai.uni-hamburg.de/en/ethiostudies/team/nosnitsin/publications/amharic-2020.pdf
+    access: open-url
+    verification: web-checked
+    notes: Dates surviving Amharic texts from about the 16th century and the royal-songs manuscript to 1610-1632.
+
+  - id: src-usc-prester-john-zara-yaqob
+    title: "Zara Yaqob (International Prester John Project)"
+    author: Christopher Taylor
+    author_from: United States
+    date: 2024
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "C. Taylor, 'Zara Yaqob', The International Prester John Project, Global Middle Ages / USC Scalar."
+    url: https://scalar.usc.edu/works/prester-john/zara-yaqob-1
+    access: open-url
+    verification: web-checked
+    notes: Source for the 1450 Rombulo mission to Aragon.
+
+  - id: src-heritagedaily-dongola
+    title: The deserted capital of Old Dongola
+    author: HeritageDaily (popular summary of PCMA work)
+    author_from: United Kingdom
+    date: 2021
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "HeritageDaily, 'The Deserted Capital of Old Dongola', June 2021."
+    url: https://www.heritagedaily.com/2021/06/the-deserted-capital-of-old-dongola/139567
+    access: open-url
+    verification: web-checked
+    notes: Popular source; used only for the Banu Ja'd and court-move statements, which it does not date.
+
+  - id: src-africanhistoryextra-zeila
+    title: A complete history of Zeila (Zayla)
+    author: Isaac Samuel (African History Extra)
+    author_from: Kenya (independent historian)
+    date: 2024
+    kind: secondary
+    type: reference
+    voice: scholar-from-region
+    citation: "I. Samuel, 'A complete history of Zeila', African History Extra (Substack)."
+    url: https://www.africanhistoryextra.com/p/a-complete-history-of-zeila-zayla
+    access: open-url
+    verification: web-checked
+    notes: >
+      Well-sourced popular synthesis (cites Vallet, Chekroun, Kelly, Fauvelle). Author identity and date from memory of
+      the site, not confirmed on the page; voice classification is provisional. Use as a pointer to its sources.
+
+  - id: src-medievalslavery-al-umari-hadiya
+    title: "Source: Eunuchs in Ethiopia: Hadiya in al-Umari's Geography"
+    author: Kimberly Peloquin (trans.) and Hannah Barker (checked)
+    author_from: United States (Arizona State University project)
+    date: accessed 2026
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Medieval Slavery project, 'Eunuchs in Ethiopia: Hadiya in al-Umari's Geography', CC BY-NC-ND 4.0."
+    url: https://medievalslavery.org/?p=4049
+    access: open-url
+    verification: web-checked
+    notes: Open translation of the primary passage.
+
+  # ================= REFERENCE (Wikipedia; used for orientation, flagged) =================
+  - id: src-wikipedia-makuria
+    title: Makuria
+    author: Wikipedia contributors
+    author_from: online
+    date: accessed 2026-10-14
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Wikipedia, 'Makuria', accessed 14 October 2026."
+    url: https://en.wikipedia.org/wiki/Makuria
+    access: open-url
+    verification: web-checked
+    notes: "Unusually detailed and well cited (Seignobos, Werner, Godlewski, Gerhards, Łajtar and Ochała). Prefer its cited works. Gives 20 Jan 1276 as the Mamluk army's departure, not the battle date."
+
+  - id: src-wikipedia-alodia
+    title: Alodia
+    author: Wikipedia contributors
+    author_from: online
+    date: accessed 2026-10-14
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Wikipedia, 'Alodia', accessed 14 October 2026."
+    url: https://en.wikipedia.org/wiki/Alodia
+    access: open-url
+    verification: web-checked
+    notes: Summarizes Welsby, Zarroug, Vantini.
+
+  - id: src-wikipedia-al-abwab
+    title: Kingdom of al-Abwab
+    author: Wikipedia contributors
+    author_from: online
+    date: accessed 2026-10-14
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Wikipedia, 'Kingdom of al-Abwab', accessed 14 October 2026."
+    url: https://en.wikipedia.org/wiki/Kingdom_of_al-Abwab
+    access: open-url
+    verification: web-checked
+    notes: null
+
+  - id: src-wikipedia-throne-hall-dongola
+    title: Throne Hall of Dongola
+    author: Wikipedia contributors
+    author_from: online
+    date: accessed 2026-10-14
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Wikipedia, 'Throne Hall of Dongola', accessed 14 October 2026."
+    url: https://en.wikipedia.org/wiki/Throne_Hall_of_Dongola
+    access: open-url
+    verification: web-checked
+    notes: null
+
+  - id: src-wikipedia-timotheos
+    title: Timothy of Faras
+    author: Wikipedia contributors
+    author_from: online
+    date: accessed 2026-10-14
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Wikipedia, 'Timothy of Faras', accessed 14 October 2026."
+    url: https://en.wikipedia.org/wiki/Timothy_of_Faras
+    access: open-url
+    verification: web-checked
+    notes: null
+
+  - id: src-wikipedia-zagwe
+    title: Zagwe dynasty
+    author: Wikipedia contributors
+    author_from: online
+    date: accessed 2026-10-14
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Wikipedia, 'Zagwe dynasty', accessed 14 October 2026."
+    url: https://en.wikipedia.org/wiki/Zagwe_dynasty
+    access: open-url
+    verification: web-checked
+    notes: Source for "earliest firm evidence of an Ethiopian community in Jerusalem, later 13th century."
+
+  - id: src-wikipedia-lalibela-king
+    title: Gebre Mesqel Lalibela
+    author: Wikipedia contributors
+    author_from: online
+    date: accessed 2026-10-14
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Wikipedia, 'Gebre Mesqel Lalibela', accessed 14 October 2026."
+    url: https://en.wikipedia.org/wiki/Gebre_Mesqel_Lalibela
+    access: open-url
+    verification: web-checked
+    notes: null
+
+  - id: src-wikipedia-yekuno-amlak
+    title: Yekuno Amlak
+    author: Wikipedia contributors
+    author_from: online
+    date: accessed 2026-10-14
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Wikipedia, 'Yekuno Amlak', accessed 14 October 2026."
+    url: https://en.wikipedia.org/wiki/Yekuno_Amlak
+    access: open-url
+    verification: web-checked
+    notes: null
+
+  - id: src-wikipedia-amda-seyon
+    title: Amda Seyon I
+    author: Wikipedia contributors
+    author_from: online
+    date: accessed 2026-10-14
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Wikipedia, 'Amda Seyon I', accessed 14 October 2026."
+    url: https://en.wikipedia.org/wiki/Amda_Seyon_I
+    access: open-url
+    verification: web-checked
+    notes: null
+
+  - id: src-wikipedia-yeshaq
+    title: Yeshaq I
+    author: Wikipedia contributors
+    author_from: online
+    date: accessed 2026-10-14
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Wikipedia, 'Yeshaq I', accessed 14 October 2026."
+    url: https://en.wikipedia.org/wiki/Yeshaq_I
+    access: open-url
+    verification: web-checked
+    notes: null
+
+  - id: src-wikipedia-zara-yaqob
+    title: Zara Yaqob
+    author: Wikipedia contributors
+    author_from: online
+    date: accessed 2026-10-14
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Wikipedia, 'Zara Yaqob', accessed 14 October 2026."
+    url: https://en.wikipedia.org/wiki/Zara_Yaqob
+    access: open-url
+    verification: web-checked
+    notes: null
+
+  - id: src-wikipedia-ewostatewos
+    title: Ewostatewos
+    author: Wikipedia contributors
+    author_from: online
+    date: accessed 2026-10-14
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Wikipedia, 'Ewostatewos', accessed 14 October 2026."
+    url: https://en.wikipedia.org/wiki/Ewostatewos
+    access: open-url
+    verification: web-checked
+    notes: null
+
+  - id: src-wikipedia-stephanites
+    title: Stephanites
+    author: Wikipedia contributors
+    author_from: online
+    date: accessed 2026-10-14
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Wikipedia, 'Stephanites', accessed 14 October 2026."
+    url: https://en.wikipedia.org/wiki/Stephanites
+    access: open-url
+    verification: web-checked
+    notes: Contains a questionable lifespan for Gabra Masih and recent-politics material; use only its cited scholarship.
+
+  - id: src-wikipedia-tekle-haymanot
+    title: Tekle Haymanot
+    author: Wikipedia contributors
+    author_from: online
+    date: accessed 2026-10-14
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Wikipedia, 'Tekle Haymanot', accessed 14 October 2026."
+    url: https://en.wikipedia.org/wiki/Tekle_Haymanot
+    access: open-url
+    verification: web-checked
+    notes: null
+
+  - id: src-wikipedia-debre-libanos
+    title: Debre Libanos
+    author: Wikipedia contributors
+    author_from: online
+    date: accessed 2026-10-14
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Wikipedia, 'Debre Libanos', accessed 14 October 2026."
+    url: https://en.wikipedia.org/wiki/Debre_Libanos
+    access: open-url
+    verification: web-checked
+    notes: null
+
+  - id: src-wikipedia-kebra-nagast
+    title: Kebra Nagast
+    author: Wikipedia contributors
+    author_from: online
+    date: accessed 2026-10-14
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Wikipedia, 'Kebra Nagast', accessed 14 October 2026."
+    url: https://en.wikipedia.org/wiki/Kebra_Nagast
+    access: open-url
+    verification: web-checked
+    notes: null
+
+  - id: src-wikipedia-fetha-negest
+    title: Fetha Negest
+    author: Wikipedia contributors
+    author_from: online
+    date: accessed 2026-10-14
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Wikipedia, 'Fetha Negest', accessed 14 October 2026."
+    url: https://en.wikipedia.org/wiki/Fetha_Negest
+    access: open-url
+    verification: web-checked
+    notes: Thin sourcing for the 1450 date.
+
+  - id: src-wikipedia-walashma
+    title: Walashma dynasty
+    author: Wikipedia contributors
+    author_from: online
+    date: accessed 2026-10-14
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Wikipedia, 'Walashma dynasty', accessed 14 October 2026."
+    url: https://en.wikipedia.org/wiki/Walashma_dynasty
+    access: open-url
+    verification: web-checked
+    notes: Internally inconsistent on founding dates; prefer Chekroun.
+
+  - id: src-britannica-ifat
+    title: Ifat
+    author: Encyclopaedia Britannica editors
+    author_from: online
+    date: accessed 2026-10-14
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Encyclopaedia Britannica, 'Ifat', accessed 14 October 2026."
+    url: https://www.britannica.com/place/Ifat
+    access: open-url
+    verification: web-checked
+    notes: Uses the term "pagan" for Damot; not repeated here.
+
+  - id: src-wikipedia-jews-ethiopia
+    title: History of the Jews in Ethiopia
+    author: Wikipedia contributors
+    author_from: online
+    date: accessed 2026-10-14
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Wikipedia, 'History of the Jews in Ethiopia', accessed 14 October 2026."
+    url: https://en.wikipedia.org/wiki/History_of_the_Jews_in_Ethiopia
+    access: open-url
+    verification: web-checked
+    notes: "Cites Kaplan's Encyclopaedia Aethiopica entry for Yeshaq's decree. Does NOT contain the 1329 campaign or church burning (its only church burning is the Gudit legend); cite src-wikipedia-beta-israel for 1329."
+
+  - id: src-wikipedia-beta-israel
+    title: Beta Israel
+    author: Wikipedia contributors
+    author_from: online
+    date: accessed 2026-10-14
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Wikipedia, 'Beta Israel', accessed 14 October 2026."
+    url: https://en.wikipedia.org/wiki/Beta_Israel
+    access: open-url
+    verification: web-checked
+    notes: Its account of Zara Yaqob executing his wife for spying for the Jews was not corroborated elsewhere; not used.
+
+  - id: src-wikipedia-qemant
+    title: Qemant people
+    author: Wikipedia contributors
+    author_from: online
+    date: accessed 2026-10-14
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "Wikipedia, 'Qemant people', accessed 14 October 2026."
+    url: https://en.wikipedia.org/wiki/Qemant_people
+    access: open-url
+    verification: web-checked
+    notes: null
+
+  - id: src-unesco-whc-lalibela
+    title: Rock-Hewn Churches, Lalibela (World Heritage List no. 18)
+    author: UNESCO World Heritage Centre
+    author_from: Paris, France
+    date: 1978 (inscription); accessed 2026
+    kind: secondary
+    type: reference
+    voice: scholar-international
+    citation: "UNESCO World Heritage Centre, 'Rock-Hewn Churches, Lalibela', https://whc.unesco.org/en/list/18/"
+    url: https://whc.unesco.org/en/list/18/
+    access: open-url
+    verification: web-checked
+    notes: Its dating is internally inconsistent (13th-century vs. begun in 12th).

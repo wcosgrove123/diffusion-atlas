@@ -145,12 +145,6 @@ export function shade(hex: string, amount: number): string {
   return rgbToHex(hexToRgb(hex).map((v) => v + (target - v) * a));
 }
 
-/** "r,g,b" components, for canvas drawing with alpha. */
-export function rgba(hex: string, alpha: number): string {
-  const [r, g, b] = hexToRgb(hex);
-  return `rgba(${r},${g},${b},${alpha})`;
-}
-
 /** CSS custom property name for a palette key: textMuted -> --c-text-muted */
 export function cssVarName(key: string): string {
   return `--c-${key.replace(/[A-Z]/g, (c) => `-${c.toLowerCase()}`)}`;

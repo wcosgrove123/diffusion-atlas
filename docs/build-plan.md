@@ -67,7 +67,7 @@ checks pass. Commit at the end of each phase.
 - GitHub Actions workflow builds and deploys a "hello map" to Pages.
 - Acceptance: CI green; Pages URL shows Africa with coastlines and rivers, no modern borders; validate.py runs in CI.
 - Status (2026-10-14): built and passing locally (pytest, Vitest, Playwright smoke at 1280x720 and 360x740).
-  Not yet on Pages: waiting on the repo name and visibility (decisions-for-wil.md, item 1).
+  Published 2026-10-15 to https://wcosgrove123.github.io/diffusion-atlas/ (repo wcosgrove123/diffusion-atlas).
   Notes: MapLibre 6 loads its worker by URL, so `app/scripts/sync-public.mjs` copies it to `public/vendor/`.
   The view box is wide enough for a 16:9 projector and tall enough for a portrait phone to fit the whole bbox.
 

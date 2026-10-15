@@ -6,6 +6,8 @@ Open questions the coding agent must not decide. Each has a recommendation; answ
 
 1. **Repo name and visibility.** GitHub Pages from a private repo needs a paid GitHub plan; a public repo works on
    any plan. The research text and data would be public. Recommendation: public repo named `diffusion-atlas`.
+   **Decided 2026-10-15 (Wil): public repo `wcosgrove123/diffusion-atlas`, Pages from GitHub Actions.**
+   Site: https://wcosgrove123.github.io/diffusion-atlas/
 
 2. **Hand-drawn polygons.** About 12 polities have no usable open geometry and must be drafted as soft zones from the
    research `geometry_note` text (geometry-audit section 5). The coding agent drafts; you approve from

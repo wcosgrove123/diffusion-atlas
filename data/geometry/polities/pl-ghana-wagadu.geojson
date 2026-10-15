@@ -1,0 +1,58 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-ghana-wagadu",
+    "year_from": 1200,
+    "year_to": 1240,
+    "method": "E",
+    "basis": "aourednik 'Ghana' 1200, relabelled (geometry-audit section 5). The audit uses it for the pre-1203 frame and says to fade it after Sosso; it runs to 1240 here to match the place span and its religion profiles (Sosso then Mali overlordship, per pl-ghana-wagadu geometry_note)."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -5.012,
+       16.696
+      ],
+      [
+       -7.833,
+       17.636
+      ],
+      [
+       -11.699,
+       17.114
+      ],
+      [
+       -11.908,
+       16.382
+      ],
+      [
+       -11.804,
+       15.755
+      ],
+      [
+       -8.878,
+       14.293
+      ],
+      [
+       -6.998,
+       14.397
+      ],
+      [
+       -4.803,
+       15.546
+      ],
+      [
+       -5.012,
+       16.696
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

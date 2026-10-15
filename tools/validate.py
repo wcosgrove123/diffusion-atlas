@@ -108,8 +108,18 @@ def common(rep, where, rec, need_summary=True):
     check_banned(rep, where, rec)
 
 
+def check_taxonomy(rep):
+    """The UI shows a student label for every relation (product-spec 3.2), so each relation needs one."""
+    labels = TAX["religion"].get("relation_labels") or {}
+    for r in sorted(RELATION - set(labels)):
+        rep.err("taxonomy", f"relation '{r}' has no entry in religion.relation_labels")
+    for r in sorted(set(labels) - RELATION):
+        rep.err("taxonomy", f"relation_labels lists '{r}', which is not a relation")
+
+
 def validate(files):
     rep = Report()
+    check_taxonomy(rep)
     data = {k: [] for k in LISTS}
     for f in files:
         try:

@@ -1,4 +1,4 @@
-import { readFileSync } from 'node:fs';
+import { readdirSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { validateStyleMin } from '@maplibre/maplibre-gl-style-spec';
@@ -11,9 +11,9 @@ import { basePalette, cssVarName } from '../src/theme/palette';
 const empty = { type: 'FeatureCollection' as const, features: [] };
 const geo: ModuleGeo = {
   module: 'test',
-  frame: { id: 'test', title: 'Test', start: 1000, end: 1100, bbox: [0, 0, 10, 10], view_bbox: [-5, -5, 15, 15] },
+  frame: { id: 'test', title: 'Test', start: 1000, end: 1100, bbox: [0, 0, 10, 10], view_bbox: [-5, -5, 15, 15], regions: [], shown_regions: [] },
   attribution: ['Natural Earth (public domain)'],
-  base: Object.fromEntries(BASE_LAYER_NAMES.map((n) => [n, empty])) as unknown as ModuleGeo['base'],
+  base: Object.fromEntries(BASE_LAYER_NAMES.map((n) => [n, `test-base-${n}.json`])) as ModuleGeo['base'],
   polities: empty,
 };
 
@@ -51,10 +51,12 @@ describe('palette', () => {
   });
 
   it('is the only source file with hex colors', () => {
-    const files = ['src/main.ts', 'src/styles.css', 'src/map/basemap.ts', 'src/map/createMap.ts', 'index.html'];
-    for (const f of files) {
-      const text = readFileSync(resolve(fileURLToPath(new URL('..', import.meta.url)), f), 'utf8');
-      expect(text, f).not.toMatch(/#[0-9a-fA-F]{3,8}\b/);
+    const app = fileURLToPath(new URL('..', import.meta.url));
+    const files = ['index.html', ...readdirSync(resolve(app, 'src'), { recursive: true, encoding: 'utf8' })
+      .filter((f) => /\.(ts|css)$/.test(f)).map((f) => `src/${f.replace(/\\/g, '/')}`)];
+    expect(files).toContain('src/theme/palette.ts');
+    for (const f of files.filter((x) => x !== 'src/theme/palette.ts')) {
+      expect(readFileSync(resolve(app, f), 'utf8'), f).not.toMatch(/#[0-9a-fA-F]{3,8}\b/);
     }
   });
 });

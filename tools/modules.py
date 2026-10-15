@@ -27,8 +27,16 @@ def load_frame(module):
         raise SystemExit(f"data/modules.yaml: module {module} view_bbox must contain bbox")
     if not m["start"] < m["end"]:
         raise SystemExit(f"data/modules.yaml: module {module} start must be before end")
+    regions = [{"id": r["id"], "label": r["label"]} for r in m.get("regions") or []]
+    for r in regions:
+        if not (ROOT / "data" / "research" / module / f"{r['id']}.yaml").exists():
+            raise SystemExit(f"data/modules.yaml: module {module} region {r['id']} has no research file")
+    ids = [r["id"] for r in regions]
+    shown = list(m.get("shown_regions") or ids)
+    if not set(shown) <= set(ids):
+        raise SystemExit(f"data/modules.yaml: module {module} shown_regions must be listed in regions")
     return {"id": module, "title": m["title"], "start": int(m["start"]), "end": int(m["end"]),
-            "bbox": bbox, "view_bbox": view}
+            "bbox": bbox, "view_bbox": view, "regions": regions, "shown_regions": shown}
 
 
 def _check_box(module, key, b):

@@ -1,0 +1,58 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-bono",
+    "year_from": 1300,
+    "year_to": 1723,
+    "method": "H",
+    "basis": "Drawn from the pl-bono geometry_note: the early Akan kingdom north of the forest around Bono Manso near Techiman (geometry-audit section 5: small soft zone, low confidence). Location approximate."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -2.576,
+       7.944
+      ],
+      [
+       -2.515,
+       7.404
+      ],
+      [
+       -2.406,
+       7.253
+      ],
+      [
+       -1.9,
+       7.024
+      ],
+      [
+       -1.321,
+       7.315
+      ],
+      [
+       -1.224,
+       7.944
+      ],
+      [
+       -1.801,
+       8.343
+      ],
+      [
+       -1.999,
+       8.343
+      ],
+      [
+       -2.576,
+       7.944
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

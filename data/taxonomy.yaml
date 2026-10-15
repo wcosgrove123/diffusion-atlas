@@ -92,6 +92,14 @@ religion:
     coexisting: "Test 4: Do different communities keep separate traditions side by side (separate quarters, separate rites, separate leaders)?"
     syncretic: "Test 5: Do the same people combine elements of two traditions into one practice or rite (e.g. Friday prayer plus Mande royal ritual in one court ceremony)?"
     plural: "Test 6 (default): Do the same people use more than one tradition for different purposes without fusing them (e.g. Islam for law and prayer, ancestral shrines for rain and land)?"
+  # Student-facing label for each relation (docs/product-spec.md 3.2). Added 2026-10-15 with Wil's approval.
+  relation_labels:
+    exclusive: One tradition
+    plural: Both, for different purposes
+    syncretic: Blended together
+    coexisting: Side by side, separate communities
+    contested: In conflict
+    undocumented: No direct evidence
   relation_notes:
     - Disputes inside one tradition (Ethiopian Stephanites vs. the court; Almohad vs. Maliki) are recorded by listing the same tradition twice with different branch or local_form. contested and coexisting then count two entries.
     - exclusive can rest on silence (only one tradition is recorded). When it does, set basis to inferred and say so in detail.

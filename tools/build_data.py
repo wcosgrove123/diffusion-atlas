@@ -14,6 +14,8 @@ from pathlib import Path
 
 import yaml
 
+from modules import load_frame
+
 ROOT = Path(__file__).resolve().parent.parent
 LISTS = ["places", "religion_profiles", "diffusions", "exemplars", "events", "sources"]
 VERIF_RANK = {"web-checked": 0, "citation-only": 1, "needs-library": 2}
@@ -59,14 +61,14 @@ def rewrite_ids(obj, mapping):
 
 def main(module):
     rdir = ROOT / "data" / "research" / module
-    tax = yaml.safe_load((ROOT / "data" / "taxonomy.yaml").read_text())
-    merge = yaml.safe_load((rdir / "_merge.yaml").read_text()) if (rdir / "_merge.yaml").exists() else {}
-    reg = yaml.safe_load((rdir / "_registry.yaml").read_text()) if (rdir / "_registry.yaml").exists() else {}
+    tax = yaml.safe_load((ROOT / "data" / "taxonomy.yaml").read_text(encoding="utf-8"))
+    merge = yaml.safe_load((rdir / "_merge.yaml").read_text(encoding="utf-8")) if (rdir / "_merge.yaml").exists() else {}
+    reg = yaml.safe_load((rdir / "_registry.yaml").read_text(encoding="utf-8")) if (rdir / "_registry.yaml").exists() else {}
 
     data = {k: [] for k in LISTS}
     src_copies = defaultdict(list)
     for f in sorted(rdir.glob("[!_]*.yaml")):
-        doc = yaml.safe_load(f.read_text()) or {}
+        doc = yaml.safe_load(f.read_text(encoding="utf-8")) or {}
         for k in LISTS:
             for rec in doc.get(k) or []:
                 if k == "sources":
@@ -110,7 +112,7 @@ def main(module):
             if "religion" in (e.get("lenses") or []) and add not in [str(x) for x in e.get("ap_topics") or []]:
                 e["ap_topics"] = list(e.get("ap_topics") or []) + [add]
 
-    debates = (yaml.safe_load((rdir / "_debates.yaml").read_text()) or {}).get("debates", []) \
+    debates = (yaml.safe_load((rdir / "_debates.yaml").read_text(encoding="utf-8")) or {}).get("debates", []) \
         if (rdir / "_debates.yaml").exists() else []
     known = {r["id"] for k in LISTS for r in data[k]}
     for db in debates:
@@ -120,13 +122,13 @@ def main(module):
     out = {
         "module": module,
         "taxonomy_version": tax["meta"]["version"],
-        "frame": {"start": 1200, "end": 1450},
+        "frame": load_frame(module),
         **data,
         "debates": debates,
     }
     bdir = ROOT / "data" / "build"
     bdir.mkdir(parents=True, exist_ok=True)
-    (bdir / f"{module}.json").write_text(json.dumps(out, ensure_ascii=False, indent=1))
+    (bdir / f"{module}.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
 
     # report
     c = lambda key, recs: Counter(r.get(key) for r in recs)

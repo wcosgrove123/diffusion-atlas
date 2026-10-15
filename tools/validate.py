@@ -13,7 +13,7 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
-TAX = yaml.safe_load((ROOT / "data" / "taxonomy.yaml").read_text())
+TAX = yaml.safe_load((ROOT / "data" / "taxonomy.yaml").read_text(encoding="utf-8"))
 
 FAMILIES = TAX["religion"]["families"]
 TRAD_TO_FAMILY = {t: f for f, fv in FAMILIES.items() for t in fv["traditions"]}
@@ -113,7 +113,7 @@ def validate(files):
     data = {k: [] for k in LISTS}
     for f in files:
         try:
-            doc = yaml.safe_load(Path(f).read_text()) or {}
+            doc = yaml.safe_load(Path(f).read_text(encoding="utf-8")) or {}
         except yaml.YAMLError as e:
             rep.err(str(f), f"YAML parse error: {e}")
             continue
@@ -138,14 +138,14 @@ def validate(files):
     # Registry ids count as known places, so one research file can be checked alone.
     registry_ids = set()
     for f in files:
-        doc = yaml.safe_load(Path(f).read_text()) or {}
+        doc = yaml.safe_load(Path(f).read_text(encoding="utf-8")) or {}
         for r in doc.get("registry") or []:
             registry_ids.add(r["id"])
     for reg in sorted({Path(f).parent / "_registry.yaml" for f in files}):
         if reg.exists() and str(reg) not in map(str, files):
-            for r in (yaml.safe_load(reg.read_text()) or {}).get("registry") or []:
+            for r in (yaml.safe_load(reg.read_text(encoding="utf-8")) or {}).get("registry") or []:
                 registry_ids.add(r["id"])
-            for r in (yaml.safe_load(reg.read_text()) or {}).get("places") or []:
+            for r in (yaml.safe_load(reg.read_text(encoding="utf-8")) or {}).get("places") or []:
                 place_ids.add(r["id"])
     if FULL_CHECK:
         for rid in sorted(registry_ids - place_ids):

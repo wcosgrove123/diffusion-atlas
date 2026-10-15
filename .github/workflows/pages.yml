@@ -1,0 +1,82 @@
+# Validate the data, build it, test, and publish the site to GitHub Pages.
+# Runs on every push and pull request; deploys only from main.
+# One-time setup on GitHub: Settings > Pages > Source: "GitHub Actions".
+name: Build and deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - run: pip install -r requirements.txt
+
+      - name: Validate research data (must report 0 errors)
+        run: python tools/validate.py
+      - name: Build data
+        run: |
+          for m in $(python -c "import yaml; print(' '.join(yaml.safe_load(open('data/modules.yaml'))['modules']))"); do
+            python tools/build_data.py "$m"
+            python tools/build_geometry.py "$m"
+          done
+          python tools/export_taxonomy.py
+      - name: Pipeline tests
+        run: python -m pytest tests -q
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - run: npm ci
+        working-directory: app
+      - run: npm test
+        working-directory: app
+      - name: Build site
+        run: npm run build
+        working-directory: app
+        env:
+          BASE_PATH: /${{ github.event.repository.name }}/
+      - name: Browser smoke test
+        working-directory: app
+        run: |
+          npx playwright install --with-deps chromium
+          npm run e2e
+        env:
+          BASE_PATH: /${{ github.event.repository.name }}/
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: app/dist
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

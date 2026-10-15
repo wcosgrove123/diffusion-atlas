@@ -1,0 +1,29 @@
+import type { ModuleFrame } from './types';
+
+export type Bounds = [[number, number], [number, number]];
+
+/** The frame bbox as MapLibre bounds [[west, south], [east, north]]. */
+export function frameBounds(frame: ModuleFrame): Bounds {
+  const [w, s, e, n] = frame.bbox;
+  return [[w, s], [e, n]];
+}
+
+/**
+ * Bounds the user may pan within: the frame's view_bbox, which the pipeline also clips the base
+ * geography to (view_box() in tools/modules.py), so cut edges never come on screen.
+ */
+export function panBounds(frame: ModuleFrame): Bounds {
+  const [w, s, e, n] = frame.view_bbox;
+  return [[w, s], [e, n]];
+}
+
+/** Pick the module named in the URL (?module=<id>) or the first one listed. */
+export function pickModule(frames: ModuleFrame[], requested: string | null): ModuleFrame {
+  if (frames.length === 0) throw new Error('modules.json lists no modules');
+  return frames.find((f) => f.id === requested) ?? frames[0];
+}
+
+/** "West, North, and East Africa, 1200–1450" (en dash for a range). */
+export function frameLabel(frame: ModuleFrame): string {
+  return `${frame.title}, ${frame.start}–${frame.end}`;
+}

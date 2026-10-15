@@ -1,0 +1,52 @@
+/* Colors come from src/theme/palette.ts as --c-* custom properties. No hex codes here. */
+:root {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--c-text);
+  background: var(--c-page);
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; height: 100%; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: var(--c-page);
+}
+
+.topbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--c-border);
+  background: var(--c-surface);
+}
+
+.topbar__title { margin: 0; font-size: 1.25rem; font-weight: 700; }
+.topbar__module { margin: 0; color: var(--c-text-muted); }
+
+.stage { position: relative; flex: 1; min-height: 0; }
+/* .stage > .map outranks MapLibre's own .maplibregl-map { position: relative }, which loads later. */
+.stage > .map { position: absolute; inset: 0; }
+
+.map-status:empty { display: none; }
+.map-status {
+  position: absolute;
+  left: 50%;
+  top: 1rem;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--c-border);
+  border-radius: 6px;
+  background: var(--c-surface);
+  color: var(--c-text);
+}
+
+:focus-visible { outline: 3px solid var(--c-focus); outline-offset: 2px; }
+.maplibregl-canvas:focus-visible { outline-offset: -3px; }

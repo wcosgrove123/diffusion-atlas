@@ -1,0 +1,6 @@
+public/data/
+public/vendor/
+dist/
+node_modules/
+e2e/.results/
+playwright-report/

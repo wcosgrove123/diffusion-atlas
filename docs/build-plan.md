@@ -43,10 +43,14 @@ data/
                      _registry.yaml _merge.yaml _debates.yaml
   geometry/africa/   aourednik_<year>.geojson (clipped, GPL-3.0)  aourednik_inventory.json
   geometry/polities/ <place-id>.geojson   (to create: one file per polity, features per snapshot year)
-  geometry/base/     land, coastline, rivers, lakes_historic clipped to the frame (to create)
+  geometry/base/<module>/  land, rivers, lakes (historic Lake Chad), playas, clipped to the module view box
+                     (tools/extract_base.py; detailed inside bbox, coarse context outside; coastline = land outline)
+  modules.yaml       module frames: years, bbox, view_bbox (the app reads them via data/build/modules.json)
   geometry/raw/      (gitignored; tools/fetch_geometry.sh re-downloads)
   build/             (generated; gitignored except for local runs)
-tools/  validate.py build_data.py extract_africa.py fetch_geometry.sh  (+ export_taxonomy.py, build_geometry.py)
+tools/  validate.py build_data.py extract_africa.py fetch_geometry.sh export_taxonomy.py build_geometry.py
+        extract_base.py modules.py
+tests/  test_pipeline.py (pytest)
 app/    index.html  src/{main.ts, map/, ui/, data/, theme/palette.ts}  tests/
 docs/   product-spec.md build-plan.md record-format.md research-brief.md ap-ced-alignment.md
         geometry-audit.md fact-check.md language-review.md corrections-log.md decisions-for-wil.md
@@ -62,6 +66,10 @@ checks pass. Commit at the end of each phase.
 - `npm create vite` in app/, MapLibre installed, blank map of Africa from Natural Earth land/coast, frame bounds.
 - GitHub Actions workflow builds and deploys a "hello map" to Pages.
 - Acceptance: CI green; Pages URL shows Africa with coastlines and rivers, no modern borders; validate.py runs in CI.
+- Status (2026-10-14): built and passing locally (pytest, Vitest, Playwright smoke at 1280x720 and 360x740).
+  Not yet on Pages: waiting on the repo name and visibility (decisions-for-wil.md, item 1).
+  Notes: MapLibre 6 loads its worker by URL, so `app/scripts/sync-public.mjs` copies it to `public/vendor/`.
+  The view box is wide enough for a 16:9 projector and tall enough for a portrait phone to fit the whole bbox.
 
 ### Phase 1: vertical slice, West Africa religion lens (the classroom-usable core)
 Scope: places from `wsahel.yaml` only (plus external places they reference), religion lens only.

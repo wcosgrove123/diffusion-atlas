@@ -16,7 +16,8 @@ when it arrived (outcome), and whose sources tell us so.
 | `data/geometry/` | Clipped historical boundaries (aourednik/historical-basemaps, GPL-3.0) and the geometry audit |
 | `tools/` | Validator, data build, geometry extraction |
 | `docs/` | Product spec, build plan, AP CED alignment, fact-check, language review, corrections log, open decisions |
-| `app/` | The web app (to be built; see docs/build-plan.md) |
+| `data/modules.yaml` | Module frames: years, map bounds, and the area the map may show |
+| `app/` | The web app (Vite, TypeScript, MapLibre); reads only `data/build/*.json` |
 
 Dataset (Africa module): 91 places, 219 religion profiles, 117 diffusions, 55 exemplars, 55 events (25 keyframes),
 325 sources, 42 debates.
@@ -24,10 +25,16 @@ Dataset (Africa module): 91 places, 219 religion profiles, 117 diffusions, 55 ex
 ## Run
 
 ```
-pip install pyyaml jsonschema shapely pyproj
+pip install -r requirements.txt
 python3 tools/validate.py
 python3 tools/build_data.py africa
+python3 tools/export_taxonomy.py
+python3 tools/build_geometry.py africa
+cd app && npm ci && npm run dev
 ```
+
+Pushing to `main` on GitHub runs `.github/workflows/pages.yml`: it validates the data, runs the tests, builds the
+site, and publishes it to GitHub Pages (set Settings, Pages, Source to "GitHub Actions" once).
 
 ## License
 

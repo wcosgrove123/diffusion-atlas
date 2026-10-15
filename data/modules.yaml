@@ -1,0 +1,14 @@
+# Module frames. Each module is a research folder (data/research/<id>/) plus a frame:
+# the years the slider covers and the map bounds. The app reads these only through the build.
+# bbox is [min lon, min lat, max lon, max lat] in degrees: the area the module is about.
+# view_bbox (optional) is the larger area the map may show and pan within. Base geography is clipped to it, so
+# its cut edges never show. It must be wide enough that a 16:9 screen (the classroom projector) and tall enough
+# that a portrait phone can each fit the whole bbox; otherwise the pan limit stops the map zooming out far enough.
+# Outside bbox the geography is coarse context. Default: bbox padded by 15% on each side.
+modules:
+  africa:
+    title: West, North, and East Africa
+    start: 1200
+    end: 1450
+    bbox: [-20, -36, 60, 40]
+    view_bbox: [-72, -64, 112, 70]

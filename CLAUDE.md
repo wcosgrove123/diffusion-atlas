@@ -13,12 +13,20 @@ HS (MCPS). First module: Africa 1200–1450. Later modules: Asia, the Middle Eas
 
 ## Commands
 ```
+pip install -r requirements.txt
 python3 tools/validate.py                 # must report 0 errors
 python3 tools/build_data.py africa        # -> data/build/africa.json + africa-report.md
+python3 tools/export_taxonomy.py          # -> data/build/taxonomy.json + modules.json
+python3 tools/build_geometry.py africa    # -> data/build/africa-geo.json (base layers + polities)
+python3 -m pytest tests                   # pipeline tests
 bash tools/fetch_geometry.sh              # re-download raw geometry (gitignored)
 python3 tools/extract_africa.py --report  # clip aourednik to the frame
+python3 tools/extract_base.py africa      # clip Natural Earth to the module view box -> data/geometry/base/africa/
 cd app && npm run dev | npm run build | npm test
+cd app && npm run build && PW_CHANNEL=msedge npm run e2e   # browser smoke test (CI uses bundled Chromium)
 ```
+Module frames (years, bbox, view_bbox) live in `data/modules.yaml`. The app reads them only via `modules.json`.
+On Windows, `python` replaces `python3`. In Git Bash set `MSYS_NO_PATHCONV=1` before passing `BASE_PATH=/repo/`.
 
 ## Rules
 - **The data is the history.** Never write, paraphrase, or "improve" historical text in the app. Render summaries

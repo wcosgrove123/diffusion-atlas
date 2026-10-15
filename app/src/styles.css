@@ -35,7 +35,7 @@ body {
 
 .stage { position: relative; flex: 1; min-height: 0; overflow: hidden; }
 /* .stage > .map outranks MapLibre's own .maplibregl-map { position: relative }, which loads later. */
-.stage > .map { position: absolute; inset: 0; }
+.stage > .map { position: absolute; inset: 0; isolation: isolate; } /* marker z-indexes stay inside the map */
 
 .map-status:empty { display: none; }
 .map-status {

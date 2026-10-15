@@ -37,6 +37,12 @@ Open questions the coding agent must not decide. Each has a recommendation; answ
     a capital ("Islam", "Indigenous", "Christianity"; branches as "sunni-maliki"). Recommendation: fine for now; if
     you want "Local (indigenous)" or "Sunni, Maliki school", add display labels to taxonomy.yaml.
 
+16. **Speed check on GitHub.** Build-plan check 6 (Lighthouse >= 80 on a throttled phone) passes on machines with a
+    graphics chip (85 to 98 on Wil's laptop), but GitHub's test runners have none and draw the map in software, so
+    they score about 70 for the same site. **Decided 2026-10-15 (Wil): GitHub's check fails only below 65**
+    (`LIGHTHOUSE_MIN` in .github/workflows/pages.yml); the 80 bar is checked on a machine with a GPU before a release:
+    `cd app && npm run build && PW_CHANNEL=msedge npx playwright test lighthouse --project=desktop`.
+
 ## Data and taxonomy (your call; the researchers raised these)
 
 4. **Polity Profile, Right axis.** Two researchers needed a value for legitimacy from mastery of spiritual or occult

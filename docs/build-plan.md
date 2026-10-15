@@ -91,7 +91,8 @@ Scope: places from `wsahel.yaml` only (plus external places they reference), rel
   6. Lighthouse performance on a throttled "mid-tier mobile" profile >= 80.
 - Status (2026-10-15): built on branch `phase-1-wsahel-religion` (PR #1, not merged). Checks 1 to 6 are
   Playwright tests in `app/e2e/phase1.spec.ts` and `app/e2e/lighthouse.spec.ts` (median of three Lighthouse runs,
-  served gzipped like Pages by `app/scripts/serve.mjs`). Polygons come from `data/geometry/polity-shapes.yaml`; every
+  served gzipped like Pages by `app/scripts/serve.mjs`). Check 6 holds at 80 on a machine with a GPU; GitHub's
+  GPU-less runners use a floor of 65 (decisions-for-wil.md, 16). Polygons come from `data/geometry/polity-shapes.yaml`; every
   shape is a draft until Wil approves it in docs/geometry-review.md. The region scope is `shown_regions` in
   data/modules.yaml. Performance note for later phases: each distinct MapLibre paint setup compiles its own WebGL
   program at startup, so the map draws everything as pattern fills and pattern lines (two programs; see

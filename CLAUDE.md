@@ -17,15 +17,17 @@ pip install -r requirements.txt
 python3 tools/validate.py                 # must report 0 errors
 python3 tools/build_data.py africa        # -> data/build/africa.json + africa-report.md
 python3 tools/export_taxonomy.py          # -> data/build/taxonomy.json + modules.json
-python3 tools/build_geometry.py africa    # -> data/build/africa-geo.json (base layers + polities)
+python3 tools/build_geometry.py africa    # polity-shapes.yaml -> data/geometry/polities/; -> data/build/africa-geo.json
+                                          #   + africa-base-<layer>.json
 python3 -m pytest tests                   # pipeline tests
 bash tools/fetch_geometry.sh              # re-download raw geometry (gitignored)
 python3 tools/extract_africa.py --report  # clip aourednik to the frame
 python3 tools/extract_base.py africa      # clip Natural Earth to the module view box -> data/geometry/base/africa/
 cd app && npm run dev | npm run build | npm test
-cd app && npm run build && PW_CHANNEL=msedge npm run e2e   # browser smoke test (CI uses bundled Chromium)
+cd app && npm run build && PW_CHANNEL=msedge npm run e2e   # smoke, Phase 1 acceptance, Lighthouse (CI: Chromium)
+cd app && GEOMETRY_REVIEW=1 PW_CHANNEL=msedge npx playwright test geometry-review --project=desktop  # review shots
 ```
-Module frames (years, bbox, view_bbox) live in `data/modules.yaml`. The app reads them only via `modules.json`.
+Module frames (years, bbox, view_bbox, regions, shown_regions) live in `data/modules.yaml`. The app reads them only via `modules.json`.
 On Windows, `python` replaces `python3`. In Git Bash set `MSYS_NO_PATHCONV=1` before passing `BASE_PATH=/repo/`.
 
 ## Rules
@@ -43,5 +45,7 @@ On Windows, `python` replaces `python3`. In Git Bash set `MSYS_NO_PATHCONV=1` be
   Plain, short sentences.
 - **Attribution.** Wil is the author of the project, its ideas, and its writing. Nothing in the site, README, or
   metadata should say Claude or AI built it or wrote it. Co-author lines on commits for code are fine.
+- **Polygons** are made from `data/geometry/polity-shapes.yaml` (method A, E or H per docs/geometry-audit.md 5).
+  Hand-drawn (H) shapes stay `review: draft` until Wil approves them in docs/geometry-review.md.
 - **Phases in order.** Ship each phase to Pages before starting the next. Something usable must exist early.
 - Ask Wil before changing the stack, the taxonomy, or anything in docs/decisions-for-wil.md.

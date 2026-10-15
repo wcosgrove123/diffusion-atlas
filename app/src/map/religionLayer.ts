@@ -8,13 +8,17 @@ import type { Feature, FeatureCollection, MultiPolygon, Polygon } from 'geojson'
 import type { ModuleData, ModuleGeo, Place, PolityFeature, ReligionProfile } from '../data/types';
 import { covers, profileAt, sameReligion, shownPlaces } from '../data/profiles';
 import { mapInk } from '../theme/palette';
-import { PIXEL_RATIO, parsePatternId, patternId, patternImage, profileLook } from './patterns';
+import { ensurePatterns, fillPatternPaint, inkLineId, linePatternPaint, patternId, profileLook, solidId } from './patterns';
 
 /** product-spec 3.3: high 1.0, medium 0.75, low 0.5 */
 export const CONFIDENCE_OPACITY: Record<string, number> = { high: 1, medium: 0.75, low: 0.5 };
 export const opacityFor = (confidence: string | undefined) => CONFIDENCE_OPACITY[confidence ?? ''] ?? 0.5;
 
 const DOTTED_BASIS = ['inferred', 'projected'];
+/** Ink line patterns the religion layers draw (dashed "no record" edges, dotted basis borders). */
+export const NO_RECORD_DASH = inkLineId('dash', mapInk.noRecord);
+export const BASIS_DOTS = inkLineId('dots', mapInk.basisDots);
+const SOFT_EDGE = solidId(mapInk.softEdge);
 
 export interface PolityStyleProps {
   place_id: string;
@@ -92,54 +96,43 @@ export function styleProps(profiles: ReligionProfile[], place: Place, year: numb
   };
 }
 
-/** Make sure every pattern a collection names is in the style's image set. */
-export function ensurePatterns(map: maplibregl.Map, ids: (string | null)[]): void {
-  for (const id of ids) {
-    if (!id || map.hasImage(id)) continue;
-    const look = parsePatternId(id);
-    if (!look) continue;
-    map.addImage(id, patternImage(look.kind, look.a, look.b, look.shape), { pixelRatio: PIXEL_RATIO });
-  }
-}
-
 export function addReligionLayers(map: maplibregl.Map, beforeId: string): void {
   map.addSource(POLITY_SOURCE, { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
-  map.on('styleimagemissing', (e) => ensurePatterns(map, [e.id]));
   const has = (k: string) => ['!=', ['get', k], null] as maplibregl.ExpressionSpecification;
   const dotted = (k: string) => ['in', ['get', k], ['literal', DOTTED_BASIS]] as maplibregl.ExpressionSpecification;
   const layers: maplibregl.LayerSpecification[] = [
     {
       id: POLITY_LAYERS.fill, type: 'fill', source: POLITY_SOURCE, filter: has('fill_pattern'),
-      // No antialiased outline: the soft edge covers it, and it would cost one more shader program.
-      paint: { 'fill-pattern': ['get', 'fill_pattern'], 'fill-opacity': ['get', 'fill_opacity'], 'fill-antialias': false },
+      paint: fillPatternPaint(solidId(mapInk.noRecord)),
     },
     {
       // Feathered edge: pre-modern borders were zones, so no crisp line (product-spec 3.3).
       id: POLITY_LAYERS.soft, type: 'line', source: POLITY_SOURCE,
-      paint: { 'line-color': mapInk.softEdge, 'line-width': 7, 'line-blur': 6, 'line-opacity': 0.4 },
+      paint: linePatternPaint(SOFT_EDGE, 7, { blur: 6, opacity: 0.4 }),
     },
     {
       id: POLITY_LAYERS.noRecord, type: 'line', source: POLITY_SOURCE, filter: ['!', has('fill_pattern')],
-      paint: { 'line-color': mapInk.noRecord, 'line-width': 1.6, 'line-dasharray': [3, 2] },
+      paint: linePatternPaint(NO_RECORD_DASH, 1.6),
     },
     {
       id: POLITY_LAYERS.basis, type: 'line', source: POLITY_SOURCE, filter: dotted('rural_basis'),
-      layout: { 'line-cap': 'round', 'line-join': 'round' },
-      paint: { 'line-color': mapInk.basisDots, 'line-width': 1.8, 'line-dasharray': [0.1, 2.2] },
+      layout: { 'line-join': 'round' },
+      paint: linePatternPaint(BASIS_DOTS, 2),
     },
     {
       // Outer rings are counter-clockwise (tools/build_geometry.py), which puts the inside on the positive side.
       id: POLITY_LAYERS.ring, type: 'line', source: POLITY_SOURCE, filter: has('ring_pattern'),
       layout: { 'line-join': 'round' },
-      paint: { 'line-pattern': ['get', 'ring_pattern'], 'line-width': 8, 'line-offset': 9, 'line-opacity': ['get', 'ring_opacity'] },
+      paint: linePatternPaint(SOFT_EDGE, 8, { offset: 9, patternProp: 'ring_pattern', opacityProp: 'ring_opacity' }),
     },
     {
       id: POLITY_LAYERS.ringBasis, type: 'line', source: POLITY_SOURCE,
       filter: ['all', has('ring_pattern'), dotted('court_basis')],
-      layout: { 'line-cap': 'round', 'line-join': 'round' },
-      paint: { 'line-color': mapInk.basisDots, 'line-width': 1.6, 'line-dasharray': [0.1, 2.2], 'line-offset': 16 },
+      layout: { 'line-join': 'round' },
+      paint: linePatternPaint(BASIS_DOTS, 2, { offset: 16 }),
     },
   ];
+  ensurePatterns(map, [NO_RECORD_DASH, BASIS_DOTS, SOFT_EDGE, solidId(mapInk.noRecord)]);
   for (const l of layers) map.addLayer(l, beforeId);
 }
 

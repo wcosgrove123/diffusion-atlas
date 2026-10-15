@@ -6,7 +6,10 @@ import { expect, test } from '@playwright/test';
 test('the base map loads from our own files only', async ({ page }, info) => {
   const errors: string[] = [];
   const offsite: string[] = [];
-  page.on('console', (m) => { if (m.type() === 'error') errors.push(m.text()); });
+  page.on('console', (m) => {
+    // A pattern image MapLibre could not find draws nothing (a hole in the map), and it only warns.
+    if (m.type() === 'error' || (m.type() === 'warning' && /could not be loaded/.test(m.text()))) errors.push(m.text());
+  });
   page.on('pageerror', (e) => errors.push(e.message));
   const failed: string[] = [];
   page.on('response', (r) => { if (r.status() >= 400) failed.push(`${r.status()} ${r.url()}`); });

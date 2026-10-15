@@ -11,6 +11,8 @@ export default defineConfig({
   testDir: 'e2e',
   outputDir: 'e2e/.results',
   timeout: 60_000,
+  // One test at a time: the Lighthouse check measures main-thread time, so nothing may run beside it.
+  workers: 1,
   reporter: [['list']],
   use: {
     baseURL: origin + base,

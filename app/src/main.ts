@@ -52,7 +52,8 @@ async function start(): Promise<void> {
       };
       state.on(draw);
       draw(state.year);
-      // Town names crowd each other at continent scale; they show on hover and focus there, and always when closer.
+      // Town and point names crowd each other at continent scale; they show on hover and focus there, and always
+      // when closer.
       const zoomClass = () => container.classList.toggle('map--far', map.getZoom() < 5);
       map.on('zoom', zoomClass);
       zoomClass();

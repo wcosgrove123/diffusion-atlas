@@ -5,6 +5,7 @@ import { dataUrl } from '../data/load';
 import type { ModuleGeo } from '../data/types';
 import { basePalette } from '../theme/palette';
 import { MAP_MAXZOOM, buildBaseStyle } from './basemap';
+import { ensurePatterns } from './patterns';
 
 // MapLibre loads its worker by a URL relative to its own module file, which the bundler moves.
 // scripts/sync-public.mjs copies the worker and its shared chunk to public/vendor/maplibre/.
@@ -30,6 +31,10 @@ export function createMap(container: HTMLElement, geo: ModuleGeo, bounds: Bounds
   const fold = () => container.querySelector('.maplibregl-ctrl-attrib')?.classList.remove('maplibregl-compact-show');
   fold();
   map.once('load', fold);
+  // The sea shows through the transparent canvas (no background layer; see buildBaseStyle).
+  container.style.backgroundColor = basePalette.sea;
+  // Patterns (relation fills, rings, dashed and dotted lines) are made on demand from their ids.
+  map.setMissingStyleImageResolver((id) => ensurePatterns(map, [id]));
   map.touchZoomRotate.disableRotation();
   map.keyboard.disableRotation();
   map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');

@@ -32,9 +32,9 @@ export function buildLegend(atlas: Atlas): HTMLElement {
 
   const strataSwatch = (cls: string) => h('span', { class: `legend__strata legend__strata--${cls}`, 'aria-hidden': 'true' });
 
-  const details = h('details', { class: 'legend', id: 'legend' },
-    h('summary', { class: 'legend__toggle' }, 'Legend'),
-    h('div', { class: 'legend__body' },
+  // The body is built the first time the legend opens: on a phone it starts closed, and its swatches are canvases
+  // that would otherwise cost time while the map is starting.
+  const body = () => h('div', { class: 'legend__body' },
       h('h3', {}, 'Traditions'),
       h('ul', { class: 'legend__list' }, used.map((t) => row(swatch('exclusive', traditionColor(t), traditionColor(t), 22, 14),
         keyLabel(t), undefined, { 'data-tradition': t }))),
@@ -61,7 +61,14 @@ export function buildLegend(atlas: Atlas): HTMLElement {
         }),
         row(strataSwatch('dotted'), `Dotted border: ${keyLabel('inferred')}`, tax.religion.basis.inferred),
         row(strataSwatch('dotted'), `Dotted border and a "later evidence" tag: ${keyLabel('projected')}`, tax.religion.basis.projected)),
-      h('p', { class: 'legend__note' }, 'Soft edges: borders were zones, not lines.')));
+      h('p', { class: 'legend__note' }, 'Soft edges: borders were zones, not lines.'));
+  const details = h('details', { class: 'legend', id: 'legend' }, h('summary', { class: 'legend__toggle' }, 'Legend'));
+  const fill = () => {
+    if (details.open && !details.querySelector('.legend__body')) details.append(body());
+  };
+  details.addEventListener('toggle', fill);
+  // Setting the open attribute in code fires toggle asynchronously; build at once so it is there on first paint.
+  new MutationObserver(fill).observe(details, { attributes: true, attributeFilter: ['open'] });
   details.style.setProperty('--legend-a', a);
   details.style.setProperty('--legend-b', b);
   details.style.setProperty('--legend-none', mapInk.noRecord);

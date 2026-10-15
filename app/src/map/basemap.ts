@@ -1,4 +1,5 @@
 import type { ExpressionSpecification, LayerSpecification, StyleSpecification } from '@maplibre/maplibre-gl-style-spec';
+import { fillPatternPaint, inkLineId, linePatternPaint, solidId } from './patterns';
 import type { BaseLayerName, ModuleGeo } from '../data/types';
 import type { BasePalette } from '../theme/palette';
 
@@ -9,7 +10,8 @@ export const MAP_MAXZOOM = 9;
 /**
  * The physical base map as a MapLibre style. Everything comes from the module's own GeoJSON:
  * no tile server, no sprite, no glyph server (school network filters; docs/product-spec.md 2).
- * No modern borders are drawn.
+ * No modern borders are drawn. The sea is the map container's background color (createMap), not a layer, and
+ * fills and lines are drawn with patterns: both keep the number of WebGL programs down (see map/patterns.ts).
  */
 export function buildBaseStyle(geo: ModuleGeo, p: BasePalette, url: (file: string) => string = (f) => f): StyleSpecification {
   // maxzoom caps how deep MapLibre tiles the GeoJSON; the data is about 1.5 km detail, so deeper tiles add
@@ -22,7 +24,7 @@ export function buildBaseStyle(geo: ModuleGeo, p: BasePalette, url: (file: strin
     source: 'rivers',
     filter: ['all', ['<=', ['coalesce', ['get', 'min_zoom'], 0], ['+', ['zoom'], 3]], rank],
     layout: { 'line-join': 'round', 'line-cap': 'round' },
-    paint: { 'line-color': p.river, 'line-width': ['interpolate', ['linear'], ['zoom'], 2, w2, 7, w7] },
+    paint: linePatternPaint(solidId(p.river), ['interpolate', ['linear'], ['zoom'], 2, w2, 7, w7]),
   });
   return {
     version: 8,
@@ -34,22 +36,21 @@ export function buildBaseStyle(geo: ModuleGeo, p: BasePalette, url: (file: strin
       rivers: src('rivers'),
     },
     layers: [
-      { id: 'sea', type: 'background', paint: { 'background-color': p.sea } },
-      { id: 'land', type: 'fill', source: 'land', paint: { 'fill-color': p.land, 'fill-antialias': false } },
-      { id: 'playas', type: 'fill', source: 'playas', paint: { 'fill-color': p.playa, 'fill-opacity': 0.8, 'fill-antialias': false } },
+      { id: 'land', type: 'fill', source: 'land', paint: fillPatternPaint(solidId(p.land)) },
+      { id: 'playas', type: 'fill', source: 'playas', paint: fillPatternPaint(solidId(p.playa), 0.8) },
       // Rivers in two layers by Natural Earth scalerank, each with a zoom-only width. A width that varies per
       // feature makes MapLibre compile one more shader program, which costs main-thread time on Chromebooks.
       // min_zoom: minor rivers appear as the user zooms in.
       river('rivers', ['<=', ['coalesce', ['get', 'scalerank'], 9], 4], 1.4, 2.8),
       river('rivers-minor', ['>', ['coalesce', ['get', 'scalerank'], 9], 4], 0.6, 1.4),
-      { id: 'lakes', type: 'fill', source: 'lakes', paint: { 'fill-color': p.lake, 'fill-antialias': false } },
+      { id: 'lakes', type: 'fill', source: 'lakes', paint: fillPatternPaint(solidId(p.lake)) },
       {
         // Lake Chad uses the historic outline with a dashed edge: its extent in the module years is not known.
         id: 'lakes-historic-edge',
         type: 'line',
         source: 'lakes',
         filter: ['==', ['get', 'historic'], true],
-        paint: { 'line-color': p.lakeEdge, 'line-width': 0.8, 'line-dasharray': [2, 2] },
+        paint: linePatternPaint(inkLineId('dash', p.lakeEdge), 1.2),
       },
       {
         // The coastline is the land outline. The outline also runs along the view box edge, which the map
@@ -57,7 +58,7 @@ export function buildBaseStyle(geo: ModuleGeo, p: BasePalette, url: (file: strin
         id: 'coastline',
         type: 'line',
         source: 'land',
-        paint: { 'line-color': p.coastline, 'line-width': ['interpolate', ['linear'], ['zoom'], 2, 0.6, 7, 1.2] },
+        paint: linePatternPaint(solidId(p.coastline), ['interpolate', ['linear'], ['zoom'], 2, 0.6, 7, 1.2]),
       },
     ],
   };

@@ -146,7 +146,10 @@ body {
 }
 .place-marker--area .place-marker__name { font-size: 0.95rem; font-weight: 700; letter-spacing: 0.02em; }
 .place-marker__badge { margin-left: -4px; }
-.map--far .place-marker--town .place-marker__name { display: none; }
+.map--far .place-marker--town .place-marker__name,
+.map--far .place-marker--point .place-marker__name { display: none; }
+/* Area names (polities, peoples) stay above town and point markers. */
+.place-marker--area { z-index: 1; }
 .place-marker:hover .place-marker__name, .place-marker:focus-visible .place-marker__name { display: block; }
 
 .event-marker {

@@ -34,7 +34,8 @@ describe('base style', () => {
 
   it('draws physical layers only, water above land and coast on top', () => {
     const ids = style.layers.map((l) => l.id);
-    expect(ids[0]).toBe('sea');
+    expect(ids[0]).toBe('land'); // the sea is the map container's background, not a layer
+    expect(style.layers.some((l) => l.type === 'background')).toBe(false);
     expect(ids.indexOf('land')).toBeLessThan(ids.indexOf('lakes'));
     expect(ids.at(-1)).toBe('coastline');
     expect(ids.some((id) => /border|admin|countr/i.test(id))).toBe(false);

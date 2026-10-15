@@ -1,6 +1,7 @@
 // Relation patterns (docs/product-spec.md 3.2). Every relation has a pattern as well as color, so the map still
 // reads for color-blind students and on a washed-out projector. Patterns are computed pixel by pixel (no canvas
 // needed), so the same code draws map fills, court rings, donuts, legend swatches, and runs in unit tests.
+import type { ExpressionSpecification, FillLayerSpecification, LineLayerSpecification } from '@maplibre/maplibre-gl-style-spec';
 import { mapInk, shade, traditionColor } from '../theme/palette';
 import type { ReligionProfile } from '../data/types';
 import { rankedTraditions } from '../data/profiles';
@@ -117,4 +118,96 @@ export function parsePatternId(id: string): { shape: Shape; kind: PatternKind; a
   if (!m) return null;
   const a = m[3] ? `#${m[3]}` : mapInk.undocumentedGround;
   return { shape: m[1] as Shape, kind: patternKind(m[2]), a, b: m[4] ? `#${m[4]}` : a };
+}
+
+// ---- two shader programs for the whole map ----
+// Each kind of layer paint makes MapLibre compile and bind its own WebGL program while the map starts, and each
+// costs tens of ms of main-thread time on a Chromebook (and much more without a GPU). So every fill on the map
+// (land, lakes, polities) is a pattern fill, and every line (rivers, coast, edges, rings, dashes, dots) is a pattern
+// line, with pattern and opacity given as expressions. A plain color is a one-color pattern tile (solidId).
+
+
+/** A one-color tile, for fills and lines that are a plain color. */
+export function solidId(color: string): string {
+  return `pat-solid-${color.slice(1)}`;
+}
+
+/** Fill paint: the feature's fill_pattern / fill_opacity if it has them, else the given pattern and opacity. */
+export function fillPatternPaint(pattern: string, opacity = 1): FillLayerSpecification['paint'] {
+  return {
+    'fill-pattern': ['coalesce', ['get', 'fill_pattern'], pattern],
+    'fill-opacity': ['coalesce', ['get', 'fill_opacity'], opacity],
+    // No antialiased outline: it would be one more program, and edges have their own lines.
+    'fill-antialias': false,
+  };
+}
+
+/** Line paint with a pattern from a feature property (default line_pattern), falling back to the given one. */
+export function linePatternPaint(
+  pattern: string, width: number | ExpressionSpecification,
+  o: { offset?: number; blur?: number; opacity?: number; patternProp?: string; opacityProp?: string } = {},
+): LineLayerSpecification['paint'] {
+  return {
+    'line-pattern': ['coalesce', ['get', o.patternProp ?? 'line_pattern'], pattern],
+    'line-opacity': ['coalesce', ['get', o.opacityProp ?? 'line_opacity'], o.opacity ?? 1],
+    'line-width': width,
+    ...(o.offset ? { 'line-offset': o.offset } : {}),
+    ...(o.blur ? { 'line-blur': o.blur } : {}),
+  };
+}
+
+// ---- dashed and dotted lines ----
+
+export type InkLine = 'dash' | 'dots';
+const INK_TILE: Record<InkLine, { w: number; h: number }> = { dash: { w: 16, h: 4 }, dots: { w: 8, h: 4 } };
+
+export function inkLineId(kind: InkLine, color: string): string {
+  return `pat-line-${kind}-${color.slice(1)}`;
+}
+
+/** A dashed or dotted line tile: ink on transparent, stretched across the line's width by MapLibre. */
+export function inkLineImage(kind: InkLine, color: string, ratio = PIXEL_RATIO): PatternImage {
+  const tile = INK_TILE[kind];
+  const width = tile.w * ratio;
+  const height = tile.h * ratio;
+  const data = new Uint8ClampedArray(new ArrayBuffer(width * height * 4));
+  const c = toRgb(color);
+  for (let y = 0; y < height; y++) {
+    for (let x = 0; x < width; x++) {
+      let n = 0;
+      for (const dy of [0.25, 0.75]) {
+        for (const dx of [0.25, 0.75]) {
+          const u = (x + dx) / ratio;
+          const v = (y + dy) / ratio;
+          n += kind === 'dash' ? (u < 10 ? 1 : 0) : (Math.hypot(u - 4, v - 2) < 1.9 ? 1 : 0);
+        }
+      }
+      data.set([c[0], c[1], c[2], Math.round((255 * n) / 4)], (y * width + x) * 4);
+    }
+  }
+  return { width, height, data };
+}
+
+/** The image for any pattern id this module makes, or null. */
+export function imageForId(id: string): PatternImage | null {
+  const solid = /^pat-solid-([0-9a-f]{6})$/.exec(id);
+  if (solid) return patternImage('exclusive', `#${solid[1]}`, `#${solid[1]}`, 'ring');
+  const ink = /^pat-line-(dash|dots)-([0-9a-f]{6})$/.exec(id);
+  if (ink) return inkLineImage(ink[1] as InkLine, `#${ink[2]}`);
+  const look = parsePatternId(id);
+  return look ? patternImage(look.kind, look.a, look.b, look.shape) : null;
+}
+
+interface ImageHost {
+  hasImage(id: string): boolean;
+  addImage(id: string, image: PatternImage, options: { pixelRatio: number }): void;
+}
+
+/** Make sure every pattern a layer or feature names is in the map's image set. */
+export function ensurePatterns(map: ImageHost, ids: (string | null | undefined)[]): void {
+  for (const id of ids) {
+    if (!id || map.hasImage(id)) continue;
+    const img = imageForId(id);
+    if (img) map.addImage(id, img, { pixelRatio: PIXEL_RATIO });
+  }
 }

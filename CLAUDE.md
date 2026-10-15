@@ -18,7 +18,7 @@ python3 tools/validate.py                 # must report 0 errors
 python3 tools/build_data.py africa        # -> data/build/africa.json + africa-report.md
 python3 tools/export_taxonomy.py          # -> data/build/taxonomy.json + modules.json
 python3 tools/build_geometry.py africa    # polity-shapes.yaml -> data/geometry/polities/; -> data/build/africa-geo.json
-                                          #   + africa-base-<layer>.json
+                                          #   + africa-base.json
 python3 -m pytest tests                   # pipeline tests
 bash tools/fetch_geometry.sh              # re-download raw geometry (gitignored)
 python3 tools/extract_africa.py --report  # clip aourednik to the frame

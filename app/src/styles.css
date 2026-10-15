@@ -115,6 +115,9 @@ body {
 }
 
 /* ---- map markers ---- */
+/* MapLibre gives every marker its own compositing layer (will-change) and an opacity transition. With about thirty
+   markers that makes every map frame slower on a Chromebook without GPU compositing; plain markers move just as well. */
+.maplibregl-marker { will-change: auto; transition: none; }
 .place-marker {
   position: relative;
   display: flex;

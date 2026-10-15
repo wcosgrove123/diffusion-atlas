@@ -5,9 +5,10 @@ Reads  data/geometry/base/<module>/*.geojson     (Natural Earth, from tools/extr
        data/geometry/polity-shapes.yaml           (how each polity polygon is made: methods A, E, H)
        data/geometry/<module>/aourednik_<year>.geojson (starting shapes for methods A and E)
 Writes data/geometry/polities/<place-id>.geojson (one feature per shape, clipped to the module's land)
-       data/build/<module>-geo.json        (frame, polities, and the names of the base layer files)
-       data/build/<module>-base-<layer>.json (one file per base layer; the map's worker fetches these itself,
-                                              which keeps parsing them off the page's main thread)
+       data/build/<module>-geo.json        (frame, polities, and the name of the base geography file)
+       data/build/<module>-base.json       (every base layer in one file, each feature tagged with its layer; the
+                                            map's worker fetches and parses it itself, off the page's main thread,
+                                            and one source means the map redraws fewer times while it loads)
 
 Every polity feature must carry {place_id, year_from, year_to, method: A|E|H, basis} (docs/build-plan.md).
 
@@ -137,16 +138,18 @@ def main(module):
     write_polities(module, unary_union([make_valid(shape(f["geometry"])) for f in base["land"]["features"]]))
     outdir = ROOT / "data/build"
     outdir.mkdir(parents=True, exist_ok=True)
-    base_files = {}
-    for name, fc in base.items():
-        base_files[name] = f"{module}-base-{name}.json"
-        (outdir / base_files[name]).write_text(json.dumps(fc, ensure_ascii=False, separators=(",", ":")),
-                                               encoding="utf-8")
+    base_file = f"{module}-base.json"
+    tagged = [{**f, "properties": {**(f.get("properties") or {}), "layer": name}}
+              for name, fc in base.items() for f in fc["features"]]
+    (outdir / base_file).write_text(json.dumps({"type": "FeatureCollection", "features": tagged}, ensure_ascii=False,
+                                               separators=(",", ":")), encoding="utf-8")
+    for old in outdir.glob(f"{module}-base-*.json"):
+        old.unlink()
     out = {
         "module": module,
         "frame": frame,
         "attribution": ["Natural Earth (public domain)"],
-        "base": base_files,
+        "base": base_file,
         "polities": {"type": "FeatureCollection", "features": load_polities()},
     }
     if any(f["properties"]["method"] in ("A", "E") for f in out["polities"]["features"]):

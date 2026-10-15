@@ -26,6 +26,8 @@ export function createMap(container: HTMLElement, geo: ModuleGeo, bounds: Bounds
     attributionControl: { compact: true },
     // tests/basemap.test.ts validates the style; skipping it here saves main-thread time on Chromebooks.
     validateStyle: false,
+    // No symbol layers to fade in, so no fade: otherwise the map keeps redrawing for 300 ms after every change.
+    fadeDuration: 0,
   });
   // Start the credits folded into the (i) button; they open on click. Open, they cover the map on a phone.
   const fold = () => container.querySelector('.maplibregl-ctrl-attrib')?.classList.remove('maplibregl-compact-show');

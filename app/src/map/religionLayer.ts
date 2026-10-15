@@ -8,6 +8,7 @@ import type { Feature, FeatureCollection, MultiPolygon, Polygon } from 'geojson'
 import type { ModuleData, ModuleGeo, Place, PolityFeature, ReligionProfile } from '../data/types';
 import { covers, profileAt, sameReligion, shownPlaces } from '../data/profiles';
 import { mapInk } from '../theme/palette';
+import { SOURCE_MAXZOOM } from './basemap';
 import { ensurePatterns, fillPatternPaint, inkLineId, linePatternPaint, patternId, profileLook, solidId } from './patterns';
 
 /** product-spec 3.3: high 1.0, medium 0.75, low 0.5 */
@@ -97,7 +98,7 @@ export function styleProps(profiles: ReligionProfile[], place: Place, year: numb
 }
 
 export function addReligionLayers(map: maplibregl.Map, beforeId: string): void {
-  map.addSource(POLITY_SOURCE, { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
+  map.addSource(POLITY_SOURCE, { type: 'geojson', data: { type: 'FeatureCollection', features: [] }, maxzoom: SOURCE_MAXZOOM });
   const has = (k: string) => ['!=', ['get', k], null] as maplibregl.ExpressionSpecification;
   const dotted = (k: string) => ['in', ['get', k], ['literal', DOTTED_BASIS]] as maplibregl.ExpressionSpecification;
   const layers: maplibregl.LayerSpecification[] = [

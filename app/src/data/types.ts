@@ -45,8 +45,8 @@ export interface ModuleGeo {
   module: string;
   frame: ModuleFrame;
   attribution: string[];
-  /** file name of each base layer under data/ (data/build/<module>-base-<layer>.json) */
-  base: Record<BaseLayerName, string>;
+  /** file name under data/ of the base geography (data/build/<module>-base.json); features carry `layer` */
+  base: string;
   polities: FeatureCollection<Polygon | MultiPolygon, PolityProps>;
 }
 

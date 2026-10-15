@@ -13,7 +13,7 @@ const geo: ModuleGeo = {
   module: 'test',
   frame: { id: 'test', title: 'Test', start: 1000, end: 1100, bbox: [0, 0, 10, 10], view_bbox: [-5, -5, 15, 15], regions: [], shown_regions: [] },
   attribution: ['Natural Earth (public domain)'],
-  base: Object.fromEntries(BASE_LAYER_NAMES.map((n) => [n, `test-base-${n}.json`])) as ModuleGeo['base'],
+  base: 'test-base.json',
   polities: empty,
 };
 
@@ -39,6 +39,13 @@ describe('base style', () => {
     expect(ids.indexOf('land')).toBeLessThan(ids.indexOf('lakes'));
     expect(ids.at(-1)).toBe('coastline');
     expect(ids.some((id) => /border|admin|countr/i.test(id))).toBe(false);
+  });
+
+  it('draws every base layer from the one base source', () => {
+    for (const name of BASE_LAYER_NAMES) {
+      expect(JSON.stringify(style.layers.filter((l) => 'source' in l && l.source === 'base').map((l) => ('filter' in l ? l.filter : null))), name)
+        .toContain(`"${name}"`);
+    }
   });
 
   it('credits its sources', () => {

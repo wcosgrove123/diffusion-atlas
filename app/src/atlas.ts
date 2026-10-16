@@ -24,6 +24,23 @@ export interface Atlas {
   keyframes: AtlasEvent[];
   /** place ids that have at least one polygon */
   withShape: Set<string>;
+  /** the AP World view: which records it shows and why; null when the module has no list */
+  ap: ApView | null;
+}
+
+export interface ApView {
+  defaultView: 'ap' | 'all';
+  why: Map<string, string>;
+  sources: string[];
+}
+
+/** Which records a view shows: everything, or the AP World set. */
+export type Visible = (id: string) => boolean;
+
+export function visibleIn(atlas: Atlas, apOnly: boolean): Visible {
+  const ap = atlas.ap;
+  if (!apOnly || !ap) return () => true;
+  return (id) => ap.why.has(id);
 }
 
 export function buildAtlas(data: ModuleData, geo: ModuleGeo, tax: Taxonomy): Atlas {
@@ -52,6 +69,10 @@ export function buildAtlas(data: ModuleData, geo: ModuleGeo, tax: Taxonomy): Atl
     debateById: new Map(debates.map((d) => [d.id, d])),
     keyframes: keyframes(events),
     withShape: new Set(geo.polities.features.map((f) => f.properties.place_id)),
+    ap: data.ap_world ? {
+      defaultView: data.ap_world.default_view, sources: data.ap_world.sources,
+      why: new Map(Object.entries(data.ap_world.why)),
+    } : null,
   };
 }
 

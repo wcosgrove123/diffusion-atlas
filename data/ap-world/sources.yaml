@@ -1,0 +1,19 @@
+# What counts as "the AP World curriculum" for the AP World filter (tools/ap_match.py).
+# The tool looks for every record's names in these texts and writes data/ap-world/<module>.yaml.
+# The textbook text is not in this repo: it is read from Loom's library on Wil's machine (index path below,
+# relative to the repo root; override with --library). CI never runs the matcher; it reads the committed result.
+ced:
+  label: AP World History CED, Units 1 and 2
+  path: docs/ap-ced-alignment.md
+textbook:
+  library_index: ../../../apps/loom/.data/library/APWH/index.json
+  # Labels in that library; each has a Markdown text copy the tool reads.
+  materials:
+    - Strayer Chapter 1 Unit 0
+    - Chapter 2
+    - Chapter 3
+    - Chapter 4
+    - Chapter 5
+    - Chapter 6
+    - Chapter 7
+    - Chapter 8

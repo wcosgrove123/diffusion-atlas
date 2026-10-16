@@ -106,6 +106,9 @@ body {
   margin-left: -1px;
   background: var(--c-ink-keyframe-marker);
 }
+.view-switch { display: inline-flex; align-items: center; gap: 0.4rem; margin-left: 0.4rem; font-weight: 600; white-space: nowrap; cursor: pointer; }
+.view-switch input { width: 1.1rem; height: 1.1rem; accent-color: var(--c-accent); }
+.chip--ap-in { background: var(--c-accent); color: var(--c-accent-text); border-color: transparent; }
 .timeline__ends { grid-area: ends; display: flex; justify-content: space-between; margin: 0; color: var(--c-text-muted); font-size: 0.85rem; }
 
 @media (max-width: 640px) {

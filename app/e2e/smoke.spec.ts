@@ -20,7 +20,7 @@ test('the base map loads from our own files only', async ({ page }, info) => {
     }
   });
 
-  await page.goto('./');
+  await page.goto('./?view=all');
   await expect(page.locator('#map')).toHaveAttribute('data-ready', 'true', { timeout: 45_000 });
   const readyMs = await page.evaluate(() => performance.getEntriesByName('atlas:map-ready')[0]?.startTime ?? -1);
   info.annotations.push({ type: 'map-ready-ms', description: String(Math.round(readyMs)) });

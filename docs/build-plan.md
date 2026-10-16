@@ -115,6 +115,11 @@ Scope: places from `wsahel.yaml` only (plus external places they reference), rel
   Only the default lens's arcs show until the lens tabs arrive in Phase 3; other lenses' diffusions open from the
   place cards.
 
+### Added after Phase 2: the "AP World only" view
+- Default student view: the records the AP World curriculum names (CED Units 1 and 2, the textbook chapters), plus
+  what follows them; a switch shows everything. Decision 20 in docs/decisions-for-wil.md; `tools/ap_match.py`;
+  `data/ap-world/<module>.yaml`; test `app/e2e/ap-world.spec.ts`.
+
 ### Phase 3: lenses and the historiography control
 - Lens tabs with InSPECT chips; neutral polygons outside the religion lens.
 - "Whose sources?" filter with the survive rule and the "Showing N of M" counter.

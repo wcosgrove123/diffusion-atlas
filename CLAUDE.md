@@ -15,7 +15,8 @@ HS (MCPS). First module: Africa 1200–1450. Later modules: Asia, the Middle Eas
 ```
 pip install -r requirements.txt
 python3 tools/validate.py                 # must report 0 errors
-python3 tools/build_data.py africa        # -> data/build/africa.json + africa-report.md
+python3 tools/build_data.py africa        # -> data/build/africa.json + africa-report.md (includes the AP World set)
+python3 tools/ap_match.py africa          # course texts -> data/ap-world/africa.yaml (needs Loom's library; see sources.yaml)
 python3 tools/export_taxonomy.py          # -> data/build/taxonomy.json + modules.json
 python3 tools/build_geometry.py africa    # polity-shapes.yaml -> data/geometry/polities/; -> data/build/africa-geo.json
                                           #   + africa-base.json
@@ -50,5 +51,7 @@ On Windows, `python` replaces `python3`. In Git Bash set `MSYS_NO_PATHCONV=1` be
   Hand-drawn (H) shapes stay `review: draft` until Wil approves them in docs/geometry-review.md.
 - **Map layers** draw with pattern fills and pattern lines only (`app/src/map/patterns.ts` helpers), so the map
   compiles two WebGL programs. A new paint kind adds a program and costs startup time on Chromebooks.
+- **AP World view.** `data/ap-world/<module>.yaml` says what the "AP World only" view shows; the app never
+  decides that itself. Wil edits `include` and `exclude` there (docs/decisions-for-wil.md, 20).
 - **Phases in order.** Ship each phase to Pages before starting the next. Something usable must exist early.
 - Ask Wil before changing the stack, the taxonomy, or anything in docs/decisions-for-wil.md.

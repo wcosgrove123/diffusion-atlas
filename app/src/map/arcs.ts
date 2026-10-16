@@ -4,7 +4,7 @@
 // On entering its span an arc animates once: a short pulse travels from origin to destination.
 import * as maplibregl from 'maplibre-gl';
 import type { Feature, FeatureCollection, LineString } from 'geojson';
-import type { Atlas } from '../atlas';
+import type { Atlas, Visible } from '../atlas';
 import type { Diffusion, Place } from '../data/types';
 import { diffusionsAt } from '../data/profiles';
 import { lensColor, mapInk } from '../theme/palette';
@@ -162,9 +162,9 @@ export class ArcLayer {
   }
 
   /** Redraw for a year and lens. The lines change at once; glyphs and labels follow in slices. */
-  async update(year: number, lens: string): Promise<boolean> {
+  async update(year: number, lens: string, visible: Visible = () => true): Promise<boolean> {
     const token = this.runs.next();
-    const current = diffusionsAt(this.atlas.diffusions, lens, year);
+    const current = diffusionsAt(this.atlas.diffusions, lens, year).filter((d) => visible(d.id));
     // Diffusions between the same two places bow more each time, so their arcs and glyphs do not coincide.
     const seen = new Map<string, number>();
     const bowFor = (from: string, to: string) => {

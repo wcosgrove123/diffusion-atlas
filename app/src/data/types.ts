@@ -213,6 +213,16 @@ export interface ModuleData {
   events: AtlasEvent[];
   sources: Source[];
   debates: Debate[];
+  /** The "AP World only" view (tools/ap_match.py, tools/build_data.py); null when the module has no list. */
+  ap_world: ApWorld | null;
+}
+
+export interface ApWorld {
+  default_view: 'ap' | 'all';
+  generated: string;
+  sources: string[];
+  /** record id -> why it is in the AP view ("named in ...", "follows Mali", "arrives at Timbuktu") */
+  why: Record<string, string>;
 }
 
 /** data/build/taxonomy.json: taxonomy.yaml as JSON plus a flattened traditions index. */

@@ -1,0 +1,66 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-hadiya",
+    "year_from": 1250,
+    "year_to": 1600,
+    "method": "H",
+    "basis": "Drawn from the pl-hadiya geometry_note: a Muslim kingdom in the southern highlands, south of the Awash, location approximate. Low confidence."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       37.293,
+       7.191
+      ],
+      [
+       38.0,
+       6.92
+      ],
+      [
+       38.707,
+       7.191
+      ],
+      [
+       38.8,
+       7.408
+      ],
+      [
+       38.8,
+       8.015
+      ],
+      [
+       38.722,
+       8.216
+      ],
+      [
+       37.999,
+       8.573
+      ],
+      [
+       37.293,
+       8.309
+      ],
+      [
+       37.2,
+       8.092
+      ],
+      [
+       37.2,
+       7.408
+      ],
+      [
+       37.293,
+       7.191
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

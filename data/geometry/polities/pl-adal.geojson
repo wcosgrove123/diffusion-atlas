@@ -1,0 +1,118 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-adal",
+    "year_from": 1415,
+    "year_to": 1577,
+    "method": "E",
+    "basis": "aourednik 'Adal' 1492 from 1415, extended to the Zeila coast (geometry-audit section 5) and south-west to the Harar plateau so Dakkar (the research label point, 42.3E 9.2N) is inside (pl-adal geometry_note)."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       41.678,
+       8.666
+      ],
+      [
+       42.983,
+       8.802
+      ],
+      [
+       43.174,
+       9.015
+      ],
+      [
+       43.31,
+       9.613
+      ],
+      [
+       44.064,
+       10.246
+      ],
+      [
+       44.063,
+       10.629
+      ],
+      [
+       43.665,
+       10.981
+      ],
+      [
+       43.488,
+       11.27
+      ],
+      [
+       43.467,
+       11.454
+      ],
+      [
+       43.215,
+       11.503
+      ],
+      [
+       43.153,
+       11.609
+      ],
+      [
+       42.742,
+       11.639
+      ],
+      [
+       42.797,
+       11.74
+      ],
+      [
+       43.15,
+       11.9
+      ],
+      [
+       42.534,
+       11.868
+      ],
+      [
+       42.253,
+       11.603
+      ],
+      [
+       41.693,
+       11.315
+      ],
+      [
+       41.603,
+       11.145
+      ],
+      [
+       41.552,
+       10.85
+      ],
+      [
+       41.723,
+       10.305
+      ],
+      [
+       41.431,
+       9.894
+      ],
+      [
+       41.4,
+       9.047
+      ],
+      [
+       41.533,
+       8.749
+      ],
+      [
+       41.678,
+       8.666
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

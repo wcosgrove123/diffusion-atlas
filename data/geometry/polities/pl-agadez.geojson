@@ -1,0 +1,70 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-agadez",
+    "year_from": 1405,
+    "year_to": null,
+    "method": "H",
+    "basis": "Drawn from the pl-agadez geometry_note: the sultanate of the Air massif seated at Agadez, with the earlier seats in the Air (Tadaliza, Tin Chaman) inside the zone (geometry-audit section 5: small soft zone, low confidence). Founding date debated (1405 to 1449)."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       7.297,
+       16.41
+      ],
+      [
+       8.396,
+       16.219
+      ],
+      [
+       9.388,
+       16.81
+      ],
+      [
+       9.959,
+       18.147
+      ],
+      [
+       9.91,
+       18.335
+      ],
+      [
+       9.232,
+       19.305
+      ],
+      [
+       8.989,
+       19.34
+      ],
+      [
+       7.917,
+       19.034
+      ],
+      [
+       7.739,
+       18.894
+      ],
+      [
+       7.018,
+       17.597
+      ],
+      [
+       7.165,
+       16.611
+      ],
+      [
+       7.297,
+       16.41
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

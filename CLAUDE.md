@@ -45,7 +45,10 @@ On Windows, `python` replaces `python3`. In Git Bash set `MSYS_NO_PATHCONV=1` be
   Plain, short sentences.
 - **Attribution.** Wil is the author of the project, its ideas, and its writing. Nothing in the site, README, or
   metadata should say Claude or AI built it or wrote it. Co-author lines on commits for code are fine.
-- **Polygons** are made from `data/geometry/polity-shapes.yaml` (method A, E or H per docs/geometry-audit.md 5).
+- **Polygons** are made from `data/geometry/polity-shapes.yaml` (method A, E or H per docs/geometry-audit.md 5;
+  E edits are `keep`, `remove`, `add`; H is an `outline` or a `point` with `buffer_km`; `zone: nomadic` hatches).
   Hand-drawn (H) shapes stay `review: draft` until Wil approves them in docs/geometry-review.md.
+- **Map layers** draw with pattern fills and pattern lines only (`app/src/map/patterns.ts` helpers), so the map
+  compiles two WebGL programs. A new paint kind adds a program and costs startup time on Chromebooks.
 - **Phases in order.** Ship each phase to Pages before starting the next. Something usable must exist early.
 - Ask Wil before changing the stack, the taxonomy, or anything in docs/decisions-for-wil.md.

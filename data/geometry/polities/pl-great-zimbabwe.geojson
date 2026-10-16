@@ -1,0 +1,70 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-great-zimbabwe",
+    "year_from": 1200,
+    "year_to": 1450,
+    "method": "A",
+    "basis": "aourednik 'Great Zimbabwe' 1279 as is with our dates c.1200 to 1450 (geometry-audit section 5), relabelled and clipped: a soft area over the southern plateau, as the pl-great-zimbabwe geometry_note asks."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       33.395,
+       -20.761
+      ],
+      [
+       33.395,
+       -19.173
+      ],
+      [
+       32.69,
+       -18.644
+      ],
+      [
+       31.278,
+       -18.644
+      ],
+      [
+       29.69,
+       -18.82
+      ],
+      [
+       28.632,
+       -19.879
+      ],
+      [
+       28.279,
+       -21.467
+      ],
+      [
+       28.455,
+       -22.525
+      ],
+      [
+       29.338,
+       -23.055
+      ],
+      [
+       31.102,
+       -23.055
+      ],
+      [
+       32.866,
+       -21.996
+      ],
+      [
+       33.395,
+       -20.761
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

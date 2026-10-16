@@ -1,0 +1,122 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-ifat",
+    "year_from": 1285,
+    "year_to": 1415,
+    "method": "E",
+    "basis": "aourednik 'Shoa' 1279 relabelled Ifat (geometry-audit section 5), extended west to the eastern Shewa escarpment so the capital Wafat (the research label point, 39.9E 10N) is inside, and extended to the Zeila coast (pl-ifat geometry_note: reaching to the port of Zeila)."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       39.539,
+       10.556
+      ],
+      [
+       39.534,
+       9.578
+      ],
+      [
+       39.631,
+       9.444
+      ],
+      [
+       39.938,
+       9.342
+      ],
+      [
+       41.386,
+       9.48
+      ],
+      [
+       41.934,
+       9.788
+      ],
+      [
+       42.096,
+       9.773
+      ],
+      [
+       42.477,
+       9.554
+      ],
+      [
+       43.398,
+       9.707
+      ],
+      [
+       43.974,
+       10.135
+      ],
+      [
+       44.11,
+       10.381
+      ],
+      [
+       44.063,
+       10.629
+      ],
+      [
+       43.665,
+       10.981
+      ],
+      [
+       43.488,
+       11.27
+      ],
+      [
+       43.467,
+       11.454
+      ],
+      [
+       43.215,
+       11.503
+      ],
+      [
+       43.153,
+       11.609
+      ],
+      [
+       42.742,
+       11.639
+      ],
+      [
+       42.797,
+       11.74
+      ],
+      [
+       43.15,
+       11.9
+      ],
+      [
+       42.534,
+       11.868
+      ],
+      [
+       42.253,
+       11.603
+      ],
+      [
+       41.368,
+       11.145
+      ],
+      [
+       39.807,
+       10.773
+      ],
+      [
+       39.539,
+       10.556
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-katsina",
+    "year_from": 1300,
+    "year_to": null,
+    "method": "H",
+    "basis": "Drawn from the pl-katsina geometry_note: a city-state in northern Hausaland, with Durbi ta Kusheyi (the early seat, about 30 km south-east) inside the zone. About 60 km across."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       7.301,
+       13.21
+      ],
+      [
+       7.215,
+       12.803
+      ],
+      [
+       7.356,
+       12.611
+      ],
+      [
+       7.658,
+       12.556
+      ],
+      [
+       7.998,
+       12.693
+      ],
+      [
+       7.99,
+       13.095
+      ],
+      [
+       7.759,
+       13.301
+      ],
+      [
+       7.626,
+       13.332
+      ],
+      [
+       7.301,
+       13.21
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-bulala",
+    "year_from": 1380,
+    "year_to": 1630,
+    "method": "H",
+    "basis": "Drawn from the pl-bulala geometry_note: Kanem (the plains north-east of Lake Chad) from c.1387 plus the Bulala homeland around Lake Fitri (17.5E 12.8N). The Lake Chad shore on the west is the historic lake."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       15.157,
+       12.205
+      ],
+      [
+       18.202,
+       11.917
+      ],
+      [
+       18.42,
+       11.985
+      ],
+      [
+       19.177,
+       13.402
+      ],
+      [
+       18.574,
+       15.476
+      ],
+      [
+       16.8,
+       16.179
+      ],
+      [
+       15.267,
+       15.608
+      ],
+      [
+       15.166,
+       15.44
+      ],
+      [
+       14.902,
+       14.161
+      ],
+      [
+       14.987,
+       12.461
+      ],
+      [
+       15.157,
+       12.205
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

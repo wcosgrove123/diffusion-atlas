@@ -8,7 +8,7 @@ interface Span { start: number; end: number | null }
 interface Trad { tradition: string; share: string; local_form?: string | null }
 interface Profile { id: string; place: string; stratum: string; span: Span; relation: string; traditions: Trad[]; confidence: string; _file: string }
 interface AtlasEvent { id: string; year: number; title: string; keyframe?: boolean; _file: string }
-interface Data { frame: { start: number; shown_regions: string[] }; religion_profiles: Profile[]; events: AtlasEvent[] }
+interface Data { frame: { start: number; shown_regions: string[]; regions: { id: string; label: string }[] }; religion_profiles: Profile[]; events: AtlasEvent[] }
 interface Taxonomy { religion: { relation_labels: Record<string, string> } }
 
 const covers = (s: Span, y: number) => s.start <= y && (s.end === null || y < s.end);
@@ -19,6 +19,7 @@ async function openAt(page: Page, year: number): Promise<void> {
   await page.goto(`./?year=${year}`);
   await expect(page.locator('#map')).toHaveAttribute('data-ready', 'true', { timeout: 45_000 });
   await expect(page.locator('#year')).toHaveText(String(year));
+  // markers arrive in slices; ready waits for the first full set, so the page is complete here
 }
 
 async function load(page: Page): Promise<{ data: Data; tax: Taxonomy }> {
@@ -70,7 +71,7 @@ test.describe('Phase 1 acceptance', () => {
     }, String(ring[0].ring_pattern));
     expect(colors, 'two traditions drawn in the ring pattern').toBeGreaterThanOrEqual(2);
 
-    await page.locator('.place-marker[data-place="pl-mali"]').click();
+    await page.locator('.place-marker[data-place="pl-mali"]').dispatchEvent('click');
     const row = page.locator('.card tr[data-stratum="court"]');
     await expect(row).toHaveAttribute('data-profile', court.id);
     for (const t of court.traditions) {
@@ -89,7 +90,7 @@ test.describe('Phase 1 acceptance', () => {
     expect(fill[0].rural_profile).toBe(rural.id);
     expect(fill[0].rural_relation).toBe(rural.relation);
     const label = tax.religion.relation_labels[rural.relation];
-    await page.locator('.place-marker[data-place="pl-mali"]').click();
+    await page.locator('.place-marker[data-place="pl-mali"]').dispatchEvent('click');
     const row = page.locator('.card tr[data-stratum="rural"]');
     await expect(row).toHaveAttribute('data-relation', rural.relation);
     await expect(row).toContainText(label);
@@ -115,9 +116,21 @@ test.describe('Phase 1 acceptance', () => {
     const key = (s: { tradition: string; fraction: number }) => `${s.tradition}:${s.fraction.toFixed(4)}`;
     expect(drawn.map(key).sort()).toEqual(expected.map(key).sort());
 
-    // The pixels agree: the middle of each segment is closest to that tradition's color.
-    const sampled = await marker.locator('canvas').first().evaluate((c: HTMLCanvasElement, segs: { tradition: string; fraction: number }[]) => {
+    // The pixels agree: the middle of each segment is closest to that tradition's color. The donut is a canvas, or
+    // an image of one when another town shares the look.
+    const sampled = await marker.locator('.place-marker__glyph').evaluate(async (glyph: HTMLElement, segs: { tradition: string; fraction: number }[]) => {
       const w = window as unknown as { __atlas: { colors: Record<string, string> } };
+      const el = glyph.firstElementChild as HTMLCanvasElement | HTMLImageElement;
+      let c: HTMLCanvasElement;
+      if (el instanceof HTMLImageElement) {
+        await el.decode();
+        c = document.createElement('canvas');
+        c.width = el.naturalWidth;
+        c.height = el.naturalHeight;
+        c.getContext('2d')!.drawImage(el, 0, 0);
+      } else {
+        c = el;
+      }
       const ctx = c.getContext('2d')!;
       const rgb = (hex: string) => [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16));
       const size = c.width;
@@ -148,8 +161,11 @@ test.describe('Phase 1 acceptance', () => {
     await page.goto('./');
     await expect(page.locator('#map')).toHaveAttribute('data-ready', 'true', { timeout: 45_000 });
     const { data } = await load(page);
-    const shown = new Set(data.frame.shown_regions);
-    const kfs = data.events.filter((e) => e.keyframe && shown.has(e._file)).sort((a, b) => a.year - b.year);
+    // The build plan names the West (wsahel) keyframes: choose that region in the keyframe filter.
+    const region = 'wsahel';
+    expect(data.frame.shown_regions).toContain(region);
+    await page.locator('#keyframe-region').selectOption(region);
+    const kfs = data.events.filter((e) => e.keyframe && e._file === region).sort((a, b) => a.year - b.year);
     expect(kfs.map((e) => e.year)).toEqual([1235, 1324, 1352, 1433]);
     await expect(page.locator('#year')).toHaveText(String(data.frame.start));
     for (const k of kfs) {

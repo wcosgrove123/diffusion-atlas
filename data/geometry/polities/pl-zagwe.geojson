@@ -1,0 +1,94 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-zagwe",
+    "year_from": 1137,
+    "year_to": 1270,
+    "method": "H",
+    "basis": "Drawn from the pl-zagwe geometry_note: a highland zone centred on Lasta and Wag (Agaw country) with authority over Tigray, the Eritrean highlands and Amhara; Adefa and Roha (Lalibela) inside (geometry-audit section 5: do not use the 1200 \"Ifat\" polygon)."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       37.716,
+       10.993
+      ],
+      [
+       38.798,
+       10.633
+      ],
+      [
+       39.825,
+       11.113
+      ],
+      [
+       40.038,
+       11.392
+      ],
+      [
+       40.375,
+       13.291
+      ],
+      [
+       39.869,
+       15.146
+      ],
+      [
+       39.846,
+       15.194
+      ],
+      [
+       39.803,
+       15.103
+      ],
+      [
+       39.716,
+       15.129
+      ],
+      [
+       39.741,
+       15.244
+      ],
+      [
+       39.835,
+       15.215
+      ],
+      [
+       39.801,
+       15.284
+      ],
+      [
+       39.643,
+       15.401
+      ],
+      [
+       38.697,
+       15.558
+      ],
+      [
+       38.378,
+       15.464
+      ],
+      [
+       37.443,
+       13.495
+      ],
+      [
+       37.578,
+       11.263
+      ],
+      [
+       37.716,
+       10.993
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

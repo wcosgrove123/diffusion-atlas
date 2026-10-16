@@ -153,7 +153,11 @@ describe.skipIf(!haveBuild)('built data', () => {
     const years = kfs.map((e) => e.year);
     expect(years).toEqual([...years].sort((x, y) => x - y));
     expect(nextKeyframe(kfs, data.frame.start)?.year).toBe(years[0]);
-    expect(prevKeyframe(kfs, years[0])).toBeNull();
+    // a keyframe at the current year counts until it has been visited; then the next year's does
+    const first = nextKeyframe(kfs, years[0])!;
+    const after = nextKeyframe(kfs, years[0], new Set(kfs.filter((k) => k.year === years[0]).map((k) => k.id)))!;
+    expect(after.year).toBeGreaterThan(first.year);
+    expect(prevKeyframe(kfs, years[0], new Set(kfs.filter((k) => k.year === years[0]).map((k) => k.id)))).toBeNull();
     expect(eventsNear(shownEvents(data), years[0]).some((e) => e.id === kfs[0].id)).toBe(true);
   });
 

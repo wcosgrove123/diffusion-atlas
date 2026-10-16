@@ -93,7 +93,8 @@ body {
   gap: 0 1rem;
 }
 .timeline__year { grid-area: year; font-size: 2.4rem; font-weight: 700; font-variant-numeric: tabular-nums; min-width: 4.2ch; }
-.timeline__buttons { grid-area: buttons; display: flex; gap: 0.4rem; }
+.timeline__buttons { grid-area: buttons; display: flex; gap: 0.4rem; align-items: center; }
+.timeline__region { font: inherit; min-height: 2.5rem; padding: 0.2rem 0.4rem; border: 1px solid var(--c-border); border-radius: 6px; background: var(--c-surface); color: var(--c-text); max-width: 11rem; }
 .timeline__track { grid-area: track; position: relative; padding: 0.3rem 0; }
 .timeline__range { width: 100%; margin: 0; accent-color: var(--c-accent); min-height: 1.75rem; }
 .timeline__ticks { position: absolute; inset: 0 0.55rem; pointer-events: none; }
@@ -165,6 +166,46 @@ body {
   cursor: pointer;
 }
 .event-marker--keyframe { width: 16px; height: 16px; background: var(--c-ink-keyframe-marker); }
+/* Small areas (city-states, coastal towns) keep their names for closer zooms only and show a dot instead; large
+   areas show a short name. */
+.map--far .place-marker--small .place-marker__name { display: none; }
+.map--far .place-marker--small .place-marker__glyph:empty {
+  display: block;
+  width: 9px;
+  height: 9px;
+  border: 2px solid var(--c-ink-keyline);
+  border-radius: 50%;
+  background: var(--c-ink-event-marker);
+}
+.map--far .place-marker--area .place-marker__name { font-size: 0.8rem; }
+.map--far .name--full { display: none; }
+.map:not(.map--far) .name--short { display: none; }
+
+/* Exemplar markers and arc glyphs sit above area labels, so they can be clicked where they overlap. */
+.exemplar-marker { position: relative; z-index: 2; padding: 0; border: 0; background: none; cursor: pointer; line-height: 0; }
+.exemplar-marker canvas { display: block; }
+
+.arc-glyph { position: relative; z-index: 2; padding: 0; border: 0; background: none; cursor: pointer; line-height: 0; }
+.arc-glyph canvas { display: block; }
+.arc-edge {
+  display: inline-block;
+  padding: 0.05rem 0.4rem;
+  border: 1px solid var(--c-border);
+  border-radius: 999px;
+  background: var(--c-surface);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.arc-pulse {
+  display: block;
+  width: 14px;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--c-ink-arc-pulse);
+  box-shadow: 0 0 0 1px var(--c-text);
+  pointer-events: none;
+}
 
 /* ---- legend ---- */
 .legend {
@@ -192,6 +233,9 @@ body {
 .legend__strata--donut { width: 16px; height: 16px; border-radius: 50%; box-shadow: inset 0 0 0 4px var(--legend-a); margin: 0 3px; }
 .legend__strata--none { border: 2px dashed var(--legend-none); }
 .legend__strata--dotted { border: 2px dotted var(--c-text); }
+.legend__event { display: inline-block; width: 11px; height: 11px; margin: 0 5px; border: 2px solid var(--c-ink-keyline); background: var(--c-ink-event-marker); transform: rotate(45deg); }
+.legend__event--keyframe { background: var(--c-ink-keyframe-marker); }
+.legend__exemplar { display: inline-block; width: 12px; height: 12px; margin: 0 5px; border: 2px solid var(--c-ink-exemplar); border-top-left-radius: 50% 40%; border-top-right-radius: 50% 40%; }
 
 /* ---- cards ---- */
 .card {
@@ -219,7 +263,26 @@ body {
 .card__summary { margin: 0.4rem 0; }
 .card__flag { color: var(--c-text-muted); }
 .card__sources { margin: 0; padding-left: 1.1rem; font-size: 0.95rem; }
-.card__events { margin: 0; padding-left: 1.1rem; }
+.card__events, .card__list { margin: 0; padding-left: 1.1rem; }
+.card__section h4 { margin: 0.5rem 0 0.2rem; font-size: 0.95rem; color: var(--c-text-muted); }
+.card__route { margin: 0.2rem 0; }
+.card__citation { font-size: 0.95rem; }
+.source-voice { color: var(--c-text-muted); font-size: 0.9rem; }
+.code { display: flex; align-items: center; gap: 0.5rem; margin: 0.2rem 0; }
+.code canvas { flex: none; }
+.code__test { margin: 0.1rem 0 0.4rem; color: var(--c-text-muted); }
+.chips__lead { align-self: center; }
+.chip--lens { background: var(--c-accent); color: var(--c-accent-text); border-color: transparent; }
+.exemplar__icon { margin: 0.2rem 0; }
+.exemplar__glyph { display: inline-block; width: 28px; height: 28px; border: 3px solid var(--c-ink-exemplar); border-top-left-radius: 50% 40%; border-top-right-radius: 50% 40%; }
+.minimap { display: block; max-width: 100%; border: 1px solid var(--c-border); }
+.positions { padding-left: 1.2rem; }
+.positions li { margin-bottom: 0.5rem; }
+.positions__view { margin: 0; }
+.positions__who { margin: 0; color: var(--c-text-muted); font-size: 0.95rem; }
+.happ { display: grid; grid-template-columns: auto 1fr; gap: 0.2rem 0.8rem; margin: 0; }
+.happ dt { color: var(--c-text-muted); }
+.happ dd { margin: 0; }
 
 .strata { width: 100%; border-collapse: collapse; }
 .strata th, .strata td { text-align: left; vertical-align: top; padding: 0.45rem 0.3rem; border-top: 1px solid var(--c-border); }

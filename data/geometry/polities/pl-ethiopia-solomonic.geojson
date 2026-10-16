@@ -1,0 +1,187 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-ethiopia-solomonic",
+    "year_from": 1270,
+    "year_to": 1330,
+    "method": "A",
+    "basis": "aourednik 'Ethiopia' 1279 as the Solomonic core, relabelled and clipped (geometry-audit section 5: use it as a soft core). Amhara and Shewa with Lasta and Tigray; Lalibela inside."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       40.503,
+       11.624
+      ],
+      [
+       39.142,
+       13.879
+      ],
+      [
+       37.629,
+       14.524
+      ],
+      [
+       36.722,
+       13.879
+      ],
+      [
+       35.512,
+       10.013
+      ],
+      [
+       35.966,
+       8.08
+      ],
+      [
+       37.327,
+       7.114
+      ],
+      [
+       39.142,
+       7.114
+      ],
+      [
+       40.2,
+       8.08
+      ],
+      [
+       40.805,
+       9.53
+      ],
+      [
+       40.503,
+       11.624
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-ethiopia-solomonic",
+    "year_from": 1330,
+    "year_to": null,
+    "method": "A",
+    "basis": "aourednik 'Ethiopia' 1492 as the core plus the tributary halo after Amda Seyon's campaigns (1314 to 1344), relabelled and clipped (geometry-audit section 5: grow it for c.1330 to 1340; pl-ethiopia-solomonic geometry_note: a core plus a tributary halo). Overlaps Ifat and Hadiya, which were tributary."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       41.571,
+       10.292
+      ],
+      [
+       42.465,
+       9.507
+      ],
+      [
+       42.023,
+       10.392
+      ],
+      [
+       41.507,
+       10.76
+      ],
+      [
+       40.917,
+       10.908
+      ],
+      [
+       40.696,
+       11.276
+      ],
+      [
+       41.212,
+       11.866
+      ],
+      [
+       41.433,
+       12.751
+      ],
+      [
+       41.138,
+       13.856
+      ],
+      [
+       39.443,
+       14.962
+      ],
+      [
+       38.853,
+       15.625
+      ],
+      [
+       38.19,
+       15.625
+      ],
+      [
+       37.453,
+       15.404
+      ],
+      [
+       36.421,
+       14.888
+      ],
+      [
+       35.61,
+       12.235
+      ],
+      [
+       35.463,
+       9.581
+      ],
+      [
+       35.61,
+       8.107
+      ],
+      [
+       35.978,
+       7.444
+      ],
+      [
+       38.116,
+       6.485
+      ],
+      [
+       38.605,
+       6.597
+      ],
+      [
+       38.718,
+       7.114
+      ],
+      [
+       39.142,
+       7.114
+      ],
+      [
+       40.2,
+       8.08
+      ],
+      [
+       40.805,
+       9.53
+      ],
+      [
+       40.72,
+       10.115
+      ],
+      [
+       41.571,
+       10.292
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-mombasa",
+    "year_from": 1100,
+    "year_to": null,
+    "method": "H",
+    "basis": "Mombasa island as a point with a 25 km coastal buffer (geometry-audit section 5)."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       39.553,
+       -4.257
+      ],
+      [
+       39.779,
+       -3.867
+      ],
+      [
+       39.608,
+       -3.844
+      ],
+      [
+       39.47,
+       -3.949
+      ],
+      [
+       39.448,
+       -4.12
+      ],
+      [
+       39.553,
+       -4.257
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

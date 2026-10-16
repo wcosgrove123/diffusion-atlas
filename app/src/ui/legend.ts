@@ -2,10 +2,10 @@
 // how the map draws things are UI text.
 import type { Atlas } from '../atlas';
 import { CONFIDENCE_OPACITY } from '../map/religionLayer';
-import { patternKind } from '../map/patterns';
-import { mapInk, traditionColor } from '../theme/palette';
+import { arcStyle, patternKind } from '../map/patterns';
+import { lensColor, mapInk, traditionColor } from '../theme/palette';
 import { h, keyLabel } from './dom';
-import { swatch } from './glyphs';
+import { arcSwatch, outcomeGlyph, swatch } from './glyphs';
 
 /** Traditions the shown profiles use, most used first. */
 function traditionsInUse(atlas: Atlas): string[] {
@@ -18,7 +18,7 @@ function traditionsInUse(atlas: Atlas): string[] {
   return [...count.entries()].sort((a, b) => b[1] - a[1]).map(([t]) => t);
 }
 
-export function buildLegend(atlas: Atlas): HTMLElement {
+export function buildLegend(atlas: Atlas, lens: string): HTMLElement {
   const tax = atlas.tax;
   const used = traditionsInUse(atlas);
   // The relation swatches use the two traditions the shown data uses most, so they look like the map.
@@ -61,7 +61,18 @@ export function buildLegend(atlas: Atlas): HTMLElement {
         }),
         row(strataSwatch('dotted'), `Dotted border: ${keyLabel('inferred')}`, tax.religion.basis.inferred),
         row(strataSwatch('dotted'), `Dotted border and a "later evidence" tag: ${keyLabel('projected')}`, tax.religion.basis.projected)),
-      h('p', { class: 'legend__note' }, 'Soft edges: borders were zones, not lines.'));
+      h('p', { class: 'legend__note' }, 'Soft edges: borders were zones, not lines. A hatched edge is a people on the move, not a state.'),
+      h('h3', {}, 'Arrows: how culture moved'),
+      h('ul', { class: 'legend__list' }, Object.keys(tax.diffusion.mechanism).map((m) =>
+        row(arcSwatch(arcStyle(m), lensColor(lens), 36, 10), keyLabel(m), tax.diffusion.mechanism[m], { 'data-mechanism': m }))),
+      h('h3', {}, 'What happened when it arrived'),
+      h('ul', { class: 'legend__list' }, Object.keys(tax.diffusion.outcome).map((o) =>
+        row(outcomeGlyph(o, lensColor(lens)), keyLabel(o), tax.diffusion.outcome[o], { 'data-outcome': o }))),
+      h('h3', {}, 'Other marks'),
+      h('ul', { class: 'legend__list' },
+        row(h('span', { class: 'legend__event', 'aria-hidden': 'true' }), 'Event near this year'),
+        row(h('span', { class: 'legend__event legend__event--keyframe', 'aria-hidden': 'true' }), 'Keyframe event'),
+        row(h('span', { class: 'legend__exemplar', 'aria-hidden': 'true' }), 'Something to see: a building, object or text')));
   const details = h('details', { class: 'legend', id: 'legend' }, h('summary', { class: 'legend__toggle' }, 'Legend'));
   const fill = () => {
     if (details.open && !details.querySelector('.legend__body')) details.append(body());

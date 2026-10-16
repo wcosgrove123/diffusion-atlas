@@ -1,0 +1,143 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-benin",
+    "year_from": 1000,
+    "year_to": 1440,
+    "method": "E",
+    "basis": "aourednik 'Benin' 1279 shrunk to the Edo core between 5.3E and 6.5E before c.1440 (geometry-audit section 5; pl-benin geometry_note: expansion beyond the Edo heartland begins with Ewuare, c.1440)."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       5.324,
+       8.528
+      ],
+      [
+       5.3,
+       5.686
+      ],
+      [
+       5.365,
+       5.176
+      ],
+      [
+       5.58,
+       4.679
+      ],
+      [
+       5.754,
+       4.51
+      ],
+      [
+       5.959,
+       4.441
+      ],
+      [
+       6.219,
+       4.617
+      ],
+      [
+       6.5,
+       5.305
+      ],
+      [
+       6.5,
+       8.378
+      ],
+      [
+       6.418,
+       8.585
+      ],
+      [
+       6.216,
+       8.678
+      ],
+      [
+       5.496,
+       8.691
+      ],
+      [
+       5.324,
+       8.528
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-benin",
+    "year_from": 1440,
+    "year_to": null,
+    "method": "E",
+    "basis": "aourednik 'Benin' 1279 as the post-Ewuare extent, with the west cut at 4.9E so Ile-Ife is outside (geometry-audit section 5: \"Remove Ife\")."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       4.918,
+       5.994
+      ],
+      [
+       5.309,
+       5.511
+      ],
+      [
+       5.365,
+       5.176
+      ],
+      [
+       5.58,
+       4.679
+      ],
+      [
+       5.85,
+       4.456
+      ],
+      [
+       6.157,
+       4.527
+      ],
+      [
+       7.365,
+       7.019
+      ],
+      [
+       7.315,
+       7.988
+      ],
+      [
+       6.861,
+       8.612
+      ],
+      [
+       5.511,
+       8.715
+      ],
+      [
+       5.243,
+       8.578
+      ],
+      [
+       4.9,
+       7.959
+      ],
+      [
+       4.918,
+       5.994
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

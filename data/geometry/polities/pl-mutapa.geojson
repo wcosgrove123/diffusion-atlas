@@ -1,0 +1,74 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-mutapa",
+    "year_from": 1430,
+    "year_to": null,
+    "method": "H",
+    "basis": "Drawn from the pl-mutapa geometry_note: the northern Zimbabwe plateau and the Zambezi escarpment (Dande). A forward pointer at the very end of the slider; c.1430 is a convention, not a fixed date. Low confidence."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       29.748,
+       -17.414
+      ],
+      [
+       31.201,
+       -17.981
+      ],
+      [
+       32.539,
+       -17.665
+      ],
+      [
+       32.681,
+       -17.598
+      ],
+      [
+       32.838,
+       -17.334
+      ],
+      [
+       32.948,
+       -16.32
+      ],
+      [
+       32.742,
+       -16.071
+      ],
+      [
+       31.397,
+       -15.426
+      ],
+      [
+       30.066,
+       -15.734
+      ],
+      [
+       29.817,
+       -15.921
+      ],
+      [
+       29.766,
+       -16.072
+      ],
+      [
+       29.639,
+       -17.087
+      ],
+      [
+       29.748,
+       -17.414
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

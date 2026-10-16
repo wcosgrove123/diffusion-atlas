@@ -19,5 +19,5 @@ modules:
       - {id: north, label: North}
       - {id: nile-horn, label: Nile and Horn}
       - {id: swahili, label: Swahili coast}
-    # The regions the app draws. Phase 1 is the West Africa slice; later phases add the rest.
-    shown_regions: [wsahel]
+    # The regions the app draws (Phase 1 showed only wsahel).
+    shown_regions: [wsahel, csahel, north, nile-horn, swahili]

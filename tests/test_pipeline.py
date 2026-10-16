@@ -160,10 +160,14 @@ def test_polity_shapes_are_clipped_to_land():
     land = unary_union([make_valid(shape(f["geometry"])) for f in json.loads(
         (ROOT / "data/geometry/base" / SHAPES["module"] / "land.geojson").read_text(encoding="utf-8"))["features"]])
     for path in POLITY_FILES:
-        for f in json.loads(path.read_text(encoding="utf-8"))["features"]:
+        specs = SHAPES["polities"][path.stem]
+        for f, spec in zip(json.loads(path.read_text(encoding="utf-8"))["features"], specs):
             g = shape(f["geometry"])
-            # simplification after clipping can wander a little past the coast; allow 2% of the area
-            assert g.difference(land).area <= 0.02 * g.area, path.stem
+            # The build closes inlets narrower than about 15 km before clipping, and simplification can wander a
+            # little past the coast, so a thin coastal strip may sit up to a few percent over Natural Earth water;
+            # a town's coastal buffer (Kilwa, Mombasa are islands) also spans its channel.
+            limit = 0.25 if spec.get("point") else 0.05
+            assert g.difference(land).area <= limit * g.area, path.stem
 
 
 def test_phase1_polities_have_shapes():
@@ -173,6 +177,42 @@ def test_phase1_polities_have_shapes():
     for pid in ("pl-sosso", "pl-jolof", "pl-takrur", "pl-songhay-gao", "pl-mossi", "pl-bono"):
         assert methods[pid] == {"H"}, pid
     assert all(s.get("review") in ("draft", "approved") for specs in SHAPES["polities"].values() for s in specs)
+
+
+def test_every_polity_and_people_of_the_shown_regions_has_a_shape_or_a_point():
+    """docs/build-plan.md Phase 2: polygons for the remaining regions. A polity or people without a shape still has a
+    location (drawn as a point), so nothing disappears; here every one in the shown regions gets a shape."""
+    places = _research_places(SHAPES["module"])
+    # Wil's call (docs/decisions-for-wil.md, 13): Kaabu and Bambuk-Bure stay points until he decides on shapes.
+    point_only = {"pl-kaabu", "pl-bambuk-bure"}
+    missing = [pid for pid, p in places.items()
+               if p["kind"] in ("polity", "people") and pid not in SHAPES["polities"] and pid not in point_only]
+    assert missing == [], missing
+    for pid, p in places.items():
+        assert p.get("location"), pid
+
+
+def test_each_place_label_point_sits_in_one_of_its_shapes():
+    """The research location is the label point; at least one shape per place holds it (a later shape may not: Makuria's
+    court moved north of Dongola after 1365). Coastal buffers may start at the Natural Earth coast a few km off."""
+    from shapely.geometry import Point, shape
+    places = _research_places(SHAPES["module"])
+    for path in POLITY_FILES:
+        loc = places[path.stem]["location"]
+        pt = Point(loc["lon"], loc["lat"])
+        geoms = [shape(f["geometry"]) for f in json.loads(path.read_text(encoding="utf-8"))["features"]]
+        assert min(g.distance(pt) for g in geoms) < 0.15, path.stem
+
+
+def test_zone_values_are_known_and_nomadic_is_a_people():
+    places = _research_places(SHAPES["module"])
+    for pid, specs in SHAPES["polities"].items():
+        for s in specs:
+            if s.get("zone"):
+                assert s["zone"] == "nomadic", pid
+                assert places[pid]["kind"] == "people", pid
+    feats = [f for p in POLITY_FILES for f in json.loads(p.read_text(encoding="utf-8"))["features"]]
+    assert any(f["properties"].get("zone") == "nomadic" for f in feats)
 
 
 @pytest.mark.parametrize("module", MODULES)

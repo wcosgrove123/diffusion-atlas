@@ -1,0 +1,110 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-zayyanids",
+    "year_from": 1235,
+    "year_to": 1556,
+    "method": "H",
+    "basis": "Drawn from the pl-zayyanids geometry_note and geometry-audit section 5: Tlemcen-centred, about 2W to 2E, the central Maghreb from the coast to the pre-Saharan steppe. The displaced 1279 aourednik shape is not used. Marinid occupations (1337 to 1348, 1352 to 1359) are not drawn."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -2.565,
+       35.102
+      ],
+      [
+       -2.433,
+       33.896
+      ],
+      [
+       -2.263,
+       33.612
+      ],
+      [
+       -0.128,
+       33.213
+      ],
+      [
+       1.888,
+       33.609
+      ],
+      [
+       2.063,
+       33.85
+      ],
+      [
+       2.376,
+       35.198
+      ],
+      [
+       1.923,
+       36.233
+      ],
+      [
+       1.676,
+       36.448
+      ],
+      [
+       1.508,
+       36.462
+      ],
+      [
+       0.64,
+       36.327
+      ],
+      [
+       0.136,
+       36.056
+      ],
+      [
+       -0.061,
+       35.807
+      ],
+      [
+       -0.361,
+       35.905
+      ],
+      [
+       -0.652,
+       35.721
+      ],
+      [
+       -0.818,
+       35.763
+      ],
+      [
+       -1.027,
+       35.685
+      ],
+      [
+       -1.35,
+       35.328
+      ],
+      [
+       -1.771,
+       35.127
+      ],
+      [
+       -2.239,
+       35.094
+      ],
+      [
+       -2.428,
+       35.179
+      ],
+      [
+       -2.565,
+       35.102
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

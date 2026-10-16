@@ -13,7 +13,7 @@ when it arrived (outcome), and whose sources tell us so.
 |---|---|
 | `data/taxonomy.yaml` | Controlled vocabularies, world-general (works for future Asia, Middle East, Europe modules) |
 | `data/research/africa/` | The dataset: places, religion profiles, diffusions, exemplars, events, sources, debates |
-| `data/geometry/` | Clipped historical boundaries (aourednik/historical-basemaps, GPL-3.0) and the geometry audit |
+| `data/geometry/` | Clipped historical boundaries (aourednik/historical-basemaps, GPL-3.0), the shape recipes (`polity-shapes.yaml`) and the built polygons |
 | `tools/` | Validator, data build, geometry extraction |
 | `docs/` | Product spec, build plan, AP CED alignment, fact-check, language review, corrections log, open decisions |
 | `data/modules.yaml` | Module frames: years, map bounds, and the area the map may show |

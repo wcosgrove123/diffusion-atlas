@@ -1,0 +1,87 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-tuareg",
+    "year_from": 1000,
+    "year_to": null,
+    "method": "H",
+    "basis": "Drawn from the pl-tuareg geometry_note: a soft sphere for Tamasheq-speaking pastoral confederations over the Air massif, the Adrar des Ifoghas, the Niger bend north of Timbuktu and the Hoggar (geometry-audit section 5: a nomadic sphere, styled unlike a state). Not a territory; Timbuktu itself belongs to wsahel.",
+    "zone": "nomadic"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -3.941,
+       17.083
+      ],
+      [
+       -2.017,
+       17.199
+      ],
+      [
+       -0.177,
+       17.473
+      ],
+      [
+       0.17,
+       17.443
+      ],
+      [
+       3.053,
+       16.494
+      ],
+      [
+       7.494,
+       16.027
+      ],
+      [
+       9.955,
+       17.53
+      ],
+      [
+       10.455,
+       20.987
+      ],
+      [
+       7.986,
+       23.978
+      ],
+      [
+       4.151,
+       24.962
+      ],
+      [
+       3.854,
+       24.945
+      ],
+      [
+       -0.077,
+       23.423
+      ],
+      [
+       -3.417,
+       20.083
+      ],
+      [
+       -4.261,
+       17.717
+      ],
+      [
+       -4.233,
+       17.333
+      ],
+      [
+       -3.941,
+       17.083
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

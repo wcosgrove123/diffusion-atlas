@@ -43,6 +43,18 @@ Open questions the coding agent must not decide. Each has a recommendation; answ
     (`LIGHTHOUSE_MIN` in .github/workflows/pages.yml); the 80 bar is checked on a machine with a GPU before a release:
     `cd app && npm run build && PW_CHANNEL=msedge npx playwright test lighthouse --project=desktop`.
 
+17. **Outdated words in source titles.** The source card shows a title as published with a note when it contains a
+    word from the taxonomy's `banned_terms` ("Pagan" in three titles). "Arab City" (Kirkman's *The Arab City of
+    Gedi*) is not on that list, so it gets no note. Recommendation: add an `outdated_title_terms` list to
+    taxonomy.yaml with "Arab City" (and anything else you want flagged), and the card will use it too.
+
+18. **Phase 2 geometry drafts (2026-10-16).** 42 more shapes for the other four regions, all drafts, in
+    docs/geometry-review.md with screenshots and questions (Mamluk Egypt cut to Africa, the Ethiopia halo, Takrur and
+    Jolof overlaps, the Tuareg sphere, Swahili coastal buffers of 25 to 30 km).
+
+19. **Phase 2 built before Phase 1 shipped.** You asked to keep building, so Phase 2 is stacked on the Phase 1 branch
+    (PR 2 on top of PR 1). CLAUDE.md says to ship each phase before the next; this is the one exception, on your word.
+
 ## Data and taxonomy (your call; the researchers raised these)
 
 4. **Polity Profile, Right axis.** Two researchers needed a value for legitimacy from mastery of spiritual or occult

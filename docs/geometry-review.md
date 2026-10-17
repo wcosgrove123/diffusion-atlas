@@ -405,7 +405,7 @@ research notes say must be inside or outside. The attribution line on the map no
 | Place | Cliopatria rows used | Why it agrees | What changed on the map |
 |---|---|---|---|
 | Mali, 1300 to 1360 | Mali Empire 1241 to 1414 | Timbuktu, Gao, Walata, Djenne, Niani and the Senegal valley inside; Mossi and Tadmekka outside, with no cuts needed | A rounder, slightly smaller shape than the trimmed aourednik one (0.68 of its area) |
-| Mali, 1360 to 1433 and 1433 on | the same, with our cuts | Cliopatria keeps Mali whole until 1463, which the notes do not support, so the Jolof, Gao and post-1433 cuts stay | Same cuts, new base |
+| Mali, 1360 to 1430, 1430 to 1433 and 1433 on | the same, with our cuts | Cliopatria keeps Mali whole until 1463, which the notes do not support, so the Jolof (1360), Gao (1430) and Timbuktu (1433) cuts stay | Same base, three cuts instead of two: Gao now leaves at 1430, not 1360 (question 14) |
 | Takrur | Takrur 1139 to 1235 | The middle Senegal valley with Podor inside and Jolof outside | Wider than the hand strip; both banks and hinterland |
 | Almohads, 1121 to 1250 | Almohad Caliphate 1202 to 1235, then 1241 to 1249 | Runs from the Atlantic to Tripolitania as the note says; the break-up after 1229 and 1235 is drawn | No more hand-added Ifriqiya; a second, shrunken snapshot for 1236 to 1250 |
 | Marinids | 1363 to 1414 (used from 1244), 1344 to 1351, 1352 to 1362 | Fez, Marrakesh, Sijilmasa inside, Tlemcen out; and it draws Abu al-Hasan's Tlemcen and Abu Inan's Tunis, the brief maxima the note mentions | Two extra snapshots in the 1340s and 1350s |
@@ -426,13 +426,21 @@ research notes say must be inside or outside. The attribution line on the map no
 | Makuria | a Nile strip that misses Old Dongola | The capital must be inside |
 | Alodia | 124,000 km² north of Soba | The note says the Gezira, south of Soba |
 | Ayyubids, Mamluks | Egypt with the Levant and the Hijaz | The notes say draw Egypt only; our aourednik cut already does that |
-| Hafsids | 225,000 km² from 4.4E | Smaller than the note's Ifriqiya with Algiers and Constantine; kept the aourednik shape cut at 1.5E. A judgment call |
+| Hafsids after 1300 | 225,000 km² from 4.4E | Used from 1300 as the core; the aourednik shape with Algiers stays for the 1229 to 1300 height (question 13) |
 | Everything else | not in Cliopatria | Great Zimbabwe, the Swahili towns, the Hausa states, Benin, Ife, Mossi, Jolof, Bono, Mutapa, Mapungubwe and the peoples are absent from it |
 
 ### Questions for you (part 3)
 
-13. **Hafsids:** keep the larger aourednik shape (with Algiers) or Cliopatria's smaller one (from Bougie east)?
-14. **Mali after 1414:** Cliopatria grows Mali to 1.1 million km² for 1415 to 1462 and only shrinks it from 1463. Our
-    research has Gao lost in the early 1400s and Timbuktu in 1433, so the cuts stay. Agree?
+13. **Hafsids.** Decided 2026-10-17 (Wil: "just choose as a historian"): two snapshots, like the Marinids. The
+    aourednik shape with Algiers for 1229 to 1300, the Hafsid height named in the note (Constantine, Bougie and
+    Algiers taken; the caliphate claimed in 1253); Cliopatria's core from 4.4E for 1300 on, when the Algiers region
+    was contested with the Zayyanids and the dynasty split between Tunis and Bougie. Neither single shape was true for
+    the whole 345 years.
+14. **Mali after 1360.** Decided 2026-10-17. Cliopatria keeps Mali whole to 1463 and passes Timbuktu to Songhai only
+    in 1468: the chronicle skeleton read at its latest dates (Songhay begins with Sunni Ali in 1464; no Tuareg
+    interlude). Our notes follow Ly-Tall (Timbuktu and Walata to the Tuareg c.1433) and Cissoko and al-Sadi (Gao's
+    lasting independence under Sunni Sulayman Dama in the first half of the 1400s, c.1430, confidence low). The cuts
+    stay, and one of ours was wrong by our own notes: the map had cut Gao at 1360, bundled with Jolof. Now Jolof
+    leaves at 1360, Gao at 1430, Timbuktu and Walata at 1433.
 
 Screenshots for the switched shapes are in the part 1 and part 2 sections above (the same file names).

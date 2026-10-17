@@ -43,15 +43,27 @@ polities:
         aourednik 1279 shape (docs/geometry-review.md, part 3).
       from: {source: cliopatria, year: 1340, name: Mali Empire}
     - year_from: 1360
+      year_to: 1430
+      method: E
+      review: draft
+      smooth: 0.4
+      basis: >-
+        The Cliopatria c.1330 to 1350 shape without Jolof: cut west of 14W and north of 13.9N (Jolof and its Wolof
+        provinces, independent from about 1350 to 1360 per pl-jolof). Gao stays inside: the research puts its loss
+        in the early 15th century (pl-mali and pl-songhay-gao geometry_notes; ev-sunni-independence c.1430, dated
+        by Cissoko and al-Sadi with low confidence). Cliopatria keeps Mali whole until 1463, which the research does
+        not support (docs/geometry-review.md, question 14).
+      from: {source: cliopatria, year: 1340, name: Mali Empire}
+      remove:
+        - [[-30.0, 13.9], [-14.0, 13.9], [-14.0, 30.0], [-30.0, 30.0], [-30.0, 13.9]]
+    - year_from: 1430
       year_to: 1433
       method: E
       review: draft
       smooth: 0.4
       basis: >-
-        The Cliopatria c.1330 to 1350 shape contracted for c.1400 without Jolof and Gao (geometry-audit section 5):
-        cut west of 14W and north of 13.9N (Jolof and its Wolof provinces, from about 1350 to 1360 per pl-jolof) and
-        east of 1W (Gao, lost to the Sunni dynasty per pl-mali geometry_note). Cliopatria itself keeps Mali whole
-        until 1463, which the research does not support. Timbuktu and Walata stay until 1433.
+        The same with Gao cut east of 1W after the Sunni dynasty's lasting independence under Sunni Sulayman Dama in
+        the first half of the 15th century (ev-sunni-independence, c.1430). Timbuktu and Walata stay until 1433.
       from: {source: cliopatria, year: 1340, name: Mali Empire}
       remove:
         - [[-1.0, 0.0], [20.0, 0.0], [20.0, 30.0], [-1.0, 30.0], [-1.0, 0.0]]
@@ -62,7 +74,7 @@ polities:
       review: draft
       smooth: 0.4
       basis: >-
-        The c.1400 shape with the north cut at 15.8N after the Tuareg took Timbuktu and Walata about 1433
+        The 1430 shape with the north cut at 15.8N after the Tuareg took Timbuktu and Walata about 1433
         (pl-mali geometry_note; ev-tuareg-take-timbuktu). Not named in geometry-audit section 5; added so the map
         agrees with the 1433 keyframe. The 15th-century shift west toward the Gambia is not drawn.
       from: {source: cliopatria, year: 1340, name: Mali Empire}
@@ -70,7 +82,6 @@ polities:
         - [[-1.0, 0.0], [20.0, 0.0], [20.0, 30.0], [-1.0, 30.0], [-1.0, 0.0]]
         - [[-30.0, 13.9], [-14.0, 13.9], [-14.0, 30.0], [-30.0, 30.0], [-30.0, 13.9]]
         - [[-30.0, 15.8], [20.0, 15.8], [20.0, 30.0], [-30.0, 30.0], [-30.0, 15.8]]
-
   pl-ghana-wagadu:
     - year_from: 1200
       year_to: 1240
@@ -407,16 +418,30 @@ polities:
 
   pl-hafsids:
     - year_from: 1229
-      year_to: 1574
+      year_to: 1300
       method: E
       review: draft
       smooth: 0.4
       basis: >-
         aourednik 'Hafsid Caliphate' 1300 with the west cut at 1.5E to exclude Tlemcen (geometry-audit section 5:
-        cut at about 1 to 2E). Tunis and Kairouan are inside; Tripolitania to 18E as drawn by aourednik.
+        cut at about 1 to 2E), for the Hafsid height: Abu Zakariyya took Constantine, Bougie and Algiers in the
+        1230s to 1240s and al-Mustansir claimed the caliphate in 1253 (pl-hafsids geometry_note). Tunis and Kairouan
+        are inside; Tripolitania to 18E as drawn by aourednik. Cliopatria's constant 1236 to 1511 shape stops at
+        4.4E and never holds Algiers, so it is not used for this period (docs/geometry-review.md, question 13).
       from: {year: 1300, name: Hafsid Caliphate}
       remove:
         - [[-5.0, 25.0], [1.5, 25.0], [1.5, 40.0], [-5.0, 40.0]]
+    - year_from: 1300
+      year_to: 1574
+      method: A
+      review: draft
+      smooth: 0.3
+      basis: >-
+        Cliopatria 'Hafsid Dynasty' 1294 to 1343 (Seshat, CC BY 4.0) as the core territory for the 14th and 15th
+        centuries: Bougie and Constantine inside, Algiers outside, Tunis and Kairouan inside. From about 1300 the
+        Algiers region was contested with the Zayyanids and Hafsid rule split between Tunis and a Bougie branch;
+        the Marinid occupations of 1347 and 1357 are drawn by the Marinid shapes over this one.
+      from: {source: cliopatria, year: 1320, name: Hafsid Dynasty}
 
   pl-ayyubids:
     - year_from: 1171

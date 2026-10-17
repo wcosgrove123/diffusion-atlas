@@ -1,0 +1,66 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-damot",
+    "year_from": 1200,
+    "year_to": 1550,
+    "method": "H",
+    "basis": "Drawn from the pl-damot geometry_note: a kingdom south of the Blue Nile (Abbay) bend, exact extent unknown and probably shifting. Low confidence."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       36.703,
+       8.597
+      ],
+      [
+       37.599,
+       8.32
+      ],
+      [
+       38.339,
+       8.628
+      ],
+      [
+       38.516,
+       8.875
+      ],
+      [
+       38.581,
+       9.596
+      ],
+      [
+       38.511,
+       9.818
+      ],
+      [
+       37.6,
+       10.265
+      ],
+      [
+       36.766,
+       9.883
+      ],
+      [
+       36.6,
+       9.615
+      ],
+      [
+       36.6,
+       8.823
+      ],
+      [
+       36.703,
+       8.597
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,62 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-beta-israel",
+    "year_from": 1200,
+    "year_to": null,
+    "method": "H",
+    "basis": "Drawn from the pl-beta-israel geometry_note: the north-western highlands, Semien, Wegera, Dembiya, Tselemt and Tsegede, around and north of Lake Tana. A community area, not a territory; the start marks the module window, not an origin."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       36.426,
+       12.993
+      ],
+      [
+       36.631,
+       11.623
+      ],
+      [
+       37.4,
+       11.235
+      ],
+      [
+       38.189,
+       11.611
+      ],
+      [
+       38.775,
+       12.802
+      ],
+      [
+       38.468,
+       13.795
+      ],
+      [
+       38.305,
+       13.974
+      ],
+      [
+       38.184,
+       14.0
+      ],
+      [
+       37.214,
+       13.97
+      ],
+      [
+       36.426,
+       12.993
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

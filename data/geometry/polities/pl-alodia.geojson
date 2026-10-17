@@ -1,0 +1,87 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-alodia",
+    "year_from": 580,
+    "year_to": 1504,
+    "method": "A",
+    "basis": "aourednik 'Alwa' 1200 as is, centred on Soba, relabelled and clipped (geometry-audit section 5: use the 1200 shape and ignore the 1279 to 1492 Alwa polygons). Covers the Gezira toward the Atbara.",
+    "source": "aourednik"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       31.666,
+       16.617
+      ],
+      [
+       31.188,
+       16.219
+      ],
+      [
+       30.79,
+       15.503
+      ],
+      [
+       30.472,
+       14.308
+      ],
+      [
+       30.472,
+       13.512
+      ],
+      [
+       30.79,
+       11.204
+      ],
+      [
+       31.268,
+       10.646
+      ],
+      [
+       31.745,
+       10.248
+      ],
+      [
+       33.576,
+       10.01
+      ],
+      [
+       34.452,
+       10.248
+      ],
+      [
+       35.407,
+       11.283
+      ],
+      [
+       35.646,
+       12.796
+      ],
+      [
+       35.328,
+       15.423
+      ],
+      [
+       34.452,
+       16.458
+      ],
+      [
+       33.815,
+       16.776
+      ],
+      [
+       31.666,
+       16.617
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

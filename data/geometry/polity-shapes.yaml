@@ -3,11 +3,16 @@
 #
 # Every entry has: year_from, year_to (the shape applies while year_from <= year < year_to; null = open-ended),
 # method, basis.
-#   method E: start from an aourednik/historical-basemaps polygon (GPL-3.0) and edit it.
-#             from: {year, name}   which clipped aourednik file (data/geometry/<module>/aourednik_<year>.geojson) and NAME to start from
+#   method A: an aourednik/historical-basemaps polygon (GPL-3.0) as is, relabelled and clipped.
+#             from: {year, name}   which clipped aourednik file (data/geometry/<module>/aourednik_<year>.geojson)
+#   method E: start from an aourednik polygon and edit it (at least one of these):
+#             keep: one ring; only the part of the shape inside it is kept
 #             remove: list of rings [[lon, lat], ...] cut out of the shape
+#             add: list of rings joined to the shape (an extension the research asks for)
 #   method H: hand-drawn soft extent from the place's geometry_note, not traced from aourednik.
 #             outline: one ring [[lon, lat], ...], kept coarse on purpose (a zone, not a border)
+#             or point: [lon, lat] with buffer_km: a town with a small coastal buffer (Swahili polities)
+#   zone: nomadic (optional): drawn as a hatched sphere, not a state (Tuareg)
 #   smooth (degrees, optional): rounds inside and outside corners so the shape reads as a zone.
 # Hand-drawn shapes (H) and the Mali trims are DRAFTS for Wil's review: see docs/geometry-review.md.
 # review: draft | approved   (Wil flips this to approved; the app does not read it)
@@ -23,34 +28,44 @@ polities:
       basis: >-
         Upper-Niger core for c.1250, drawn from the pl-mali geometry_note (upper Niger and Sankarani between
         Kangaba and Siguiri, with the Bure goldfield; Bambuk to the west) and geometry-audit section 5
-        ("hand-shrink to the upper-Niger core for c.1250"). Not traced from aourednik.
+        ("hand-shrink to the upper-Niger core for c.1250"). Not traced from aourednik or Cliopatria.
       outline: [[-11.0, 12.0], [-10.8, 13.3], [-9.6, 13.7], [-8.0, 13.3], [-6.9, 12.6], [-7.2, 11.4], [-8.0, 10.6],
                 [-9.2, 10.5], [-10.4, 11.0]]
     - year_from: 1300
       year_to: 1360
+      method: A
+      review: draft
+      smooth: 0.3
+      basis: >-
+        Cliopatria 'Mali Empire' 1241 to 1414 (Seshat, CC BY 4.0) as the c.1330 to 1350 snapshot. It agrees with
+        the pl-mali geometry_note and the audit's trims without edits: Timbuktu, Gao, Walata, Djenne and Niani are
+        inside, the Senegal valley is inside, and the Mossi country and Tadmekka are outside. Replaces the trimmed
+        aourednik 1279 shape (docs/geometry-review.md, part 3).
+      from: {source: cliopatria, year: 1340, name: Mali Empire}
+    - year_from: 1360
+      year_to: 1430
       method: E
       review: draft
       smooth: 0.4
       basis: >-
-        aourednik 'Mali' 1279 used as the c.1330-1350 snapshot (geometry-audit section 5), with two trims: the
-        Mossi south cut away (south of 12.75N, east of 4W) and the east cut at 1.5E (Gao and Tadmekka side).
-        Extent per pl-mali geometry_note: Gambia and Senegal rivers to Gao and Walata about 1330-1360.
-      from: {year: 1279, name: Mali}
+        The Cliopatria c.1330 to 1350 shape without Jolof: cut west of 14W and north of 13.9N (Jolof and its Wolof
+        provinces, independent from about 1350 to 1360 per pl-jolof). Gao stays inside: the research puts its loss
+        in the early 15th century (pl-mali and pl-songhay-gao geometry_notes; ev-sunni-independence c.1430, dated
+        by Cissoko and al-Sadi with low confidence). Cliopatria keeps Mali whole until 1463, which the research does
+        not support (docs/geometry-review.md, question 14).
+      from: {source: cliopatria, year: 1340, name: Mali Empire}
       remove:
-        - [[-4.0, 0.0], [20.0, 0.0], [20.0, 12.75], [-4.0, 12.75], [-4.0, 0.0]]
-        - [[1.5, 0.0], [20.0, 0.0], [20.0, 30.0], [1.5, 30.0], [1.5, 0.0]]
-    - year_from: 1360
+        - [[-30.0, 13.9], [-14.0, 13.9], [-14.0, 30.0], [-30.0, 30.0], [-30.0, 13.9]]
+    - year_from: 1430
       year_to: 1433
       method: E
       review: draft
       smooth: 0.4
       basis: >-
-        The c.1330-1350 shape contracted for c.1400 without Jolof and Gao (geometry-audit section 5): cut west of
-        14W and north of 13.9N (Jolof and its Wolof provinces, from about 1350-1360 per pl-jolof) and east of 1W
-        (Gao, lost to the Sunni dynasty per pl-mali geometry_note). Timbuktu and Walata stay until 1433.
-      from: {year: 1279, name: Mali}
+        The same with Gao cut east of 1W after the Sunni dynasty's lasting independence under Sunni Sulayman Dama in
+        the first half of the 15th century (ev-sunni-independence, c.1430). Timbuktu and Walata stay until 1433.
+      from: {source: cliopatria, year: 1340, name: Mali Empire}
       remove:
-        - [[-4.0, 0.0], [20.0, 0.0], [20.0, 12.75], [-4.0, 12.75], [-4.0, 0.0]]
         - [[-1.0, 0.0], [20.0, 0.0], [20.0, 30.0], [-1.0, 30.0], [-1.0, 0.0]]
         - [[-30.0, 13.9], [-14.0, 13.9], [-14.0, 30.0], [-30.0, 30.0], [-30.0, 13.9]]
     - year_from: 1433
@@ -59,23 +74,22 @@ polities:
       review: draft
       smooth: 0.4
       basis: >-
-        The c.1400 shape with the north cut at 15.8N after the Tuareg took Timbuktu and Walata about 1433
+        The 1430 shape with the north cut at 15.8N after the Tuareg took Timbuktu and Walata about 1433
         (pl-mali geometry_note; ev-tuareg-take-timbuktu). Not named in geometry-audit section 5; added so the map
         agrees with the 1433 keyframe. The 15th-century shift west toward the Gambia is not drawn.
-      from: {year: 1279, name: Mali}
+      from: {source: cliopatria, year: 1340, name: Mali Empire}
       remove:
-        - [[-4.0, 0.0], [20.0, 0.0], [20.0, 12.75], [-4.0, 12.75], [-4.0, 0.0]]
         - [[-1.0, 0.0], [20.0, 0.0], [20.0, 30.0], [-1.0, 30.0], [-1.0, 0.0]]
         - [[-30.0, 13.9], [-14.0, 13.9], [-14.0, 30.0], [-30.0, 30.0], [-30.0, 13.9]]
         - [[-30.0, 15.8], [20.0, 15.8], [20.0, 30.0], [-30.0, 30.0], [-30.0, 15.8]]
-
   pl-ghana-wagadu:
     - year_from: 1200
       year_to: 1240
-      method: E
+      method: A
       review: draft
       basis: >-
-        aourednik 'Ghana' 1200, relabelled (geometry-audit section 5). The audit uses it for the pre-1203 frame and
+        aourednik 'Ghana' 1200 as is, relabelled and clipped (geometry-audit section 5 says E, but it asks for no
+        edit, which the audit's own definitions call A). The audit uses it for the pre-1203 frame and
         says to fade it after Sosso; it runs to 1240 here to match the place span and its religion profiles
         (Sosso then Mali overlordship, per pl-ghana-wagadu geometry_note).
       from: {year: 1200, name: Ghana}
@@ -94,14 +108,15 @@ polities:
   pl-takrur:
     - year_from: 1000
       year_to: 1500
-      method: H
+      method: A
       review: draft
       smooth: 0.2
       basis: >-
-        Drawn from the pl-takrur geometry_note: the middle Senegal River valley (later Fuuta Tooro), both banks,
-        from about Dagana to Bakel. One shape for the whole span; overlordship changes are not drawn.
-      outline: [[-15.7, 16.2], [-15.6, 16.8], [-14.9, 16.95], [-13.9, 16.5], [-13.0, 15.95], [-12.2, 15.15],
-                [-12.5, 14.65], [-13.4, 15.3], [-14.1, 15.9], [-15.0, 16.3]]
+        Cliopatria 'Takrur' 1139 to 1235 (Seshat, CC BY 4.0), used for the whole place span: the middle Senegal
+        valley with both banks (Podor inside) and the Jolof interior outside, as the pl-takrur geometry_note and
+        geometry-audit section 5 ask. Cliopatria absorbs Takrur into Mali after 1235; the research keeps the place
+        under Mali's and then Jolof's overlordship, so the shape stays and the overlords draw over it.
+      from: {source: cliopatria, year: 1200, name: Takrur}
 
   pl-jolof:
     - year_from: 1350
@@ -147,3 +162,543 @@ polities:
         Drawn from the pl-bono geometry_note: the early Akan kingdom north of the forest around Bono Manso near
         Techiman (geometry-audit section 5: small soft zone, low confidence). Location approximate.
       outline: [[-2.5, 7.3], [-2.6, 8.0], [-1.9, 8.4], [-1.2, 8.0], [-1.3, 7.3], [-1.9, 7.0]]
+
+  # ---- Phase 2: central Sahel and forest (csahel) ----
+  pl-kanem:
+    - year_from: 1075
+      year_to: 1210
+      method: A
+      review: draft
+      basis: >-
+        aourednik 'Kanem' 1200 as is: the plains north-east of Lake Chad with Njimi inside (geometry-audit
+        section 5, pl-kanem geometry_note).
+      from: {year: 1200, name: Kanem}
+    - year_from: 1210
+      year_to: 1387
+      method: E
+      review: draft
+      smooth: 0.4
+      basis: >-
+        aourednik 'Kanem' 1200 extended north toward the Kawar oases and the Fezzan for the c.1250 maximum under
+        Dunama Dibbalemi (geometry-audit section 5; pl-kanem geometry_note: Kanem claimed authority over Kawar and
+        the Fezzan, Ibn Sa'id via Lange). The northern arm is a corridor to Kawar (Bilma, 12.9E 19N), not a border.
+        Kept to 1387, when the Sayfawa moved west to Bornu.
+      from: {year: 1200, name: Kanem}
+      add:
+        - [[12.4, 15.8], [15.6, 15.8], [14.6, 19.6], [12.0, 19.8], [11.8, 17.6]]
+
+  pl-bornu:
+    - year_from: 1380
+      year_to: null
+      method: E
+      review: draft
+      smooth: 0.4
+      basis: >-
+        aourednik 'Kanem-Bornu' 1400 with the detached Bioko part deleted and the northern arm pulled back from 21N
+        to about 16.5N (geometry-audit section 5: pull it back unless the research supports Kawar; the pl-bornu
+        geometry_note places Bornu west and south-west of Lake Chad). Starts c.1380.
+      from: {year: 1400, name: Kanem-Bornu}
+      remove:
+        - [[7.0, 2.0], [10.0, 2.0], [10.0, 5.0], [7.0, 5.0]]
+        - [[6.0, 16.5], [20.0, 16.5], [20.0, 25.0], [6.0, 25.0]]
+
+  pl-bulala:
+    - year_from: 1380
+      year_to: 1630
+      method: H
+      review: draft
+      smooth: 0.3
+      basis: >-
+        Drawn from the pl-bulala geometry_note: Kanem (the plains north-east of Lake Chad) from c.1387 plus the
+        Bulala homeland around Lake Fitri (17.5E 12.8N). The Lake Chad shore on the west is the historic lake.
+      outline: [[15.0, 12.2], [18.4, 11.9], [19.2, 13.4], [18.6, 15.5], [16.8, 16.2], [15.2, 15.6], [14.9, 14.2]]
+
+  pl-kano:
+    - year_from: 999
+      year_to: null
+      method: H
+      review: draft
+      smooth: 0.15
+      basis: >-
+        Drawn from the pl-kano geometry_note: the walled city around Dala and Goron Dutse hills with surrounding
+        farmland and subordinate towns, "a city-state point with a small surrounding area". About 60 km across.
+      outline: [[8.1, 11.7], [8.0, 12.1], [8.3, 12.4], [8.8, 12.4], [9.0, 12.0], [8.8, 11.6], [8.4, 11.5]]
+
+  pl-katsina:
+    - year_from: 1300
+      year_to: null
+      method: H
+      review: draft
+      smooth: 0.15
+      basis: >-
+        Drawn from the pl-katsina geometry_note: a city-state in northern Hausaland, with Durbi ta Kusheyi (the
+        early seat, about 30 km south-east) inside the zone. About 60 km across.
+      outline: [[7.2, 12.8], [7.3, 13.25], [7.7, 13.35], [8.0, 13.1], [8.05, 12.7], [7.7, 12.55], [7.35, 12.6]]
+
+  pl-hausa-states:
+    - year_from: 1000
+      year_to: 1440
+      method: H
+      review: draft
+      smooth: 0.4
+      basis: >-
+        Drawn from the pl-hausa-states geometry_note: the soft area between the Niger (west) and the Bornu
+        borderlands (east), the Air foothills (north) and the Zazzau frontier (south), holding Daura, Kano, Katsina,
+        Gobir, Rano, Zazzau and Biram. A people, not a state, before c.1450 (geometry-audit section 5).
+      outline: [[4.8, 12.6], [5.6, 13.6], [7.4, 13.9], [9.6, 13.7], [10.4, 12.6], [9.9, 11.0], [8.0, 10.3],
+                [6.2, 10.6], [5.0, 11.4]]
+    - year_from: 1440
+      year_to: null
+      method: A
+      review: draft
+      basis: >-
+        aourednik 'Hausa States' 1492 as a soft c.1450 envelope (geometry-audit section 5), relabelled and clipped.
+      from: {year: 1492, name: Hausa States}
+
+  pl-ife:
+    - year_from: 1000
+      year_to: null
+      method: H
+      review: draft
+      smooth: 0.15
+      basis: >-
+        Drawn from the pl-ife geometry_note: the city and kingdom in the Yoruba forest, urban core with the Igbo
+        Olokun site on its northern edge. Its wider ritual and genealogical influence is not drawn as territory.
+        About 60 km across (geometry-audit section 5: small soft zone, low confidence).
+      outline: [[4.2, 7.3], [4.2, 7.7], [4.5, 7.85], [4.85, 7.75], [4.95, 7.4], [4.7, 7.15], [4.35, 7.15]]
+
+  pl-benin:
+    - year_from: 1000
+      year_to: 1440
+      method: E
+      review: draft
+      smooth: 0.3
+      basis: >-
+        aourednik 'Benin' 1279 shrunk to the Edo core between 5.3E and 6.5E before c.1440 (geometry-audit
+        section 5; pl-benin geometry_note: expansion beyond the Edo heartland begins with Ewuare, c.1440).
+      from: {year: 1279, name: Benin}
+      keep: [[5.3, 4.0], [6.5, 4.0], [6.5, 9.0], [5.3, 9.0]]
+    - year_from: 1440
+      year_to: null
+      method: E
+      review: draft
+      smooth: 0.3
+      basis: >-
+        aourednik 'Benin' 1279 as the post-Ewuare extent, with the west cut at 4.9E so Ile-Ife is outside
+        (geometry-audit section 5: "Remove Ife").
+      from: {year: 1279, name: Benin}
+      remove:
+        - [[0.0, 0.0], [4.9, 0.0], [4.9, 12.0], [0.0, 12.0]]
+
+  pl-agadez:
+    - year_from: 1405
+      year_to: null
+      method: H
+      review: draft
+      smooth: 0.3
+      basis: >-
+        Drawn from the pl-agadez geometry_note: the sultanate of the Air massif seated at Agadez, with the earlier
+        seats in the Air (Tadaliza, Tin Chaman) inside the zone (geometry-audit section 5: small soft zone, low
+        confidence). Founding date debated (1405 to 1449).
+      outline: [[7.2, 16.4], [7.0, 17.6], [7.8, 19.0], [9.2, 19.4], [10.0, 18.2], [9.4, 16.8], [8.4, 16.2]]
+
+  pl-tuareg:
+    - year_from: 1000
+      year_to: null
+      method: H
+      review: draft
+      smooth: 0.5
+      zone: nomadic
+      basis: >-
+        Drawn from the pl-tuareg geometry_note: a soft sphere for Tamasheq-speaking pastoral confederations over
+        the Air massif, the Adrar des Ifoghas, the Niger bend north of Timbuktu and the Hoggar (geometry-audit
+        section 5: a nomadic sphere, styled unlike a state). Not a territory; Timbuktu itself belongs to wsahel.
+      outline: [[-4.5, 17.0], [-3.5, 20.0], [0.0, 23.5], [4.0, 25.0], [8.0, 24.0], [10.5, 21.0], [10.0, 17.5],
+                [7.5, 16.0], [3.0, 16.5], [0.0, 17.5], [-2.0, 17.2]]
+
+  pl-sao:
+    - year_from: 1000
+      year_to: 1600
+      method: H
+      review: draft
+      smooth: 0.3
+      basis: >-
+        Drawn from the pl-sao geometry_note: walled towns and settlements south and west of Lake Chad on the
+        Logone-Chari plains (modern Cameroon, Chad and Nigeria). Drawn as a people.
+      outline: [[13.2, 11.2], [13.0, 12.6], [14.0, 13.3], [15.4, 13.0], [16.0, 11.8], [15.2, 10.6], [14.0, 10.5]]
+
+  # ---- Phase 2: North Africa and Egypt (north) ----
+  pl-almohads:
+    - year_from: 1121
+      year_to: 1236
+      method: E
+      review: draft
+      smooth: 0.4
+      basis: >-
+        Cliopatria 'Almohad Caliphate' 1202 to 1235 (Seshat, CC BY 4.0), which already runs from the Atlantic to
+        Tripolitania as the pl-almohads geometry_note says; al-Andalus is cut away (north of 36N) as part of the
+        external margin (geometry-audit section 5). Replaces the aourednik 1200 shape plus a hand-added Ifriqiya.
+      from: {source: cliopatria, year: 1220, name: Almohad Caliphate}
+      remove:
+        - [[-12.0, 36.0], [6.0, 36.0], [6.0, 45.0], [-12.0, 45.0]]
+    - year_from: 1236
+      year_to: 1250
+      method: E
+      review: draft
+      smooth: 0.4
+      basis: >-
+        Cliopatria 'Almohad Caliphate' 1241 to 1249: the caliphate after the Hafsids (1229) and Zayyanids (1235)
+        broke away and the Marinids took the north, al-Andalus cut away. Cliopatria's later Almohad rows (1250 to
+        1343) are not used: the caliphate ended in 1269.
+      from: {source: cliopatria, year: 1245, name: Almohad Caliphate}
+      remove:
+        - [[-12.0, 36.0], [6.0, 36.0], [6.0, 45.0], [-12.0, 45.0]]
+    - year_from: 1250
+      year_to: 1269
+      method: H
+      review: draft
+      smooth: 0.3
+      basis: >-
+        Drawn from the pl-almohads geometry_note: by the 1240s to 1260s the caliphate was reduced to the Marrakesh
+        region (the Marinids took Fez in 1248). The High Atlas core of the movement (Tinmal) is inside.
+      outline: [[-10.0, 30.5], [-10.2, 32.3], [-8.6, 33.2], [-6.6, 32.6], [-6.4, 31.2], [-7.8, 30.3]]
+
+  pl-marinids:
+    - year_from: 1244
+      year_to: 1344
+      method: A
+      review: draft
+      basis: >-
+        Cliopatria 'Marinid Sultanate' (Seshat, CC BY 4.0), its 1363 to 1414 shape used from 1244: Morocco north of
+        the High Atlas with Fez, Marrakesh and Sijilmasa inside and Tlemcen outside, as the pl-marinids
+        geometry_note says. Cliopatria has no Marinid row for 1260 to 1343; its 1250 and 1363 shapes are the same.
+      from: {source: cliopatria, year: 1400, name: Marinid Sultanate}
+    - year_from: 1344
+      year_to: 1352
+      method: A
+      review: draft
+      basis: >-
+        Cliopatria 'Marinid Sultanate' 1344 to 1351: Abu al-Hasan's hold on Tlemcen (pl-marinids geometry_note:
+        Tlemcen 1337 and 1352, Tunis 1347 and 1357). Only Cliopatria draws these brief maxima.
+      from: {source: cliopatria, year: 1347, name: Marinid Sultanate}
+    - year_from: 1352
+      year_to: 1363
+      method: A
+      review: draft
+      basis: >-
+        Cliopatria 'Marinid Sultanate' 1352 to 1362: Abu Inan's reach to Tunis (pl-marinids geometry_note).
+      from: {source: cliopatria, year: 1357, name: Marinid Sultanate}
+    - year_from: 1363
+      year_to: 1465
+      method: A
+      review: draft
+      basis: >-
+        Cliopatria 'Marinid Sultanate' 1363 to 1414 and 1415 to 1462 (the same shape): Morocco again, to the last
+        Marinid sultan in 1465.
+      from: {source: cliopatria, year: 1400, name: Marinid Sultanate}
+
+  pl-zayyanids:
+    - year_from: 1235
+      year_to: 1344
+      method: A
+      review: draft
+      basis: >-
+        Cliopatria 'Zayyanid dynasty' 1285 to 1343 (Seshat, CC BY 4.0): Tlemcen-centred, about 2W to 5E, Fez and
+        Tunis outside, as the pl-zayyanids geometry_note and geometry-audit section 5 ask. Replaces a hand-drawn
+        zone. Cliopatria has no Zayyanid row for 1344 to 1362, the years the Marinids held Tlemcen; the Marinid
+        shapes cover it then.
+      from: {source: cliopatria, year: 1300, name: Zayyanid dynasty}
+    - year_from: 1363
+      year_to: 1556
+      method: A
+      review: draft
+      basis: >-
+        Cliopatria 'Zayyanid dynasty' 1363 to 1506, the same shape, after the Marinid occupations.
+      from: {source: cliopatria, year: 1400, name: Zayyanid dynasty}
+
+  pl-hafsids:
+    - year_from: 1229
+      year_to: 1300
+      method: E
+      review: draft
+      smooth: 0.4
+      basis: >-
+        aourednik 'Hafsid Caliphate' 1300 with the west cut at 1.5E to exclude Tlemcen (geometry-audit section 5:
+        cut at about 1 to 2E), for the Hafsid height: Abu Zakariyya took Constantine, Bougie and Algiers in the
+        1230s to 1240s and al-Mustansir claimed the caliphate in 1253 (pl-hafsids geometry_note). Tunis and Kairouan
+        are inside; Tripolitania to 18E as drawn by aourednik. Cliopatria's constant 1236 to 1511 shape stops at
+        4.4E and never holds Algiers, so it is not used for this period (docs/geometry-review.md, question 13).
+      from: {year: 1300, name: Hafsid Caliphate}
+      remove:
+        - [[-5.0, 25.0], [1.5, 25.0], [1.5, 40.0], [-5.0, 40.0]]
+    - year_from: 1300
+      year_to: 1574
+      method: A
+      review: draft
+      smooth: 0.3
+      basis: >-
+        Cliopatria 'Hafsid Dynasty' 1294 to 1343 (Seshat, CC BY 4.0) as the core territory for the 14th and 15th
+        centuries: Bougie and Constantine inside, Algiers outside, Tunis and Kairouan inside. From about 1300 the
+        Algiers region was contested with the Zayyanids and Hafsid rule split between Tunis and a Bougie branch;
+        the Marinid occupations of 1347 and 1357 are drawn by the Marinid shapes over this one.
+      from: {source: cliopatria, year: 1320, name: Hafsid Dynasty}
+
+  pl-ayyubids:
+    - year_from: 1171
+      year_to: 1250
+      method: E
+      review: draft
+      smooth: 0.3
+      basis: >-
+        The Egypt portion of aourednik 'Mamluke Sultanate' 1279, relabelled and dated 1171 to 1250 (geometry-audit
+        section 5): the Levant north of 31.2N east of 33.5E and the Hijaz coast east of 35E are cut away, as the
+        pl-ayyubids geometry_note asks (draw Egypt only for this module).
+      from: {year: 1279, name: Mamluke Sultanate}
+      remove:
+        - [[33.5, 31.2], [50.0, 31.2], [50.0, 40.0], [33.5, 40.0]]
+        - [[35.0, 10.0], [50.0, 10.0], [50.0, 29.6], [35.0, 29.6]]
+        - [[34.62, 10.0], [50.0, 10.0], [50.0, 29.2], [34.62, 29.2]]
+
+  pl-mamluks:
+    - year_from: 1250
+      year_to: 1517
+      method: E
+      review: draft
+      smooth: 0.3
+      basis: >-
+        aourednik 'Mamluke Sultanate' 1279 (geometry-audit section 5 says A), cut to Egypt and Cyrenaica for this
+        module as the pl-mamluks geometry_note asks: the Levant (north of 31.2N east of 33.5E), the Hijaz coast
+        (east of 35E) and Nubia south of 23.7N (Aswan) are removed. Syria-Palestine from 1260 and northern Nubia
+        from 1275 are not drawn.
+      from: {year: 1279, name: Mamluke Sultanate}
+      remove:
+        - [[33.5, 31.2], [50.0, 31.2], [50.0, 40.0], [33.5, 40.0]]
+        - [[35.0, 10.0], [50.0, 10.0], [50.0, 29.6], [35.0, 29.6]]
+        - [[34.62, 10.0], [50.0, 10.0], [50.0, 29.2], [34.62, 29.2]]
+        - [[15.0, 10.0], [50.0, 10.0], [50.0, 23.7], [15.0, 23.7]]
+
+  pl-atlas-amazigh:
+    - year_from: 1200
+      year_to: 1450
+      method: H
+      review: draft
+      smooth: 0.3
+      basis: >-
+        Drawn from the pl-atlas-amazigh geometry_note: a soft overlay for Tamazight-speaking highland and
+        pre-Saharan communities, the High, Middle and Anti-Atlas with the Sous, drawn as one band from the Sous to
+        the Middle Atlas. The Rif is not included in this draft (it would need a second ring). Low confidence.
+      outline: [[-10.2, 29.4], [-9.2, 31.2], [-7.4, 32.6], [-5.0, 33.9], [-3.6, 33.4], [-4.6, 32.0],
+                [-6.6, 30.8], [-8.4, 29.6], [-9.6, 29.0]]
+
+  # ---- Phase 2: Nubia and the Horn (nile-horn) ----
+  pl-makuria:
+    - year_from: 580
+      year_to: 1365
+      method: E
+      review: draft
+      smooth: 0.3
+      basis: >-
+        aourednik 'Makkura' 1200 with the south trimmed at 17.5N so Soba (Alodia's capital, 15.5N) is outside
+        (geometry-audit section 5); the pl-makuria geometry_note puts the border with al-Abwab and Alodia at about
+        the Fourth or Fifth Cataract. Old Dongola is inside.
+      from: {year: 1200, name: Makkura}
+      remove:
+        - [[25.0, 5.0], [45.0, 5.0], [45.0, 17.5], [25.0, 17.5]]
+    - year_from: 1365
+      year_to: 1500
+      method: E
+      review: draft
+      smooth: 0.3
+      basis: >-
+        A fading remnant in Lower Nubia after the civil war of 1365 (geometry-audit section 5: end c.1365 to 1400
+        with a fading remnant): the same aourednik 'Makkura' 1200 kept north of 21.3N, around Qasr Ibrim and Daw
+        (pl-makuria geometry_note: the court moved north to Daw). Kept to 1500 because the place span does.
+      from: {year: 1200, name: Makkura}
+      keep: [[25.0, 21.3], [40.0, 21.3], [40.0, 30.0], [25.0, 30.0]]
+
+  pl-alodia:
+    - year_from: 580
+      year_to: 1504
+      method: A
+      review: draft
+      basis: >-
+        aourednik 'Alwa' 1200 as is, centred on Soba, relabelled and clipped (geometry-audit section 5: use the
+        1200 shape and ignore the 1279 to 1492 Alwa polygons). Covers the Gezira toward the Atbara.
+      from: {year: 1200, name: Alwa}
+
+  pl-zagwe:
+    - year_from: 1137
+      year_to: 1270
+      method: H
+      review: draft
+      smooth: 0.4
+      basis: >-
+        Drawn from the pl-zagwe geometry_note: a highland zone centred on Lasta and Wag (Agaw country) with
+        authority over Tigray, the Eritrean highlands and Amhara; Adefa and Roha (Lalibela) inside
+        (geometry-audit section 5: do not use the 1200 "Ifat" polygon).
+      outline: [[37.6, 11.0], [37.4, 13.4], [38.4, 15.6], [39.8, 15.4], [40.4, 13.2], [40.0, 11.2], [38.8, 10.6]]
+
+  pl-ethiopia-solomonic:
+    - year_from: 1270
+      year_to: 1333
+      method: A
+      review: draft
+      basis: >-
+        Cliopatria 'Ethiopian Empire' 1272 to 1332 (Seshat, CC BY 4.0): the Solomonic core in Amhara, Shewa, Lasta
+        and Tigray, with Lalibela, Hayq and Debre Libanos inside. Replaces the aourednik 1279 shape.
+      from: {source: cliopatria, year: 1300, name: Ethiopian Empire}
+    - year_from: 1333
+      year_to: null
+      method: A
+      review: draft
+      basis: >-
+        Cliopatria 'Ethiopian Empire' 1333 to 1501: the kingdom grown by Amda Seyon's campaigns (1314 to 1344),
+        the core plus the tributary halo the pl-ethiopia-solomonic geometry_note asks for (geometry-audit section
+        5: grow it for c.1330 to 1340). It overlaps Ifat and Hadiya, which were tributary. Replaces the aourednik
+        1492 shape.
+      from: {source: cliopatria, year: 1400, name: Ethiopian Empire}
+
+  pl-damot:
+    - year_from: 1200
+      year_to: 1550
+      method: H
+      review: draft
+      smooth: 0.3
+      basis: >-
+        Drawn from the pl-damot geometry_note: a kingdom south of the Blue Nile (Abbay) bend, exact extent unknown
+        and probably shifting. Low confidence.
+      outline: [[36.6, 8.6], [36.6, 9.8], [37.6, 10.3], [38.6, 9.8], [38.5, 8.7], [37.6, 8.3]]
+
+  pl-hadiya:
+    - year_from: 1250
+      year_to: 1600
+      method: H
+      review: draft
+      smooth: 0.3
+      basis: >-
+        Drawn from the pl-hadiya geometry_note: a Muslim kingdom in the southern highlands, south of the Awash,
+        location approximate. Low confidence.
+      outline: [[37.2, 7.2], [37.2, 8.3], [38.0, 8.6], [38.8, 8.2], [38.8, 7.2], [38.0, 6.9]]
+
+  pl-ifat:
+    - year_from: 1285
+      year_to: 1415
+      method: E
+      review: draft
+      smooth: 0.3
+      basis: >-
+        Cliopatria 'Ifat Sultanate' 1285 to 1414 (Seshat, CC BY 4.0), which reaches the Zeila coast as the pl-ifat
+        geometry_note says, extended west to the eastern Shewa escarpment so the capital Wafat (the research
+        label point, 39.9E 10N) is inside. Replaces the relabelled aourednik 'Shoa' 1279 shape.
+      from: {source: cliopatria, year: 1350, name: Ifat Sultanate}
+      add:
+        - [[39.5, 9.3], [39.5, 10.7], [41.0, 11.0], [41.0, 9.5]]
+
+  pl-adal:
+    - year_from: 1415
+      year_to: 1577
+      method: A
+      review: draft
+      basis: >-
+        Cliopatria 'Adal Sultanate' 1415 to 1528 (Seshat, CC BY 4.0): from the Harar plateau (Dakkar, the research
+        label point, inside) to the Zeila coast, as the pl-adal geometry_note says. Replaces the aourednik 'Adal'
+        1492 shape with hand-added extensions.
+      from: {source: cliopatria, year: 1450, name: Adal Sultanate}
+
+  pl-beta-israel:
+    - year_from: 1200
+      year_to: null
+      method: H
+      review: draft
+      smooth: 0.3
+      basis: >-
+        Drawn from the pl-beta-israel geometry_note: the north-western highlands, Semien, Wegera, Dembiya, Tselemt
+        and Tsegede, around and north of Lake Tana. A community area, not a territory; the start marks the module
+        window, not an origin.
+      outline: [[36.6, 11.6], [36.4, 13.0], [37.2, 14.0], [38.4, 14.0], [38.8, 12.8], [38.2, 11.6], [37.4, 11.2]]
+
+  # ---- Phase 2: Swahili coast and the interior (swahili) ----
+  pl-kilwa:
+    - year_from: 1000
+      year_to: 1505
+      method: H
+      review: draft
+      basis: >-
+        Kilwa Kisiwani as a point with a 30 km coastal buffer (geometry-audit section 5: Swahili polities as points
+        with about 20 to 40 km buffers, not polygons). Takes in Songo Mnara and Sanje ya Kati; the sway over Mafia
+        and Sofala is not drawn.
+      point: [39.512, -8.957]
+      buffer_km: 30
+  pl-mogadishu:
+    - year_from: 1100
+      year_to: 1600
+      method: H
+      review: draft
+      basis: >-
+        Mogadishu as a point with a 30 km coastal buffer (geometry-audit section 5). Brava and Merca are not drawn.
+      point: [45.343, 2.039]
+      buffer_km: 30
+  pl-mombasa:
+    - year_from: 1100
+      year_to: null
+      method: H
+      review: draft
+      basis: >-
+        Mombasa island as a point with a 25 km coastal buffer (geometry-audit section 5).
+      point: [39.666, -4.062]
+      buffer_km: 25
+  pl-malindi:
+    - year_from: 1250
+      year_to: null
+      method: H
+      review: draft
+      basis: >-
+        Malindi as a point with a 25 km coastal buffer (geometry-audit section 5). Gedi, 15 km south-west, is its
+        own place.
+      point: [40.117, -3.219]
+      buffer_km: 25
+
+  pl-great-zimbabwe:
+    - year_from: 1200
+      year_to: 1450
+      method: A
+      review: draft
+      basis: >-
+        aourednik 'Great Zimbabwe' 1279 as is with our dates c.1200 to 1450 (geometry-audit section 5), relabelled
+        and clipped: a soft area over the southern plateau, as the pl-great-zimbabwe geometry_note asks.
+      from: {year: 1279, name: Great Zimbabwe}
+
+  pl-mapungubwe:
+    - year_from: 1220
+      year_to: 1290
+      method: H
+      review: draft
+      smooth: 0.3
+      basis: >-
+        Drawn from the pl-mapungubwe geometry_note: the Shashe-Limpopo confluence with Mapungubwe Hill and K2.
+        A small zone; the state's reach beyond the confluence is not drawn.
+      outline: [[28.4, -22.8], [28.3, -21.9], [29.2, -21.5], [30.1, -21.8], [30.2, -22.6], [29.3, -23.0]]
+
+  pl-mutapa:
+    - year_from: 1430
+      year_to: null
+      method: H
+      review: draft
+      smooth: 0.4
+      basis: >-
+        Drawn from the pl-mutapa geometry_note: the northern Zimbabwe plateau and the Zambezi escarpment (Dande).
+        A forward pointer at the very end of the slider; c.1430 is a convention, not a fixed date. Low confidence.
+      outline: [[29.6, -17.4], [29.8, -15.8], [31.4, -15.4], [33.0, -16.2], [32.8, -17.6], [31.2, -18.0]]
+
+  pl-coast-hinterland:
+    - year_from: 1000
+      year_to: null
+      method: H
+      review: draft
+      basis: >-
+        Drawn from the pl-coast-hinterland geometry_note: the mainland strip roughly 10 to 50 km deep behind the
+        Kenyan and northern Tanzanian coast, from the Lamu archipelago to past Kilwa. Drawn as a people. The
+        Mijikenda kaya are later. Low confidence.
+      smooth: 0.15
+      outline: [[40.4, -2.1], [39.6, -3.2], [39.1, -4.2], [38.5, -5.4], [38.7, -6.8], [38.8, -8.0], [38.9, -9.4],
+                [39.9, -9.6], [39.8, -8.0], [39.6, -6.8], [39.4, -5.4], [39.8, -4.3], [40.4, -3.2], [41.2, -2.2]]

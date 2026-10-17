@@ -1,0 +1,50 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-kilwa",
+    "year_from": 1000,
+    "year_to": 1505,
+    "method": "H",
+    "basis": "Kilwa Kisiwani as a point with a 30 km coastal buffer (geometry-audit section 5: Swahili polities as points with about 20 to 40 km buffers, not polygons). Takes in Songo Mnara and Sanje ya Kati; the sway over Mafia and Sofala is not drawn."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       39.642,
+       -9.194
+      ],
+      [
+       39.609,
+       -9.061
+      ],
+      [
+       39.386,
+       -8.719
+      ],
+      [
+       39.275,
+       -8.822
+      ],
+      [
+       39.248,
+       -9.027
+      ],
+      [
+       39.375,
+       -9.191
+      ],
+      [
+       39.642,
+       -9.194
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

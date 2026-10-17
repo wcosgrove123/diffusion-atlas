@@ -15,13 +15,15 @@ HS (MCPS). First module: Africa 1200–1450. Later modules: Asia, the Middle Eas
 ```
 pip install -r requirements.txt
 python3 tools/validate.py                 # must report 0 errors
-python3 tools/build_data.py africa        # -> data/build/africa.json + africa-report.md
+python3 tools/build_data.py africa        # -> data/build/africa.json + africa-report.md (includes the AP World set)
+python3 tools/ap_match.py africa          # course texts -> data/ap-world/africa.yaml (needs Loom's library; see sources.yaml)
 python3 tools/export_taxonomy.py          # -> data/build/taxonomy.json + modules.json
 python3 tools/build_geometry.py africa    # polity-shapes.yaml -> data/geometry/polities/; -> data/build/africa-geo.json
                                           #   + africa-base.json
 python3 -m pytest tests                   # pipeline tests
 bash tools/fetch_geometry.sh              # re-download raw geometry (gitignored)
 python3 tools/extract_africa.py --report  # clip aourednik to the frame
+python3 tools/extract_cliopatria.py africa  # clip Cliopatria (Seshat, CC BY 4.0) to the frame
 python3 tools/extract_base.py africa      # clip Natural Earth to the module view box -> data/geometry/base/africa/
 cd app && npm run dev | npm run build | npm test
 cd app && npm run build && PW_CHANNEL=msedge npm run e2e   # smoke, Phase 1 acceptance, Lighthouse (CI: Chromium)
@@ -45,7 +47,13 @@ On Windows, `python` replaces `python3`. In Git Bash set `MSYS_NO_PATHCONV=1` be
   Plain, short sentences.
 - **Attribution.** Wil is the author of the project, its ideas, and its writing. Nothing in the site, README, or
   metadata should say Claude or AI built it or wrote it. Co-author lines on commits for code are fine.
-- **Polygons** are made from `data/geometry/polity-shapes.yaml` (method A, E or H per docs/geometry-audit.md 5).
+- **Polygons** are made from `data/geometry/polity-shapes.yaml` (method A, E or H per docs/geometry-audit.md 5;
+  A and E take `from.source` aourednik or cliopatria;
+  E edits are `keep`, `remove`, `add`; H is an `outline` or a `point` with `buffer_km`; `zone: nomadic` hatches).
   Hand-drawn (H) shapes stay `review: draft` until Wil approves them in docs/geometry-review.md.
+- **Map layers** draw with pattern fills and pattern lines only (`app/src/map/patterns.ts` helpers), so the map
+  compiles two WebGL programs. A new paint kind adds a program and costs startup time on Chromebooks.
+- **AP World view.** `data/ap-world/<module>.yaml` says what the "AP World only" view shows; the app never
+  decides that itself. Wil edits `include` and `exclude` there (docs/decisions-for-wil.md, 20).
 - **Phases in order.** Ship each phase to Pages before starting the next. Something usable must exist early.
 - Ask Wil before changing the stack, the taxonomy, or anything in docs/decisions-for-wil.md.

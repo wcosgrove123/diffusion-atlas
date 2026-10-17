@@ -1,0 +1,128 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-hausa-states",
+    "year_from": 1000,
+    "year_to": 1440,
+    "method": "H",
+    "basis": "Drawn from the pl-hausa-states geometry_note: the soft area between the Niger (west) and the Bornu borderlands (east), the Air foothills (north) and the Zazzau frontier (south), holding Daura, Kano, Katsina, Gobir, Rano, Zazzau and Biram. A people, not a state, before c.1450 (geometry-audit section 5)."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       4.837,
+       12.59
+      ],
+      [
+       4.972,
+       11.571
+      ],
+      [
+       5.144,
+       11.304
+      ],
+      [
+       6.285,
+       10.586
+      ],
+      [
+       7.895,
+       10.317
+      ],
+      [
+       8.099,
+       10.337
+      ],
+      [
+       9.867,
+       11.032
+      ],
+      [
+       10.353,
+       12.592
+      ],
+      [
+       9.581,
+       13.666
+      ],
+      [
+       7.451,
+       13.895
+      ],
+      [
+       5.614,
+       13.576
+      ],
+      [
+       4.837,
+       12.59
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-hausa-states",
+    "year_from": 1440,
+    "year_to": null,
+    "method": "A",
+    "basis": "aourednik 'Hausa States' 1492 as a soft c.1450 envelope (geometry-audit section 5), relabelled and clipped.",
+    "source": "aourednik"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       7.183,
+       11.049
+      ],
+      [
+       9.849,
+       10.908
+      ],
+      [
+       10.727,
+       11.291
+      ],
+      [
+       10.07,
+       14.225
+      ],
+      [
+       9.112,
+       14.52
+      ],
+      [
+       8.301,
+       14.52
+      ],
+      [
+       3.779,
+       13.656
+      ],
+      [
+       3.558,
+       12.178
+      ],
+      [
+       4.666,
+       11.513
+      ],
+      [
+       7.183,
+       11.049
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

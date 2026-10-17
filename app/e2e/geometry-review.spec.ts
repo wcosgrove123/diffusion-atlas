@@ -15,7 +15,7 @@ test('geometry review screenshots', async ({ page }, info) => {
   test.skip(!process.env.GEOMETRY_REVIEW || info.project.name !== 'desktop', 'set GEOMETRY_REVIEW=1 to regenerate');
   test.setTimeout(300_000);
   mkdirSync(out, { recursive: true });
-  await page.setViewportSize({ width: 1100, height: 760 });
+  await page.setViewportSize({ width: 960, height: 640 });
   await page.goto('./');
   await expect(page.locator('#map')).toHaveAttribute('data-ready', 'true', { timeout: 45_000 });
   const shapes: Shape[] = await page.evaluate(async () => {
@@ -47,6 +47,6 @@ test('geometry review screenshots', async ({ page }, info) => {
     }, { s, year });
     await page.waitForFunction(() => (window as unknown as { __atlas: { map: { loaded: () => boolean } } }).__atlas.map.loaded());
     await page.waitForTimeout(600);
-    await page.screenshot({ path: resolve(out, `${s.place_id}-${s.year_from}.jpg`), type: 'jpeg', quality: 80 });
+    await page.screenshot({ path: resolve(out, `${s.place_id}-${s.year_from}.jpg`), type: 'jpeg', quality: 68 });
   }
 });

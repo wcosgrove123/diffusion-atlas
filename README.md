@@ -13,10 +13,11 @@ when it arrived (outcome), and whose sources tell us so.
 |---|---|
 | `data/taxonomy.yaml` | Controlled vocabularies, world-general (works for future Asia, Middle East, Europe modules) |
 | `data/research/africa/` | The dataset: places, religion profiles, diffusions, exemplars, events, sources, debates |
-| `data/geometry/` | Clipped historical boundaries (aourednik/historical-basemaps, GPL-3.0) and the geometry audit |
+| `data/geometry/` | Clipped historical boundaries (aourednik/historical-basemaps, GPL-3.0), the shape recipes (`polity-shapes.yaml`) and the built polygons |
 | `tools/` | Validator, data build, geometry extraction |
 | `docs/` | Product spec, build plan, AP CED alignment, fact-check, language review, corrections log, open decisions |
 | `data/modules.yaml` | Module frames: years, map bounds, and the area the map may show |
+| `data/ap-world/` | Which records the "AP World only" view shows, matched against the course texts (`tools/ap_match.py`) |
 | `app/` | The web app (Vite, TypeScript, MapLibre); reads only `data/build/*.json` |
 
 Dataset (Africa module): 91 places, 219 religion profiles, 117 diffusions, 55 exemplars, 55 events (25 keyframes),
@@ -39,4 +40,6 @@ site, and publishes it to GitHub Pages (set Settings, Pages, Source to "GitHub A
 ## License
 
 GPL-3.0 (the repository ships modified data from aourednik/historical-basemaps, GPL-3.0).
-Base geography from Natural Earth (public domain).
+Base geography from Natural Earth (public domain). Some polity shapes come from Cliopatria, Seshat Global History
+Databank (CC BY 4.0, https://github.com/Seshat-Global-History-Databank/cliopatria), clipped and edited as each
+shape's `basis` says.

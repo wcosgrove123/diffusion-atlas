@@ -65,22 +65,40 @@ export interface PatternImage {
   data: Uint8ClampedArray<ArrayBuffer>;
 }
 
-/** Draw a pattern tile. 2x2 supersampling softens the edges. */
+/** The shape of a tile (0 = color A, 1 = color B, in between on edges), computed once per kind and shape. */
+const maskCache = new Map<string, Float32Array>();
+function mask(kind: PatternKind, shape: Shape, width: number, height: number, ratio: number): Float32Array {
+  const key = `${kind}|${shape}|${ratio}`;
+  let m = maskCache.get(key);
+  if (m) return m;
+  m = new Float32Array(width * height);
+  for (let y = 0; y < height; y++) {
+    for (let x = 0; x < width; x++) {
+      // 2x2 supersampling softens the edges
+      let nb = 0;
+      for (const dy of [0.25, 0.75]) for (const dx of [0.25, 0.75]) nb += sample(kind, shape, (x + dx) / ratio, (y + dy) / ratio);
+      m[y * width + x] = nb / 4;
+    }
+  }
+  maskCache.set(key, m);
+  return m;
+}
+
+/** Draw a pattern tile: the cached mask of its kind, colored A and B. */
 export function patternImage(kind: PatternKind, a: string, b: string, shape: Shape = 'fill', ratio = PIXEL_RATIO): PatternImage {
   const tile = shape === 'ring' ? RING_TILE : FILL_TILE;
   const width = tile.w * ratio;
   const height = tile.h * ratio;
   const data = new Uint8ClampedArray(new ArrayBuffer(width * height * 4));
   const [ca, cb] = kind === 'undocumented' ? [toRgb(mapInk.undocumentedGround), toRgb(mapInk.undocumentedInk)] : [toRgb(a), toRgb(b)];
-  for (let y = 0; y < height; y++) {
-    for (let x = 0; x < width; x++) {
-      let nb = 0;
-      for (const dy of [0.25, 0.75]) for (const dx of [0.25, 0.75]) nb += sample(kind, shape, (x + dx) / ratio, (y + dy) / ratio);
-      const t = nb / 4;
-      const i = (y * width + x) * 4;
-      for (let c = 0; c < 3; c++) data[i + c] = Math.round(ca[c] * (1 - t) + cb[c] * t);
-      data[i + 3] = 255;
-    }
+  const m = mask(kind, shape, width, height, ratio);
+  for (let p = 0; p < width * height; p++) {
+    const t = m[p];
+    const i = p * 4;
+    data[i] = Math.round(ca[0] * (1 - t) + cb[0] * t);
+    data[i + 1] = Math.round(ca[1] * (1 - t) + cb[1] * t);
+    data[i + 2] = Math.round(ca[2] * (1 - t) + cb[2] * t);
+    data[i + 3] = 255;
   }
   return { width, height, data };
 }
@@ -158,8 +176,8 @@ export function linePatternPaint(
 
 // ---- dashed and dotted lines ----
 
-export type InkLine = 'dash' | 'dots';
-const INK_TILE: Record<InkLine, { w: number; h: number }> = { dash: { w: 16, h: 4 }, dots: { w: 8, h: 4 } };
+export type InkLine = 'dash' | 'dots' | 'hatch';
+const INK_TILE: Record<InkLine, { w: number; h: number }> = { dash: { w: 16, h: 4 }, dots: { w: 8, h: 4 }, hatch: { w: 16, h: 8 } };
 
 export function inkLineId(kind: InkLine, color: string): string {
   return `pat-line-${kind}-${color.slice(1)}`;
@@ -179,9 +197,62 @@ export function inkLineImage(kind: InkLine, color: string, ratio = PIXEL_RATIO):
         for (const dx of [0.25, 0.75]) {
           const u = (x + dx) / ratio;
           const v = (y + dy) / ratio;
-          n += kind === 'dash' ? (u < 10 ? 1 : 0) : (Math.hypot(u - 4, v - 2) < 1.9 ? 1 : 0);
+          n += kind === 'dash' ? (u < 10 ? 1 : 0)
+            : kind === 'dots' ? (Math.hypot(u - 4, v - 2) < 1.9 ? 1 : 0)
+            // hatch: diagonal strokes across the line, a nomadic sphere's edge (geometry-audit 5)
+            : (mod(u + v, 8) < 2.6 ? 1 : 0);
         }
       }
+      data.set([c[0], c[1], c[2], Math.round((255 * n) / 4)], (y * width + x) * 4);
+    }
+  }
+  return { width, height, data };
+}
+
+// ---- diffusion arcs (docs/product-spec.md 4) ----
+// Mechanism as line style: relocation solid, hierarchical long dash, contagious dotted, stimulus double line,
+// imposed thick with chevrons. The tile runs along the line (u) and across it (v); MapLibre stretches v to the
+// line's width. Arc ids: arc-<style>-<hex>.
+
+export type ArcStyle = 'solid' | 'longdash' | 'dotted' | 'double' | 'chevrons';
+const ARC_STYLES: ArcStyle[] = ['solid', 'longdash', 'dotted', 'double', 'chevrons'];
+/** Taxonomy mechanism -> line style. A mechanism added later draws solid until it gets a style here. */
+export const MECHANISM_STYLE: Record<string, ArcStyle> = {
+  relocation: 'solid', hierarchical: 'longdash', contagious: 'dotted', stimulus: 'double', imposed: 'chevrons',
+};
+export const arcStyle = (mechanism: string): ArcStyle => MECHANISM_STYLE[mechanism] ?? 'solid';
+const ARC_TILE: Record<ArcStyle, { w: number; h: number }> = {
+  solid: { w: 8, h: 8 }, longdash: { w: 32, h: 8 }, dotted: { w: 8, h: 8 }, double: { w: 8, h: 8 }, chevrons: { w: 16, h: 8 },
+};
+
+export function arcPatternId(style: ArcStyle, color: string): string {
+  return `arc-${style}-${color.slice(1)}`;
+}
+
+function arcSample(style: ArcStyle, u: number, v: number): 0 | 1 {
+  switch (style) {
+    case 'solid': return 1;
+    case 'longdash': return u < 22 ? 1 : 0;
+    case 'dotted': return Math.hypot(u - 4, v - 4) < 2.6 ? 1 : 0;
+    case 'double': return v < 2.4 || v > 5.6 ? 1 : 0;
+    case 'chevrons': {
+      // a gap shaped like a chevron pointing along the line, every 16 px
+      const d = Math.abs(u - 9 - Math.abs(v - 4) * 0.9);
+      return d < 1.4 ? 0 : 1;
+    }
+  }
+}
+
+export function arcImage(style: ArcStyle, color: string, ratio = PIXEL_RATIO): PatternImage {
+  const tile = ARC_TILE[style];
+  const width = tile.w * ratio;
+  const height = tile.h * ratio;
+  const data = new Uint8ClampedArray(new ArrayBuffer(width * height * 4));
+  const c = toRgb(color);
+  for (let y = 0; y < height; y++) {
+    for (let x = 0; x < width; x++) {
+      let n = 0;
+      for (const dy of [0.25, 0.75]) for (const dx of [0.25, 0.75]) n += arcSample(style, (x + dx) / ratio, (y + dy) / ratio);
       data.set([c[0], c[1], c[2], Math.round((255 * n) / 4)], (y * width + x) * 4);
     }
   }
@@ -192,7 +263,9 @@ export function inkLineImage(kind: InkLine, color: string, ratio = PIXEL_RATIO):
 export function imageForId(id: string): PatternImage | null {
   const solid = /^pat-solid-([0-9a-f]{6})$/.exec(id);
   if (solid) return patternImage('exclusive', `#${solid[1]}`, `#${solid[1]}`, 'ring');
-  const ink = /^pat-line-(dash|dots)-([0-9a-f]{6})$/.exec(id);
+  const arc = /^arc-([a-z]+)-([0-9a-f]{6})$/.exec(id);
+  if (arc && (ARC_STYLES as string[]).includes(arc[1])) return arcImage(arc[1] as ArcStyle, `#${arc[2]}`);
+  const ink = /^pat-line-(dash|dots|hatch)-([0-9a-f]{6})$/.exec(id);
   if (ink) return inkLineImage(ink[1] as InkLine, `#${ink[2]}`);
   const look = parsePatternId(id);
   return look ? patternImage(look.kind, look.a, look.b, look.shape) : null;

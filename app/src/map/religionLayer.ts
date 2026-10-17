@@ -20,6 +20,9 @@ const DOTTED_BASIS = ['inferred', 'projected'];
 export const NO_RECORD_DASH = inkLineId('dash', mapInk.noRecord);
 export const BASIS_DOTS = inkLineId('dots', mapInk.basisDots);
 const SOFT_EDGE = solidId(mapInk.softEdge);
+/** A nomadic sphere (geometry-audit 5, Tuareg): hatched edge, lighter fill, so it never reads as a state. */
+const NOMADIC_HATCH = inkLineId('hatch', mapInk.nomadicHatch);
+const NOMADIC_FILL = 0.55;
 
 export interface PolityStyleProps {
   place_id: string;
@@ -35,6 +38,9 @@ export interface PolityStyleProps {
   ring_pattern: string | null;
   ring_opacity: number;
   court_basis: string | null;
+  /** nomadic spheres: hatched edge instead of the soft edge */
+  edge_pattern: string | null;
+  edge_opacity: number | null;
 }
 
 export const POLITY_SOURCE = 'polities';
@@ -42,6 +48,7 @@ export const POLITY_LAYERS = {
   fill: 'polity-fill',
   noRecord: 'polity-no-record',
   soft: 'polity-soft-edge',
+  nomadic: 'polity-nomadic-edge',
   basis: 'polity-basis',
   ring: 'court-ring',
   ringBasis: 'court-basis',
@@ -64,22 +71,25 @@ function area(g: Polygon | MultiPolygon): number {
 }
 
 /** The styled polygons for a year, largest first so smaller polities draw on top of the ones that contain them. */
-export function polityFeatures(data: ModuleData, geo: ModuleGeo, year: number): FeatureCollection<Polygon | MultiPolygon, PolityStyleProps> {
-  const places = new Map(shownPlaces(data).map((p) => [p.id, p]));
+export function polityFeatures(
+  data: ModuleData, geo: ModuleGeo, year: number, visible: (id: string) => boolean = () => true,
+): FeatureCollection<Polygon | MultiPolygon, PolityStyleProps> {
+  const places = new Map(shownPlaces(data).filter((p) => visible(p.id)).map((p) => [p.id, p]));
   const out: Feature<Polygon | MultiPolygon, PolityStyleProps>[] = [];
   for (const f of geo.polities.features as PolityFeature[]) {
     const place = places.get(f.properties.place_id);
     if (!place || !shapeActive(f, year)) continue;
-    out.push({ type: 'Feature', geometry: f.geometry, properties: styleProps(data.religion_profiles, place, year, f.properties.method) });
+    out.push({ type: 'Feature', geometry: f.geometry, properties: styleProps(data.religion_profiles, place, year, f.properties.method, f.properties.zone) });
   }
   out.sort((a, b) => area(b.geometry) - area(a.geometry));
   return { type: 'FeatureCollection', features: out };
 }
 
-export function styleProps(profiles: ReligionProfile[], place: Place, year: number, method = ''): PolityStyleProps {
+export function styleProps(profiles: ReligionProfile[], place: Place, year: number, method = '', zone?: string): PolityStyleProps {
   const rural = profileAt(profiles, place.id, 'rural', year);
   const court = profileAt(profiles, place.id, 'court', year);
   const showCourt = court && !sameReligion(court, rural);
+  const nomadic = zone === 'nomadic';
   return {
     place_id: place.id,
     name: place.name,
@@ -87,13 +97,15 @@ export function styleProps(profiles: ReligionProfile[], place: Place, year: numb
     rural_profile: rural?.id ?? null,
     rural_relation: rural?.relation ?? null,
     fill_pattern: rural ? patternId(profileLook(rural), 'fill') : null,
-    fill_opacity: opacityFor(rural?.confidence),
+    fill_opacity: opacityFor(rural?.confidence) * (nomadic ? NOMADIC_FILL : 1),
     rural_basis: rural?.basis ?? null,
     court_profile: court?.id ?? null,
     court_relation: court?.relation ?? null,
     ring_pattern: showCourt ? patternId(profileLook(court), 'ring') : null,
     ring_opacity: opacityFor(court?.confidence),
     court_basis: court?.basis ?? null,
+    edge_pattern: nomadic ? NOMADIC_HATCH : null,
+    edge_opacity: nomadic ? 0.9 : null,
   };
 }
 
@@ -108,8 +120,13 @@ export function addReligionLayers(map: maplibregl.Map, beforeId: string): void {
     },
     {
       // Feathered edge: pre-modern borders were zones, so no crisp line (product-spec 3.3).
-      id: POLITY_LAYERS.soft, type: 'line', source: POLITY_SOURCE,
+      id: POLITY_LAYERS.soft, type: 'line', source: POLITY_SOURCE, filter: ['!', has('edge_pattern')],
       paint: linePatternPaint(SOFT_EDGE, 7, { blur: 6, opacity: 0.4 }),
+    },
+    {
+      // A nomadic sphere's hatched edge: sharp, not feathered (geometry-audit 5, Tuareg).
+      id: POLITY_LAYERS.nomadic, type: 'line', source: POLITY_SOURCE, filter: has('edge_pattern'),
+      paint: linePatternPaint(SOFT_EDGE, 7, { patternProp: 'edge_pattern', opacityProp: 'edge_opacity' }),
     },
     {
       id: POLITY_LAYERS.noRecord, type: 'line', source: POLITY_SOURCE, filter: ['!', has('fill_pattern')],
@@ -133,7 +150,7 @@ export function addReligionLayers(map: maplibregl.Map, beforeId: string): void {
       paint: linePatternPaint(BASIS_DOTS, 2, { offset: 16 }),
     },
   ];
-  ensurePatterns(map, [NO_RECORD_DASH, BASIS_DOTS, SOFT_EDGE, solidId(mapInk.noRecord)]);
+  ensurePatterns(map, [NO_RECORD_DASH, BASIS_DOTS, SOFT_EDGE, NOMADIC_HATCH, solidId(mapInk.noRecord)]);
   for (const l of layers) map.addLayer(l, beforeId);
 }
 

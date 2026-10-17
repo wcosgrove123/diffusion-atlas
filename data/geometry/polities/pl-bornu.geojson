@@ -1,0 +1,99 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-bornu",
+    "year_from": 1380,
+    "year_to": null,
+    "method": "E",
+    "basis": "aourednik 'Kanem-Bornu' 1400 with the detached Bioko part deleted and the northern arm pulled back from 21N to about 16.5N (geometry-audit section 5: pull it back unless the research supports Kawar; the pl-bornu geometry_note places Bornu west and south-west of Lake Chad). Starts c.1380.",
+    "source": "aourednik"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       10.139,
+       14.095
+      ],
+      [
+       10.66,
+       11.587
+      ],
+      [
+       10.733,
+       11.431
+      ],
+      [
+       11.029,
+       11.275
+      ],
+      [
+       12.24,
+       11.209
+      ],
+      [
+       12.456,
+       11.258
+      ],
+      [
+       15.613,
+       13.005
+      ],
+      [
+       15.819,
+       13.355
+      ],
+      [
+       15.785,
+       14.283
+      ],
+      [
+       15.134,
+       14.921
+      ],
+      [
+       14.962,
+       15.199
+      ],
+      [
+       14.673,
+       16.21
+      ],
+      [
+       14.456,
+       16.463
+      ],
+      [
+       14.289,
+       16.5
+      ],
+      [
+       11.947,
+       16.464
+      ],
+      [
+       11.811,
+       16.364
+      ],
+      [
+       10.896,
+       14.745
+      ],
+      [
+       10.214,
+       14.254
+      ],
+      [
+       10.139,
+       14.095
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

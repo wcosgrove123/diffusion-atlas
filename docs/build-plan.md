@@ -107,6 +107,18 @@ Scope: places from `wsahel.yaml` only (plus external places they reference), rel
 - Region filter for keyframes.
 - Acceptance: every record in africa.json is reachable by clicking within its span (automated: iterate records,
   set year, query rendered features); no console errors; data size budget met.
+- Status (2026-10-16): built on branch `phase-2-all-regions`, stacked on the Phase 1 branch (PR 2, not merged).
+  42 more shapes in `data/geometry/polity-shapes.yaml` (A, E and H; Swahili polities as points with 25 to 30 km
+  coastal buffers; Tuareg as a hatched `zone: nomadic`), all drafts in docs/geometry-review.md. Arcs, outcome glyphs,
+  edge labels and the entry pulse are in `app/src/map/arcs.ts`; exemplar, diffusion, debate and source cards in
+  `app/src/ui/cards.ts`; the keyframe region filter in the timeline. Acceptance tests: `app/e2e/phase2.spec.ts`.
+  Only the default lens's arcs show until the lens tabs arrive in Phase 3; other lenses' diffusions open from the
+  place cards.
+
+### Added after Phase 2: the "AP World only" view
+- Default student view: the records the AP World curriculum names (CED Units 1 and 2, the textbook chapters), plus
+  what follows them; a switch shows everything. Decision 20 in docs/decisions-for-wil.md; `tools/ap_match.py`;
+  `data/ap-world/<module>.yaml`; test `app/e2e/ap-world.spec.ts`.
 
 ### Phase 3: lenses and the historiography control
 - Lens tabs with InSPECT chips; neutral polygons outside the religion lens.

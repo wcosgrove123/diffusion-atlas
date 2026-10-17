@@ -38,6 +38,12 @@ export interface MapInkPalette {
   eventMarker: string;
   keyframeMarker: string;
   labelHalo: string;
+  /** exemplar markers (buildings, objects, texts) */
+  exemplar: string;
+  /** the dash that travels along an arc when it first appears */
+  arcPulse: string;
+  /** hatched edge of a nomadic sphere */
+  nomadicHatch: string;
 }
 
 // Muted, paper-like base so religion fills read clearly on top of it, on a projector and on a Chromebook.
@@ -73,6 +79,9 @@ export const mapInk: MapInkPalette = {
   eventMarker: '#1d2428',
   keyframeMarker: '#b0342a',
   labelHalo: '#fbfaf6',
+  exemplar: '#2f3c43',
+  arcPulse: '#ffffff',
+  nomadicHatch: '#5a4a3a',
 };
 
 /**
@@ -123,6 +132,30 @@ export const traditionColorsDark: Record<string, string> = {
   shinto: '#c17273',
   manichaeism: '#b23ca1',
 };
+
+/**
+ * Lens colors for diffusion arcs (docs/product-spec.md 4), keyed by taxonomy lens, distinct from the tradition
+ * colors under them. Only one lens's arcs show at a time, so the set is checked on adjacent pairs with the
+ * dataviz validator (light, surface #f3eee2, 2026-10-16): band PASS, chroma PASS, CVD worst adjacent 12.0 PASS,
+ * normal-vision worst 17.1 PASS, contrast all >= 3:1 PASS; every lens color is at least 10 (OKLab dE x100) from
+ * each of the four Africa tradition colors. Never color alone: mechanism is also a line style, outcome a glyph.
+ */
+export const lensColors: Record<string, string> = {
+  religion: '#3774b5',
+  language: '#c14d69',
+  architecture: '#3442e5',
+  knowledge: '#1689d7',
+  'art-music': '#c8577f',
+  social: '#617209',
+  population: '#b01fbe',
+  economy: '#297d22',
+  technology: '#3d89c6',
+  governance: '#853866',
+};
+
+export function lensColor(lens: string): string {
+  return lensColors[lens] ?? mapInk.noRecord;
+}
 
 /** Color for a taxonomy tradition. An unknown tradition is a data or palette gap: it draws as the no-record ink. */
 export function traditionColor(tradition: string, colors: Record<string, string> = traditionColors): string {

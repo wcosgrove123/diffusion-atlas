@@ -160,19 +160,95 @@ def test_polity_shapes_are_clipped_to_land():
     land = unary_union([make_valid(shape(f["geometry"])) for f in json.loads(
         (ROOT / "data/geometry/base" / SHAPES["module"] / "land.geojson").read_text(encoding="utf-8"))["features"]])
     for path in POLITY_FILES:
-        for f in json.loads(path.read_text(encoding="utf-8"))["features"]:
+        specs = SHAPES["polities"][path.stem]
+        for f, spec in zip(json.loads(path.read_text(encoding="utf-8"))["features"], specs):
             g = shape(f["geometry"])
-            # simplification after clipping can wander a little past the coast; allow 2% of the area
-            assert g.difference(land).area <= 0.02 * g.area, path.stem
+            # The build closes inlets narrower than about 15 km before clipping, and simplification can wander a
+            # little past the coast, so a thin coastal strip may sit up to a few percent over Natural Earth water;
+            # a town's coastal buffer (Kilwa, Mombasa are islands) also spans its channel.
+            limit = 0.25 if spec.get("point") else 0.05
+            assert g.difference(land).area <= limit * g.area, path.stem
+
+
+def test_published_shapes_name_their_source_and_the_build_credits_it():
+    """Method A and E features say which published dataset they come from (aourednik, GPL-3.0; Cliopatria,
+    CC BY 4.0), and the build's attribution names every dataset in use."""
+    feats = [f for p in POLITY_FILES for f in json.loads(p.read_text(encoding="utf-8"))["features"]]
+    sources = set()
+    for f in feats:
+        pr = f["properties"]
+        if pr["method"] in ("A", "E"):
+            assert pr.get("source") in ("aourednik", "cliopatria"), pr["place_id"]
+            sources.add(pr["source"])
+        else:
+            assert "source" not in pr, pr["place_id"]
+    geo = json.loads((ROOT / "data/build" / f"{SHAPES['module']}-geo.json").read_text(encoding="utf-8"))
+    credits = " ".join(geo["attribution"])
+    if "aourednik" in sources:
+        assert "aourednik/historical-basemaps (GPL-3.0)" in credits
+    if "cliopatria" in sources:
+        assert "Cliopatria" in credits and "CC BY 4.0" in credits
+    assert "cliopatria" in sources, "Phase 2 review adopted Cliopatria for Mali, Ethiopia and others"
+
+
+def test_cliopatria_extract_keeps_only_polities_in_the_frame():
+    path = ROOT / "data/geometry" / SHAPES["module"] / "cliopatria.geojson"
+    fc = json.loads(path.read_text(encoding="utf-8"))
+    assert "CC BY 4.0" in fc["license"]
+    w, s, e, n = load_frame(SHAPES["module"])["bbox"]
+    for f in fc["features"]:
+        pr = f["properties"]
+        assert pr["source"] == "cliopatria" and pr["FromYear"] <= pr["ToYear"]
+        from shapely.geometry import shape
+        x0, y0, x1, y1 = shape(f["geometry"]).bounds
+        assert w - 1e-6 <= x0 and x1 <= e + 1e-6 and s - 1e-6 <= y0 and y1 <= n + 1e-6, pr["Name"]
 
 
 def test_phase1_polities_have_shapes():
-    """docs/build-plan.md Phase 1: Mali (E) and the hand-drawn West African zones (H)."""
+    """docs/build-plan.md Phase 1: Mali (E) and the hand-drawn West African zones (H). Takrur moved to Cliopatria (A)
+    on 2026-10-17 (docs/geometry-review.md part 3)."""
     methods = {pid: {s["method"] for s in specs} for pid, specs in SHAPES["polities"].items()}
     assert "E" in methods["pl-mali"]
-    for pid in ("pl-sosso", "pl-jolof", "pl-takrur", "pl-songhay-gao", "pl-mossi", "pl-bono"):
+    assert methods["pl-takrur"] == {"A"}
+    for pid in ("pl-sosso", "pl-jolof", "pl-songhay-gao", "pl-mossi", "pl-bono"):
         assert methods[pid] == {"H"}, pid
     assert all(s.get("review") in ("draft", "approved") for specs in SHAPES["polities"].values() for s in specs)
+
+
+def test_every_polity_and_people_of_the_shown_regions_has_a_shape_or_a_point():
+    """docs/build-plan.md Phase 2: polygons for the remaining regions. A polity or people without a shape still has a
+    location (drawn as a point), so nothing disappears; here every one in the shown regions gets a shape."""
+    places = _research_places(SHAPES["module"])
+    # Wil's call (docs/decisions-for-wil.md, 13): Kaabu and Bambuk-Bure stay points until he decides on shapes.
+    point_only = {"pl-kaabu", "pl-bambuk-bure"}
+    missing = [pid for pid, p in places.items()
+               if p["kind"] in ("polity", "people") and pid not in SHAPES["polities"] and pid not in point_only]
+    assert missing == [], missing
+    for pid, p in places.items():
+        assert p.get("location"), pid
+
+
+def test_each_place_label_point_sits_in_one_of_its_shapes():
+    """The research location is the label point; at least one shape per place holds it (a later shape may not: Makuria's
+    court moved north of Dongola after 1365). Coastal buffers may start at the Natural Earth coast a few km off."""
+    from shapely.geometry import Point, shape
+    places = _research_places(SHAPES["module"])
+    for path in POLITY_FILES:
+        loc = places[path.stem]["location"]
+        pt = Point(loc["lon"], loc["lat"])
+        geoms = [shape(f["geometry"]) for f in json.loads(path.read_text(encoding="utf-8"))["features"]]
+        assert min(g.distance(pt) for g in geoms) < 0.15, path.stem
+
+
+def test_zone_values_are_known_and_nomadic_is_a_people():
+    places = _research_places(SHAPES["module"])
+    for pid, specs in SHAPES["polities"].items():
+        for s in specs:
+            if s.get("zone"):
+                assert s["zone"] == "nomadic", pid
+                assert places[pid]["kind"] == "people", pid
+    feats = [f for p in POLITY_FILES for f in json.loads(p.read_text(encoding="utf-8"))["features"]]
+    assert any(f["properties"].get("zone") == "nomadic" for f in feats)
 
 
 @pytest.mark.parametrize("module", MODULES)
@@ -182,3 +258,65 @@ def test_module_regions_name_research_files(module):
     assert set(f["shown_regions"]) <= set(ids)
     for r in ids:
         assert (ROOT / "data/research" / module / f"{r}.yaml").exists()
+
+
+# ---- AP World only view (tools/ap_match.py, tools/build_data.py) ----
+
+sys.path.insert(0, str(ROOT / "tools"))
+import ap_match  # noqa: E402
+import build_data  # noqa: E402
+
+
+def test_ap_match_names_places_by_their_proper_names_only():
+    place = {"name": "Songhay kingdom of Gao", "alt_names": ["Kawkaw", "Sunni (Sonni) dynasty"]}
+    terms = ap_match.name_terms(place, "places", set())
+    assert "Songhay kingdom of Gao" in terms and "Songhay" in terms and "Kawkaw" in terms
+    assert "kingdom" not in [t.lower() for t in terms]
+    assert "Sunni dynasty" in terms  # the parenthetical is dropped, the name kept
+    # short names keep their capitals, long ones need not
+    assert ap_match.term_pattern("Mali").search("in Mali") and not ap_match.term_pattern("Mali").search("in mali")
+    assert ap_match.term_pattern("Timbuktu").search("TIMBUKTU")
+    assert not ap_match.term_pattern("Mali").search("Malindi")
+
+
+def test_ap_match_names_diffusions_only_through_known_words():
+    vocab = {"timbuktu", "maliki", "sufi"}
+    d = {"what": "Maliki Sunni scholarship reaches Timbuktu; Great growth of Shared learning"}
+    assert sorted(ap_match.name_terms(d, "diffusions", vocab)) == ["Maliki", "Timbuktu"]
+
+
+def test_ap_world_set_follows_the_place():
+    data = {
+        "places": [{"id": "pl-a", "name": "A"}, {"id": "pl-b", "name": "B"}],
+        "religion_profiles": [{"id": "rp-a", "place": "pl-a"}, {"id": "rp-b", "place": "pl-b"}],
+        "events": [{"id": "ev-a", "place": "pl-a"}, {"id": "ev-b", "place": "pl-b"}],
+        "exemplars": [{"id": "ex-b", "place": "pl-b"}],
+        "diffusions": [{"id": "df-to-a", "to": "pl-a"}, {"id": "df-to-b", "to": "pl-b"}],
+    }
+    yaml_path = ROOT / "data/ap-world/test-module.yaml"
+    yaml_path.write_text(yaml.safe_dump({
+        "named": {"pl-a": {"name": "A", "matched": {"A": {"Textbook, Chapter 7: Africa": 3}}}, "df-to-b": {"name": "x", "matched": {"Sufi": {"CED": 1}}}},
+        "include": ["ex-b"], "exclude": ["ev-a"], "default_view": "ap"}), encoding="utf-8")
+    try:
+        ap = build_data.ap_world_set("test-module", data)
+    finally:
+        yaml_path.unlink()
+    why = ap["why"]
+    assert why["pl-a"].startswith("named in Textbook")
+    assert why["rp-a"] == "follows A" and "rp-b" not in why
+    assert why["df-to-a"] == "arrives at A" and why["df-to-b"].startswith("named")
+    assert why["ex-b"] == "listed by Wil" and "ev-a" not in why and "ev-b" not in why
+
+
+def test_ap_world_list_matches_the_research_ids():
+    """The committed list names only records that exist, so a renamed record is caught."""
+    path = ROOT / "data/ap-world/africa.yaml"
+    if not path.exists():
+        pytest.skip("no AP World list for africa")
+    ap = yaml.safe_load(path.read_text(encoding="utf-8"))
+    data = json.loads((ROOT / "data/build/africa.json").read_text(encoding="utf-8"))
+    ids = {r["id"] for k in ("places", "diffusions", "exemplars", "events") for r in data[k]}
+    unknown = [i for i in list(ap["named"]) + list(ap.get("include") or []) + list(ap.get("exclude") or []) if i not in ids]
+    assert unknown == []
+    for cid in ("pl-great-zimbabwe", "pl-ethiopia-solomonic", "pl-hausa-states", "pl-mali", "pl-timbuktu"):
+        assert cid in ap["named"], f"{cid}: the CED names it"

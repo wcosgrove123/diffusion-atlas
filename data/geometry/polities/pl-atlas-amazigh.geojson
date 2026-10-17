@@ -1,0 +1,86 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-atlas-amazigh",
+    "year_from": 1200,
+    "year_to": 1450,
+    "method": "H",
+    "basis": "Drawn from the pl-atlas-amazigh geometry_note: a soft overlay for Tamazight-speaking highland and pre-Saharan communities, the High, Middle and Anti-Atlas with the Sous, drawn as one band from the Sous to the Middle Atlas. The Rif is not included in this draft (it would need a second ring). Low confidence."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -10.049,
+       29.324
+      ],
+      [
+       -9.649,
+       29.055
+      ],
+      [
+       -9.444,
+       29.078
+      ],
+      [
+       -8.384,
+       29.61
+      ],
+      [
+       -6.591,
+       30.806
+      ],
+      [
+       -4.654,
+       31.968
+      ],
+      [
+       -3.831,
+       33.077
+      ],
+      [
+       -3.81,
+       33.392
+      ],
+      [
+       -3.974,
+       33.534
+      ],
+      [
+       -4.998,
+       33.872
+      ],
+      [
+       -7.378,
+       32.612
+      ],
+      [
+       -9.23,
+       31.146
+      ],
+      [
+       -9.634,
+       30.42
+      ],
+      [
+       -9.661,
+       30.116
+      ],
+      [
+       -10.056,
+       29.593
+      ],
+      [
+       -10.049,
+       29.324
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

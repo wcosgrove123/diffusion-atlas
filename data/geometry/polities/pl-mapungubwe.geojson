@@ -1,0 +1,70 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-mapungubwe",
+    "year_from": 1220,
+    "year_to": 1290,
+    "method": "H",
+    "basis": "Drawn from the pl-mapungubwe geometry_note: the Shashe-Limpopo confluence with Mapungubwe Hill and K2. A small zone; the state's reach beyond the confluence is not drawn."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       28.337,
+       -21.993
+      ],
+      [
+       28.376,
+       -22.587
+      ],
+      [
+       28.609,
+       -22.847
+      ],
+      [
+       29.298,
+       -22.984
+      ],
+      [
+       29.997,
+       -22.69
+      ],
+      [
+       30.161,
+       -22.505
+      ],
+      [
+       30.123,
+       -21.988
+      ],
+      [
+       30.018,
+       -21.795
+      ],
+      [
+       29.31,
+       -21.537
+      ],
+      [
+       29.094,
+       -21.547
+      ],
+      [
+       28.501,
+       -21.811
+      ],
+      [
+       28.337,
+       -21.993
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

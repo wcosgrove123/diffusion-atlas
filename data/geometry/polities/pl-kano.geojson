@@ -1,0 +1,58 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-kano",
+    "year_from": 999,
+    "year_to": null,
+    "method": "H",
+    "basis": "Drawn from the pl-kano geometry_note: the walled city around Dala and Goron Dutse hills with surrounding farmland and subordinate towns, \"a city-state point with a small surrounding area\". About 60 km across."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       8.017,
+       12.069
+      ],
+      [
+       8.109,
+       11.706
+      ],
+      [
+       8.402,
+       11.514
+      ],
+      [
+       8.791,
+       11.612
+      ],
+      [
+       8.982,
+       12.0
+      ],
+      [
+       8.841,
+       12.317
+      ],
+      [
+       8.707,
+       12.4
+      ],
+      [
+       8.305,
+       12.389
+      ],
+      [
+       8.017,
+       12.069
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

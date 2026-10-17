@@ -43,6 +43,35 @@ Open questions the coding agent must not decide. Each has a recommendation; answ
     (`LIGHTHOUSE_MIN` in .github/workflows/pages.yml); the 80 bar is checked on a machine with a GPU before a release:
     `cd app && npm run build && PW_CHANNEL=msedge npx playwright test lighthouse --project=desktop`.
 
+17. **Outdated words in source titles.** The source card shows a title as published with a note when it contains a
+    word from the taxonomy's `banned_terms` ("Pagan" in three titles). "Arab City" (Kirkman's *The Arab City of
+    Gedi*) is not on that list, so it gets no note. Recommendation: add an `outdated_title_terms` list to
+    taxonomy.yaml with "Arab City" (and anything else you want flagged), and the card will use it too.
+
+18. **Phase 2 geometry drafts (2026-10-16).** 42 more shapes for the other four regions, all drafts, in
+    docs/geometry-review.md with screenshots and questions (Mamluk Egypt cut to Africa, the Ethiopia halo, Takrur and
+    Jolof overlaps, the Tuareg sphere, Swahili coastal buffers of 25 to 30 km).
+
+19. **Phase 2 built before Phase 1 shipped.** You asked to keep building, so Phase 2 is stacked on the Phase 1 branch
+    (PR 2 on top of PR 1). CLAUDE.md says to ship each phase before the next; this is the one exception, on your word.
+
+20. **The "AP World only" view (decided 2026-10-16, Wil).** Students open on the records the AP World curriculum
+    names; a switch in the time bar, "AP World only", shows everything when unticked (`?view=all` in the address
+    does the same). What counts as named: `tools/ap_match.py` looks for each record's names in the CED Units 1 and
+    2 text (docs/ap-ced-alignment.md) and in the textbook chapters in Loom's library (data/ap-world/sources.yaml
+    lists them). The follow rule: a named place brings its religion profiles, events and exemplars; an arc shows
+    when it arrives at a named place or its subject carries a place name or a religion branch word (Maliki, Sufi,
+    Coptic). The result is `data/ap-world/africa.yaml`; add ids under `include` or `exclude` there to overrule it
+    (Kano, Takrur, Jolof and Bono are out, for example, because the texts never name them). Rerun the matcher after
+    changing sources: `python tools/ap_match.py africa` (needs Loom's library on this machine).
+
+21. **Cliopatria shapes (decided 2026-10-17, Wil).** Use Seshat's Cliopatria polity borders (CC BY 4.0) wherever
+    they agree with the research notes. Nine polities switched (Mali's big shape, Takrur, Almohads, Marinids,
+    Zayyanids, Ethiopia, Ifat, Adal); six stay with the earlier choice because Cliopatria disagrees with the notes
+    (Kanem, Bornu, Sosso, Zagwe, Makuria, Alodia). docs/geometry-review.md part 3 has the comparison. Questions
+    13 (Hafsids: aourednik with Algiers to 1300, Cliopatria core after) and 14 (Mali: Jolof out 1360, Gao out 1430,
+    Timbuktu 1433) were decided the same day on Wil's "just choose as a historian".
+
 ## Data and taxonomy (your call; the researchers raised these)
 
 4. **Polity Profile, Right axis.** Two researchers needed a value for legitimacy from mastery of spiritual or occult

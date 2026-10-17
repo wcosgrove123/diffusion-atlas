@@ -1,0 +1,8111 @@
+[
+ {
+  "Name": "(Portuguese Empire)",
+  "FromYear": 1502,
+  "ToYear": 1506,
+  "Wikidata": "Q200464",
+  "Wikipedia": "Portuguese Empire",
+  "SeshatID": "pt_portuguese_emp_1",
+  "area_km2": 68520,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -17.17,
+   0.03,
+   8.9,
+   40.0
+  ]
+ },
+ {
+  "Name": "(Portuguese Empire)",
+  "FromYear": 1507,
+  "ToYear": 1511,
+  "Wikidata": "Q200464",
+  "Wikipedia": "Portuguese Empire",
+  "SeshatID": "pt_portuguese_emp_1",
+  "area_km2": 87416,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -17.17,
+   -20.29,
+   59.27,
+   40.0
+  ]
+ },
+ {
+  "Name": "(Taifas of Iberia)",
+  "FromYear": 1147,
+  "ToYear": 1151,
+  "Wikidata": "Q217177",
+  "Wikipedia": "Taifa",
+  "SeshatID": "es_taifas",
+  "area_km2": 107350,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -9.01,
+   36.42,
+   0.1,
+   40.0
+  ]
+ },
+ {
+  "Name": "(Taifas of Iberia)",
+  "FromYear": 1152,
+  "ToYear": 1168,
+  "Wikidata": "Q217177",
+  "Wikipedia": "Taifa",
+  "SeshatID": "es_taifas",
+  "area_km2": 70555,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -9.01,
+   36.42,
+   0.1,
+   40.0
+  ]
+ },
+ {
+  "Name": "(Taifas of Iberia)",
+  "FromYear": 1169,
+  "ToYear": 1176,
+  "Wikidata": "Q217177",
+  "Wikipedia": "Taifa",
+  "SeshatID": "es_taifas",
+  "area_km2": 59729,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -3.45,
+   36.93,
+   0.1,
+   40.0
+  ]
+ },
+ {
+  "Name": "(Taifas of Iberia)",
+  "FromYear": 1236,
+  "ToYear": 1240,
+  "Wikidata": "Q217177",
+  "Wikipedia": "Taifa",
+  "SeshatID": "es_taifas",
+  "area_km2": 29997,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -6.96,
+   37.32,
+   0.1,
+   39.9
+  ]
+ },
+ {
+  "Name": "(Taifas of Iberia)",
+  "FromYear": 1241,
+  "ToYear": 1249,
+  "Wikidata": "Q217177",
+  "Wikipedia": "Taifa",
+  "SeshatID": "es_taifas",
+  "area_km2": 26934,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -6.96,
+   37.32,
+   0.1,
+   39.84
+  ]
+ },
+ {
+  "Name": "Abbasid Caliphate",
+  "FromYear": 1202,
+  "ToYear": 1205,
+  "Wikidata": "Q12536",
+  "Wikipedia": "Abbasid Caliphate",
+  "SeshatID": "iq_abbasid_cal_2",
+  "area_km2": 168769,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   42.36,
+   29.28,
+   48.6,
+   35.84
+  ]
+ },
+ {
+  "Name": "Abbasid Caliphate",
+  "FromYear": 1206,
+  "ToYear": 1215,
+  "Wikidata": "Q12536",
+  "Wikipedia": "Abbasid Caliphate",
+  "SeshatID": "iq_abbasid_cal_2",
+  "area_km2": 168668,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   42.36,
+   29.28,
+   48.6,
+   35.84
+  ]
+ },
+ {
+  "Name": "Abbasid Caliphate",
+  "FromYear": 1216,
+  "ToYear": 1249,
+  "Wikidata": "Q12536",
+  "Wikipedia": "Abbasid Caliphate",
+  "SeshatID": "iq_abbasid_cal_2",
+  "area_km2": 168618,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   42.36,
+   29.28,
+   48.6,
+   35.84
+  ]
+ },
+ {
+  "Name": "Abbasid Caliphate",
+  "FromYear": 1250,
+  "ToYear": 1259,
+  "Wikidata": "Q12536",
+  "Wikipedia": "Abbasid Caliphate",
+  "SeshatID": "iq_abbasid_cal_2",
+  "area_km2": 168617,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   42.36,
+   29.28,
+   48.6,
+   35.84
+  ]
+ },
+ {
+  "Name": "Adal Sultanate",
+  "FromYear": 1415,
+  "ToYear": 1528,
+  "Wikidata": "Q2365048",
+  "Wikipedia": "Adal Sultanate",
+  "SeshatID": "so_adal_sultanate",
+  "area_km2": 150481,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   40.32,
+   8.39,
+   45.11,
+   12.95
+  ]
+ },
+ {
+  "Name": "Ahi Republic",
+  "FromYear": 1305,
+  "ToYear": 1351,
+  "Wikidata": "Q400290",
+  "Wikipedia": "Ahis",
+  "SeshatID": "",
+  "area_km2": 4331,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   31.8,
+   39.26,
+   32.71,
+   40.0
+  ]
+ },
+ {
+  "Name": "Ahi Republic",
+  "FromYear": 1352,
+  "ToYear": 1362,
+  "Wikidata": "Q400290",
+  "Wikipedia": "Ahis",
+  "SeshatID": "",
+  "area_km2": 4331,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   31.8,
+   39.26,
+   32.71,
+   40.0
+  ]
+ },
+ {
+  "Name": "Almohad Caliphate",
+  "FromYear": 1139,
+  "ToYear": 1146,
+  "Wikidata": "Q199688",
+  "Wikipedia": "Almohad Caliphate",
+  "SeshatID": "ma_almohad_emp",
+  "area_km2": 265767,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -11.62,
+   27.87,
+   -0.06,
+   35.84
+  ]
+ },
+ {
+  "Name": "Almohad Caliphate",
+  "FromYear": 1147,
+  "ToYear": 1151,
+  "Wikidata": "Q199688",
+  "Wikipedia": "Almohad Caliphate",
+  "SeshatID": "ma_almohad_emp",
+  "area_km2": 506248,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -11.62,
+   27.87,
+   -0.06,
+   39.84
+  ]
+ },
+ {
+  "Name": "Almohad Caliphate",
+  "FromYear": 1152,
+  "ToYear": 1168,
+  "Wikidata": "Q199688",
+  "Wikipedia": "Almohad Caliphate",
+  "SeshatID": "ma_almohad_emp",
+  "area_km2": 666628,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -11.62,
+   27.93,
+   8.59,
+   39.84
+  ]
+ },
+ {
+  "Name": "Almohad Caliphate",
+  "FromYear": 1169,
+  "ToYear": 1176,
+  "Wikidata": "Q199688",
+  "Wikipedia": "Almohad Caliphate",
+  "SeshatID": "ma_almohad_emp",
+  "area_km2": 868221,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -11.62,
+   27.93,
+   18.9,
+   39.84
+  ]
+ },
+ {
+  "Name": "Almohad Caliphate",
+  "FromYear": 1177,
+  "ToYear": 1187,
+  "Wikidata": "Q199688",
+  "Wikipedia": "Almohad Caliphate",
+  "SeshatID": "ma_almohad_emp",
+  "area_km2": 929999,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -11.62,
+   27.93,
+   18.9,
+   40.0
+  ]
+ },
+ {
+  "Name": "Almohad Caliphate",
+  "FromYear": 1188,
+  "ToYear": 1201,
+  "Wikidata": "Q199688",
+  "Wikipedia": "Almohad Caliphate",
+  "SeshatID": "ma_almohad_emp",
+  "area_km2": 919771,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -11.62,
+   27.93,
+   18.9,
+   40.0
+  ]
+ },
+ {
+  "Name": "Almohad Caliphate",
+  "FromYear": 1202,
+  "ToYear": 1205,
+  "Wikidata": "Q199688",
+  "Wikipedia": "Almohad Caliphate",
+  "SeshatID": "ma_almohad_emp",
+  "area_km2": 938270,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -11.62,
+   27.93,
+   18.9,
+   40.0
+  ]
+ },
+ {
+  "Name": "Almohad Caliphate",
+  "FromYear": 1206,
+  "ToYear": 1215,
+  "Wikidata": "Q199688",
+  "Wikipedia": "Almohad Caliphate",
+  "SeshatID": "ma_almohad_emp",
+  "area_km2": 944666,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -11.62,
+   27.93,
+   18.9,
+   40.0
+  ]
+ },
+ {
+  "Name": "Almohad Caliphate",
+  "FromYear": 1216,
+  "ToYear": 1219,
+  "Wikidata": "Q199688",
+  "Wikipedia": "Almohad Caliphate",
+  "SeshatID": "ma_almohad_emp",
+  "area_km2": 885443,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -11.62,
+   27.93,
+   18.9,
+   40.0
+  ]
+ },
+ {
+  "Name": "Almohad Caliphate",
+  "FromYear": 1220,
+  "ToYear": 1226,
+  "Wikidata": "Q199688",
+  "Wikipedia": "Almohad Caliphate",
+  "SeshatID": "ma_almohad_emp",
+  "area_km2": 883479,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -11.62,
+   27.93,
+   18.9,
+   40.0
+  ]
+ },
+ {
+  "Name": "Almohad Caliphate",
+  "FromYear": 1227,
+  "ToYear": 1235,
+  "Wikidata": "Q199688",
+  "Wikipedia": "Almohad Caliphate",
+  "SeshatID": "ma_almohad_emp",
+  "area_km2": 862787,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -11.62,
+   27.93,
+   18.9,
+   40.0
+  ]
+ },
+ {
+  "Name": "Almohad Caliphate",
+  "FromYear": 1236,
+  "ToYear": 1240,
+  "Wikidata": "Q199688",
+  "Wikipedia": "Almohad Caliphate",
+  "SeshatID": "ma_almohad_emp",
+  "area_km2": 467035,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -11.62,
+   27.93,
+   4.64,
+   38.87
+  ]
+ },
+ {
+  "Name": "Almohad Caliphate",
+  "FromYear": 1241,
+  "ToYear": 1249,
+  "Wikidata": "Q199688",
+  "Wikipedia": "Almohad Caliphate",
+  "SeshatID": "ma_almohad_emp",
+  "area_km2": 405819,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -11.62,
+   27.93,
+   4.64,
+   37.71
+  ]
+ },
+ {
+  "Name": "Almohad Caliphate",
+  "FromYear": 1250,
+  "ToYear": 1259,
+  "Wikidata": "Q199688",
+  "Wikipedia": "Almohad Caliphate",
+  "SeshatID": "",
+  "area_km2": 1201,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -0.67,
+   38.42,
+   -0.22,
+   38.8
+  ]
+ },
+ {
+  "Name": "Almohad Caliphate",
+  "FromYear": 1260,
+  "ToYear": 1284,
+  "Wikidata": "Q199688",
+  "Wikipedia": "Almohad Caliphate",
+  "SeshatID": "",
+  "area_km2": 389775,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -11.62,
+   27.93,
+   4.64,
+   36.42
+  ]
+ },
+ {
+  "Name": "Almohad Caliphate",
+  "FromYear": 1285,
+  "ToYear": 1332,
+  "Wikidata": "Q199688",
+  "Wikipedia": "Almohad Caliphate",
+  "SeshatID": "",
+  "area_km2": 389699,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -11.62,
+   27.93,
+   4.64,
+   36.42
+  ]
+ },
+ {
+  "Name": "Almohad Caliphate",
+  "FromYear": 1333,
+  "ToYear": 1343,
+  "Wikidata": "Q199688",
+  "Wikipedia": "Almohad Caliphate",
+  "SeshatID": "",
+  "area_km2": 389699,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -11.62,
+   27.93,
+   4.64,
+   36.42
+  ]
+ },
+ {
+  "Name": "Almoravid Dynasty",
+  "FromYear": 1139,
+  "ToYear": 1151,
+  "Wikidata": "Q75613",
+  "Wikipedia": "Almoravid dynasty",
+  "SeshatID": "ma_almoravid_dyn",
+  "area_km2": 398948,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -9.88,
+   30.37,
+   4.3,
+   40.0
+  ]
+ },
+ {
+  "Name": "Almoravid Dynasty",
+  "FromYear": 1152,
+  "ToYear": 1201,
+  "Wikidata": "Q75613",
+  "Wikipedia": "Almoravid dynasty",
+  "SeshatID": "",
+  "area_km2": 6506,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   1.18,
+   38.8,
+   4.3,
+   40.0
+  ]
+ },
+ {
+  "Name": "Almoravid Dynasty",
+  "FromYear": 1202,
+  "ToYear": 1205,
+  "Wikidata": "Q75613",
+  "Wikipedia": "Almoravid dynasty",
+  "SeshatID": "",
+  "area_km2": 6506,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   1.18,
+   38.8,
+   4.3,
+   40.0
+  ]
+ },
+ {
+  "Name": "Alodia",
+  "FromYear": 602,
+  "ToYear": 1501,
+  "Wikidata": "Q449639",
+  "Wikipedia": "Alodia",
+  "SeshatID": "sd_alodia",
+  "area_km2": 124392,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   31.1,
+   15.2,
+   36.05,
+   18.29
+  ]
+ },
+ {
+  "Name": "Alodia",
+  "FromYear": 1502,
+  "ToYear": 1506,
+  "Wikidata": "Q449639",
+  "Wikipedia": "Alodia",
+  "SeshatID": "sd_alodia",
+  "area_km2": 124392,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   31.1,
+   15.2,
+   36.05,
+   18.29
+  ]
+ },
+ {
+  "Name": "Aq Qoyunlu",
+  "FromYear": 1407,
+  "ToYear": 1414,
+  "Wikidata": "Q555994",
+  "Wikipedia": "Aq Qoyunlu",
+  "SeshatID": "ir_ak_koyunlu",
+  "area_km2": 56932,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   37.96,
+   36.67,
+   41.79,
+   39.32
+  ]
+ },
+ {
+  "Name": "Aq Qoyunlu",
+  "FromYear": 1415,
+  "ToYear": 1439,
+  "Wikidata": "Q555994",
+  "Wikipedia": "Aq Qoyunlu",
+  "SeshatID": "ir_ak_koyunlu",
+  "area_km2": 77568,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   37.96,
+   35.13,
+   41.46,
+   39.19
+  ]
+ },
+ {
+  "Name": "Aq Qoyunlu",
+  "FromYear": 1440,
+  "ToYear": 1452,
+  "Wikidata": "Q555994",
+  "Wikipedia": "Aq Qoyunlu",
+  "SeshatID": "ir_ak_koyunlu",
+  "area_km2": 230529,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   32.71,
+   29.28,
+   50.07,
+   40.0
+  ]
+ },
+ {
+  "Name": "Aq Qoyunlu",
+  "FromYear": 1453,
+  "ToYear": 1458,
+  "Wikidata": "Q555994",
+  "Wikipedia": "Aq Qoyunlu",
+  "SeshatID": "ir_ak_koyunlu",
+  "area_km2": 230478,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   32.71,
+   29.28,
+   50.07,
+   40.0
+  ]
+ },
+ {
+  "Name": "Aq Qoyunlu",
+  "FromYear": 1459,
+  "ToYear": 1462,
+  "Wikidata": "Q555994",
+  "Wikipedia": "Aq Qoyunlu",
+  "SeshatID": "ir_ak_koyunlu",
+  "area_km2": 230447,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   32.76,
+   29.28,
+   50.07,
+   40.0
+  ]
+ },
+ {
+  "Name": "Aq Qoyunlu",
+  "FromYear": 1463,
+  "ToYear": 1467,
+  "Wikidata": "Q555994",
+  "Wikipedia": "Aq Qoyunlu",
+  "SeshatID": "ir_ak_koyunlu",
+  "area_km2": 181808,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   37.96,
+   29.28,
+   47.56,
+   39.19
+  ]
+ },
+ {
+  "Name": "Aq Qoyunlu",
+  "FromYear": 1468,
+  "ToYear": 1474,
+  "Wikidata": "Q555994",
+  "Wikipedia": "Aq Qoyunlu",
+  "SeshatID": "ir_ak_koyunlu",
+  "area_km2": 677975,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   37.96,
+   29.28,
+   49.62,
+   40.0
+  ]
+ },
+ {
+  "Name": "Aq Qoyunlu",
+  "FromYear": 1475,
+  "ToYear": 1501,
+  "Wikidata": "Q555994",
+  "Wikipedia": "Aq Qoyunlu",
+  "SeshatID": "ir_ak_koyunlu",
+  "area_km2": 1663104,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   37.96,
+   25.36,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Aq Qoyunlu",
+  "FromYear": 1502,
+  "ToYear": 1506,
+  "Wikidata": "Q555994",
+  "Wikipedia": "Aq Qoyunlu",
+  "SeshatID": "",
+  "area_km2": 1520138,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   37.96,
+   25.36,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Aq Qoyunlu",
+  "FromYear": 1507,
+  "ToYear": 1511,
+  "Wikidata": "Q555994",
+  "Wikipedia": "Aq Qoyunlu",
+  "SeshatID": "",
+  "area_km2": 346239,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   37.96,
+   32.56,
+   46.2,
+   40.0
+  ]
+ },
+ {
+  "Name": "Armenian Kingdom of Cilicia",
+  "FromYear": 1139,
+  "ToYear": 1146,
+  "Wikidata": "Q335088",
+  "Wikipedia": "Armenian Kingdom of Cilicia",
+  "SeshatID": "",
+  "area_km2": 21772,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   34.47,
+   37.25,
+   37.05,
+   38.87
+  ]
+ },
+ {
+  "Name": "Armenian Kingdom of Cilicia",
+  "FromYear": 1147,
+  "ToYear": 1151,
+  "Wikidata": "Q335088",
+  "Wikipedia": "Armenian Kingdom of Cilicia",
+  "SeshatID": "",
+  "area_km2": 41949,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   33.61,
+   36.22,
+   37.05,
+   38.87
+  ]
+ },
+ {
+  "Name": "Armenian Kingdom of Cilicia",
+  "FromYear": 1152,
+  "ToYear": 1187,
+  "Wikidata": "Q335088",
+  "Wikipedia": "Armenian Kingdom of Cilicia",
+  "SeshatID": "",
+  "area_km2": 34411,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   33.61,
+   36.22,
+   37.22,
+   38.35
+  ]
+ },
+ {
+  "Name": "Armenian Kingdom of Cilicia",
+  "FromYear": 1188,
+  "ToYear": 1191,
+  "Wikidata": "Q335088",
+  "Wikipedia": "Armenian Kingdom of Cilicia",
+  "SeshatID": "",
+  "area_km2": 34538,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   33.61,
+   36.22,
+   37.22,
+   38.35
+  ]
+ },
+ {
+  "Name": "Armenian Kingdom of Cilicia",
+  "FromYear": 1192,
+  "ToYear": 1201,
+  "Wikidata": "Q335088",
+  "Wikipedia": "Armenian Kingdom of Cilicia",
+  "SeshatID": "",
+  "area_km2": 59948,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   30.6,
+   36.03,
+   37.85,
+   38.35
+  ]
+ },
+ {
+  "Name": "Armenian Kingdom of Cilicia",
+  "FromYear": 1202,
+  "ToYear": 1249,
+  "Wikidata": "Q335088",
+  "Wikipedia": "Armenian Kingdom of Cilicia",
+  "SeshatID": "",
+  "area_km2": 59849,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   30.72,
+   36.03,
+   37.85,
+   38.35
+  ]
+ },
+ {
+  "Name": "Armenian Kingdom of Cilicia",
+  "FromYear": 1250,
+  "ToYear": 1259,
+  "Wikidata": "Q335088",
+  "Wikipedia": "Armenian Kingdom of Cilicia",
+  "SeshatID": "",
+  "area_km2": 59697,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   30.72,
+   36.03,
+   37.85,
+   38.35
+  ]
+ },
+ {
+  "Name": "Armenian Kingdom of Cilicia",
+  "FromYear": 1260,
+  "ToYear": 1271,
+  "Wikidata": "Q335088",
+  "Wikipedia": "Armenian Kingdom of Cilicia",
+  "SeshatID": "",
+  "area_km2": 43569,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   32.56,
+   36.03,
+   38.18,
+   37.9
+  ]
+ },
+ {
+  "Name": "Armenian Kingdom of Cilicia",
+  "FromYear": 1272,
+  "ToYear": 1293,
+  "Wikidata": "Q335088",
+  "Wikipedia": "Armenian Kingdom of Cilicia",
+  "SeshatID": "",
+  "area_km2": 43766,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   32.56,
+   36.03,
+   38.18,
+   37.9
+  ]
+ },
+ {
+  "Name": "Armenian Kingdom of Cilicia",
+  "FromYear": 1294,
+  "ToYear": 1304,
+  "Wikidata": "Q335088",
+  "Wikipedia": "Armenian Kingdom of Cilicia",
+  "SeshatID": "",
+  "area_km2": 43692,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   32.56,
+   36.03,
+   38.18,
+   37.9
+  ]
+ },
+ {
+  "Name": "Armenian Kingdom of Cilicia",
+  "FromYear": 1305,
+  "ToYear": 1325,
+  "Wikidata": "Q335088",
+  "Wikipedia": "Armenian Kingdom of Cilicia",
+  "SeshatID": "",
+  "area_km2": 36715,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   33.61,
+   36.22,
+   38.18,
+   37.9
+  ]
+ },
+ {
+  "Name": "Armenian Kingdom of Cilicia",
+  "FromYear": 1326,
+  "ToYear": 1343,
+  "Wikidata": "Q335088",
+  "Wikipedia": "Armenian Kingdom of Cilicia",
+  "SeshatID": "",
+  "area_km2": 36591,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   33.61,
+   36.22,
+   38.18,
+   37.9
+  ]
+ },
+ {
+  "Name": "Armenian Kingdom of Cilicia",
+  "FromYear": 1344,
+  "ToYear": 1362,
+  "Wikidata": "Q335088",
+  "Wikipedia": "Armenian Kingdom of Cilicia",
+  "SeshatID": "",
+  "area_km2": 36616,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   33.61,
+   36.22,
+   38.18,
+   37.9
+  ]
+ },
+ {
+  "Name": "Armenian Kingdom of Cilicia",
+  "FromYear": 1363,
+  "ToYear": 1374,
+  "Wikidata": "Q335088",
+  "Wikipedia": "Armenian Kingdom of Cilicia",
+  "SeshatID": "",
+  "area_km2": 29434,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   34.69,
+   36.61,
+   38.18,
+   37.9
+  ]
+ },
+ {
+  "Name": "Ayyubid Sultanate",
+  "FromYear": 1177,
+  "ToYear": 1187,
+  "Wikidata": "Q180114",
+  "Wikipedia": "Ayyubid dynasty",
+  "SeshatID": "eg_ayyubid_sultanate",
+  "area_km2": 1723551,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   18.81,
+   12.63,
+   49.48,
+   36.35
+  ]
+ },
+ {
+  "Name": "Ayyubid Sultanate",
+  "FromYear": 1188,
+  "ToYear": 1191,
+  "Wikidata": "Q180114",
+  "Wikipedia": "Ayyubid dynasty",
+  "SeshatID": "eg_ayyubid_sultanate",
+  "area_km2": 1837776,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   18.81,
+   12.63,
+   49.48,
+   38.42
+  ]
+ },
+ {
+  "Name": "Ayyubid Sultanate",
+  "FromYear": 1192,
+  "ToYear": 1201,
+  "Wikidata": "Q180114",
+  "Wikipedia": "Ayyubid dynasty",
+  "SeshatID": "eg_ayyubid_sultanate",
+  "area_km2": 2042544,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   18.81,
+   12.63,
+   49.48,
+   39.51
+  ]
+ },
+ {
+  "Name": "Ayyubid Sultanate",
+  "FromYear": 1202,
+  "ToYear": 1219,
+  "Wikidata": "Q180114",
+  "Wikipedia": "Ayyubid dynasty",
+  "SeshatID": "eg_ayyubid_sultanate",
+  "area_km2": 1825723,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   18.81,
+   12.63,
+   49.48,
+   38.42
+  ]
+ },
+ {
+  "Name": "Ayyubid Sultanate",
+  "FromYear": 1220,
+  "ToYear": 1226,
+  "Wikidata": "Q180114",
+  "Wikipedia": "Ayyubid dynasty",
+  "SeshatID": "eg_ayyubid_sultanate",
+  "area_km2": 1825697,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   18.81,
+   12.63,
+   49.48,
+   38.42
+  ]
+ },
+ {
+  "Name": "Ayyubid Sultanate",
+  "FromYear": 1227,
+  "ToYear": 1235,
+  "Wikidata": "Q180114",
+  "Wikipedia": "Ayyubid dynasty",
+  "SeshatID": "eg_ayyubid_sultanate",
+  "area_km2": 1825723,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   18.81,
+   12.63,
+   49.48,
+   38.42
+  ]
+ },
+ {
+  "Name": "Ayyubid Sultanate",
+  "FromYear": 1236,
+  "ToYear": 1240,
+  "Wikidata": "Q180114",
+  "Wikipedia": "Ayyubid dynasty",
+  "SeshatID": "eg_ayyubid_sultanate",
+  "area_km2": 1523254,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   18.81,
+   17.51,
+   44.53,
+   38.42
+  ]
+ },
+ {
+  "Name": "Ayyubid Sultanate",
+  "FromYear": 1241,
+  "ToYear": 1249,
+  "Wikidata": "Q180114",
+  "Wikipedia": "Ayyubid dynasty",
+  "SeshatID": "eg_ayyubid_sultanate",
+  "area_km2": 1234952,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   18.81,
+   17.51,
+   44.53,
+   32.94
+  ]
+ },
+ {
+  "Name": "Bahrani Dynasty",
+  "FromYear": 1260,
+  "ToYear": 1439,
+  "Wikidata": "Q311341",
+  "Wikipedia": "Al-Ahsa Oasis",
+  "SeshatID": "",
+  "area_km2": 74044,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   47.45,
+   23.69,
+   56.05,
+   29.99
+  ]
+ },
+ {
+  "Name": "Bahrani Dynasty",
+  "FromYear": 1440,
+  "ToYear": 1467,
+  "Wikidata": "Q311341",
+  "Wikipedia": "Al-Ahsa Oasis",
+  "SeshatID": "",
+  "area_km2": 70906,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   47.45,
+   23.69,
+   56.05,
+   29.54
+  ]
+ },
+ {
+  "Name": "Bahrani Dynasty",
+  "FromYear": 1468,
+  "ToYear": 1474,
+  "Wikidata": "Q311341",
+  "Wikipedia": "Al-Ahsa Oasis",
+  "SeshatID": "",
+  "area_km2": 71241,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   47.45,
+   23.69,
+   56.05,
+   29.54
+  ]
+ },
+ {
+  "Name": "Bahrani Dynasty",
+  "FromYear": 1475,
+  "ToYear": 1518,
+  "Wikidata": "Q311341",
+  "Wikipedia": "Al-Ahsa Oasis",
+  "SeshatID": "",
+  "area_km2": 69976,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   47.45,
+   23.69,
+   56.05,
+   29.41
+  ]
+ },
+ {
+  "Name": "Beylik of Aydin",
+  "FromYear": 1305,
+  "ToYear": 1325,
+  "Wikidata": "Q717112",
+  "Wikipedia": "Aydinids",
+  "SeshatID": "",
+  "area_km2": 8020,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   27.16,
+   37.32,
+   28.71,
+   38.09
+  ]
+ },
+ {
+  "Name": "Beylik of Aydin",
+  "FromYear": 1326,
+  "ToYear": 1414,
+  "Wikidata": "Q717112",
+  "Wikipedia": "Aydinids",
+  "SeshatID": "",
+  "area_km2": 7995,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   27.16,
+   37.32,
+   28.71,
+   38.09
+  ]
+ },
+ {
+  "Name": "Beylik of Aydin",
+  "FromYear": 1415,
+  "ToYear": 1421,
+  "Wikidata": "Q717112",
+  "Wikipedia": "Aydinids",
+  "SeshatID": "",
+  "area_km2": 7773,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   27.17,
+   37.32,
+   28.71,
+   38.09
+  ]
+ },
+ {
+  "Name": "Beylik of Aydin",
+  "FromYear": 1422,
+  "ToYear": 1428,
+  "Wikidata": "Q717112",
+  "Wikipedia": "Aydinids",
+  "SeshatID": "",
+  "area_km2": 7773,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   27.17,
+   37.32,
+   28.71,
+   38.09
+  ]
+ },
+ {
+  "Name": "Beylik of Dulkadir",
+  "FromYear": 1344,
+  "ToYear": 1374,
+  "Wikidata": "Q1264808",
+  "Wikipedia": "Beylik of Dulkadir",
+  "SeshatID": "",
+  "area_km2": 30337,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   35.62,
+   37.51,
+   39.5,
+   38.74
+  ]
+ },
+ {
+  "Name": "Beylik of Dulkadir",
+  "FromYear": 1375,
+  "ToYear": 1384,
+  "Wikidata": "Q1264808",
+  "Wikipedia": "Beylik of Dulkadir",
+  "SeshatID": "",
+  "area_km2": 30288,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   35.62,
+   37.51,
+   39.51,
+   38.74
+  ]
+ },
+ {
+  "Name": "Beylik of Dulkadir",
+  "FromYear": 1385,
+  "ToYear": 1401,
+  "Wikidata": "Q1264808",
+  "Wikipedia": "Beylik of Dulkadir",
+  "SeshatID": "",
+  "area_km2": 30288,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   35.62,
+   37.51,
+   39.51,
+   38.74
+  ]
+ },
+ {
+  "Name": "Beylik of Dulkadir",
+  "FromYear": 1402,
+  "ToYear": 1406,
+  "Wikidata": "Q1264808",
+  "Wikipedia": "Beylik of Dulkadir",
+  "SeshatID": "",
+  "area_km2": 30780,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   35.62,
+   37.51,
+   39.5,
+   38.74
+  ]
+ },
+ {
+  "Name": "Beylik of Dulkadir",
+  "FromYear": 1407,
+  "ToYear": 1439,
+  "Wikidata": "Q1264808",
+  "Wikipedia": "Beylik of Dulkadir",
+  "SeshatID": "",
+  "area_km2": 30388,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   35.62,
+   37.51,
+   39.5,
+   38.74
+  ]
+ },
+ {
+  "Name": "Beylik of Dulkadir",
+  "FromYear": 1440,
+  "ToYear": 1462,
+  "Wikidata": "Q1264808",
+  "Wikipedia": "Beylik of Dulkadir",
+  "SeshatID": "",
+  "area_km2": 30337,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   35.62,
+   37.51,
+   39.5,
+   38.74
+  ]
+ },
+ {
+  "Name": "Beylik of Dulkadir",
+  "FromYear": 1463,
+  "ToYear": 1511,
+  "Wikidata": "Q1264808",
+  "Wikipedia": "Beylik of Dulkadir",
+  "SeshatID": "",
+  "area_km2": 30388,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   35.62,
+   37.51,
+   39.5,
+   38.74
+  ]
+ },
+ {
+  "Name": "Beylik of Hamid",
+  "FromYear": 1305,
+  "ToYear": 1325,
+  "Wikidata": "Q2410637",
+  "Wikipedia": "Hamidids",
+  "SeshatID": "",
+  "area_km2": 57724,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   28.38,
+   36.22,
+   31.96,
+   38.93
+  ]
+ },
+ {
+  "Name": "Beylik of Hamid",
+  "FromYear": 1326,
+  "ToYear": 1332,
+  "Wikidata": "Q2410637",
+  "Wikipedia": "Hamidids",
+  "SeshatID": "",
+  "area_km2": 31055,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   28.38,
+   37.45,
+   31.85,
+   38.93
+  ]
+ },
+ {
+  "Name": "Beylik of Hamid",
+  "FromYear": 1333,
+  "ToYear": 1343,
+  "Wikidata": "Q2410637",
+  "Wikipedia": "Hamidids",
+  "SeshatID": "",
+  "area_km2": 19856,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   28.38,
+   37.45,
+   31.04,
+   38.93
+  ]
+ },
+ {
+  "Name": "Beylik of Karaman",
+  "FromYear": 1305,
+  "ToYear": 1313,
+  "Wikidata": "Q1469100",
+  "Wikipedia": "Karamanids",
+  "SeshatID": "tr_karaman_bey",
+  "area_km2": 27895,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   31.76,
+   36.03,
+   33.78,
+   37.96
+  ]
+ },
+ {
+  "Name": "Beylik of Karaman",
+  "FromYear": 1314,
+  "ToYear": 1325,
+  "Wikidata": "Q1469100",
+  "Wikipedia": "Karamanids",
+  "SeshatID": "tr_karaman_bey",
+  "area_km2": 81864,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   31.76,
+   36.03,
+   35.39,
+   39.9
+  ]
+ },
+ {
+  "Name": "Beylik of Karaman",
+  "FromYear": 1326,
+  "ToYear": 1332,
+  "Wikidata": "Q1469100",
+  "Wikipedia": "Karamanids",
+  "SeshatID": "tr_karaman_bey",
+  "area_km2": 91290,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   31.0,
+   36.03,
+   35.39,
+   39.9
+  ]
+ },
+ {
+  "Name": "Beylik of Karaman",
+  "FromYear": 1333,
+  "ToYear": 1343,
+  "Wikidata": "Q1469100",
+  "Wikipedia": "Karamanids",
+  "SeshatID": "tr_karaman_bey",
+  "area_km2": 99551,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   30.93,
+   36.03,
+   35.39,
+   39.9
+  ]
+ },
+ {
+  "Name": "Beylik of Karaman",
+  "FromYear": 1344,
+  "ToYear": 1351,
+  "Wikidata": "Q1469100",
+  "Wikipedia": "Karamanids",
+  "SeshatID": "tr_karaman_bey",
+  "area_km2": 99843,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   30.93,
+   36.03,
+   35.39,
+   39.9
+  ]
+ },
+ {
+  "Name": "Beylik of Karaman",
+  "FromYear": 1352,
+  "ToYear": 1362,
+  "Wikidata": "Q1469100",
+  "Wikipedia": "Karamanids",
+  "SeshatID": "tr_karaman_bey",
+  "area_km2": 91582,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   31.0,
+   36.03,
+   35.39,
+   39.9
+  ]
+ },
+ {
+  "Name": "Beylik of Karaman",
+  "FromYear": 1363,
+  "ToYear": 1384,
+  "Wikidata": "Q1469100",
+  "Wikipedia": "Karamanids",
+  "SeshatID": "tr_karaman_bey",
+  "area_km2": 100429,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   30.93,
+   36.03,
+   35.39,
+   39.9
+  ]
+ },
+ {
+  "Name": "Beylik of Karaman",
+  "FromYear": 1385,
+  "ToYear": 1401,
+  "Wikidata": "Q1469100",
+  "Wikipedia": "Karamanids",
+  "SeshatID": "tr_karaman_bey",
+  "area_km2": 100306,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   30.93,
+   36.03,
+   35.39,
+   39.9
+  ]
+ },
+ {
+  "Name": "Beylik of Karaman",
+  "FromYear": 1402,
+  "ToYear": 1406,
+  "Wikidata": "Q1469100",
+  "Wikipedia": "Karamanids",
+  "SeshatID": "tr_karaman_bey",
+  "area_km2": 99966,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   30.93,
+   36.03,
+   35.39,
+   39.84
+  ]
+ },
+ {
+  "Name": "Beylik of Karaman",
+  "FromYear": 1407,
+  "ToYear": 1428,
+  "Wikidata": "Q1469100",
+  "Wikipedia": "Karamanids",
+  "SeshatID": "tr_karaman_bey",
+  "area_km2": 100306,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   30.93,
+   36.03,
+   35.39,
+   39.9
+  ]
+ },
+ {
+  "Name": "Beylik of Karaman",
+  "FromYear": 1429,
+  "ToYear": 1462,
+  "Wikidata": "Q1469100",
+  "Wikipedia": "Karamanids",
+  "SeshatID": "tr_karaman_bey",
+  "area_km2": 100453,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   30.93,
+   36.03,
+   35.39,
+   39.9
+  ]
+ },
+ {
+  "Name": "Beylik of Karaman",
+  "FromYear": 1463,
+  "ToYear": 1467,
+  "Wikidata": "Q1469100",
+  "Wikipedia": "Karamanids",
+  "SeshatID": "tr_karaman_bey",
+  "area_km2": 100509,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   30.93,
+   36.03,
+   35.39,
+   39.9
+  ]
+ },
+ {
+  "Name": "Beylik of Karasi",
+  "FromYear": 1305,
+  "ToYear": 1313,
+  "Wikidata": "Q941887",
+  "Wikipedia": "Karasids",
+  "SeshatID": "",
+  "area_km2": 17734,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   26.13,
+   38.87,
+   28.99,
+   39.9
+  ]
+ },
+ {
+  "Name": "Beylik of Karasi",
+  "FromYear": 1314,
+  "ToYear": 1325,
+  "Wikidata": "Q941887",
+  "Wikipedia": "Karasids",
+  "SeshatID": "",
+  "area_km2": 17759,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   26.13,
+   38.87,
+   28.99,
+   39.9
+  ]
+ },
+ {
+  "Name": "Beylik of Karasi",
+  "FromYear": 1326,
+  "ToYear": 1332,
+  "Wikidata": "Q941887",
+  "Wikipedia": "Karasids",
+  "SeshatID": "",
+  "area_km2": 21981,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   26.13,
+   38.87,
+   28.98,
+   40.0
+  ]
+ },
+ {
+  "Name": "Beylik of Karasi",
+  "FromYear": 1333,
+  "ToYear": 1343,
+  "Wikidata": "Q941887",
+  "Wikipedia": "Karasids",
+  "SeshatID": "",
+  "area_km2": 21981,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   26.13,
+   38.87,
+   28.98,
+   40.0
+  ]
+ },
+ {
+  "Name": "Beylik of Menteshe",
+  "FromYear": 1305,
+  "ToYear": 1406,
+  "Wikidata": "Q1400572",
+  "Wikipedia": "Menteshe",
+  "SeshatID": "",
+  "area_km2": 5897,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   27.53,
+   36.67,
+   28.63,
+   37.71
+  ]
+ },
+ {
+  "Name": "Beylik of Menteshe",
+  "FromYear": 1407,
+  "ToYear": 1414,
+  "Wikidata": "Q1400572",
+  "Wikipedia": "Menteshe",
+  "SeshatID": "",
+  "area_km2": 5897,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   27.53,
+   36.67,
+   28.63,
+   37.71
+  ]
+ },
+ {
+  "Name": "Beylik of Saruhan",
+  "FromYear": 1314,
+  "ToYear": 1325,
+  "Wikidata": "Q1968654",
+  "Wikipedia": "Sarukhanids",
+  "SeshatID": "",
+  "area_km2": 14428,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   26.38,
+   38.03,
+   28.64,
+   39.0
+  ]
+ },
+ {
+  "Name": "Beylik of Saruhan",
+  "FromYear": 1326,
+  "ToYear": 1343,
+  "Wikidata": "Q1968654",
+  "Wikipedia": "Sarukhanids",
+  "SeshatID": "",
+  "area_km2": 14452,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   26.38,
+   38.03,
+   28.64,
+   39.0
+  ]
+ },
+ {
+  "Name": "Beylik of Saruhan",
+  "FromYear": 1344,
+  "ToYear": 1406,
+  "Wikidata": "Q1968654",
+  "Wikipedia": "Sarukhanids",
+  "SeshatID": "",
+  "area_km2": 14600,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   26.38,
+   38.03,
+   28.64,
+   39.0
+  ]
+ },
+ {
+  "Name": "Beylik of Saruhan",
+  "FromYear": 1407,
+  "ToYear": 1414,
+  "Wikidata": "Q1968654",
+  "Wikipedia": "Sarukhanids",
+  "SeshatID": "",
+  "area_km2": 14600,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   26.38,
+   38.03,
+   28.64,
+   39.0
+  ]
+ },
+ {
+  "Name": "Beylik of Teke",
+  "FromYear": 1326,
+  "ToYear": 1332,
+  "Wikidata": "Q373988",
+  "Wikipedia": "Beylik of Teke",
+  "SeshatID": "",
+  "area_km2": 30754,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   28.43,
+   36.22,
+   31.96,
+   37.71
+  ]
+ },
+ {
+  "Name": "Beylik of Teke",
+  "FromYear": 1333,
+  "ToYear": 1351,
+  "Wikidata": "Q373988",
+  "Wikipedia": "Beylik of Teke",
+  "SeshatID": "",
+  "area_km2": 30729,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   28.43,
+   36.22,
+   31.96,
+   37.71
+  ]
+ },
+ {
+  "Name": "Beylik of Teke",
+  "FromYear": 1352,
+  "ToYear": 1362,
+  "Wikidata": "Q373988",
+  "Wikipedia": "Beylik of Teke",
+  "SeshatID": "",
+  "area_km2": 30828,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   28.43,
+   36.22,
+   31.96,
+   37.71
+  ]
+ },
+ {
+  "Name": "Beylik of Teke",
+  "FromYear": 1363,
+  "ToYear": 1374,
+  "Wikidata": "Q373988",
+  "Wikipedia": "Beylik of Teke",
+  "SeshatID": "",
+  "area_km2": 29661,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   28.43,
+   36.22,
+   31.96,
+   37.71
+  ]
+ },
+ {
+  "Name": "Beylik of Teke",
+  "FromYear": 1375,
+  "ToYear": 1421,
+  "Wikidata": "Q373988",
+  "Wikipedia": "Beylik of Teke",
+  "SeshatID": "",
+  "area_km2": 30729,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   28.43,
+   36.22,
+   31.96,
+   37.71
+  ]
+ },
+ {
+  "Name": "Beylik of Teke",
+  "FromYear": 1422,
+  "ToYear": 1428,
+  "Wikidata": "Q373988",
+  "Wikipedia": "Beylik of Teke",
+  "SeshatID": "",
+  "area_km2": 30729,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   28.43,
+   36.22,
+   31.96,
+   37.71
+  ]
+ },
+ {
+  "Name": "Bornu Empire",
+  "FromYear": 1385,
+  "ToYear": 1481,
+  "Wikidata": "Q1139762",
+  "Wikipedia": "Kanem-Bornu Empire",
+  "SeshatID": "ni_bornu_emp",
+  "area_km2": 13648,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   11.78,
+   12.76,
+   13.47,
+   13.85
+  ]
+ },
+ {
+  "Name": "Bornu Empire",
+  "FromYear": 1482,
+  "ToYear": 1486,
+  "Wikidata": "Q1139762",
+  "Wikipedia": "Kanem-Bornu Empire",
+  "SeshatID": "ni_bornu_emp",
+  "area_km2": 66911,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   11.78,
+   11.21,
+   16.67,
+   13.79
+  ]
+ },
+ {
+  "Name": "Bornu Empire",
+  "FromYear": 1487,
+  "ToYear": 1578,
+  "Wikidata": "Q1139762",
+  "Wikipedia": "Kanem-Bornu Empire",
+  "SeshatID": "ni_bornu_emp",
+  "area_km2": 202189,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   10.68,
+   11.21,
+   16.75,
+   15.59
+  ]
+ },
+ {
+  "Name": "Byzantine Empire",
+  "FromYear": 1188,
+  "ToYear": 1191,
+  "Wikidata": "Q112039853",
+  "Wikipedia": "Byzantine Empire",
+  "SeshatID": "tr_byzantine_emp_3",
+  "area_km2": 221625,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   19.76,
+   34.55,
+   34.54,
+   40.0
+  ]
+ },
+ {
+  "Name": "Byzantine Empire",
+  "FromYear": 1206,
+  "ToYear": 1226,
+  "Wikidata": "Q112039853",
+  "Wikipedia": "Byzantine Empire",
+  "SeshatID": "",
+  "area_km2": 4235,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   19.76,
+   37.0,
+   25.57,
+   39.77
+  ]
+ },
+ {
+  "Name": "Byzantine Empire",
+  "FromYear": 1375,
+  "ToYear": 1384,
+  "Wikidata": "Q112039853",
+  "Wikipedia": "Byzantine Empire",
+  "SeshatID": "",
+  "area_km2": 16744,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   21.43,
+   36.67,
+   25.46,
+   40.0
+  ]
+ },
+ {
+  "Name": "Byzantine Empire",
+  "FromYear": 1385,
+  "ToYear": 1394,
+  "Wikidata": "Q112039853",
+  "Wikipedia": "Byzantine Empire",
+  "SeshatID": "",
+  "area_km2": 16646,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   21.43,
+   36.67,
+   25.46,
+   40.0
+  ]
+ },
+ {
+  "Name": "Byzantine Empire",
+  "FromYear": 1395,
+  "ToYear": 1401,
+  "Wikidata": "Q112039853",
+  "Wikipedia": "Byzantine Empire",
+  "SeshatID": "",
+  "area_km2": 5714,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   22.14,
+   36.67,
+   25.46,
+   40.0
+  ]
+ },
+ {
+  "Name": "Byzantine Empire",
+  "FromYear": 1407,
+  "ToYear": 1414,
+  "Wikidata": "Q112039853",
+  "Wikipedia": "Byzantine Empire",
+  "SeshatID": "",
+  "area_km2": 5714,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   22.14,
+   36.67,
+   25.46,
+   40.0
+  ]
+ },
+ {
+  "Name": "Byzantine Empire",
+  "FromYear": 1415,
+  "ToYear": 1430,
+  "Wikidata": "Q112039853",
+  "Wikipedia": "Byzantine Empire",
+  "SeshatID": "",
+  "area_km2": 5714,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   22.14,
+   36.67,
+   25.46,
+   40.0
+  ]
+ },
+ {
+  "Name": "Byzantine Empire",
+  "FromYear": 1431,
+  "ToYear": 1439,
+  "Wikidata": "Q112039853",
+  "Wikipedia": "Byzantine Empire",
+  "SeshatID": "",
+  "area_km2": 19287,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   21.24,
+   36.67,
+   25.46,
+   40.0
+  ]
+ },
+ {
+  "Name": "Byzantine Empire",
+  "FromYear": 1440,
+  "ToYear": 1467,
+  "Wikidata": "Q112039853",
+  "Wikipedia": "Byzantine Empire",
+  "SeshatID": "",
+  "area_km2": 19658,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   21.24,
+   36.67,
+   25.46,
+   40.0
+  ]
+ },
+ {
+  "Name": "Byzantine Empire",
+  "FromYear": 1468,
+  "ToYear": 1474,
+  "Wikidata": "Q112039853",
+  "Wikipedia": "Byzantine Empire",
+  "SeshatID": "",
+  "area_km2": 680,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   24.97,
+   39.84,
+   25.46,
+   40.0
+  ]
+ },
+ {
+  "Name": "Catalan Company",
+  "FromYear": 1314,
+  "ToYear": 1325,
+  "Wikidata": "Q1501196",
+  "Wikipedia": "Catalan Company",
+  "SeshatID": "",
+  "area_km2": 8254,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   22.39,
+   37.84,
+   24.08,
+   38.93
+  ]
+ },
+ {
+  "Name": "Catalan Company",
+  "FromYear": 1326,
+  "ToYear": 1343,
+  "Wikidata": "Q1501196",
+  "Wikipedia": "Catalan Company",
+  "SeshatID": "",
+  "area_km2": 10215,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   21.99,
+   37.84,
+   24.08,
+   38.93
+  ]
+ },
+ {
+  "Name": "Catalan Company",
+  "FromYear": 1344,
+  "ToYear": 1351,
+  "Wikidata": "Q1501196",
+  "Wikipedia": "Catalan Company",
+  "SeshatID": "",
+  "area_km2": 10166,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   21.99,
+   37.84,
+   24.08,
+   38.93
+  ]
+ },
+ {
+  "Name": "Catalan Company",
+  "FromYear": 1352,
+  "ToYear": 1362,
+  "Wikidata": "Q1501196",
+  "Wikipedia": "Catalan Company",
+  "SeshatID": "",
+  "area_km2": 10289,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   21.99,
+   37.84,
+   24.08,
+   38.93
+  ]
+ },
+ {
+  "Name": "Chobanids",
+  "FromYear": 1344,
+  "ToYear": 1351,
+  "Wikidata": "Q1089675",
+  "Wikipedia": "Chobanids",
+  "SeshatID": "",
+  "area_km2": 207676,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   43.49,
+   35.13,
+   50.86,
+   40.0
+  ]
+ },
+ {
+  "Name": "Chobanids",
+  "FromYear": 1352,
+  "ToYear": 1362,
+  "Wikidata": "Q1089675",
+  "Wikipedia": "Chobanids",
+  "SeshatID": "",
+  "area_km2": 207676,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   43.49,
+   35.13,
+   50.86,
+   40.0
+  ]
+ },
+ {
+  "Name": "County of Edessa",
+  "FromYear": 1139,
+  "ToYear": 1146,
+  "Wikidata": "Q232806",
+  "Wikipedia": "County of Edessa",
+  "SeshatID": "",
+  "area_km2": 40402,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   36.69,
+   36.61,
+   39.81,
+   38.42
+  ]
+ },
+ {
+  "Name": "County of Edessa",
+  "FromYear": 1147,
+  "ToYear": 1151,
+  "Wikidata": "Q232806",
+  "Wikipedia": "County of Edessa",
+  "SeshatID": "",
+  "area_km2": 23450,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   36.69,
+   36.61,
+   38.93,
+   38.42
+  ]
+ },
+ {
+  "Name": "County of Tripoli",
+  "FromYear": 1139,
+  "ToYear": 1187,
+  "Wikidata": "Q272033",
+  "Wikipedia": "County of Tripoli",
+  "SeshatID": "",
+  "area_km2": 5969,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   35.53,
+   33.84,
+   36.62,
+   35.19
+  ]
+ },
+ {
+  "Name": "County of Tripoli",
+  "FromYear": 1188,
+  "ToYear": 1271,
+  "Wikidata": "Q272033",
+  "Wikipedia": "County of Tripoli",
+  "SeshatID": "",
+  "area_km2": 3185,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   35.63,
+   34.16,
+   36.31,
+   35.19
+  ]
+ },
+ {
+  "Name": "County of Tripoli",
+  "FromYear": 1272,
+  "ToYear": 1284,
+  "Wikidata": "Q272033",
+  "Wikipedia": "County of Tripoli",
+  "SeshatID": "",
+  "area_km2": 456,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   35.79,
+   34.29,
+   36.12,
+   34.55
+  ]
+ },
+ {
+  "Name": "County of Tripoli",
+  "FromYear": 1285,
+  "ToYear": 1293,
+  "Wikidata": "Q272033",
+  "Wikipedia": "County of Tripoli",
+  "SeshatID": "",
+  "area_km2": 456,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   35.79,
+   34.29,
+   36.12,
+   34.55
+  ]
+ },
+ {
+  "Name": "Crown of Castile",
+  "FromYear": 1492,
+  "ToYear": 1496,
+  "Wikidata": "Q217196",
+  "Wikipedia": "Crown of Castile",
+  "SeshatID": "es_castile_crown",
+  "area_km2": 200894,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -18.06,
+   27.61,
+   -0.43,
+   40.0
+  ]
+ },
+ {
+  "Name": "Crown of Castile",
+  "FromYear": 1497,
+  "ToYear": 1501,
+  "Wikidata": "Q217196",
+  "Wikipedia": "Crown of Castile",
+  "SeshatID": "es_castile_crown",
+  "area_km2": 205447,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -18.06,
+   27.61,
+   -0.43,
+   40.0
+  ]
+ },
+ {
+  "Name": "Crown of Castile",
+  "FromYear": 1502,
+  "ToYear": 1506,
+  "Wikidata": "Q217196",
+  "Wikipedia": "Crown of Castile",
+  "SeshatID": "es_castile_crown",
+  "area_km2": 205447,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -18.06,
+   27.61,
+   -0.43,
+   40.0
+  ]
+ },
+ {
+  "Name": "Crown of Castile",
+  "FromYear": 1507,
+  "ToYear": 1511,
+  "Wikidata": "Q217196",
+  "Wikipedia": "Crown of Castile",
+  "SeshatID": "es_castile_crown",
+  "area_km2": 206376,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -18.06,
+   27.61,
+   -0.43,
+   40.0
+  ]
+ },
+ {
+  "Name": "Danishmendids",
+  "FromYear": 1139,
+  "ToYear": 1151,
+  "Wikidata": "Q846670",
+  "Wikipedia": "Danishmendids",
+  "SeshatID": "",
+  "area_km2": 54488,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   35.01,
+   38.16,
+   39.22,
+   40.0
+  ]
+ },
+ {
+  "Name": "Danishmendids",
+  "FromYear": 1152,
+  "ToYear": 1168,
+  "Wikidata": "Q846670",
+  "Wikipedia": "Danishmendids",
+  "SeshatID": "",
+  "area_km2": 62664,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   35.01,
+   37.77,
+   39.22,
+   40.0
+  ]
+ },
+ {
+  "Name": "Danishmendids",
+  "FromYear": 1169,
+  "ToYear": 1176,
+  "Wikidata": "Q846670",
+  "Wikipedia": "Danishmendids",
+  "SeshatID": "",
+  "area_km2": 62674,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   35.01,
+   37.77,
+   39.22,
+   40.0
+  ]
+ },
+ {
+  "Name": "Danishmendids",
+  "FromYear": 1177,
+  "ToYear": 1187,
+  "Wikidata": "Q846670",
+  "Wikipedia": "Danishmendids",
+  "SeshatID": "",
+  "area_km2": 41573,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   35.03,
+   37.77,
+   39.22,
+   39.77
+  ]
+ },
+ {
+  "Name": "Despotate of Arta",
+  "FromYear": 1375,
+  "ToYear": 1394,
+  "Wikidata": "Q2331954",
+  "Wikipedia": "Despotate of Arta",
+  "SeshatID": "",
+  "area_km2": 10909,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   20.6,
+   38.35,
+   22.16,
+   39.51
+  ]
+ },
+ {
+  "Name": "Despotate of Arta",
+  "FromYear": 1395,
+  "ToYear": 1401,
+  "Wikidata": "Q2331954",
+  "Wikipedia": "Despotate of Arta",
+  "SeshatID": "",
+  "area_km2": 10958,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   20.6,
+   38.35,
+   22.17,
+   39.51
+  ]
+ },
+ {
+  "Name": "Despotate of Arta",
+  "FromYear": 1402,
+  "ToYear": 1414,
+  "Wikidata": "Q2331954",
+  "Wikipedia": "Despotate of Arta",
+  "SeshatID": "",
+  "area_km2": 10909,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   20.6,
+   38.35,
+   22.16,
+   39.51
+  ]
+ },
+ {
+  "Name": "Despotate of Arta",
+  "FromYear": 1415,
+  "ToYear": 1421,
+  "Wikidata": "Q2331954",
+  "Wikipedia": "Despotate of Arta",
+  "SeshatID": "",
+  "area_km2": 10958,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   20.6,
+   38.35,
+   22.17,
+   39.51
+  ]
+ },
+ {
+  "Name": "Despotate of Epirus",
+  "FromYear": 1236,
+  "ToYear": 1240,
+  "Wikidata": "Q187684",
+  "Wikipedia": "Despotate of Epirus",
+  "SeshatID": "gr_epirus_despot",
+  "area_km2": 22026,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   19.76,
+   38.42,
+   22.53,
+   40.0
+  ]
+ },
+ {
+  "Name": "Despotate of Epirus",
+  "FromYear": 1241,
+  "ToYear": 1249,
+  "Wikidata": "Q187684",
+  "Wikipedia": "Despotate of Epirus",
+  "SeshatID": "gr_epirus_despot",
+  "area_km2": 33445,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   19.76,
+   38.42,
+   23.14,
+   40.0
+  ]
+ },
+ {
+  "Name": "Despotate of Epirus",
+  "FromYear": 1279,
+  "ToYear": 1293,
+  "Wikidata": "Q187684",
+  "Wikipedia": "Despotate of Epirus",
+  "SeshatID": "gr_epirus_despot",
+  "area_km2": 20143,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   20.07,
+   38.35,
+   22.53,
+   40.0
+  ]
+ },
+ {
+  "Name": "Despotate of Epirus",
+  "FromYear": 1294,
+  "ToYear": 1325,
+  "Wikidata": "Q187684",
+  "Wikipedia": "Despotate of Epirus",
+  "SeshatID": "gr_epirus_despot",
+  "area_km2": 20470,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   20.07,
+   38.35,
+   22.53,
+   40.0
+  ]
+ },
+ {
+  "Name": "Despotate of Epirus",
+  "FromYear": 1326,
+  "ToYear": 1343,
+  "Wikidata": "Q187684",
+  "Wikipedia": "Despotate of Epirus",
+  "SeshatID": "gr_epirus_despot",
+  "area_km2": 18262,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   20.07,
+   38.42,
+   22.17,
+   40.0
+  ]
+ },
+ {
+  "Name": "Despotate of Epirus",
+  "FromYear": 1385,
+  "ToYear": 1394,
+  "Wikidata": "Q187684",
+  "Wikipedia": "Despotate of Epirus",
+  "SeshatID": "gr_epirus_despot",
+  "area_km2": 9516,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   19.92,
+   39.26,
+   21.72,
+   40.0
+  ]
+ },
+ {
+  "Name": "Despotate of Epirus",
+  "FromYear": 1395,
+  "ToYear": 1414,
+  "Wikidata": "Q187684",
+  "Wikipedia": "Despotate of Epirus",
+  "SeshatID": "gr_epirus_despot",
+  "area_km2": 9532,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   19.92,
+   39.26,
+   21.72,
+   40.0
+  ]
+ },
+ {
+  "Name": "Despotate of Epirus",
+  "FromYear": 1415,
+  "ToYear": 1421,
+  "Wikidata": "Q187684",
+  "Wikipedia": "Despotate of Epirus",
+  "SeshatID": "gr_epirus_despot",
+  "area_km2": 11746,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   19.92,
+   37.64,
+   21.72,
+   40.0
+  ]
+ },
+ {
+  "Name": "Despotate of Epirus",
+  "FromYear": 1422,
+  "ToYear": 1428,
+  "Wikidata": "Q187684",
+  "Wikipedia": "Despotate of Epirus",
+  "SeshatID": "gr_epirus_despot",
+  "area_km2": 21941,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   19.92,
+   37.64,
+   22.16,
+   40.0
+  ]
+ },
+ {
+  "Name": "Despotate of Epirus",
+  "FromYear": 1429,
+  "ToYear": 1430,
+  "Wikidata": "Q187684",
+  "Wikipedia": "Despotate of Epirus",
+  "SeshatID": "gr_epirus_despot",
+  "area_km2": 21966,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   19.92,
+   37.64,
+   22.17,
+   40.0
+  ]
+ },
+ {
+  "Name": "Despotate of Epirus",
+  "FromYear": 1431,
+  "ToYear": 1449,
+  "Wikidata": "Q187684",
+  "Wikipedia": "Despotate of Epirus",
+  "SeshatID": "gr_epirus_despot",
+  "area_km2": 13559,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   20.32,
+   37.64,
+   22.17,
+   39.51
+  ]
+ },
+ {
+  "Name": "Despotate of Epirus",
+  "FromYear": 1450,
+  "ToYear": 1458,
+  "Wikidata": "Q187684",
+  "Wikipedia": "Despotate of Epirus",
+  "SeshatID": "gr_epirus_despot",
+  "area_km2": 8679,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   20.32,
+   37.64,
+   22.16,
+   39.13
+  ]
+ },
+ {
+  "Name": "Despotate of Epirus",
+  "FromYear": 1459,
+  "ToYear": 1462,
+  "Wikidata": "Q187684",
+  "Wikipedia": "Despotate of Epirus",
+  "SeshatID": "gr_epirus_despot",
+  "area_km2": 3120,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   20.32,
+   37.64,
+   21.35,
+   39.0
+  ]
+ },
+ {
+  "Name": "Despotate of Epirus",
+  "FromYear": 1463,
+  "ToYear": 1474,
+  "Wikidata": "Q187684",
+  "Wikipedia": "Despotate of Epirus",
+  "SeshatID": "gr_epirus_despot",
+  "area_km2": 2067,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   20.32,
+   37.64,
+   20.99,
+   39.0
+  ]
+ },
+ {
+  "Name": "Despotate of Epirus",
+  "FromYear": 1475,
+  "ToYear": 1481,
+  "Wikidata": "Q187684",
+  "Wikipedia": "Despotate of Epirus",
+  "SeshatID": "gr_epirus_despot",
+  "area_km2": 2067,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   20.32,
+   37.64,
+   20.99,
+   39.0
+  ]
+ },
+ {
+  "Name": "Domain of Rhodes",
+  "FromYear": 1206,
+  "ToYear": 1240,
+  "Wikidata": "Q43048",
+  "Wikipedia": "Rhodes",
+  "SeshatID": "",
+  "area_km2": 2173,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   27.69,
+   35.9,
+   28.25,
+   36.48
+  ]
+ },
+ {
+  "Name": "Domain of Rhodes",
+  "FromYear": 1241,
+  "ToYear": 1249,
+  "Wikidata": "Q43048",
+  "Wikipedia": "Rhodes",
+  "SeshatID": "",
+  "area_km2": 2173,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   27.69,
+   35.9,
+   28.25,
+   36.48
+  ]
+ },
+ {
+  "Name": "Duchy of Athens",
+  "FromYear": 1206,
+  "ToYear": 1215,
+  "Wikidata": "Q334714",
+  "Wikipedia": "Duchy of Athens",
+  "SeshatID": "",
+  "area_km2": 8205,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   22.38,
+   37.84,
+   24.08,
+   38.93
+  ]
+ },
+ {
+  "Name": "Duchy of Athens",
+  "FromYear": 1216,
+  "ToYear": 1235,
+  "Wikidata": "Q334714",
+  "Wikipedia": "Duchy of Athens",
+  "SeshatID": "",
+  "area_km2": 8701,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   22.39,
+   37.45,
+   24.08,
+   38.87
+  ]
+ },
+ {
+  "Name": "Duchy of Athens",
+  "FromYear": 1236,
+  "ToYear": 1240,
+  "Wikidata": "Q334714",
+  "Wikipedia": "Duchy of Athens",
+  "SeshatID": "",
+  "area_km2": 8847,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   22.38,
+   37.45,
+   24.08,
+   38.93
+  ]
+ },
+ {
+  "Name": "Duchy of Athens",
+  "FromYear": 1241,
+  "ToYear": 1271,
+  "Wikidata": "Q334714",
+  "Wikipedia": "Duchy of Athens",
+  "SeshatID": "",
+  "area_km2": 8701,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   22.39,
+   37.45,
+   24.08,
+   38.87
+  ]
+ },
+ {
+  "Name": "Duchy of Athens",
+  "FromYear": 1272,
+  "ToYear": 1278,
+  "Wikidata": "Q334714",
+  "Wikipedia": "Duchy of Athens",
+  "SeshatID": "",
+  "area_km2": 8205,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   22.38,
+   37.84,
+   24.08,
+   38.93
+  ]
+ },
+ {
+  "Name": "Duchy of Athens",
+  "FromYear": 1279,
+  "ToYear": 1304,
+  "Wikidata": "Q334714",
+  "Wikipedia": "Duchy of Athens",
+  "SeshatID": "",
+  "area_km2": 8254,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   22.39,
+   37.84,
+   24.08,
+   38.93
+  ]
+ },
+ {
+  "Name": "Duchy of Athens",
+  "FromYear": 1305,
+  "ToYear": 1313,
+  "Wikidata": "Q334714",
+  "Wikipedia": "Duchy of Athens",
+  "SeshatID": "",
+  "area_km2": 8254,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   22.39,
+   37.84,
+   24.08,
+   38.93
+  ]
+ },
+ {
+  "Name": "Duchy of the Archipelago",
+  "FromYear": 1210,
+  "ToYear": 1304,
+  "Wikidata": "Q777981",
+  "Wikipedia": "Duchy of the Archipelago",
+  "SeshatID": "",
+  "area_km2": 1236,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   24.2,
+   37.0,
+   25.57,
+   38.03
+  ]
+ },
+ {
+  "Name": "Duchy of the Archipelago",
+  "FromYear": 1305,
+  "ToYear": 1313,
+  "Wikidata": "Q777981",
+  "Wikipedia": "Duchy of the Archipelago",
+  "SeshatID": "",
+  "area_km2": 666,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   24.68,
+   37.71,
+   25.07,
+   38.03
+  ]
+ },
+ {
+  "Name": "Emirate of Granada",
+  "FromYear": 1241,
+  "ToYear": 1249,
+  "Wikidata": "Q238445",
+  "Wikipedia": "Emirate of Granada",
+  "SeshatID": "",
+  "area_km2": 31540,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -5.92,
+   36.03,
+   -1.7,
+   37.9
+  ]
+ },
+ {
+  "Name": "Emirate of Granada",
+  "FromYear": 1250,
+  "ToYear": 1293,
+  "Wikidata": "Q238445",
+  "Wikipedia": "Emirate of Granada",
+  "SeshatID": "",
+  "area_km2": 31516,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -5.91,
+   36.03,
+   -1.7,
+   37.9
+  ]
+ },
+ {
+  "Name": "Emirate of Granada",
+  "FromYear": 1294,
+  "ToYear": 1332,
+  "Wikidata": "Q238445",
+  "Wikipedia": "Emirate of Granada",
+  "SeshatID": "",
+  "area_km2": 31216,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -5.85,
+   36.03,
+   -1.7,
+   37.9
+  ]
+ },
+ {
+  "Name": "Emirate of Granada",
+  "FromYear": 1333,
+  "ToYear": 1343,
+  "Wikidata": "Q238445",
+  "Wikipedia": "Emirate of Granada",
+  "SeshatID": "",
+  "area_km2": 30174,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -5.86,
+   36.03,
+   -1.7,
+   37.9
+  ]
+ },
+ {
+  "Name": "Emirate of Granada",
+  "FromYear": 1344,
+  "ToYear": 1351,
+  "Wikidata": "Q238445",
+  "Wikipedia": "Emirate of Granada",
+  "SeshatID": "",
+  "area_km2": 28411,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -5.85,
+   36.16,
+   -1.7,
+   37.9
+  ]
+ },
+ {
+  "Name": "Emirate of Granada",
+  "FromYear": 1352,
+  "ToYear": 1362,
+  "Wikidata": "Q238445",
+  "Wikipedia": "Emirate of Granada",
+  "SeshatID": "",
+  "area_km2": 28139,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -5.85,
+   36.16,
+   -1.7,
+   37.9
+  ]
+ },
+ {
+  "Name": "Emirate of Granada",
+  "FromYear": 1363,
+  "ToYear": 1374,
+  "Wikidata": "Q238445",
+  "Wikipedia": "Emirate of Granada",
+  "SeshatID": "",
+  "area_km2": 30174,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -5.86,
+   36.03,
+   -1.7,
+   37.9
+  ]
+ },
+ {
+  "Name": "Emirate of Granada",
+  "FromYear": 1375,
+  "ToYear": 1401,
+  "Wikidata": "Q238445",
+  "Wikipedia": "Emirate of Granada",
+  "SeshatID": "",
+  "area_km2": 28139,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -5.85,
+   36.16,
+   -1.7,
+   37.9
+  ]
+ },
+ {
+  "Name": "Emirate of Granada",
+  "FromYear": 1402,
+  "ToYear": 1414,
+  "Wikidata": "Q238445",
+  "Wikipedia": "Emirate of Granada",
+  "SeshatID": "",
+  "area_km2": 28114,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -5.86,
+   36.16,
+   -1.7,
+   37.9
+  ]
+ },
+ {
+  "Name": "Emirate of Granada",
+  "FromYear": 1415,
+  "ToYear": 1439,
+  "Wikidata": "Q238445",
+  "Wikipedia": "Emirate of Granada",
+  "SeshatID": "",
+  "area_km2": 27916,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -5.86,
+   36.16,
+   -1.7,
+   37.9
+  ]
+ },
+ {
+  "Name": "Emirate of Granada",
+  "FromYear": 1440,
+  "ToYear": 1462,
+  "Wikidata": "Q238445",
+  "Wikipedia": "Emirate of Granada",
+  "SeshatID": "",
+  "area_km2": 27348,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -5.86,
+   36.16,
+   -1.7,
+   37.84
+  ]
+ },
+ {
+  "Name": "Emirate of Granada",
+  "FromYear": 1463,
+  "ToYear": 1486,
+  "Wikidata": "Q238445",
+  "Wikipedia": "Emirate of Granada",
+  "SeshatID": "",
+  "area_km2": 26101,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -5.79,
+   36.35,
+   -1.7,
+   37.84
+  ]
+ },
+ {
+  "Name": "Emirate of Granada",
+  "FromYear": 1487,
+  "ToYear": 1491,
+  "Wikidata": "Q238445",
+  "Wikipedia": "Emirate of Granada",
+  "SeshatID": "",
+  "area_km2": 13036,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -3.65,
+   36.74,
+   -1.7,
+   37.84
+  ]
+ },
+ {
+  "Name": "Empire of Kanem",
+  "FromYear": 1072,
+  "ToYear": 1374,
+  "Wikidata": "Q1139762",
+  "Wikipedia": "Kanem-Bornu Empire",
+  "SeshatID": "td_kanem",
+  "area_km2": 20291,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   15.06,
+   11.21,
+   16.67,
+   12.69
+  ]
+ },
+ {
+  "Name": "Empire of Kanem",
+  "FromYear": 1375,
+  "ToYear": 1384,
+  "Wikidata": "Q1139762",
+  "Wikipedia": "Kanem-Bornu Empire",
+  "SeshatID": "td_kanem",
+  "area_km2": 20291,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   15.06,
+   11.21,
+   16.67,
+   12.69
+  ]
+ },
+ {
+  "Name": "Empire of Thessalonica",
+  "FromYear": 1236,
+  "ToYear": 1240,
+  "Wikidata": "Q623151",
+  "Wikipedia": "Empire of Thessalonica",
+  "SeshatID": "",
+  "area_km2": 11370,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   21.4,
+   38.87,
+   23.14,
+   40.0
+  ]
+ },
+ {
+  "Name": "Eshrefids",
+  "FromYear": 1305,
+  "ToYear": 1313,
+  "Wikidata": "Q1386189",
+  "Wikipedia": "Eshrefids",
+  "SeshatID": "",
+  "area_km2": 13311,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   30.92,
+   37.06,
+   32.67,
+   38.35
+  ]
+ },
+ {
+  "Name": "Eshrefids",
+  "FromYear": 1314,
+  "ToYear": 1325,
+  "Wikidata": "Q1386189",
+  "Wikipedia": "Eshrefids",
+  "SeshatID": "",
+  "area_km2": 13262,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   30.92,
+   37.06,
+   32.67,
+   38.35
+  ]
+ },
+ {
+  "Name": "Ethiopian Empire",
+  "FromYear": 1272,
+  "ToYear": 1284,
+  "Wikidata": "Q207521",
+  "Wikipedia": "Ethiopian Empire",
+  "SeshatID": "et_ethiopian_k",
+  "area_km2": 210371,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   36.65,
+   8.96,
+   40.61,
+   16.94
+  ]
+ },
+ {
+  "Name": "Ethiopian Empire",
+  "FromYear": 1285,
+  "ToYear": 1332,
+  "Wikidata": "Q207521",
+  "Wikipedia": "Ethiopian Empire",
+  "SeshatID": "et_ethiopian_k",
+  "area_km2": 209379,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   36.65,
+   8.96,
+   40.56,
+   16.94
+  ]
+ },
+ {
+  "Name": "Ethiopian Empire",
+  "FromYear": 1333,
+  "ToYear": 1414,
+  "Wikidata": "Q207521",
+  "Wikipedia": "Ethiopian Empire",
+  "SeshatID": "et_ethiopian_k",
+  "area_km2": 393902,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   36.48,
+   5.43,
+   42.29,
+   16.94
+  ]
+ },
+ {
+  "Name": "Ethiopian Empire",
+  "FromYear": 1415,
+  "ToYear": 1501,
+  "Wikidata": "Q207521",
+  "Wikipedia": "Ethiopian Empire",
+  "SeshatID": "et_ethiopian_k",
+  "area_km2": 394125,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   36.48,
+   5.43,
+   42.29,
+   16.94
+  ]
+ },
+ {
+  "Name": "Ethiopian Empire",
+  "FromYear": 1502,
+  "ToYear": 1528,
+  "Wikidata": "Q207521",
+  "Wikipedia": "Ethiopian Empire",
+  "SeshatID": "",
+  "area_km2": 394125,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   36.48,
+   5.43,
+   42.29,
+   16.94
+  ]
+ },
+ {
+  "Name": "Fatimid Caliphate",
+  "FromYear": 1111,
+  "ToYear": 1151,
+  "Wikidata": "Q160307",
+  "Wikipedia": "Fatimid Caliphate",
+  "SeshatID": "tn_fatimid_cal",
+  "area_km2": 803928,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   11.46,
+   20.79,
+   40.41,
+   33.14
+  ]
+ },
+ {
+  "Name": "Fatimid Caliphate",
+  "FromYear": 1152,
+  "ToYear": 1168,
+  "Wikidata": "Q160307",
+  "Wikipedia": "Fatimid Caliphate",
+  "SeshatID": "tn_fatimid_cal",
+  "area_km2": 795391,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   14.59,
+   20.79,
+   40.41,
+   32.94
+  ]
+ },
+ {
+  "Name": "Fatimid Caliphate",
+  "FromYear": 1169,
+  "ToYear": 1176,
+  "Wikidata": "Q160307",
+  "Wikipedia": "Fatimid Caliphate",
+  "SeshatID": "tn_fatimid_cal",
+  "area_km2": 64823,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   37.44,
+   20.79,
+   40.41,
+   24.78
+  ]
+ },
+ {
+  "Name": "Funj Sultanate",
+  "FromYear": 1507,
+  "ToYear": 1518,
+  "Wikidata": "Q1475713",
+  "Wikipedia": "Funj Sultanate",
+  "SeshatID": "",
+  "area_km2": 634022,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   27.2,
+   10.89,
+   37.24,
+   17.96
+  ]
+ },
+ {
+  "Name": "Germiyanids",
+  "FromYear": 1305,
+  "ToYear": 1325,
+  "Wikidata": "Q1324889",
+  "Wikipedia": "Germiyanids",
+  "SeshatID": "",
+  "area_km2": 23023,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   28.5,
+   38.48,
+   31.18,
+   39.77
+  ]
+ },
+ {
+  "Name": "Germiyanids",
+  "FromYear": 1326,
+  "ToYear": 1332,
+  "Wikidata": "Q1324889",
+  "Wikipedia": "Germiyanids",
+  "SeshatID": "",
+  "area_km2": 22828,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   28.5,
+   38.48,
+   31.18,
+   39.71
+  ]
+ },
+ {
+  "Name": "Germiyanids",
+  "FromYear": 1333,
+  "ToYear": 1343,
+  "Wikidata": "Q1324889",
+  "Wikipedia": "Germiyanids",
+  "SeshatID": "",
+  "area_km2": 33930,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   28.5,
+   37.45,
+   31.85,
+   39.71
+  ]
+ },
+ {
+  "Name": "Germiyanids",
+  "FromYear": 1344,
+  "ToYear": 1351,
+  "Wikidata": "Q1324889",
+  "Wikipedia": "Germiyanids",
+  "SeshatID": "",
+  "area_km2": 211795,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   28.38,
+   35.13,
+   44.86,
+   39.64
+  ]
+ },
+ {
+  "Name": "Germiyanids",
+  "FromYear": 1352,
+  "ToYear": 1362,
+  "Wikidata": "Q1324889",
+  "Wikipedia": "Germiyanids",
+  "SeshatID": "",
+  "area_km2": 211892,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   28.38,
+   35.13,
+   44.86,
+   39.64
+  ]
+ },
+ {
+  "Name": "Germiyanids",
+  "FromYear": 1363,
+  "ToYear": 1374,
+  "Wikidata": "Q1324889",
+  "Wikipedia": "Germiyanids",
+  "SeshatID": "",
+  "area_km2": 214349,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   28.38,
+   35.13,
+   44.87,
+   40.0
+  ]
+ },
+ {
+  "Name": "Germiyanids",
+  "FromYear": 1375,
+  "ToYear": 1406,
+  "Wikidata": "Q1324889",
+  "Wikipedia": "Germiyanids",
+  "SeshatID": "",
+  "area_km2": 116188,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   28.38,
+   35.13,
+   41.47,
+   40.0
+  ]
+ },
+ {
+  "Name": "Germiyanids",
+  "FromYear": 1407,
+  "ToYear": 1414,
+  "Wikidata": "Q1324889",
+  "Wikipedia": "Germiyanids",
+  "SeshatID": "",
+  "area_km2": 87510,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   28.38,
+   35.13,
+   41.12,
+   40.0
+  ]
+ },
+ {
+  "Name": "Germiyanids",
+  "FromYear": 1415,
+  "ToYear": 1430,
+  "Wikidata": "Q1324889",
+  "Wikipedia": "Germiyanids",
+  "SeshatID": "",
+  "area_km2": 55319,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   28.38,
+   37.45,
+   33.75,
+   40.0
+  ]
+ },
+ {
+  "Name": "Ghana Empire",
+  "FromYear": 1085,
+  "ToYear": 1191,
+  "Wikidata": "Q206789",
+  "Wikipedia": "Ghana Empire",
+  "SeshatID": "mr_wagadu_3",
+  "area_km2": 205380,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -8.58,
+   13.34,
+   -3.8,
+   17.64
+  ]
+ },
+ {
+  "Name": "Ghana Empire",
+  "FromYear": 1192,
+  "ToYear": 1201,
+  "Wikidata": "Q206789",
+  "Wikipedia": "Ghana Empire",
+  "SeshatID": "mr_wagadu_3",
+  "area_km2": 205380,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -8.58,
+   13.34,
+   -3.8,
+   17.64
+  ]
+ },
+ {
+  "Name": "Giudicato of Arborea",
+  "FromYear": 1072,
+  "ToYear": 1325,
+  "Wikidata": "Q1241847",
+  "Wikipedia": "Judicate of Arborea",
+  "SeshatID": "",
+  "area_km2": 2395,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   8.36,
+   39.58,
+   9.25,
+   40.0
+  ]
+ },
+ {
+  "Name": "Giudicato of Arborea",
+  "FromYear": 1326,
+  "ToYear": 1343,
+  "Wikidata": "Q1241847",
+  "Wikipedia": "Judicate of Arborea",
+  "SeshatID": "",
+  "area_km2": 2485,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   8.36,
+   39.58,
+   9.27,
+   40.0
+  ]
+ },
+ {
+  "Name": "Giudicato of Arborea",
+  "FromYear": 1344,
+  "ToYear": 1374,
+  "Wikidata": "Q1241847",
+  "Wikipedia": "Judicate of Arborea",
+  "SeshatID": "",
+  "area_km2": 2395,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   8.36,
+   39.58,
+   9.25,
+   40.0
+  ]
+ },
+ {
+  "Name": "Giudicato of Cagliari",
+  "FromYear": 1018,
+  "ToYear": 1176,
+  "Wikidata": "Q2297073",
+  "Wikipedia": "Judicate of Cagliari",
+  "SeshatID": "",
+  "area_km2": 9475,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   8.33,
+   38.87,
+   9.75,
+   40.0
+  ]
+ },
+ {
+  "Name": "Giudicato of Cagliari",
+  "FromYear": 1177,
+  "ToYear": 1187,
+  "Wikidata": "Q2297073",
+  "Wikipedia": "Judicate of Cagliari",
+  "SeshatID": "",
+  "area_km2": 9475,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   8.33,
+   38.87,
+   9.75,
+   40.0
+  ]
+ },
+ {
+  "Name": "Great Seljuk Empire",
+  "FromYear": 1139,
+  "ToYear": 1146,
+  "Wikidata": "Q3708094",
+  "Wikipedia": "Seljuk Empire",
+  "SeshatID": "ir_seljuk_sultanate",
+  "area_km2": 1614723,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   38.83,
+   22.91,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Great Seljuk Empire",
+  "FromYear": 1147,
+  "ToYear": 1151,
+  "Wikidata": "Q3708094",
+  "Wikipedia": "Seljuk Empire",
+  "SeshatID": "ir_seljuk_sultanate",
+  "area_km2": 1762295,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   38.83,
+   22.91,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Great Seljuk Empire",
+  "FromYear": 1152,
+  "ToYear": 1168,
+  "Wikidata": "Q3708094",
+  "Wikipedia": "Seljuk Empire",
+  "SeshatID": "ir_seljuk_sultanate",
+  "area_km2": 1600732,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   38.83,
+   22.91,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Great Seljuk Empire",
+  "FromYear": 1169,
+  "ToYear": 1176,
+  "Wikidata": "Q3708094",
+  "Wikipedia": "Seljuk Empire",
+  "SeshatID": "",
+  "area_km2": 1578034,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   38.84,
+   26.45,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Great Seljuk Empire",
+  "FromYear": 1177,
+  "ToYear": 1187,
+  "Wikidata": "Q3708094",
+  "Wikipedia": "Seljuk Empire",
+  "SeshatID": "",
+  "area_km2": 1574511,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   38.84,
+   26.45,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Great Seljuk Empire",
+  "FromYear": 1188,
+  "ToYear": 1191,
+  "Wikidata": "Q3708094",
+  "Wikipedia": "Seljuk Empire",
+  "SeshatID": "",
+  "area_km2": 1048448,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   38.84,
+   26.45,
+   56.32,
+   40.0
+  ]
+ },
+ {
+  "Name": "Great Seljuk Empire",
+  "FromYear": 1192,
+  "ToYear": 1201,
+  "Wikidata": "Q3708094",
+  "Wikipedia": "Seljuk Empire",
+  "SeshatID": "",
+  "area_km2": 990986,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   42.36,
+   26.45,
+   56.32,
+   39.84
+  ]
+ },
+ {
+  "Name": "Hafsid Dynasty",
+  "FromYear": 1236,
+  "ToYear": 1293,
+  "Wikidata": "Q752662",
+  "Wikipedia": "Hafsid dynasty",
+  "SeshatID": "tn_hafsid_dyn",
+  "area_km2": 224540,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   4.39,
+   29.99,
+   18.9,
+   37.32
+  ]
+ },
+ {
+  "Name": "Hafsid Dynasty",
+  "FromYear": 1294,
+  "ToYear": 1343,
+  "Wikidata": "Q752662",
+  "Wikipedia": "Hafsid dynasty",
+  "SeshatID": "tn_hafsid_dyn",
+  "area_km2": 224691,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   4.39,
+   29.99,
+   18.9,
+   37.32
+  ]
+ },
+ {
+  "Name": "Hafsid Dynasty",
+  "FromYear": 1344,
+  "ToYear": 1351,
+  "Wikidata": "Q752662",
+  "Wikipedia": "Hafsid dynasty",
+  "SeshatID": "tn_hafsid_dyn",
+  "area_km2": 224796,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   4.39,
+   29.99,
+   18.9,
+   37.32
+  ]
+ },
+ {
+  "Name": "Hafsid Dynasty",
+  "FromYear": 1363,
+  "ToYear": 1452,
+  "Wikidata": "Q752662",
+  "Wikipedia": "Hafsid dynasty",
+  "SeshatID": "tn_hafsid_dyn",
+  "area_km2": 224691,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   4.39,
+   29.99,
+   18.9,
+   37.32
+  ]
+ },
+ {
+  "Name": "Hafsid Dynasty",
+  "FromYear": 1453,
+  "ToYear": 1511,
+  "Wikidata": "Q752662",
+  "Wikipedia": "Hafsid dynasty",
+  "SeshatID": "",
+  "area_km2": 224691,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   4.39,
+   29.99,
+   18.9,
+   37.32
+  ]
+ },
+ {
+  "Name": "Hamdanid Emirates",
+  "FromYear": 1192,
+  "ToYear": 1201,
+  "Wikidata": "Q837187",
+  "Wikipedia": "Hamdanid dynasty",
+  "SeshatID": "",
+  "area_km2": 45560,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   38.84,
+   38.87,
+   46.22,
+   40.0
+  ]
+ },
+ {
+  "Name": "Hamdanid Emirates",
+  "FromYear": 1202,
+  "ToYear": 1205,
+  "Wikidata": "Q837187",
+  "Wikipedia": "Hamdanid dynasty",
+  "SeshatID": "",
+  "area_km2": 283220,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   38.74,
+   34.87,
+   49.18,
+   40.0
+  ]
+ },
+ {
+  "Name": "Hamdanid Emirates",
+  "FromYear": 1206,
+  "ToYear": 1209,
+  "Wikidata": "Q837187",
+  "Wikipedia": "Hamdanid dynasty",
+  "SeshatID": "",
+  "area_km2": 272236,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   38.74,
+   34.87,
+   49.18,
+   40.0
+  ]
+ },
+ {
+  "Name": "Hamdanid Emirates",
+  "FromYear": 1216,
+  "ToYear": 1219,
+  "Wikidata": "Q837187",
+  "Wikipedia": "Hamdanid dynasty",
+  "SeshatID": "",
+  "area_km2": 105043,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   38.74,
+   36.61,
+   44.87,
+   39.45
+  ]
+ },
+ {
+  "Name": "Hamdanid Emirates",
+  "FromYear": 1250,
+  "ToYear": 1259,
+  "Wikidata": "Q837187",
+  "Wikipedia": "Hamdanid dynasty",
+  "SeshatID": "",
+  "area_km2": 73923,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   47.45,
+   23.69,
+   56.05,
+   29.99
+  ]
+ },
+ {
+  "Name": "Hammadid Dynasty",
+  "FromYear": 1139,
+  "ToYear": 1146,
+  "Wikidata": "Q588672",
+  "Wikipedia": "Hammadid dynasty",
+  "SeshatID": "",
+  "area_km2": 32892,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -9.0,
+   17.64,
+   8.59,
+   37.06
+  ]
+ },
+ {
+  "Name": "Hammadid Dynasty",
+  "FromYear": 1147,
+  "ToYear": 1151,
+  "Wikidata": "Q588672",
+  "Wikipedia": "Hammadid dynasty",
+  "SeshatID": "",
+  "area_km2": 32892,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -9.0,
+   17.64,
+   8.59,
+   37.06
+  ]
+ },
+ {
+  "Name": "Hashemite Arab Federation",
+  "FromYear": 1415,
+  "ToYear": 1430,
+  "Wikidata": "Q6000379",
+  "Wikipedia": "Arab Iraq",
+  "SeshatID": "",
+  "area_km2": 224247,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   40.51,
+   29.28,
+   50.07,
+   36.55
+  ]
+ },
+ {
+  "Name": "Hashemite Arab Federation",
+  "FromYear": 1431,
+  "ToYear": 1439,
+  "Wikidata": "Q6000379",
+  "Wikipedia": "Arab Iraq",
+  "SeshatID": "",
+  "area_km2": 224247,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   40.51,
+   29.28,
+   50.07,
+   36.55
+  ]
+ },
+ {
+  "Name": "House of Anjou-Sicily",
+  "FromYear": 1272,
+  "ToYear": 1278,
+  "Wikidata": "Q939200",
+  "Wikipedia": "Capetian House of Anjou",
+  "SeshatID": "",
+  "area_km2": 243,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   19.76,
+   39.58,
+   19.92,
+   39.77
+  ]
+ },
+ {
+  "Name": "House of Anjou-Sicily",
+  "FromYear": 1279,
+  "ToYear": 1284,
+  "Wikidata": "Q939200",
+  "Wikipedia": "Capetian House of Anjou",
+  "SeshatID": "",
+  "area_km2": 15426,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   14.34,
+   35.77,
+   23.4,
+   40.0
+  ]
+ },
+ {
+  "Name": "House of Anjou-Sicily",
+  "FromYear": 1285,
+  "ToYear": 1293,
+  "Wikidata": "Q939200",
+  "Wikipedia": "Capetian House of Anjou",
+  "SeshatID": "",
+  "area_km2": 14950,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   19.76,
+   37.0,
+   23.4,
+   40.0
+  ]
+ },
+ {
+  "Name": "House of Anjou-Sicily",
+  "FromYear": 1375,
+  "ToYear": 1384,
+  "Wikidata": "Q939200",
+  "Wikipedia": "Capetian House of Anjou",
+  "SeshatID": "",
+  "area_km2": 15916,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   21.24,
+   37.0,
+   25.57,
+   39.0
+  ]
+ },
+ {
+  "Name": "House of Tocco",
+  "FromYear": 1363,
+  "ToYear": 1374,
+  "Wikidata": "Q149846",
+  "Wikipedia": "County Palatine of Cephalonia and Zakynthos",
+  "SeshatID": "",
+  "area_km2": 1822,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   20.32,
+   37.64,
+   20.93,
+   38.42
+  ]
+ },
+ {
+  "Name": "House of Tocco",
+  "FromYear": 1375,
+  "ToYear": 1406,
+  "Wikidata": "Q149846",
+  "Wikipedia": "County Palatine of Cephalonia and Zakynthos",
+  "SeshatID": "",
+  "area_km2": 2214,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   20.32,
+   37.64,
+   20.93,
+   38.87
+  ]
+ },
+ {
+  "Name": "House of Tocco",
+  "FromYear": 1407,
+  "ToYear": 1414,
+  "Wikidata": "Q149846",
+  "Wikipedia": "County Palatine of Cephalonia and Zakynthos",
+  "SeshatID": "",
+  "area_km2": 2214,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   20.32,
+   37.64,
+   20.93,
+   38.87
+  ]
+ },
+ {
+  "Name": "Ifat Sultanate",
+  "FromYear": 1285,
+  "ToYear": 1332,
+  "Wikidata": "Q157727",
+  "Wikipedia": "Sultanate of Ifat",
+  "SeshatID": "",
+  "area_km2": 122220,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   40.48,
+   8.39,
+   45.11,
+   12.31
+  ]
+ },
+ {
+  "Name": "Ifat Sultanate",
+  "FromYear": 1333,
+  "ToYear": 1406,
+  "Wikidata": "Q157727",
+  "Wikipedia": "Sultanate of Ifat",
+  "SeshatID": "",
+  "area_km2": 121618,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   40.48,
+   8.39,
+   45.11,
+   12.31
+  ]
+ },
+ {
+  "Name": "Ifat Sultanate",
+  "FromYear": 1407,
+  "ToYear": 1414,
+  "Wikidata": "Q157727",
+  "Wikipedia": "Sultanate of Ifat",
+  "SeshatID": "",
+  "area_km2": 121618,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   40.48,
+   8.39,
+   45.11,
+   12.31
+  ]
+ },
+ {
+  "Name": "Ilkhanate",
+  "FromYear": 1294,
+  "ToYear": 1304,
+  "Wikidata": "Q178084",
+  "Wikipedia": "Ilkhanate",
+  "SeshatID": "ir_il_khanate",
+  "area_km2": 2308066,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   27.6,
+   25.36,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Ilkhanate",
+  "FromYear": 1305,
+  "ToYear": 1313,
+  "Wikidata": "Q178084",
+  "Wikipedia": "Ilkhanate",
+  "SeshatID": "ir_il_khanate",
+  "area_km2": 2134943,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   30.25,
+   25.36,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Ilkhanate",
+  "FromYear": 1314,
+  "ToYear": 1332,
+  "Wikidata": "Q178084",
+  "Wikipedia": "Ilkhanate",
+  "SeshatID": "ir_il_khanate",
+  "area_km2": 2134999,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   30.25,
+   25.36,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Ilkhanate",
+  "FromYear": 1333,
+  "ToYear": 1343,
+  "Wikidata": "Q178084",
+  "Wikipedia": "Ilkhanate",
+  "SeshatID": "ir_il_khanate",
+  "area_km2": 2100617,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   30.25,
+   25.36,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Injuids",
+  "FromYear": 1344,
+  "ToYear": 1351,
+  "Wikidata": "Q1067513",
+  "Wikipedia": "Injuids",
+  "SeshatID": "",
+  "area_km2": 86093,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   49.02,
+   29.09,
+   53.82,
+   32.49
+  ]
+ },
+ {
+  "Name": "Injuids",
+  "FromYear": 1352,
+  "ToYear": 1362,
+  "Wikidata": "Q1067513",
+  "Wikipedia": "Injuids",
+  "SeshatID": "",
+  "area_km2": 86093,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   49.02,
+   29.09,
+   53.82,
+   32.49
+  ]
+ },
+ {
+  "Name": "Jalayirid Sultanate",
+  "FromYear": 1344,
+  "ToYear": 1362,
+  "Wikidata": "Q866716",
+  "Wikipedia": "Jalayirid Sultanate",
+  "SeshatID": "ir_jayarid_khanate",
+  "area_km2": 505174,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   40.51,
+   29.28,
+   52.64,
+   37.0
+  ]
+ },
+ {
+  "Name": "Jalayirid Sultanate",
+  "FromYear": 1363,
+  "ToYear": 1374,
+  "Wikidata": "Q866716",
+  "Wikipedia": "Jalayirid Sultanate",
+  "SeshatID": "ir_jayarid_khanate",
+  "area_km2": 713011,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   40.51,
+   29.28,
+   52.64,
+   40.0
+  ]
+ },
+ {
+  "Name": "Jalayirid Sultanate",
+  "FromYear": 1375,
+  "ToYear": 1394,
+  "Wikidata": "Q866716",
+  "Wikipedia": "Jalayirid Sultanate",
+  "SeshatID": "ir_jayarid_khanate",
+  "area_km2": 492535,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   40.51,
+   29.28,
+   52.64,
+   37.45
+  ]
+ },
+ {
+  "Name": "Jalayirid Sultanate",
+  "FromYear": 1395,
+  "ToYear": 1401,
+  "Wikidata": "Q866716",
+  "Wikipedia": "Jalayirid Sultanate",
+  "SeshatID": "",
+  "area_km2": 238916,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   40.51,
+   29.28,
+   48.6,
+   36.55
+  ]
+ },
+ {
+  "Name": "Khwarezmid Dynasty",
+  "FromYear": 1152,
+  "ToYear": 1168,
+  "Wikidata": "Q486918",
+  "Wikipedia": "Anushtegin dynasty",
+  "SeshatID": "",
+  "area_km2": 169366,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   53.14,
+   36.93,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Khwarezmid Dynasty",
+  "FromYear": 1169,
+  "ToYear": 1176,
+  "Wikidata": "Q486918",
+  "Wikipedia": "Anushtegin dynasty",
+  "SeshatID": "tm_khwarezmid_emp",
+  "area_km2": 169366,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   53.14,
+   36.93,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Khwarezmid Dynasty",
+  "FromYear": 1177,
+  "ToYear": 1187,
+  "Wikidata": "Q486918",
+  "Wikipedia": "Anushtegin dynasty",
+  "SeshatID": "tm_khwarezmid_emp",
+  "area_km2": 169677,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   53.14,
+   36.93,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Khwarezmid Dynasty",
+  "FromYear": 1188,
+  "ToYear": 1191,
+  "Wikidata": "Q486918",
+  "Wikipedia": "Anushtegin dynasty",
+  "SeshatID": "tm_khwarezmid_emp",
+  "area_km2": 169366,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   53.14,
+   36.93,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Khwarezmid Dynasty",
+  "FromYear": 1192,
+  "ToYear": 1201,
+  "Wikidata": "Q486918",
+  "Wikipedia": "Anushtegin dynasty",
+  "SeshatID": "tm_khwarezmid_emp",
+  "area_km2": 169366,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   53.14,
+   36.93,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Khwarezmid Empire",
+  "FromYear": 1202,
+  "ToYear": 1205,
+  "Wikidata": "Q63134381",
+  "Wikipedia": "Khwarazmian Empire",
+  "SeshatID": "tm_khwarezmid_emp",
+  "area_km2": 1363746,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   45.44,
+   25.74,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Khwarezmid Empire",
+  "FromYear": 1206,
+  "ToYear": 1209,
+  "Wikidata": "Q63134381",
+  "Wikipedia": "Khwarazmian Empire",
+  "SeshatID": "tm_khwarezmid_emp",
+  "area_km2": 1369091,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   45.44,
+   25.74,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Khwarezmid Empire",
+  "FromYear": 1210,
+  "ToYear": 1215,
+  "Wikidata": "Q63134381",
+  "Wikipedia": "Khwarazmian Empire",
+  "SeshatID": "tm_khwarezmid_emp",
+  "area_km2": 1423330,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   45.44,
+   25.36,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Khwarezmid Empire",
+  "FromYear": 1220,
+  "ToYear": 1226,
+  "Wikidata": "Q63134381",
+  "Wikipedia": "Khwarazmian Empire",
+  "SeshatID": "tm_khwarezmid_emp",
+  "area_km2": 1513830,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   43.32,
+   26.45,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Khwarezmid Empire",
+  "FromYear": 1227,
+  "ToYear": 1235,
+  "Wikidata": "Q63134381",
+  "Wikipedia": "Khwarazmian Empire",
+  "SeshatID": "tm_khwarezmid_emp",
+  "area_km2": 1198796,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   43.32,
+   26.45,
+   60.0,
+   39.84
+  ]
+ },
+ {
+  "Name": "Kingdom of Africa",
+  "FromYear": 1152,
+  "ToYear": 1168,
+  "Wikidata": "Q3932090",
+  "Wikipedia": "Kingdom of Africa",
+  "SeshatID": "",
+  "area_km2": 39704,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   8.52,
+   32.24,
+   14.67,
+   37.32
+  ]
+ },
+ {
+  "Name": "Kingdom of Cyprus",
+  "FromYear": 1192,
+  "ToYear": 1362,
+  "Wikidata": "Q213638",
+  "Wikipedia": "Kingdom of Cyprus",
+  "SeshatID": "cy_cyprus_k",
+  "area_km2": 11463,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   32.23,
+   34.55,
+   34.54,
+   35.71
+  ]
+ },
+ {
+  "Name": "Kingdom of Cyprus",
+  "FromYear": 1363,
+  "ToYear": 1486,
+  "Wikidata": "Q213638",
+  "Wikipedia": "Kingdom of Cyprus",
+  "SeshatID": "cy_cyprus_k",
+  "area_km2": 12681,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   30.37,
+   34.55,
+   34.54,
+   37.06
+  ]
+ },
+ {
+  "Name": "Kingdom of Cyprus",
+  "FromYear": 1487,
+  "ToYear": 1491,
+  "Wikidata": "Q213638",
+  "Wikipedia": "Kingdom of Cyprus",
+  "SeshatID": "cy_cyprus_k",
+  "area_km2": 11463,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   32.23,
+   34.55,
+   34.54,
+   35.71
+  ]
+ },
+ {
+  "Name": "Kingdom of Jerusalem",
+  "FromYear": 1126,
+  "ToYear": 1168,
+  "Wikidata": "Q55502",
+  "Wikipedia": "Kingdom of Jerusalem",
+  "SeshatID": "il_jerusalem_k_1",
+  "area_km2": 54077,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   33.59,
+   29.47,
+   36.25,
+   33.91
+  ]
+ },
+ {
+  "Name": "Kingdom of Jerusalem",
+  "FromYear": 1169,
+  "ToYear": 1187,
+  "Wikidata": "Q55502",
+  "Wikipedia": "Kingdom of Jerusalem",
+  "SeshatID": "il_jerusalem_k_1",
+  "area_km2": 19111,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   34.55,
+   31.27,
+   36.07,
+   33.91
+  ]
+ },
+ {
+  "Name": "Kingdom of Jerusalem",
+  "FromYear": 1188,
+  "ToYear": 1191,
+  "Wikidata": "Q55502",
+  "Wikipedia": "Kingdom of Jerusalem",
+  "SeshatID": "",
+  "area_km2": 2576,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   35.22,
+   33.07,
+   35.81,
+   33.78
+  ]
+ },
+ {
+  "Name": "Kingdom of Jerusalem",
+  "FromYear": 1192,
+  "ToYear": 1235,
+  "Wikidata": "Q55502",
+  "Wikipedia": "Kingdom of Jerusalem",
+  "SeshatID": "il_jerusalem_k_2",
+  "area_km2": 8987,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   34.57,
+   31.72,
+   35.83,
+   33.91
+  ]
+ },
+ {
+  "Name": "Kingdom of Jerusalem",
+  "FromYear": 1236,
+  "ToYear": 1259,
+  "Wikidata": "Q55502",
+  "Wikipedia": "Kingdom of Jerusalem",
+  "SeshatID": "il_jerusalem_k_2",
+  "area_km2": 8936,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   34.57,
+   31.72,
+   35.83,
+   33.91
+  ]
+ },
+ {
+  "Name": "Kingdom of Jerusalem",
+  "FromYear": 1260,
+  "ToYear": 1271,
+  "Wikidata": "Q55502",
+  "Wikipedia": "Kingdom of Jerusalem",
+  "SeshatID": "il_jerusalem_k_2",
+  "area_km2": 8738,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   34.57,
+   31.72,
+   35.83,
+   33.91
+  ]
+ },
+ {
+  "Name": "Kingdom of Jerusalem",
+  "FromYear": 1272,
+  "ToYear": 1284,
+  "Wikidata": "Q55502",
+  "Wikipedia": "Kingdom of Jerusalem",
+  "SeshatID": "il_jerusalem_k_2",
+  "area_km2": 2145,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   35.03,
+   32.69,
+   35.82,
+   33.91
+  ]
+ },
+ {
+  "Name": "Kingdom of Jerusalem",
+  "FromYear": 1285,
+  "ToYear": 1293,
+  "Wikidata": "Q55502",
+  "Wikipedia": "Kingdom of Jerusalem",
+  "SeshatID": "il_jerusalem_k_2",
+  "area_km2": 2145,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   35.03,
+   32.69,
+   35.82,
+   33.91
+  ]
+ },
+ {
+  "Name": "Kingdom of Kongo",
+  "FromYear": 1440,
+  "ToYear": 1491,
+  "Wikidata": "Q796583",
+  "Wikipedia": "Kingdom of Kongo",
+  "SeshatID": "",
+  "area_km2": 132533,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   12.22,
+   -8.46,
+   16.59,
+   -4.28
+  ]
+ },
+ {
+  "Name": "Kingdom of Kongo",
+  "FromYear": 1492,
+  "ToYear": 1661,
+  "Wikidata": "Q796583",
+  "Wikipedia": "Kingdom of Kongo",
+  "SeshatID": "ao_kongo_2",
+  "area_km2": 132533,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   12.22,
+   -8.46,
+   16.59,
+   -4.28
+  ]
+ },
+ {
+  "Name": "Kingdom of Portugal",
+  "FromYear": 1241,
+  "ToYear": 1249,
+  "Wikidata": "Q45670",
+  "Wikipedia": "Kingdom of Portugal",
+  "SeshatID": "pt_portugal_k",
+  "area_km2": 47689,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -9.57,
+   37.38,
+   -6.85,
+   40.0
+  ]
+ },
+ {
+  "Name": "Kingdom of Portugal",
+  "FromYear": 1250,
+  "ToYear": 1414,
+  "Wikidata": "Q45670",
+  "Wikipedia": "Kingdom of Portugal",
+  "SeshatID": "pt_portugal_k",
+  "area_km2": 53263,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -9.57,
+   37.0,
+   -6.85,
+   40.0
+  ]
+ },
+ {
+  "Name": "Kingdom of Portugal",
+  "FromYear": 1415,
+  "ToYear": 1421,
+  "Wikidata": "Q45670",
+  "Wikipedia": "Kingdom of Portugal",
+  "SeshatID": "pt_portugal_k",
+  "area_km2": 53413,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -9.57,
+   35.77,
+   -5.33,
+   40.0
+  ]
+ },
+ {
+  "Name": "Kingdom of Portugal",
+  "FromYear": 1422,
+  "ToYear": 1439,
+  "Wikidata": "Q45670",
+  "Wikipedia": "Kingdom of Portugal",
+  "SeshatID": "pt_portugal_k",
+  "area_km2": 54336,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -17.17,
+   32.62,
+   -5.33,
+   40.0
+  ]
+ },
+ {
+  "Name": "Kingdom of Portugal",
+  "FromYear": 1440,
+  "ToYear": 1449,
+  "Wikidata": "Q45670",
+  "Wikipedia": "Kingdom of Portugal",
+  "SeshatID": "pt_portugal_k",
+  "area_km2": 54336,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -17.17,
+   32.62,
+   -5.33,
+   40.0
+  ]
+ },
+ {
+  "Name": "Kingdom of Portugal",
+  "FromYear": 1450,
+  "ToYear": 1462,
+  "Wikidata": "Q45670",
+  "Wikipedia": "Kingdom of Portugal",
+  "SeshatID": "pt_portugal_k",
+  "area_km2": 54336,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -17.17,
+   32.62,
+   -5.33,
+   40.0
+  ]
+ },
+ {
+  "Name": "Kingdom of Portugal",
+  "FromYear": 1463,
+  "ToYear": 1467,
+  "Wikidata": "Q45670",
+  "Wikipedia": "Kingdom of Portugal",
+  "SeshatID": "pt_portugal_k",
+  "area_km2": 54336,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -17.17,
+   32.62,
+   -5.33,
+   40.0
+  ]
+ },
+ {
+  "Name": "Kingdom of Portugal",
+  "FromYear": 1468,
+  "ToYear": 1474,
+  "Wikidata": "Q45670",
+  "Wikipedia": "Kingdom of Portugal",
+  "SeshatID": "pt_portugal_k",
+  "area_km2": 54336,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -17.17,
+   32.62,
+   -5.33,
+   40.0
+  ]
+ },
+ {
+  "Name": "Kingdom of Portugal",
+  "FromYear": 1475,
+  "ToYear": 1481,
+  "Wikidata": "Q45670",
+  "Wikipedia": "Kingdom of Portugal",
+  "SeshatID": "pt_portugal_k",
+  "area_km2": 56067,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -17.17,
+   32.62,
+   -5.24,
+   40.0
+  ]
+ },
+ {
+  "Name": "Kingdom of Portugal",
+  "FromYear": 1482,
+  "ToYear": 1486,
+  "Wikidata": "Q45670",
+  "Wikipedia": "Kingdom of Portugal",
+  "SeshatID": "pt_portugal_k",
+  "area_km2": 57079,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -17.17,
+   4.98,
+   -1.28,
+   40.0
+  ]
+ },
+ {
+  "Name": "Kingdom of Portugal",
+  "FromYear": 1487,
+  "ToYear": 1491,
+  "Wikidata": "Q45670",
+  "Wikipedia": "Kingdom of Portugal",
+  "SeshatID": "pt_portugal_k",
+  "area_km2": 57802,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -17.17,
+   4.85,
+   -1.28,
+   40.0
+  ]
+ },
+ {
+  "Name": "Kingdom of Portugal",
+  "FromYear": 1492,
+  "ToYear": 1496,
+  "Wikidata": "Q45670",
+  "Wikipedia": "Kingdom of Portugal",
+  "SeshatID": "pt_portugal_k",
+  "area_km2": 60449,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -17.17,
+   4.85,
+   -1.28,
+   40.0
+  ]
+ },
+ {
+  "Name": "Kingdom of Portugal",
+  "FromYear": 1497,
+  "ToYear": 1506,
+  "Wikidata": "Q45670",
+  "Wikipedia": "Kingdom of Portugal",
+  "SeshatID": "pt_portuguese_emp_1",
+  "area_km2": 64834,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -17.17,
+   0.03,
+   8.9,
+   40.0
+  ]
+ },
+ {
+  "Name": "Kingdom of Portugal",
+  "FromYear": 1507,
+  "ToYear": 1515,
+  "Wikidata": "Q45670",
+  "Wikipedia": "Kingdom of Portugal",
+  "SeshatID": "pt_portuguese_emp_1",
+  "area_km2": 58601,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -17.17,
+   22.91,
+   59.27,
+   40.0
+  ]
+ },
+ {
+  "Name": "Kingdom of Sicily",
+  "FromYear": 1139,
+  "ToYear": 1146,
+  "Wikidata": "Q188586",
+  "Wikipedia": "Kingdom of Sicily",
+  "SeshatID": "it_sicily_k_1",
+  "area_km2": 35839,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   12.49,
+   35.77,
+   18.38,
+   40.0
+  ]
+ },
+ {
+  "Name": "Kingdom of Sicily",
+  "FromYear": 1279,
+  "ToYear": 1284,
+  "Wikidata": "Q188586",
+  "Wikipedia": "Kingdom of Sicily",
+  "SeshatID": "it_sicily_k_2",
+  "area_km2": 549,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   22.87,
+   36.16,
+   23.12,
+   36.42
+  ]
+ },
+ {
+  "Name": "Kingdom of Sicily",
+  "FromYear": 1305,
+  "ToYear": 1374,
+  "Wikidata": "Q188586",
+  "Wikipedia": "Kingdom of Sicily",
+  "SeshatID": "",
+  "area_km2": 22914,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   12.49,
+   35.77,
+   15.63,
+   38.29
+  ]
+ },
+ {
+  "Name": "Kingdom of Sicily",
+  "FromYear": 1375,
+  "ToYear": 1384,
+  "Wikidata": "Q188586",
+  "Wikipedia": "Kingdom of Sicily",
+  "SeshatID": "",
+  "area_km2": 22914,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   12.49,
+   35.77,
+   15.63,
+   38.29
+  ]
+ },
+ {
+  "Name": "Mahdids",
+  "FromYear": 1169,
+  "ToYear": 1235,
+  "Wikidata": "Q1884830",
+  "Wikipedia": "Mahdids",
+  "SeshatID": "",
+  "area_km2": 84821,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   55.54,
+   21.31,
+   59.9,
+   26.32
+  ]
+ },
+ {
+  "Name": "Mahdids",
+  "FromYear": 1236,
+  "ToYear": 1259,
+  "Wikidata": "Q1884830",
+  "Wikipedia": "Mahdids",
+  "SeshatID": "",
+  "area_km2": 84578,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   55.53,
+   21.31,
+   59.9,
+   26.32
+  ]
+ },
+ {
+  "Name": "Mahdids",
+  "FromYear": 1260,
+  "ToYear": 1474,
+  "Wikidata": "Q1884830",
+  "Wikipedia": "Mahdids",
+  "SeshatID": "",
+  "area_km2": 84821,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   55.54,
+   21.31,
+   59.9,
+   26.32
+  ]
+ },
+ {
+  "Name": "Mahdids",
+  "FromYear": 1475,
+  "ToYear": 1501,
+  "Wikidata": "Q1884830",
+  "Wikipedia": "Mahdids",
+  "SeshatID": "",
+  "area_km2": 4416,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   58.27,
+   22.91,
+   59.27,
+   23.62
+  ]
+ },
+ {
+  "Name": "Mahdids",
+  "FromYear": 1502,
+  "ToYear": 1506,
+  "Wikidata": "Q1884830",
+  "Wikipedia": "Mahdids",
+  "SeshatID": "",
+  "area_km2": 4416,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   58.27,
+   22.91,
+   59.27,
+   23.62
+  ]
+ },
+ {
+  "Name": "Makuria",
+  "FromYear": 1111,
+  "ToYear": 1278,
+  "Wikidata": "Q829356",
+  "Wikipedia": "Makuria",
+  "SeshatID": "",
+  "area_km2": 213737,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   30.53,
+   17.9,
+   35.3,
+   23.81
+  ]
+ },
+ {
+  "Name": "Makuria",
+  "FromYear": 1294,
+  "ToYear": 1406,
+  "Wikidata": "Q829356",
+  "Wikipedia": "Makuria",
+  "SeshatID": "",
+  "area_km2": 213737,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   30.53,
+   17.9,
+   35.3,
+   23.81
+  ]
+ },
+ {
+  "Name": "Makuria",
+  "FromYear": 1407,
+  "ToYear": 1414,
+  "Wikidata": "Q829356",
+  "Wikipedia": "Makuria",
+  "SeshatID": "",
+  "area_km2": 213737,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   30.53,
+   17.9,
+   35.3,
+   23.81
+  ]
+ },
+ {
+  "Name": "Makuria Kingdom",
+  "FromYear": 1415,
+  "ToYear": 1506,
+  "Wikidata": "Q829356",
+  "Wikipedia": "Makuria",
+  "SeshatID": "",
+  "area_km2": 213737,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   30.53,
+   17.9,
+   35.3,
+   23.81
+  ]
+ },
+ {
+  "Name": "Makuria Kingdom",
+  "FromYear": 1507,
+  "ToYear": 1515,
+  "Wikidata": "Q829356",
+  "Wikipedia": "Makuria",
+  "SeshatID": "",
+  "area_km2": 242210,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   30.53,
+   17.32,
+   35.3,
+   23.81
+  ]
+ },
+ {
+  "Name": "Mali Empire",
+  "FromYear": 1236,
+  "ToYear": 1240,
+  "Wikidata": "Q184536",
+  "Wikipedia": "Mali Empire",
+  "SeshatID": "",
+  "area_km2": 979114,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -17.45,
+   9.48,
+   1.72,
+   18.03
+  ]
+ },
+ {
+  "Name": "Mali Empire",
+  "FromYear": 1241,
+  "ToYear": 1414,
+  "Wikidata": "Q184536",
+  "Wikipedia": "Mali Empire",
+  "SeshatID": "ml_mali_emp",
+  "area_km2": 979114,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -17.45,
+   9.48,
+   1.72,
+   18.03
+  ]
+ },
+ {
+  "Name": "Mali Empire",
+  "FromYear": 1415,
+  "ToYear": 1462,
+  "Wikidata": "Q184536",
+  "Wikipedia": "Mali Empire",
+  "SeshatID": "",
+  "area_km2": 1120550,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -17.45,
+   9.48,
+   1.72,
+   18.03
+  ]
+ },
+ {
+  "Name": "Mali Empire",
+  "FromYear": 1463,
+  "ToYear": 1467,
+  "Wikidata": "Q184536",
+  "Wikipedia": "Mali Empire",
+  "SeshatID": "",
+  "area_km2": 1002746,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -17.45,
+   9.48,
+   -2.21,
+   17.84
+  ]
+ },
+ {
+  "Name": "Mali Empire",
+  "FromYear": 1468,
+  "ToYear": 1474,
+  "Wikidata": "Q184536",
+  "Wikipedia": "Mali Empire",
+  "SeshatID": "",
+  "area_km2": 867327,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -17.46,
+   9.54,
+   -3.86,
+   17.58
+  ]
+ },
+ {
+  "Name": "Mali Empire",
+  "FromYear": 1475,
+  "ToYear": 1563,
+  "Wikidata": "Q184536",
+  "Wikipedia": "Mali Empire",
+  "SeshatID": "",
+  "area_km2": 347966,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -16.83,
+   9.54,
+   -6.47,
+   13.91
+  ]
+ },
+ {
+  "Name": "Mamluk Sultanate",
+  "FromYear": 1241,
+  "ToYear": 1249,
+  "Wikidata": "Q282428",
+  "Wikipedia": "Mamluk Sultanate",
+  "SeshatID": "",
+  "area_km2": 288107,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   34.47,
+   30.69,
+   41.92,
+   38.42
+  ]
+ },
+ {
+  "Name": "Mamluk Sultanate",
+  "FromYear": 1250,
+  "ToYear": 1259,
+  "Wikidata": "Q282428",
+  "Wikipedia": "Mamluk Sultanate",
+  "SeshatID": "",
+  "area_km2": 1523228,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   18.81,
+   17.51,
+   44.53,
+   38.42
+  ]
+ },
+ {
+  "Name": "Mamluk Sultanate",
+  "FromYear": 1260,
+  "ToYear": 1271,
+  "Wikidata": "Q282428",
+  "Wikipedia": "Mamluk Sultanate",
+  "SeshatID": "eg_mamluk_sultanate_1",
+  "area_km2": 1350178,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   18.81,
+   17.51,
+   44.53,
+   34.16
+  ]
+ },
+ {
+  "Name": "Mamluk Sultanate",
+  "FromYear": 1272,
+  "ToYear": 1278,
+  "Wikidata": "Q282428",
+  "Wikipedia": "Mamluk Sultanate",
+  "SeshatID": "eg_mamluk_sultanate_1",
+  "area_km2": 1471737,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   18.81,
+   17.51,
+   44.53,
+   37.0
+  ]
+ },
+ {
+  "Name": "Mamluk Sultanate",
+  "FromYear": 1279,
+  "ToYear": 1293,
+  "Wikidata": "Q282428",
+  "Wikipedia": "Mamluk Sultanate",
+  "SeshatID": "eg_mamluk_sultanate_1",
+  "area_km2": 1684265,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   18.81,
+   17.51,
+   44.53,
+   37.0
+  ]
+ },
+ {
+  "Name": "Mamluk Sultanate",
+  "FromYear": 1294,
+  "ToYear": 1343,
+  "Wikidata": "Q282428",
+  "Wikipedia": "Mamluk Sultanate",
+  "SeshatID": "eg_mamluk_sultanate_1",
+  "area_km2": 1474112,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   18.81,
+   17.51,
+   44.53,
+   37.0
+  ]
+ },
+ {
+  "Name": "Mamluk Sultanate",
+  "FromYear": 1344,
+  "ToYear": 1351,
+  "Wikidata": "Q282428",
+  "Wikipedia": "Mamluk Sultanate",
+  "SeshatID": "eg_mamluk_sultanate_1",
+  "area_km2": 1473586,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   18.81,
+   17.51,
+   44.53,
+   37.0
+  ]
+ },
+ {
+  "Name": "Mamluk Sultanate",
+  "FromYear": 1352,
+  "ToYear": 1362,
+  "Wikidata": "Q282428",
+  "Wikipedia": "Mamluk Sultanate",
+  "SeshatID": "eg_mamluk_sultanate_2",
+  "area_km2": 1473586,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   18.81,
+   17.51,
+   44.53,
+   37.0
+  ]
+ },
+ {
+  "Name": "Mamluk Sultanate",
+  "FromYear": 1363,
+  "ToYear": 1374,
+  "Wikidata": "Q282428",
+  "Wikipedia": "Mamluk Sultanate",
+  "SeshatID": "eg_mamluk_sultanate_2",
+  "area_km2": 1480246,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   18.81,
+   17.51,
+   44.53,
+   37.45
+  ]
+ },
+ {
+  "Name": "Mamluk Sultanate",
+  "FromYear": 1375,
+  "ToYear": 1384,
+  "Wikidata": "Q282428",
+  "Wikipedia": "Mamluk Sultanate",
+  "SeshatID": "eg_mamluk_sultanate_2",
+  "area_km2": 1509730,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   18.81,
+   17.51,
+   44.53,
+   37.9
+  ]
+ },
+ {
+  "Name": "Mamluk Sultanate",
+  "FromYear": 1385,
+  "ToYear": 1401,
+  "Wikidata": "Q282428",
+  "Wikipedia": "Mamluk Sultanate",
+  "SeshatID": "eg_mamluk_sultanate_2",
+  "area_km2": 1485756,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   18.81,
+   17.51,
+   44.53,
+   37.77
+  ]
+ },
+ {
+  "Name": "Mamluk Sultanate",
+  "FromYear": 1402,
+  "ToYear": 1406,
+  "Wikidata": "Q282428",
+  "Wikipedia": "Mamluk Sultanate",
+  "SeshatID": "eg_mamluk_sultanate_2",
+  "area_km2": 1460186,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   18.81,
+   17.51,
+   44.53,
+   37.77
+  ]
+ },
+ {
+  "Name": "Mamluk Sultanate",
+  "FromYear": 1407,
+  "ToYear": 1414,
+  "Wikidata": "Q282428",
+  "Wikipedia": "Mamluk Sultanate",
+  "SeshatID": "eg_mamluk_sultanate_2",
+  "area_km2": 1485756,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   18.81,
+   17.51,
+   44.53,
+   37.77
+  ]
+ },
+ {
+  "Name": "Mamluk Sultanate",
+  "FromYear": 1415,
+  "ToYear": 1467,
+  "Wikidata": "Q282428",
+  "Wikipedia": "Mamluk Sultanate",
+  "SeshatID": "eg_mamluk_sultanate_3",
+  "area_km2": 1485756,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   18.81,
+   17.51,
+   44.53,
+   37.77
+  ]
+ },
+ {
+  "Name": "Mamluk Sultanate",
+  "FromYear": 1468,
+  "ToYear": 1515,
+  "Wikidata": "Q282428",
+  "Wikipedia": "Mamluk Sultanate",
+  "SeshatID": "eg_mamluk_sultanate_3",
+  "area_km2": 1486282,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   18.81,
+   17.51,
+   44.53,
+   37.77
+  ]
+ },
+ {
+  "Name": "Marinid Sultanate",
+  "FromYear": 1250,
+  "ToYear": 1259,
+  "Wikidata": "Q582861",
+  "Wikipedia": "Marinid Sultanate",
+  "SeshatID": "",
+  "area_km2": 389775,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -11.62,
+   27.93,
+   4.64,
+   36.42
+  ]
+ },
+ {
+  "Name": "Marinid Sultanate",
+  "FromYear": 1344,
+  "ToYear": 1351,
+  "Wikidata": "Q582861",
+  "Wikipedia": "Marinid Sultanate",
+  "SeshatID": "ma_marinid_dyn",
+  "area_km2": 516132,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -11.62,
+   27.87,
+   4.68,
+   36.93
+  ]
+ },
+ {
+  "Name": "Marinid Sultanate",
+  "FromYear": 1352,
+  "ToYear": 1362,
+  "Wikidata": "Q582861",
+  "Wikipedia": "Marinid Sultanate",
+  "SeshatID": "ma_marinid_dyn",
+  "area_km2": 739896,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -11.62,
+   27.93,
+   18.9,
+   37.32
+  ]
+ },
+ {
+  "Name": "Marinid Sultanate",
+  "FromYear": 1363,
+  "ToYear": 1414,
+  "Wikidata": "Q582861",
+  "Wikipedia": "Marinid Sultanate",
+  "SeshatID": "ma_marinid_dyn",
+  "area_km2": 389699,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -11.62,
+   27.93,
+   4.64,
+   36.42
+  ]
+ },
+ {
+  "Name": "Marinid Sultanate",
+  "FromYear": 1415,
+  "ToYear": 1462,
+  "Wikidata": "Q582861",
+  "Wikipedia": "Marinid Sultanate",
+  "SeshatID": "ma_marinid_dyn",
+  "area_km2": 389524,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -11.62,
+   27.93,
+   4.64,
+   36.42
+  ]
+ },
+ {
+  "Name": "Marinid Sultanate",
+  "FromYear": 1463,
+  "ToYear": 1467,
+  "Wikidata": "Q582861",
+  "Wikipedia": "Marinid Sultanate",
+  "SeshatID": "ma_marinid_dyn",
+  "area_km2": 389524,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -11.62,
+   27.93,
+   4.64,
+   36.42
+  ]
+ },
+ {
+  "Name": "Muzaffarids",
+  "FromYear": 1344,
+  "ToYear": 1362,
+  "Wikidata": "Q6944360",
+  "Wikipedia": "Muzaffarids",
+  "SeshatID": "",
+  "area_km2": 266091,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   50.76,
+   31.01,
+   60.0,
+   35.52
+  ]
+ },
+ {
+  "Name": "Muzaffarids",
+  "FromYear": 1363,
+  "ToYear": 1374,
+  "Wikidata": "Q6944360",
+  "Wikipedia": "Muzaffarids",
+  "SeshatID": "",
+  "area_km2": 352237,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   49.02,
+   29.09,
+   60.0,
+   35.52
+  ]
+ },
+ {
+  "Name": "Muzaffarids",
+  "FromYear": 1375,
+  "ToYear": 1384,
+  "Wikidata": "Q6944360",
+  "Wikipedia": "Muzaffarids",
+  "SeshatID": "",
+  "area_km2": 271778,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   49.02,
+   29.09,
+   56.84,
+   35.52
+  ]
+ },
+ {
+  "Name": "Muzaffarids",
+  "FromYear": 1385,
+  "ToYear": 1394,
+  "Wikidata": "Q6944360",
+  "Wikipedia": "Muzaffarids",
+  "SeshatID": "",
+  "area_km2": 271752,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   49.02,
+   29.09,
+   56.84,
+   35.52
+  ]
+ },
+ {
+  "Name": "Nabhani Dynasty",
+  "FromYear": 1169,
+  "ToYear": 1176,
+  "Wikidata": "Q11938308",
+  "Wikipedia": "Nabhani dynasty",
+  "SeshatID": "",
+  "area_km2": 213858,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   42.21,
+   12.63,
+   49.49,
+   18.61
+  ]
+ },
+ {
+  "Name": "Najahid Dynasty",
+  "FromYear": 1139,
+  "ToYear": 1151,
+  "Wikidata": "Q1411866",
+  "Wikipedia": "Najahid dynasty",
+  "SeshatID": "",
+  "area_km2": 213858,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   42.21,
+   12.63,
+   49.49,
+   18.61
+  ]
+ },
+ {
+  "Name": "Najahid Dynasty",
+  "FromYear": 1152,
+  "ToYear": 1168,
+  "Wikidata": "Q1411866",
+  "Wikipedia": "Najahid dynasty",
+  "SeshatID": "",
+  "area_km2": 213858,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   42.21,
+   12.63,
+   49.49,
+   18.61
+  ]
+ },
+ {
+  "Name": "Negroponte",
+  "FromYear": 1206,
+  "ToYear": 1209,
+  "Wikidata": "Q247067",
+  "Wikipedia": "Negroponte",
+  "SeshatID": "",
+  "area_km2": 2181,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   23.03,
+   38.22,
+   24.18,
+   39.06
+  ]
+ },
+ {
+  "Name": "Nicaean Empire",
+  "FromYear": 1206,
+  "ToYear": 1209,
+  "Wikidata": "Q181254",
+  "Wikipedia": "Empire of Nicaea",
+  "SeshatID": "",
+  "area_km2": 67486,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   26.38,
+   37.25,
+   30.45,
+   40.0
+  ]
+ },
+ {
+  "Name": "Nicaean Empire",
+  "FromYear": 1210,
+  "ToYear": 1249,
+  "Wikidata": "Q181254",
+  "Wikipedia": "Empire of Nicaea",
+  "SeshatID": "",
+  "area_km2": 67486,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   26.38,
+   37.25,
+   30.45,
+   40.0
+  ]
+ },
+ {
+  "Name": "Ottoman Empire",
+  "FromYear": 1344,
+  "ToYear": 1351,
+  "Wikidata": "Q12560",
+  "Wikipedia": "Ottoman Empire",
+  "SeshatID": "",
+  "area_km2": 113477,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   26.13,
+   37.84,
+   41.57,
+   40.0
+  ]
+ },
+ {
+  "Name": "Ottoman Empire",
+  "FromYear": 1352,
+  "ToYear": 1362,
+  "Wikidata": "Q12560",
+  "Wikipedia": "Ottoman Empire",
+  "SeshatID": "",
+  "area_km2": 113617,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   26.13,
+   37.84,
+   41.57,
+   40.0
+  ]
+ },
+ {
+  "Name": "Ottoman Empire",
+  "FromYear": 1363,
+  "ToYear": 1374,
+  "Wikidata": "Q12560",
+  "Wikipedia": "Ottoman Empire",
+  "SeshatID": "",
+  "area_km2": 122802,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   26.13,
+   37.84,
+   41.57,
+   40.0
+  ]
+ },
+ {
+  "Name": "Portuguese Africa",
+  "FromYear": 1507,
+  "ToYear": 1533,
+  "Wikidata": "Q16879646",
+  "Wikipedia": "Portuguese Africa",
+  "SeshatID": "pt_portuguese_emp_1",
+  "area_km2": 28786,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -9.39,
+   -20.29,
+   54.5,
+   35.84
+  ]
+ },
+ {
+  "Name": "Principality of Achaea",
+  "FromYear": 1206,
+  "ToYear": 1209,
+  "Wikidata": "Q332005",
+  "Wikipedia": "Principality of Achaea",
+  "SeshatID": "gr_achaea_principality",
+  "area_km2": 19874,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   21.24,
+   36.16,
+   23.4,
+   38.42
+  ]
+ },
+ {
+  "Name": "Principality of Achaea",
+  "FromYear": 1210,
+  "ToYear": 1215,
+  "Wikidata": "Q332005",
+  "Wikipedia": "Principality of Achaea",
+  "SeshatID": "gr_achaea_principality",
+  "area_km2": 19799,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   21.24,
+   36.16,
+   23.4,
+   38.42
+  ]
+ },
+ {
+  "Name": "Principality of Achaea",
+  "FromYear": 1216,
+  "ToYear": 1235,
+  "Wikidata": "Q332005",
+  "Wikipedia": "Principality of Achaea",
+  "SeshatID": "gr_achaea_principality",
+  "area_km2": 19181,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   21.24,
+   36.16,
+   23.4,
+   38.42
+  ]
+ },
+ {
+  "Name": "Principality of Achaea",
+  "FromYear": 1236,
+  "ToYear": 1259,
+  "Wikidata": "Q332005",
+  "Wikipedia": "Principality of Achaea",
+  "SeshatID": "gr_achaea_principality",
+  "area_km2": 19083,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   21.24,
+   36.16,
+   23.4,
+   38.42
+  ]
+ },
+ {
+  "Name": "Principality of Achaea",
+  "FromYear": 1260,
+  "ToYear": 1278,
+  "Wikidata": "Q332005",
+  "Wikipedia": "Principality of Achaea",
+  "SeshatID": "gr_achaea_principality",
+  "area_km2": 14642,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   21.24,
+   36.16,
+   23.4,
+   38.42
+  ]
+ },
+ {
+  "Name": "Principality of Achaea",
+  "FromYear": 1294,
+  "ToYear": 1313,
+  "Wikidata": "Q332005",
+  "Wikipedia": "Principality of Achaea",
+  "SeshatID": "gr_achaea_principality",
+  "area_km2": 14741,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   21.24,
+   36.16,
+   23.4,
+   38.42
+  ]
+ },
+ {
+  "Name": "Principality of Achaea",
+  "FromYear": 1314,
+  "ToYear": 1325,
+  "Wikidata": "Q332005",
+  "Wikipedia": "Principality of Achaea",
+  "SeshatID": "gr_achaea_principality",
+  "area_km2": 15916,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   21.24,
+   37.0,
+   25.57,
+   39.0
+  ]
+ },
+ {
+  "Name": "Principality of Achaea",
+  "FromYear": 1385,
+  "ToYear": 1394,
+  "Wikidata": "Q332005",
+  "Wikipedia": "Principality of Achaea",
+  "SeshatID": "gr_achaea_principality",
+  "area_km2": 14191,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   21.24,
+   37.0,
+   23.4,
+   38.42
+  ]
+ },
+ {
+  "Name": "Principality of Achaea",
+  "FromYear": 1395,
+  "ToYear": 1430,
+  "Wikidata": "Q332005",
+  "Wikipedia": "Principality of Achaea",
+  "SeshatID": "gr_achaea_principality",
+  "area_km2": 13771,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   21.24,
+   37.0,
+   23.4,
+   38.42
+  ]
+ },
+ {
+  "Name": "Principality of Achaea",
+  "FromYear": 1431,
+  "ToYear": 1439,
+  "Wikidata": "Q332005",
+  "Wikipedia": "Principality of Achaea",
+  "SeshatID": "gr_achaea_principality",
+  "area_km2": 248,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   21.91,
+   37.06,
+   22.15,
+   37.19
+  ]
+ },
+ {
+  "Name": "Principality of Antioch",
+  "FromYear": 1139,
+  "ToYear": 1151,
+  "Wikidata": "Q235030",
+  "Wikipedia": "Principality of Antioch",
+  "SeshatID": "",
+  "area_km2": 15628,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   35.84,
+   35.19,
+   37.17,
+   36.93
+  ]
+ },
+ {
+  "Name": "Principality of Antioch",
+  "FromYear": 1152,
+  "ToYear": 1168,
+  "Wikidata": "Q235030",
+  "Wikipedia": "Principality of Antioch",
+  "SeshatID": "",
+  "area_km2": 15603,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   35.84,
+   35.19,
+   37.17,
+   36.93
+  ]
+ },
+ {
+  "Name": "Principality of Antioch",
+  "FromYear": 1169,
+  "ToYear": 1176,
+  "Wikidata": "Q235030",
+  "Wikipedia": "Principality of Antioch",
+  "SeshatID": "",
+  "area_km2": 8027,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   35.84,
+   35.19,
+   36.77,
+   36.93
+  ]
+ },
+ {
+  "Name": "Principality of Antioch",
+  "FromYear": 1177,
+  "ToYear": 1187,
+  "Wikidata": "Q235030",
+  "Wikipedia": "Principality of Antioch",
+  "SeshatID": "",
+  "area_km2": 7903,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   35.84,
+   35.19,
+   36.77,
+   36.93
+  ]
+ },
+ {
+  "Name": "Principality of Antioch",
+  "FromYear": 1188,
+  "ToYear": 1259,
+  "Wikidata": "Q235030",
+  "Wikipedia": "Principality of Antioch",
+  "SeshatID": "",
+  "area_km2": 5445,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   35.84,
+   35.64,
+   36.61,
+   36.8
+  ]
+ },
+ {
+  "Name": "Principality of Antioch",
+  "FromYear": 1260,
+  "ToYear": 1271,
+  "Wikidata": "Q235030",
+  "Wikipedia": "Principality of Antioch",
+  "SeshatID": "",
+  "area_km2": 5619,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   35.84,
+   35.64,
+   36.67,
+   36.8
+  ]
+ },
+ {
+  "Name": "Qara Qoyunlu",
+  "FromYear": 1375,
+  "ToYear": 1384,
+  "Wikidata": "Q324470",
+  "Wikipedia": "Qara Qoyunlu",
+  "SeshatID": "tr_qara_qoyunlu",
+  "area_km2": 334719,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   38.85,
+   34.81,
+   49.62,
+   40.0
+  ]
+ },
+ {
+  "Name": "Qara Qoyunlu",
+  "FromYear": 1385,
+  "ToYear": 1394,
+  "Wikidata": "Q324470",
+  "Wikipedia": "Qara Qoyunlu",
+  "SeshatID": "tr_qara_qoyunlu",
+  "area_km2": 290028,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   38.85,
+   34.81,
+   49.62,
+   40.0
+  ]
+ },
+ {
+  "Name": "Qara Qoyunlu",
+  "FromYear": 1395,
+  "ToYear": 1401,
+  "Wikidata": "Q324470",
+  "Wikipedia": "Qara Qoyunlu",
+  "SeshatID": "tr_qara_qoyunlu",
+  "area_km2": 147566,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   38.85,
+   35.45,
+   44.94,
+   40.0
+  ]
+ },
+ {
+  "Name": "Qara Qoyunlu",
+  "FromYear": 1407,
+  "ToYear": 1414,
+  "Wikidata": "Q324470",
+  "Wikipedia": "Qara Qoyunlu",
+  "SeshatID": "tr_qara_qoyunlu",
+  "area_km2": 15819,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   39.69,
+   39.13,
+   43.17,
+   40.0
+  ]
+ },
+ {
+  "Name": "Qara Qoyunlu",
+  "FromYear": 1415,
+  "ToYear": 1439,
+  "Wikidata": "Q324470",
+  "Wikipedia": "Qara Qoyunlu",
+  "SeshatID": "tr_qara_qoyunlu",
+  "area_km2": 419771,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   39.68,
+   32.81,
+   49.62,
+   40.0
+  ]
+ },
+ {
+  "Name": "Qara Qoyunlu",
+  "FromYear": 1440,
+  "ToYear": 1462,
+  "Wikidata": "Q324470",
+  "Wikipedia": "Qara Qoyunlu",
+  "SeshatID": "tr_qara_qoyunlu",
+  "area_km2": 496261,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   39.68,
+   29.41,
+   49.62,
+   40.0
+  ]
+ },
+ {
+  "Name": "Qara Qoyunlu",
+  "FromYear": 1463,
+  "ToYear": 1467,
+  "Wikidata": "Q324470",
+  "Wikipedia": "Qara Qoyunlu",
+  "SeshatID": "tr_qara_qoyunlu",
+  "area_km2": 496256,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   39.65,
+   29.41,
+   49.62,
+   40.0
+  ]
+ },
+ {
+  "Name": "Ramadanid Emirate",
+  "FromYear": 1385,
+  "ToYear": 1401,
+  "Wikidata": "Q2261321",
+  "Wikipedia": "Ramadanid Emirate",
+  "SeshatID": "",
+  "area_km2": 24048,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   33.61,
+   36.22,
+   37.06,
+   37.9
+  ]
+ },
+ {
+  "Name": "Ramadanid Emirate",
+  "FromYear": 1402,
+  "ToYear": 1449,
+  "Wikidata": "Q2261321",
+  "Wikipedia": "Ramadanid Emirate",
+  "SeshatID": "tr_ramadanid_emirate",
+  "area_km2": 24048,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   33.61,
+   36.22,
+   37.06,
+   37.9
+  ]
+ },
+ {
+  "Name": "Ramadanid Emirate",
+  "FromYear": 1450,
+  "ToYear": 1467,
+  "Wikidata": "Q2261321",
+  "Wikipedia": "Ramadanid Emirate",
+  "SeshatID": "tr_ramadanid_emirate",
+  "area_km2": 24447,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   33.61,
+   36.22,
+   37.06,
+   37.9
+  ]
+ },
+ {
+  "Name": "Ramadanid Emirate",
+  "FromYear": 1468,
+  "ToYear": 1511,
+  "Wikidata": "Q2261321",
+  "Wikipedia": "Ramadanid Emirate",
+  "SeshatID": "tr_ramadanid_emirate",
+  "area_km2": 24471,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   33.61,
+   36.22,
+   37.06,
+   37.9
+  ]
+ },
+ {
+  "Name": "Rasulid Dynasty",
+  "FromYear": 1236,
+  "ToYear": 1452,
+  "Wikidata": "Q2132267",
+  "Wikipedia": "Rasulid dynasty",
+  "SeshatID": "ye_rasulid_dyn",
+  "area_km2": 380138,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   42.21,
+   12.63,
+   52.38,
+   19.25
+  ]
+ },
+ {
+  "Name": "Rasulid Dynasty",
+  "FromYear": 1453,
+  "ToYear": 1458,
+  "Wikidata": "Q2132267",
+  "Wikipedia": "Rasulid dynasty",
+  "SeshatID": "ye_rasulid_dyn",
+  "area_km2": 380138,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   42.21,
+   12.63,
+   52.38,
+   19.25
+  ]
+ },
+ {
+  "Name": "Republic of Venice",
+  "FromYear": 1363,
+  "ToYear": 1374,
+  "Wikidata": "Q4948",
+  "Wikipedia": "Republic of Venice",
+  "SeshatID": "it_venetian_rep_3",
+  "area_km2": 8785,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   21.74,
+   35.0,
+   26.23,
+   39.06
+  ]
+ },
+ {
+  "Name": "Republic of Venice",
+  "FromYear": 1375,
+  "ToYear": 1384,
+  "Wikidata": "Q4948",
+  "Wikipedia": "Republic of Venice",
+  "SeshatID": "it_venetian_rep_3",
+  "area_km2": 8785,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   21.74,
+   35.0,
+   26.23,
+   39.06
+  ]
+ },
+ {
+  "Name": "Republic of Venice",
+  "FromYear": 1385,
+  "ToYear": 1394,
+  "Wikidata": "Q4948",
+  "Wikipedia": "Republic of Venice",
+  "SeshatID": "it_venetian_rep_3",
+  "area_km2": 10509,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   21.74,
+   35.0,
+   26.23,
+   39.06
+  ]
+ },
+ {
+  "Name": "Republic of Venice",
+  "FromYear": 1395,
+  "ToYear": 1401,
+  "Wikidata": "Q4948",
+  "Wikipedia": "Republic of Venice",
+  "SeshatID": "it_venetian_rep_3",
+  "area_km2": 19156,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   19.76,
+   35.0,
+   26.23,
+   39.77
+  ]
+ },
+ {
+  "Name": "Republic of Venice",
+  "FromYear": 1402,
+  "ToYear": 1406,
+  "Wikidata": "Q4948",
+  "Wikipedia": "Republic of Venice",
+  "SeshatID": "it_venetian_rep_3",
+  "area_km2": 19352,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   19.76,
+   35.0,
+   26.23,
+   39.77
+  ]
+ },
+ {
+  "Name": "Safavid Dynasty",
+  "FromYear": 1502,
+  "ToYear": 1506,
+  "Wikidata": "Q161205",
+  "Wikipedia": "Safavid dynasty",
+  "SeshatID": "ir_safavid_emp",
+  "area_km2": 143068,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   43.79,
+   36.55,
+   50.57,
+   40.0
+  ]
+ },
+ {
+  "Name": "Safavid Dynasty",
+  "FromYear": 1507,
+  "ToYear": 1511,
+  "Wikidata": "Q161205",
+  "Wikipedia": "Safavid dynasty",
+  "SeshatID": "ir_safavid_emp",
+  "area_km2": 1320042,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   41.24,
+   25.36,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Sarbadars",
+  "FromYear": 1344,
+  "ToYear": 1351,
+  "Wikidata": "Q1931074",
+  "Wikipedia": "Sarbadars",
+  "SeshatID": "",
+  "area_km2": 358350,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   50.53,
+   33.65,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Sarbadars",
+  "FromYear": 1352,
+  "ToYear": 1362,
+  "Wikidata": "Q1931074",
+  "Wikipedia": "Sarbadars",
+  "SeshatID": "",
+  "area_km2": 358350,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   50.53,
+   33.65,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Sarbadars",
+  "FromYear": 1363,
+  "ToYear": 1374,
+  "Wikidata": "Q1931074",
+  "Wikipedia": "Sarbadars",
+  "SeshatID": "",
+  "area_km2": 358134,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   50.53,
+   33.65,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Sarbadars",
+  "FromYear": 1375,
+  "ToYear": 1384,
+  "Wikidata": "Q1931074",
+  "Wikipedia": "Sarbadars",
+  "SeshatID": "",
+  "area_km2": 340261,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   50.53,
+   33.84,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Sarbadars",
+  "FromYear": 1385,
+  "ToYear": 1394,
+  "Wikidata": "Q1931074",
+  "Wikipedia": "Sarbadars",
+  "SeshatID": "",
+  "area_km2": 340110,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   50.53,
+   33.84,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Songhai Empire",
+  "FromYear": 1463,
+  "ToYear": 1467,
+  "Wikidata": "Q202687",
+  "Wikipedia": "Songhai Empire",
+  "SeshatID": "ml_songhai_1",
+  "area_km2": 117725,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -2.48,
+   14.43,
+   1.72,
+   18.03
+  ]
+ },
+ {
+  "Name": "Songhai Empire",
+  "FromYear": 1468,
+  "ToYear": 1474,
+  "Wikidata": "Q202687",
+  "Wikipedia": "Songhai Empire",
+  "SeshatID": "ml_songhai_1",
+  "area_km2": 253061,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -7.67,
+   14.43,
+   1.72,
+   18.03
+  ]
+ },
+ {
+  "Name": "Songhai Empire",
+  "FromYear": 1475,
+  "ToYear": 1496,
+  "Wikidata": "Q202687",
+  "Wikipedia": "Songhai Empire",
+  "SeshatID": "ml_songhai_1",
+  "area_km2": 633006,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -14.5,
+   12.11,
+   1.72,
+   18.03
+  ]
+ },
+ {
+  "Name": "Songhai Empire",
+  "FromYear": 1497,
+  "ToYear": 1563,
+  "Wikidata": "Q202687",
+  "Wikipedia": "Songhai Empire",
+  "SeshatID": "ml_songhai_2",
+  "area_km2": 633006,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -14.5,
+   12.11,
+   1.72,
+   18.03
+  ]
+ },
+ {
+  "Name": "Sosso Empire",
+  "FromYear": 1202,
+  "ToYear": 1226,
+  "Wikidata": "Q13099593",
+  "Wikipedia": "Sosso Empire",
+  "SeshatID": "",
+  "area_km2": 205380,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -8.58,
+   13.34,
+   -3.8,
+   17.64
+  ]
+ },
+ {
+  "Name": "Sosso Empire",
+  "FromYear": 1227,
+  "ToYear": 1235,
+  "Wikidata": "Q13099593",
+  "Wikipedia": "Sosso Empire",
+  "SeshatID": "",
+  "area_km2": 205380,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -8.58,
+   13.34,
+   -3.8,
+   17.64
+  ]
+ },
+ {
+  "Name": "Sultanate of Rum",
+  "FromYear": 1139,
+  "ToYear": 1146,
+  "Wikidata": "Q975405",
+  "Wikipedia": "Sultanate of Rum",
+  "SeshatID": "tr_rum_sultanate",
+  "area_km2": 101342,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   31.21,
+   36.61,
+   35.43,
+   40.0
+  ]
+ },
+ {
+  "Name": "Sultanate of Rum",
+  "FromYear": 1147,
+  "ToYear": 1151,
+  "Wikidata": "Q975405",
+  "Wikipedia": "Sultanate of Rum",
+  "SeshatID": "tr_rum_sultanate",
+  "area_km2": 101640,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   31.21,
+   36.61,
+   35.43,
+   40.0
+  ]
+ },
+ {
+  "Name": "Sultanate of Rum",
+  "FromYear": 1152,
+  "ToYear": 1176,
+  "Wikidata": "Q975405",
+  "Wikipedia": "Sultanate of Rum",
+  "SeshatID": "tr_rum_sultanate",
+  "area_km2": 101669,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   31.21,
+   36.61,
+   35.43,
+   40.0
+  ]
+ },
+ {
+  "Name": "Sultanate of Rum",
+  "FromYear": 1177,
+  "ToYear": 1187,
+  "Wikidata": "Q975405",
+  "Wikipedia": "Sultanate of Rum",
+  "SeshatID": "tr_rum_sultanate",
+  "area_km2": 122651,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   31.22,
+   36.61,
+   38.85,
+   40.0
+  ]
+ },
+ {
+  "Name": "Sultanate of Rum",
+  "FromYear": 1188,
+  "ToYear": 1191,
+  "Wikidata": "Q975405",
+  "Wikipedia": "Sultanate of Rum",
+  "SeshatID": "tr_rum_sultanate",
+  "area_km2": 196238,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   29.77,
+   36.87,
+   39.22,
+   40.0
+  ]
+ },
+ {
+  "Name": "Sultanate of Rum",
+  "FromYear": 1192,
+  "ToYear": 1201,
+  "Wikidata": "Q975405",
+  "Wikipedia": "Sultanate of Rum",
+  "SeshatID": "tr_rum_sultanate",
+  "area_km2": 202094,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   29.77,
+   36.93,
+   39.83,
+   40.0
+  ]
+ },
+ {
+  "Name": "Sultanate of Rum",
+  "FromYear": 1202,
+  "ToYear": 1205,
+  "Wikidata": "Q975405",
+  "Wikipedia": "Sultanate of Rum",
+  "SeshatID": "tr_rum_sultanate",
+  "area_km2": 246997,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   27.6,
+   36.22,
+   41.57,
+   40.0
+  ]
+ },
+ {
+  "Name": "Sultanate of Rum",
+  "FromYear": 1206,
+  "ToYear": 1209,
+  "Wikidata": "Q975405",
+  "Wikipedia": "Sultanate of Rum",
+  "SeshatID": "tr_rum_sultanate",
+  "area_km2": 250535,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   27.6,
+   36.22,
+   41.57,
+   40.0
+  ]
+ },
+ {
+  "Name": "Sultanate of Rum",
+  "FromYear": 1210,
+  "ToYear": 1215,
+  "Wikidata": "Q975405",
+  "Wikipedia": "Sultanate of Rum",
+  "SeshatID": "tr_rum_sultanate",
+  "area_km2": 250340,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   27.6,
+   36.22,
+   41.57,
+   40.0
+  ]
+ },
+ {
+  "Name": "Sultanate of Rum",
+  "FromYear": 1216,
+  "ToYear": 1226,
+  "Wikidata": "Q975405",
+  "Wikipedia": "Sultanate of Rum",
+  "SeshatID": "tr_rum_sultanate",
+  "area_km2": 250340,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   27.6,
+   36.22,
+   41.57,
+   40.0
+  ]
+ },
+ {
+  "Name": "Sultanate of Rum",
+  "FromYear": 1227,
+  "ToYear": 1249,
+  "Wikidata": "Q975405",
+  "Wikipedia": "Sultanate of Rum",
+  "SeshatID": "tr_rum_sultanate",
+  "area_km2": 250535,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   27.6,
+   36.22,
+   41.57,
+   40.0
+  ]
+ },
+ {
+  "Name": "Sultanate of Rum",
+  "FromYear": 1250,
+  "ToYear": 1259,
+  "Wikidata": "Q975405",
+  "Wikipedia": "Sultanate of Rum",
+  "SeshatID": "",
+  "area_km2": 143716,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   27.6,
+   36.22,
+   35.07,
+   40.0
+  ]
+ },
+ {
+  "Name": "Sultanate of Rum",
+  "FromYear": 1305,
+  "ToYear": 1313,
+  "Wikidata": "Q975405",
+  "Wikipedia": "Sultanate of Rum",
+  "SeshatID": "",
+  "area_km2": 57122,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   31.88,
+   37.13,
+   35.39,
+   40.0
+  ]
+ },
+ {
+  "Name": "Tahirid Sultanate",
+  "FromYear": 1459,
+  "ToYear": 1511,
+  "Wikidata": "Q373981",
+  "Wikipedia": "Tahirid dynasty",
+  "SeshatID": "ye_tahirid_dyn",
+  "area_km2": 380138,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   42.21,
+   12.63,
+   52.38,
+   19.25
+  ]
+ },
+ {
+  "Name": "Taifa of Algeciras",
+  "FromYear": 1147,
+  "ToYear": 1151,
+  "Wikidata": "Q1183407",
+  "Wikipedia": "Taifa of Algeciras",
+  "SeshatID": "es_taifas",
+  "area_km2": 4749,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -5.39,
+   36.42,
+   -3.86,
+   37.13
+  ]
+ },
+ {
+  "Name": "Taifa of Algeciras",
+  "FromYear": 1152,
+  "ToYear": 1168,
+  "Wikidata": "Q1183407",
+  "Wikipedia": "Taifa of Algeciras",
+  "SeshatID": "es_taifas",
+  "area_km2": 4749,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -5.39,
+   36.42,
+   -3.86,
+   37.13
+  ]
+ },
+ {
+  "Name": "Taifa of Almería",
+  "FromYear": 1147,
+  "ToYear": 1151,
+  "Wikidata": "Q2580032",
+  "Wikipedia": "Taifa of Almería",
+  "SeshatID": "es_taifas",
+  "area_km2": 8984,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -3.28,
+   36.8,
+   -1.7,
+   37.96
+  ]
+ },
+ {
+  "Name": "Taifa of Almería",
+  "FromYear": 1236,
+  "ToYear": 1240,
+  "Wikidata": "Q2580032",
+  "Wikipedia": "Taifa of Almería",
+  "SeshatID": "es_taifas",
+  "area_km2": 5161,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -4.07,
+   37.32,
+   -1.62,
+   38.03
+  ]
+ },
+ {
+  "Name": "Taifa of Almería",
+  "FromYear": 1241,
+  "ToYear": 1249,
+  "Wikidata": "Q2580032",
+  "Wikipedia": "Taifa of Almería",
+  "SeshatID": "es_taifas",
+  "area_km2": 1680,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -2.29,
+   37.32,
+   -1.62,
+   38.03
+  ]
+ },
+ {
+  "Name": "Taifa of Badajoz",
+  "FromYear": 1147,
+  "ToYear": 1151,
+  "Wikidata": "Q276841",
+  "Wikipedia": "Taifa of Badajoz",
+  "SeshatID": "es_taifas",
+  "area_km2": 4461,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -8.13,
+   38.29,
+   -7.14,
+   39.0
+  ]
+ },
+ {
+  "Name": "Taifa of Carmona",
+  "FromYear": 1147,
+  "ToYear": 1151,
+  "Wikidata": "Q2668584",
+  "Wikipedia": "Taifa of Carmona",
+  "SeshatID": "es_taifas",
+  "area_km2": 4265,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -6.02,
+   37.64,
+   -4.76,
+   38.29
+  ]
+ },
+ {
+  "Name": "Taifa of Córdoba",
+  "FromYear": 1147,
+  "ToYear": 1151,
+  "Wikidata": "Q2285679",
+  "Wikipedia": "Taifa of Córdoba",
+  "SeshatID": "es_taifas",
+  "area_km2": 15343,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -5.44,
+   37.51,
+   -3.02,
+   38.55
+  ]
+ },
+ {
+  "Name": "Taifa of Córdoba",
+  "FromYear": 1236,
+  "ToYear": 1240,
+  "Wikidata": "Q2285679",
+  "Wikipedia": "Taifa of Córdoba",
+  "SeshatID": "es_taifas",
+  "area_km2": 420,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -4.2,
+   37.38,
+   -3.9,
+   37.71
+  ]
+ },
+ {
+  "Name": "Taifa of Córdoba",
+  "FromYear": 1241,
+  "ToYear": 1249,
+  "Wikidata": "Q2285679",
+  "Wikipedia": "Taifa of Córdoba",
+  "SeshatID": "es_taifas",
+  "area_km2": 2545,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -4.2,
+   37.38,
+   -2.9,
+   37.84
+  ]
+ },
+ {
+  "Name": "Taifa of Dénia",
+  "FromYear": 1147,
+  "ToYear": 1151,
+  "Wikidata": "Q252323",
+  "Wikipedia": "Taifa of Dénia",
+  "SeshatID": "es_taifas",
+  "area_km2": 15115,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -3.46,
+   37.64,
+   -0.76,
+   38.87
+  ]
+ },
+ {
+  "Name": "Taifa of Dénia",
+  "FromYear": 1236,
+  "ToYear": 1240,
+  "Wikidata": "Q252323",
+  "Wikipedia": "Taifa of Dénia",
+  "SeshatID": "es_taifas",
+  "area_km2": 7261,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -1.37,
+   37.77,
+   0.1,
+   39.06
+  ]
+ },
+ {
+  "Name": "Taifa of Dénia",
+  "FromYear": 1241,
+  "ToYear": 1249,
+  "Wikidata": "Q252323",
+  "Wikipedia": "Taifa of Dénia",
+  "SeshatID": "es_taifas",
+  "area_km2": 7261,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -1.37,
+   37.77,
+   0.1,
+   39.06
+  ]
+ },
+ {
+  "Name": "Taifa of Murcia",
+  "FromYear": 1147,
+  "ToYear": 1151,
+  "Wikidata": "Q921067",
+  "Wikipedia": "Taifa of Murcia",
+  "SeshatID": "es_taifas",
+  "area_km2": 9420,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -2.29,
+   37.32,
+   -0.66,
+   38.29
+  ]
+ },
+ {
+  "Name": "Taifa of Murcia",
+  "FromYear": 1152,
+  "ToYear": 1168,
+  "Wikidata": "Q921067",
+  "Wikipedia": "Taifa of Murcia",
+  "SeshatID": "es_taifas",
+  "area_km2": 59719,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -3.45,
+   36.93,
+   0.1,
+   40.0
+  ]
+ },
+ {
+  "Name": "Taifa of Murcia",
+  "FromYear": 1169,
+  "ToYear": 1176,
+  "Wikidata": "Q921067",
+  "Wikipedia": "Taifa of Murcia",
+  "SeshatID": "es_taifas",
+  "area_km2": 59729,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -3.45,
+   36.93,
+   0.1,
+   40.0
+  ]
+ },
+ {
+  "Name": "Taifa of Murcia",
+  "FromYear": 1236,
+  "ToYear": 1240,
+  "Wikidata": "Q921067",
+  "Wikipedia": "Taifa of Murcia",
+  "SeshatID": "es_taifas",
+  "area_km2": 7863,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -2.22,
+   37.45,
+   -0.71,
+   38.35
+  ]
+ },
+ {
+  "Name": "Taifa of Murcia",
+  "FromYear": 1241,
+  "ToYear": 1249,
+  "Wikidata": "Q921067",
+  "Wikipedia": "Taifa of Murcia",
+  "SeshatID": "es_taifas",
+  "area_km2": 7863,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -2.22,
+   37.45,
+   -0.71,
+   38.35
+  ]
+ },
+ {
+  "Name": "Taifa of Niebla",
+  "FromYear": 1147,
+  "ToYear": 1151,
+  "Wikidata": "Q2668600",
+  "Wikipedia": "Taifa of Niebla",
+  "SeshatID": "es_taifas",
+  "area_km2": 1458,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -6.96,
+   37.45,
+   -6.4,
+   37.84
+  ]
+ },
+ {
+  "Name": "Taifa of Niebla",
+  "FromYear": 1236,
+  "ToYear": 1240,
+  "Wikidata": "Q2668600",
+  "Wikipedia": "Taifa of Niebla",
+  "SeshatID": "es_taifas",
+  "area_km2": 1556,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -6.96,
+   37.45,
+   -6.4,
+   37.84
+  ]
+ },
+ {
+  "Name": "Taifa of Niebla",
+  "FromYear": 1241,
+  "ToYear": 1249,
+  "Wikidata": "Q2668600",
+  "Wikipedia": "Taifa of Niebla",
+  "SeshatID": "es_taifas",
+  "area_km2": 1359,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -6.96,
+   37.45,
+   -6.41,
+   37.84
+  ]
+ },
+ {
+  "Name": "Taifa of Saltés and Huelva",
+  "FromYear": 1147,
+  "ToYear": 1151,
+  "Wikidata": "Q2081763",
+  "Wikipedia": "Taifa of Saltés and Huelva",
+  "SeshatID": "es_taifas",
+  "area_km2": 4230,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -7.73,
+   37.19,
+   -6.62,
+   37.77
+  ]
+ },
+ {
+  "Name": "Taifa of Silves",
+  "FromYear": 1147,
+  "ToYear": 1151,
+  "Wikidata": "Q1994569",
+  "Wikipedia": "Taifa of Silves",
+  "SeshatID": "es_taifas",
+  "area_km2": 6086,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -9.01,
+   37.0,
+   -8.02,
+   37.96
+  ]
+ },
+ {
+  "Name": "Taifa of Silves",
+  "FromYear": 1152,
+  "ToYear": 1168,
+  "Wikidata": "Q1994569",
+  "Wikipedia": "Taifa of Silves",
+  "SeshatID": "es_taifas",
+  "area_km2": 6086,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -9.01,
+   37.0,
+   -8.02,
+   37.96
+  ]
+ },
+ {
+  "Name": "Taifa of Tejada",
+  "FromYear": 1147,
+  "ToYear": 1151,
+  "Wikidata": "Q2522604",
+  "Wikipedia": "Taifa of Tejada",
+  "SeshatID": "es_taifas",
+  "area_km2": 2280,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -8.17,
+   37.0,
+   -7.45,
+   37.45
+  ]
+ },
+ {
+  "Name": "Taifa of Valencia",
+  "FromYear": 1147,
+  "ToYear": 1151,
+  "Wikidata": "Q676811",
+  "Wikipedia": "Taifa of Valencia",
+  "SeshatID": "es_taifas",
+  "area_km2": 30988,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   -2.95,
+   38.22,
+   0.1,
+   40.0
+  ]
+ },
+ {
+  "Name": "Taifa of Valencia",
+  "FromYear": 1236,
+  "ToYear": 1240,
+  "Wikidata": "Q676811",
+  "Wikipedia": "Taifa of Valencia",
+  "SeshatID": "es_taifas",
+  "area_km2": 7747,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -1.37,
+   38.87,
+   -0.23,
+   39.9
+  ]
+ },
+ {
+  "Name": "Taifa of Valencia",
+  "FromYear": 1241,
+  "ToYear": 1249,
+  "Wikidata": "Q676811",
+  "Wikipedia": "Taifa of Valencia",
+  "SeshatID": "es_taifas",
+  "area_km2": 6264,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -1.37,
+   38.87,
+   -0.23,
+   39.84
+  ]
+ },
+ {
+  "Name": "Takrur",
+  "FromYear": 1139,
+  "ToYear": 1226,
+  "Wikidata": "Q2272880",
+  "Wikipedia": "Takrur",
+  "SeshatID": "",
+  "area_km2": 74531,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -16.55,
+   14.36,
+   -11.72,
+   17.0
+  ]
+ },
+ {
+  "Name": "Takrur",
+  "FromYear": 1227,
+  "ToYear": 1235,
+  "Wikidata": "Q2272880",
+  "Wikipedia": "Takrur",
+  "SeshatID": "",
+  "area_km2": 74531,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -16.55,
+   14.36,
+   -11.72,
+   17.0
+  ]
+ },
+ {
+  "Name": "Thessaly",
+  "FromYear": 1272,
+  "ToYear": 1325,
+  "Wikidata": "Q166919",
+  "Wikipedia": "Thessaly",
+  "SeshatID": "",
+  "area_km2": 11370,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   21.4,
+   38.87,
+   23.14,
+   40.0
+  ]
+ },
+ {
+  "Name": "Thessaly",
+  "FromYear": 1326,
+  "ToYear": 1332,
+  "Wikidata": "Q166919",
+  "Wikipedia": "Thessaly",
+  "SeshatID": "",
+  "area_km2": 11150,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   21.4,
+   38.87,
+   23.14,
+   40.0
+  ]
+ },
+ {
+  "Name": "Timurid Empire",
+  "FromYear": 1395,
+  "ToYear": 1401,
+  "Wikidata": "Q484195",
+  "Wikipedia": "Timurid Empire",
+  "SeshatID": "uz_timurid_emp",
+  "area_km2": 1580681,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   41.65,
+   25.36,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Timurid Empire",
+  "FromYear": 1402,
+  "ToYear": 1406,
+  "Wikidata": "Q484195",
+  "Wikipedia": "Timurid Empire",
+  "SeshatID": "uz_timurid_emp",
+  "area_km2": 2120024,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   32.06,
+   25.36,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Timurid Empire",
+  "FromYear": 1407,
+  "ToYear": 1414,
+  "Wikidata": "Q484195",
+  "Wikipedia": "Timurid Empire",
+  "SeshatID": "uz_timurid_emp",
+  "area_km2": 1947893,
+  "clipped": true,
+  "source": "cliopatria",
+  "bounds": [
+   40.51,
+   25.36,
+   60.0,
+   40.0
+  ]
+ },
+ {
+  "Name": "Uyunid Emirate",
+  "FromYear": 1072,
+  "ToYear": 1168,
+  "Wikidata": "Q1448688",
+  "Wikipedia": "Uyunid dynasty",
+  "SeshatID": "",
+  "area_km2": 73786,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   47.45,
+   23.69,
+   56.09,
+   29.99
+  ]
+ },
+ {
+  "Name": "Uyunid Emirate",
+  "FromYear": 1169,
+  "ToYear": 1226,
+  "Wikidata": "Q1448688",
+  "Wikipedia": "Uyunid dynasty",
+  "SeshatID": "",
+  "area_km2": 73978,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   47.45,
+   23.69,
+   56.05,
+   29.99
+  ]
+ },
+ {
+  "Name": "Uyunid Emirate",
+  "FromYear": 1227,
+  "ToYear": 1235,
+  "Wikidata": "Q1448688",
+  "Wikipedia": "Uyunid dynasty",
+  "SeshatID": "",
+  "area_km2": 73978,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   47.45,
+   23.69,
+   56.05,
+   29.99
+  ]
+ },
+ {
+  "Name": "Wattasid dynasty",
+  "FromYear": 1468,
+  "ToYear": 1474,
+  "Wikidata": "Q970799",
+  "Wikipedia": "Wattasid dynasty",
+  "SeshatID": "ma_wattasid_dyn",
+  "area_km2": 389474,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -11.62,
+   27.93,
+   -1.58,
+   35.77
+  ]
+ },
+ {
+  "Name": "Wattasid dynasty",
+  "FromYear": 1475,
+  "ToYear": 1491,
+  "Wikidata": "Q970799",
+  "Wikipedia": "Wattasid dynasty",
+  "SeshatID": "ma_wattasid_dyn",
+  "area_km2": 387566,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -11.62,
+   27.93,
+   -1.58,
+   35.58
+  ]
+ },
+ {
+  "Name": "Wattasid dynasty",
+  "FromYear": 1492,
+  "ToYear": 1496,
+  "Wikidata": "Q970799",
+  "Wikipedia": "Wattasid dynasty",
+  "SeshatID": "ma_wattasid_dyn",
+  "area_km2": 384765,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -11.62,
+   27.93,
+   -1.58,
+   35.58
+  ]
+ },
+ {
+  "Name": "Wattasid dynasty",
+  "FromYear": 1497,
+  "ToYear": 1501,
+  "Wikidata": "Q970799",
+  "Wikipedia": "Wattasid dynasty",
+  "SeshatID": "ma_wattasid_dyn",
+  "area_km2": 385093,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -11.62,
+   27.93,
+   -1.58,
+   35.58
+  ]
+ },
+ {
+  "Name": "Wattasid dynasty",
+  "FromYear": 1502,
+  "ToYear": 1546,
+  "Wikidata": "Q970799",
+  "Wikipedia": "Wattasid dynasty",
+  "SeshatID": "ma_wattasid_dyn",
+  "area_km2": 381355,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -11.62,
+   27.93,
+   -1.58,
+   35.58
+  ]
+ },
+ {
+  "Name": "Zagwe dynasty",
+  "FromYear": 1139,
+  "ToYear": 1259,
+  "Wikidata": "Q140446",
+  "Wikipedia": "Zagwe kingdom",
+  "SeshatID": "et_zagwe",
+  "area_km2": 14487,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   38.08,
+   11.79,
+   39.69,
+   12.82
+  ]
+ },
+ {
+  "Name": "Zagwe dynasty",
+  "FromYear": 1260,
+  "ToYear": 1271,
+  "Wikidata": "Q140446",
+  "Wikipedia": "Zagwe kingdom",
+  "SeshatID": "et_zagwe",
+  "area_km2": 14487,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   38.08,
+   11.79,
+   39.69,
+   12.82
+  ]
+ },
+ {
+  "Name": "Zayyanid dynasty",
+  "FromYear": 1236,
+  "ToYear": 1284,
+  "Wikidata": "Q307697",
+  "Wikipedia": "Zayyanid dynasty",
+  "SeshatID": "dz_zayyanid_dyn;dz_tlemcen",
+  "area_km2": 126112,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -2.12,
+   33.52,
+   4.67,
+   36.93
+  ]
+ },
+ {
+  "Name": "Zayyanid dynasty",
+  "FromYear": 1285,
+  "ToYear": 1343,
+  "Wikidata": "Q307697",
+  "Wikipedia": "Zayyanid dynasty",
+  "SeshatID": "dz_zayyanid_dyn;dz_tlemcen",
+  "area_km2": 126468,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -2.12,
+   33.46,
+   4.67,
+   36.93
+  ]
+ },
+ {
+  "Name": "Zayyanid dynasty",
+  "FromYear": 1363,
+  "ToYear": 1506,
+  "Wikidata": "Q307697",
+  "Wikipedia": "Zayyanid dynasty",
+  "SeshatID": "dz_zayyanid_dyn;dz_tlemcen",
+  "area_km2": 126468,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -2.12,
+   33.46,
+   4.67,
+   36.93
+  ]
+ },
+ {
+  "Name": "Zayyanid dynasty",
+  "FromYear": 1507,
+  "ToYear": 1511,
+  "Wikidata": "Q307697",
+  "Wikipedia": "Zayyanid dynasty",
+  "SeshatID": "dz_zayyanid_dyn;dz_tlemcen",
+  "area_km2": 125439,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   -2.12,
+   33.46,
+   4.67,
+   36.93
+  ]
+ },
+ {
+  "Name": "Zengid dynasty",
+  "FromYear": 1139,
+  "ToYear": 1146,
+  "Wikidata": "Q189545",
+  "Wikipedia": "Zengid dynasty",
+  "SeshatID": "",
+  "area_km2": 346634,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   35.77,
+   31.21,
+   44.95,
+   39.32
+  ]
+ },
+ {
+  "Name": "Zengid dynasty",
+  "FromYear": 1147,
+  "ToYear": 1151,
+  "Wikidata": "Q189545",
+  "Wikipedia": "Zengid dynasty",
+  "SeshatID": "",
+  "area_km2": 363562,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   35.77,
+   31.21,
+   44.95,
+   39.32
+  ]
+ },
+ {
+  "Name": "Zengid dynasty",
+  "FromYear": 1152,
+  "ToYear": 1168,
+  "Wikidata": "Q189545",
+  "Wikipedia": "Zengid dynasty",
+  "SeshatID": "",
+  "area_km2": 386222,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   35.77,
+   31.21,
+   44.95,
+   39.32
+  ]
+ },
+ {
+  "Name": "Zengid dynasty",
+  "FromYear": 1169,
+  "ToYear": 1176,
+  "Wikidata": "Q189545",
+  "Wikipedia": "Zengid dynasty",
+  "SeshatID": "",
+  "area_km2": 1166338,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   18.81,
+   23.36,
+   44.95,
+   39.32
+  ]
+ },
+ {
+  "Name": "Zengid dynasty",
+  "FromYear": 1177,
+  "ToYear": 1187,
+  "Wikidata": "Q189545",
+  "Wikipedia": "Zengid dynasty",
+  "SeshatID": "",
+  "area_km2": 300779,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   36.62,
+   33.26,
+   44.95,
+   39.32
+  ]
+ },
+ {
+  "Name": "Zengid dynasty",
+  "FromYear": 1188,
+  "ToYear": 1191,
+  "Wikidata": "Q189545",
+  "Wikipedia": "Zengid dynasty",
+  "SeshatID": "",
+  "area_km2": 209048,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   38.61,
+   33.26,
+   44.95,
+   39.32
+  ]
+ },
+ {
+  "Name": "Zengid dynasty",
+  "FromYear": 1202,
+  "ToYear": 1235,
+  "Wikidata": "Q189545",
+  "Wikipedia": "Zengid dynasty",
+  "SeshatID": "",
+  "area_km2": 108962,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   40.41,
+   33.26,
+   44.95,
+   37.32
+  ]
+ },
+ {
+  "Name": "Zengid dynasty",
+  "FromYear": 1236,
+  "ToYear": 1249,
+  "Wikidata": "Q189545",
+  "Wikipedia": "Zengid dynasty",
+  "SeshatID": "",
+  "area_km2": 109013,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   40.41,
+   33.26,
+   44.95,
+   37.32
+  ]
+ },
+ {
+  "Name": "Zengid dynasty",
+  "FromYear": 1250,
+  "ToYear": 1259,
+  "Wikidata": "Q189545",
+  "Wikipedia": "Zengid dynasty",
+  "SeshatID": "",
+  "area_km2": 108962,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   40.41,
+   33.26,
+   44.95,
+   37.32
+  ]
+ },
+ {
+  "Name": "Zirid dynasty",
+  "FromYear": 1066,
+  "ToYear": 1146,
+  "Wikidata": "Q205718",
+  "Wikipedia": "Zirid dynasty",
+  "SeshatID": "tn_zirid_dyn",
+  "area_km2": 29760,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   8.52,
+   32.88,
+   11.54,
+   37.32
+  ]
+ },
+ {
+  "Name": "Zirid dynasty",
+  "FromYear": 1147,
+  "ToYear": 1151,
+  "Wikidata": "Q205718",
+  "Wikipedia": "Zirid dynasty",
+  "SeshatID": "tn_zirid_dyn",
+  "area_km2": 29760,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   8.52,
+   32.88,
+   11.54,
+   37.32
+  ]
+ },
+ {
+  "Name": "Zurayid dynasty",
+  "FromYear": 1085,
+  "ToYear": 1168,
+  "Wikidata": "Q230385",
+  "Wikipedia": "Zurayids",
+  "SeshatID": "",
+  "area_km2": 3274,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   44.32,
+   12.69,
+   45.21,
+   13.14
+  ]
+ },
+ {
+  "Name": "Zurayid dynasty",
+  "FromYear": 1169,
+  "ToYear": 1176,
+  "Wikidata": "Q230385",
+  "Wikipedia": "Zurayids",
+  "SeshatID": "",
+  "area_km2": 3274,
+  "clipped": false,
+  "source": "cliopatria",
+  "bounds": [
+   44.32,
+   12.69,
+   45.21,
+   13.14
+  ]
+ }
+]

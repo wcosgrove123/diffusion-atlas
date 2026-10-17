@@ -1,10 +1,15 @@
 // Year lookups over the research records. Pure functions: no DOM, no map.
-import type { AtlasEvent, ModuleData, Place, ReligionProfile, Span, TraditionEntry } from './types';
+import type { AtlasEvent, Diffusion, Exemplar, ModuleData, Place, ReligionProfile, Span, Taxonomy, TraditionEntry } from './types';
 
-/** A span covers year y when start <= y < end (end null = open-ended). docs/product-spec.md 3.1 */
+/**
+ * A span covers year y when start <= y < end (end null = open-ended). docs/product-spec.md 3.1
+ * A span whose end is not after its start (a one-year event, such as 1441 to 1441) covers that one year.
+ */
 export function covers(span: Span | null | undefined, year: number): boolean {
   if (!span) return false;
-  return span.start <= year && (span.end === null || span.end === undefined || year < span.end);
+  if (span.start > year) return false;
+  if (span.end === null || span.end === undefined) return true;
+  return year < span.end || (span.end <= span.start && year === span.start);
 }
 
 /** The profile for place P, stratum S (and community name for stratum community) at year Y, or null. */
@@ -68,24 +73,52 @@ export function referencedPlaces(data: ModuleData): Place[] {
   return data.places.filter((p) => ids.has(p.id) && !own.has(p.id));
 }
 
+export function shownDiffusions(data: ModuleData): Diffusion[] {
+  const shown = new Set(data.frame.shown_regions);
+  return data.diffusions.filter((d) => shown.has(d._file));
+}
+
+export function shownExemplars(data: ModuleData): Exemplar[] {
+  const shown = new Set(data.frame.shown_regions);
+  return data.exemplars.filter((e) => shown.has(e._file));
+}
+
+/** Arcs on the map at a year: diffusions of the lens whose span covers it (docs/product-spec.md 4). */
+export function diffusionsAt(diffusions: Diffusion[], lens: string, year: number): Diffusion[] {
+  return diffusions.filter((d) => d.lens === lens && covers(d.span, year));
+}
+
+/** Exemplars on the map at a year: from their span start, unless on_slider is false (product-spec 5). */
+export function exemplarsAt(exemplars: Exemplar[], year: number): Exemplar[] {
+  return exemplars.filter((e) => e.on_slider !== false && e.span.start <= year);
+}
+
+/** The lens the app opens on: the one the taxonomy marks as the default lens, else the first listed. */
+export function defaultLens(tax: Taxonomy): string {
+  const ids = Object.keys(tax.lenses);
+  return ids.find((l) => /\bdefault\b/i.test(tax.lenses[l].note ?? '')) ?? ids[0];
+}
+
 export function shownEvents(data: ModuleData): AtlasEvent[] {
   const shown = new Set(data.frame.shown_regions);
   return data.events.filter((e) => shown.has(e._file)).sort((a, b) => a.year - b.year);
 }
 
-/** Keyframe years of the shown regions, ascending, one per year. */
+/** Keyframes of the shown regions, ascending by year (two regions may share a year; both are kept). */
 export function keyframes(events: AtlasEvent[]): AtlasEvent[] {
-  const seen = new Set<number>();
-  return events.filter((e) => e.keyframe).sort((a, b) => a.year - b.year)
-    .filter((e) => (seen.has(e.year) ? false : (seen.add(e.year), true)));
+  return events.filter((e) => e.keyframe).sort((a, b) => a.year - b.year);
 }
 
-export function nextKeyframe(kfs: AtlasEvent[], year: number): AtlasEvent | null {
-  return kfs.find((e) => e.year > year) ?? null;
+/**
+ * The next keyframe after the year. A keyframe at the year itself counts when it has not been visited yet, so the
+ * first keyframe of the frame and a second keyframe in the same year are both reachable by stepping.
+ */
+export function nextKeyframe(kfs: AtlasEvent[], year: number, visited: Set<string> = new Set()): AtlasEvent | null {
+  return kfs.find((e) => e.year > year || (e.year === year && !visited.has(e.id))) ?? null;
 }
 
-export function prevKeyframe(kfs: AtlasEvent[], year: number): AtlasEvent | null {
-  return [...kfs].reverse().find((e) => e.year < year) ?? null;
+export function prevKeyframe(kfs: AtlasEvent[], year: number, visited: Set<string> = new Set()): AtlasEvent | null {
+  return [...kfs].reverse().find((e) => e.year < year || (e.year === year && !visited.has(e.id))) ?? null;
 }
 
 /** Events shown as markers: within +/- window years of the slider year. */

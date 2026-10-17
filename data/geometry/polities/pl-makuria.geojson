@@ -1,0 +1,221 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-makuria",
+    "year_from": 580,
+    "year_to": 1365,
+    "method": "E",
+    "basis": "aourednik 'Makkura' 1200 with the south trimmed at 17.5N so Soba (Alodia's capital, 15.5N) is outside (geometry-audit section 5); the pl-makuria geometry_note puts the border with al-Abwab and Alodia at about the Fourth or Fifth Cataract. Old Dongola is inside.",
+    "source": "aourednik"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       29.36,
+       23.754
+      ],
+      [
+       29.278,
+       18.878
+      ],
+      [
+       29.498,
+       17.741
+      ],
+      [
+       29.66,
+       17.531
+      ],
+      [
+       37.128,
+       17.5
+      ],
+      [
+       37.391,
+       17.654
+      ],
+      [
+       37.756,
+       18.31
+      ],
+      [
+       37.785,
+       18.531
+      ],
+      [
+       37.441,
+       18.852
+      ],
+      [
+       37.331,
+       19.18
+      ],
+      [
+       37.107,
+       21.274
+      ],
+      [
+       36.624,
+       22.2
+      ],
+      [
+       36.219,
+       22.603
+      ],
+      [
+       35.84,
+       22.772
+      ],
+      [
+       35.671,
+       22.987
+      ],
+      [
+       35.491,
+       23.519
+      ],
+      [
+       35.481,
+       23.881
+      ],
+      [
+       35.582,
+       23.937
+      ],
+      [
+       35.554,
+       24.04
+      ],
+      [
+       35.309,
+       24.288
+      ],
+      [
+       35.031,
+       24.36
+      ],
+      [
+       32.469,
+       23.731
+      ],
+      [
+       30.884,
+       23.662
+      ],
+      [
+       29.605,
+       23.943
+      ],
+      [
+       29.36,
+       23.754
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-makuria",
+    "year_from": 1365,
+    "year_to": 1500,
+    "method": "E",
+    "basis": "A fading remnant in Lower Nubia after the civil war of 1365 (geometry-audit section 5: end c.1365 to 1400 with a fading remnant): the same aourednik 'Makkura' 1200 kept north of 21.3N, around Qasr Ibrim and Daw (pl-makuria geometry_note: the court moved north to Daw). Kept to 1500 because the place span does.",
+    "source": "aourednik"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       29.497,
+       21.323
+      ],
+      [
+       36.632,
+       21.3
+      ],
+      [
+       36.853,
+       21.398
+      ],
+      [
+       36.926,
+       21.588
+      ],
+      [
+       36.624,
+       22.2
+      ],
+      [
+       36.219,
+       22.603
+      ],
+      [
+       35.84,
+       22.772
+      ],
+      [
+       35.671,
+       22.987
+      ],
+      [
+       35.491,
+       23.519
+      ],
+      [
+       35.481,
+       23.881
+      ],
+      [
+       35.582,
+       23.937
+      ],
+      [
+       35.554,
+       24.04
+      ],
+      [
+       35.13,
+       24.368
+      ],
+      [
+       32.469,
+       23.731
+      ],
+      [
+       30.884,
+       23.662
+      ],
+      [
+       29.713,
+       23.936
+      ],
+      [
+       29.502,
+       23.912
+      ],
+      [
+       29.34,
+       23.649
+      ],
+      [
+       29.313,
+       21.604
+      ],
+      [
+       29.497,
+       21.323
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

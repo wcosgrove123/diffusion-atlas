@@ -7,8 +7,9 @@
     "place_id": "pl-ghana-wagadu",
     "year_from": 1200,
     "year_to": 1240,
-    "method": "E",
-    "basis": "aourednik 'Ghana' 1200, relabelled (geometry-audit section 5). The audit uses it for the pre-1203 frame and says to fade it after Sosso; it runs to 1240 here to match the place span and its religion profiles (Sosso then Mali overlordship, per pl-ghana-wagadu geometry_note)."
+    "method": "A",
+    "basis": "aourednik 'Ghana' 1200 as is, relabelled and clipped (geometry-audit section 5 says E, but it asks for no edit, which the audit's own definitions call A). The audit uses it for the pre-1203 frame and says to fade it after Sosso; it runs to 1240 here to match the place span and its religion profiles (Sosso then Mali overlordship, per pl-ghana-wagadu geometry_note).",
+    "source": "aourednik"
    },
    "geometry": {
     "type": "Polygon",

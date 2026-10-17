@@ -1,0 +1,185 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-kanem",
+    "year_from": 1075,
+    "year_to": 1210,
+    "method": "A",
+    "basis": "aourednik 'Kanem' 1200 as is: the plains north-east of Lake Chad with Njimi inside (geometry-audit section 5, pl-kanem geometry_note).",
+    "source": "aourednik"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       19.167,
+       15.184
+      ],
+      [
+       18.451,
+       15.741
+      ],
+      [
+       17.097,
+       16.219
+      ],
+      [
+       14.667,
+       16.23
+      ],
+      [
+       12.878,
+       16.06
+      ],
+      [
+       12.639,
+       15.662
+      ],
+      [
+       12.639,
+       14.468
+      ],
+      [
+       13.833,
+       13.433
+      ],
+      [
+       15.819,
+       13.119
+      ],
+      [
+       17.654,
+       13.194
+      ],
+      [
+       18.769,
+       13.512
+      ],
+      [
+       19.406,
+       14.468
+      ],
+      [
+       19.167,
+       15.184
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-kanem",
+    "year_from": 1210,
+    "year_to": 1387,
+    "method": "E",
+    "basis": "aourednik 'Kanem' 1200 extended north toward the Kawar oases and the Fezzan for the c.1250 maximum under Dunama Dibbalemi (geometry-audit section 5; pl-kanem geometry_note: Kanem claimed authority over Kawar and the Fezzan, Ibn Sa'id via Lange). The northern arm is a corridor to Kawar (Bilma, 12.9E 19N), not a border. Kept to 1387, when the Sayfawa moved west to Bornu.",
+    "source": "aourednik"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       12.008,
+       19.556
+      ],
+      [
+       11.826,
+       17.521
+      ],
+      [
+       12.356,
+       15.933
+      ],
+      [
+       12.589,
+       15.605
+      ],
+      [
+       12.675,
+       14.484
+      ],
+      [
+       13.747,
+       13.508
+      ],
+      [
+       13.946,
+       13.415
+      ],
+      [
+       15.859,
+       13.121
+      ],
+      [
+       17.7,
+       13.207
+      ],
+      [
+       18.628,
+       13.472
+      ],
+      [
+       18.851,
+       13.635
+      ],
+      [
+       19.361,
+       14.474
+      ],
+      [
+       19.205,
+       15.069
+      ],
+      [
+       19.071,
+       15.258
+      ],
+      [
+       18.389,
+       15.763
+      ],
+      [
+       17.161,
+       16.197
+      ],
+      [
+       15.839,
+       16.225
+      ],
+      [
+       15.496,
+       16.375
+      ],
+      [
+       14.599,
+       19.471
+      ],
+      [
+       14.316,
+       19.622
+      ],
+      [
+       12.393,
+       19.77
+      ],
+      [
+       12.104,
+       19.676
+      ],
+      [
+       12.008,
+       19.556
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

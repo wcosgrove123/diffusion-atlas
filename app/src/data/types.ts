@@ -36,6 +36,8 @@ export interface PolityProps {
   year_to: number | null;
   method: 'A' | 'E' | 'H';
   basis: string;
+  /** "nomadic": a hatched sphere, not a state (geometry-audit 5, Tuareg) */
+  zone?: string;
 }
 
 export type PolityFeature = Feature<Polygon | MultiPolygon, PolityProps>;
@@ -126,15 +128,78 @@ export interface AtlasEvent {
   _file: string;
 }
 
+export interface Diffusion {
+  id: string;
+  lens: string;
+  what: string;
+  from: string[];
+  to: string;
+  span: Span;
+  mechanism: string;
+  carriers?: string[];
+  outcome: string;
+  summary: string;
+  detail?: string;
+  evidence: string[];
+  confidence: string;
+  ap_topics?: string[];
+  _file: string;
+}
+
+export interface Exemplar {
+  id: string;
+  name: string;
+  place: string;
+  location: LatLon;
+  span: Span;
+  lenses: string[];
+  summary: string;
+  detail?: string;
+  image_hint?: string;
+  evidence: string[];
+  confidence: string;
+  /** when the surviving structure dates, if different from the founding */
+  fabric_date?: number;
+  /** a findspot far from the place; drawn only in the card's mini map */
+  found_at?: { name: string; lat: number; lon: number };
+  /** false: never on the map by year; reachable from cards only */
+  on_slider?: boolean;
+  _file: string;
+}
+
+export interface Debate {
+  id: string;
+  region?: string;
+  question: string;
+  positions: { view: string; who: string }[];
+  links: string[];
+  note?: string;
+}
+
+export interface Happ {
+  historical_situation?: string;
+  audience?: string;
+  purpose?: string;
+  point_of_view?: string;
+}
+
 export interface Source {
   id: string;
   title: string;
   author?: string;
+  author_from?: string;
   date?: string | number;
   kind?: string;
   type?: string;
   voice?: string;
+  happ?: Happ;
   citation?: string;
+  url?: string | null;
+  access?: string;
+  verification?: string;
+  verification_note?: string;
+  notes?: string;
+  cited_in?: string[];
 }
 
 export interface ModuleData {
@@ -143,11 +208,21 @@ export interface ModuleData {
   frame: ModuleFrame;
   places: Place[];
   religion_profiles: ReligionProfile[];
-  diffusions: { id: string; from: string[]; to: string; _file: string }[];
-  exemplars: unknown[];
+  diffusions: Diffusion[];
+  exemplars: Exemplar[];
   events: AtlasEvent[];
   sources: Source[];
-  debates: unknown[];
+  debates: Debate[];
+  /** The "AP World only" view (tools/ap_match.py, tools/build_data.py); null when the module has no list. */
+  ap_world: ApWorld | null;
+}
+
+export interface ApWorld {
+  default_view: 'ap' | 'all';
+  generated: string;
+  sources: string[];
+  /** record id -> why it is in the AP view ("named in ...", "follows Mali", "arrives at Timbuktu") */
+  why: Record<string, string>;
 }
 
 /** data/build/taxonomy.json: taxonomy.yaml as JSON plus a flattened traditions index. */
@@ -162,7 +237,14 @@ export interface Taxonomy {
   strata: Record<string, string>;
   place_kinds: Record<string, string>;
   traditions: Record<string, { family: string; branches: string[]; overlays: string[] }>;
-  sources: { confidence: string[] };
+  diffusion: { mechanism: Record<string, string>; carriers: string[]; outcome: Record<string, string> };
+  sources: {
+    confidence: string[];
+    type: Record<string, string>;
+    voice: Record<string, string>;
+    verification: Record<string, string>;
+  };
+  writing_rules: { banned_terms: string[] };
   lenses: Record<string, { inspect: string; note: string }>;
   ap_topics: Record<string, string>;
   polity_profile: Record<string, string[]>;

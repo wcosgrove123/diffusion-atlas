@@ -3,8 +3,35 @@
 import type { ReligionProfile } from '../data/types';
 import { donutSegments } from '../data/profiles';
 import { opacityFor } from '../map/religionLayer';
-import { patternImage, profileLook, type PatternKind } from '../map/patterns';
+import { type ArcStyle, arcImage, patternImage, profileLook, type PatternKind } from '../map/patterns';
 import { mapInk, traditionColor } from '../theme/palette';
+
+/**
+ * Glyphs are drawn once per distinct look and cloned: the map carries about 150 small canvases, and drawing each
+ * from scratch (patterns, arcs, text) took most of the startup on a slow Chromebook. A clone is one drawImage.
+ */
+export type Glyph = HTMLCanvasElement | HTMLImageElement;
+const protoCache = new Map<string, { canvas: HTMLCanvasElement; url: string; used: boolean }>();
+function cached(key: string, draw: () => HTMLCanvasElement): Glyph {
+  let proto = protoCache.get(key);
+  if (!proto) {
+    const canvas = draw();
+    proto = { canvas, url: '', used: false };
+    protoCache.set(key, proto);
+  }
+  // The first use gets the canvas itself; later uses get an image of it (no 2D context each, which is what costs).
+  if (!proto.used) {
+    proto.used = true;
+    return proto.canvas;
+  }
+  if (!proto.url) proto.url = proto.canvas.toDataURL();
+  const img = new Image();
+  img.src = proto.url;
+  img.width = parseFloat(proto.canvas.style.width);
+  img.height = parseFloat(proto.canvas.style.height);
+  img.alt = '';
+  return img;
+}
 
 function canvas(w: number, h: number): [HTMLCanvasElement, CanvasRenderingContext2D] {
   const ratio = Math.max(1, Math.round(window.devicePixelRatio || 1));
@@ -52,13 +79,151 @@ export function patternDataUrl(kind: PatternKind, a: string, b: string): string 
   return tileCanvas(kind, a, b).toDataURL();
 }
 
+/** A short piece of an arc in a mechanism's line style (legend, diffusion card). */
+export function arcSwatch(style: ArcStyle, color: string, w = 44, h = 10): HTMLCanvasElement {
+  const [c, ctx] = canvas(w, h);
+  const img = arcImage(style, color, 1);
+  const tile = document.createElement('canvas');
+  tile.width = img.width;
+  tile.height = img.height;
+  tile.getContext('2d')!.putImageData(new ImageData(img.data, img.width, img.height), 0, 0);
+  const lineH = style === 'chevrons' ? 7 : 4;
+  ctx.save();
+  ctx.translate(0, (h - lineH) / 2);
+  ctx.scale(1, lineH / img.height);
+  ctx.fillStyle = ctx.createPattern(tile, 'repeat-x')!;
+  ctx.fillRect(0, 0, w, img.height);
+  ctx.restore();
+  return c;
+}
+
+/** Outcome glyph shapes (product-spec 4), keyed by taxonomy outcome. An outcome without a shape draws a diamond. */
+type GlyphShape = 'filled' | 'triangle' | 'half' | 'two' | 'bar' | 'gapbar' | 'hollow' | 'x' | 'star' | 'question' | 'diamond';
+const OUTCOME_SHAPE: Record<string, GlyphShape> = {
+  adoption: 'filled', 'elite-only': 'triangle', syncretism: 'half', coexistence: 'two', resistance: 'bar',
+  withheld: 'gapbar', 'no-uptake': 'hollow', loss: 'x', impact: 'star', undocumented: 'question',
+};
+
+/** The glyph at an arc's destination: what happened where the idea arrived. */
+export function outcomeGlyph(outcome: string, color: string, alpha = 1, size = 18): Glyph {
+  return cached(`outcome|${outcome}|${color}|${alpha}|${size}`, () => drawOutcomeGlyph(outcome, color, alpha, size));
+}
+
+function drawOutcomeGlyph(outcome: string, color: string, alpha: number, size: number): HTMLCanvasElement {
+  const [c, ctx] = canvas(size, size);
+  const m = size / 2;
+  const r = size / 2 - 3;
+  const shape = OUTCOME_SHAPE[outcome] ?? 'diamond';
+  ctx.lineWidth = 2;
+  ctx.lineJoin = 'round';
+  ctx.lineCap = 'round';
+  // keyline first, then the colored glyph on top, so it reads on any fill
+  for (const pass of ['key', 'ink'] as const) {
+    ctx.globalAlpha = pass === 'key' ? 1 : alpha;
+    ctx.strokeStyle = pass === 'key' ? mapInk.keyline : color;
+    ctx.fillStyle = pass === 'key' ? mapInk.keyline : color;
+    ctx.lineWidth = pass === 'key' ? 5 : 2;
+    const circle = (fill: boolean) => {
+      ctx.beginPath();
+      ctx.arc(m, m, r, 0, Math.PI * 2);
+      if (fill && pass === 'ink') ctx.fill();
+      ctx.stroke();
+    };
+    switch (shape) {
+      case 'filled': circle(true); break;
+      case 'hollow': circle(false); break;
+      case 'half':
+        circle(false);
+        if (pass === 'ink') { ctx.beginPath(); ctx.arc(m, m, r, Math.PI / 2, -Math.PI / 2); ctx.closePath(); ctx.fill(); }
+        break;
+      case 'two':
+        for (const dx of [-r / 2, r / 2]) { ctx.beginPath(); ctx.arc(m + dx, m, r / 2, 0, Math.PI * 2); if (pass === 'ink') ctx.fill(); ctx.stroke(); }
+        break;
+      case 'triangle':
+        ctx.beginPath(); ctx.moveTo(m, m - r); ctx.lineTo(m + r, m + r * 0.7); ctx.lineTo(m - r, m + r * 0.7); ctx.closePath();
+        if (pass === 'ink') ctx.fill();
+        ctx.stroke();
+        break;
+      case 'bar':
+        ctx.beginPath(); ctx.moveTo(m - r, m); ctx.lineTo(m + r, m); ctx.stroke();
+        break;
+      case 'gapbar':
+        ctx.beginPath(); ctx.moveTo(m - r, m); ctx.lineTo(m - 1.5, m); ctx.moveTo(m + 1.5, m); ctx.lineTo(m + r, m); ctx.stroke();
+        break;
+      case 'x':
+        ctx.beginPath(); ctx.moveTo(m - r, m - r); ctx.lineTo(m + r, m + r); ctx.moveTo(m + r, m - r); ctx.lineTo(m - r, m + r); ctx.stroke();
+        break;
+      case 'star':
+        ctx.beginPath();
+        for (let i = 0; i < 8; i++) {
+          const a = (i * Math.PI) / 4;
+          const rr = i % 2 ? r * 0.45 : r;
+          ctx[i ? 'lineTo' : 'moveTo'](m + Math.cos(a) * rr, m + Math.sin(a) * rr);
+        }
+        ctx.closePath();
+        if (pass === 'ink') ctx.fill();
+        ctx.stroke();
+        break;
+      case 'question':
+        circle(false);
+        if (pass === 'ink') {
+          ctx.font = `bold ${size * 0.62}px system-ui, sans-serif`;
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.fillText('?', m, m + 0.5);
+        }
+        break;
+      case 'diamond':
+        ctx.beginPath(); ctx.moveTo(m, m - r); ctx.lineTo(m + r, m); ctx.lineTo(m, m + r); ctx.lineTo(m - r, m); ctx.closePath();
+        if (pass === 'ink') ctx.fill();
+        ctx.stroke();
+        break;
+    }
+  }
+  return c;
+}
+
+/** An exemplar marker: a small building-like glyph (a square with a peaked top) in the exemplar ink. */
+export function exemplarGlyph(size = 16): Glyph {
+  return cached(`exemplar|${size}`, () => drawExemplarGlyph(size));
+}
+
+function drawExemplarGlyph(size: number): HTMLCanvasElement {
+  const [c, ctx] = canvas(size, size);
+  const draw = (color: string, lw: number) => {
+    ctx.strokeStyle = color;
+    ctx.fillStyle = color;
+    ctx.lineWidth = lw;
+    ctx.lineJoin = 'round';
+    ctx.beginPath();
+    ctx.moveTo(3, size - 3);
+    ctx.lineTo(3, size * 0.5);
+    ctx.lineTo(size / 2, 3);
+    ctx.lineTo(size - 3, size * 0.5);
+    ctx.lineTo(size - 3, size - 3);
+    ctx.closePath();
+    ctx.stroke();
+  };
+  draw(mapInk.keyline, 5);
+  draw(mapInk.exemplar, 2);
+  ctx.fillStyle = mapInk.exemplar;
+  ctx.fillRect(size / 2 - 1.5, size * 0.62, 3, size - 3 - size * 0.62);
+  return c;
+}
+
 export const DONUT_SIZE = 34;
 
 /**
  * A town's urban stratum (product-spec 3.1): one segment per tradition sized by share, the relation pattern as an
  * outer band, opacity by confidence. Undocumented = crosshatch; no profile = hollow dashed circle.
  */
-export function donut(p: ReligionProfile | null, size = DONUT_SIZE): HTMLCanvasElement {
+const lookKey = (p: ReligionProfile | null) => (p ? `${p.relation}|${p.confidence}|${p.traditions.map((t) => `${t.tradition}:${t.share}`).join(',')}` : 'none');
+
+export function donut(p: ReligionProfile | null, size = DONUT_SIZE): Glyph {
+  return cached(`donut|${size}|${lookKey(p)}`, () => drawDonut(p, size));
+}
+
+function drawDonut(p: ReligionProfile | null, size: number): HTMLCanvasElement {
   const [c, ctx] = canvas(size, size);
   const cx = size / 2;
   const rOut = size / 2 - 1.5;
@@ -122,7 +287,11 @@ export function donut(p: ReligionProfile | null, size = DONUT_SIZE): HTMLCanvasE
 }
 
 /** A community badge: a small pill in the community's dominant tradition color (crosshatch if undocumented). */
-export function badge(p: ReligionProfile, w = 10, h = 16): HTMLCanvasElement {
+export function badge(p: ReligionProfile, w = 10, h = 16): Glyph {
+  return cached(`badge|${w}|${h}|${lookKey(p)}`, () => drawBadge(p, w, h));
+}
+
+function drawBadge(p: ReligionProfile, w: number, h: number): HTMLCanvasElement {
   const [c, ctx] = canvas(w + 2, h + 2);
   const pill = (x: number, y: number, ww: number, hh: number) => {
     ctx.beginPath();
@@ -143,7 +312,11 @@ export function badge(p: ReligionProfile, w = 10, h = 16): HTMLCanvasElement {
  * A place with no polygon (yet): a square in the rural pattern with the court pattern as its border, so the same
  * fill and ring reading applies. No rural profile = dashed outline.
  */
-export function pointSquare(rural: ReligionProfile | null, court: ReligionProfile | null, size = 22): HTMLCanvasElement {
+export function pointSquare(rural: ReligionProfile | null, court: ReligionProfile | null, size = 22): Glyph {
+  return cached(`point|${size}|${lookKey(rural)}|${lookKey(court)}`, () => drawPointSquare(rural, court, size));
+}
+
+function drawPointSquare(rural: ReligionProfile | null, court: ReligionProfile | null, size: number): HTMLCanvasElement {
   const [c, ctx] = canvas(size, size);
   ctx.fillStyle = mapInk.keyline;
   ctx.fillRect(0, 0, size, size);

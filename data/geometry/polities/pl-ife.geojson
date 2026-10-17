@@ -1,0 +1,58 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-ife",
+    "year_from": 1000,
+    "year_to": null,
+    "method": "H",
+    "basis": "Drawn from the pl-ife geometry_note: the city and kingdom in the Yoruba forest, urban core with the Igbo Olokun site on its northern edge. Its wider ritual and genealogical influence is not drawn as territory. About 60 km across (geometry-audit section 5: small soft zone, low confidence)."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       4.21,
+       7.661
+      ],
+      [
+       4.211,
+       7.305
+      ],
+      [
+       4.355,
+       7.161
+      ],
+      [
+       4.695,
+       7.161
+      ],
+      [
+       4.918,
+       7.381
+      ],
+      [
+       4.873,
+       7.67
+      ],
+      [
+       4.77,
+       7.773
+      ],
+      [
+       4.501,
+       7.839
+      ],
+      [
+       4.21,
+       7.661
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

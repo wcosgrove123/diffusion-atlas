@@ -1,0 +1,66 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-sao",
+    "year_from": 1000,
+    "year_to": 1600,
+    "method": "H",
+    "basis": "Drawn from the pl-sao geometry_note: walled towns and settlements south and west of Lake Chad on the Logone-Chari plains (modern Cameroon, Chad and Nigeria). Drawn as a people."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       13.031,
+       12.527
+      ],
+      [
+       13.218,
+       11.21
+      ],
+      [
+       14.008,
+       10.525
+      ],
+      [
+       15.183,
+       10.629
+      ],
+      [
+       15.945,
+       11.751
+      ],
+      [
+       15.922,
+       11.956
+      ],
+      [
+       15.464,
+       12.871
+      ],
+      [
+       15.259,
+       13.03
+      ],
+      [
+       14.005,
+       13.273
+      ],
+      [
+       13.151,
+       12.706
+      ],
+      [
+       13.031,
+       12.527
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

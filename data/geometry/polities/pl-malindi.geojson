@@ -1,0 +1,46 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-malindi",
+    "year_from": 1250,
+    "year_to": null,
+    "method": "H",
+    "basis": "Malindi as a point with a 25 km coastal buffer (geometry-audit section 5). Gedi, 15 km south-west, is its own place."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       39.957,
+       -3.378
+      ],
+      [
+       40.11,
+       -3.278
+      ],
+      [
+       40.207,
+       -3.014
+      ],
+      [
+       40.059,
+       -3.001
+      ],
+      [
+       39.922,
+       -3.106
+      ],
+      [
+       39.957,
+       -3.378
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

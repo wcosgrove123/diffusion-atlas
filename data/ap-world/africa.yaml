@@ -1,0 +1,877 @@
+# Records the AP World curriculum names, found by tools/ap_match.py (do not edit `named` by hand: it is
+# regenerated). To overrule a match, list record ids under `include` or `exclude`; those lines are kept.
+# default_view: ap (students open on the AP set) or all. Rules: docs/decisions-for-wil.md, 20.
+module: africa
+generated: '2026-10-16'
+sources:
+- AP World History CED, Units 1 and 2
+- 'Textbook, Strayer Chapter 1 Unit 0: PART 1'
+- 'Textbook, Chapter 2: Chapter 2 The Global System'
+- 'Textbook, Chapter 3: PartI REVISITING The Human Experience to 1200 C.E.: Crucial Highlights'
+- 'Textbook, Chapter 4: Chapter 4 East Asia in the Era of Warlords'
+- 'Textbook, Chapter 5: Chapter 5'
+- 'Textbook, Chapter 6: Chapter 6 Europe in the Mongol Era'
+- 'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam'
+- 'Textbook, Chapter 8: Chapter 8 The Americas'
+default_view: ap
+include: []
+exclude: []
+named:
+  df-abun-from-alexandria:
+    name: The Egyptian metropolitan bishop (abun) sent by the Coptic patriarch to head the Ethiopian church
+    matched:
+      Coptic:
+        AP World History CED, Units 1 and 2: 2
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 2
+      Ethiopian:
+        AP World History CED, Units 1 and 2: 1
+        'Textbook, Chapter 5: Chapter 5': 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 7
+  df-badawi-fez-to-tanta:
+    name: Saint veneration around Ahmad al-Badawi, a Fez-born Sufi who settled in the Nile Delta
+    matched:
+      Sufi:
+        'Textbook, Strayer Chapter 1 Unit 0: PART 1': 4
+        'Textbook, Chapter 2: Chapter 2 The Global System': 2
+        'Textbook, Chapter 5: Chapter 5': 19
+  df-black-death-egypt-maghreb:
+    name: The Black Death (plague) arriving by sea at Alexandria and spreading along trade and army routes to Tunis
+      and Fez
+    matched:
+      Alexandria:
+        AP World History CED, Units 1 and 2: 1
+      Tunis:
+        AP World History CED, Units 1 and 2: 1
+      Fez:
+        AP World History CED, Units 1 and 2: 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 1
+  df-bornu-titles-kano:
+    name: Bornu court titles and offices (galadima, chiroma, kaigama)
+    matched:
+      Bornu:
+        AP World History CED, Units 1 and 2: 3
+  df-caliphal-investiture-sahel:
+    name: Legitimacy from the Abbasid caliph kept in Mamluk Cairo (investiture of Muslim rulers)
+    matched:
+      Mamluk:
+        AP World History CED, Units 1 and 2: 6
+        'Textbook, Chapter 3: PartI REVISITING The Human Experience to 1200 C.E.: Crucial Highlights': 3
+      Cairo:
+        AP World History CED, Units 1 and 2: 5
+        'Textbook, Chapter 2: Chapter 2 The Global System': 1
+        'Textbook, Chapter 5: Chapter 5': 2
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 1
+  df-christian-pressure-beta-israel:
+    name: Forced Christianization through war, land law and missions in Beta Israel country
+    matched:
+      beta israel:
+        AP World History CED, Units 1 and 2: 1
+  df-coptic-bishops-to-nubia:
+    name: Bishops consecrated by the Coptic patriarch of Alexandria for the Nubian church
+    matched:
+      Coptic:
+        AP World History CED, Units 1 and 2: 2
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 2
+      Alexandria:
+        AP World History CED, Units 1 and 2: 1
+  df-coptic-conversion-islam:
+    name: Conversion of Coptic Christians to Islam under Mamluk pressure (1301, 1321, 1354, early 1400s)
+    matched:
+      Coptic:
+        AP World History CED, Units 1 and 2: 2
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 2
+      Mamluk:
+        AP World History CED, Units 1 and 2: 6
+        'Textbook, Chapter 3: PartI REVISITING The Human Experience to 1200 C.E.: Crucial Highlights': 3
+  df-coptic-to-arabic:
+    name: Arabic replacing Coptic as the written and spoken language of Egypt's Christians (Copto-Arabic literature)
+    matched:
+      Coptic:
+        AP World History CED, Units 1 and 2: 2
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 2
+  df-dunama-reform-kanem:
+    name: Reforming Sunni (Maliki) Islam pressed on Kanem's people, and the opening of the mune
+    matched:
+      Sunni:
+        'Textbook, Strayer Chapter 1 Unit 0: PART 1': 1
+        'Textbook, Chapter 5: Chapter 5': 5
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 4
+  df-ethiopian-community-jerusalem:
+    name: Ethiopian monks and pilgrims settling in Jerusalem and on the pilgrimage route through Egypt
+    matched:
+      Ethiopian:
+        AP World History CED, Units 1 and 2: 1
+        'Textbook, Chapter 5: Chapter 5': 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 7
+  df-ethiopian-delegates-florence:
+    name: Ethiopian Orthodox delegates at the Council of Florence and the Latin church's "Prester John" idea
+    matched:
+      Ethiopian:
+        AP World History CED, Units 1 and 2: 1
+        'Textbook, Chapter 5: Chapter 5': 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 7
+      Orthodox:
+        'Textbook, Strayer Chapter 1 Unit 0: PART 1': 2
+        'Textbook, Chapter 2: Chapter 2 The Global System': 8
+        'Textbook, Chapter 3: PartI REVISITING The Human Experience to 1200 C.E.: Crucial Highlights': 2
+        'Textbook, Chapter 5: Chapter 5': 5
+        'Textbook, Chapter 6: Chapter 6 Europe in the Mongol Era': 3
+  df-ife-kingship-to-benin:
+    name: Ife-derived sacred kingship (Oduduwa descent, royal regalia) adopted by the Edo monarchy
+    matched:
+      Edo:
+        'Textbook, Chapter 2: Chapter 2 The Global System': 2
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 1
+  df-islam-mombasa:
+    name: Shafi'i Islam and wooden mosque building at Mombasa
+    matched:
+      Mombasa:
+        AP World History CED, Units 1 and 2: 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 4
+  df-islam-zeila-to-ifat:
+    name: Islamic law, learning and merchant networks from Arabia and Yemen through Zeila into the eastern highlands
+    matched:
+      Zeila:
+        AP World History CED, Units 1 and 2: 1
+  df-kanuri-islamic-vocabulary-hausa:
+    name: Arabic religious vocabulary entering Hausa through Kanuri
+    matched:
+      Hausa:
+        AP World History CED, Units 1 and 2: 6
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 2
+  df-kebra-nagast-solomonic-ideology:
+    name: The Solomon-and-Sheba story and the Ark as a charter of Ethiopian kingship (Kebra Nagast)
+    matched:
+      Ethiopian:
+        AP World History CED, Units 1 and 2: 1
+        'Textbook, Chapter 5: Chapter 5': 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 7
+  df-local-arabic-epigraphy-gao:
+    name: Arabic writing carved locally on stone at Gao after imported models
+    matched:
+      Gao:
+        AP World History CED, Units 1 and 2: 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 3
+  df-madrasa-model-to-tunis:
+    name: The Sunni madrasa (endowed college for training jurists) as a tool of Maliki religious authority
+    matched:
+      Sunni:
+        'Textbook, Strayer Chapter 1 Unit 0: PART 1': 1
+        'Textbook, Chapter 5: Chapter 5': 5
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 4
+  df-mali-court-islam-to-gao:
+    name: Mali's royal Islam extended to Gao (Musa's mosque, Mali governors)
+    matched:
+      Gao:
+        AP World History CED, Units 1 and 2: 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 3
+      Mali:
+        AP World History CED, Units 1 and 2: 11
+        'Textbook, Strayer Chapter 1 Unit 0: PART 1': 2
+        'Textbook, Chapter 2: Chapter 2 The Global System': 4
+        'Textbook, Chapter 3: PartI REVISITING The Human Experience to 1200 C.E.: Crucial Highlights': 1
+        'Textbook, Chapter 4: Chapter 4 East Asia in the Era of Warlords': 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 40
+  df-maliki-learning-cairo-kanem:
+    name: Maliki Sunni learning through Kanem's own madrasa in Cairo
+    matched:
+      Sunni:
+        'Textbook, Strayer Chapter 1 Unit 0: PART 1': 1
+        'Textbook, Chapter 5: Chapter 5': 5
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 4
+      Cairo:
+        AP World History CED, Units 1 and 2: 5
+        'Textbook, Chapter 2: Chapter 2 The Global System': 1
+        'Textbook, Chapter 5: Chapter 5': 2
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 1
+  df-maliki-scholarship-timbuktu:
+    name: Maliki Sunni scholarship and teaching networks
+    matched:
+      Sunni:
+        'Textbook, Strayer Chapter 1 Unit 0: PART 1': 1
+        'Textbook, Chapter 5: Chapter 5': 5
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 4
+  df-malindi-giraffe-to-china:
+    name: Diplomatic gifts and envoys from Malindi to the Ming court, the giraffe read as a qilin
+    matched:
+      Malindi:
+        AP World History CED, Units 1 and 2: 2
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 2
+  df-mamluk-court-islam-dongola:
+    name: Islam at the Makurian court, imposed through Mamluk military intervention and installed Muslim princes
+    matched:
+      Mamluk:
+        AP World History CED, Units 1 and 2: 6
+        'Textbook, Chapter 3: PartI REVISITING The Human Experience to 1200 C.E.: Crucial Highlights': 3
+  df-mamluk-military-technology:
+    name: Mamluk military techniques, incendiary weapons (naft) and court ceremonial
+    matched:
+      Mamluk:
+        AP World History CED, Units 1 and 2: 6
+        'Textbook, Chapter 3: PartI REVISITING The Human Experience to 1200 C.E.: Crucial Highlights': 3
+  df-monastic-forms-beta-israel:
+    name: Monasticism, liturgical forms and Ge'ez texts shared between Ethiopian Christian monks and Beta Israel
+    matched:
+      Ethiopian:
+        AP World History CED, Units 1 and 2: 1
+        'Textbook, Chapter 5: Chapter 5': 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 7
+      beta israel:
+        AP World History CED, Units 1 and 2: 1
+  df-new-jerusalem-lalibela:
+    name: Jerusalem's holy places as a model for a sacred city in Ethiopia ("New Jerusalem")
+    matched:
+      Ethiopia:
+        AP World History CED, Units 1 and 2: 8
+        'Textbook, Strayer Chapter 1 Unit 0: PART 1': 5
+        'Textbook, Chapter 5: Chapter 5': 3
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 12
+  df-olokun-ife-benin:
+    name: Olokun, deity of the sea, wealth and fertility, shared by Yoruba and Edo
+    matched:
+      Edo:
+        'Textbook, Chapter 2: Chapter 2 The Global System': 2
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 1
+  df-paper-andalus-fez:
+    name: Papermaking workshops in Fez, linked to Andalusi papermaking (Xativa)
+    matched:
+      Fez:
+        AP World History CED, Units 1 and 2: 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 1
+  df-sayfawa-population-bornu:
+    name: Movement of the Sayfawa court and Kanembu followers from Kanem to Bornu
+    matched:
+      Kanem:
+        AP World History CED, Units 1 and 2: 3
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 1
+      Bornu:
+        AP World History CED, Units 1 and 2: 3
+  df-shadhiliyya-tunis-to-egypt:
+    name: Shadhiliyya Sufi path (founded by the Maghrebi teacher Abu al-Hasan al-Shadhili)
+    matched:
+      Sufi:
+        'Textbook, Strayer Chapter 1 Unit 0: PART 1': 4
+        'Textbook, Chapter 2: Chapter 2 The Global System': 2
+        'Textbook, Chapter 5: Chapter 5': 19
+  df-shafii-school-coast:
+    name: Shafi'i Sunni law and scholarship (replacing earlier Ibadi traces)
+    matched:
+      Sunni:
+        'Textbook, Strayer Chapter 1 Unit 0: PART 1': 1
+        'Textbook, Chapter 5: Chapter 5': 5
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 4
+  df-sufi-pietism-jewish-fustat:
+    name: Sufi devotional practice adapted into Jewish pietism by Abraham Maimonides and his circle
+    matched:
+      Sufi:
+        'Textbook, Strayer Chapter 1 Unit 0: PART 1': 4
+        'Textbook, Chapter 2: Chapter 2 The Global System': 2
+        'Textbook, Chapter 5: Chapter 5': 19
+  df-walata-scholars-to-timbuktu:
+    name: Scholars and the caravan terminus moving from Walata to Timbuktu
+    matched:
+      Walata:
+        AP World History CED, Units 1 and 2: 2
+      Timbuktu:
+        AP World History CED, Units 1 and 2: 6
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 8
+  df-west-african-pilgrims-cairo:
+    name: West African and Central Sudanic Muslim communities (pilgrims, students, residents) in Cairo
+    matched:
+      Cairo:
+        AP World History CED, Units 1 and 2: 5
+        'Textbook, Chapter 2: Chapter 2 The Global System': 1
+        'Textbook, Chapter 5: Chapter 5': 2
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 1
+  df-zeila-scholars-abroad:
+    name: Scholars from Zeila and the Horn (al-Zayla'i and al-Jabarti families) teaching in Cairo, Yemen and Damascus
+    matched:
+      Zeila:
+        AP World History CED, Units 1 and 2: 1
+      Cairo:
+        AP World History CED, Units 1 and 2: 5
+        'Textbook, Chapter 2: Chapter 2 The Global System': 1
+        'Textbook, Chapter 5: Chapter 5': 2
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 1
+  ev-1354-coptic-crisis:
+    name: Coptic officials dismissed, church lands seized
+    matched:
+      Coptic:
+        AP World History CED, Units 1 and 2: 2
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 2
+  ev-abbasid-caliphate-cairo:
+    name: An Abbasid caliph installed in Mamluk Cairo
+    matched:
+      Mamluk:
+        AP World History CED, Units 1 and 2: 6
+        'Textbook, Chapter 3: PartI REVISITING The Human Experience to 1200 C.E.: Crucial Highlights': 3
+      Cairo:
+        AP World History CED, Units 1 and 2: 5
+        'Textbook, Chapter 2: Chapter 2 The Global System': 1
+        'Textbook, Chapter 5: Chapter 5': 2
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 1
+  ev-al-umari-goldfields:
+    name: Al-Umari records how Mali handled the gold country
+    matched:
+      Mali:
+        AP World History CED, Units 1 and 2: 11
+        'Textbook, Strayer Chapter 1 Unit 0: PART 1': 2
+        'Textbook, Chapter 2: Chapter 2 The Global System': 4
+        'Textbook, Chapter 3: PartI REVISITING The Human Experience to 1200 C.E.: Crucial Highlights': 1
+        'Textbook, Chapter 4: Chapter 4 East Asia in the Era of Warlords': 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 40
+  ev-amda-seyon-ifat-1332:
+    name: Amda Seyon's war with Ifat
+    matched:
+      Ifat:
+        AP World History CED, Units 1 and 2: 1
+  ev-bornu-letter-cairo:
+    name: Bornu's king writes to the Mamluk sultan
+    matched:
+      Mamluk:
+        AP World History CED, Units 1 and 2: 6
+        'Textbook, Chapter 3: PartI REVISITING The Human Experience to 1200 C.E.: Crucial Highlights': 3
+  ev-cairo-1321-churches:
+    name: Churches destroyed across Egypt; fires in Cairo
+    matched:
+      Cairo:
+        AP World History CED, Units 1 and 2: 5
+        'Textbook, Chapter 2: Chapter 2 The Global System': 1
+        'Textbook, Chapter 5: Chapter 5': 2
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 1
+  ev-council-florence-1441:
+    name: Ethiopian delegates at the Council of Florence
+    matched:
+      Ethiopian:
+        AP World History CED, Units 1 and 2: 1
+        'Textbook, Chapter 5: Chapter 5': 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 7
+  ev-eweka-first-oba:
+    name: Eweka becomes the first Oba of Benin
+    matched:
+      Benin:
+        AP World History CED, Units 1 and 2: 1
+        'Textbook, Chapter 2: Chapter 2 The Global System': 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 13
+  ev-fakhr-al-din-mosque:
+    name: Fakhr al-Din mosque inscribed at Mogadishu
+    matched:
+      Mogadishu:
+        AP World History CED, Units 1 and 2: 3
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 2
+  ev-gomit-1445:
+    name: Battle of Gomit; Sultan Badlay of Adal killed
+    matched:
+      Adal:
+        AP World History CED, Units 1 and 2: 1
+  ev-great-zimbabwe-decline:
+    name: Great Zimbabwe declines; Khami and Mutapa rise
+    matched:
+      Great:
+        AP World History CED, Units 1 and 2: 8
+        'Textbook, Strayer Chapter 1 Unit 0: PART 1': 8
+        'Textbook, Chapter 2: Chapter 2 The Global System': 13
+        'Textbook, Chapter 3: PartI REVISITING The Human Experience to 1200 C.E.: Crucial Highlights': 21
+        'Textbook, Chapter 4: Chapter 4 East Asia in the Era of Warlords': 8
+        'Textbook, Chapter 5: Chapter 5': 22
+        'Textbook, Chapter 6: Chapter 6 Europe in the Mongol Era': 15
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 37
+        'Textbook, Chapter 8: Chapter 8 The Americas': 26
+      Zimbabwe:
+        AP World History CED, Units 1 and 2: 8
+        'Textbook, Chapter 2: Chapter 2 The Global System': 3
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 15
+      Mutapa:
+        'Textbook, Chapter 2: Chapter 2 The Global System': 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 4
+      great zimbabwe:
+        AP World History CED, Units 1 and 2: 7
+        'Textbook, Chapter 2: Chapter 2 The Global System': 2
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 12
+  ev-great-zimbabwe-peak:
+    name: Great Zimbabwe at its height
+    matched:
+      Great:
+        AP World History CED, Units 1 and 2: 8
+        'Textbook, Strayer Chapter 1 Unit 0: PART 1': 8
+        'Textbook, Chapter 2: Chapter 2 The Global System': 13
+        'Textbook, Chapter 3: PartI REVISITING The Human Experience to 1200 C.E.: Crucial Highlights': 21
+        'Textbook, Chapter 4: Chapter 4 East Asia in the Era of Warlords': 8
+        'Textbook, Chapter 5: Chapter 5': 22
+        'Textbook, Chapter 6: Chapter 6 Europe in the Mongol Era': 15
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 37
+        'Textbook, Chapter 8: Chapter 8 The Americas': 26
+      Zimbabwe:
+        AP World History CED, Units 1 and 2: 8
+        'Textbook, Chapter 2: Chapter 2 The Global System': 3
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 15
+      great zimbabwe:
+        AP World History CED, Units 1 and 2: 7
+        'Textbook, Chapter 2: Chapter 2 The Global System': 2
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 12
+  ev-ibn-battuta-mali:
+    name: Ibn Battuta visits Walata and Mansa Sulayman's court
+    matched:
+      Walata:
+        AP World History CED, Units 1 and 2: 2
+  ev-ibn-khaldun-to-cairo:
+    name: Ibn Khaldun moves to Cairo
+    matched:
+      Cairo:
+        AP World History CED, Units 1 and 2: 5
+        'Textbook, Chapter 2: Chapter 2 The Global System': 1
+        'Textbook, Chapter 5: Chapter 5': 2
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 1
+  ev-kanem-madrasa-cairo:
+    name: Kanem founds a madrasa in Cairo
+    matched:
+      Kanem:
+        AP World History CED, Units 1 and 2: 3
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 1
+      Cairo:
+        AP World History CED, Units 1 and 2: 5
+        'Textbook, Chapter 2: Chapter 2 The Global System': 1
+        'Textbook, Chapter 5: Chapter 5': 2
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 1
+  ev-kano-tribute-bornu:
+    name: Kano begins paying tribute to Bornu
+    matched:
+      Bornu:
+        AP World History CED, Units 1 and 2: 3
+  ev-kilwa-great-mosque-rebuilt:
+    name: Kilwa's Great Mosque rebuilt as amirs rise
+    matched:
+      Great:
+        AP World History CED, Units 1 and 2: 8
+        'Textbook, Strayer Chapter 1 Unit 0: PART 1': 8
+        'Textbook, Chapter 2: Chapter 2 The Global System': 13
+        'Textbook, Chapter 3: PartI REVISITING The Human Experience to 1200 C.E.: Crucial Highlights': 21
+        'Textbook, Chapter 4: Chapter 4 East Asia in the Era of Warlords': 8
+        'Textbook, Chapter 5: Chapter 5': 22
+        'Textbook, Chapter 6: Chapter 6 Europe in the Mongol Era': 15
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 37
+        'Textbook, Chapter 8: Chapter 8 The Americas': 26
+  ev-mahdali-takeover:
+    name: The Mahdali dynasty takes Kilwa
+    matched:
+      Kilwa:
+        AP World History CED, Units 1 and 2: 4
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 6
+  ev-mamluk-sack-dongola:
+    name: Mamluk army sacks Dongola
+    matched:
+      Mamluk:
+        AP World History CED, Units 1 and 2: 6
+        'Textbook, Chapter 3: PartI REVISITING The Human Experience to 1200 C.E.: Crucial Highlights': 3
+  ev-marinids-take-fez:
+    name: The Marinids take Fez
+    matched:
+      Marinids:
+        AP World History CED, Units 1 and 2: 1
+      Fez:
+        AP World History CED, Units 1 and 2: 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 1
+  ev-ming-fleets-east-africa:
+    name: Ming treasure-fleet squadrons call at Mogadishu, Brava and Malindi
+    matched:
+      Mogadishu:
+        AP World History CED, Units 1 and 2: 3
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 2
+      Malindi:
+        AP World History CED, Units 1 and 2: 2
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 2
+  ev-mossi-sack-timbuktu:
+    name: Mossi raiders sack Timbuktu
+    matched:
+      Timbuktu:
+        AP World History CED, Units 1 and 2: 6
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 8
+  ev-musa-gao-timbuktu:
+    name: Musa's return through Gao and Timbuktu; mosques founded
+    matched:
+      Gao:
+        AP World History CED, Units 1 and 2: 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 3
+      Timbuktu:
+        AP World History CED, Units 1 and 2: 6
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 8
+  ev-musa-in-cairo:
+    name: Mansa Musa in Cairo
+    matched:
+      Cairo:
+        AP World History CED, Units 1 and 2: 5
+        'Textbook, Chapter 2: Chapter 2 The Global System': 1
+        'Textbook, Chapter 5: Chapter 5': 2
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 1
+  ev-mutapa-founding:
+    name: Nyatsimba Mutota founds Mutapa (tradition)
+    matched:
+      Mutapa:
+        'Textbook, Chapter 2: Chapter 2 The Global System': 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 4
+  ev-sad-al-din-killed:
+    name: Sultan Sa'd al-Din of Ifat killed near Zeila
+    matched:
+      Ifat:
+        AP World History CED, Units 1 and 2: 1
+      Zeila:
+        AP World History CED, Units 1 and 2: 1
+  ev-said-of-mogadishu:
+    name: Sa'id of Mogadishu leaves to study in Mecca and Medina
+    matched:
+      Mogadishu:
+        AP World History CED, Units 1 and 2: 3
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 2
+  ev-sunni-independence:
+    name: Gao breaks from Mali under the Sunni dynasty
+    matched:
+      Gao:
+        AP World History CED, Units 1 and 2: 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 3
+      Mali:
+        AP World History CED, Units 1 and 2: 11
+        'Textbook, Strayer Chapter 1 Unit 0: PART 1': 2
+        'Textbook, Chapter 2: Chapter 2 The Global System': 4
+        'Textbook, Chapter 3: PartI REVISITING The Human Experience to 1200 C.E.: Crucial Highlights': 1
+        'Textbook, Chapter 4: Chapter 4 East Asia in the Era of Warlords': 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 40
+      Sunni:
+        'Textbook, Strayer Chapter 1 Unit 0: PART 1': 1
+        'Textbook, Chapter 5: Chapter 5': 5
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 4
+  ev-tuareg-take-timbuktu:
+    name: Tuareg take Timbuktu and Walata from Mali
+    matched:
+      Timbuktu:
+        AP World History CED, Units 1 and 2: 6
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 8
+      Walata:
+        AP World History CED, Units 1 and 2: 2
+      Mali:
+        AP World History CED, Units 1 and 2: 11
+        'Textbook, Strayer Chapter 1 Unit 0: PART 1': 2
+        'Textbook, Chapter 2: Chapter 2 The Global System': 4
+        'Textbook, Chapter 3: PartI REVISITING The Human Experience to 1200 C.E.: Crucial Highlights': 1
+        'Textbook, Chapter 4: Chapter 4 East Asia in the Era of Warlords': 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 40
+  ev-umar-leaves-njimi:
+    name: The Sayfawa abandon Njimi and move to Bornu
+    matched:
+      Bornu:
+        AP World History CED, Units 1 and 2: 3
+  ev-yekuno-amlak-1270:
+    name: Yekuno Amlak takes the throne; the Solomonic dynasty begins
+    matched:
+      solomonic dynasty:
+        AP World History CED, Units 1 and 2: 1
+  ex-great-mosque-djenne:
+    name: Great Mosque of Djenne (1906-07 rebuild on the Kunburu site)
+    matched:
+      Great Mosque of Djenne:
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 1
+  pl-adal:
+    name: Adal (Barr Sa'd al-Din)
+    matched:
+      Adal:
+        AP World History CED, Units 1 and 2: 1
+  pl-agadez:
+    name: Agadez (Air sultanate)
+    matched:
+      Agadez:
+        AP World History CED, Units 1 and 2: 2
+  pl-alexandria:
+    name: Alexandria
+    matched:
+      Alexandria:
+        AP World History CED, Units 1 and 2: 1
+  pl-almohads:
+    name: Almohad Caliphate
+    matched:
+      Caliphate:
+        AP World History CED, Units 1 and 2: 1
+        'Textbook, Strayer Chapter 1 Unit 0: PART 1': 1
+        'Textbook, Chapter 2: Chapter 2 The Global System': 5
+        'Textbook, Chapter 3: PartI REVISITING The Human Experience to 1200 C.E.: Crucial Highlights': 1
+        'Textbook, Chapter 5: Chapter 5': 11
+      Almohads:
+        AP World History CED, Units 1 and 2: 1
+  pl-alodia:
+    name: Alodia (Alwa)
+    matched:
+      Alodia:
+        AP World History CED, Units 1 and 2: 1
+  pl-atlas-amazigh:
+    name: Tamazight-speaking highlands (Atlas, Rif, Sous)
+    matched:
+      Atlas:
+        AP World History CED, Units 1 and 2: 11
+        'Textbook, Chapter 8: Chapter 8 The Americas': 1
+  pl-benin:
+    name: Benin (Edo kingdom)
+    matched:
+      Benin:
+        AP World History CED, Units 1 and 2: 1
+        'Textbook, Chapter 2: Chapter 2 The Global System': 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 13
+      Edo:
+        'Textbook, Chapter 2: Chapter 2 The Global System': 2
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 1
+  pl-beta-israel:
+    name: Beta Israel
+    matched:
+      Beta Israel:
+        AP World History CED, Units 1 and 2: 1
+  pl-bornu:
+    name: Bornu (Sayfawa sultanate west of Lake Chad)
+    matched:
+      Bornu:
+        AP World History CED, Units 1 and 2: 3
+      Kanem-Bornu:
+        AP World History CED, Units 1 and 2: 1
+  pl-cairo:
+    name: Cairo (with Fustat)
+    matched:
+      Cairo:
+        AP World History CED, Units 1 and 2: 5
+        'Textbook, Chapter 2: Chapter 2 The Global System': 1
+        'Textbook, Chapter 5: Chapter 5': 2
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 1
+  pl-djenne:
+    name: Djenne
+    matched:
+      Djenne:
+        AP World History CED, Units 1 and 2: 2
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 4
+  pl-ethiopia-solomonic:
+    name: Christian kingdom of Ethiopia (Solomonic dynasty)
+    matched:
+      Ethiopia:
+        AP World History CED, Units 1 and 2: 8
+        'Textbook, Strayer Chapter 1 Unit 0: PART 1': 5
+        'Textbook, Chapter 5: Chapter 5': 3
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 12
+      Solomonic dynasty:
+        AP World History CED, Units 1 and 2: 1
+  pl-fez:
+    name: Fez
+    matched:
+      Fez:
+        AP World History CED, Units 1 and 2: 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 1
+  pl-gao:
+    name: Gao
+    matched:
+      Gao:
+        AP World History CED, Units 1 and 2: 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 3
+  pl-ghana-wagadu:
+    name: Ghana (Wagadu) and its Soninke successor kingdom
+    matched:
+      Ghana:
+        'Textbook, Chapter 2: Chapter 2 The Global System': 5
+        'Textbook, Chapter 4: Chapter 4 East Asia in the Era of Warlords': 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 7
+  pl-great-zimbabwe:
+    name: Great Zimbabwe
+    matched:
+      Great Zimbabwe:
+        AP World History CED, Units 1 and 2: 7
+        'Textbook, Chapter 2: Chapter 2 The Global System': 2
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 12
+      Great:
+        AP World History CED, Units 1 and 2: 8
+        'Textbook, Strayer Chapter 1 Unit 0: PART 1': 8
+        'Textbook, Chapter 2: Chapter 2 The Global System': 13
+        'Textbook, Chapter 3: PartI REVISITING The Human Experience to 1200 C.E.: Crucial Highlights': 21
+        'Textbook, Chapter 4: Chapter 4 East Asia in the Era of Warlords': 8
+        'Textbook, Chapter 5: Chapter 5': 22
+        'Textbook, Chapter 6: Chapter 6 Europe in the Mongol Era': 15
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 37
+        'Textbook, Chapter 8: Chapter 8 The Americas': 26
+      Zimbabwe:
+        AP World History CED, Units 1 and 2: 8
+        'Textbook, Chapter 2: Chapter 2 The Global System': 3
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 15
+  pl-hausa-states:
+    name: Hausa city-states (Hausaland)
+    matched:
+      Hausa city-states:
+        AP World History CED, Units 1 and 2: 1
+      Hausa:
+        AP World History CED, Units 1 and 2: 6
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 2
+      Hausa kingdoms:
+        AP World History CED, Units 1 and 2: 3
+  pl-ifat:
+    name: Ifat (Walasma sultanate)
+    matched:
+      Ifat:
+        AP World History CED, Units 1 and 2: 1
+  pl-ife:
+    name: Ile-Ife
+    matched:
+      Ile-Ife:
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 1
+      Ife:
+        AP World History CED, Units 1 and 2: 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 3
+  pl-kanem:
+    name: Kanem
+    matched:
+      Kanem:
+        AP World History CED, Units 1 and 2: 3
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 1
+      Kanem-Bornu:
+        AP World History CED, Units 1 and 2: 1
+  pl-katsina:
+    name: Katsina
+    matched:
+      Katsina:
+        AP World History CED, Units 1 and 2: 1
+  pl-kilwa:
+    name: Kilwa Kisiwani (Kilwa Sultanate)
+    matched:
+      Kilwa:
+        AP World History CED, Units 1 and 2: 4
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 6
+  pl-lalibela:
+    name: Lalibela (Roha)
+    matched:
+      Lalibela:
+        AP World History CED, Units 1 and 2: 2
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 3
+  pl-makuria:
+    name: Makuria (Dotawo)
+    matched:
+      Makuria:
+        AP World History CED, Units 1 and 2: 3
+  pl-mali:
+    name: Mali
+    matched:
+      Mali:
+        AP World History CED, Units 1 and 2: 11
+        'Textbook, Strayer Chapter 1 Unit 0: PART 1': 2
+        'Textbook, Chapter 2: Chapter 2 The Global System': 4
+        'Textbook, Chapter 3: PartI REVISITING The Human Experience to 1200 C.E.: Crucial Highlights': 1
+        'Textbook, Chapter 4: Chapter 4 East Asia in the Era of Warlords': 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 40
+      Manden:
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 5
+  pl-malindi:
+    name: Malindi
+    matched:
+      Malindi:
+        AP World History CED, Units 1 and 2: 2
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 2
+  pl-mamluks:
+    name: Mamluk Sultanate
+    matched:
+      Mamluk Sultanate:
+        AP World History CED, Units 1 and 2: 3
+      Mamluk:
+        AP World History CED, Units 1 and 2: 6
+        'Textbook, Chapter 3: PartI REVISITING The Human Experience to 1200 C.E.: Crucial Highlights': 3
+  pl-marinids:
+    name: Marinid Sultanate
+    matched:
+      Marinids:
+        AP World History CED, Units 1 and 2: 1
+  pl-mogadishu:
+    name: Mogadishu (Sultanate of Mogadishu)
+    matched:
+      Mogadishu:
+        AP World History CED, Units 1 and 2: 3
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 2
+  pl-mombasa:
+    name: Mombasa
+    matched:
+      Mombasa:
+        AP World History CED, Units 1 and 2: 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 4
+  pl-mutapa:
+    name: Mutapa (Mwenemutapa)
+    matched:
+      Mutapa:
+        'Textbook, Chapter 2: Chapter 2 The Global System': 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 4
+      Monomotapa:
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 1
+      Mwene Mutapa:
+        'Textbook, Chapter 2: Chapter 2 The Global System': 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 4
+  pl-niani:
+    name: Niani (capital question)
+    matched:
+      Niani:
+        AP World History CED, Units 1 and 2: 1
+      Mali:
+        AP World History CED, Units 1 and 2: 11
+        'Textbook, Strayer Chapter 1 Unit 0: PART 1': 2
+        'Textbook, Chapter 2: Chapter 2 The Global System': 4
+        'Textbook, Chapter 3: PartI REVISITING The Human Experience to 1200 C.E.: Crucial Highlights': 1
+        'Textbook, Chapter 4: Chapter 4 East Asia in the Era of Warlords': 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 40
+  pl-pate:
+    name: Pate (town and island, with Shanga)
+    matched:
+      Pate:
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 1
+  pl-sijilmasa:
+    name: Sijilmasa
+    matched:
+      Sijilmasa:
+        AP World History CED, Units 1 and 2: 2
+  pl-sofala:
+    name: Sofala
+    matched:
+      Sofala:
+        AP World History CED, Units 1 and 2: 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 2
+  pl-songhay-gao:
+    name: Songhay kingdom of Gao
+    matched:
+      Songhay:
+        'Textbook, Strayer Chapter 1 Unit 0: PART 1': 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 18
+  pl-sosso:
+    name: Sosso
+    matched:
+      Soso:
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 2
+  pl-timbuktu:
+    name: Timbuktu
+    matched:
+      Timbuktu:
+        AP World History CED, Units 1 and 2: 6
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 8
+  pl-tlemcen:
+    name: Tlemcen
+    matched:
+      Tlemcen:
+        AP World History CED, Units 1 and 2: 1
+  pl-tunis:
+    name: Tunis
+    matched:
+      Tunis:
+        AP World History CED, Units 1 and 2: 1
+  pl-walata:
+    name: Walata
+    matched:
+      Walata:
+        AP World History CED, Units 1 and 2: 2
+  pl-zagwe:
+    name: Zagwe kingdom
+    matched:
+      Zagwe:
+        AP World History CED, Units 1 and 2: 2
+  pl-zanzibar:
+    name: Zanzibar archipelago towns (Unguja and Pemba)
+    matched:
+      Zanzibar:
+        AP World History CED, Units 1 and 2: 1
+        'Textbook, Chapter 7: Chapter 7 African Civilizations and the Spread of Islam': 1
+  pl-zeila:
+    name: Zeila
+    matched:
+      Zeila:
+        AP World History CED, Units 1 and 2: 1

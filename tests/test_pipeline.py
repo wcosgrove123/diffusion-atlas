@@ -222,3 +222,65 @@ def test_module_regions_name_research_files(module):
     assert set(f["shown_regions"]) <= set(ids)
     for r in ids:
         assert (ROOT / "data/research" / module / f"{r}.yaml").exists()
+
+
+# ---- AP World only view (tools/ap_match.py, tools/build_data.py) ----
+
+sys.path.insert(0, str(ROOT / "tools"))
+import ap_match  # noqa: E402
+import build_data  # noqa: E402
+
+
+def test_ap_match_names_places_by_their_proper_names_only():
+    place = {"name": "Songhay kingdom of Gao", "alt_names": ["Kawkaw", "Sunni (Sonni) dynasty"]}
+    terms = ap_match.name_terms(place, "places", set())
+    assert "Songhay kingdom of Gao" in terms and "Songhay" in terms and "Kawkaw" in terms
+    assert "kingdom" not in [t.lower() for t in terms]
+    assert "Sunni dynasty" in terms  # the parenthetical is dropped, the name kept
+    # short names keep their capitals, long ones need not
+    assert ap_match.term_pattern("Mali").search("in Mali") and not ap_match.term_pattern("Mali").search("in mali")
+    assert ap_match.term_pattern("Timbuktu").search("TIMBUKTU")
+    assert not ap_match.term_pattern("Mali").search("Malindi")
+
+
+def test_ap_match_names_diffusions_only_through_known_words():
+    vocab = {"timbuktu", "maliki", "sufi"}
+    d = {"what": "Maliki Sunni scholarship reaches Timbuktu; Great growth of Shared learning"}
+    assert sorted(ap_match.name_terms(d, "diffusions", vocab)) == ["Maliki", "Timbuktu"]
+
+
+def test_ap_world_set_follows_the_place():
+    data = {
+        "places": [{"id": "pl-a", "name": "A"}, {"id": "pl-b", "name": "B"}],
+        "religion_profiles": [{"id": "rp-a", "place": "pl-a"}, {"id": "rp-b", "place": "pl-b"}],
+        "events": [{"id": "ev-a", "place": "pl-a"}, {"id": "ev-b", "place": "pl-b"}],
+        "exemplars": [{"id": "ex-b", "place": "pl-b"}],
+        "diffusions": [{"id": "df-to-a", "to": "pl-a"}, {"id": "df-to-b", "to": "pl-b"}],
+    }
+    yaml_path = ROOT / "data/ap-world/test-module.yaml"
+    yaml_path.write_text(yaml.safe_dump({
+        "named": {"pl-a": {"name": "A", "matched": {"A": {"Textbook, Chapter 7: Africa": 3}}}, "df-to-b": {"name": "x", "matched": {"Sufi": {"CED": 1}}}},
+        "include": ["ex-b"], "exclude": ["ev-a"], "default_view": "ap"}), encoding="utf-8")
+    try:
+        ap = build_data.ap_world_set("test-module", data)
+    finally:
+        yaml_path.unlink()
+    why = ap["why"]
+    assert why["pl-a"].startswith("named in Textbook")
+    assert why["rp-a"] == "follows A" and "rp-b" not in why
+    assert why["df-to-a"] == "arrives at A" and why["df-to-b"].startswith("named")
+    assert why["ex-b"] == "listed by Wil" and "ev-a" not in why and "ev-b" not in why
+
+
+def test_ap_world_list_matches_the_research_ids():
+    """The committed list names only records that exist, so a renamed record is caught."""
+    path = ROOT / "data/ap-world/africa.yaml"
+    if not path.exists():
+        pytest.skip("no AP World list for africa")
+    ap = yaml.safe_load(path.read_text(encoding="utf-8"))
+    data = json.loads((ROOT / "data/build/africa.json").read_text(encoding="utf-8"))
+    ids = {r["id"] for k in ("places", "diffusions", "exemplars", "events") for r in data[k]}
+    unknown = [i for i in list(ap["named"]) + list(ap.get("include") or []) + list(ap.get("exclude") or []) if i not in ids]
+    assert unknown == []
+    for cid in ("pl-great-zimbabwe", "pl-ethiopia-solomonic", "pl-hausa-states", "pl-mali", "pl-timbuktu"):
+        assert cid in ap["named"], f"{cid}: the CED names it"

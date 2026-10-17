@@ -134,6 +134,16 @@ export class Cards {
       this.chip(keyLabel(l), tax.lenses[l] ? `${tax.lenses[l].inspect}: ${tax.lenses[l].note}` : undefined)));
   }
 
+  /** Whether the AP World view shows this record, and why (teacher-useful; students see the short label). */
+  private apChip(id: string): HTMLElement | null {
+    const ap = this.atlas.ap;
+    if (!ap) return null;
+    const why = ap.why.get(id);
+    return why
+      ? this.chip('In the AP course', why, 'chip--ap-in')
+      : this.chip('Beyond the AP course', 'Not named in the course texts; shown with "Show everything"', 'chip--ap-out');
+  }
+
   private link(kind: CardKind, id: string, label: string): HTMLElement {
     const open = () => {
       if (kind === 'place') this.openPlace(id);
@@ -166,7 +176,7 @@ export class Cards {
     const tax = this.atlas.tax;
     const out: Node[] = [this.title(place.name)];
     if (place.alt_names?.length) out.push(h('p', { class: 'card__alt' }, `Also called: ${place.alt_names.join('; ')}`));
-    out.push(h('p', { class: 'card__kind', title: tax.place_kinds[place.kind] }, keyLabel(place.kind)));
+    out.push(h('p', { class: 'card__kind', title: tax.place_kinds[place.kind] }, keyLabel(place.kind), ' ', this.apChip(id)));
 
     const profiles = this.atlas.data.religion_profiles;
     const rows: { label: string; title?: string; stratum: string; profile: ReligionProfile | null }[] =
@@ -301,7 +311,7 @@ export class Cards {
     const tax = this.atlas.tax;
     const place: Place | undefined = this.atlas.placeById.get(e.place);
     const out: Node[] = [
-      h('p', { class: 'card__year' }, yearText(e.year, e.approx), e.keyframe ? this.chip('Keyframe', undefined, 'chip--keyframe') : null),
+      h('p', { class: 'card__year' }, yearText(e.year, e.approx), e.keyframe ? this.chip('Keyframe', undefined, 'chip--keyframe') : null, this.apChip(e.id)),
       this.title(e.title),
       h('p', { class: 'card__summary' }, e.summary),
     ];
@@ -342,7 +352,7 @@ export class Cards {
         h('h3', {}, 'What happened when it arrived'),
         h('p', { class: 'code' }, outcomeGlyph(d.outcome, color), h('strong', {}, keyLabel(d.outcome))),
         h('p', { class: 'code__test' }, tax.diffusion.outcome[d.outcome] ?? '')),
-      h('p', { class: 'chips' }, this.chip(`${d.confidence} confidence`, undefined, `chip--conf-${d.confidence}`)),
+      h('p', { class: 'chips' }, this.chip(`${d.confidence} confidence`, undefined, `chip--conf-${d.confidence}`), this.apChip(d.id)),
     ];
     const ap = this.apChips(d.ap_topics);
     if (ap) out.push(ap);
@@ -378,7 +388,7 @@ export class Cards {
     }
     const lenses = this.lensChips(x.lenses);
     if (lenses) out.push(lenses);
-    out.push(h('p', { class: 'chips' }, this.chip(`${x.confidence} confidence`, undefined, `chip--conf-${x.confidence}`)));
+    out.push(h('p', { class: 'chips' }, this.chip(`${x.confidence} confidence`, undefined, `chip--conf-${x.confidence}`), this.apChip(x.id)));
     const db = this.debates(x.id);
     if (db) out.push(db);
     const src = this.sources(x.evidence);

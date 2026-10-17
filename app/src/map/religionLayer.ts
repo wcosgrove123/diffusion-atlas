@@ -71,8 +71,10 @@ function area(g: Polygon | MultiPolygon): number {
 }
 
 /** The styled polygons for a year, largest first so smaller polities draw on top of the ones that contain them. */
-export function polityFeatures(data: ModuleData, geo: ModuleGeo, year: number): FeatureCollection<Polygon | MultiPolygon, PolityStyleProps> {
-  const places = new Map(shownPlaces(data).map((p) => [p.id, p]));
+export function polityFeatures(
+  data: ModuleData, geo: ModuleGeo, year: number, visible: (id: string) => boolean = () => true,
+): FeatureCollection<Polygon | MultiPolygon, PolityStyleProps> {
+  const places = new Map(shownPlaces(data).filter((p) => visible(p.id)).map((p) => [p.id, p]));
   const out: Feature<Polygon | MultiPolygon, PolityStyleProps>[] = [];
   for (const f of geo.polities.features as PolityFeature[]) {
     const place = places.get(f.properties.place_id);

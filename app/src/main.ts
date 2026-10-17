@@ -1,5 +1,5 @@
 import './styles.css';
-import { buildAtlas, YearState } from './atlas';
+import { buildAtlas, visibleIn, YearState } from './atlas';
 import { defaultLens } from './data/profiles';
 import { frameLabel, pickModule, shownBounds } from './data/frame';
 import { loadModuleData, loadModuleGeo, loadModuleIndex, loadTaxonomy } from './data/load';
@@ -11,6 +11,7 @@ import { Cards } from './ui/cards';
 import { buildLegend } from './ui/legend';
 import { Timeline } from './ui/timeline';
 import { applyUiPalette, traditionColors } from './theme/palette';
+import { h } from './ui/dom';
 
 /**
  * Let the browser paint and handle input between startup steps. Each step then runs as its own short task, which
@@ -44,6 +45,23 @@ async function start(): Promise<void> {
     const timeline = new Timeline(atlas, state, (id) => cards.openEvent(id, false));
     stage.append(buildLegend(atlas, lens), cards.el);
     document.getElementById('controls')!.append(timeline.el);
+
+    // The "AP World only" view (docs/decisions-for-wil.md, 20): everything else stays loaded, just not drawn.
+    let apOnly = atlas.ap !== null && (params.get('view') ?? atlas.ap.defaultView) === 'ap';
+    let visible = visibleIn(atlas, apOnly);
+    timeline.setVisible(visible);
+    const redraws: (() => void)[] = [];
+    if (atlas.ap) {
+      const box = h('input', { type: 'checkbox', id: 'ap-only', checked: apOnly });
+      box.addEventListener('change', () => {
+        apOnly = box.checked;
+        visible = visibleIn(atlas, apOnly);
+        timeline.setVisible(visible);
+        for (const r of redraws) r();
+      });
+      // In the button row, so the controls keep their height (no layout shift when the switch appears).
+      timeline.el.querySelector('.timeline__buttons')!.append(h('label', { class: 'view-switch', for: 'ap-only' }, box, ' AP World only'));
+    }
     const legend = document.getElementById('legend')!;
     const wide = window.matchMedia('(min-width: 900px)').matches;
     // Wide screens open with the legend showing.
@@ -57,7 +75,7 @@ async function start(): Promise<void> {
 
     map.once('load', async () => {
       addReligionLayers(map, 'rivers');
-      updateReligionLayers(map, polityFeatures(data, geo, state.year));
+      updateReligionLayers(map, polityFeatures(data, geo, state.year, visible));
       addArcLayers(map);
       // Ready (for people and tests) once the map has drawn this first view and the markers are on it.
       const pending = new Set(['map', 'markers']);
@@ -76,13 +94,15 @@ async function start(): Promise<void> {
       });
       const arcs = new ArcLayer(map, atlas, { openDiffusion: (id) => cards.openDiffusion(id) });
       // Markers and glyphs arrive in small slices (src/scheduler.ts); ready waits for the first full set.
-      let drawing: Promise<unknown> = Promise.all([markers.update(state.year), arcs.update(state.year, lens)]);
+      let drawing: Promise<unknown> = Promise.all([markers.update(state.year, visible), arcs.update(state.year, lens, visible)]);
       const firstDraw = drawing;
-      state.on((y) => {
-        updateReligionLayers(map, polityFeatures(data, geo, y));
-        drawing = Promise.all([markers.update(y), arcs.update(y, lens)]);
+      const draw = (y: number) => {
+        updateReligionLayers(map, polityFeatures(data, geo, y, visible));
+        drawing = Promise.all([markers.update(y, visible), arcs.update(y, lens, visible)]);
         cards.refresh();
-      });
+      };
+      state.on(draw);
+      redraws.push(() => draw(state.year));
       // For automated tests: resolves once the markers and arcs for the latest year are on the map and the map's
       // sources have finished loading the new data (setData hands it to a worker).
       testHooks.drawn = async () => {
@@ -117,6 +137,11 @@ async function start(): Promise<void> {
       __atlas: {
         map, atlas, state, cards, timeline, lens, colors: traditionColors,
         setYear: (y: number) => { state.set(y); return testHooks.drawn(); },
+        setApOnly: (on: boolean) => {
+          const box = document.getElementById('ap-only') as HTMLInputElement | null;
+          if (box && box.checked !== on) { box.checked = on; box.dispatchEvent(new Event('change')); }
+          return testHooks.drawn();
+        },
       },
     });
   } catch (err) {

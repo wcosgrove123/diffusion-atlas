@@ -2,7 +2,7 @@
 //   place labels for polygons (with a town donut when the place has an urban stratum), town donuts with community
 //   badges, squares for places with no polygon yet, event markers near the slider year, and exemplar markers.
 import * as maplibregl from 'maplibre-gl';
-import type { Atlas } from '../atlas';
+import type { Atlas, Visible } from '../atlas';
 import type { AtlasEvent, Exemplar, Place } from '../data/types';
 import { communitiesAt, covers, donutSegments, eventsNear, exemplarsAt, profileAt } from '../data/profiles';
 import { h } from '../ui/dom';
@@ -115,8 +115,8 @@ export class MarkerLayer {
       kind === 'area' && short !== p.name ? [h('span', { class: 'name--short' }, short), h('span', { class: 'name--full' }, p.name)] : p.name));
   }
 
-  /** Redraw for a year, in slices. Resolves when done (false if a newer update superseded it). */
-  async update(year: number): Promise<boolean> {
+  /** Redraw for a year and view, in slices. Resolves when done (false if a newer update superseded it). */
+  async update(year: number, visible: Visible = () => true): Promise<boolean> {
     const token = this.runs.next();
     await this.built;
     if (token.cancelled) return false;
@@ -125,11 +125,11 @@ export class MarkerLayer {
       const entry = this.places.get(p.id);
       if (!entry) return;
       const kind = this.kindOf(p);
-      const visible = kind === 'area'
+      const shown = visible(p.id) && (kind === 'area'
         ? this.atlas.geo.polities.features.some((f) => f.properties.place_id === p.id && shapeActive(f, year))
-        : covers(p.span ?? null, year);
-      entry.el.hidden = !visible;
-      if (!visible) return;
+        : covers(p.span ?? null, year));
+      entry.el.hidden = !shown;
+      if (!shown) return;
       const glyph = entry.el.querySelector('.place-marker__glyph')!;
       if (kind === 'town') {
         const urban = profileAt(profiles, p.id, 'urban', year);
@@ -182,12 +182,12 @@ export class MarkerLayer {
       }
     }, token);
     if (!done) return false;
-    this.updateEvents(year);
-    return chunked(this.exemplarJobs(year), (job) => job(), token);
+    this.updateEvents(year, visible);
+    return chunked(this.exemplarJobs(year, visible), (job) => job(), token);
   }
 
-  private updateEvents(year: number): void {
-    const near = new Set(eventsNear(this.atlas.events, year).map((e) => e.id));
+  private updateEvents(year: number, visible: Visible): void {
+    const near = new Set(eventsNear(this.atlas.events, year).filter((e) => visible(e.id)).map((e) => e.id));
     for (const [id, entry] of this.events) if (!near.has(id)) { entry.marker.remove(); this.events.delete(id); }
     // Stack events at one place so they do not hide each other.
     const stack = new Map<string, number>();
@@ -203,8 +203,8 @@ export class MarkerLayer {
   }
 
   /** One job per exemplar to add; the ones to remove go first. */
-  private exemplarJobs(year: number): (() => void)[] {
-    const shown = new Set(exemplarsAt(this.atlas.exemplars, year).map((x) => x.id));
+  private exemplarJobs(year: number, visible: Visible): (() => void)[] {
+    const shown = new Set(exemplarsAt(this.atlas.exemplars, year).filter((x) => visible(x.id)).map((x) => x.id));
     const jobs: (() => void)[] = [];
     for (const [id, entry] of this.exemplars) if (!shown.has(id)) { entry.marker.remove(); this.exemplars.delete(id); }
     const stack = new Map<string, number>();

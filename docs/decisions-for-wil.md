@@ -55,6 +55,16 @@ Open questions the coding agent must not decide. Each has a recommendation; answ
 19. **Phase 2 built before Phase 1 shipped.** You asked to keep building, so Phase 2 is stacked on the Phase 1 branch
     (PR 2 on top of PR 1). CLAUDE.md says to ship each phase before the next; this is the one exception, on your word.
 
+20. **The "AP World only" view (decided 2026-10-16, Wil).** Students open on the records the AP World curriculum
+    names; a switch in the time bar, "AP World only", shows everything when unticked (`?view=all` in the address
+    does the same). What counts as named: `tools/ap_match.py` looks for each record's names in the CED Units 1 and
+    2 text (docs/ap-ced-alignment.md) and in the textbook chapters in Loom's library (data/ap-world/sources.yaml
+    lists them). The follow rule: a named place brings its religion profiles, events and exemplars; an arc shows
+    when it arrives at a named place or its subject carries a place name or a religion branch word (Maliki, Sufi,
+    Coptic). The result is `data/ap-world/africa.yaml`; add ids under `include` or `exclude` there to overrule it
+    (Kano, Takrur, Jolof and Bono are out, for example, because the texts never name them). Rerun the matcher after
+    changing sources: `python tools/ap_match.py africa` (needs Loom's library on this machine).
+
 ## Data and taxonomy (your call; the researchers raised these)
 
 4. **Polity Profile, Right axis.** Two researchers needed a value for legitimacy from mastery of spiritual or occult

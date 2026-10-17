@@ -17,6 +17,7 @@ when it arrived (outcome), and whose sources tell us so.
 | `tools/` | Validator, data build, geometry extraction |
 | `docs/` | Product spec, build plan, AP CED alignment, fact-check, language review, corrections log, open decisions |
 | `data/modules.yaml` | Module frames: years, map bounds, and the area the map may show |
+| `data/ap-world/` | Which records the "AP World only" view shows, matched against the course texts (`tools/ap_match.py`) |
 | `app/` | The web app (Vite, TypeScript, MapLibre); reads only `data/build/*.json` |
 
 Dataset (Africa module): 91 places, 219 religion profiles, 117 diffusions, 55 exemplars, 55 events (25 keyframes),

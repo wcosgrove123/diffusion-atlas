@@ -18,6 +18,8 @@ export class Timeline {
   private ticks: HTMLElement;
   /** '' = all regions */
   region = '';
+  /** the view's filter (AP World only, or everything) */
+  visible: (id: string) => boolean = () => true;
   /** keyframes shown at the current year, so two in one year are visited one after the other */
   private visited = new Set<string>();
   private stepping = false;
@@ -79,7 +81,14 @@ export class Timeline {
 
   /** Keyframes of the chosen region (all when none is chosen), ascending. */
   get keyframes(): AtlasEvent[] {
-    return this.region ? this.atlas.keyframes.filter((k) => k._file === this.region) : this.atlas.keyframes;
+    return this.atlas.keyframes.filter((k) => this.visible(k.id) && (!this.region || k._file === this.region));
+  }
+
+  /** Change the view's filter; redraws the keyframe ticks. */
+  setVisible(visible: (id: string) => boolean): void {
+    this.visible = visible;
+    this.stop();
+    this.drawTicks();
   }
 
   private drawTicks(): void {

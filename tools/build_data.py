@@ -59,6 +59,38 @@ def rewrite_ids(obj, mapping):
     return obj
 
 
+def ap_world_set(module, data):
+    """The records the "AP World only" view shows (docs/decisions-for-wil.md, 20), from data/ap-world/<module>.yaml
+    (tools/ap_match.py): named places, plus the records that follow them. Returns None when the module has no list."""
+    path = ROOT / "data" / "ap-world" / f"{module}.yaml"
+    if not path.exists():
+        return None
+    ap = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    named = ap.get("named") or {}
+    include = set(ap.get("include") or [])
+    exclude = set(ap.get("exclude") or [])
+    why = {}
+    for rid, rec in named.items():
+        why[rid] = "named in " + "; ".join(sorted({s.split(":")[0] for hits in rec["matched"].values() for s in hits}))
+    for rid in include:
+        why[rid] = "listed by Wil"
+    names = {p["id"]: p["name"] for p in data["places"]}
+    places = {p["id"] for p in data["places"] if p["id"] in why and p["id"] not in exclude}
+    for r in data["religion_profiles"]:
+        if r["place"] in places:
+            why.setdefault(r["id"], f"follows {names[r['place']]}")
+    for e in data["events"] + data["exemplars"]:
+        if e["place"] in places:
+            why.setdefault(e["id"], f"follows {names[e['place']]}")
+    for d in data["diffusions"]:
+        if d["to"] in places:
+            why.setdefault(d["id"], f"arrives at {names[d['to']]}")
+    for rid in exclude:
+        why.pop(rid, None)
+    return {"default_view": ap.get("default_view", "ap"), "generated": str(ap.get("generated", "")),
+            "sources": ap.get("sources") or [], "why": dict(sorted(why.items()))}
+
+
 def main(module):
     rdir = ROOT / "data" / "research" / module
     tax = yaml.safe_load((ROOT / "data" / "taxonomy.yaml").read_text(encoding="utf-8"))
@@ -112,6 +144,8 @@ def main(module):
             if "religion" in (e.get("lenses") or []) and add not in [str(x) for x in e.get("ap_topics") or []]:
                 e["ap_topics"] = list(e.get("ap_topics") or []) + [add]
 
+    ap_world = ap_world_set(module, data)
+
     debates = (yaml.safe_load((rdir / "_debates.yaml").read_text(encoding="utf-8")) or {}).get("debates", []) \
         if (rdir / "_debates.yaml").exists() else []
     known = {r["id"] for k in LISTS for r in data[k]}
@@ -125,6 +159,7 @@ def main(module):
         "frame": load_frame(module),
         **data,
         "debates": debates,
+        "ap_world": ap_world,
     }
     bdir = ROOT / "data" / "build"
     bdir.mkdir(parents=True, exist_ok=True)
@@ -147,6 +182,10 @@ def main(module):
     lines += ["", "## Diffusion mechanism / outcome / lens", ""]
     for key in ("mechanism", "outcome", "lens"):
         lines.append(f"- {key}: " + ", ".join(f"{k} {v}" for k, v in c(key, data["diffusions"]).most_common()))
+    if ap_world:
+        lines += ["", "## AP World only view", "",
+                  f"- {len([k for k in ap_world['why'] if k.startswith('pl-')])} places named in the curriculum texts; "
+                  f"{len(ap_world['why'])} records shown in all (default view: {ap_world['default_view']})"]
     lines += ["", "## Keyframes", ""]
     for e in sorted((e for e in data["events"] if e.get("keyframe")), key=lambda e: e["year"]):
         lines.append(f"- {e['year']}{'~' if e.get('approx') else ''} {e['title']} ({e['_file']})")

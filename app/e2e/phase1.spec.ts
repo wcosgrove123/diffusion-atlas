@@ -158,7 +158,7 @@ test.describe('Phase 1 acceptance', () => {
   });
 
   test('4. stepping keyframes visits 1235, 1324, 1352, 1433 in order, each with its card', async ({ page }) => {
-    await page.goto('./');
+    await page.goto('./?view=all');
     await expect(page.locator('#map')).toHaveAttribute('data-ready', 'true', { timeout: 45_000 });
     const { data } = await load(page);
     // The build plan names the West (wsahel) keyframes: choose that region in the keyframe filter.

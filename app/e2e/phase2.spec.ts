@@ -27,7 +27,8 @@ async function openAtlas(page: Page): Promise<{ data: Data; errors: string[] }> 
   const errors: string[] = [];
   page.on('console', (m) => { if (m.type() === 'error' || (m.type() === 'warning' && /could not be loaded/.test(m.text()))) errors.push(m.text()); });
   page.on('pageerror', (e) => errors.push(e.message));
-  await page.goto('./');
+  // every record, so with everything shown (the AP World view has its own spec)
+  await page.goto('./?view=all');
   await expect(page.locator('#map')).toHaveAttribute('data-ready', 'true', { timeout: 45_000 });
   const data: Data = await page.evaluate(async () => (await (await fetch('data/africa.json')).json()));
   return { data, errors };

@@ -15,4 +15,8 @@ for f in ne_10m_coastline ne_10m_land ne_10m_rivers_lake_centerlines ne_10m_lake
          ne_10m_playas ne_10m_geography_regions_polys ne_50m_land ne_50m_coastline ne_50m_ocean; do
   curl -fsSL "$NB/$f.geojson" -o "$N/$f.geojson"
 done
+C=data/geometry/raw/cliopatria; mkdir -p "$C"
+CB=https://raw.githubusercontent.com/Seshat-Global-History-Databank/cliopatria/main
+curl -fsSL "$CB/LICENSE.md" -o "$C/LICENSE.md"
+curl -fsSL "https://github.com/Seshat-Global-History-Databank/cliopatria/raw/main/cliopatria.geojson.zip" -o "$C/cliopatria.geojson.zip"
 echo "done. Shaded relief raster (SR_50M) and RESOLVE Ecoregions 2017 need a manual download; see docs/geometry-audit.md"

@@ -65,6 +65,12 @@ Open questions the coding agent must not decide. Each has a recommendation; answ
     (Kano, Takrur, Jolof and Bono are out, for example, because the texts never name them). Rerun the matcher after
     changing sources: `python tools/ap_match.py africa` (needs Loom's library on this machine).
 
+21. **Cliopatria shapes (decided 2026-10-17, Wil).** Use Seshat's Cliopatria polity borders (CC BY 4.0) wherever
+    they agree with the research notes. Nine polities switched (Mali's big shape, Takrur, Almohads, Marinids,
+    Zayyanids, Ethiopia, Ifat, Adal); six stay with the earlier choice because Cliopatria disagrees with the notes
+    (Kanem, Bornu, Sosso, Zagwe, Makuria, Alodia). docs/geometry-review.md part 3 has the comparison and two new
+    questions (Hafsids; Mali after 1414).
+
 ## Data and taxonomy (your call; the researchers raised these)
 
 4. **Polity Profile, Right axis.** Two researchers needed a value for legitimacy from mastery of spiritual or occult

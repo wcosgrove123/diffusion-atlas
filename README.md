@@ -40,4 +40,6 @@ site, and publishes it to GitHub Pages (set Settings, Pages, Source to "GitHub A
 ## License
 
 GPL-3.0 (the repository ships modified data from aourednik/historical-basemaps, GPL-3.0).
-Base geography from Natural Earth (public domain).
+Base geography from Natural Earth (public domain). Some polity shapes come from Cliopatria, Seshat Global History
+Databank (CC BY 4.0, https://github.com/Seshat-Global-History-Databank/cliopatria), clipped and edited as each
+shape's `basis` says.

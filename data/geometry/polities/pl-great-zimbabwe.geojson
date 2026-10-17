@@ -8,7 +8,8 @@
     "year_from": 1200,
     "year_to": 1450,
     "method": "A",
-    "basis": "aourednik 'Great Zimbabwe' 1279 as is with our dates c.1200 to 1450 (geometry-audit section 5), relabelled and clipped: a soft area over the southern plateau, as the pl-great-zimbabwe geometry_note asks."
+    "basis": "aourednik 'Great Zimbabwe' 1279 as is with our dates c.1200 to 1450 (geometry-audit section 5), relabelled and clipped: a soft area over the southern plateau, as the pl-great-zimbabwe geometry_note asks.",
+    "source": "aourednik"
    },
    "geometry": {
     "type": "Polygon",

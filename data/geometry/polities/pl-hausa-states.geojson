@@ -73,7 +73,8 @@
     "year_from": 1440,
     "year_to": null,
     "method": "A",
-    "basis": "aourednik 'Hausa States' 1492 as a soft c.1450 envelope (geometry-audit section 5), relabelled and clipped."
+    "basis": "aourednik 'Hausa States' 1492 as a soft c.1450 envelope (geometry-audit section 5), relabelled and clipped.",
+    "source": "aourednik"
    },
    "geometry": {
     "type": "Polygon",

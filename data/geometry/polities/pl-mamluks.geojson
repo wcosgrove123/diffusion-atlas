@@ -8,7 +8,8 @@
     "year_from": 1250,
     "year_to": 1517,
     "method": "E",
-    "basis": "aourednik 'Mamluke Sultanate' 1279 (geometry-audit section 5 says A), cut to Egypt and Cyrenaica for this module as the pl-mamluks geometry_note asks: the Levant (north of 31.2N east of 33.5E), the Hijaz coast (east of 35E) and Nubia south of 23.7N (Aswan) are removed. Syria-Palestine from 1260 and northern Nubia from 1275 are not drawn."
+    "basis": "aourednik 'Mamluke Sultanate' 1279 (geometry-audit section 5 says A), cut to Egypt and Cyrenaica for this module as the pl-mamluks geometry_note asks: the Levant (north of 31.2N east of 33.5E), the Hijaz coast (east of 35E) and Nubia south of 23.7N (Aswan) are removed. Syria-Palestine from 1260 and northern Nubia from 1275 are not drawn.",
+    "source": "aourednik"
    },
    "geometry": {
     "type": "Polygon",

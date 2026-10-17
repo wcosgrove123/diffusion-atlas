@@ -28,34 +28,32 @@ polities:
       basis: >-
         Upper-Niger core for c.1250, drawn from the pl-mali geometry_note (upper Niger and Sankarani between
         Kangaba and Siguiri, with the Bure goldfield; Bambuk to the west) and geometry-audit section 5
-        ("hand-shrink to the upper-Niger core for c.1250"). Not traced from aourednik.
+        ("hand-shrink to the upper-Niger core for c.1250"). Not traced from aourednik or Cliopatria.
       outline: [[-11.0, 12.0], [-10.8, 13.3], [-9.6, 13.7], [-8.0, 13.3], [-6.9, 12.6], [-7.2, 11.4], [-8.0, 10.6],
                 [-9.2, 10.5], [-10.4, 11.0]]
     - year_from: 1300
       year_to: 1360
-      method: E
+      method: A
       review: draft
-      smooth: 0.4
+      smooth: 0.3
       basis: >-
-        aourednik 'Mali' 1279 used as the c.1330-1350 snapshot (geometry-audit section 5), with two trims: the
-        Mossi south cut away (south of 12.75N, east of 4W) and the east cut at 1.5E (Gao and Tadmekka side).
-        Extent per pl-mali geometry_note: Gambia and Senegal rivers to Gao and Walata about 1330-1360.
-      from: {year: 1279, name: Mali}
-      remove:
-        - [[-4.0, 0.0], [20.0, 0.0], [20.0, 12.75], [-4.0, 12.75], [-4.0, 0.0]]
-        - [[1.5, 0.0], [20.0, 0.0], [20.0, 30.0], [1.5, 30.0], [1.5, 0.0]]
+        Cliopatria 'Mali Empire' 1241 to 1414 (Seshat, CC BY 4.0) as the c.1330 to 1350 snapshot. It agrees with
+        the pl-mali geometry_note and the audit's trims without edits: Timbuktu, Gao, Walata, Djenne and Niani are
+        inside, the Senegal valley is inside, and the Mossi country and Tadmekka are outside. Replaces the trimmed
+        aourednik 1279 shape (docs/geometry-review.md, part 3).
+      from: {source: cliopatria, year: 1340, name: Mali Empire}
     - year_from: 1360
       year_to: 1433
       method: E
       review: draft
       smooth: 0.4
       basis: >-
-        The c.1330-1350 shape contracted for c.1400 without Jolof and Gao (geometry-audit section 5): cut west of
-        14W and north of 13.9N (Jolof and its Wolof provinces, from about 1350-1360 per pl-jolof) and east of 1W
-        (Gao, lost to the Sunni dynasty per pl-mali geometry_note). Timbuktu and Walata stay until 1433.
-      from: {year: 1279, name: Mali}
+        The Cliopatria c.1330 to 1350 shape contracted for c.1400 without Jolof and Gao (geometry-audit section 5):
+        cut west of 14W and north of 13.9N (Jolof and its Wolof provinces, from about 1350 to 1360 per pl-jolof) and
+        east of 1W (Gao, lost to the Sunni dynasty per pl-mali geometry_note). Cliopatria itself keeps Mali whole
+        until 1463, which the research does not support. Timbuktu and Walata stay until 1433.
+      from: {source: cliopatria, year: 1340, name: Mali Empire}
       remove:
-        - [[-4.0, 0.0], [20.0, 0.0], [20.0, 12.75], [-4.0, 12.75], [-4.0, 0.0]]
         - [[-1.0, 0.0], [20.0, 0.0], [20.0, 30.0], [-1.0, 30.0], [-1.0, 0.0]]
         - [[-30.0, 13.9], [-14.0, 13.9], [-14.0, 30.0], [-30.0, 30.0], [-30.0, 13.9]]
     - year_from: 1433
@@ -67,9 +65,8 @@ polities:
         The c.1400 shape with the north cut at 15.8N after the Tuareg took Timbuktu and Walata about 1433
         (pl-mali geometry_note; ev-tuareg-take-timbuktu). Not named in geometry-audit section 5; added so the map
         agrees with the 1433 keyframe. The 15th-century shift west toward the Gambia is not drawn.
-      from: {year: 1279, name: Mali}
+      from: {source: cliopatria, year: 1340, name: Mali Empire}
       remove:
-        - [[-4.0, 0.0], [20.0, 0.0], [20.0, 12.75], [-4.0, 12.75], [-4.0, 0.0]]
         - [[-1.0, 0.0], [20.0, 0.0], [20.0, 30.0], [-1.0, 30.0], [-1.0, 0.0]]
         - [[-30.0, 13.9], [-14.0, 13.9], [-14.0, 30.0], [-30.0, 30.0], [-30.0, 13.9]]
         - [[-30.0, 15.8], [20.0, 15.8], [20.0, 30.0], [-30.0, 30.0], [-30.0, 15.8]]
@@ -100,14 +97,15 @@ polities:
   pl-takrur:
     - year_from: 1000
       year_to: 1500
-      method: H
+      method: A
       review: draft
       smooth: 0.2
       basis: >-
-        Drawn from the pl-takrur geometry_note: the middle Senegal River valley (later Fuuta Tooro), both banks,
-        from about Dagana to Bakel. One shape for the whole span; overlordship changes are not drawn.
-      outline: [[-15.7, 16.2], [-15.6, 16.8], [-14.9, 16.95], [-13.9, 16.5], [-13.0, 15.95], [-12.2, 15.15],
-                [-12.5, 14.65], [-13.4, 15.3], [-14.1, 15.9], [-15.0, 16.3]]
+        Cliopatria 'Takrur' 1139 to 1235 (Seshat, CC BY 4.0), used for the whole place span: the middle Senegal
+        valley with both banks (Podor inside) and the Jolof interior outside, as the pl-takrur geometry_note and
+        geometry-audit section 5 ask. Cliopatria absorbs Takrur into Mali after 1235; the research keeps the place
+        under Mali's and then Jolof's overlordship, so the shape stays and the overlords draw over it.
+      from: {source: cliopatria, year: 1200, name: Takrur}
 
   pl-jolof:
     - year_from: 1350
@@ -321,20 +319,30 @@ polities:
   # ---- Phase 2: North Africa and Egypt (north) ----
   pl-almohads:
     - year_from: 1121
-      year_to: 1235
+      year_to: 1236
       method: E
       review: draft
-      smooth: 0.5
+      smooth: 0.4
       basis: >-
-        aourednik 'Almohad Caliphate' 1200 plus Ifriqiya (the Tunis to Tripoli coast) for c.1200, with al-Andalus
-        cut away as part of the external margin (geometry-audit section 5). Ends 1235 when the Zayyanids break away
-        (pl-almohads geometry_note: Hafsids independent 1229, Zayyanids 1235/36).
-      from: {year: 1200, name: Almohad Caliphate}
+        Cliopatria 'Almohad Caliphate' 1202 to 1235 (Seshat, CC BY 4.0), which already runs from the Atlantic to
+        Tripolitania as the pl-almohads geometry_note says; al-Andalus is cut away (north of 36N) as part of the
+        external margin (geometry-audit section 5). Replaces the aourednik 1200 shape plus a hand-added Ifriqiya.
+      from: {source: cliopatria, year: 1220, name: Almohad Caliphate}
       remove:
         - [[-12.0, 36.0], [6.0, 36.0], [6.0, 45.0], [-12.0, 45.0]]
-      add:
-        - [[1.5, 30.0], [1.5, 37.5], [12.0, 38.0], [16.0, 33.5], [12.5, 30.5]]
-    - year_from: 1235
+    - year_from: 1236
+      year_to: 1250
+      method: E
+      review: draft
+      smooth: 0.4
+      basis: >-
+        Cliopatria 'Almohad Caliphate' 1241 to 1249: the caliphate after the Hafsids (1229) and Zayyanids (1235)
+        broke away and the Marinids took the north, al-Andalus cut away. Cliopatria's later Almohad rows (1250 to
+        1343) are not used: the caliphate ended in 1269.
+      from: {source: cliopatria, year: 1245, name: Almohad Caliphate}
+      remove:
+        - [[-12.0, 36.0], [6.0, 36.0], [6.0, 45.0], [-12.0, 45.0]]
+    - year_from: 1250
       year_to: 1269
       method: H
       review: draft
@@ -346,33 +354,56 @@ polities:
 
   pl-marinids:
     - year_from: 1244
-      year_to: 1300
+      year_to: 1344
       method: A
       review: draft
       basis: >-
-        aourednik 'Merinides' 1279 as is, relabelled and clipped (geometry-audit section 5: method A). Fez and
-        Marrakesh are inside.
-      from: {year: 1279, name: Merinides}
-    - year_from: 1300
+        Cliopatria 'Marinid Sultanate' (Seshat, CC BY 4.0), its 1363 to 1414 shape used from 1244: Morocco north of
+        the High Atlas with Fez, Marrakesh and Sijilmasa inside and Tlemcen outside, as the pl-marinids
+        geometry_note says. Cliopatria has no Marinid row for 1260 to 1343; its 1250 and 1363 shapes are the same.
+      from: {source: cliopatria, year: 1400, name: Marinid Sultanate}
+    - year_from: 1344
+      year_to: 1352
+      method: A
+      review: draft
+      basis: >-
+        Cliopatria 'Marinid Sultanate' 1344 to 1351: Abu al-Hasan's hold on Tlemcen (pl-marinids geometry_note:
+        Tlemcen 1337 and 1352, Tunis 1347 and 1357). Only Cliopatria draws these brief maxima.
+      from: {source: cliopatria, year: 1347, name: Marinid Sultanate}
+    - year_from: 1352
+      year_to: 1363
+      method: A
+      review: draft
+      basis: >-
+        Cliopatria 'Marinid Sultanate' 1352 to 1362: Abu Inan's reach to Tunis (pl-marinids geometry_note).
+      from: {source: cliopatria, year: 1357, name: Marinid Sultanate}
+    - year_from: 1363
       year_to: 1465
       method: A
       review: draft
       basis: >-
-        aourednik 'Morocco' 1300 as is, relabelled Marinid Sultanate and clipped (geometry-audit section 5). The
-        brief Marinid holds on Tlemcen (1337, 1352) and Tunis (1347, 1357) are not drawn.
-      from: {year: 1300, name: Morocco}
+        Cliopatria 'Marinid Sultanate' 1363 to 1414 and 1415 to 1462 (the same shape): Morocco again, to the last
+        Marinid sultan in 1465.
+      from: {source: cliopatria, year: 1400, name: Marinid Sultanate}
 
   pl-zayyanids:
     - year_from: 1235
-      year_to: 1556
-      method: H
+      year_to: 1344
+      method: A
       review: draft
-      smooth: 0.4
       basis: >-
-        Drawn from the pl-zayyanids geometry_note and geometry-audit section 5: Tlemcen-centred, about 2W to 2E,
-        the central Maghreb from the coast to the pre-Saharan steppe. The displaced 1279 aourednik shape is not
-        used. Marinid occupations (1337 to 1348, 1352 to 1359) are not drawn.
-      outline: [[-2.4, 33.6], [-2.6, 35.4], [-0.5, 36.2], [1.8, 36.5], [2.4, 35.2], [2.0, 33.6], [-0.2, 33.2]]
+        Cliopatria 'Zayyanid dynasty' 1285 to 1343 (Seshat, CC BY 4.0): Tlemcen-centred, about 2W to 5E, Fez and
+        Tunis outside, as the pl-zayyanids geometry_note and geometry-audit section 5 ask. Replaces a hand-drawn
+        zone. Cliopatria has no Zayyanid row for 1344 to 1362, the years the Marinids held Tlemcen; the Marinid
+        shapes cover it then.
+      from: {source: cliopatria, year: 1300, name: Zayyanid dynasty}
+    - year_from: 1363
+      year_to: 1556
+      method: A
+      review: draft
+      basis: >-
+        Cliopatria 'Zayyanid dynasty' 1363 to 1506, the same shape, after the Marinid occupations.
+      from: {source: cliopatria, year: 1400, name: Zayyanid dynasty}
 
   pl-hafsids:
     - year_from: 1229
@@ -484,22 +515,23 @@ polities:
 
   pl-ethiopia-solomonic:
     - year_from: 1270
-      year_to: 1330
+      year_to: 1333
       method: A
       review: draft
       basis: >-
-        aourednik 'Ethiopia' 1279 as the Solomonic core, relabelled and clipped (geometry-audit section 5: use it
-        as a soft core). Amhara and Shewa with Lasta and Tigray; Lalibela inside.
-      from: {year: 1279, name: Ethiopia}
-    - year_from: 1330
+        Cliopatria 'Ethiopian Empire' 1272 to 1332 (Seshat, CC BY 4.0): the Solomonic core in Amhara, Shewa, Lasta
+        and Tigray, with Lalibela, Hayq and Debre Libanos inside. Replaces the aourednik 1279 shape.
+      from: {source: cliopatria, year: 1300, name: Ethiopian Empire}
+    - year_from: 1333
       year_to: null
       method: A
       review: draft
       basis: >-
-        aourednik 'Ethiopia' 1492 as the core plus the tributary halo after Amda Seyon's campaigns (1314 to 1344),
-        relabelled and clipped (geometry-audit section 5: grow it for c.1330 to 1340; pl-ethiopia-solomonic
-        geometry_note: a core plus a tributary halo). Overlaps Ifat and Hadiya, which were tributary.
-      from: {year: 1492, name: Ethiopia}
+        Cliopatria 'Ethiopian Empire' 1333 to 1501: the kingdom grown by Amda Seyon's campaigns (1314 to 1344),
+        the core plus the tributary halo the pl-ethiopia-solomonic geometry_note asks for (geometry-audit section
+        5: grow it for c.1330 to 1340). It overlaps Ifat and Hadiya, which were tributary. Replaces the aourednik
+        1492 shape.
+      from: {source: cliopatria, year: 1400, name: Ethiopian Empire}
 
   pl-damot:
     - year_from: 1200
@@ -528,29 +560,25 @@ polities:
       year_to: 1415
       method: E
       review: draft
-      smooth: 0.4
+      smooth: 0.3
       basis: >-
-        aourednik 'Shoa' 1279 relabelled Ifat (geometry-audit section 5), extended west to the eastern Shewa
-        escarpment so the capital Wafat (the research label point, 39.9E 10N) is inside, and extended to the Zeila
-        coast (pl-ifat geometry_note: reaching to the port of Zeila).
-      from: {year: 1279, name: Shoa}
+        Cliopatria 'Ifat Sultanate' 1285 to 1414 (Seshat, CC BY 4.0), which reaches the Zeila coast as the pl-ifat
+        geometry_note says, extended west to the eastern Shewa escarpment so the capital Wafat (the research
+        label point, 39.9E 10N) is inside. Replaces the relabelled aourednik 'Shoa' 1279 shape.
+      from: {source: cliopatria, year: 1350, name: Ifat Sultanate}
       add:
-        - [[39.5, 9.3], [39.5, 10.7], [41.6, 11.2], [41.6, 9.5]]
-        - [[42.4, 10.4], [42.4, 11.9], [43.9, 11.9], [43.9, 10.6]]
+        - [[39.5, 9.3], [39.5, 10.7], [41.0, 11.0], [41.0, 9.5]]
 
   pl-adal:
     - year_from: 1415
       year_to: 1577
-      method: E
+      method: A
       review: draft
-      smooth: 0.4
       basis: >-
-        aourednik 'Adal' 1492 from 1415, extended to the Zeila coast (geometry-audit section 5) and south-west to
-        the Harar plateau so Dakkar (the research label point, 42.3E 9.2N) is inside (pl-adal geometry_note).
-      from: {year: 1492, name: Adal}
-      add:
-        - [[41.4, 8.6], [41.4, 10.0], [43.2, 10.0], [43.2, 8.8]]
-        - [[42.4, 10.4], [42.4, 11.9], [43.9, 11.9], [43.9, 10.6]]
+        Cliopatria 'Adal Sultanate' 1415 to 1528 (Seshat, CC BY 4.0): from the Harar plateau (Dakkar, the research
+        label point, inside) to the Zeila coast, as the pl-adal geometry_note says. Replaces the aourednik 'Adal'
+        1492 shape with hand-added extensions.
+      from: {source: cliopatria, year: 1450, name: Adal Sultanate}
 
   pl-beta-israel:
     - year_from: 1200

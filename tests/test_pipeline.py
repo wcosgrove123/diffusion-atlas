@@ -170,11 +170,47 @@ def test_polity_shapes_are_clipped_to_land():
             assert g.difference(land).area <= limit * g.area, path.stem
 
 
+def test_published_shapes_name_their_source_and_the_build_credits_it():
+    """Method A and E features say which published dataset they come from (aourednik, GPL-3.0; Cliopatria,
+    CC BY 4.0), and the build's attribution names every dataset in use."""
+    feats = [f for p in POLITY_FILES for f in json.loads(p.read_text(encoding="utf-8"))["features"]]
+    sources = set()
+    for f in feats:
+        pr = f["properties"]
+        if pr["method"] in ("A", "E"):
+            assert pr.get("source") in ("aourednik", "cliopatria"), pr["place_id"]
+            sources.add(pr["source"])
+        else:
+            assert "source" not in pr, pr["place_id"]
+    geo = json.loads((ROOT / "data/build" / f"{SHAPES['module']}-geo.json").read_text(encoding="utf-8"))
+    credits = " ".join(geo["attribution"])
+    if "aourednik" in sources:
+        assert "aourednik/historical-basemaps (GPL-3.0)" in credits
+    if "cliopatria" in sources:
+        assert "Cliopatria" in credits and "CC BY 4.0" in credits
+    assert "cliopatria" in sources, "Phase 2 review adopted Cliopatria for Mali, Ethiopia and others"
+
+
+def test_cliopatria_extract_keeps_only_polities_in_the_frame():
+    path = ROOT / "data/geometry" / SHAPES["module"] / "cliopatria.geojson"
+    fc = json.loads(path.read_text(encoding="utf-8"))
+    assert "CC BY 4.0" in fc["license"]
+    w, s, e, n = load_frame(SHAPES["module"])["bbox"]
+    for f in fc["features"]:
+        pr = f["properties"]
+        assert pr["source"] == "cliopatria" and pr["FromYear"] <= pr["ToYear"]
+        from shapely.geometry import shape
+        x0, y0, x1, y1 = shape(f["geometry"]).bounds
+        assert w - 1e-6 <= x0 and x1 <= e + 1e-6 and s - 1e-6 <= y0 and y1 <= n + 1e-6, pr["Name"]
+
+
 def test_phase1_polities_have_shapes():
-    """docs/build-plan.md Phase 1: Mali (E) and the hand-drawn West African zones (H)."""
+    """docs/build-plan.md Phase 1: Mali (E) and the hand-drawn West African zones (H). Takrur moved to Cliopatria (A)
+    on 2026-10-17 (docs/geometry-review.md part 3)."""
     methods = {pid: {s["method"] for s in specs} for pid, specs in SHAPES["polities"].items()}
     assert "E" in methods["pl-mali"]
-    for pid in ("pl-sosso", "pl-jolof", "pl-takrur", "pl-songhay-gao", "pl-mossi", "pl-bono"):
+    assert methods["pl-takrur"] == {"A"}
+    for pid in ("pl-sosso", "pl-jolof", "pl-songhay-gao", "pl-mossi", "pl-bono"):
         assert methods[pid] == {"H"}, pid
     assert all(s.get("review") in ("draft", "approved") for specs in SHAPES["polities"].values() for s in specs)
 

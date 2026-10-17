@@ -8,7 +8,8 @@
     "year_from": 1075,
     "year_to": 1210,
     "method": "A",
-    "basis": "aourednik 'Kanem' 1200 as is: the plains north-east of Lake Chad with Njimi inside (geometry-audit section 5, pl-kanem geometry_note)."
+    "basis": "aourednik 'Kanem' 1200 as is: the plains north-east of Lake Chad with Njimi inside (geometry-audit section 5, pl-kanem geometry_note).",
+    "source": "aourednik"
    },
    "geometry": {
     "type": "Polygon",
@@ -77,7 +78,8 @@
     "year_from": 1210,
     "year_to": 1387,
     "method": "E",
-    "basis": "aourednik 'Kanem' 1200 extended north toward the Kawar oases and the Fezzan for the c.1250 maximum under Dunama Dibbalemi (geometry-audit section 5; pl-kanem geometry_note: Kanem claimed authority over Kawar and the Fezzan, Ibn Sa'id via Lange). The northern arm is a corridor to Kawar (Bilma, 12.9E 19N), not a border. Kept to 1387, when the Sayfawa moved west to Bornu."
+    "basis": "aourednik 'Kanem' 1200 extended north toward the Kawar oases and the Fezzan for the c.1250 maximum under Dunama Dibbalemi (geometry-audit section 5; pl-kanem geometry_note: Kanem claimed authority over Kawar and the Fezzan, Ibn Sa'id via Lange). The northern arm is a corridor to Kawar (Bilma, 12.9E 19N), not a border. Kept to 1387, when the Sayfawa moved west to Bornu.",
+    "source": "aourednik"
    },
    "geometry": {
     "type": "Polygon",

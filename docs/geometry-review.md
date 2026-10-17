@@ -1,7 +1,8 @@
-# Geometry review: every polity shape (Phase 1 West Africa, Phase 2 the rest)
+# Geometry review: every polity shape (Phase 1 West Africa, Phase 2 the rest, part 3 Cliopatria)
 
 For Wil. Every polity shape the map draws, with a screenshot, for your approval. **All of them are drafts.**
-Part 1 is West Africa (Phase 1); part 2, further down, is the other four regions (Phase 2).
+Part 1 is West Africa (Phase 1); part 2 is the other four regions (Phase 2); part 3 says which shapes
+now come from Cliopatria (Seshat's open polity-borders dataset, 2026-10-17) and which do not, and why.
 Hand-drawn shapes (method H) are the one place the build authors historical content (docs/build-plan.md, "Data rules"),
 so none should ship to students as final until you approve it here.
 
@@ -18,6 +19,7 @@ student view at that year: fill = rural profile, inner ring = court profile, cir
 
 - **Approve:** change `review: draft` to `review: approved` for that entry in `data/geometry/polity-shapes.yaml`
   (or tell me which ones in chat).
+- **Source:** `from: {source: cliopatria, ...}` or `{source: aourednik, ...}` picks the published dataset.
 - **Change:** say what to move ("Takrur further north at Dagana", "Mali c.1250 should include Bambuk"), or edit the
   `outline` points (`[longitude, latitude]`, west is negative) or the `remove` boxes yourself. Then rebuild:
 
@@ -390,3 +392,47 @@ clip fixes the coast). "E" shapes say what was cut or added. "H" shapes are draf
 **Coastal hinterland farmers, 1000 onward (H)**
 
 ![Coastal hinterland farmers 1000 onward](geometry-review/pl-coast-hinterland-1000.jpg)
+
+## Part 3: Cliopatria (Seshat Global History Databank), 2026-10-17
+
+Cliopatria is an open (CC BY 4.0) world dataset of polity borders with year ranges, hosted by the Seshat Global
+History Databank. You asked to use it where it agrees with our research. `tools/extract_cliopatria.py` clips it to
+the frame (`data/geometry/africa/cliopatria.geojson`), and each shape below was checked against the places the
+research notes say must be inside or outside. The attribution line on the map now credits it.
+
+### Switched to Cliopatria
+
+| Place | Cliopatria rows used | Why it agrees | What changed on the map |
+|---|---|---|---|
+| Mali, 1300 to 1360 | Mali Empire 1241 to 1414 | Timbuktu, Gao, Walata, Djenne, Niani and the Senegal valley inside; Mossi and Tadmekka outside, with no cuts needed | A rounder, slightly smaller shape than the trimmed aourednik one (0.68 of its area) |
+| Mali, 1360 to 1433 and 1433 on | the same, with our cuts | Cliopatria keeps Mali whole until 1463, which the notes do not support, so the Jolof, Gao and post-1433 cuts stay | Same cuts, new base |
+| Takrur | Takrur 1139 to 1235 | The middle Senegal valley with Podor inside and Jolof outside | Wider than the hand strip; both banks and hinterland |
+| Almohads, 1121 to 1250 | Almohad Caliphate 1202 to 1235, then 1241 to 1249 | Runs from the Atlantic to Tripolitania as the note says; the break-up after 1229 and 1235 is drawn | No more hand-added Ifriqiya; a second, shrunken snapshot for 1236 to 1250 |
+| Marinids | 1363 to 1414 (used from 1244), 1344 to 1351, 1352 to 1362 | Fez, Marrakesh, Sijilmasa inside, Tlemcen out; and it draws Abu al-Hasan's Tlemcen and Abu Inan's Tunis, the brief maxima the note mentions | Two extra snapshots in the 1340s and 1350s |
+| Zayyanids | 1285 to 1343 and 1363 to 1506 | Tlemcen-centred, Fez and Tunis outside | A published shape replaces my hand-drawn one; no Zayyanid shape in 1344 to 1362, when the Marinid shapes cover Tlemcen |
+| Ethiopia | 1272 to 1332, then 1333 to 1501 | Lalibela, Hayq and Debre Libanos inside; the kingdom grows at 1333, which matches Amda Seyon's campaigns in the note | The growth step moves from 1330 (our guess) to 1333 (theirs) |
+| Ifat | 1285 to 1414, plus our western ring | Reaches Zeila, as the note says and aourednik did not; its west edge stops short of Wafat, so the Shewa escarpment ring is kept | Larger to the east and south |
+| Adal | 1415 to 1528 | Dakkar and Zeila inside | No more hand-added extensions |
+
+### Kept as before (Cliopatria disagrees with the research)
+
+| Place | What Cliopatria has | Why it stays as before |
+|---|---|---|
+| Kanem | 20,000 km² south of Lake Chad, without Njimi | The note puts Kanem north-east of the lake with Njimi inside and a reach to Kawar |
+| Bornu | 14,000 km² | Too small for the Sayfawa sultanate west of the lake |
+| Sosso | Ghana's polygon relabelled, without Koulikoro | The note's core is the Koulikoro hills |
+| Ghana (Wagadu) | 205,000 km², shifted east toward the Niger bend | The note's core is Kumbi and the Hodh; aourednik's shape sits there |
+| Zagwe | 14,000 km², Lasta only | The note gives authority over Tigray, Eritrea and Amhara |
+| Makuria | a Nile strip that misses Old Dongola | The capital must be inside |
+| Alodia | 124,000 km² north of Soba | The note says the Gezira, south of Soba |
+| Ayyubids, Mamluks | Egypt with the Levant and the Hijaz | The notes say draw Egypt only; our aourednik cut already does that |
+| Hafsids | 225,000 km² from 4.4E | Smaller than the note's Ifriqiya with Algiers and Constantine; kept the aourednik shape cut at 1.5E. A judgment call |
+| Everything else | not in Cliopatria | Great Zimbabwe, the Swahili towns, the Hausa states, Benin, Ife, Mossi, Jolof, Bono, Mutapa, Mapungubwe and the peoples are absent from it |
+
+### Questions for you (part 3)
+
+13. **Hafsids:** keep the larger aourednik shape (with Algiers) or Cliopatria's smaller one (from Bougie east)?
+14. **Mali after 1414:** Cliopatria grows Mali to 1.1 million km² for 1415 to 1462 and only shrinks it from 1463. Our
+    research has Gao lost in the early 1400s and Timbuktu in 1433, so the cuts stay. Agree?
+
+Screenshots for the switched shapes are in the part 1 and part 2 sections above (the same file names).

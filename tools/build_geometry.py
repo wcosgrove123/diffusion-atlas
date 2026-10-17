@@ -55,12 +55,31 @@ def aourednik_shape(module, year, name):
     return unary_union([shape(f["geometry"]) for f in feats])
 
 
+def cliopatria_shape(module, year, name):
+    """The Cliopatria polity shape named `name` whose year range covers `year` (tools/extract_cliopatria.py)."""
+    path = ROOT / "data/geometry" / module / "cliopatria.geojson"
+    if not path.exists():
+        raise SystemExit(f"missing {path}; run python3 tools/extract_cliopatria.py {module}")
+    feats = [f for f in json.loads(path.read_text(encoding="utf-8"))["features"]
+             if (f.get("properties") or {}).get("Name") == name
+             and f["properties"]["FromYear"] <= year <= f["properties"]["ToYear"]]
+    if not feats:
+        raise SystemExit(f"{path.name}: no feature named {name!r} covering {year}")
+    return unary_union([make_valid(shape(f["geometry"])) for f in feats])
+
+
+SOURCES = {"aourednik": aourednik_shape, "cliopatria": cliopatria_shape}
+
+
 def make_shape(module, place_id, spec, land):
     method = spec.get("method")
     edits = [k for k in ("remove", "add", "keep") if spec.get(k)]
     if method in ("A", "E"):
         src = spec.get("from") or {}
-        geom = aourednik_shape(module, src["year"], src["name"])
+        source = src.get("source", "aourednik")
+        if source not in SOURCES:
+            raise SystemExit(f"{place_id}: from.source must be one of {sorted(SOURCES)}")
+        geom = SOURCES[source](module, src["year"], src["name"])
         if method == "A" and edits:
             raise SystemExit(f"{place_id}: method A uses aourednik as is; editing it makes it method E")
         if method == "E" and not edits:
@@ -114,6 +133,8 @@ def make_shape(module, place_id, spec, land):
         raise SystemExit(f"{place_id}: shape is empty after clipping to land")
     props = {"place_id": place_id, "year_from": spec["year_from"], "year_to": spec.get("year_to"),
              "method": method, "basis": " ".join(spec["basis"].split())}
+    if method in ("A", "E"):
+        props["source"] = (spec.get("from") or {}).get("source", "aourednik")
     if spec.get("zone"):
         props["zone"] = spec["zone"]
     g = mapping(geom)
@@ -187,8 +208,11 @@ def main(module):
         "base": base_file,
         "polities": {"type": "FeatureCollection", "features": load_polities()},
     }
-    if any(f["properties"]["method"] in ("A", "E") for f in out["polities"]["features"]):
+    sources = {f["properties"].get("source") for f in out["polities"]["features"] if f["properties"]["method"] in ("A", "E")}
+    if "aourednik" in sources:
         out["attribution"].append("aourednik/historical-basemaps (GPL-3.0), modified")
+    if "cliopatria" in sources:
+        out["attribution"].append("Cliopatria, Seshat Global History Databank (CC BY 4.0), modified")
     path = outdir / f"{module}-geo.json"
     path.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     print(f"wrote data/build/{module}-geo.json ({path.stat().st_size / 1024:.0f} KB, "

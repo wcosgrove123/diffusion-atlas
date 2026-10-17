@@ -8,7 +8,8 @@
     "year_from": 1229,
     "year_to": 1574,
     "method": "E",
-    "basis": "aourednik 'Hafsid Caliphate' 1300 with the west cut at 1.5E to exclude Tlemcen (geometry-audit section 5: cut at about 1 to 2E). Tunis and Kairouan are inside; Tripolitania to 18E as drawn by aourednik."
+    "basis": "aourednik 'Hafsid Caliphate' 1300 with the west cut at 1.5E to exclude Tlemcen (geometry-audit section 5: cut at about 1 to 2E). Tunis and Kairouan are inside; Tripolitania to 18E as drawn by aourednik.",
+    "source": "aourednik"
    },
    "geometry": {
     "type": "Polygon",

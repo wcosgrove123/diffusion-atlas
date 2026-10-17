@@ -292,11 +292,32 @@ soft shapes, so the work is modest. Hand-drawn shapes should cite their basis (a
 
 ---
 
+## 10. Cliopatria (added 2026-10-17)
+
+- **What it is:** the Seshat Global History Databank's open dataset of polity borders, 3400 BCE to today, about
+  1,800 polities and 13,800 shapes, each with an inclusive year range, Wikidata and Wikipedia ids and (for some) a
+  Seshat polity id. One GeoJSON file at https://github.com/Seshat-Global-History-Databank/cliopatria (versions on
+  Zenodo, doi 10.5281/zenodo.13363121; data paper Chalstrey et al., *Scientific Data* 2025, doi
+  10.1038/s41597-025-04516-9). The repository does not say where the polygons were traced from.
+- **License: CC BY 4.0.** Credit the source, link the license, say what changed. Compatible with this GPL-3.0
+  repo; the map's attribution line names it.
+- **Africa 1200 to 1450 coverage** (`tools/extract_cliopatria.py` keeps polities whose centre is in the frame):
+  Mali (six snapshots 1236 to 1563), Ghana to 1201, Sosso 1202 to 1235, Takrur 1139 to 1235, Kanem 1072 to 1384,
+  Bornu from 1385, the Ethiopian kingdom (1272 on, grown at 1333), Zagwe, Ifat 1285 to 1414, Adal from 1415,
+  Makuria, Alodia, Ayyubids, Mamluks (14 snapshots), Marinids (with the 1344 to 1362 maxima), Hafsids, Zayyanids,
+  Almohads, Songhai from 1463, Kongo from 1440. **Absent:** Great Zimbabwe, Mapungubwe, Mutapa, every Swahili town,
+  the Hausa states, Benin, Ife, Mossi, Jolof, Bono, Agadez and all peoples.
+- **Verdict:** finer in time than aourednik and right where the research can check it for Mali, Takrur, the
+  Almohads, Marinids, Zayyanids, Ethiopia, Ifat and Adal, which now come from it (method A or E with
+  `from.source: cliopatria`). Wrong or too small for Kanem, Bornu, Sosso, Zagwe, Makuria and Alodia, where the
+  earlier choices stand. docs/geometry-review.md part 3 has the comparison.
+
 ## 9. Reproduce
 
 ```
 pip install --break-system-packages shapely pyproj
 python3 tools/extract_africa.py --report          # writes data/geometry/africa/*
+python3 tools/extract_cliopatria.py africa        # writes data/geometry/africa/cliopatria.geojson
 ```
 
 Raw downloads came from `raw.githubusercontent.com/aourednik/historical-basemaps/master/geojson/` and

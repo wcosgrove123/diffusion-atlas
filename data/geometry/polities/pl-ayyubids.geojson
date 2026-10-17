@@ -8,7 +8,8 @@
     "year_from": 1171,
     "year_to": 1250,
     "method": "E",
-    "basis": "The Egypt portion of aourednik 'Mamluke Sultanate' 1279, relabelled and dated 1171 to 1250 (geometry-audit section 5): the Levant north of 31.2N east of 33.5E and the Hijaz coast east of 35E are cut away, as the pl-ayyubids geometry_note asks (draw Egypt only for this module)."
+    "basis": "The Egypt portion of aourednik 'Mamluke Sultanate' 1279, relabelled and dated 1171 to 1250 (geometry-audit section 5): the Levant north of 31.2N east of 33.5E and the Hijaz coast east of 35E are cut away, as the pl-ayyubids geometry_note asks (draw Egypt only for this module).",
+    "source": "aourednik"
    },
    "geometry": {
     "type": "Polygon",

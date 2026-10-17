@@ -8,7 +8,8 @@
     "year_from": 580,
     "year_to": 1504,
     "method": "A",
-    "basis": "aourednik 'Alwa' 1200 as is, centred on Soba, relabelled and clipped (geometry-audit section 5: use the 1200 shape and ignore the 1279 to 1492 Alwa polygons). Covers the Gezira toward the Atbara."
+    "basis": "aourednik 'Alwa' 1200 as is, centred on Soba, relabelled and clipped (geometry-audit section 5: use the 1200 shape and ignore the 1279 to 1492 Alwa polygons). Covers the Gezira toward the Atbara.",
+    "source": "aourednik"
    },
    "geometry": {
     "type": "Polygon",

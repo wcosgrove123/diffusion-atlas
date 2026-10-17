@@ -7,64 +7,109 @@
     "place_id": "pl-takrur",
     "year_from": 1000,
     "year_to": 1500,
-    "method": "H",
-    "basis": "Drawn from the pl-takrur geometry_note: the middle Senegal River valley (later Fuuta Tooro), both banks, from about Dagana to Bakel. One shape for the whole span; overlordship changes are not drawn."
+    "method": "A",
+    "basis": "Cliopatria 'Takrur' 1139 to 1235 (Seshat, CC BY 4.0), used for the whole place span: the middle Senegal valley with both banks (Podor inside) and the Jolof interior outside, as the pl-takrur geometry_note and geometry-audit section 5 ask. Cliopatria absorbs Takrur into Mali after 1235; the research keeps the place under Mali's and then Jolof's overlordship, so the shape stays and the overlords draw over it.",
+    "source": "cliopatria"
    },
    "geometry": {
     "type": "Polygon",
     "coordinates": [
      [
       [
-       -15.504,
-       16.242
+       -16.417,
+       15.858
       ],
       [
-       -14.922,
-       16.265
+       -15.763,
+       15.834
       ],
       [
-       -14.14,
-       15.918
+       -15.037,
+       15.641
       ],
       [
-       -12.601,
-       14.744
+       -14.535,
+       15.425
       ],
       [
-       -12.444,
-       14.776
+       -14.309,
+       15.243
       ],
       [
-       -12.28,
-       15.016
+       -13.675,
+       15.042
       ],
       [
-       -12.31,
-       15.26
+       -13.14,
+       14.564
       ],
       [
-       -13.02,
-       15.962
+       -12.518,
+       14.381
       ],
       [
-       -13.911,
-       16.505
+       -11.931,
+       14.417
       ],
       [
-       -14.84,
-       16.923
+       -11.755,
+       14.565
       ],
       [
-       -15.54,
+       -11.815,
+       14.932
+      ],
+      [
+       -12.161,
+       15.148
+      ],
+      [
+       -12.326,
+       15.527
+      ],
+      [
+       -12.86,
+       15.91
+      ],
+      [
+       -13.166,
+       16.437
+      ],
+      [
+       -13.604,
+       16.629
+      ],
+      [
+       -13.778,
+       16.864
+      ],
+      [
+       -14.025,
+       16.981
+      ],
+      [
+       -15.732,
+       16.874
+      ],
+      [
+       -16.215,
+       16.91
+      ],
+      [
+       -16.339,
        16.797
       ],
       [
-       -15.653,
-       16.395
+       -16.537,
+       16.272
       ],
       [
-       -15.504,
-       16.242
+       -16.525,
+       15.962
+      ],
+      [
+       -16.417,
+       15.858
       ]
      ]
     ]

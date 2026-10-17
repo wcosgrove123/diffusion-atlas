@@ -8,7 +8,8 @@
     "year_from": 580,
     "year_to": 1365,
     "method": "E",
-    "basis": "aourednik 'Makkura' 1200 with the south trimmed at 17.5N so Soba (Alodia's capital, 15.5N) is outside (geometry-audit section 5); the pl-makuria geometry_note puts the border with al-Abwab and Alodia at about the Fourth or Fifth Cataract. Old Dongola is inside."
+    "basis": "aourednik 'Makkura' 1200 with the south trimmed at 17.5N so Soba (Alodia's capital, 15.5N) is outside (geometry-audit section 5); the pl-makuria geometry_note puts the border with al-Abwab and Alodia at about the Fourth or Fifth Cataract. Old Dongola is inside.",
+    "source": "aourednik"
    },
    "geometry": {
     "type": "Polygon",
@@ -125,7 +126,8 @@
     "year_from": 1365,
     "year_to": 1500,
     "method": "E",
-    "basis": "A fading remnant in Lower Nubia after the civil war of 1365 (geometry-audit section 5: end c.1365 to 1400 with a fading remnant): the same aourednik 'Makkura' 1200 kept north of 21.3N, around Qasr Ibrim and Daw (pl-makuria geometry_note: the court moved north to Daw). Kept to 1500 because the place span does."
+    "basis": "A fading remnant in Lower Nubia after the civil war of 1365 (geometry-audit section 5: end c.1365 to 1400 with a fading remnant): the same aourednik 'Makkura' 1200 kept north of 21.3N, around Qasr Ibrim and Daw (pl-makuria geometry_note: the court moved north to Daw). Kept to 1500 because the place span does.",
+    "source": "aourednik"
    },
    "geometry": {
     "type": "Polygon",

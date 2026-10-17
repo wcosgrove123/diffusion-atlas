@@ -23,6 +23,7 @@ python3 tools/build_geometry.py africa    # polity-shapes.yaml -> data/geometry/
 python3 -m pytest tests                   # pipeline tests
 bash tools/fetch_geometry.sh              # re-download raw geometry (gitignored)
 python3 tools/extract_africa.py --report  # clip aourednik to the frame
+python3 tools/extract_cliopatria.py africa  # clip Cliopatria (Seshat, CC BY 4.0) to the frame
 python3 tools/extract_base.py africa      # clip Natural Earth to the module view box -> data/geometry/base/africa/
 cd app && npm run dev | npm run build | npm test
 cd app && npm run build && PW_CHANNEL=msedge npm run e2e   # smoke, Phase 1 acceptance, Lighthouse (CI: Chromium)
@@ -47,6 +48,7 @@ On Windows, `python` replaces `python3`. In Git Bash set `MSYS_NO_PATHCONV=1` be
 - **Attribution.** Wil is the author of the project, its ideas, and its writing. Nothing in the site, README, or
   metadata should say Claude or AI built it or wrote it. Co-author lines on commits for code are fine.
 - **Polygons** are made from `data/geometry/polity-shapes.yaml` (method A, E or H per docs/geometry-audit.md 5;
+  A and E take `from.source` aourednik or cliopatria;
   E edits are `keep`, `remove`, `add`; H is an `outline` or a `point` with `buffer_km`; `zone: nomadic` hatches).
   Hand-drawn (H) shapes stay `review: draft` until Wil approves them in docs/geometry-review.md.
 - **Map layers** draw with pattern fills and pattern lines only (`app/src/map/patterns.ts` helpers), so the map

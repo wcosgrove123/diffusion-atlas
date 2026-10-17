@@ -8,7 +8,8 @@
     "year_from": 1000,
     "year_to": 1440,
     "method": "E",
-    "basis": "aourednik 'Benin' 1279 shrunk to the Edo core between 5.3E and 6.5E before c.1440 (geometry-audit section 5; pl-benin geometry_note: expansion beyond the Edo heartland begins with Ewuare, c.1440)."
+    "basis": "aourednik 'Benin' 1279 shrunk to the Edo core between 5.3E and 6.5E before c.1440 (geometry-audit section 5; pl-benin geometry_note: expansion beyond the Edo heartland begins with Ewuare, c.1440).",
+    "source": "aourednik"
    },
    "geometry": {
     "type": "Polygon",
@@ -77,7 +78,8 @@
     "year_from": 1440,
     "year_to": null,
     "method": "E",
-    "basis": "aourednik 'Benin' 1279 as the post-Ewuare extent, with the west cut at 4.9E so Ile-Ife is outside (geometry-audit section 5: \"Remove Ife\")."
+    "basis": "aourednik 'Benin' 1279 as the post-Ewuare extent, with the west cut at 4.9E so Ile-Ife is outside (geometry-audit section 5: \"Remove Ife\").",
+    "source": "aourednik"
    },
    "geometry": {
     "type": "Polygon",

@@ -8,7 +8,8 @@
     "year_from": 1380,
     "year_to": null,
     "method": "E",
-    "basis": "aourednik 'Kanem-Bornu' 1400 with the detached Bioko part deleted and the northern arm pulled back from 21N to about 16.5N (geometry-audit section 5: pull it back unless the research supports Kawar; the pl-bornu geometry_note places Bornu west and south-west of Lake Chad). Starts c.1380."
+    "basis": "aourednik 'Kanem-Bornu' 1400 with the detached Bioko part deleted and the northern arm pulled back from 21N to about 16.5N (geometry-audit section 5: pull it back unless the research supports Kawar; the pl-bornu geometry_note places Bornu west and south-west of Lake Chad). Starts c.1380.",
+    "source": "aourednik"
    },
    "geometry": {
     "type": "Polygon",

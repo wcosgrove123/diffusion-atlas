@@ -28,8 +28,9 @@ python3 tools/extract_base.py africa      # clip Natural Earth to the module vie
 cd app && npm run dev | npm run build | npm test
 cd app && npm run build && PW_CHANNEL=msedge npm run e2e   # smoke, Phase 1 acceptance, Lighthouse (CI: Chromium)
 cd app && GEOMETRY_REVIEW=1 PW_CHANNEL=msedge npx playwright test geometry-review --project=desktop  # review shots
+cd app && ZOOM_SHOTS=1 PW_CHANNEL=msedge npx playwright test zoom-tiers --project=desktop  # docs/zoom-tiers/ shots
 ```
-Module frames (years, bbox, view_bbox, regions, shown_regions) live in `data/modules.yaml`. The app reads them only via `modules.json`.
+Module frames (years, bbox, view_bbox, regions, shown_regions, zoom_bands) live in `data/modules.yaml`. The app reads them only via `modules.json`.
 On Windows, `python` replaces `python3`. In Git Bash set `MSYS_NO_PATHCONV=1` before passing `BASE_PATH=/repo/`.
 
 ## Rules
@@ -55,5 +56,8 @@ On Windows, `python` replaces `python3`. In Git Bash set `MSYS_NO_PATHCONV=1` be
   compiles two WebGL programs. A new paint kind adds a program and costs startup time on Chromebooks.
 - **AP World view.** `data/ap-world/<module>.yaml` says what the "AP World only" view shows; the app never
   decides that itself. Wil edits `include` and `exclude` there (docs/decisions-for-wil.md, 20).
+- **Zoom bands.** What shows at each zoom comes from each record's `prominence` (taxonomy section 8, set by
+  `tools/build_data.py`, overridable per record) and the one table in `app/src/map/bands.ts`; the thresholds are
+  `zoom_bands` in data/modules.yaml. Never scatter zoom numbers or tier names through the app or the CSS.
 - **Phases in order.** Ship each phase to Pages before starting the next. Something usable must exist early.
 - Ask Wil before changing the stack, the taxonomy, or anything in docs/decisions-for-wil.md.

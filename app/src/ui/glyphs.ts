@@ -286,6 +286,42 @@ function drawDonut(p: ReligionProfile | null, size: number): HTMLCanvasElement {
   return c;
 }
 
+export const DOT_SIZE = 14;
+
+/**
+ * A town zoomed out (map/bands.ts, far band): one plain dot in the urban profile's relation pattern and
+ * tradition colors, opacity by confidence. No profile = hollow dashed dot. The donut replaces it closer in.
+ */
+export function dot(p: ReligionProfile | null, size = DOT_SIZE): Glyph {
+  return cached(`dot|${size}|${lookKey(p)}`, () => drawDot(p, size));
+}
+
+function drawDot(p: ReligionProfile | null, size: number): HTMLCanvasElement {
+  const [c, ctx] = canvas(size, size);
+  const cx = size / 2;
+  const r = size / 2 - 1.5;
+  if (!p) {
+    ctx.setLineDash([3, 2]);
+    ctx.lineWidth = 1.4;
+    ctx.strokeStyle = mapInk.noRecord;
+    ctx.beginPath();
+    ctx.arc(cx, cx, r - 1, 0, Math.PI * 2);
+    ctx.stroke();
+    return c;
+  }
+  ctx.fillStyle = mapInk.keyline;
+  ctx.beginPath();
+  ctx.arc(cx, cx, r + 1.5, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.globalAlpha = opacityFor(p.confidence);
+  const look = profileLook(p);
+  fillWith(ctx, look.kind, look.a, look.b);
+  ctx.beginPath();
+  ctx.arc(cx, cx, r, 0, Math.PI * 2);
+  ctx.fill();
+  return c;
+}
+
 /** A community badge: a small pill in the community's dominant tradition color (crosshatch if undocumented). */
 export function badge(p: ReligionProfile, w = 10, h = 16): Glyph {
   return cached(`badge|${w}|${h}|${lookKey(p)}`, () => drawBadge(p, w, h));

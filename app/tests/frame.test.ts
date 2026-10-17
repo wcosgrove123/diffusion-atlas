@@ -3,8 +3,8 @@ import { frameBounds, frameLabel, panBounds, pickModule } from '../src/data/fram
 import { dataUrl } from '../src/data/load';
 import type { ModuleFrame } from '../src/data/types';
 
-const a: ModuleFrame = { id: 'a', title: 'Region A', start: 1200, end: 1450, bbox: [-20, -36, 60, 40], view_bbox: [-72, -64, 112, 70], regions: [], shown_regions: [] };
-const b: ModuleFrame = { id: 'b', title: 'Region B', start: 900, end: 1100, bbox: [60, -10, 150, 55], view_bbox: [50, -20, 160, 65], regions: [], shown_regions: [] };
+const a: ModuleFrame = { id: 'a', title: 'Region A', start: 1200, end: 1450, bbox: [-20, -36, 60, 40], view_bbox: [-72, -64, 112, 70], regions: [], shown_regions: [], zoom_bands: { mid: 4, near: 5.5 } };
+const b: ModuleFrame = { id: 'b', title: 'Region B', start: 900, end: 1100, bbox: [60, -10, 150, 55], view_bbox: [50, -20, 160, 65], regions: [], shown_regions: [], zoom_bands: { mid: 4, near: 5.5 } };
 
 describe('module frames', () => {
   it('turns a bbox into MapLibre bounds', () => {

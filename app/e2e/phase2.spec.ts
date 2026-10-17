@@ -13,7 +13,7 @@ interface AtlasEvent { id: string; year: number; place: string; _file: string }
 interface Debate { id: string; links: string[] }
 interface Source { id: string }
 interface Data {
-  frame: { start: number; end: number; shown_regions: string[] };
+  frame: { start: number; end: number; shown_regions: string[]; zoom_bands: { mid: number; near: number } };
   places: Place[]; religion_profiles: Profile[]; diffusions: Diffusion[]; exemplars: Exemplar[]; events: AtlasEvent[];
   debates: Debate[]; sources: Source[];
 }
@@ -31,6 +31,8 @@ async function openAtlas(page: Page): Promise<{ data: Data; errors: string[] }> 
   await page.goto('./?view=all');
   await expect(page.locator('#map')).toHaveAttribute('data-ready', 'true', { timeout: 45_000 });
   const data: Data = await page.evaluate(async () => (await (await fetch('data/africa.json')).json()));
+  // Close up: the zoom bands (src/map/bands.ts) show every record only in the near band.
+  await page.evaluate((z) => (window as unknown as { __atlas: { setZoom: (z: number) => Promise<unknown> } }).__atlas.setZoom(z), data.frame.zoom_bands.near + 0.75);
   return { data, errors };
 }
 
@@ -115,12 +117,10 @@ test.describe('Phase 2 acceptance', () => {
         if ((await page.locator(`.card [data-diffusion="${d.id}"]`).count()) === 0) missing.push(`other-lens diffusion ${d.id} on ${d.to}`);
         continue;
       }
-      const drawn = await page.evaluate((id) => {
-        const map = (window as unknown as { __atlas: { map: { querySourceFeatures: (s: string) => { properties: Record<string, string> }[] } } }).__atlas.map;
-        return map.querySourceFeatures('arcs').filter((f) => f.properties.diffusion === id).length;
-      }, d.id);
-      if (!drawn) { missing.push(`arc ${d.id} at ${y}`); continue; }
+      // The arc's outcome glyph is made with its line (src/map/arcs.ts) and is in the DOM wherever the map is
+      // looking; the source's features can only be queried for the tiles in view, which close up is a small area.
       const glyph = page.locator(`.arc-glyph[data-diffusion="${d.id}"]`).first();
+      if (!(await glyph.count())) { missing.push(`arc ${d.id} at ${y}`); continue; }
       await glyph.dispatchEvent('click');
       await expect(page.locator('.card')).toHaveAttribute('data-id', d.id);
       for (const end of [...d.from, d.to]) {

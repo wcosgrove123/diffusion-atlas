@@ -274,11 +274,11 @@ writing_rules:
 # ---------------------------------------------------------------------------
 prominence:
   continent:
-    label: Course landmark
+    label: Course landmarks
     definition: "Named in the AP World course outline (the CED). Shows at every zoom, as a dot when zoomed out."
   region:
-    label: In the course
+    label: Other course places
     definition: "Shown by the AP World view but not named in the course outline (named in the textbook, or follows a landmark). Shows from region zoom in."
   local:
-    label: Beyond the course
+    label: Places beyond the course
     definition: "Everything else. Shows close up only."

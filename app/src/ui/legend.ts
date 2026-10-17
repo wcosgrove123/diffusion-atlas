@@ -1,6 +1,7 @@
 // The legend (docs/product-spec.md 3). Labels and definitions come from the taxonomy; the sentences that explain
 // how the map draws things are UI text.
 import type { Atlas } from '../atlas';
+import { BANDS, type Band, tiers } from '../map/bands';
 import { CONFIDENCE_OPACITY } from '../map/religionLayer';
 import { arcStyle, patternKind } from '../map/patterns';
 import { lensColor, mapInk, traditionColor } from '../theme/palette';
@@ -16,6 +17,26 @@ function traditionsInUse(atlas: Atlas): string[] {
     for (const t of p.traditions) count.set(t.tradition, (count.get(t.tradition) ?? 0) + 1);
   }
   return [...count.entries()].sort((a, b) => b[1] - a[1]).map(([t]) => t);
+}
+
+/** What each zoom band shows, in one line, naming the prominence tiers the taxonomy gives it. */
+export function zoomLines(atlas: Atlas): { band: Band; text: string; title: string }[] {
+  const order = tiers(atlas.tax);
+  const spec = atlas.tax.prominence ?? {};
+  const name = (t: string | undefined) => (t ? spec[t]?.label ?? keyLabel(t) : '');
+  const def = (ts: string[]) => ts.map((t) => spec[t]?.definition ?? '').filter(Boolean).join(' ');
+  // The far band admits the first tier, each band one more, and the last band every tier left.
+  const added = (i: number) => (i < BANDS.length - 1 ? [order[i]].filter(Boolean) : order.slice(i));
+  const list = (ts: string[]) => ts.map(name).filter(Boolean).join(' and ').toLowerCase();
+  const first = added(0);
+  const lines = [
+    { band: 'far' as Band, text: `Zoomed out: ${list(first) || 'the main places'} as dots, states as shapes, movement as corridors.`, title: def(first) },
+  ];
+  const mid = added(1);
+  lines.push({ band: 'mid', text: `Region: adds ${list(mid) || 'more places'}, as circles; each arrow on its own.`, title: def(mid) });
+  const near = added(2);
+  lines.push({ band: 'near', text: `Close up: adds ${list(near) || 'the rest'}, with communities, events and things to see.`, title: def(near) });
+  return lines;
 }
 
 export function buildLegend(atlas: Atlas, lens: string): HTMLElement {
@@ -72,7 +93,10 @@ export function buildLegend(atlas: Atlas, lens: string): HTMLElement {
       h('ul', { class: 'legend__list' },
         row(h('span', { class: 'legend__event', 'aria-hidden': 'true' }), 'Event near this year'),
         row(h('span', { class: 'legend__event legend__event--keyframe', 'aria-hidden': 'true' }), 'Keyframe event'),
-        row(h('span', { class: 'legend__exemplar', 'aria-hidden': 'true' }), 'Something to see: a building, object or text')));
+        row(h('span', { class: 'legend__exemplar', 'aria-hidden': 'true' }), 'Something to see: a building, object or text')),
+      h('h3', {}, 'Zoom in for more'),
+      h('ul', { class: 'legend__list legend__zoom' }, zoomLines(atlas).map((l) =>
+        row(h('span', { class: `legend__band legend__band--${l.band}`, 'aria-hidden': 'true' }), l.text, l.title || undefined, { 'data-band': l.band }))));
   const details = h('details', { class: 'legend', id: 'legend' }, h('summary', { class: 'legend__toggle' }, 'Legend'));
   const fill = () => {
     if (details.open && !details.querySelector('.legend__body')) details.append(body());

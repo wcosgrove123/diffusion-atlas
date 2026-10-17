@@ -39,18 +39,23 @@ test('the base map loads from our own files only', async ({ page }, info) => {
   expect(rendered.rivers).toBeGreaterThan(0);
   expect(rendered.lakes).toBeGreaterThan(0);
 
-  // Every place of the shown regions is on screen at the first view, on a phone as well as a laptop.
-  // (With every region shown, that is the whole module; Phase 1 shows the West Africa slice.)
+  // The first view is the current keyframe's region at region zoom (src/map/view.ts): the keyframe's place is on
+  // screen on a phone as well as a laptop, and on a laptop so is every place of that region.
   const offscreen = await page.evaluate(async () => {
     const data = await (await fetch('data/africa.json')).json();
     const shown = new Set(data.frame.shown_regions);
+    const kfs = data.events.filter((e: { keyframe?: boolean; _file: string }) => e.keyframe && shown.has(e._file)).sort((a: { year: number }, b: { year: number }) => a.year - b.year);
+    const year = data.frame.start;
+    const before = kfs.filter((k: { year: number }) => k.year <= year);
+    const kf = before.length ? before[before.length - 1] : kfs[0];
     const map = (window as unknown as { __atlasMap: { getBounds: () => { contains: (p: [number, number]) => boolean } } }).__atlasMap;
     const b = map.getBounds();
-    return data.places.filter((p: { _file: string; location?: { lon: number; lat: number } }) => shown.has(p._file) && p.location)
-      .filter((p: { location: { lon: number; lat: number } }) => !b.contains([p.location.lon, p.location.lat]))
-      .map((p: { id: string }) => p.id);
+    const off = (p: { location: { lon: number; lat: number } }) => !b.contains([p.location.lon, p.location.lat]);
+    const places = data.places.filter((p: { _file: string; location?: { lon: number; lat: number } }) => p._file === kf._file && p.location);
+    return { place: off(data.places.find((p: { id: string }) => p.id === kf.place)) ? kf.place : null, region: places.filter(off).map((p: { id: string }) => p.id) };
   });
-  expect(offscreen).toEqual([]);
+  expect(offscreen.place).toBeNull();
+  if (info.project.name === 'desktop') expect(offscreen.region).toEqual([]);
 
   // No horizontal page scroll at phone width.
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);

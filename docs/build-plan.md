@@ -120,6 +120,15 @@ Scope: places from `wsahel.yaml` only (plus external places they reference), rel
   what follows them; a switch shows everything. Decision 20 in docs/decisions-for-wil.md; `tools/ap_match.py`;
   `data/ap-world/<module>.yaml`; test `app/e2e/ap-world.spec.ts`.
 
+### Added after Phase 2: zoom tiers (semantic zoom)
+- Status (2026-10-17): built on branch `zoom-tiers`. Every place and diffusion carries a `prominence` (taxonomy
+  section 8, decision 22) assigned by `tools/build_data.py`; the module frame carries `zoom_bands`
+  (data/modules.yaml). `app/src/map/bands.ts` is the one table of what each band shows: far = states, course
+  landmarks as dots, one corridor per route family; mid = circles, single arrows, off-map names on hover; near =
+  everything. The map opens at region zoom on the current keyframe's region (`app/src/map/view.ts`). Tests:
+  pytest (rule, override, CED lookup), Vitest `tests/bands.test.ts`, Playwright `e2e/zoom-tiers.spec.ts`
+  (`ZOOM_SHOTS=1` saves the screenshots in docs/zoom-tiers/).
+
 ### Phase 3: lenses and the historiography control
 - Lens tabs with InSPECT chips; neutral polygons outside the religion lens.
 - "Whose sources?" filter with the survive rule and the "Showing N of M" counter.
@@ -145,7 +154,7 @@ Scope: places from `wsahel.yaml` only (plus external places they reference), rel
 
 | Risk | Mitigation |
 |---|---|
-| Pattern fills look noisy at continent scale | Generate patterns at two scales and switch by zoom; keep the court ring thin |
+| Pattern fills look noisy at continent scale | Zoom bands (app/src/map/bands.ts): less shows when zoomed out; keep the court ring thin |
 | Too many arcs at once in the 1320s–1350s | Fade arcs older than 25 years to 40%; lens and region filters |
 | Chromebook GPU limits | Keep feature counts low (polities are low-vertex), avoid per-frame style rebuilds; animate with `line-dasharray` steps |
 | GPL obligations | Repo is GPL-3.0; `method` on every feature keeps a non-GPL redraw possible later |

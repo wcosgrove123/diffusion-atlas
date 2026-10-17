@@ -4,8 +4,10 @@ import { defaultLens } from './data/profiles';
 import { frameLabel, pickModule, shownBounds } from './data/frame';
 import { loadModuleData, loadModuleGeo, loadModuleIndex, loadTaxonomy } from './data/load';
 import { ARC_SOURCE, ArcLayer, addArcLayers } from './map/arcs';
+import { type Band, bandAttributes, bandFor } from './map/bands';
 import { createMap } from './map/createMap';
 import { MarkerLayer } from './map/markers';
+import { keyframeRegion, regionBounds, regionCamera } from './map/view';
 import { POLITY_LAYERS, POLITY_SOURCE, addReligionLayers, polityFeatures, updateReligionLayers } from './map/religionLayer';
 import { Cards } from './ui/cards';
 import { buildLegend } from './ui/legend';
@@ -42,7 +44,7 @@ async function start(): Promise<void> {
     state.set(startYear);
 
     const cards = new Cards(atlas, () => state.year, (y) => state.set(y));
-    const timeline = new Timeline(atlas, state, (id) => cards.openEvent(id, false));
+    const timeline = new Timeline(atlas, state, (id) => { cards.openEvent(id, false); goToKeyframe(id); }, (region) => goToRegion(region));
     stage.append(buildLegend(atlas, lens), cards.el);
     document.getElementById('controls')!.append(timeline.el);
 
@@ -70,8 +72,29 @@ async function start(): Promise<void> {
 
     const bounds = shownBounds(frame, atlas.places, geo);
     const map = createMap(container, geo, bounds);
-    // Keep the first view clear of an open legend.
-    if (wide) map.fitBounds(bounds, { padding: { top: 16, bottom: 16, right: 16, left: legend.offsetWidth + 28 }, animate: false });
+    // Keep the view clear of an open legend.
+    const padding = { top: 16, bottom: 16, right: 16, left: wide ? legend.offsetWidth + 28 : 16 };
+    const bands = frame.zoom_bands;
+    // Zoom bands (map/bands.ts): the stage carries the band, so the stylesheet and the legend follow it.
+    let band: Band = bandFor(map.getZoom(), bands);
+    const applyBand = () => { for (const [k, v] of Object.entries(bandAttributes(band))) (stage as HTMLElement).dataset[k] = v; };
+    // The map opens at region zoom on the current keyframe's region: a poster, not the whole continent at once.
+    const regionView = (region: string | null) => {
+      const b = region && regionBounds(atlas, region);
+      return b ? regionCamera(map, b, bands, padding) : null;
+    };
+    const opening = regionView(keyframeRegion(timeline.keyframes, state.year));
+    if (opening) map.jumpTo(opening);
+    else if (wide) map.fitBounds(bounds, { padding, animate: false });
+    band = bandFor(map.getZoom(), bands);
+    applyBand();
+    // The region dropdown moves the map to that region; a keyframe stepped to while off screen brings its region in.
+    const goToRegion = (region: string) => { const cam = regionView(region); if (cam) map.easeTo({ ...cam, duration: 600 }); };
+    const goToKeyframe = (id: string) => {
+      const ev = atlas.eventById.get(id);
+      const place = ev && atlas.placeById.get(ev.place);
+      if (ev && place?.location && !map.getBounds().contains([place.location.lon, place.location.lat])) goToRegion(ev._file);
+    };
 
     map.once('load', async () => {
       addReligionLayers(map, 'rivers');
@@ -92,31 +115,39 @@ async function start(): Promise<void> {
       const markers = new MarkerLayer(map, atlas, {
         openPlace: (id) => cards.openPlace(id), openEvent: (id) => cards.openEvent(id), openExemplar: (id) => cards.openExemplar(id),
       });
-      const arcs = new ArcLayer(map, atlas, { openDiffusion: (id) => cards.openDiffusion(id) });
+      const arcs = new ArcLayer(map, atlas, {
+        openDiffusion: (id) => cards.openDiffusion(id),
+        // A corridor clicked when zoomed out: zoom in on its arcs, to region zoom at least.
+        zoomTo: (b) => { const cam = regionCamera(map, b, bands, padding); if (cam) map.easeTo({ ...cam, duration: 600 }); },
+      });
       // Markers and glyphs arrive in small slices (src/scheduler.ts); ready waits for the first full set.
-      let drawing: Promise<unknown> = Promise.all([markers.update(state.year, visible), arcs.update(state.year, lens, visible)]);
+      let drawing: Promise<unknown> = Promise.all([markers.update(state.year, visible, band), arcs.update(state.year, lens, visible, band)]);
       const firstDraw = drawing;
       const draw = (y: number) => {
         updateReligionLayers(map, polityFeatures(data, geo, y, visible));
-        drawing = Promise.all([markers.update(y, visible), arcs.update(y, lens, visible)]);
+        drawing = Promise.all([markers.update(y, visible, band), arcs.update(y, lens, visible, band)]);
         cards.refresh();
       };
       state.on(draw);
       redraws.push(() => draw(state.year));
+      // Crossing into another band redraws the markers and arcs for it (once the zoom settles, not per frame).
+      map.on('zoomend', () => {
+        const b = bandFor(map.getZoom(), bands);
+        if (b === band) return;
+        band = b;
+        applyBand();
+        draw(state.year);
+      });
       // For automated tests: resolves once the markers and arcs for the latest year are on the map and the map's
       // sources have finished loading the new data (setData hands it to a worker).
       testHooks.drawn = async () => {
-        await drawing;
         const t0 = performance.now();
+        while (map.isMoving() && performance.now() - t0 < 3000) await new Promise((r) => requestAnimationFrame(r));
+        await drawing;
         while (!(map.isSourceLoaded(POLITY_SOURCE) && map.isSourceLoaded(ARC_SOURCE)) && performance.now() - t0 < 3000) {
           await new Promise((r) => requestAnimationFrame(r));
         }
       };
-      // Town and point names crowd each other at continent scale; they show on hover and focus there, and always
-      // when closer.
-      const zoomClass = () => container.classList.toggle('map--far', map.getZoom() < 5);
-      map.on('zoom', zoomClass);
-      zoomClass();
       const clickable = [POLITY_LAYERS.fill, POLITY_LAYERS.ring];
       map.on('click', (e) => {
         if (e.defaultPrevented) return; // an arc took the click
@@ -142,6 +173,9 @@ async function start(): Promise<void> {
           if (box && box.checked !== on) { box.checked = on; box.dispatchEvent(new Event('change')); }
           return testHooks.drawn();
         },
+        // Jump to a zoom level (and center) and wait for the band's markers and arcs.
+        setZoom: (zoom: number, center?: [number, number]) => { map.jumpTo({ zoom, ...(center ? { center } : {}) }); return testHooks.drawn(); },
+        band: () => (stage as HTMLElement).dataset.band,
       },
     });
   } catch (err) {

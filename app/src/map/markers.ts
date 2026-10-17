@@ -1,13 +1,16 @@
 // Map markers drawn as DOM buttons (keyboard reachable, no glyph server needed for text):
 //   place labels for polygons (with a town donut when the place has an urban stratum), town donuts with community
 //   badges, squares for places with no polygon yet, event markers near the slider year, and exemplar markers.
+// What shows depends on the zoom band (map/bands.ts): a place shows when its prominence tier is admitted by the
+// band, and the town marker grows with zoom: a plain dot, then the share donut, then the donut with badges.
 import * as maplibregl from 'maplibre-gl';
 import type { Atlas, Visible } from '../atlas';
-import type { AtlasEvent, Exemplar, Place } from '../data/types';
+import type { AtlasEvent, Exemplar, Place, ReligionProfile } from '../data/types';
 import { communitiesAt, covers, donutSegments, eventsNear, exemplarsAt, profileAt } from '../data/profiles';
 import { h } from '../ui/dom';
-import { badge, donut, exemplarGlyph, pointSquare } from '../ui/glyphs';
+import { badge, donut, dot, exemplarGlyph, pointSquare } from '../ui/glyphs';
 import { shapeActive } from './religionLayer';
+import { BAND_DETAIL, type Band, showsIn, tierRank, tiers } from './bands';
 import { RunToken, chunked } from '../scheduler';
 
 export interface MarkerHandlers {
@@ -35,12 +38,15 @@ export class MarkerLayer {
   /** places with an urban stratum in the data: they get a donut even when they have a polygon */
   private hasUrban: Set<string>;
   private area = new Map<string, number>();
+  /** prominence tiers, most prominent first (taxonomy) */
+  private order: string[];
 
   private runs = new RunToken();
   private built: Promise<void>;
 
   constructor(map: maplibregl.Map, private atlas: Atlas, private on: MarkerHandlers) {
     this.map = map;
+    this.order = tiers(atlas.tax);
     this.hasUrban = new Set(atlas.data.religion_profiles.filter((r) => r.stratum === 'urban').map((r) => r.place));
     for (const f of atlas.geo.polities.features) {
       const polys = f.geometry.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry.coordinates;
@@ -104,77 +110,73 @@ export class MarkerLayer {
   private placeElement(p: Place): HTMLElement {
     const kind = this.kindOf(p);
     const small = kind === 'area' && (this.area.get(p.id) ?? 0) < SMALL_AREA;
-    // At continent scale an area shows the first part of its name (before any parenthesis), the whole name closer.
+    // Zoomed out, a place shows the first part of its name (before any parenthesis), the whole name close up.
     const short = p.name.split(' (')[0];
     return h('button', {
       type: 'button', class: `place-marker place-marker--${kind}${small ? ' place-marker--small' : ''}`,
-      'data-place': p.id, 'data-kind': kind,
+      'data-place': p.id, 'data-kind': kind, 'data-tier': p.prominence ?? '', 'data-rank': String(tierRank(p.prominence, this.order)),
       onclick: (ev: Event) => { ev.stopPropagation(); this.on.openPlace(p.id); },
     }, h('span', { class: 'place-marker__glyph' }),
     h('span', { class: 'place-marker__name' },
-      kind === 'area' && short !== p.name ? [h('span', { class: 'name--short' }, short), h('span', { class: 'name--full' }, p.name)] : p.name));
+      short !== p.name ? [h('span', { class: 'name--short' }, short), h('span', { class: 'name--full' }, p.name)] : p.name));
   }
 
-  /** Redraw for a year and view, in slices. Resolves when done (false if a newer update superseded it). */
-  async update(year: number, visible: Visible = () => true): Promise<boolean> {
+  /** The town glyph for a band: a plain dot zoomed out, the share donut (with badges when the band shows them) closer. */
+  private townGlyph(urban: ReligionProfile | null, comms: ReligionProfile[], band: Band): { key: string; nodes: Node[]; marker: string } {
+    const detail = BAND_DETAIL[band];
+    if (detail.marker === 'dot') return { key: `dot|${urban?.id}`, nodes: [dot(urban)], marker: 'dot' };
+    const shown = detail.badges ? comms : [];
+    const nodes: Node[] = [donut(urban), ...shown.map((c) => {
+      const b = badge(c);
+      b.classList.add('place-marker__badge');
+      b.title = c.community_name ?? '';
+      b.dataset.community = c.id;
+      return b;
+    })];
+    return { key: ['donut', urban?.id, ...shown.map((c) => c.id)].join('|'), nodes, marker: 'donut' };
+  }
+
+  /** Redraw for a year, view and zoom band, in slices. Resolves when done (false if a newer update superseded it). */
+  async update(year: number, visible: Visible = () => true, band: Band = 'near'): Promise<boolean> {
     const token = this.runs.next();
     await this.built;
     if (token.cancelled) return false;
     const profiles = this.atlas.data.religion_profiles;
+    const detail = BAND_DETAIL[band];
     const done = await chunked(this.atlas.places, (p) => {
       const entry = this.places.get(p.id);
       if (!entry) return;
       const kind = this.kindOf(p);
-      const shown = visible(p.id) && (kind === 'area'
+      const shown = visible(p.id) && showsIn(band, p.prominence, this.order) && (kind === 'area'
         ? this.atlas.geo.polities.features.some((f) => f.properties.place_id === p.id && shapeActive(f, year))
         : covers(p.span ?? null, year));
       entry.el.hidden = !shown;
       if (!shown) return;
       const glyph = entry.el.querySelector('.place-marker__glyph')!;
-      if (kind === 'town') {
+      if (kind === 'town' || (kind === 'area' && this.hasUrban.has(p.id))) {
+        // A town, or a polity drawn as an area that also has an urban stratum (a city-state, a coastal town).
         const urban = profileAt(profiles, p.id, 'urban', year);
         const comms = communitiesAt(profiles, p.id, year);
-        const key = [urban?.id, ...comms.map((c) => c.id)].join('|');
         entry.el.dataset.profile = urban?.id ?? '';
         entry.el.dataset.relation = urban?.relation ?? '';
         entry.el.dataset.segments = JSON.stringify(urban ? donutSegments(urban) : []);
-        entry.el.setAttribute('aria-label', `${p.name}, town. Open its card.`);
-        if (entry.drawn !== key) {
-          glyph.replaceChildren(donut(urban), ...comms.map((c) => {
-            const b = badge(c);
-            b.classList.add('place-marker__badge');
-            b.title = c.community_name ?? '';
-            b.dataset.community = c.id;
-            return b;
-          }));
-          entry.drawn = key;
+        entry.el.setAttribute('aria-label', `${p.name}${kind === 'town' ? ', town' : ''}. Open its card.`);
+        const g = this.townGlyph(urban, comms, band);
+        if (entry.drawn !== g.key) {
+          glyph.replaceChildren(...g.nodes);
+          entry.el.dataset.marker = g.marker;
+          entry.drawn = g.key;
         }
       } else if (kind === 'point') {
         const rural = profileAt(profiles, p.id, 'rural', year);
         const court = profileAt(profiles, p.id, 'court', year);
-        const key = `${rural?.id}|${court?.id}`;
+        // Zoomed out, a point place is a dot in its court's pattern (its rural one when the court is unknown).
+        const asDot = detail.marker === 'dot';
+        const key = `${asDot ? 'dot' : 'square'}|${rural?.id}|${court?.id}`;
         entry.el.setAttribute('aria-label', `${p.name}. Open its card.`);
         if (entry.drawn !== key) {
-          glyph.replaceChildren(pointSquare(rural, court));
-          entry.drawn = key;
-        }
-      } else if (this.hasUrban.has(p.id)) {
-        // A polity drawn as an area that also has an urban stratum (a city-state, a coastal town): donut plus name.
-        const urban = profileAt(profiles, p.id, 'urban', year);
-        const comms = communitiesAt(profiles, p.id, year);
-        const key = [urban?.id, ...comms.map((c) => c.id)].join('|');
-        entry.el.dataset.profile = urban?.id ?? '';
-        entry.el.dataset.relation = urban?.relation ?? '';
-        entry.el.dataset.segments = JSON.stringify(urban ? donutSegments(urban) : []);
-        entry.el.setAttribute('aria-label', `${p.name}. Open its card.`);
-        if (entry.drawn !== key) {
-          glyph.replaceChildren(donut(urban), ...comms.map((c) => {
-            const b = badge(c);
-            b.classList.add('place-marker__badge');
-            b.title = c.community_name ?? '';
-            b.dataset.community = c.id;
-            return b;
-          }));
+          glyph.replaceChildren(asDot ? dot(court ?? rural) : pointSquare(rural, court));
+          entry.el.dataset.marker = asDot ? 'dot' : 'square';
           entry.drawn = key;
         }
       } else {
@@ -182,12 +184,12 @@ export class MarkerLayer {
       }
     }, token);
     if (!done) return false;
-    this.updateEvents(year, visible);
-    return chunked(this.exemplarJobs(year, visible), (job) => job(), token);
+    this.updateEvents(year, visible, detail.events);
+    return chunked(this.exemplarJobs(year, visible, detail.exemplars), (job) => job(), token);
   }
 
-  private updateEvents(year: number, visible: Visible): void {
-    const near = new Set(eventsNear(this.atlas.events, year).filter((e) => visible(e.id)).map((e) => e.id));
+  private updateEvents(year: number, visible: Visible, show: boolean): void {
+    const near = new Set(show ? eventsNear(this.atlas.events, year).filter((e) => visible(e.id)).map((e) => e.id) : []);
     for (const [id, entry] of this.events) if (!near.has(id)) { entry.marker.remove(); this.events.delete(id); }
     // Stack events at one place so they do not hide each other.
     const stack = new Map<string, number>();
@@ -203,8 +205,8 @@ export class MarkerLayer {
   }
 
   /** One job per exemplar to add; the ones to remove go first. */
-  private exemplarJobs(year: number, visible: Visible): (() => void)[] {
-    const shown = new Set(exemplarsAt(this.atlas.exemplars, year).filter((x) => visible(x.id)).map((x) => x.id));
+  private exemplarJobs(year: number, visible: Visible, show: boolean): (() => void)[] {
+    const shown = new Set(show ? exemplarsAt(this.atlas.exemplars, year).filter((x) => visible(x.id)).map((x) => x.id) : []);
     const jobs: (() => void)[] = [];
     for (const [id, entry] of this.exemplars) if (!shown.has(id)) { entry.marker.remove(); this.exemplars.delete(id); }
     const stack = new Map<string, number>();

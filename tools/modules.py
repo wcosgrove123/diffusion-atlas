@@ -4,6 +4,8 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
+# Map zoom levels where the bands change (app/src/map/bands.ts): far below mid, near from near on.
+DEFAULT_ZOOM_BANDS = {"mid": 4.0, "near": 5.5}
 
 
 def load_frame(module):
@@ -35,8 +37,12 @@ def load_frame(module):
     shown = list(m.get("shown_regions") or ids)
     if not set(shown) <= set(ids):
         raise SystemExit(f"data/modules.yaml: module {module} shown_regions must be listed in regions")
+    bands = dict(DEFAULT_ZOOM_BANDS, **(m.get("zoom_bands") or {}))
+    if set(bands) != set(DEFAULT_ZOOM_BANDS) or not (0 < float(bands["mid"]) < float(bands["near"])):
+        raise SystemExit(f"data/modules.yaml: module {module} zoom_bands must give mid < near (zoom levels)")
     return {"id": module, "title": m["title"], "start": int(m["start"]), "end": int(m["end"]),
-            "bbox": bbox, "view_bbox": view, "regions": regions, "shown_regions": shown}
+            "bbox": bbox, "view_bbox": view, "regions": regions, "shown_regions": shown,
+            "zoom_bands": {k: float(v) for k, v in bands.items()}}
 
 
 def _check_box(module, key, b):

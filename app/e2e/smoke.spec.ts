@@ -1,12 +1,15 @@
 import { expect, test } from '@playwright/test';
 
 // Phase 0 acceptance: the site shows the module's base map (land, coast, rivers, lakes; no modern borders),
-// makes no requests off its own origin, and logs no errors.
+// makes no requests off its own origin, and logs no errors. Runs at 1280x720 and at 360x740.
 
 test('the base map loads from our own files only', async ({ page }, info) => {
   const errors: string[] = [];
   const offsite: string[] = [];
-  page.on('console', (m) => { if (m.type() === 'error') errors.push(m.text()); });
+  page.on('console', (m) => {
+    // A pattern image MapLibre could not find draws nothing (a hole in the map), and it only warns.
+    if (m.type() === 'error' || (m.type() === 'warning' && /could not be loaded/.test(m.text()))) errors.push(m.text());
+  });
   page.on('pageerror', (e) => errors.push(e.message));
   const failed: string[] = [];
   page.on('response', (r) => { if (r.status() >= 400) failed.push(`${r.status()} ${r.url()}`); });
@@ -36,13 +39,18 @@ test('the base map loads from our own files only', async ({ page }, info) => {
   expect(rendered.rivers).toBeGreaterThan(0);
   expect(rendered.lakes).toBeGreaterThan(0);
 
-  // The whole module bbox is on screen at the first view, on a phone as well as a laptop.
-  const fits = await page.evaluate((bbox: number[]) => {
-    const map = (window as unknown as { __atlasMap: { getBounds: () => { toArray: () => number[][] } } }).__atlasMap;
-    const [[w, s], [e, n]] = map.getBounds().toArray();
-    return { w: w <= bbox[0] + 1, e: e >= bbox[2] - 1, s: s <= bbox[1] + 1, n: n >= bbox[3] - 1 };
-  }, frame.bbox);
-  expect(fits).toEqual({ w: true, e: true, s: true, n: true });
+  // Every place of the shown regions is on screen at the first view, on a phone as well as a laptop.
+  // (With every region shown, that is the whole module; Phase 1 shows the West Africa slice.)
+  const offscreen = await page.evaluate(async () => {
+    const data = await (await fetch('data/africa.json')).json();
+    const shown = new Set(data.frame.shown_regions);
+    const map = (window as unknown as { __atlasMap: { getBounds: () => { contains: (p: [number, number]) => boolean } } }).__atlasMap;
+    const b = map.getBounds();
+    return data.places.filter((p: { _file: string; location?: { lon: number; lat: number } }) => shown.has(p._file) && p.location)
+      .filter((p: { location: { lon: number; lat: number } }) => !b.contains([p.location.lon, p.location.lat]))
+      .map((p: { id: string }) => p.id);
+  });
+  expect(offscreen).toEqual([]);
 
   // No horizontal page scroll at phone width.
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);

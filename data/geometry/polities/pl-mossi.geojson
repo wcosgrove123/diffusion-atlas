@@ -1,0 +1,66 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-mossi",
+    "year_from": 1250,
+    "year_to": null,
+    "method": "H",
+    "basis": "Drawn from the pl-mossi geometry_note: a soft area south of the Niger bend, drawn as a people, not a polity (geometry-audit section 5: small soft zone, low confidence). The Volta Mossi kingdoms are later."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -3.092,
+       11.978
+      ],
+      [
+       -1.699,
+       11.25
+      ],
+      [
+       -1.492,
+       11.227
+      ],
+      [
+       -0.019,
+       11.624
+      ],
+      [
+       0.522,
+       12.644
+      ],
+      [
+       0.545,
+       12.849
+      ],
+      [
+       -0.213,
+       13.98
+      ],
+      [
+       -1.599,
+       14.286
+      ],
+      [
+       -2.771,
+       13.776
+      ],
+      [
+       -3.149,
+       12.229
+      ],
+      [
+       -3.092,
+       11.978
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

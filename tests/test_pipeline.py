@@ -104,3 +104,81 @@ def test_land_has_no_seam_along_the_module_bbox(module):
                         if abs(x1 - v) < 0.02 and abs(x2 - v) < 0.02 and abs(y2 - y1) > 0.3:
                             seams.append(((x1, y1), (x2, y2)))
     assert seams == []
+
+
+# ---- Phase 1: polity polygons (tools/build_geometry.py, data/geometry/polity-shapes.yaml) ----
+
+SHAPES = yaml.safe_load((ROOT / "data/geometry/polity-shapes.yaml").read_text(encoding="utf-8"))
+POLITY_FILES = sorted((ROOT / "data/geometry/polities").glob("*.geojson"))
+
+
+def _research_places(module):
+    places = {}
+    for f in (ROOT / "data/research" / module).glob("[!_]*.yaml"):
+        for p in (yaml.safe_load(f.read_text(encoding="utf-8")) or {}).get("places") or []:
+            places[p["id"]] = p
+    return places
+
+
+def test_polity_files_match_the_shape_spec():
+    """The committed polygons are what build_geometry.py makes from polity-shapes.yaml (rebuild after editing it)."""
+    assert {p.stem for p in POLITY_FILES} == set(SHAPES["polities"])
+    for path in POLITY_FILES:
+        feats = json.loads(path.read_text(encoding="utf-8"))["features"]
+        assert len(feats) == len(SHAPES["polities"][path.stem]), path.name
+
+
+@pytest.mark.parametrize("path", POLITY_FILES, ids=lambda p: p.stem)
+def test_polity_features_carry_method_basis_and_years(path):
+    from shapely.geometry import shape
+    places = _research_places(SHAPES["module"])
+    w, s, e, n = load_frame(SHAPES["module"])["view_bbox"]
+    feats = json.loads(path.read_text(encoding="utf-8"))["features"]
+    assert path.stem in places and places[path.stem]["kind"] in ("polity", "people")
+    spans = []
+    for f in feats:
+        p = f["properties"]
+        assert p["place_id"] == path.stem
+        assert p["method"] in ("A", "E", "H")
+        assert len(p["basis"]) > 40, "basis cites the geometry_note or the aourednik source"
+        assert p["year_to"] is None or p["year_from"] < p["year_to"]
+        g = shape(f["geometry"])
+        assert g.is_valid and not g.is_empty
+        assert all(poly.exterior.is_ccw for poly in getattr(g, "geoms", [g])), "outer rings counter-clockwise"
+        x0, y0, x1, y1 = g.bounds
+        assert w <= x0 and x1 <= e and s <= y0 and y1 <= n
+        spans.append((p["year_from"], p["year_to"]))
+    spans.sort()
+    for (a0, a1), (b0, _) in zip(spans, spans[1:]):
+        assert a1 is not None and a1 <= b0, f"{path.stem}: shapes overlap in time"
+
+
+def test_polity_shapes_are_clipped_to_land():
+    from shapely.geometry import shape
+    from shapely.ops import unary_union
+    from shapely import make_valid
+    land = unary_union([make_valid(shape(f["geometry"])) for f in json.loads(
+        (ROOT / "data/geometry/base" / SHAPES["module"] / "land.geojson").read_text(encoding="utf-8"))["features"]])
+    for path in POLITY_FILES:
+        for f in json.loads(path.read_text(encoding="utf-8"))["features"]:
+            g = shape(f["geometry"])
+            # simplification after clipping can wander a little past the coast; allow 2% of the area
+            assert g.difference(land).area <= 0.02 * g.area, path.stem
+
+
+def test_phase1_polities_have_shapes():
+    """docs/build-plan.md Phase 1: Mali (E) and the hand-drawn West African zones (H)."""
+    methods = {pid: {s["method"] for s in specs} for pid, specs in SHAPES["polities"].items()}
+    assert "E" in methods["pl-mali"]
+    for pid in ("pl-sosso", "pl-jolof", "pl-takrur", "pl-songhay-gao", "pl-mossi", "pl-bono"):
+        assert methods[pid] == {"H"}, pid
+    assert all(s.get("review") in ("draft", "approved") for specs in SHAPES["polities"].values() for s in specs)
+
+
+@pytest.mark.parametrize("module", MODULES)
+def test_module_regions_name_research_files(module):
+    f = load_frame(module)
+    ids = [r["id"] for r in f["regions"]]
+    assert set(f["shown_regions"]) <= set(ids)
+    for r in ids:
+        assert (ROOT / "data/research" / module / f"{r}.yaml").exists()

@@ -17,6 +17,8 @@ body {
   background: var(--c-page);
 }
 
+[hidden] { display: none !important; }
+
 .topbar {
   display: flex;
   flex-wrap: wrap;
@@ -29,10 +31,11 @@ body {
 
 .topbar__title { margin: 0; font-size: 1.25rem; font-weight: 700; }
 .topbar__module { margin: 0; color: var(--c-text-muted); }
+.topbar__help { flex-basis: 100%; margin: 0; font-size: 0.95rem; }
 
-.stage { position: relative; flex: 1; min-height: 0; }
+.stage { position: relative; flex: 1; min-height: 0; overflow: hidden; }
 /* .stage > .map outranks MapLibre's own .maplibregl-map { position: relative }, which loads later. */
-.stage > .map { position: absolute; inset: 0; }
+.stage > .map { position: absolute; inset: 0; isolation: isolate; } /* marker z-indexes stay inside the map */
 
 .map-status:empty { display: none; }
 .map-status {
@@ -50,3 +53,210 @@ body {
 
 :focus-visible { outline: 3px solid var(--c-focus); outline-offset: 2px; }
 .maplibregl-canvas:focus-visible { outline-offset: -3px; }
+
+.btn {
+  font: inherit;
+  min-height: 2.5rem;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--c-border);
+  border-radius: 6px;
+  background: var(--c-surface);
+  color: var(--c-text);
+  cursor: pointer;
+}
+.btn[aria-pressed='true'] { background: var(--c-accent); color: var(--c-accent-text); }
+
+.linklike {
+  font: inherit;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--c-focus);
+  text-decoration: underline;
+  cursor: pointer;
+  text-align: left;
+}
+
+/* ---- time controls ---- */
+.controls {
+  /* Height reserved before the slider is built, so the map does not jump when it arrives. */
+  min-height: 5.1rem;
+  border-top: 1px solid var(--c-border);
+  background: var(--c-surface);
+  padding: 0.5rem 1rem 0.6rem;
+}
+.timeline {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  grid-template-areas: 'year buttons track' 'year buttons ends';
+  align-items: center;
+  gap: 0 1rem;
+}
+.timeline__year { grid-area: year; font-size: 2.4rem; font-weight: 700; font-variant-numeric: tabular-nums; min-width: 4.2ch; }
+.timeline__buttons { grid-area: buttons; display: flex; gap: 0.4rem; }
+.timeline__track { grid-area: track; position: relative; padding: 0.3rem 0; }
+.timeline__range { width: 100%; margin: 0; accent-color: var(--c-accent); min-height: 1.75rem; }
+.timeline__ticks { position: absolute; inset: 0 0.55rem; pointer-events: none; }
+.timeline__tick {
+  position: absolute;
+  bottom: -0.2rem;
+  width: 3px;
+  height: 0.6rem;
+  margin-left: -1px;
+  background: var(--c-ink-keyframe-marker);
+}
+.timeline__ends { grid-area: ends; display: flex; justify-content: space-between; margin: 0; color: var(--c-text-muted); font-size: 0.85rem; }
+
+@media (max-width: 640px) {
+  .controls { padding: 0.4rem 0.75rem 0.5rem; min-height: 7.6rem; }
+  .timeline { grid-template-columns: auto 1fr; grid-template-areas: 'year buttons' 'track track' 'ends ends'; }
+  .timeline__year { font-size: 1.9rem; }
+  .timeline__buttons { justify-content: flex-end; }
+}
+
+/* ---- map markers ---- */
+/* MapLibre gives every marker its own compositing layer (will-change) and an opacity transition. With about thirty
+   markers that makes every map frame slower on a Chromebook without GPU compositing; plain markers move just as well. */
+.maplibregl-marker { will-change: auto; transition: none; }
+.place-marker {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--c-text);
+  font: inherit;
+  cursor: pointer;
+}
+.place-marker__glyph { display: flex; align-items: center; gap: 2px; }
+.place-marker__glyph:empty { display: none; }
+.place-marker__name {
+  font-size: 0.8rem;
+  line-height: 1.1;
+  font-weight: 600;
+  white-space: nowrap;
+  text-shadow: 0 0 2px var(--c-ink-label-halo), 0 0 3px var(--c-ink-label-halo), 0 0 4px var(--c-ink-label-halo);
+}
+/* Glyph sits on the location; its name hangs below without moving it. */
+.place-marker__glyph:not(:empty) + .place-marker__name {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.place-marker--area .place-marker__name { font-size: 0.95rem; font-weight: 700; letter-spacing: 0.02em; }
+.place-marker__badge { margin-left: -4px; }
+.map--far .place-marker--town .place-marker__name,
+.map--far .place-marker--point .place-marker__name { display: none; }
+/* Area names (polities, peoples) stay above town and point markers. */
+.place-marker--area { z-index: 1; }
+.place-marker:hover .place-marker__name, .place-marker:focus-visible .place-marker__name { display: block; }
+
+.event-marker {
+  width: 13px;
+  height: 13px;
+  padding: 0;
+  border: 2px solid var(--c-ink-keyline);
+  background: var(--c-ink-event-marker);
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.event-marker--keyframe { width: 16px; height: 16px; background: var(--c-ink-keyframe-marker); }
+
+/* ---- legend ---- */
+.legend {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  max-width: min(18rem, calc(100% - 1.5rem));
+  max-height: calc(100% - 1.5rem);
+  overflow: auto;
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  background: var(--c-surface);
+  font-size: 0.9rem;
+}
+.legend__toggle { padding: 0.45rem 0.8rem; font-weight: 700; cursor: pointer; min-height: 2.25rem; }
+.legend__body { padding: 0 0.8rem 0.6rem; }
+.legend h3 { margin: 0.6rem 0 0.3rem; font-size: 0.9rem; }
+.legend__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.3rem; }
+.legend__row { display: flex; align-items: center; gap: 0.5rem; }
+.legend__row > canvas, .legend__strata { flex: none; border: 1px solid var(--c-border); }
+.legend__note { margin: 0.3rem 0 0; color: var(--c-text-muted); }
+.legend__strata { display: inline-block; width: 22px; height: 14px; }
+.legend__strata--fill { background: var(--legend-a); }
+.legend__strata--ring { box-shadow: inset 0 0 0 4px var(--legend-b); }
+.legend__strata--donut { width: 16px; height: 16px; border-radius: 50%; box-shadow: inset 0 0 0 4px var(--legend-a); margin: 0 3px; }
+.legend__strata--none { border: 2px dashed var(--legend-none); }
+.legend__strata--dotted { border: 2px dotted var(--c-text); }
+
+/* ---- cards ---- */
+.card {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  width: min(26rem, calc(100% - 1.5rem));
+  overflow: auto;
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  background: var(--c-surface);
+  font-size: 1rem;
+  z-index: 2;
+}
+.card__close { position: sticky; top: 0; float: right; margin: 0.5rem; }
+.card__body { padding: 0.8rem 1rem 1rem; }
+.card__title { margin: 0 0 0.3rem; font-size: 1.35rem; }
+.card__title:focus { outline: none; }
+.card__title:focus-visible { outline: 3px solid var(--c-focus); }
+.card__year { margin: 0; font-weight: 700; color: var(--c-text-muted); display: flex; gap: 0.5rem; align-items: center; }
+.card__alt, .card__kind { margin: 0 0 0.3rem; color: var(--c-text-muted); }
+.card__section { margin-top: 1rem; }
+.card__section h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+.card__summary { margin: 0.4rem 0; }
+.card__flag { color: var(--c-text-muted); }
+.card__sources { margin: 0; padding-left: 1.1rem; font-size: 0.95rem; }
+.card__events { margin: 0; padding-left: 1.1rem; }
+
+.strata { width: 100%; border-collapse: collapse; }
+.strata th, .strata td { text-align: left; vertical-align: top; padding: 0.45rem 0.3rem; border-top: 1px solid var(--c-border); }
+.strata thead th { border-top: 0; font-size: 0.85rem; color: var(--c-text-muted); }
+.strata__none { color: var(--c-text-muted); font-style: italic; }
+.strata__summary { margin: 0.35rem 0 0; }
+.traditions { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.35rem; }
+.traditions .dot { display: inline-block; width: 0.75rem; height: 0.75rem; border-radius: 50%; margin-right: 0.3rem; vertical-align: -0.05rem; }
+.traditions .share, .traditions .branch { color: var(--c-text-muted); }
+.local-form { margin: 0.15rem 0 0; font-style: italic; }
+.relation { display: flex; gap: 0.4rem; align-items: center; }
+.relation canvas { flex: none; border: 1px solid var(--c-border); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 0.3rem; margin: 0.35rem 0 0; }
+.chip {
+  display: inline-block;
+  padding: 0.05rem 0.45rem;
+  border: 1px solid var(--c-border);
+  border-radius: 999px;
+  background: var(--c-chip);
+  font-size: 0.85rem;
+}
+.chip--keyframe { background: var(--c-ink-keyframe-marker); color: var(--c-accent-text); border-color: transparent; }
+
+.polity-profile { display: grid; grid-template-columns: auto 1fr; gap: 0.15rem 0.8rem; margin: 0; }
+.polity-profile dt { color: var(--c-text-muted); }
+.polity-profile dd { margin: 0; }
+
+.tl { display: grid; gap: 0.3rem; }
+.tl__row { display: grid; grid-template-columns: 5.5rem 1fr; gap: 0.5rem; align-items: center; font-size: 0.9rem; }
+.tl__label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tl__bar { position: relative; height: 0.9rem; border: 1px solid var(--c-border); background: var(--c-page); }
+.tl__seg { position: absolute; top: 0; bottom: 0; border-right: 1px solid var(--c-ink-keyline); }
+.tl__now { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--c-text); }
+.tl__axis { display: flex; justify-content: space-between; margin: 0.15rem 0 0 6rem; font-size: 0.8rem; color: var(--c-text-muted); }
+
+@media (max-width: 640px) {
+  .card { top: auto; left: 0.5rem; right: 0.5rem; bottom: 0.5rem; width: auto; max-height: 65%; }
+  .legend { top: 0.5rem; left: 0.5rem; }
+}

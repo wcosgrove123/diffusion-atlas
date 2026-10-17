@@ -12,10 +12,36 @@ Open questions the coding agent must not decide. Each has a recommendation; answ
 2. **Hand-drawn polygons.** About 12 polities have no usable open geometry and must be drafted as soft zones from the
    research `geometry_note` text (geometry-audit section 5). The coding agent drafts; you approve from
    docs/geometry-review.md. Recommendation: approve in batches by region, Phase 1 covers only West Africa.
+   **Phase 1 drafts are ready (2026-10-15):** docs/geometry-review.md has every West Africa shape with a screenshot
+   and five questions (Mali's c.1250 core and Bambuk, a fourth Mali shape after 1433, when the big Mali shape starts,
+   Ghana to 1240 or 1203, shapes for Kaabu and Bambuk-Bure).
 
 3. **Keyframes.** 25 keyframes across five regions. The spec adds a region filter. Do you also want a curated
    "lesson path" per class day (an ordered list of keyframes and cards)? Recommendation: yes, Phase 4, as a small
    YAML file you edit.
+
+12. **Student labels for relations.** product-spec 3.2 gives them ("One tradition", "Blended together", and so on)
+    but taxonomy.yaml did not. **Decided 2026-10-15 (Wil): added to taxonomy.yaml as `religion.relation_labels`,**
+    word for word from the spec. validate.py now checks that every relation has a label.
+
+13. **Ghana, Kaabu, Bambuk-Bure shapes.** The Phase 1 brief named seven polities; wsahel.yaml has three more places
+    that could take an area. **Decided 2026-10-15 (Wil): Ghana (Wagadu) by method E from aourednik 1200;** Kaabu and
+    Bambuk-Bure show as points until you decide on shapes (docs/geometry-review.md, question 5).
+
+14. **Polity Profile labels.** The place card shows the Polity Profile snapshot nearest the year, but taxonomy.yaml
+    lists only the codes (AGR, EXT, KIN...), not the plain-English labels the spec asks for (section 6). The card
+    shows codes for now. Recommendation: add a label per code to `polity_profile` in taxonomy.yaml (from your Polity
+    Profile taxonomy) and the card will pick them up.
+
+15. **Names of traditions in the UI.** The taxonomy has no display names, so cards and the legend show the keys with
+    a capital ("Islam", "Indigenous", "Christianity"; branches as "sunni-maliki"). Recommendation: fine for now; if
+    you want "Local (indigenous)" or "Sunni, Maliki school", add display labels to taxonomy.yaml.
+
+16. **Speed check on GitHub.** Build-plan check 6 (Lighthouse >= 80 on a throttled phone) passes on machines with a
+    graphics chip (85 to 98 on Wil's laptop), but GitHub's test runners have none and draw the map in software, so
+    they score about 70 for the same site. **Decided 2026-10-15 (Wil): GitHub's check fails only below 65**
+    (`LIGHTHOUSE_MIN` in .github/workflows/pages.yml); the 80 bar is checked on a machine with a GPU before a release:
+    `cd app && npm run build && PW_CHANNEL=msedge npx playwright test lighthouse --project=desktop`.
 
 ## Data and taxonomy (your call; the researchers raised these)
 

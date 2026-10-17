@@ -12,3 +12,12 @@ modules:
     end: 1450
     bbox: [-20, -36, 60, 40]
     view_bbox: [-72, -64, 112, 70]
+    # Research files in data/research/<module>/, in the order the keyframe region filter lists them.
+    regions:
+      - {id: wsahel, label: West}
+      - {id: csahel, label: Central Sahel and forest}
+      - {id: north, label: North}
+      - {id: nile-horn, label: Nile and Horn}
+      - {id: swahili, label: Swahili coast}
+    # The regions the app draws. Phase 1 is the West Africa slice; later phases add the rest.
+    shown_regions: [wsahel]

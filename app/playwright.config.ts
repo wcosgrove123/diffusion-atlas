@@ -11,6 +11,8 @@ export default defineConfig({
   testDir: 'e2e',
   outputDir: 'e2e/.results',
   timeout: 60_000,
+  // One test at a time: the Lighthouse check measures main-thread time, so nothing may run beside it.
+  workers: 1,
   reporter: [['list']],
   use: {
     baseURL: origin + base,
@@ -23,7 +25,8 @@ export default defineConfig({
     { name: 'phone', use: { ...devices['Pixel 7'], channel, viewport: { width: 360, height: 740 } } },
   ],
   webServer: {
-    command: 'npx vite preview --port 4317 --strictPort --host 127.0.0.1',
+    // Serves dist/ with gzip like GitHub Pages (scripts/serve.mjs), so sizes and timings match the live site.
+    command: 'node scripts/serve.mjs 4317',
     url: origin + base,
     reuseExistingServer: !process.env.CI,
   },

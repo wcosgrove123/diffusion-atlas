@@ -1,0 +1,62 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-sosso",
+    "year_from": 1180,
+    "year_to": 1235,
+    "method": "H",
+    "basis": "Drawn from the pl-sosso geometry_note: core in the Koulikoro hills north of the Niger, reaching into Kaniaga (geometry-audit section 5: \"Sosso in Kaniaga\"). The capital's site is not established."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -10.15,
+       14.84
+      ],
+      [
+       -9.98,
+       13.913
+      ],
+      [
+       -8.658,
+       12.942
+      ],
+      [
+       -7.55,
+       12.738
+      ],
+      [
+       -7.27,
+       12.848
+      ],
+      [
+       -7.037,
+       13.594
+      ],
+      [
+       -7.871,
+       14.733
+      ],
+      [
+       -9.102,
+       15.281
+      ],
+      [
+       -9.935,
+       15.072
+      ],
+      [
+       -10.15,
+       14.84
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-takrur",
+    "year_from": 1000,
+    "year_to": 1500,
+    "method": "H",
+    "basis": "Drawn from the pl-takrur geometry_note: the middle Senegal River valley (later Fuuta Tooro), both banks, from about Dagana to Bakel. One shape for the whole span; overlordship changes are not drawn."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -15.504,
+       16.242
+      ],
+      [
+       -14.922,
+       16.265
+      ],
+      [
+       -14.14,
+       15.918
+      ],
+      [
+       -12.601,
+       14.744
+      ],
+      [
+       -12.444,
+       14.776
+      ],
+      [
+       -12.28,
+       15.016
+      ],
+      [
+       -12.31,
+       15.26
+      ],
+      [
+       -13.02,
+       15.962
+      ],
+      [
+       -13.911,
+       16.505
+      ],
+      [
+       -14.84,
+       16.923
+      ],
+      [
+       -15.54,
+       16.797
+      ],
+      [
+       -15.653,
+       16.395
+      ],
+      [
+       -15.504,
+       16.242
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

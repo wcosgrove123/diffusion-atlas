@@ -1,0 +1,149 @@
+# How each polity polygon is made (docs/geometry-audit.md section 5). tools/build_geometry.py reads this file
+# and writes data/geometry/polities/<place-id>.geojson, one feature per entry, clipped to the module's land.
+#
+# Every entry has: year_from, year_to (the shape applies while year_from <= year < year_to; null = open-ended),
+# method, basis.
+#   method E: start from an aourednik/historical-basemaps polygon (GPL-3.0) and edit it.
+#             from: {year, name}   which clipped aourednik file (data/geometry/<module>/aourednik_<year>.geojson) and NAME to start from
+#             remove: list of rings [[lon, lat], ...] cut out of the shape
+#   method H: hand-drawn soft extent from the place's geometry_note, not traced from aourednik.
+#             outline: one ring [[lon, lat], ...], kept coarse on purpose (a zone, not a border)
+#   smooth (degrees, optional): rounds inside and outside corners so the shape reads as a zone.
+# Hand-drawn shapes (H) and the Mali trims are DRAFTS for Wil's review: see docs/geometry-review.md.
+# review: draft | approved   (Wil flips this to approved; the app does not read it)
+
+module: africa
+polities:
+  pl-mali:
+    - year_from: 1235
+      year_to: 1300
+      method: H
+      review: draft
+      smooth: 0.3
+      basis: >-
+        Upper-Niger core for c.1250, drawn from the pl-mali geometry_note (upper Niger and Sankarani between
+        Kangaba and Siguiri, with the Bure goldfield; Bambuk to the west) and geometry-audit section 5
+        ("hand-shrink to the upper-Niger core for c.1250"). Not traced from aourednik.
+      outline: [[-11.0, 12.0], [-10.8, 13.3], [-9.6, 13.7], [-8.0, 13.3], [-6.9, 12.6], [-7.2, 11.4], [-8.0, 10.6],
+                [-9.2, 10.5], [-10.4, 11.0]]
+    - year_from: 1300
+      year_to: 1360
+      method: E
+      review: draft
+      smooth: 0.4
+      basis: >-
+        aourednik 'Mali' 1279 used as the c.1330-1350 snapshot (geometry-audit section 5), with two trims: the
+        Mossi south cut away (south of 12.75N, east of 4W) and the east cut at 1.5E (Gao and Tadmekka side).
+        Extent per pl-mali geometry_note: Gambia and Senegal rivers to Gao and Walata about 1330-1360.
+      from: {year: 1279, name: Mali}
+      remove:
+        - [[-4.0, 0.0], [20.0, 0.0], [20.0, 12.75], [-4.0, 12.75], [-4.0, 0.0]]
+        - [[1.5, 0.0], [20.0, 0.0], [20.0, 30.0], [1.5, 30.0], [1.5, 0.0]]
+    - year_from: 1360
+      year_to: 1433
+      method: E
+      review: draft
+      smooth: 0.4
+      basis: >-
+        The c.1330-1350 shape contracted for c.1400 without Jolof and Gao (geometry-audit section 5): cut west of
+        14W and north of 13.9N (Jolof and its Wolof provinces, from about 1350-1360 per pl-jolof) and east of 1W
+        (Gao, lost to the Sunni dynasty per pl-mali geometry_note). Timbuktu and Walata stay until 1433.
+      from: {year: 1279, name: Mali}
+      remove:
+        - [[-4.0, 0.0], [20.0, 0.0], [20.0, 12.75], [-4.0, 12.75], [-4.0, 0.0]]
+        - [[-1.0, 0.0], [20.0, 0.0], [20.0, 30.0], [-1.0, 30.0], [-1.0, 0.0]]
+        - [[-30.0, 13.9], [-14.0, 13.9], [-14.0, 30.0], [-30.0, 30.0], [-30.0, 13.9]]
+    - year_from: 1433
+      year_to: 1600
+      method: E
+      review: draft
+      smooth: 0.4
+      basis: >-
+        The c.1400 shape with the north cut at 15.8N after the Tuareg took Timbuktu and Walata about 1433
+        (pl-mali geometry_note; ev-tuareg-take-timbuktu). Not named in geometry-audit section 5; added so the map
+        agrees with the 1433 keyframe. The 15th-century shift west toward the Gambia is not drawn.
+      from: {year: 1279, name: Mali}
+      remove:
+        - [[-4.0, 0.0], [20.0, 0.0], [20.0, 12.75], [-4.0, 12.75], [-4.0, 0.0]]
+        - [[-1.0, 0.0], [20.0, 0.0], [20.0, 30.0], [-1.0, 30.0], [-1.0, 0.0]]
+        - [[-30.0, 13.9], [-14.0, 13.9], [-14.0, 30.0], [-30.0, 30.0], [-30.0, 13.9]]
+        - [[-30.0, 15.8], [20.0, 15.8], [20.0, 30.0], [-30.0, 30.0], [-30.0, 15.8]]
+
+  pl-ghana-wagadu:
+    - year_from: 1200
+      year_to: 1240
+      method: E
+      review: draft
+      basis: >-
+        aourednik 'Ghana' 1200, relabelled (geometry-audit section 5). The audit uses it for the pre-1203 frame and
+        says to fade it after Sosso; it runs to 1240 here to match the place span and its religion profiles
+        (Sosso then Mali overlordship, per pl-ghana-wagadu geometry_note).
+      from: {year: 1200, name: Ghana}
+
+  pl-sosso:
+    - year_from: 1180
+      year_to: 1235
+      method: H
+      review: draft
+      smooth: 0.3
+      basis: >-
+        Drawn from the pl-sosso geometry_note: core in the Koulikoro hills north of the Niger, reaching into
+        Kaniaga (geometry-audit section 5: "Sosso in Kaniaga"). The capital's site is not established.
+      outline: [[-7.3, 12.7], [-7.0, 13.6], [-7.8, 14.7], [-9.1, 15.3], [-10.2, 15.0], [-10.0, 13.9], [-8.6, 12.9]]
+
+  pl-takrur:
+    - year_from: 1000
+      year_to: 1500
+      method: H
+      review: draft
+      smooth: 0.2
+      basis: >-
+        Drawn from the pl-takrur geometry_note: the middle Senegal River valley (later Fuuta Tooro), both banks,
+        from about Dagana to Bakel. One shape for the whole span; overlordship changes are not drawn.
+      outline: [[-15.7, 16.2], [-15.6, 16.8], [-14.9, 16.95], [-13.9, 16.5], [-13.0, 15.95], [-12.2, 15.15],
+                [-12.5, 14.65], [-13.4, 15.3], [-14.1, 15.9], [-15.0, 16.3]]
+
+  pl-jolof:
+    - year_from: 1350
+      year_to: 1549
+      method: H
+      review: draft
+      smooth: 0.25
+      basis: >-
+        Drawn from the pl-jolof geometry_note: the inland Wolof kingdom around Linguere (geometry-audit section 5:
+        Jolof in the Ferlo/Linguere interior, from c.1350). Only the Jolof core; its overlordship of Waalo,
+        Kajoor, Bawol, Siin and Saalum is not drawn.
+      outline: [[-16.0, 15.5], [-15.4, 15.95], [-14.6, 15.75], [-14.3, 15.0], [-14.9, 14.6], [-15.8, 14.8]]
+
+  pl-songhay-gao:
+    - year_from: 1000
+      year_to: 1464
+      method: H
+      review: draft
+      smooth: 0.25
+      basis: >-
+        Drawn from the pl-songhay-gao geometry_note: the middle Niger around Gao and Kukiya. A small Gao-centred
+        zone (geometry-audit section 5); the later Songhay empire (Sunni Ali, 1464) is outside the window.
+      outline: [[-0.8, 16.6], [-0.2, 17.0], [0.6, 16.6], [1.4, 15.3], [1.2, 14.6], [0.4, 14.8], [-0.3, 15.7]]
+
+  pl-mossi:
+    - year_from: 1250
+      year_to: null
+      method: H
+      review: draft
+      smooth: 0.3
+      basis: >-
+        Drawn from the pl-mossi geometry_note: a soft area south of the Niger bend, drawn as a people, not a
+        polity (geometry-audit section 5: small soft zone, low confidence). The Volta Mossi kingdoms are later.
+      outline: [[-3.2, 12.0], [-2.8, 13.8], [-1.6, 14.3], [-0.2, 14.0], [0.6, 12.8], [0.0, 11.6], [-1.6, 11.2]]
+
+  pl-bono:
+    - year_from: 1300
+      year_to: 1723
+      method: H
+      review: draft
+      smooth: 0.2
+      basis: >-
+        Drawn from the pl-bono geometry_note: the early Akan kingdom north of the forest around Bono Manso near
+        Techiman (geometry-audit section 5: small soft zone, low confidence). Location approximate.
+      outline: [[-2.5, 7.3], [-2.6, 8.0], [-1.9, 8.4], [-1.2, 8.0], [-1.3, 7.3], [-1.9, 7.0]]

@@ -1,4 +1,4 @@
-import type { ModuleGeo, ModuleIndex } from './types';
+import type { ModuleData, ModuleGeo, ModuleIndex, Taxonomy } from './types';
 
 /** Resolve a data file under the site's base path (GitHub Pages serves the site at /<repo>/). */
 export function dataUrl(file: string, base: string = import.meta.env.BASE_URL): string {
@@ -13,3 +13,5 @@ async function fetchJson<T>(file: string): Promise<T> {
 
 export const loadModuleIndex = () => fetchJson<ModuleIndex>('modules.json');
 export const loadModuleGeo = (id: string) => fetchJson<ModuleGeo>(`${id}-geo.json`);
+export const loadModuleData = (id: string) => fetchJson<ModuleData>(`${id}.json`);
+export const loadTaxonomy = () => fetchJson<Taxonomy>('taxonomy.json');

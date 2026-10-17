@@ -1,0 +1,66 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "place_id": "pl-jolof",
+    "year_from": 1350,
+    "year_to": 1549,
+    "method": "H",
+    "basis": "Drawn from the pl-jolof geometry_note: the inland Wolof kingdom around Linguere (geometry-audit section 5: Jolof in the Ferlo/Linguere interior, from c.1350). Only the Jolof core; its overlordship of Waalo, Kajoor, Bawol, Siin and Saalum is not drawn."
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -15.96,
+       15.434
+      ],
+      [
+       -15.841,
+       14.943
+      ],
+      [
+       -15.655,
+       14.768
+      ],
+      [
+       -14.904,
+       14.621
+      ],
+      [
+       -14.469,
+       14.887
+      ],
+      [
+       -14.358,
+       15.077
+      ],
+      [
+       -14.62,
+       15.727
+      ],
+      [
+       -15.285,
+       15.921
+      ],
+      [
+       -15.495,
+       15.879
+      ],
+      [
+       -15.862,
+       15.603
+      ],
+      [
+       -15.96,
+       15.434
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

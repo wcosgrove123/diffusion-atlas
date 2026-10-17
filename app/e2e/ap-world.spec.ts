@@ -4,7 +4,7 @@ import { type Page, expect, test } from '@playwright/test';
 // names (plus what follows them); "AP World only" unticked shows everything. Expected ids come from the built data.
 
 interface Data {
-  frame: { start: number; end: number };
+  frame: { start: number; end: number; zoom_bands: { mid: number; near: number } };
   places: { id: string; kind: string; span?: { start: number; end: number | null } | null; _file: string }[];
   events: { id: string; year: number; keyframe?: boolean }[];
   ap_world: { default_view: string; why: Record<string, string> } | null;
@@ -37,6 +37,8 @@ test.describe('AP World only view', () => {
     const hidden = data.places.filter((p) => p.kind !== 'external' && !ap.why[p.id] && p.span && p.span.start <= 1340 && (p.span.end === null || p.span.end > 1340));
     expect(hidden.length).toBeGreaterThan(5);
     const setYear = (y: number) => page.evaluate((year) => (window as unknown as { __atlas: { setYear: (y: number) => Promise<unknown> } }).__atlas.setYear(year), y);
+    // Close up, so the zoom bands (src/map/bands.ts) hide nothing by prominence; only the view decides here.
+    await page.evaluate((z) => (window as unknown as { __atlas: { setZoom: (z: number) => Promise<unknown> } }).__atlas.setZoom(z), data.frame.zoom_bands.near + 0.75);
     await setYear(1340);
     for (const p of hidden.slice(0, 6)) await expect(page.locator(`.place-marker[data-place="${p.id}"]`)).toBeHidden();
     await expect(page.locator('.place-marker[data-place="pl-mali"]')).toBeVisible();

@@ -21,3 +21,7 @@ modules:
       - {id: swahili, label: Swahili coast}
     # The regions the app draws (Phase 1 showed only wsahel).
     shown_regions: [wsahel, csahel, north, nile-horn, swahili]
+    # Zoom bands (map zoom levels): below `mid` the map is zoomed out (far: course landmarks as dots, corridors);
+    # from `mid` it is at region scale (circles, single arrows); from `near` it is close up (everything).
+    # What each band shows is the table in app/src/map/bands.ts; the thresholds live only here.
+    zoom_bands: {mid: 4, near: 5.5}

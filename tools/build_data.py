@@ -91,6 +91,65 @@ def ap_world_set(module, data):
             "sources": ap.get("sources") or [], "why": dict(sorted(why.items()))}
 
 
+def ced_named(module):
+    """Place ids the AP World match found in the course outline itself (the `ced` text of data/ap-world/sources.yaml),
+    as opposed to the textbook chapters. Empty when the module has no list."""
+    path = ROOT / "data" / "ap-world" / f"{module}.yaml"
+    cfg_path = ROOT / "data" / "ap-world" / "sources.yaml"
+    if not path.exists() or not cfg_path.exists():
+        return set()
+    cfg = yaml.safe_load(cfg_path.read_text(encoding="utf-8")) or {}
+    label = (cfg.get("ced") or {}).get("label")
+    if not label:
+        return set()
+    ap = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return {rid for rid, rec in (ap.get("named") or {}).items()
+            if any(label in hits for hits in (rec.get("matched") or {}).values())}
+
+
+def prominence_tiers(data, tax, ap_world, ced):
+    """Give every place and diffusion a prominence (taxonomy section 8): how far out the map still shows it.
+    Places: the first tier when the course outline names them, the second when the AP World view shows them,
+    the last otherwise; a module with no AP World list puts polities and peoples first and the rest second.
+    Diffusions: the most prominent of their endpoints, plus one corridor id per origin (origin region to
+    destination region; an external place is its own corridor end). A record's own `prominence` wins.
+    Returns the tier counts for the report."""
+    tiers = list(tax["prominence"])
+    top, second, last = tiers[0], tiers[min(1, len(tiers) - 1)], tiers[-1]
+    shown = set(ap_world["why"]) if ap_world else None
+    rank = {t: i for i, t in enumerate(tiers)}
+    tier_of = {}
+    for p in data["places"]:
+        own = p.get("prominence")
+        if own:
+            if own not in rank:
+                raise SystemExit(f"{p['id']}: prominence {own!r} is not in the taxonomy")
+            tier = own
+        elif shown is None:
+            tier = top if p.get("kind") in ("polity", "people") else second
+        elif p["id"] in ced and p["id"] in shown:
+            tier = top
+        elif p["id"] in shown:
+            tier = second
+        else:
+            tier = last
+        p["prominence"] = tier
+        tier_of[p["id"]] = tier
+    region_of = {p["id"]: (p["id"] if p.get("kind") == "external" else p["_file"]) for p in data["places"]}
+    for d in data["diffusions"]:
+        ends = [tier_of.get(x, last) for x in list(d["from"]) + [d["to"]]]
+        own = d.get("prominence")
+        if own and own not in rank:
+            raise SystemExit(f"{d['id']}: prominence {own!r} is not in the taxonomy")
+        d["prominence"] = own or min(ends, key=lambda t: rank[t])
+        d["corridor"] = [f"{region_of.get(f, f)}>{region_of.get(d['to'], d['to'])}" for f in d["from"]]
+    counts = {}
+    for kind in ("places", "diffusions"):
+        counts[kind] = Counter(r["prominence"] for r in data[kind])
+    counts["corridors"] = len({c for d in data["diffusions"] for c in d["corridor"]})
+    return counts
+
+
 def main(module):
     rdir = ROOT / "data" / "research" / module
     tax = yaml.safe_load((ROOT / "data" / "taxonomy.yaml").read_text(encoding="utf-8"))
@@ -145,6 +204,7 @@ def main(module):
                 e["ap_topics"] = list(e.get("ap_topics") or []) + [add]
 
     ap_world = ap_world_set(module, data)
+    tiers = prominence_tiers(data, tax, ap_world, ced_named(module))
 
     debates = (yaml.safe_load((rdir / "_debates.yaml").read_text(encoding="utf-8")) or {}).get("debates", []) \
         if (rdir / "_debates.yaml").exists() else []
@@ -186,6 +246,13 @@ def main(module):
         lines += ["", "## AP World only view", "",
                   f"- {len([k for k in ap_world['why'] if k.startswith('pl-')])} places named in the curriculum texts; "
                   f"{len(ap_world['why'])} records shown in all (default view: {ap_world['default_view']})"]
+    lines += ["", "## Prominence (zoom tiers, taxonomy section 8)", ""]
+    for kind in ("places", "diffusions"):
+        lines.append(f"- {kind}: " + ", ".join(f"{t} {tiers[kind].get(t, 0)}" for t in tax["prominence"]))
+    lines.append(f"- corridors (route families the zoomed-out map draws): {tiers['corridors']}")
+    for t in tax["prominence"]:
+        ids = sorted(p["id"] for p in data["places"] if p["prominence"] == t and p.get("kind") != "external")
+        lines.append(f"- {t} places: " + (", ".join(ids) if ids else "none"))
     lines += ["", "## Keyframes", ""]
     for e in sorted((e for e in data["events"] if e.get("keyframe")), key=lambda e: e["year"]):
         lines.append(f"- {e['year']}{'~' if e.get('approx') else ''} {e['title']} ({e['_file']})")

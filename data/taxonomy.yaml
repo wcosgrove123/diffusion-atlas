@@ -1,4 +1,5 @@
-# Diffusion Atlas taxonomy v0.2 (2026-10-14)
+# Diffusion Atlas taxonomy v0.3 (2026-10-17)
+# v0.3: added prominence (section 8), the map's zoom tiers; Wil's decision 22.
 # v0.2: added after the Africa research pass ("taxonomy pressure" from five researchers):
 #   outcomes undocumented/withheld/loss/impact; profile basis; economy lens; christianity latin-african;
 #   source types community-heritage/reference-web; exemplar fabric_date/found_at/on_slider; parent spans;
@@ -9,7 +10,7 @@
 # add it here with a definition and a tie-break test, never inline in data.
 
 meta:
-  version: 0.2
+  version: 0.3
   design_rules:
     - Color people, not states. A place's religion is recorded per social stratum, never as one value for the polity.
     - Lists are mutually exclusive by tie-break test and exhaustive by testing against real cases.
@@ -257,3 +258,27 @@ writing_rules:
     - Oral tradition is a source with its own transmitters and purposes, not legend to be corrected by Arabic texts.
     - Conversion is described as a choice people made for their own reasons, not as Islam or Christianity "civilizing" anyone.
     - summary fields are student-facing, high-school readable, at most 2 sentences. detail fields are for the teacher.
+
+# ---------------------------------------------------------------------------
+# 8. PROMINENCE: how far out a record still shows (the map's zoom bands). Added 2026-10-17 with Wil's approval
+#    (docs/decisions-for-wil.md, 22). Listed most to least prominent; the order is the ranking.
+#    tools/build_data.py assigns a value to every place and diffusion by rule:
+#      places: continent when the AP World match (tools/ap_match.py) names the place in the CED itself;
+#              region when the AP World view shows it (named in the textbook, or it follows a named place);
+#              local otherwise. A module with no AP World list: polities and peoples continent, the rest region.
+#      diffusions: the most prominent value among their endpoints. Each also gets a corridor id per origin
+#              (origin region to destination region; an external origin is its own corridor), so the zoomed-out
+#              map draws one line per corridor instead of every arc.
+#    A record may carry its own `prominence:` to overrule the rule (validate.py checks the value).
+#    The map's zoom thresholds are in data/modules.yaml (zoom_bands); the legend reads the labels below.
+# ---------------------------------------------------------------------------
+prominence:
+  continent:
+    label: Course landmarks
+    definition: "Named in the AP World course outline (the CED). Shows at every zoom, as a dot when zoomed out."
+  region:
+    label: Other course places
+    definition: "Shown by the AP World view but not named in the course outline (named in the textbook, or follows a landmark). Shows from region zoom in."
+  local:
+    label: Places beyond the course
+    definition: "Everything else. Shows close up only."

@@ -72,6 +72,19 @@ Open questions the coding agent must not decide. Each has a recommendation; answ
     13 (Hafsids: aourednik with Algiers to 1300, Cliopatria core after) and 14 (Mali: Jolof out 1360, Gao out 1430,
     Timbuktu 1433) were decided the same day on Wil's "just choose as a historian".
 
+22. **Zoom tiers (decided 2026-10-17, Wil).** The opening map was "a flooded overflow of layers". Fix: a
+    `prominence` axis in taxonomy.yaml (section 8) with three values, continent, region, local, approved by Wil in
+    chat on 2026-10-17 ("Yes, add them"). The build assigns it by rule (continent = the AP World match names the
+    place in the CED itself; region = the AP World view shows it; local = the rest; a diffusion takes its most
+    prominent endpoint and gets a corridor id per origin). Any record may carry its own `prominence:` to overrule
+    the rule. The map has three zoom bands (`zoom_bands` in data/modules.yaml): zoomed out it draws states, course
+    landmarks as dots and one corridor line per route family; at region zoom it adds the other course places as
+    circles and each arrow on its own, with the off-map names on hover; close up it shows everything, as before.
+    The map opens at region zoom on the current keyframe's region, and the region dropdown moves it. Screenshots:
+    docs/zoom-tiers/. Two things to look at: the tier labels in taxonomy.yaml (the legend reads them), and
+    whether "AP World only" unticked at region zoom should also show the places beyond the course (today they
+    show close up only, as proposed).
+
 ## Data and taxonomy (your call; the researchers raised these)
 
 4. **Polity Profile, Right axis.** Two researchers needed a value for legitimacy from mastery of spiritual or occult

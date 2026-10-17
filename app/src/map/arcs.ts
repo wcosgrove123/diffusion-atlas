@@ -2,6 +2,10 @@
 // year is inside the diffusion's span. Lens -> color, mechanism -> line style (pattern), outcome -> glyph at the
 // destination, confidence -> opacity. Arcs to or from external places run to the frame edge with an edge label.
 // On entering its span an arc animates once: a short pulse travels from origin to destination.
+// Zoomed out (map/bands.ts, far band) the arcs collapse to one corridor line per route family (the build's
+// corridor id: origin region to destination region), with no glyphs and no edge labels; clicking a corridor zooms
+// in on it. Closer in, each diffusion draws its own arc; the off-map edge labels show on hover at region zoom
+// and always when close up.
 import * as maplibregl from 'maplibre-gl';
 import type { Feature, FeatureCollection, LineString } from 'geojson';
 import type { Atlas, Visible } from '../atlas';
@@ -10,6 +14,7 @@ import { diffusionsAt } from '../data/profiles';
 import { lensColor, mapInk } from '../theme/palette';
 import { h } from '../ui/dom';
 import { outcomeGlyph } from '../ui/glyphs';
+import { BAND_DETAIL, type Band, showsIn, tiers } from './bands';
 import { SOURCE_MAXZOOM } from './basemap';
 import { arcPatternId, arcStyle, ensurePatterns, linePatternPaint, solidId } from './patterns';
 import { opacityFor } from './religionLayer';
@@ -21,11 +26,16 @@ export const ARC_LAYERS = { line: 'arc-line', thick: 'arc-line-thick' } as const
 const THICK_STYLES = new Set(['chevrons']);
 const PULSE_MS = 900;
 const STEPS = 24;
+/** How strong a corridor line draws, relative to its most confident arc. */
+const CORRIDOR_OPACITY = 0.45;
 
 export interface ArcProps {
+  /** the diffusion id; empty for a corridor */
   diffusion: string;
   from: string;
   to: string;
+  /** route family (origin region to destination region), from the build */
+  corridor: string;
   lens: string;
   mechanism: string;
   outcome: string;
@@ -34,6 +44,9 @@ export interface ArcProps {
   thick: boolean;
   /** which end is at the frame edge, if any */
   edge: 'from' | 'to' | null;
+  /** corridors only: how many arcs it stands for, and the bounds to zoom to [[w, s], [e, n]] */
+  count?: number;
+  bounds?: string;
 }
 
 export type ArcFeature = Feature<LineString, ArcProps>;
@@ -91,10 +104,10 @@ export function arcFeatures(d: Diffusion, atlas: Atlas, bowFor: (from: string, t
   if (!to || !toAt) return [];
   const style = arcStyle(d.mechanism);
   const out: ArcFeature[] = [];
-  for (const fromId of d.from) {
+  d.from.forEach((fromId, i) => {
     const from = atlas.placeById.get(fromId);
     const fromAt = at(from);
-    if (!from || !fromAt) continue;
+    if (!from || !fromAt) return;
     let a = fromAt;
     let b = toAt;
     let edge: ArcProps['edge'] = null;
@@ -109,9 +122,41 @@ export function arcFeatures(d: Diffusion, atlas: Atlas, bowFor: (from: string, t
       type: 'Feature',
       geometry: { type: 'LineString', coordinates: fromId === d.to ? loopPoints(a) : arcPoints(a, b, bowFor(fromId, d.to)) },
       properties: {
-        diffusion: d.id, from: fromId, to: d.to, lens: d.lens, mechanism: d.mechanism, outcome: d.outcome,
+        diffusion: d.id, from: fromId, to: d.to, corridor: d.corridor?.[i] ?? `${fromId}>${d.to}`,
+        lens: d.lens, mechanism: d.mechanism, outcome: d.outcome,
         line_pattern: arcPatternId(style, lensColor(d.lens)), line_opacity: opacityFor(d.confidence),
         thick: THICK_STYLES.has(style), edge,
+      },
+    });
+  });
+  return out;
+}
+
+/**
+ * One line per route family for the zoomed-out map: from the mean of the family's origins to the mean of its
+ * destinations, in the lens color, as strong as its most confident arc. It carries the family's bounds so a
+ * click can zoom in on it.
+ */
+export function corridorFeatures(features: ArcFeature[], lens: string): ArcFeature[] {
+  const groups = new Map<string, ArcFeature[]>();
+  for (const f of features) groups.set(f.properties.corridor, [...(groups.get(f.properties.corridor) ?? []), f]);
+  const out: ArcFeature[] = [];
+  for (const [corridor, members] of groups) {
+    const mean = (pts: Pt[]): Pt => [pts.reduce((s, p) => s + p[0], 0) / pts.length, pts.reduce((s, p) => s + p[1], 0) / pts.length];
+    const a = mean(members.map((f) => f.geometry.coordinates[0] as Pt));
+    const b = mean(members.map((f) => f.geometry.coordinates[f.geometry.coordinates.length - 1] as Pt));
+    let [w, s, e, n] = [Infinity, Infinity, -Infinity, -Infinity];
+    for (const f of members) for (const [x, y] of f.geometry.coordinates) { w = Math.min(w, x); e = Math.max(e, x); s = Math.min(s, y); n = Math.max(n, y); }
+    const first = members[0].properties;
+    out.push({
+      type: 'Feature',
+      geometry: { type: 'LineString', coordinates: Math.hypot(b[0] - a[0], b[1] - a[1]) < 0.5 ? loopPoints(a) : arcPoints(a, b) },
+      properties: {
+        diffusion: '', from: first.from, to: first.to, corridor, lens, mechanism: '', outcome: '',
+        line_pattern: arcPatternId('solid', lensColor(lens)),
+        // quieter than a single arc: a corridor is a hint of where to zoom, not a record
+        line_opacity: CORRIDOR_OPACITY * Math.max(...members.map((f) => f.properties.line_opacity)),
+        thick: false, edge: null, count: members.length, bounds: JSON.stringify([[w, s], [e, n]]),
       },
     });
   }
@@ -135,6 +180,8 @@ export function addArcLayers(map: maplibregl.Map): void {
 
 export interface ArcHandlers {
   openDiffusion: (id: string) => void;
+  /** a corridor was clicked: zoom in on its arcs */
+  zoomTo: (bounds: [[number, number], [number, number]]) => void;
 }
 
 /** The arcs for the current year and lens, with their outcome glyphs, edge labels and entry pulses. */
@@ -144,15 +191,18 @@ export class ArcLayer {
   private labels = new Map<string, maplibregl.Marker>();
   private first = true;
   private runs = new RunToken();
+  private order: string[];
 
   constructor(private map: maplibregl.Map, private atlas: Atlas, private on: ArcHandlers) {
+    this.order = tiers(atlas.tax);
     const hit = (p: maplibregl.Point) => map.queryRenderedFeatures(
       [[p.x - 6, p.y - 6], [p.x + 6, p.y + 6]], { layers: [ARC_LAYERS.line, ARC_LAYERS.thick] })[0];
     map.on('click', (e) => {
       const f = hit(e.point);
       if (f) {
         e.preventDefault();
-        this.on.openDiffusion(String(f.properties.diffusion));
+        if (f.properties.diffusion) this.on.openDiffusion(String(f.properties.diffusion));
+        else if (f.properties.bounds) this.on.zoomTo(JSON.parse(String(f.properties.bounds)));
       }
     });
     map.on('mousemove', (e) => {
@@ -161,10 +211,12 @@ export class ArcLayer {
     map.on('zoomend', () => this.stackEdgeLabels());
   }
 
-  /** Redraw for a year and lens. The lines change at once; glyphs and labels follow in slices. */
-  async update(year: number, lens: string, visible: Visible = () => true): Promise<boolean> {
+  /** Redraw for a year, lens and zoom band. The lines change at once; glyphs and labels follow in slices. */
+  async update(year: number, lens: string, visible: Visible = () => true, band: Band = 'near'): Promise<boolean> {
     const token = this.runs.next();
-    const current = diffusionsAt(this.atlas.diffusions, lens, year).filter((d) => visible(d.id));
+    const detail = BAND_DETAIL[band];
+    const current = diffusionsAt(this.atlas.diffusions, lens, year)
+      .filter((d) => visible(d.id) && showsIn(band, d.prominence, this.order));
     // Diffusions between the same two places bow more each time, so their arcs and glyphs do not coincide.
     const seen = new Map<string, number>();
     const bowFor = (from: string, to: string) => {
@@ -172,23 +224,28 @@ export class ArcLayer {
       seen.set(`${from}>${to}`, n + 1);
       return 0.18 + n * 0.14;
     };
-    const features = current.flatMap((d) => arcFeatures(d, this.atlas, bowFor));
+    const arcs = current.flatMap((d) => arcFeatures(d, this.atlas, bowFor));
+    const corridors = detail.arcs === 'corridor';
+    const features = corridors ? corridorFeatures(arcs, lens) : arcs;
     const fc: FeatureCollection<LineString, ArcProps> = { type: 'FeatureCollection', features };
     ensurePatterns(this.map, features.map((f) => f.properties.line_pattern));
     (this.map.getSource(ARC_SOURCE) as maplibregl.GeoJSONSource).setData(fc);
 
-    const ids = new Set(current.map((d) => d.id));
+    const ids = new Set(corridors ? [] : current.map((d) => d.id));
     for (const [key, m] of this.glyphs) if (!ids.has(key.split('|')[0])) { m.remove(); this.glyphs.delete(key); }
     // One edge label per external place and direction, shared by every arc that runs to it.
-    const wanted = new Set(features.filter((f) => f.properties.edge).map((f) => `${f.properties.edge}|${f.properties.edge === 'from' ? f.properties.from : f.properties.to}`));
+    const wanted = new Set(detail.edgeLabels === 'none' ? []
+      : features.filter((f) => f.properties.edge).map((f) => `${f.properties.edge}|${f.properties.edge === 'from' ? f.properties.from : f.properties.to}`));
     for (const [key, m] of this.labels) if (!wanted.has(key)) { m.remove(); this.labels.delete(key); }
-    const entered = features.filter((f) => !this.first && !this.shown.has(f.properties.diffusion));
-    this.shown = ids;
+    // Arcs that entered their span since the last draw pulse once; a change of band alone pulses nothing.
+    const entered = corridors ? [] : features.filter((f) => !this.first && !this.shown.has(f.properties.diffusion));
+    this.shown = new Set(current.map((d) => d.id));
     this.first = false;
     const done = await chunked(features, (f) => {
       const p = f.properties;
       const key = `${p.diffusion}|${p.from}`;
       const line = f.geometry.coordinates as Pt[];
+      if (corridors) return;
       if (!this.glyphs.has(key)) {
         // The glyph sits a little short of the destination so it does not cover the town's circle.
         const el = h('button', {
@@ -201,11 +258,15 @@ export class ArcLayer {
       }
       const extId = p.edge === 'from' ? p.from : p.to;
       const labelKey = `${p.edge}|${extId}`;
-      if (p.edge && !this.labels.has(labelKey)) {
+      if (p.edge && wanted.has(labelKey) && !this.labels.has(labelKey)) {
         const ext = this.atlas.placeById.get(extId);
         const pt = p.edge === 'from' ? line[0] : line[line.length - 1];
-        const el = h('span', { class: `arc-edge arc-edge--${p.edge}`, 'data-external': extId },
-          `${p.edge === 'from' ? 'from' : 'to'} ${ext?.name ?? ''}`);
+        const text = `${p.edge === 'from' ? 'from' : 'to'} ${ext?.name ?? ''}`;
+        // A button: at region zoom the name shows on hover, focus or a click (the map's data-edge-labels says which).
+        const el = h('button', {
+          type: 'button', class: `arc-edge arc-edge--${p.edge}`, 'data-external': extId, 'aria-label': text, 'aria-expanded': 'false',
+          onclick: (ev: Event) => { ev.stopPropagation(); el.setAttribute('aria-expanded', el.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); },
+        }, h('span', { class: 'arc-edge__dot', 'aria-hidden': 'true' }), h('span', { class: 'arc-edge__text' }, text));
         const m = new maplibregl.Marker({ element: el, anchor: this.edgeAnchor(pt) }).setLngLat(pt).addTo(this.map);
         this.labels.set(labelKey, m);
       }

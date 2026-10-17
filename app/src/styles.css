@@ -153,11 +153,8 @@ body {
 }
 .place-marker--area .place-marker__name { font-size: 0.95rem; font-weight: 700; letter-spacing: 0.02em; }
 .place-marker__badge { margin-left: -4px; }
-.map--far .place-marker--town .place-marker__name,
-.map--far .place-marker--point .place-marker__name { display: none; }
 /* Area names (polities, peoples) stay above town and point markers. */
 .place-marker--area { z-index: 1; }
-.place-marker:hover .place-marker__name, .place-marker:focus-visible .place-marker__name { display: block; }
 
 .event-marker {
   width: 13px;
@@ -169,10 +166,15 @@ body {
   cursor: pointer;
 }
 .event-marker--keyframe { width: 16px; height: 16px; background: var(--c-ink-keyframe-marker); }
-/* Small areas (city-states, coastal towns) keep their names for closer zooms only and show a dot instead; large
-   areas show a short name. */
-.map--far .place-marker--small .place-marker__name { display: none; }
-.map--far .place-marker--small .place-marker__glyph:empty {
+/* ---- zoom bands (src/map/bands.ts puts the band's attributes on the stage; nothing here names a tier) ---- */
+/* Town and point names: none when zoomed out, the most prominent tier at region zoom, all close up. */
+[data-town-names='none'] .place-marker--town .place-marker__name,
+[data-town-names='none'] .place-marker--point .place-marker__name,
+[data-town-names='top'] .place-marker--town:not([data-rank='0']) .place-marker__name,
+[data-town-names='top'] .place-marker--point:not([data-rank='0']) .place-marker__name { display: none; }
+/* Small areas (city-states, coastal towns) show a dot instead of a name when zoomed out, so names do not pile up. */
+[data-band='far'] .place-marker--small .place-marker__name { display: none; }
+[data-band='far'] .place-marker--small .place-marker__glyph:empty {
   display: block;
   width: 9px;
   height: 9px;
@@ -180,9 +182,11 @@ body {
   border-radius: 50%;
   background: var(--c-ink-event-marker);
 }
-.map--far .place-marker--area .place-marker__name { font-size: 0.8rem; }
-.map--far .name--full { display: none; }
-.map:not(.map--far) .name--short { display: none; }
+[data-band='far'] .place-marker--area .place-marker__name { font-size: 0.8rem; }
+[data-names='short'] .name--full { display: none; }
+[data-names='full'] .name--short { display: none; }
+/* A hidden name shows while its marker is hovered or focused (after the rules above, so it wins). */
+.stage .place-marker:hover .place-marker__name, .stage .place-marker:focus-visible .place-marker__name { display: block; }
 
 /* Exemplar markers and arc glyphs sit above area labels, so they can be clicked where they overlap. */
 .exemplar-marker { position: relative; z-index: 2; padding: 0; border: 0; background: none; cursor: pointer; line-height: 0; }
@@ -190,16 +194,25 @@ body {
 
 .arc-glyph { position: relative; z-index: 2; padding: 0; border: 0; background: none; cursor: pointer; line-height: 0; }
 .arc-glyph canvas { display: block; }
+/* The off-map end of an arc: a small pill naming the place beyond the frame. At region zoom it is a dot that
+   opens on hover, focus or a click; close up the name always shows. */
 .arc-edge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
   padding: 0.05rem 0.4rem;
   border: 1px solid var(--c-border);
   border-radius: 999px;
   background: var(--c-surface);
+  color: var(--c-text);
+  font: inherit;
   font-size: 0.75rem;
   white-space: nowrap;
-  pointer-events: none;
+  cursor: pointer;
 }
+.arc-edge__dot { width: 7px; height: 7px; border-radius: 50%; background: var(--c-text); }
+[data-edge-labels='hover'] .arc-edge:not(:hover):not(:focus-visible):not([aria-expanded='true']) .arc-edge__text { display: none; }
+[data-edge-labels='hover'] .arc-edge:not(:hover):not(:focus-visible):not([aria-expanded='true']) { padding: 0.25rem; }
 .arc-pulse {
   display: block;
   width: 14px;
@@ -238,6 +251,13 @@ body {
 .legend__strata--dotted { border: 2px dotted var(--c-text); }
 .legend__event { display: inline-block; width: 11px; height: 11px; margin: 0 5px; border: 2px solid var(--c-ink-keyline); background: var(--c-ink-event-marker); transform: rotate(45deg); }
 .legend__event--keyframe { background: var(--c-ink-keyframe-marker); }
+.legend__band { display: inline-block; width: 22px; height: 14px; border-radius: 3px; background: var(--c-chip); position: relative; }
+.legend__band::after { content: ''; position: absolute; inset: 4px; border-radius: 50%; background: var(--c-text-muted); }
+.legend__band--mid::after { inset: 2px 6px; }
+.legend__band--near::after { inset: 1px; border-radius: 2px; }
+/* The band the map is in reads bold. */
+.stage[data-band='far'] .legend__zoom [data-band='far'], .stage[data-band='mid'] .legend__zoom [data-band='mid'],
+.stage[data-band='near'] .legend__zoom [data-band='near'] { font-weight: 700; }
 .legend__exemplar { display: inline-block; width: 12px; height: 12px; margin: 0 5px; border: 2px solid var(--c-ink-exemplar); border-top-left-radius: 50% 40%; border-top-right-radius: 50% 40%; }
 
 /* ---- cards ---- */

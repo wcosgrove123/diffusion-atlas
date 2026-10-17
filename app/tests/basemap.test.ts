@@ -11,7 +11,7 @@ import { basePalette, cssVarName } from '../src/theme/palette';
 const empty = { type: 'FeatureCollection' as const, features: [] };
 const geo: ModuleGeo = {
   module: 'test',
-  frame: { id: 'test', title: 'Test', start: 1000, end: 1100, bbox: [0, 0, 10, 10], view_bbox: [-5, -5, 15, 15], regions: [], shown_regions: [] },
+  frame: { id: 'test', title: 'Test', start: 1000, end: 1100, bbox: [0, 0, 10, 10], view_bbox: [-5, -5, 15, 15], regions: [], shown_regions: [], zoom_bands: { mid: 4, near: 5.5 } },
   attribution: ['Natural Earth (public domain)'],
   base: 'test-base.json',
   polities: empty,

@@ -320,3 +320,88 @@ def test_ap_world_list_matches_the_research_ids():
     assert unknown == []
     for cid in ("pl-great-zimbabwe", "pl-ethiopia-solomonic", "pl-hausa-states", "pl-mali", "pl-timbuktu"):
         assert cid in ap["named"], f"{cid}: the CED names it"
+
+
+# ---- Prominence tiers and zoom bands (taxonomy section 8, tools/build_data.py, data/modules.yaml) ----
+
+def test_taxonomy_prominence_tiers_have_labels_and_an_order():
+    """The legend names every tier from the taxonomy; the first listed is the most prominent."""
+    prom = TAX["prominence"]
+    assert list(prom)[0] == "continent" and list(prom)[-1] == "local"
+    for tier, spec in prom.items():
+        assert spec["label"] and spec["definition"], tier
+    assert export_taxonomy.export()["prominence"] == prom
+
+
+@pytest.mark.parametrize("module", MODULES)
+def test_module_frame_carries_zoom_bands(module):
+    f = load_frame(module)
+    assert 0 < f["zoom_bands"]["mid"] < f["zoom_bands"]["near"]
+
+
+def test_prominence_rule_and_override():
+    """Places: named in the course outline -> first tier; shown by the AP view -> second; else last. A record's own
+    `prominence` wins. Diffusions take the most prominent endpoint and get one corridor id per origin."""
+    data = {
+        "places": [
+            {"id": "pl-a", "name": "A", "kind": "polity", "_file": "west"},
+            {"id": "pl-b", "name": "B", "kind": "city", "_file": "west"},
+            {"id": "pl-c", "name": "C", "kind": "city", "_file": "east"},
+            {"id": "pl-d", "name": "D", "kind": "city", "_file": "east", "prominence": "continent"},
+            {"id": "pl-x", "name": "X", "kind": "external", "_file": "_registry"},
+        ],
+        "diffusions": [
+            {"id": "df-1", "from": ["pl-x", "pl-c"], "to": "pl-a"},
+            {"id": "df-2", "from": ["pl-c"], "to": "pl-c"},
+            {"id": "df-3", "from": ["pl-b"], "to": "pl-c", "prominence": "local"},
+        ],
+    }
+    ap_world = {"why": {"pl-a": "named in CED", "pl-b": "named in Textbook"}}
+    counts = build_data.prominence_tiers(data, TAX, ap_world, ced={"pl-a"})
+    tier = {p["id"]: p["prominence"] for p in data["places"]}
+    assert tier == {"pl-a": "continent", "pl-b": "region", "pl-c": "local", "pl-d": "continent", "pl-x": "local"}
+    d = {x["id"]: x for x in data["diffusions"]}
+    assert d["df-1"]["prominence"] == "continent" and d["df-1"]["corridor"] == ["pl-x>west", "east>west"]
+    assert d["df-2"]["prominence"] == "local" and d["df-2"]["corridor"] == ["east>east"]
+    assert d["df-3"]["prominence"] == "local", "the record's own value wins over the rule (region)"
+    assert counts["places"]["continent"] == 2 and counts["corridors"] == 4  # pl-x>west, east>west, east>east, west>east
+    # a module with no AP World list: polities and peoples first, the rest second
+    for p in data["places"]:
+        p.pop("prominence", None)
+    data["places"][3]["prominence"] = "local"
+    build_data.prominence_tiers(data, TAX, None, ced=set())
+    assert [p["prominence"] for p in data["places"]] == ["continent", "region", "region", "local", "region"]
+
+
+def test_prominence_rejects_a_value_outside_the_taxonomy():
+    data = {"places": [{"id": "pl-a", "kind": "city", "_file": "w", "prominence": "huge"}], "diffusions": []}
+    with pytest.raises(SystemExit):
+        build_data.prominence_tiers(data, TAX, None, ced=set())
+
+
+def test_ced_named_reads_the_course_outline_matches():
+    """The course outline is the `ced` text of data/ap-world/sources.yaml; textbook-only names do not count."""
+    path = ROOT / "data/ap-world/africa.yaml"
+    if not path.exists():
+        pytest.skip("no AP World list for africa")
+    ced = build_data.ced_named("africa")
+    assert {"pl-mali", "pl-great-zimbabwe", "pl-ethiopia-solomonic"} <= ced
+    ap = yaml.safe_load(path.read_text(encoding="utf-8"))
+    label = yaml.safe_load((ROOT / "data/ap-world/sources.yaml").read_text(encoding="utf-8"))["ced"]["label"]
+    textbook_only = [rid for rid, rec in ap["named"].items()
+                     if rid.startswith("pl-") and not any(label in h for h in rec["matched"].values())]
+    assert textbook_only and not (set(textbook_only) & ced)
+    assert build_data.ced_named("no-such-module") == set()
+
+
+def test_built_data_carries_a_prominence_for_every_place_and_diffusion():
+    data = json.loads((ROOT / "data/build/africa.json").read_text(encoding="utf-8"))
+    tiers = set(TAX["prominence"])
+    for p in data["places"]:
+        assert p["prominence"] in tiers, p["id"]
+    for d in data["diffusions"]:
+        assert d["prominence"] in tiers and len(d["corridor"]) == len(d["from"]), d["id"]
+    by_tier = {t: [p["id"] for p in data["places"] if p["prominence"] == t] for t in tiers}
+    assert "pl-mali" in by_tier["continent"] and by_tier["local"], "the zoomed-out map must have fewer places than the close-up"
+    assert len(by_tier["continent"]) < len(data["places"]) / 2
+    assert data["frame"]["zoom_bands"]["mid"] < data["frame"]["zoom_bands"]["near"]

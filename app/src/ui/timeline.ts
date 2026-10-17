@@ -24,7 +24,7 @@ export class Timeline {
   private visited = new Set<string>();
   private stepping = false;
 
-  constructor(private atlas: Atlas, private state: YearState, private onKeyframe: (eventId: string) => void) {
+  constructor(private atlas: Atlas, private state: YearState, private onKeyframe: (eventId: string) => void, private onRegion: (region: string) => void = () => {}) {
     const { start, end } = atlas.frame;
     this.range = h('input', {
       type: 'range', min: start, max: end, step: 1, value: state.year, class: 'timeline__range',
@@ -48,6 +48,7 @@ export class Timeline {
       this.region = regionSelect.value;
       this.stop();
       this.drawTicks();
+      this.onRegion(this.region);
     });
     this.el = h('div', { class: 'timeline', role: 'group', 'aria-label': 'Time' },
       this.yearOut,

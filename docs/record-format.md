@@ -40,6 +40,7 @@ places:
         flag: null                # or a sentence where claim and practice differ
     evidence: [src-levtzion-ancient-ghana-mali, src-unesco-gha-vol4]
     confidence: medium
+    # prominence: continent   # optional; overrules the build's zoom-tier rule (taxonomy section 8). Also on diffusions.
 
 religion_profiles:
   - id: rp-mali-court-1324-1360

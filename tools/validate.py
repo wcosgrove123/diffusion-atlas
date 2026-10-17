@@ -34,6 +34,7 @@ VOICE = set(TAX["sources"]["voice"])
 VERIF = set(TAX["sources"]["verification"])
 CONF = set(TAX["sources"]["confidence"])
 AP = set(TAX["ap_topics"])
+PROMINENCE = set(TAX.get("prominence") or {})
 BANNED = [t.split(" (")[0].lower() for t in TAX["writing_rules"]["banned_terms"]]
 LISTS = ["places", "religion_profiles", "diffusions", "exemplars", "events", "sources"]
 PREFIX = {"places": "pl-", "religion_profiles": "rp-", "diffusions": "df-",
@@ -108,6 +109,13 @@ def common(rep, where, rec, need_summary=True):
     check_banned(rep, where, rec)
 
 
+def check_prominence(rep, where, rec):
+    """An optional override of the build's prominence rule (taxonomy section 8)."""
+    v = rec.get("prominence")
+    if v is not None and v not in PROMINENCE:
+        rep.err(where, f"prominence '{v}' not in {sorted(PROMINENCE)}")
+
+
 def check_taxonomy(rep):
     """The UI shows a student label for every relation (product-spec 3.2), so each relation needs one."""
     labels = TAX["religion"].get("relation_labels") or {}
@@ -115,6 +123,12 @@ def check_taxonomy(rep):
         rep.err("taxonomy", f"relation '{r}' has no entry in religion.relation_labels")
     for r in sorted(set(labels) - RELATION):
         rep.err("taxonomy", f"relation_labels lists '{r}', which is not a relation")
+    # The legend names every prominence tier (taxonomy section 8), so each needs a label and a definition.
+    for tier, spec in (TAX.get("prominence") or {}).items():
+        if not isinstance(spec, dict) or not spec.get("label") or not spec.get("definition"):
+            rep.err("taxonomy", f"prominence '{tier}' needs a label and a definition")
+    if len(PROMINENCE) < 2:
+        rep.err("taxonomy", "prominence needs at least two tiers (the map has a zoomed-out and a close-up band)")
 
 
 def validate(files):
@@ -187,6 +201,7 @@ def validate(files):
                         rep.err(w, f"polity_profile.{axis} '{x}' not in {sorted(vals)}")
         if r.get("kind") != "external":
             common(rep, w, r, need_summary=False)
+        check_prominence(rep, w, r)
         cited.update(r.get("evidence") or [])
 
     for f, r in data["religion_profiles"]:
@@ -247,6 +262,7 @@ def validate(files):
             rep.err(w, "missing carriers")
         if r.get("outcome") not in OUTCOME:
             rep.err(w, f"outcome '{r.get('outcome')}' not in {sorted(OUTCOME)}")
+        check_prominence(rep, w, r)
         common(rep, w, r)
         cited.update(r.get("evidence") or [])
 

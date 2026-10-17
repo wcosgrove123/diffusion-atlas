@@ -20,6 +20,8 @@ export interface ModuleFrame {
   regions: Region[];
   /** The regions the app draws (a phase may show only some). */
   shown_regions: string[];
+  /** Map zoom levels where the bands change (src/map/bands.ts): far below mid, near from near on. */
+  zoom_bands: { mid: number; near: number };
 }
 
 export interface ModuleIndex {
@@ -84,6 +86,8 @@ export interface Place {
   polity_profile?: PolityProfileSnapshot[];
   evidence?: string[];
   confidence?: string;
+  /** how far out the map still shows the place (taxonomy prominence; set by tools/build_data.py) */
+  prominence?: string;
   _file: string;
 }
 
@@ -143,6 +147,10 @@ export interface Diffusion {
   evidence: string[];
   confidence: string;
   ap_topics?: string[];
+  /** the most prominent of its endpoints (taxonomy prominence; set by tools/build_data.py) */
+  prominence?: string;
+  /** one route family id per origin ("origin region>destination region"); the zoomed-out map draws one line each */
+  corridor?: string[];
   _file: string;
 }
 
@@ -248,4 +256,6 @@ export interface Taxonomy {
   lenses: Record<string, { inspect: string; note: string }>;
   ap_topics: Record<string, string>;
   polity_profile: Record<string, string[]>;
+  /** zoom tiers, most prominent first (section 8) */
+  prominence: Record<string, { label: string; definition: string }>;
 }
